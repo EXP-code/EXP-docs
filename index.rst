@@ -169,7 +169,7 @@ Extending EXP
 :doc:`topics/design`
     Understand the EXP architecture.
 
-:doc: `topics/usermodules`
+:doc:`topics/usermodules`
     How to use EXP's dynamic module loader to import your own external
     force routines
 
