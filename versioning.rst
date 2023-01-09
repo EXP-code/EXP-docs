@@ -25,18 +25,6 @@ upgrading.
 Development releases do not follow 3-numbers version and are generally
 released as ``dev`` suffixed versions, e.g. ``1.3dev``.
 
-.. note::
-    With EXP 0.* series, EXP used `odd-numbered versions for development releases`_.
-    This is not the case anymore from EXP 1.0 onwards.
-
-    Starting with EXP 1.0, all releases should be considered production-ready.
-
-For example:
-
-* *1.1.1* is the first bugfix release of the *1.1* series (safe to use in
-  production)
-
-
 API stability
 =============
 
@@ -58,14 +46,14 @@ Deprecation policy
 We aim to maintain support for deprecated EXP features for at least 1 year.
 
 For example, if a feature is deprecated in a EXP version released on
-June 15th 2020, that feature should continue to work in versions released on
-June 14th 2021 or before that.
+June 15th 2020, that feature should continue to work in versions
+released on June 14th 2021 or before that.
 
 Any new EXP release after a year *may* remove support for that deprecated
 feature.
 
-All deprecated features removed in a EXP release are explicitly mentioned in
-the :ref:`release notes <news>`.
+All deprecated features removed in a EXP release are explicitly
+mentioned in the :ref:`release notes <news>`.
 
 
 .. _odd-numbered versions for development releases: https://en.wikipedia.org/wiki/Software_versioning#Odd-numbered_versions_for_development_releases
