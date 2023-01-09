@@ -152,38 +152,3 @@ parallelization.  For MPI parallelization only, specify `nthrds:1`,
 which is the default value.  Not all force methods are thread aware,
 but many are.
 
-===========
-Quick start
-===========
-
-For those of you that skipped the theoretical overview in the previous
-chapter (\S\ref{sec:design}), I'll begin with a bare bones review,
-describing just enough of the overall organization so that the
-examples make sense.  I will then follow with brief instructions on
-compiling and installing (\S\ref{sec:build}) and running
-(\S\ref{sec:running}) the code.
-
-Like many research codes, this code has many flags and parameters that
-allow detailed control of methods.  Many of these were used for
-testing the implemenation and algorithm and do not need adjustment.  I
-have endeavored to provide sane values as defaults, but some
-combinations are likely to fail on occasion and require study the
-source code to understand.  The class documentation often provides
-details on specific parameters.  If you get stuck or confused, I will
-do my best to help and will add to the documentation in response to
-questions.  Also, feel free to contribute documentation and propose
-changes.
-
-
-TL;DR
-=====
-
-Perhaps the best way to learn how to use this code is through an
-example.  I have provided a separate tar ball in the `examples`
-directory of the source tree, which has two examples with a small halo
-and disk phase space components and a full set of configuraton files.
-The first, in `examples/LowFi`, has :math:`10^4` disk and halo
-particles and a cylindrial disk expansion up to :math:`m=1`.  The
-second, in `examples/Better`, has :math:`10^4` disk and :math:`10^5`
-halo particles and a high-resolution cylindrial disk expansion up to
-:math:`m=6`.

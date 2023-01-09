@@ -55,9 +55,6 @@ First steps
    intro/overview
    intro/install
    intro/tutorial
-   intro/pyEXP-tutorial
-   intro/EXP-tutorial
-
 
 :doc:`intro/overview`
     Understand what EXP is and how it can help you.
