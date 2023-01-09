@@ -1,4 +1,4 @@
-.. code-intro:
+.. _code-intro:
 
 ==========
 Code intro
@@ -43,10 +43,12 @@ Then, approximations for the density and potential fields are
 
 .. math::
 
-  \text{density:} &&
-  \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), & \\
-  \text{potential:}&&
-  \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}), & \\
+   \begin{eqnarray*}
+   \text{density:} &&
+   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), & \\
+   \text{potential:}&&
+   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}), & \\
+   \end{eqnarray*}
 
 where
 
