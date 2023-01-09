@@ -3,7 +3,10 @@
 An annotated EXP YAML configuration
 ===================================
 
-.. code-block: yaml
+An example is probably better than paragraphs of description.  So here
+is an EXP YAML file with annotation.
+
+.. code-block:: yaml
 
    ---
    # YAML 1.2

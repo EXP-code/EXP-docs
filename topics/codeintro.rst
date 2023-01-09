@@ -1,3 +1,5 @@
+.. code-intro:
+
 ==========
 Code intro
 ==========

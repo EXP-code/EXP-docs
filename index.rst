@@ -116,6 +116,7 @@ Solving specific problems
    topics/using-mssa
    topics/orbits
    topics/exp-phase-space
+   topics/EXP-output
    topics/debug
 
 :doc:`faq`
@@ -148,6 +149,9 @@ Solving specific problems
 
 :doc:`topics/exp-phase-space`
     How to use and manipulate the EXP native phase-space format
+
+:doc:`topics/EXP-output`
+    A description of the EXP N-body output generator
 
 :doc:`topics/debug`
     Learn how to debug common problems in EXP/pyEXP
