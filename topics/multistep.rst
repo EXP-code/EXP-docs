@@ -19,7 +19,7 @@ Time step criteria
 ~~~~~~~~~~~~~~~~~~
 
 .. index: time step criteria
-
+.. index: multistep algorithm
 
 1. The natural radius time scale: :math:`|r_{scale}|/|\mathbf{v}`,
    where :math:`r_{scale}` represents an internal or preset length
@@ -178,6 +178,8 @@ the mapping from :math:`t` to :math:`t+h` for the leapfrog algorithm is:
 
 Discussion
 ~~~~~~~~~~
+
+.. index:: leapfrog
 
 The leapfrog integrator has many virtues:
 

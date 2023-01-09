@@ -7,6 +7,8 @@ Versioning and API stability
 Versioning
 ==========
 
+.. index:: versioning
+
 There are 3 numbers in a EXP version: *A.B.C*
 
 * *A* is the major version. This will rarely change and will signify very

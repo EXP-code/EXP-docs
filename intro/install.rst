@@ -33,6 +33,8 @@ Supported system versions
 Installing EXP and/or pyEXP
 ===========================
 
+.. index:: install EXP
+
 EXP and pyEXP are configured using CMake, a configuration system
 widely used in HPC environments.  CMake will attempt to locate all
 necessary dependencies.  pybind11, the C++ YAML support library
@@ -42,6 +44,8 @@ using:
 
 .. code-block: bash
    git submodule update --init --recursive
+
+.. index:: CMake
 
 A typical CMake invocation begins by making a build directory.  We
 will build out of source but the build directory may be in the source
@@ -53,6 +57,8 @@ inside the source tree myself, e.g.:
 
 This allows one to have build various versions avaialble from the same
 source, such as Release and Debug.
+
+.. index:: Eigen3, Cuda
 
 You may need to adjust the cmake call below.  Besides Cuda, make
 sure that the Eigen3_DIR is set to the install location so CMake can
@@ -197,6 +203,9 @@ please refer to their respective installation instructions:
 Using a virtual environment (recommended)
 -----------------------------------------
 
+..index:: pair: Python; venv
+..index:: Lua modules
+
 TL;DR: We recommend installing pyEXP inside a virtual environment
 on all platforms that use ``lmod modules``.  
 
@@ -208,6 +217,8 @@ environment" (:mod:`venv`).  Virtual environments allow you to not
 conflict with already-installed Python system packages (which could
 break some of your system tools and scripts), and still install
 packages normally with ``pip`` (without ``sudo`` and the likes).
+
+..index:: sort: Python; path
 
 Once you have created a virtual environment, you can add the
 ``libpyexp.so`` location to your ``PYTHONPATH``.

@@ -39,7 +39,7 @@ Getting help
 Having trouble? We'd like to help!
 
 * Try the :doc:`FAQ <faq>` -- it's got answers to some common questions.
-* Looking for specific information? Try the :ref:`genindex` or :ref:`modindex`.
+* Looking for specific information? Try the :ref:`genindex`.
 * Report bugs in EXP in our `issue tracker`_.
 
 .. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
@@ -74,8 +74,8 @@ EXP concepts
    :caption: EXP concepts
    :hidden:
 
-   topics/codeintro
    topics/bfetheory
+   topics/codeintro
    topics/ssa
    topics/multistep
    topics/yamlconfig
@@ -156,6 +156,8 @@ Solving specific problems
 
 Extending EXP
 =============
+
+.. _extending:
 
 .. toctree::
    :caption: Extending EXP

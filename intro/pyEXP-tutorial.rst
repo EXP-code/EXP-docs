@@ -4,6 +4,8 @@
 pyEXP Tutorial
 ==============
 
+.. index:: sort: pyEXP; tutorial
+
 In this tutorial, we'll assume that EXP is already installed on your system.
 If that's not the case, see :ref:`intro-install`.
 
@@ -32,8 +34,8 @@ We begin by importing some Python modules:
 The last line is optional if you are already in the directory that
 contains the working files `my.dark halo` and `SLGridSph.model`.
 
-We then use pyEXP to construct and adaptive basis matching the profile
-in the file as follows:
+We then use pyEXP to construct and :index:`adaptive basis` matching
+the profile in the file as follows:
 
 .. code-block:: python
 
@@ -56,13 +58,13 @@ in the file as follows:
    #
    basis = pyEXP.basis.Basis.factory(config)
 
-The string `config` is the YAML file needed by pyEXP to specify the
-basis.  In this case, the adaptive spherical basis is the `sphereSL`
-type.  The parameters `rmin` and `rmax` define the inner and outer
-radii for the basis, `Lmax` and `nmax` describe the maximum harmonic
-and radial orders for the basis, respectively.  The `scale` parameter
-adjusts the internal coordinate mapping and a good choice is the
-characteristic radius of the halo.
+The string `config` is the :index:`YAML` file needed by pyEXP to
+specify the basis.  In this case, the adaptive spherical basis is the
+`sphereSL` type.  The parameters `rmin` and `rmax` define the inner
+and outer radii for the basis, `Lmax` and `nmax` describe the maximum
+harmonic and radial orders for the basis, respectively.  The `scale`
+parameter adjusts the internal coordinate mapping and a good choice is
+the characteristic radius of the halo.
 
 We now read our phase space data:
 
@@ -84,7 +86,7 @@ We now read our phase space data:
    coef = basis.createFromArray(data[:,0], data[:,1:4], time=3.0)
 
 The work horse in the block above is the member function
-`createFromArray()` which takes an Nx1 array of masses and a Nx3 array
+`createFromArray()` which takes an N x 1 array of masses and a N x 3 array
 of positions as input.  We may specify the time of this snapshot using
 the `time` option.
 

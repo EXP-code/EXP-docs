@@ -3,6 +3,8 @@
 Singular Spectrum Analysis
 ==========================
 
+.. index:: singular spectrum analysis
+
 Singular Spectrum Analysis (SSA) is a non-parametric analysis tool for
 for time series analysis.  It has been used for a wide variety of
 primarily Earth-science problems where finite data sets that may be
@@ -19,6 +21,8 @@ for n-body dynamical analysis.
 
 SSA algorithms and methodology
 ------------------------------
+
+.. index:: pair: singular spectrum analysis; algorithms
 
 SSA analysis separates the observed time series into the sum of
 interpretable components with no a priori information about the time
@@ -44,14 +48,21 @@ the time series.  We will now consider each step in detail.
 Decomposition
 ^^^^^^^^^^^^^
 
+.. index:: pair: singular spectrum analysis; decomposition
+
+
 **Embedding**
 """""""""""""
+
+.. index:: pair: singular spectrum analysis; embedding
 
 We *embed* the original time series into a sequence of lagged vectors
 of size :math:`L` by forming :math:`K=N-L+1` *lagged vectors*
 
 .. math::
    A_i=(a_{i},\ldots,a_{i+L-1})^\top, \quad i=1\ldots,K.
+
+.. index:: pair: singular spectrum analysis; trajectory matrix
 
 The *trajectory matrix* of the series :math:`A_N` is:
 
@@ -74,6 +85,8 @@ There are two important properties of the trajectory matrix: the rows
 and columns of :math:`\mathbf{T}` are subseries of the original series,
 and :math:`\mathbf{T}` has equal elements on anti-diagonals and therefore
 the trajectory matrix is has the Hankel property.
+
+.. index:: pair: singular spectrum analysis; lag-convariance
 
 From the trajectory matrix, we can form the *lag-covariance*
 matrix:
@@ -142,6 +155,8 @@ Reconstruction
 **Eigenpair grouping**
 """"""""""""""""""""""
 
+.. index:: pair: singular spectrum analysis; grouping
+
 Let :math:`d=\max\{j:\ \lambda_j \neq \epsilon\}`, where :math:`\epsilon` is
 some threshold for the eigenvector to be in the null space.  From the
 decomposition in equation \ref{eq:elem_matr}, the grouping procedure
@@ -168,6 +183,8 @@ optimality property of the SVD.
 **The principal components**
 """"""""""""""""""""""""""""
 
+.. index:: pair: singular spectrum analysis; principal components
+
 We may now project the original time series represented in the
 trajectory matrix in to the new basis represented by :math:`\mathbf{E}`:
 :math:`\mathbf{P} = \mathbf{E}^\top\cdot \mathbf{T}`. The columns of
@@ -186,6 +203,8 @@ construction.
 
 **The reconstructed components**
 """"""""""""""""""""""""""""""""
+
+.. index:: pair: singular spectrum analysis; reconstruction
 
 At this step, project the principle components back to the original
 basis and then diagonally average the result, imposing the Hankel
@@ -212,6 +231,8 @@ we have:
 Separability and choice of parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. index:: pair: singular spectrum analysis; separability
+
 The goal of grouping into sets :math:`\{I_j\}` is the separation of the
 time series into distinct dynamical components.
 Distinct time series components can be
@@ -236,6 +257,8 @@ components.
 
 Multichannel SSA (M-SSA)
 ------------------------
+
+.. index:: pair: singular spectrum analysis; multichannel
 
 We can now generalize the SSA to :math:`M` time series, here assume to be
 :math:`M` particular coefficients from equation (\ref{eq:coefdef}): the
@@ -347,8 +370,10 @@ groupings:
 which gives us the parts of of each coefficient :math:`a_l(t)` that
 correspond to each dynamical component :math:`I_j`.
 
-Applications of M-SSA
----------------------
+Applications of mSSA
+--------------------
+
+.. index:: pair: singular spectrum analysis; applications
 
 - *Compression.* In many cases, a small number of
     eigenpairs relative to the total number :math:`MK` have the lion's

@@ -1,5 +1,27 @@
 .. _yamlconfig:
 
+What is YAML?
+=============
+
+EXP and pyEXP use YAML for specifying configurations.  YAML is a data
+serialization language that is often used for writing configuration
+files. The official `YAML documentation <https://yaml.org>` says YAML
+stands for yet another markup language or YAML ain’t markup language
+(a recursive acronym), emphasizing that YAML is about data not
+documents.
+
+.. index:: YAML
+
+.. toctree::
+   :caption: YAML primer
+   :hidden:
+
+   yaml-primer
+
+:doc:`yaml-primer`
+     An optional quick introduction to YAML syntax
+
+
 An annotated EXP YAML configuration
 ===================================
 

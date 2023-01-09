@@ -4,6 +4,8 @@
 Tutorials
 =========
 
+.. index:: tutorials
+
 .. toctree::
    :caption: Tutorials
    :hidden:
@@ -11,9 +13,9 @@ Tutorials
    pyEXP-tutorial
    EXP-tutorial
 
-These tutorials are based on the companion GitHub EXP repositories
-which you can clone to your working computer in the usual way.  To get
-the pyEXP examples do:
+These tutorials are based on the companion :index:`GitHub` EXP
+repositories which you can clone to your working computer in the usual
+way.  To get the pyEXP examples do:
 
 .. code-block:: bash
 		

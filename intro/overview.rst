@@ -5,12 +5,13 @@ EXP at a glance
 ===============
 
 This code uses object-oriented design patterns to exploit the
-similarity in overall structure of all biorthogonal expansions for
-ease of implementation and maintenance.  The class hierarchy enables
-reuse and reconfiguration for any number of phase-space components
-whose gravity may be represented by a appropriate biorthgonal bases
-and direct gravity methods.  The object-oriented design enforces
-minimal consistency while retaining flexibility.
+similarity in overall structure of all :ref:`biorthogonal expansions
+<biorthogonal>` for ease of implementation and maintenance.  The class
+hierarchy enables reuse and reconfiguration for any number of
+phase-space components whose gravity may be represented by a
+appropriate biorthgonal bases and direct gravity methods.  The
+object-oriented design enforces minimal consistency while retaining
+flexibility.
 
 EXP, the n-body code
 ====================
@@ -22,6 +23,8 @@ changing or recompiling the base code. See :ref:`modules
 
 pyEXP
 =====
+
+.. index:: pyEXP
 
 All of the main analysis features of EXP are available as a Python
 module, enabled by pybind11 (https://pybind11.readthedocs.io/).  This
@@ -40,8 +43,10 @@ analysis system have github repositories, `EXP-examples`_ and
 A simple pyEXP illustration
 ===========================
 
+.. index:: pair: pyEXP; simple example
+
 We anticipate that most users will be interested in using pyEXP in
-their n-body analysis workflow.  In order to show you what pyEXP
+their N-body analysis workflow.  In order to show you what pyEXP
 brings to the table, we'll walk you through an example of a simulation
 analysis.
 
