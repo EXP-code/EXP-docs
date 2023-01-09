@@ -54,8 +54,10 @@ First steps
 
    intro/overview
    intro/install
+   intro/tutorial
    intro/pyEXP-tutorial
    intro/EXP-tutorial
+
 
 :doc:`intro/overview`
     Understand what EXP is and how it can help you.
@@ -63,11 +65,8 @@ First steps
 :doc:`intro/install`
     Get EXP installed on your computer.
 
-:doc:`intro/pyEXP-tutorial`
-    Your first pyEXP example project.
-
-:doc:`intro/EXP-tutorial`
-    Your first EXP example project.
+:doc:`intro/tutorial`
+    A quick-start guide to pyEXP and EXP
 
 .. _section-basics:
 
