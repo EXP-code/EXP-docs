@@ -28,7 +28,11 @@ released as ``dev`` suffixed versions, e.g. ``1.3dev``.
 API stability
 =============
 
-API stability was one of the major goals for the *1.0* release.
+.. index:: API stability
+
+We intend for the API to be stable in major versions and will try to
+maintain stability and backward compatibility through major versions,
+if possible.
 
 Methods or functions that start with a single dash (``_``) are private and
 should never be relied as stable.
@@ -42,6 +46,8 @@ same way.
 
 Deprecation policy
 ==================
+
+.. index:: deprecation
 
 We aim to maintain support for deprecated EXP features for at least 1 year.
 
