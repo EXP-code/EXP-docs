@@ -46,6 +46,9 @@ works, but does not correctly render the LaTeX.  You can generate a
 PDF file using::
 
   make latexpdf
+  
+This makes correct LaTeX equations and a nice TOC with an index 
+as well.
 
 View the documentation
 ----------------------
