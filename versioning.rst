@@ -16,14 +16,17 @@ There are 3 numbers in a EXP version: *A.B.C*
 * *B* is the release number. This will include many changes including features
   and things that possibly break backward compatibility, although we strive to
   keep these cases at a minimum.
-* *C* is the bugfix release number.
+* *C* is the bugfix release number.  A bugfix release will not break
+  backward compatibility, although it may add some (usually minor) new
+  features.
 
 Backward-incompatibilities are explicitly mentioned in the
 :ref:`release notes <news>`, and may require special attention before
 upgrading.
 
-Development releases do not follow 3-numbers version and are generally
-released as ``dev`` suffixed versions, e.g. ``1.3dev``.
+Development releases have are numbered with the next anticipated
+stable version with a tweak level appended: *A.B.C.D*.
+
 
 API stability
 =============

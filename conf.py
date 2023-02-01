@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EXP'
-copyright = '2022, Martin D. Weinberg'
+copyright = '2023, Martin D. Weinberg'
 author = 'Martin D. Weinberg'
 release = '0.1'
 
