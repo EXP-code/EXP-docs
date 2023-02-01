@@ -42,8 +42,9 @@ necessary dependencies.  pybind11, the C++ YAML support library
 submodules.  Be sure to initialize them after your first ``git clone``
 using:
 
-.. code-block: bash
-   git submodule update --init --recursive
+.. code-block:: bash
+
+   $ git submodule update --init --recursive
 
 .. index:: CMake
 
@@ -52,8 +53,9 @@ will build out of source but the build directory may be in the source
 tree or outside the source tree.  Your choice.  I tend to do this
 inside the source tree myself, e.g.:
 
-.. code-block: bash
-   mkdir -p build cd build
+.. code-block:: bash
+
+   $ mkdir -p build cd build
 
 This allows one to have build various versions avaialble from the same
 source, such as Release and Debug.
@@ -102,13 +104,13 @@ A typical CMake build invocation without Cuda is:
 
 .. code-block:: bash
 		
-   cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
+   $ cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
 A typical invocation with Cuda is:
 
 .. code-block:: bash
 		
-   cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
+   $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
 Some installations provide an EIGEN_BASE environment variable that
 locates the install directory what contains 'include' and 'share'.
@@ -120,8 +122,9 @@ Many users will like configuring with one the CMake gui tools, such as
 gui will allow you to change the parameters interactively and display the
 help info for each parameter.  For example:
 
-.. code-block: bash
-   ccmake ..
+.. code-block:: bash
+
+   $ ccmake ..
 
 and then enter your preferred build type and other options
 interactively.  This provides a nice view of the configuration as a
@@ -135,7 +138,7 @@ Finally, you are ready to make the package:
 
 .. code-block:: bash
 
-  make -j N
+  $ make -j N
 
 Here, ``N`` is the number of jobs to run
 simultaneously.  I often use N=2*<number of cores> to take advantage
@@ -144,8 +147,9 @@ of hyperthreading
 Finally, install to the target location.  You can select the target
 install location using the ``CMAKE_INSTALL_PREFIX`` variable in CMake:
 
-.. code-block: bash
-   make install
+.. code-block:: bash
+
+   $ make install
 
 A note on multiple builds
 =========================
@@ -156,7 +160,8 @@ However, EXP generates a 'config.h' based on the available
 packages. For example, if you want to generate a build hierarchy
 like this:
 
-.. code-block: bash
+.. code-block:: bash
+
    build/
    build/debug
    build/release
@@ -203,8 +208,8 @@ please refer to their respective installation instructions:
 Using a virtual environment (recommended)
 -----------------------------------------
 
-..index:: pair: Python; venv
-..index:: Lua modules
+.. index:: pair: Python; venv
+.. index:: Lua modules
 
 TL;DR: We recommend installing pyEXP inside a virtual environment
 on all platforms that use ``lmod modules``.  
@@ -216,12 +221,40 @@ Instead, we recommend that you install EXP within a so-called "virtual
 environment" (:mod:`venv`).  Virtual environments allow you to not
 conflict with already-installed Python system packages (which could
 break some of your system tools and scripts), and still install
-packages normally with ``pip`` (without ``sudo`` and the likes).
+packages normally with ``pip`` (without ``sudo`` or obtaining root
+privileges in some other way).
 
-..index:: sort: Python; path
+For example, assume that you have loaded a Python module or wish to
+use the current Python version in your executable path.  An example
+virtual environment installation is:
 
-Once you have created a virtual environment, you can add the
-``libpyexp.so`` location to your ``PYTHONPATH``.
+.. code-block:: bash
+
+   $ python3 -m venv ~/venv/python9
+   $ source ~/venv/python3.9/activate
+
+This creates and activates the virtual Python environments.  I called
+my virtual environment ``python9`` to distinguish it from a venv that
+might be installed for some other reason.
+
+Now, you can then install your favorite Python modules using ``pip``
+as usual.  For example, you will need ``numpy`` and you may want
+``pyplot``.  Similarly, for using MPI-aware Python scripts you will
+need ``mpi4py``.  After activating your virtual environment, you can
+install those with
+
+.. code-block:: bash
+
+   $ pip install numpy matplotlib mpi4py
+
+.. index:: sort: Python; path
+
+Once you have created a virtual environment, you can copy or link the
+shared library to your site packages directory. The actual name
+depends on your build environment.  For example, in Ubuntu 22.04 using
+Python3.9, the library is called
+``pyEXP.cpython-309-x86_64-linux-gnu.so``.  In this same case, this
+would be copied to ``~/venv/python9/lib/python3.9/site-packages``.
 (See :ref:`platform-specific guides <intro-install-platform-notes>`
 below for known dependencies that you may need to install beforehand).
 
