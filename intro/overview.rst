@@ -33,8 +33,8 @@ except for running n-body simulations.
 
 
 Both variants of the code, the C++ n-body system and the pyEXP
-analysis system have github repositories, `EXP-examples`_ and
-`pyEXP-examples`_, with detailed tutorials and examples.
+analysis system, have github repositories, `EXP-examples`_ and
+`pyEXP-examples`_, than provide detailed tutorials and examples.
 
 .. _EXP-examples: https://github.com/orgs/EXP-examples
 .. _pyEXP-examples: https://github.com/orgs/pyEXP-examples

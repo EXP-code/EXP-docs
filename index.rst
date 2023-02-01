@@ -18,31 +18,20 @@ noise, and visualize these in two- and three-dimensional renderings.
 
 There are two *entry points* into EXP:
 
-1. The N-body code itself and auxiliary utilities for manipulating and
-   analyzing N-body phase space.
+1. The N-body code itself and Unix-style auxiliary utilities for
+   manipulating and analyzing N-body phase space.
 2. The Python interface to the same C++ libraries used by the N-body
-   code.  These are designed to enable all of the post-processing
-   analyses on both EXP and other N-body simulation snapshots
-   (Gadget, Gizmo, Arepo, etc.).
+   code.  These are designed to enable your post-processing analyses
+   on both EXP and other N-body simulation snapshots (Gadget, Gizmo,
+   Arepo, etc.) within the Python/Jupyter ecosystem.
 
-In this documentation, EXP refers to the entire code base and pyEXP
-refers to the Python EXP API.  We anticipate that many users will be
-interested in *only* pyEXP.  Since the concepts and mathematics is
-the same regardless, we will describe both together in this
-documentation.
+In this documentation, **EXP** refers to the entire code base and
+**pyEXP** refers to the Python EXP API.  We anticipate that many users
+will be interested in *only* pyEXP.  Since the concepts and
+mathematics are the same for both, we will describe both together in
+this documentation.
 
 .. _getting-help:
-
-Getting help
-============
-
-Having trouble? We'd like to help!
-
-* Try the :doc:`FAQ <faq>` -- it's got answers to some common questions.
-* Looking for specific information? Try the :ref:`genindex`.
-* Report bugs in EXP in our `issue tracker`_.
-
-.. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
 
 
 First steps
@@ -56,6 +45,8 @@ First steps
    intro/install
    intro/tutorial
 
+A read through the following three topics will get you started.
+
 :doc:`intro/overview`
     Understand what EXP is and how it can help you.
 
@@ -66,6 +57,19 @@ First steps
     A quick-start guide to pyEXP and EXP
 
 .. _section-basics:
+
+
+Getting help
+============
+
+Having trouble? We'd like to help!
+
+* Try the :doc:`FAQ <faq>` -- it's got answers to some common questions.
+* Looking for specific information? Try the :ref:`genindex`.
+* Report bugs in EXP in our `issue tracker`_.
+
+.. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
+
 
 EXP concepts
 ============
@@ -79,6 +83,9 @@ EXP concepts
    topics/ssa
    topics/multistep
    topics/yamlconfig
+
+These topics provide some background detail on the software and
+mathematics used in EXP.
 
 :doc:`topics/codeintro`
     Learn about the EXP software design strategy
