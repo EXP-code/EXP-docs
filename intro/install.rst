@@ -270,7 +270,8 @@ Windows
 -------
 
 Though it should be possible to install EXP and pyEXP under Windows,
-we haven't tried.
+we haven't tried.  If you have a working install, please *do*
+contribute some notes!
 
 
 Ubuntu 18.04 and above

@@ -179,11 +179,11 @@ Extending EXP
     How to write your own custom force routines
 
 
-All the rest
-============
+More about EXP
+==============
 
 .. toctree::
-   :caption: All the rest
+   :caption: More about EXP
    :hidden:
 
    news
