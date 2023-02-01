@@ -40,6 +40,14 @@ with::
 
   make epub
 
+I've tested this with a standard epub reader under Linux and it 
+works, but does not correctly render the LaTeX.  You can generate a
+PDF file using::
+
+  make latexpdf
+  
+There are a few LaTeX mistakes but it *mostly* works.  These errors
+are probably easily fixed.  Type 'q' to get a mostly usable PDF file.
 
 View the documentation
 ----------------------
