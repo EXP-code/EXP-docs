@@ -24,6 +24,7 @@ For a Linux system with `apt` (e.g. Ubuntu), you can do:
    apt-get install python3-sphinx python3-sphinx-rtd-theme
 
 
+
 Compile the documentation
 -------------------------
 
@@ -45,9 +46,6 @@ works, but does not correctly render the LaTeX.  You can generate a
 PDF file using::
 
   make latexpdf
-  
-There are a few LaTeX mistakes but it *mostly* works.  These errors
-are probably easily fixed.  Type 'q' to get a mostly usable PDF file.
 
 View the documentation
 ----------------------
