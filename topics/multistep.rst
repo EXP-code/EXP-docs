@@ -152,23 +152,23 @@ for :math:`h/2`, kick for :math:`h` and drift for :math:`h/2` gives
 the *drift-kick-drift* Leapfrog scheme:
 
 .. math::
-   \begin{equation}
+
    \mathbf{q}_{1/2} = \mathbf{q} + \frac{h}{2}\mathbf{p}; \qquad
    \mathbf{p}^\prime = \mathbf{p} -
    h\mathbf{\nabla}\Phi(\mathbf{q}_{1/2}); \qquad \mathbf{q}^\prime =
    \mathbf{q}_{1/2} + \frac{h}{2}\mathbf{p}^\prime.
-   \end{equation}
+
 
 We can flip the steps to get a *kick-drift-kick* form of
 Leapfrog:
 
 .. math::
-   \begin{equation}
+
    \mathbf{p}_{1/2} = \mathbf{p} - \frac{h}{2} \mathbf{\nabla}\Phi(\mathbf{q});
    \qquad \mathbf{q}^\prime = \mathbf{q} + h\mathbf{p}_{1/2}; \qquad
    \mathbf{p}^\prime = \mathbf{p}_{1/2} - \frac{h}{2}
    \mathbf{\nabla}\Phi(\mathbf{q}^\prime).
-   \end{equation}
+
 
 Direct computation by Taylor series expansion shows that the error in
 the mapping from :math:`t` to :math:`t+h` for the leapfrog algorithm is:
@@ -274,10 +274,10 @@ level :math:`j`, and zero otherwise.  With this definition, the
 coefficient tableau becomes
 
 .. math::
-   \begin{equation}
+
    \hat{a}_n^j(t+hi/2^{m}) = \sum_{k=1}^N m_k \zeta_j(k) \phi_n(x_k)
    \label{eq:coeft}
-   \end{equation}
+
 
 where :math:`i\in[0, 1, \ldots, 2^{m}-1]` are the sub steps required for
 the full time step interval :math:`h`.  We get the full coefficient given
@@ -330,13 +330,12 @@ again :math:`i=1`.  For :math:`o=1`, we gave :math:`g_- = 0` and :math:`g_+ = 1/
 So, using equation (\ref{eq:cinterp}), we have:
 
 .. math::
-   \begin{eqnarray*}
-   \hat{a}_n^1(t+h/4) &=&
+
+   \hat{a}_n^1(t+h/4) &=
    \frac{\hat{a}_n^1(t) (1/4 - 0) + \hat{a}_n^1(t+h/2) [1/2 - 1/4]}{1/2}
    \\
-   &=& \frac{\hat{a}_n^1(t)+ \hat{a}_n^0(t+h/2)}{2}.
-   \\
-   \end{eqnarray*}
+   &= \frac{\hat{a}_n^1(t)+ \hat{a}_n^0(t+h/2)}{2}.
+
 
 Level update
 ~~~~~~~~~~~~

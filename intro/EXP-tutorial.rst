@@ -15,7 +15,6 @@ This tutorial will walk you through these tasks:
 4. Try some of the simple pyEXP analysis notebooks
 
 
-===========
 Quick start
 ===========
 

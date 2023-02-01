@@ -10,7 +10,7 @@ In this tutorial, we'll assume that EXP is already installed on your system.
 If that's not the case, see :ref:`intro-install`.
 
 Making BFE coefficients from phase-space data
----------------------------------------------
+=============================================
 
 In this first example, we will assume that you have an ascii file of
 particles from a simulation of halo.  We'll assume that this file is

@@ -40,10 +40,11 @@ equation` using separable azimuthal harmonics at the same time as the
 expansion.  A biorthogonal system is a pair of indexed families of
 vectors in some topological vector space such that the inner product
 of the pair is the Kronecker delta.  The BFE method constructs a
-biorthongal system :math:`d_j(\mathbf{x}), p_k(\mathbf{c})\) such that
-\(\nabla^2 p_i = 4\pi G d_i\) and \(\int d\mathbf{x}\, d_j(\mathbf{x})
-p_k(\mathbf{x}) = 4\pi G\delta_{jk}.` Let the density of our particle
-distribution of :math`N` points with masses :math:`m_i` described by
+biorthongal system :math:`d_j(\mathbf{x}), p_k(\mathbf{c})` such that
+:math:`\nabla^2 p_i = 4\pi G d_i` and :math:`\int d\mathbf{x}\,
+d_j(\mathbf{x}) p_k(\mathbf{x}) = 4\pi G\delta_{jk}.` Let the density
+of our particle distribution of :math`N` points with masses
+:math:`m_i` described by
 
 .. math::
 
@@ -53,12 +54,10 @@ Then, approximations for the density and potential fields are
 
 .. math::
 
-   \begin{eqnarray*}
-   \text{density:} &&
-   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), & \\
-   \text{potential:}&&
-   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}), & \\
-   \end{eqnarray*}
+   \text{density:}\qquad
+   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), \\
+   \text{potential:}\qquad
+   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}),
 
 where
 
@@ -93,8 +92,8 @@ Empirical Orthogonal Functions
 .. _biorthogonal:
 
 .. figure:: images/basis1.png
-    :figwidth: 100 %
-    :width: 100 %
+    :figwidth: 80 %
+    :width: 80 %
     :align: center
 
     In-plane amplitude variations as a function of disk scale length
@@ -105,8 +104,8 @@ Empirical Orthogonal Functions
     that are zero everywhere are vertically asymmetric.
 
 .. figure:: images/basis2.png
-    :figwidth: 100 %
-    :width: 100 %
+    :figwidth: 80 %
+    :width: 80 %
     :align: center
 
     Examples of vertically symmetric (:math:`m=2,n=4`, upper
@@ -114,7 +113,7 @@ Empirical Orthogonal Functions
     panel) functions for the disk basis. The :math:`x` and :math:`z`
     axis correspond to the radial and vertical axes in the simulation,
     and the amplitude of the variations between panels has been
-    normalized to the maximum :math:`m\=2` amplitude.
+    normalized to the maximum :math:`m=2` amplitude.
 
 A BFE computes the gravitational potential by projecting particles
 onto a set of biorthogonal basis functions that satisfy the Poisson
@@ -170,14 +169,14 @@ each density element :math:`\rho(R, z)\,d^3x` contributes
 to the expansion coefficient :math:`a_{lm}^j`, or
 
 .. math::
-         a_{lm}^j &=& \frac{1}{4\pi
+         a_{lm}^j &= \frac{1}{4\pi
         G}\int \phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3x \\
-                  &=& \lim_{N\rightarrow\infty}\frac{1}{4\pi
+                  &= \lim_{N\rightarrow\infty}\frac{1}{4\pi
         G}\sum_{i=1}^N m_i \phi_{lm}^j(r_i)Y_{lm}(\theta_i,\phi_i)
 
-where :math:`R, z` are the radial and vertical cylindrical coordinates.
-The second equation shows the approximation for \(N\) particles where
-:math:`\sum_i m_i = \int \rho(R, z)d^3x`.
+where :math:`R, z` are the radial and vertical cylindrical
+coordinates.  The second equation shows the approximation for
+:math:`N\ particles where :math:`\sum_i m_i = \int \rho(R, z)d^3x`.
 
 
 The covariance of the coefficient given the density :math:`\rho(R,
@@ -217,7 +216,7 @@ and potential fields.
 We can represent the potential and density of a galaxy as a
 superposition of several basis functions. This allows us to decompose
 the galaxy based on their geometry and symmetry. For an initially
-axisymmetric example, azimuthal harmonics \(m\), where :math:`m=0` is the
+axisymmetric example, azimuthal harmonics :math:`m`, where :math:`m=0` is the
 monopole, :math:`m=1` is the dipole, :math:`m=2` is the quadrupole, and so
 on, will efficiently summarize the degree and nature of the
 asymmetries. The sine and cosine terms of each azimuthal order give
@@ -225,7 +224,7 @@ the phase angle of the harmonic that can be used to calculate the
 pattern speed.  For disks, each azimuthal harmonics represents both
 the radial and vertical structure simultaneously; that is each basis
 function is a two-dimensional meridional plane multipled by
-\(e^{im\phi}\).  The symmetry of the input basis and the covariance
+:math:`e^{im\phi}`.  The symmetry of the input basis and the covariance
 matrix further demands that the singular value decomposition produce
 vertically symmetric or anti-symmetric functions.
 
@@ -255,7 +254,7 @@ approximate value for the force resolution of the simulation. For
 example, the highest order :math:`m=0` radial function (:math:`n=12`) has a
 zero at :math:`R=0.2a`, or 600 pc in a MW-like galaxy. Additionally, the
 radial orders are interleaved between harmonic orders, such that the
-location of the first node, \(R^{[1st]}\), is given by
+location of the first node, :math:`R^{[1st]}`, is given by
 
 .. math::
 
@@ -264,7 +263,7 @@ location of the first node, \(R^{[1st]}\), is given by
 
 The lowest-order basis function exactly matches the initial density
 profile and has no nodes.  In this example, the highest-order basis
-function, \(n=12\), would only imply a spatial resolution of 100 pc,
+function, :math:`n=12`, would only imply a spatial resolution of 100 pc,
 the basis resolves a power law in density down to 10 pc. This choice
 removes or filters high spatial frequencies that may increase
 relaxation noise. Figure \ref{fig:disk_3d_amplitudes} illustrates the

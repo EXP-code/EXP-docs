@@ -67,7 +67,6 @@ of size :math:`L` by forming :math:`K=N-L+1` *lagged vectors*
 The *trajectory matrix* of the series :math:`A_N` is:
 
 .. math::
-   \begin{equation}
    \label{eq:traj_m}
    \mathbf{T} = [A_1:\ldots:A_K]=(T_{ij})_{i,j=1}^{L,K}=
    \left(
@@ -79,7 +78,7 @@ The *trajectory matrix* of the series :math:`A_N` is:
    a_{L}&a_{L+1}&a_{L+2}&\ldots&a_{N}\cr
    \end{array}
    \right).
-   \end{equation}
+
 
 There are two important properties of the trajectory matrix: the rows
 and columns of :math:`\mathbf{T}` are subseries of the original series,
@@ -92,10 +91,9 @@ From the trajectory matrix, we can form the *lag-covariance*
 matrix:
 
 .. math::
-   \begin{equation}
    \label{eq:lagcovar}
    \mathbf{C} = \frac{1}{K} \mathbf{T}^\top\cdot\mathbf{T}.
-   \end{equation}
+
 
 *Decomposition*
 """""""""""""""
@@ -111,9 +109,7 @@ the left- and right-singular vectors are the same, or
 :math:`\mathbf{E}\equiv\mathbf{U}=\mathbf{V}`.  We may then write
 
 .. math::
-   \begin{equation}
    \mathbf{\Lambda} = \mathbf{E}^\top\cdot\mathbf{C}\cdot\mathbf{E}.
-   \end{equation}
 
 The matrix :math:`\mathbf{\Lambda}` is a diagonal matrix of eigenvalues,
 :math:`\lambda_k` and the columns of :math:`\mathbf{E}` are the eigenvectors,
@@ -138,11 +134,9 @@ SVD.  As before, we may write this decomposition in *elementary
 matrix* form as
 
 .. math::
-   \begin{equation}
    \mathbf{C} = \sum_k \lambda_k \mathbf{E}^k \mathbf{E}^{k\top}
    = \sum_k \lambda_k \mathbf{E}^k \otimes \mathbf{E}^{k}   
    = \sum_k \mathbf{C}_k
-   \end{equation}
 
 where :math:`\mathbf{a}\otimes\mathbf{b}` denotes the outer or Kronecker
 product of the vectors :math:`\mathbf{a}` and :math:`\mathbf{b}` and
@@ -167,11 +161,8 @@ Define :math:`\mathbf{C}_I=\sum_{k\in I} \mathbf{C_k}`.
 Equation \ref{eq:elem_matr} leads to the decomposition
 
 .. math::
-
-   \begin{equation}
    \label{eq:mexp_g}
    \mathbf{C}=\mathbf{C}_{I_1}+\ldots+\mathbf{C}_{I_m}.
-   \end{equation}
 
 The procedure of choosing the sets :math:`I_1,\ldots,I_m` is called
 *eigenpair grouping*. If :math:`m=d` and :math:`I_k=\{k\}`,
@@ -193,10 +184,8 @@ the terminology of standard Principal Component Analysis (PCA).  In
 components, the :math:`k` eigenpair yields at time step :math:`j` is
 
 .. math::
-   \begin{equation}
    \label{eq:pc1d}
    P^k_j = \sum_{l=1}^L E^k_l T_{lj}  = \sum_{l=1}^L E^k_l a_{j+l-1} 
-   \end{equation}
 
 The principal components are uncorrelated (i.e. orthogonal) by
 construction.
@@ -216,7 +205,6 @@ Making the *diagonal average* to get the reconstructed coefficients,
 we have:
 
 .. math::
-   \begin{equation}
    \tilde{a}^k_j =
    \begin{cases} \displaystyle
    \frac{1}{j} \sum_{n=1}^{j} P^k_{n-j+1} E^k_n & \mbox{if}\ 1\le j < L-1, \\
@@ -225,7 +213,6 @@ we have:
    \displaystyle
     \frac{1}{N-j+1} \sum_{n=N-L+1}^{N} P^k_{n-j+1} E^k_l & \mbox{if}\ N-L+2\le j \le N. \\
    \end{cases}
-   \end{equation}
 
 
 Separability and choice of parameters
@@ -286,8 +273,6 @@ The multichannel trajectory matrix has :math:`KL` columns with length :math:`K
 trajectory matrix is
 
 .. math::
-
-   \begin{equation}
    \mathbf{C}_M = \frac{1}{K} \mathbb{T}_M^\top\cdot\mathbb{T}_M
    = \left(
    \begin{array}{lllll}
@@ -298,15 +283,13 @@ trajectory matrix is
     \mathbf{C}_{M,1} & \mathbf{C}_{L,2} & \mathbf{C}_{L,3} &\ldots& \mathbf{C}_{M,M}\cr
   \end{array}
   \right)
-  \end{equation}
+
 
 where each submatrix is
 
 .. math::
-   \begin{equation}
    \mathbf{C}_{j,k} =
    \frac{1}{K}\mathbf{A}_j^\top\cdot\mathbf{A}_k.
-   \end{equation}
 
 Each submatrix :math:`\mathbf{C}_{j,k}` has dimension :math:`K\times K` as in
 the one-dimensional SSA case.
@@ -325,9 +308,8 @@ As for standard SSA, we obtain the principle components by projecting
 the trajectory matrix into the new basis as follows:
 
 .. math::
-   \begin{equation}
    P^k_i = \sum_{m=1}^M \sum_{j=1}^L a_{m,i+j-1} E^k_{m, j}.
-   \end{equation}
+
 
 The principle components are single orthongonal time series that
 represent a mixture of all the contributions from the original time
@@ -338,8 +320,6 @@ series of index :math:`m\in[1,\ldots, M]` from the principle components as
 follows:
 
 .. math::
-
-   \begin{equation}
    \tilde{a}^k_{m,j} =
    \begin{cases} \displaystyle
    \frac{1}{j} \sum_{n=1}^{j} P^k_{n-j+1} E^k_{m,n} & \mbox{if}\ 1\le j < L-1, \\
@@ -348,24 +328,22 @@ follows:
     \displaystyle
     \frac{1}{N-j+1} \sum_{n=1-N+M}^{N} P^k_{n-j+1} E^k_m & \mbox{if}\ N-L+2\le j \le N. \\
     \end{cases}
-    \end{equation}
+
 
 If we sum up all of the individual principle components, no
 information is lost; that is:
 
 .. math::
-   \begin{equation}
    a_{m,i} \rightarrow \sum_{k=1}^d \tilde{a}^k_{m,i}
-   \end{equation}
+
 
 In practice, we often want to sum up the reconstructions for specific
 groupings:
 
 .. math::
-   \begin{equation}
    \label{eq:recongroup}
    \tilde{a}_{m,i}^{I_j} = \sum_{k\in I_j} \tilde{a}^k_{m,i}
-   \end{equation}
+
 
 which gives us the parts of of each coefficient :math:`a_l(t)` that
 correspond to each dynamical component :math:`I_j`.
@@ -394,17 +372,23 @@ Applications of mSSA
       estimate of the fraction of each coefficient in any particular
       eigenpair or group.  Specifically, let us measure the
       contribution of the :math:`k`th eigenpair to the :math:`j`th
-      coefficient by: \begin{equation} f^k_j \equiv
-      \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},
-      \end{equation} where the Frobenius norm :math:`||\cdot||_F` is
-      equivalent to the Euclidean norm in this context:
-      :math:`||\mathbf{x}||_F = \sqrt{\mathbf{x}\cdot\mathbf{x}}`.  By
-      definition :math:`0<f^k_j<1` and :math:`\sum_k f^k_j=1`. Thus,
+      coefficient by:
+
+      .. math::
+	 f^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},
+
+      where the Frobenius norm :math:`||\cdot||_F` is equivalent to
+      the Euclidean norm in this context: :math:`||\mathbf{x}||_F =
+      \sqrt{\mathbf{x}\cdot\mathbf{x}}`.  By definition
+      :math:`0<f^k_j<1` and :math:`\sum_k f^k_j=1`. Thus,
       :math:`f^k_j` tells us the fraction of time series :math:`j`
       that is in principal component :math:`k`.  Alternatively, we
-      compute measure: \begin{equation} g^k_j \equiv
-      \frac{||\tilde{\mathbf{a}}^k_j||_F}{\sum_{j=1}^M||\mathbf{a}^k_j||_F},
-      \end{equation} which is the fraction of principal component in
+      compute measure:
+
+      .. math::
+	 g^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{\sum_{j=1}^M||\mathbf{a}^k_j||_F},
+
+      which is the fraction of principal component in
       series :math:`j`.  Thus, the histogram :math:`g^k_j` reflects
       the partitioning of power in the principal component :math:`k`
       into the input coefficient channels :math:`j`.
