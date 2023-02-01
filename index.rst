@@ -111,6 +111,7 @@ Solving specific problems
    topics/make-movies
    topics/using-mssa
    topics/orbits
+   topics/replay
    topics/exp-phase-space
    topics/EXP-output
    topics/debug
