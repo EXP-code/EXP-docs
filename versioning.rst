@@ -24,8 +24,10 @@ Backward-incompatibilities are explicitly mentioned in the
 :ref:`release notes <news>`, and may require special attention before
 upgrading.
 
-Development releases have are numbered with the next anticipated
-stable version with a tweak level appended: *A.B.C.D*.
+For easy identification, the main branch will have even release
+numbers and the development branch will have odd release numbers.
+Development releases have are numbered one more than the last main
+release version.
 
 
 API stability
