@@ -31,8 +31,7 @@ will be interested in *only* pyEXP.  Since the concepts and
 mathematics are the same for both, we will describe both together in
 this documentation.
 
-.. _getting-help:
-
+.. _quick-start:
 
 First steps
 ===========
@@ -56,8 +55,7 @@ A read through the following three topics will get you started.
 :doc:`intro/tutorial`
     A quick-start guide to pyEXP and EXP
 
-.. _section-basics:
-
+.. _getting-help:
 
 Getting help
 ============
@@ -70,6 +68,8 @@ Having trouble? We'd like to help!
 
 .. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
 
+
+.. _section-basics:
 
 EXP concepts
 ============
@@ -97,7 +97,7 @@ mathematics used in EXP.
     A review of Singular Spectrum Analysis and its application to BFE 
 
 :doc:`topics/multistep`
-    A quick review of EXP's multi time step ladder
+    A quick review of EXP's ODE solver and multi time step ladder
 
 :doc:`topics/yamlconfig`
     An example YAML configuration file for EXP
@@ -196,6 +196,7 @@ More about EXP
 
    news
    contributing
+   doxygen
    versioning
 
 :doc:`news`
@@ -203,6 +204,9 @@ More about EXP
 
 :doc:`contributing`
     Learn how to contribute to the EXP project.
+
+:doc:`doxygen`
+    Doxygen manual for EXP and pyEXP classes.
 
 :doc:`versioning`
     Understand EXP versioning and API stability.

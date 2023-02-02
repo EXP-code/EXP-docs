@@ -75,8 +75,8 @@ integrator.  We begin with a quick review.  Hamilton's equations for
 our Hamiltonian :math:`H = p^2/2 + \Phi(\mathbf{x})` read
 
 .. math::
-   \dot{\mathbf{q}} = \frac{\partial H}{\partial\mathbf{p}}
-   \dot{\mathbf{p}} = -\frac{\partial H}{\partial\mathbf{q}}
+   \dot{\mathbf{q}} &= \frac{\partial H}{\partial\mathbf{p}} \\
+   \dot{\mathbf{p}} &= -\frac{\partial H}{\partial\mathbf{q}}
 
 or, compactly,
 
@@ -98,7 +98,6 @@ We can discretize this Hamiltonian by replacing :math:`H(\mathbf{q},
 .. math::
    H_h(\mathbf{q}, \mathbf{p}, t) = \frac{p^2}{2} + \Phi(\mathbf{q})\delta_h(t)
 
-where
 
 .. math::
    \delta_h(t) = h\sum_{k=-\infty}^{k=\infty}\delta(t + kh).

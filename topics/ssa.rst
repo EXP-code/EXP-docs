@@ -158,10 +158,9 @@ partitions the set of indices :math:`\{1,\ldots,d\}` into :math:`m` disjoint
 subsets :math:`I_1,\ldots,I_m`.
 
 Define :math:`\mathbf{C}_I=\sum_{k\in I} \mathbf{C_k}`.
-Equation \ref{eq:elem_matr} leads to the decomposition
+Thisleads to the decomposition
 
 .. math::
-   \label{eq:mexp_g}
    \mathbf{C}=\mathbf{C}_{I_1}+\ldots+\mathbf{C}_{I_m}.
 
 The procedure of choosing the sets :math:`I_1,\ldots,I_m` is called
@@ -371,8 +370,8 @@ Applications of mSSA
 - *Channel contributions.* One can use the reconstructions to an
       estimate of the fraction of each coefficient in any particular
       eigenpair or group.  Specifically, let us measure the
-      contribution of the :math:`k`th eigenpair to the :math:`j`th
-      coefficient by:
+      contribution of the :math:`k\mbox{th}` eigenpair to the
+      :math:`j\mbox{th}` coefficient by:
 
       .. math::
 	 f^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},

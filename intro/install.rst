@@ -70,6 +70,8 @@ The install location will need to be changed in the example below.
 E.g. I would use ``-DCMAKE_INSTALL_PREFIX=/home/mdw_umass_edu`` on the
 UMass Unity cluster.
 
+.. _compile-features:
+
 Features
 ========
 
@@ -90,6 +92,12 @@ by default.  The important ones are:
   ``ENABLE_NBODY`` is ON.
 
 * ``ENABLE_USER_ALL`` compiles all the user modules.  OFF by default.
+
+* ``BUILD_DOCS`` builds the `Doxygen`_ web-based documentation viewer.
+  This requires Doxygen on your system and is OFF by default.  Doxygen
+  is not required.
+
+.. index:: Doxygen
 
 Finding packages
 ================
@@ -305,3 +313,4 @@ Provide a fix or suggestion.
 .. _Eigen3: https://eigen.tuxfamily.org/
 .. _HighFive: https://github.com/BlueBrain/HighFive
 .. _libyaml-cpp: https://github.com/jasonjei/libyaml-cpp
+.. _Doxygen: https://www.doxygen.nl/
