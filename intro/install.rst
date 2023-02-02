@@ -22,7 +22,8 @@ Supported system versions
 
 * The code includes a GPU implementation for adaptive basis force
   evaluation using NVidia's Cuda system.  This is optional and not
-  needed for pyEXP.
+  needed for pyEXP although we plan to implement a Cuda-aware pyEXP at
+  some point.
 
 * pyEXP requires `Python`_ 3.x as part of the internal pybind11
   implementation.
@@ -281,13 +282,45 @@ Though it should be possible to install EXP and pyEXP under Windows,
 we haven't tried.  If you have a working install, please *do*
 contribute some notes!
 
+.. _intro-install-ubuntu:
 
 Ubuntu 18.04 and above
 ----------------------
 
 EXP has been currently developed under Ubuntu for 10 years.  It
 currently requires the C++-17 language features and has been thorougly
-tested with recent versions of Ubuntu.
+tested with recent versions of Ubuntu.  A typical recipe to install
+packages might be:
+
+.. code-block:: bash
+
+   $ apt install libeigen3-dev libopenmpi-dev libhdf5-dev libfftw3-dev
+   $ apt install libpng-dev libvtk7-dev libtirpc-dev doxygen
+   $ apt install cuda-toolkit-11.7
+
+where the first line is required, the second line is optional, and the
+third line is necessary only if you want to build Cuda support for EXP.
+
+Linux-based HPC using lmod
+--------------------------
+
+Every HPC center names their modules differently.  A typical recipe to
+install modules might be:
+
+.. code-block:: bash
+
+   $ module load openmpi gcc cmake fftw cuda hdf5 python3 vtk eigen slurm openblas
+
+Although no specific versions were specified in the command, we
+recommend being specific by version.  E.g. ``module load
+gcc/11.3.0`` to get a specific release instead of simply ``module load
+gcc`` that may be an older system defult.  I recommend examining the
+available modules using ``module avail`` and pick recent versions of
+the packages.  Many HPC centers have older ones for backward
+compatibility.
+
+Once you have a good build, save your module set using ``module save
+EXP`` and restore it before running using ``module restore EXP``.
 
 .. _intro-install-macos:
 
