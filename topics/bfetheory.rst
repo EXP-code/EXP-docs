@@ -47,13 +47,11 @@ of our particle distribution of :math`N` points with masses
 :math:`m_i` described by
 
 .. math::
-
    \tilde{\rho}(\mathbf{x}) = \sum_{i=1}^N m_i \delta\left(\mathbf{x} - \mathbf{x_i}\right).
 
 Then, approximations for the density and potential fields are
 
 .. math::
-
    \text{density:}\qquad
    \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), \\
    \text{potential:}\qquad
@@ -62,7 +60,6 @@ Then, approximations for the density and potential fields are
 where
 
 .. math::
-
    a_j = \int d\mathbf{x}\, \tilde{\rho}(\mathbf{x}) p_j(\mathbf{x}) =
    \sum_{i=1}^N m_i p_j(\mathbf{x_i}).
 
@@ -257,7 +254,6 @@ radial orders are interleaved between harmonic orders, such that the
 location of the first node, :math:`R^{[1st]}`, is given by
 
 .. math::
-
    R_{m=2,n=1}^{[1st]} \approx \frac{1}{2}\left(R_{m=1,n=1}^{[1st]} +
    R_{m=1,n=2}^{[1st]}\right).
 
