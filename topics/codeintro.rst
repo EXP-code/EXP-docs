@@ -18,8 +18,15 @@ users may write, compile and contribute new phase space operators for
 applying perturbations, new force methods, etc. without changing or
 recompiling the base code.  This is accomplished using dynamically
 loadable libraries (see :ref:`user modules <usermodules>` for
-details and a simple example).  Additional software details can be
-found in :ref:`extending EXP <extending>`.
+details and a simple example).
+
+Want more details?
+------------------
+
+.. note:: This :ref:`link <extending>` provides technical detail on
+	  the underlying structure of the C++ code.  You might want to
+	  skip this on your first read through.
 
 
 
+   

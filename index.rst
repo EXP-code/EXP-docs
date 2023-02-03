@@ -44,7 +44,7 @@ First steps
    intro/install
    intro/tutorial
 
-A read through the following three topics will get you started.
+TL;DR: A read through the following three topics will get you started.
 
 :doc:`intro/overview`
     Understand what EXP is and how it can help you.
@@ -68,6 +68,8 @@ Having trouble? We'd like to help!
 
 .. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
 
+
+.. note:: If you want to become an **EXPert**, please read on ...
 
 .. _section-basics:
 

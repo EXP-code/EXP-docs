@@ -19,6 +19,11 @@ subsequent analysis is then a combined spatio-temporal filter and
 reconstruction of the dynamics.  This is exactly what we need and want
 for n-body dynamical analysis.
 
+.. note:: The following sections provides mathematical details of SSA,
+	  multichannel SSA, and its implementation in EXP.  Feel free
+	  to skip this on your first read through if you want to skip
+	  right to an :ref:`example application <using-mssa>`.
+
 SSA algorithms and methodology
 ------------------------------
 

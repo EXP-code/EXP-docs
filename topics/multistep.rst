@@ -15,6 +15,11 @@ In practice, this multiple time stepping algorithm improves throughput
 by an order of magnitude for CPU computations.  Less so for
 GPU computations but it often still results in a factor of two gain.
 
+.. note:: The following sections provides mathematical details of the EXP
+	  multistepping implementation.  You might wish to skip this
+	  on your first read through.
+
+
 Time step criteria
 ~~~~~~~~~~~~~~~~~~
 
@@ -352,11 +357,11 @@ where all times are synchronized.
 Algorithm summary
 -----------------
 
-1. The global variable \texttt{multistep} sets the number of time
+1. The global variable ``multistep`` sets the number of time
    step levels.  Each successive level has time step :math:`t_0/2^l` where
    :math:`l` is the level counter and :math:`t_0` is master time step,
-   the parameter `dtime`.  Theerfore the smallest stepping interval
-   is :math:`t_0/2^{multistep}`.
+   the parameter ``dtime``.  Theerfore the smallest stepping interval
+   is :math:`t_0/2^{\mbox{multistep}}`.
 
 2. All bodies start on highest level :math:`l=\mbox{multistep}`
    (smallest time step) to start on the first step.  After the first
