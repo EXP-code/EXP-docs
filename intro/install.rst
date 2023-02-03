@@ -214,14 +214,14 @@ please refer to their respective installation instructions:
 
 .. _intro-using-virtualenv:
 
-Using a virtual environment (recommended)
------------------------------------------
+Using a Python virtual environment (recommended)
+------------------------------------------------
 
 .. index:: pair: Python; venv
 .. index:: Lua modules
 
-TL;DR: We recommend installing pyEXP inside a virtual environment
-on all platforms that use ``lmod modules``.  
+.. note:: TL;DR: We recommend installing pyEXP inside a virtual environment
+	  on all platforms that use ``lmod modules``.  
 
 Python packages can be installed either globally (a.k.a system wide),
 or in user-space.
