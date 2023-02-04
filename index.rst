@@ -105,11 +105,11 @@ mathematics used in EXP.
     An example YAML configuration file for EXP
 
 
-Solving specific problems
-=========================
+How to solve specific problems
+==============================
 
 .. toctree::
-   :caption: Solving specific problems
+   :caption: How to solve specific problems
    :hidden:
 
    faq
