@@ -44,7 +44,7 @@ First steps
    intro/install
    intro/tutorial
 
-TL;DR: A read through the following three topics will get you started.
+.. note:: TL;DR: A read through the following three topics will get you started.
 
 :doc:`intro/overview`
     Understand what EXP is and how it can help you.
