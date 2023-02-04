@@ -28,6 +28,13 @@ and to get the EXP N-body examples do:
    git clone git@github.com:EXP-code/EXP-examples.git EXP-examples
 
 
+.. note:: We use the ``Better` example from ``EXP-examples`` to
+	  illustrate some key features of pyEXP.  For those of you
+	  interested in EXP and pyEXP, we recommend running the
+	  example in ``EXP-examples/Better``.  For pyEXP-only users,
+	  we provide an abbreviated output set that may be copied from
+	  ``EXP-examples/Better``.
+
 Quick-start examples
 --------------------
 
