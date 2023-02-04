@@ -4,25 +4,31 @@
 EXP at a glance
 ===============
 
-This code uses object-oriented design patterns to exploit the
-similarity in overall structure of all :ref:`biorthogonal expansions
-<biorthogonal>` for ease of implementation and maintenance.  The class
-hierarchy enables reuse and reconfiguration for any number of
-phase-space components whose gravity may be represented by a
+EXP is a library that implements both N-body simulations and analysis
+of simulations.  The code uses object-oriented design patterns to
+exploit the similarity in overall structure of all :ref:`biorthogonal
+expansions <biorthogonal>` for ease of implementation and maintenance.
+The class hierarchy enables reuse and reconfiguration for any number
+of phase-space components whose gravity may be represented by a
 appropriate biorthgonal bases and direct gravity methods.  The
 object-oriented design enforces minimal consistency while retaining
-flexibility.
+flexibility.  This hierarchy is reflected in the latest addition to
+EXP: a set of Python bindings, **pyEXP**, that enable analyses of
+simulations in the Python/Jupyter ecosystem.
 
-EXP, the n-body code
+EXP, the N-body code
 ====================
 
 EXP n-body users may write, compile and contribute new phase space
 operators for applying perturbations, new force methods, etc. without
 changing or recompiling the base code. See :ref:`modules
-<usermodules>` for details and a simple example.
+<usermodules>` for details and a simple example.  **pyEXP** brings the
+power of BFE and mSSA for discovering dynamical features and
+mechanisms from N-body snapshots generally and allows you to combine
+them with your existing Python workflow.
 
-pyEXP
-=====
+pyEXP, for N-body discovery
+===========================
 
 .. index:: pyEXP
 
@@ -121,7 +127,7 @@ will use your standard phase-space pipeline for any necessary
 reprocessing such as centering and other coordinate transformations.
 
 The coefficients are then computed by the newly made basis from this
-data in the `` basis.createFromArray()`` call.  The coefficients are
+data in the ``basis.createFromArray()`` call.  The coefficients are
 then written to an HDF5 file safe keeping and installed in the
 ``basis``.   The ``basis`` can be evaluated to provide visualizations
 of the field values implied by these coefficients.
@@ -178,8 +184,12 @@ simulations, including:
 What's next?
 ============
 
-The next steps for you are to :ref:`install EXP <intro-install>`,
-:ref:`follow through the pyEXP tutorial <intro-pyEXP-tutorial>` or the
-:ref:`EXP tutorial <intro-EXP-tutorial>` to learn how to create a
-full-blown EXP project. Thanks for your interest!
+The next steps for you are to
+
+1. :ref:`install EXP <intro-install>`
+2. :ref:`follow through the pyEXP tutorial <intro-pyEXP-tutorial>` or the
+3. :ref:`EXP tutorial <intro-EXP-tutorial>`
+
+to learn how to create a full-blown EXP analysis or simulation and
+analysis project. Thanks for your interest!
 
