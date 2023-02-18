@@ -287,10 +287,10 @@ contribute some notes!
 Ubuntu 18.04 and above
 ----------------------
 
-EXP has been currently developed under Ubuntu for 10 years.  It
-currently requires the C++-17 language features and has been thorougly
-tested with recent versions of Ubuntu.  A typical recipe to install
-packages might be:
+EXP has been currently developed under Ubuntu for 10 years and Debian
+before that.  It currently requires the C++-17 language features and
+has been thorougly tested with recent versions of Ubuntu.  A typical
+recipe to install packages might be:
 
 .. code-block:: bash
 
@@ -299,7 +299,29 @@ packages might be:
    $ apt install cuda-toolkit-11.7
 
 where the first line is required, the second line is optional, and the
-third line is necessary only if you want to build Cuda support for EXP.
+third line is necessary only if you want to build Cuda support for
+EXP.
+
+Compilers suites with GNU/Linux
+-------------------------------
+
+Most Linux distributions using the GNU gcc-suite compilers and these
+have been heavily tested.  If you are using Linux, you will get
+*gcc/g++/gfortran* by default.
+
+However, we have tested both the Intel and LLVM suites as well at
+various time.  We have had difficulty with *Intel One* but most of the
+issues were missing packages and should be fixed by compiling the
+missing packages and libraries.
+
+The most recent versions of *clang* use a C++ standard library ABI
+that is incompatible with the GNU `libstdc++` ABI. EXP uses the HDF5
+C++ libraries.  Therefore, you will need to compile the HDF5
+development package yourself with *clang* to build EXP with *clang*.
+This not difficult and we have confirmed that it works.  We downloaded
+and built the `HDF5 source
+<https://portal.hdfgroup.org/display/support/Download+HDF5>`_ for
+version 1.10.9.  Other stable versions should work, too.
 
 Linux-based HPC using lmod
 --------------------------
