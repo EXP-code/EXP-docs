@@ -310,9 +310,10 @@ have been heavily tested.  If you are using Linux, you will get
 *gcc/g++/gfortran* by default.
 
 However, we have tested both the Intel and LLVM suites as well at
-various time.  We have had difficulty with *Intel One* but most of the
-issues were missing packages and should be fixed by compiling the
-missing packages and libraries.
+various time.  We have had difficulty with the newer *Intel oneAPI*
+release but most of the issues were incompatibilities or missing
+packages and should be fixable by compiling the missing packages and
+libraries.
 
 The most recent versions of *clang* use a C++ standard library ABI
 that is incompatible with the GNU `libstdc++` ABI. EXP uses the HDF5
