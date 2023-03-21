@@ -113,9 +113,80 @@ debugger.
 Checking for MPI consistency
 ----------------------------
 
+EXP includes a built-in synchronization checker, ``BarrierWrapper``,
+that uses `MPI_Barrier` to mark a code location with a string token
+and verifies that each process in the MPI multi-computer arrives at
+the barrier with the same token.
+
+There are two distinct implementations, a light-weight and
+heavy-weight checker.  The light-weight implementation is simple: when
+nodes arrive at an MPI barrier, the tokens are sent to the root node.
+When all processes have arrived at the barrier, the root node checks
+that all tokens agree, and complains to stdout if they do not.  The
+heavy-weight implementation polls in loop and reports the status of
+processes that have reached and not reached the barrier.  This
+provides more information than the light-weight version but can be
+confusing.
+
+The light-weight version is used by default.  The heavy-weight version
+can be specified by including ``barrier_light: false`` in the global
+YAML stanza (see the :ref:`YAML config example <yamlconfig>`).
+Other global parameters affecting the ``BarrierWrapper`` behavior
+include:
+
+* ``barrier_check``: set to ``true`` to enable the ``BarrierWrapper``. The default is ``false``.
+
+* ``barrier_quiet``: set to ``true`` turns OFF extra output describing
+  the wrapper state.  This is the default.
+
+* ``barrier_verbose``: set to ``true`` turns ON extra output
+  describing the wrapper state.  This is the opposite of
+  ``barrier_quiet: true``.
+
+* ``barrier_debug``: provides some additional information about internal synchronization to be used if the wrapper is providing confusing results.
+
+* ``barrier_extra``: provide even more internal diagnostics than verbose.
+
+
 pyEXP
 =====
 
 Using the GDB debugger
 ----------------------
 
+Debugging the C++ implementation of pyEXP is no different than EXP.
+For example, you can just start GDB with Python:
+
+.. code-block:: bash
+
+   gdb python
+   break <C++ function break point>
+   run mytest.py
+
+You need to compile EXP with debug information by specifying
+'Debug' for ``CMAKE_BUILD_TYPE`` by editing the ``CMakeCache.txt``
+file directly.  For example, from your build directory you can execute:
+
+.. code-block:: bash
+
+   ccmake <top-level source dir>
+
+If you are not debugging the Python interpreter itself, you do not
+need to do anything special; you can use the regular interpreter and
+no extensions.  GDB will complain that there are no debugging symbols
+in `python3` but that does not matter; the C++ code referenced by the
+pyEXP bindings *will* have debugging symbols.
+
+Debugging both Python and C++ from GDB is more complicated but
+possible although we do not recommend doing this. You will need a
+Python build with debug info.  For example, if you are running Python
+3.10 on Ubuntu, you can install the debug build as follows:
+
+.. code-block:: bash
+
+   sudo apt install python3.10-dbg
+
+There are a number of online resources for debugging Python using
+GDB.  See `Python GDB`_ to get started.
+
+.. _Python GDB: https://wiki.python.org/moin/DebuggingWithGdb
