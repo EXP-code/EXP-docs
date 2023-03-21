@@ -71,6 +71,29 @@ with a grid size:
       plt.legend()
       plt.show()
   
+The resulting images are:
+
+.. image:: sph_basis_0.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 1-d halo basis functions for l=0
+   :align: center
+
+.. image:: sph_basis_1.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 1-d halo basis functions for l=1
+   :align: center
+
+.. image:: sph_basis_2.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 1-d halo basis functions for l=2
+   :align: center
+
 
 Cylindrical basis
 -----------------
@@ -144,3 +167,29 @@ We'll use `contourf` to visualize the meridional-plane basis functions:
          plt.show()
   
       
+The first three of the resulting images are:
+
+.. image:: cyl_basis_0_0.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 2-d cylindrical basis functions for m=0, n=0
+   :align: center
+
+.. image:: cyl_basis_0_1.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 2-d cylindrical basis functions for m=0, n=1
+   :align: center
+
+.. image:: cyl_basis_0_2.png
+   :height: 600 px
+   :width: 800 px
+   :scale: 50 %
+   :alt: figure showing the 2-d cylindrical basis functions for m=0, n=2
+   :align: center
+
+
+We can visualize the basis for ``FlatDisk`` using the same steps as
+``SphericalSL``.
