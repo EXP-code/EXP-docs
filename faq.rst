@@ -33,3 +33,31 @@ N-body codes.  The EXP code base provides stand-alone Unix routines
 for these analyses, too.  If you want to analyze existing N-body
 simulation output and prefer the Jupyter/Python ecosystem, pyEXP is
 what you want.
+
+
+I got a "seg fault", now what do I do?
+--------------------------------------
+
+First of all, we are sorry!  Please report the problem in our `issue tracker`_.
+
+As you probably know, segmentation faults often arise when a program
+is attempting to access memory that the OS cannot locate or will not
+allow.  Most often, this is the result of EXP/pyEXP being used in a
+way that the developers haven't considered and tested.
+
+If you are an experienced programmer and would like to contribute by
+providing a fix, this is what we usually do:
+
+* Recompile EXP/pyEXP as 'Debug' using ``ccmake`` or by changing the
+  value of the ``CMAKE_BUILD_TYPE`` to 'Debug' in your
+  ``CMakeCache.txt`` file.
+
+* Run the code in ``gdb``.  If you are using pyEXP, you can launch
+  ``gdb python3`` and run your script in the debugger.
+
+* Look for failures such as undefined arrays, vectors, etc.  Even if
+  you only report the approximately location in the source file, you
+  will have saved the developers a lot of time and sped up the time to
+  a fix.
+
+.. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
