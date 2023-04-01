@@ -16,7 +16,7 @@ explicitly selected and controlled to allow the study of different
 mechanisms individually.  In particular, EXP is designed to allow the
 self-gravity and intercomponent forces between all components to be
 independently selected and controlled by simple configuration
-parameters (see \S\ref{sec:config}).
+parameters (see :ref:`yamlconfig`).
 
 In the remainder of this chapter, I will give a brief introduction to
 the mathematics of the BFE method which then motivates the overall
@@ -88,6 +88,7 @@ Empirical Orthogonal Functions
 
 .. _biorthogonal:
 
+.. _disk_amplitudes:
 .. figure:: images/basis1.png
     :figwidth: 80 %
     :width: 80 %
@@ -100,6 +101,7 @@ Empirical Orthogonal Functions
     normalized to the maximum in the corresponding subspace. Functions
     that are zero everywhere are vertically asymmetric.
 
+.. _disk_3d_amplitudes:
 .. figure:: images/basis2.png
     :figwidth: 80 %
     :width: 80 %
@@ -123,9 +125,11 @@ special case. The SLE describes many physical systems, and may be
 written as:
 
 .. math::
+   :label: sle
+
    \frac{d}{dx}\left[p(x)\frac{d\Phi(x)}{dx}\right] - q(x)\Phi(x) =
    \lambda \omega(x) \Phi(x)
-
+	   
 where :math:`\lambda` is a constant, and :math:`\omega(x)` is a
 weighting function. The eigenfunctions :math:`\phi_j` of the SLE form
 a complete basis set with eigenfunctions :math:`\lambda_j`, where
@@ -141,12 +145,12 @@ separates into angular and radial equations, giving rise to spherical
 harmonics and Bessel functions naturally.  The boundary conditions are
 easy to apply in radius (at the origin and at infinity).  For example,
 a dark-matter halo can be expanded into a relatively small number of
-spherical harmonics :math:`Y_{lm}` and appropriate radial functions.  Each
-term in halo potential is given by :math:`\Phi_{lm}^j =
+spherical harmonics :math:`Y_{lm}` and appropriate radial functions.
+Each term in halo potential is given by :math:`\Phi_{lm}^j =
 \phi_{lm}^j(r)Y_{lm}(\theta,\phi)`.  Even more interesting, Bessel
 functions are not the only choice.  By changing the weighting function
 we may derive an infinity of radial bases.  In particular, the
-weighting function :math:`\omega` in equation (\ref{eq:sle}) may be
+weighting function :math:`\omega` in equation :eq:`sle` may be
 selected to be an equilibrium solution of the Poisson equation.  In
 other words, the unperturbed potential would be represented by a
 single term!
@@ -161,11 +165,15 @@ function space to best represent a target disk density.  Specifically,
 each density element :math:`\rho(R, z)\,d^3x` contributes
 
 .. math::
+   :label: contrib
+   
         \frac{1}{4\pi G}\phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3 x
 
 to the expansion coefficient :math:`a_{lm}^j`, or
 
 .. math::
+   :label: coeff
+
          a_{lm}^j &= \frac{1}{4\pi
         G}\int \phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3x \\
                   &= \lim_{N\rightarrow\infty}\frac{1}{4\pi
@@ -234,24 +242,26 @@ very sensitive to the resulting basis, however.
 Examples
 --------
 
-Figure \ref{fig:disk_amplitudes} shows the in-plane amplitude
-variations for radial functions (:math:`n` orders) as a function of radius,
-separated by harmonic subspace (:math:`m` orders) for an exponential disk in
-an NFW \citep{navarro97} halo.  We show the four harmonic subspaces
-that are most relevant for the evolution of the simulation,
-:math:`m=0,1,2,4`, from top to bottom in the panels. In each harmonic
-subspace, the lowest-order radial order, :math:`n=1`, has no nodes except
-at :math:`R=0` for :math:`m\ge0`. The number of nodes increases with order
-:math:`n`. The nodes are interleaved by radial order, but the increasing
-number of nodes means that the smallest radius node always decreases
-in radius as the number of nodes increases. Therefore, an increase in
-amplitude for higher--:math:`n`--order harmonics corresponds to the movement
-of mass to smaller radii. Additionally, the spacing of nodes gives an
+:numref:`disk_amplitudes` shows the in-plane amplitude
+variations for radial functions (:math:`n` orders) as a function of
+radius, separated by harmonic subspace (:math:`m` orders) for an
+exponential disk in an NFW ([navarro97]_) halo.  We show the four
+harmonic subspaces that are most relevant for the evolution of the
+simulation, :math:`m=0,1,2,4`, from top to bottom in the panels. In
+each harmonic subspace, the lowest-order radial order, :math:`n=1`,
+has no nodes except at :math:`R=0` for :math:`m\ge0`. The number of
+nodes increases with order :math:`n`. The nodes are interleaved by
+radial order, but the increasing number of nodes means that the
+smallest radius node always decreases in radius as the number of nodes
+increases. Therefore, an increase in amplitude for
+higher--:math:`n`--order harmonics corresponds to the movement of mass
+to smaller radii. Additionally, the spacing of nodes gives an
 approximate value for the force resolution of the simulation. For
-example, the highest order :math:`m=0` radial function (:math:`n=12`) has a
-zero at :math:`R=0.2a`, or 600 pc in a MW-like galaxy. Additionally, the
-radial orders are interleaved between harmonic orders, such that the
-location of the first node, :math:`R^{[1st]}`, is given by
+example, the highest order :math:`m=0` radial function (:math:`n=12`)
+has a zero at :math:`R=0.2a`, or 600 pc in a MW-like
+galaxy. Additionally, the radial orders are interleaved between
+harmonic orders, such that the location of the first node,
+:math:`R^{[1st]}`, is given by
 
 .. math::
    R_{m=2,n=1}^{[1st]} \approx \frac{1}{2}\left(R_{m=1,n=1}^{[1st]} +
@@ -259,33 +269,37 @@ location of the first node, :math:`R^{[1st]}`, is given by
 
 The lowest-order basis function exactly matches the initial density
 profile and has no nodes.  In this example, the highest-order basis
-function, :math:`n=12`, would only imply a spatial resolution of 100 pc,
-the basis resolves a power law in density down to 10 pc. This choice
-removes or filters high spatial frequencies that may increase
-relaxation noise. Figure \ref{fig:disk_3d_amplitudes} illustrates the
+function, :math:`n=12`, would only imply a spatial resolution of 100
+pc, the basis resolves a power law in density down to 10 pc. This
+choice removes or filters high spatial frequencies that may increase
+relaxation noise.  :numref:`disk_3d_amplitudes` illustrates the
 vertical structure in the disk basis functions. The upper panel shows
 the :math:`m=2,n=4` basis function in radius--z space. This function
 is symmetric about the :math:`z=0` axis. The combination of vertically
 symmetric and asymmetric harmonics represent all possible variations
 in the gravitational field above and below the plane consistent with
 the spatial scales in the basis. In both panels, the color has been
-normalized to the maximum amplitude of the :math:`m=2` harmonic subspace.
+normalized to the maximum amplitude of the :math:`m=2` harmonic
+subspace.
+
+.. include:: two_d_disk.rst
+
 
 Final comments and caveats
 ==========================
 
 The basic expansion algorithm is described at the beginning of this
 chapter. EXP can be configured to log coefficients each step or in any
-multiple of steps (see \S\ref{sec:design} and \S\ref{sec:expconfig}).
-The coefficients for each :math:`n` order are generally complex.  The
-real and imaginary parts correspond to the cosine and sine components
-of the analogous Fourier terms :math:`A_m` and :math:`B_m`. The
+multiple of steps (see :ref:`design` and :ref:`yamlconfig`).  The
+coefficients for each :math:`n` order are generally complex.  The real
+and imaginary parts correspond to the cosine and sine components of
+the analogous Fourier terms :math:`A_m` and :math:`B_m`. The
 coefficients are written in sine and cosine form for easy
 interpretation.  Thus, the user may compute the phase angle for any
 basis function and use the total amplitude or modulus as an indicator
 of power.  Additional details about using multiple time-step levels
-along with the leap-frog algorithm can be found in
-\S\ref{sec:multistep}.
+along with the leap-frog algorithm can be found in Section
+:ref:`multistep`.
 
 The BFE approach trades off precision and degrees-of-freedom with
 adaptability. The truncated series of basis functions intentionally
@@ -295,7 +309,7 @@ gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
 biases results for grossly asymmetric systems.  A simple example of
-this is centering (see \S\ref{sec:EJ}).   Please be vigilant. 
+this is centering (see Sec. `EJ`).   Please be vigilant. 
 
 On the up side, a basis function representation provides an
 information--rich summary of the gravitational field and provides
@@ -322,6 +336,11 @@ separately.
 .. [earn96] D. J. D. Earn. Potential-Density Basis Sets for Galactic
 	     Disks. ApJ, 465:91, July 1996.
 
+.. [guizar04] M. Guizar-Sicairos and J. C. Gutiérrez-Vega.
+	      Computation of quasi-discrete Hankel transforms of
+	      integer order for propagating optical wave
+	      fields. J. Opt. Soc. Am. A 21(1):53-58, 2004.
+
 .. [hernquist92] L. Hernquist and J. P. Ostriker. A self-consistent
 		 field method for galactic dynamics. ApJ, 386:375–397,
 		 Feb. 1992.
@@ -329,6 +348,10 @@ separately.
 .. [kalnajs76] A. J. Kalnajs. Dynamics of Flat
 	       Galaxies. II. Biorthonormal Surface Density-Potential
 	       Pairs for Finite Disks. ApJ, 205:745–750, May 1976.
+
+.. [navarro97] J. F. Navarro, C. S. Frenk, and S. D. M. White. A
+	       Universal Density Profile from Hierarchical
+	       Clustering. ApJ, 490:493–508, Dec. 1997.
 
 .. [weinberg99] M. D. Weinberg. AJ, 117:629, 1999.
 

@@ -27,3 +27,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Turn on figure numering
+numfig = True
