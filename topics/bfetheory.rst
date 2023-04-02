@@ -86,7 +86,7 @@ arbitrary combinations of particles.
 Empirical Orthogonal Functions
 ==============================
 
-.. _biorthogonal:
+.. _EOF:
 
 .. _disk_amplitudes:
 .. figure:: images/basis1.png
@@ -318,14 +318,9 @@ decomposition of different components into dynamically-relevant
 subcomponents for which the gravitational field can be calculated
 separately.
 
-.. [weinberg07a] M. D. Weinberg and N. Katz. The bar-halo
-		 interaction - I. From funda- mental dynamics to
-		 revised N-body requirements. MNRAS, 375:425–459,
-		 Feb. 2007
+.. [bt08] J. Binney and S. Tremaine. Galactic Dynamics: Second
+	  Edition. Princeton University Press, Princeton, NJ USA, 2008.
 
-.. [weinberg07b] M. D. Weinberg and N. Katz. The bar-halo
-		 interaction - II. Secular evolution and the religion
-		 of N-body simulations. MNRAS, 375:460–476, Feb. 2007.
 
 .. [cluttonbrock72] M. Clutton-Brock. The Gravitational Field of Flat
 		    Galaxies. APSS, 16:101–119, Apr. 1972.
@@ -354,6 +349,15 @@ separately.
 	       Clustering. ApJ, 490:493–508, Dec. 1997.
 
 .. [weinberg99] M. D. Weinberg. AJ, 117:629, 1999.
+
+.. [weinberg07a] M. D. Weinberg and N. Katz. The bar-halo
+		 interaction - I. From funda- mental dynamics to
+		 revised N-body requirements. MNRAS, 375:425–459,
+		 Feb. 2007
+
+.. [weinberg07b] M. D. Weinberg and N. Katz. The bar-halo
+		 interaction - II. Secular evolution and the religion
+		 of N-body simulations. MNRAS, 375:460–476, Feb. 2007.
 
 .. [weinberg21] M. D. Weinberg and M. S. Petersen. Using multichannel
 		singular spectrum analysis to study galaxy

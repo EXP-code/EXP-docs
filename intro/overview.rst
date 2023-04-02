@@ -7,7 +7,7 @@ EXP at a glance
 EXP is a library that implements both N-body simulations and analysis
 of simulations.  The code uses object-oriented design patterns to
 exploit the similarity in overall structure of all :ref:`biorthogonal
-expansions <biorthogonal>` for ease of implementation and maintenance.
+expansions <bfetheory>` for ease of implementation and maintenance.
 The class hierarchy enables reuse and reconfiguration for any number
 of phase-space components whose gravity may be represented by a
 appropriate biorthgonal bases and direct gravity methods.  The
