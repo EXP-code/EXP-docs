@@ -129,11 +129,29 @@ constructing the basis, assigned to the variable `basis`.
     ---- SLGridSph::read_cached_table: Success!!
 
 
-Creating a particle reader
---------------------------
+Getting coefficients from the basis
+-----------------------------------
 
-Now that we have a basis, we can use it to create coefficients from the
-particle snapshots. ``pyEXP`` uses a ``ParticleReader`` object for that.
+``pyEXP`` provides two strategies for using the ``Basis`` to construct
+coefficients:
+
+1. Using a ``ParticleReader``, a helper object that supplies particle
+   phase space to the ``Basis.createFromReader`` member.  Many of the
+   standard phase-space file types are supported including Gadget,
+   Gadget HDF5, Bonsai and of course EXP.
+
+2. Using arrays of masses and positions supplied by the users own
+   post-processing pipeline.  In this case, these Python `np.ndarray``
+   types are passed to the `Basis.createFromArray`` member.
+
+
+In both cases the ``createFrom*`` members take an optional expansion center
+vector. If you need more complicated coordinate transformations,
+Option 2 will serve you best.
+
+
+Creating and using a particle reader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first step is to hand off the files that comprise a snapshot for
 every time slice. The ``ParticleReader`` provides a helper function for
@@ -295,7 +313,118 @@ new container is created on the first time through.
     The coefficient time list is [0.005, 0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05]
 
 
+Creating coefficients using your own arrays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We will assume that you have an one-dimensional array of masses for
+each particle and a :math:`3\times N` two-dimensional array of
+particle positions.   There are two possible strategies.
+
+A single set of arrays
+^^^^^^^^^^^^^^^^^^^^^^
+
+You can load your entire phase space into the mass and position arrays
+and call ``createFromArray`` for each time slice.  This might look
+something like this:
+
+.. code:: ipython3
+
+    # This will contain the coefficient container, need to start will a
+    # null instance to trigger construction
+    #
+    coefs   = None
+    
+    for snap in range(numsnaps):
+    
+        print("Snapshot #{}".format(snap))
+    
+        # Read the masses and positions using your custom pipeline.
+	# Let's call those resulting arrays "m", "pos" at time "time".
+	# Then:
+        #
+        coef = basis.createFromArray(m, pos, time)
+        print("Created coef")
+    
+        # We need the idiom here because None is not mapping to a
+        # null pointer.
+        #                          This is optional---+
+        #                                             |
+        if coefs is None:           #                 v
+            coefs = pyEXP.coefs.Coefs.makecoefs(coef, compname)
+        else:
+            coefs.add(coef)
+    
+        print('Added coef')
+        print('-'*60)
+    
+    print('\nCompleted the snapshot list\n')
+    
+    print('The coefficient time list is', coefs.Times())
+
+    
+Multiple sets of arrays
+^^^^^^^^^^^^^^^^^^^^^^^
+
+For each time, you may process your phase space particles in bunches.
+You will need this for very large phase-space snapshots.  This is
+nearly the same as the method above but we break up
+``createFromArray`` into three separate calls: ``initFromArray``,
+``addFromArray``, and ``makeFromArray``.  The first and last are
+called at the beginning and end and ``addFromArray`` is called once
+for each bunch.  In fact, ``createFromArray`` is simply a call to each
+of the three separate calls under the hood.
+
+Here is an example code snippet:
+    
+.. code:: ipython3
+
+    # This will contain the coefficient container, need to start will a
+    # null instance to trigger construction
+    #
+    coefs   = None
+    
+    for snap in range(numsnaps):
+    
+        print("Snapshot #{}".format(snap))
+    
+	basis.initFromArray()
+
+	for n in range(nbunches):
+
+	   # Read the masses and positions using your custom pipeline for
+	   # each of nbunches.  As before, let's call those resulting
+	   arrays "m", "pos" at time "time".
+	   #
+           # Then:
+           #
+	   basis.addFromArray(m, pos)
+
+	   
+	coef = basis.makeFromArray(time)
+	print("Created coef")
+
+        # We need the idiom here because None is not mapping to a
+        # null pointer.
+        #                          This is optional---+
+        #                                             |
+        if coefs is None:           #                 v
+            coefs = pyEXP.coefs.Coefs.makecoefs(coef, compname)
+        else:
+            coefs.add(coef)
+    
+        print('Added coef')
+        print('-'*60)
+    
+    print('\nCompleted the snapshot list\n')
+    
+    print('The coefficient time list is', coefs.Times())
+
+
+DONE!
+-----
+
 Our task is completed!  We now have a coefficient object in Python
-called `coefs` that may be saved (see :ref:`saving coefficients
-<saving-coefficients>`) or used to generate fields and movies (see
-:ref:`visualizing fields <visualizing-fields>`).
+called `coefs` that may be saved into an HDF5 file that may be read at
+any future time (see :ref:`saving coefficients <saving-coefficients>`)
+or used to generate fields and movies (see :ref:`visualizing fields
+<visualizing-fields>`).
