@@ -4,12 +4,19 @@ How to  generate coefficients from phase-space snapshots
 ========================================================
 
 
-This example assumes that you have run the ``EXP/examples/Better``
-simulation. But this notebook could be adapted for any simulation you
-like.
+This example assumes that you have pulled the (`EXP examples
+repository <https://github.com/EXP-code/EXP-examples>`_) and run the
+``EXP/examples/Better`` simulation.  We have also provided output from
+this simulation in the `Better/data` directory for your convenience.
+But this methods in the example can be adapted for any simulation you
+like, not only EXP-generated simulations.
 
-We begin by importing ``pyEXP`` and friends and setting the working
-directory.
+Many of the examples described in this documentation also have
+corresponding Jupyter notebooks in the (`pyEXP repo
+<https://github.com/EXP-code/pyEXP-examples>`_).
+
+Let's just dive in.  We begin by importing ``pyEXP`` and friends and
+setting the working directory.
 
 .. code:: ipython3
 
@@ -17,8 +24,10 @@ directory.
     import yaml
     import pyEXP
     
-    # I have the Better run here; obviously another use will want to
-    # change this a directory containing some snapshots of their own
+    # I have the Better run in my personal direcotry; obviously
+    # another you will want to change this a directory containing
+    # some snapshots of your own or point at the output provided in
+    # the EXP examples repo.
     #
     os.chdir('/home/weinberg/Nbody/Better')
 
@@ -29,6 +38,22 @@ We’ll only do the halo coefficients in this simple example. The
 cylindrical coefficients would procede similarly. See the
 ``sample_basis`` notebook for an example of creating the cylindrical
 basis.
+
+Basis objects in pyEXP often have many parameters.  We use YAML for
+specifying the basis.  Recall that :ref:`YAML <yaml-primer>` is a
+human-readable data serialization format that is often used for
+configuration files and data exchange between programming languages.
+YAML is designed to be easy to read and write by humans. Its syntax is
+straightforward and doesn't rely on any specific programming language.
+It has strong C++ and Python support, so it's perfect for EXP.
+Because YAML files are plain text, they are portable across different
+operating systems and platforms. 
+
+The first bit of the code below shows two ways of constructing a YAML
+file.  You may use an editor and make a file, here called `basis.yaml`
+or you may construct it in Python as a text string, here called
+`bconfig`.  The final line of the code snippit does the work of
+constructing the basis, assigned to the variable `basis`.
 
 .. code:: ipython3
 
@@ -270,3 +295,7 @@ new container is created on the first time through.
     The coefficient time list is [0.005, 0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05]
 
 
+Our task is completed!  We now have a coefficient object in Python
+called `coefs` that may be saved (see :ref:`saving coefficients
+<saving-coefficients>`) or used to generate fields and movies (see
+:ref:`visualizing fields <visualizing-fields>`).
