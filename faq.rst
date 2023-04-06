@@ -1,7 +1,7 @@
 .. _faq:
 
-Frequently Asked Questions
-==========================
+Frequently Asked Questions (FAQ)
+================================
 
 .. _faq-EXP-bs-cmp:
 
@@ -61,3 +61,25 @@ providing a fix, this is what we usually do:
   a fix.
 
 .. _issue tracker: https://github.com/orgs/EXP-code/repositories/issues
+
+
+How can I do a calculation with phase space in pyEXP
+----------------------------------------------------
+
+The phase-space interface in pyEXP is the ``ParticleReader`` which is
+really a stream or iterator.  The user can access the phase-space
+variables directly using the ``pyEXP.util.particleIterator(reader,
+func)`` where ``reader`` is of type ``pyEXP.read.ParticleReader`` and
+``func`` is a callback function that takes a scalar mass, position and
+velocity arrays, and a scalar index as input. For example, you can
+define the callback ``func`` in your Python environment and accumulate
+summary statistics or even collect up phase space vectors by appending
+to existing arrays.  Because ``ParticleReader`` is a stream, pyEXP does
+not have an interface to phase space by array index.  This was a
+design choice; the idea was not to push huge phase space snapshots
+onto the users stack.
+
+A simple example of this in practice is provided in the
+``sample_part1_callback.ipynb`` in `pyEXP-examples repo
+<https://github.com/EXP-code/pyEXP-examples>`_).
+
