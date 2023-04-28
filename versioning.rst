@@ -39,7 +39,6 @@ particular commit that the developers feels have no significant
 unresolved issues.
 
 
-
 API stability
 =============
 
