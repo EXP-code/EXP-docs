@@ -24,10 +24,20 @@ Backward-incompatibilities are explicitly mentioned in the
 :ref:`release notes <news>`, and may require special attention before
 upgrading.
 
-For easy identification, the main branch will have even release
-numbers and the development branch will have odd release numbers.
-Development releases have are numbered one more than the last main
-release version.
+The latest version of EXP will always be the HEAD of the ``main``
+branch.  EXP developers may use temporary branches for developing and
+testing new features.  However, these should not be expected to work
+until they are merged to ``main`` by a git pull request.  All users
+outside of the EXP-code organization can contribute to development by
+forking the code in GitHub and submitting git pull requests to the
+main EXP branch based on their development branches.
+
+For easy identification, the code maintainers will indicate a stable
+version on the ``EXP-code/EXP`` web page under *Releases* in the
+right-hand column of the `main` branch page.  A *release* refers to a
+particular commit that the developers feels have no significant
+unresolved issues.
+
 
 
 API stability
