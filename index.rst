@@ -90,6 +90,7 @@ EXP concepts
    topics/bfetheory
    topics/codeintro
    topics/ssa
+   topics/edmd
    topics/multistep
    topics/yamlconfig
 
@@ -104,6 +105,9 @@ mathematics used in EXP.
 
 :doc:`topics/ssa`
     A review of Singular Spectrum Analysis and its application to BFE 
+
+:doc:`topics/edmd`
+    A quick introduction to Dynamical Mode Decomposition
 
 :doc:`topics/multistep`
     A quick review of EXP's ODE solver and multi time step ladder
