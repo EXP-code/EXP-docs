@@ -5,9 +5,9 @@ User modules
 
 .. index: user modules; extending EXP; ExternalForce
 
-Users may write modules that are found and loaded at runtime.  One may
+Users may write modules that are found and loaded at run time.  One may
 derive classes from `ExternalForce` that may be built as
-dynamic modules that may be loaded and instantiatied as needed.
+dynamic modules that may be loaded and instantiated as needed.
 Modules are built in the `src/user` directory.  This is
 accomplished using dynamically loaded (DL) libraries that register
 themselves on a list of `ExternalForce` instances that may be
@@ -15,6 +15,23 @@ instantiated as directed in your configuration file.  These new
 modules have access to the entire phase space for each component.  It
 is the user's responsibility to not change the phase space in
 unphysical ways, of course.
+
+We offer two strategies for incorporating your user modules into EXP:
+
+1. Extend the `CMakeLists.txt` file in `src/user` to build and install
+   your source in EXP.  You can keep your code private in a local
+   branch or a fork.  This is described in :ref:`Extending
+   <module_branch>` below.
+
+2. Create a private git repository and use the submodule facility in
+   git to build the source and install the source in EXP.  This is
+   described in :ref:`Using a private repo <module_private>`.
+
+Extending `src/user`
+--------------------
+
+.. _module_branch:
+
 
 There are only a few steps necessary to put one's code in the tree:
 
@@ -30,6 +47,7 @@ There are only a few steps necessary to put one's code in the tree:
 3. Compile the code
 
 4. Install the code in the location defined by your configuration
+
 
 Notes on writing your module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,17 +70,19 @@ function which constructs an instance of your class and returns a
 pointer. Using the C calling interface here gets around the problem of
 name demangling in C++ in using the dynamic linking loader (there may
 be a more transparent and portable way to do this).  You will notice
-an addtional class at the end of the file called `proxy`.  An
+an additional class at the end of the file called `proxy`.  An
 instance of this simple class is instantiated when the module is
 loaded (the last line in the file).  As a byproduct, a pointer to the
 function `makeTest()` is is added to the factory map defined in
 `ExternalForce.H`.  This function can then be invoked by name
 in the code to create an instance of your class.  Cute trick, eh?  You
 can simply copy this to your own source (changing `makerTest`
-to `makerFoo` or someother unique name).
+to `makerFoo` or some other unique name).
 
-Keeping our modules private
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using a private repository for your modules
+-------------------------------------------
+
+.. _module_private:
 
 The strategy above describes adding your module directly to the
 `src/user` directory. With this workflow, you would keep a personal
