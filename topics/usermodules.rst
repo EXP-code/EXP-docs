@@ -61,3 +61,32 @@ in the code to create an instance of your class.  Cute trick, eh?  You
 can simply copy this to your own source (changing `makerTest`
 to `makerFoo` or someother unique name).
 
+Keeping our modules private
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The strategy above describes adding your module directly to the
+`src/user` directory. With this workflow, you would keep a personal
+branch and merge new changes from the `main` EXP branch as they become
+available.
+
+We support an additional strategy that allows you to work directly
+from the `main` EXP repo without a private local branch or a fork.  In
+this alternative scenario, you would make a private git repository,
+either on your local machine or git server (e.g. GitHub)
+and install your repository as a git submodule in the
+`extern/EXP-modules` directory.  This steps for this are:
+
+1. Copy `CMakeLists.txt` from `src/user` to your new git repository as
+   a template.
+
+2. Replace the existing module list and source strings with the
+   source for your new module, just as in the instructions for Step 2
+   at the top of this section.
+    
+3. Set the `ENABLE_USER_PRIVATE` option in the CMake configuration by
+   adding `-DENABLE_USER_PRIVATE=YES` to the `cmake` invocation or
+   changing this manually using `ccmake`.
+
+4. Now, when you build EXP, your private modules will be automatically
+   built and installed.
+   
