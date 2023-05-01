@@ -67,7 +67,7 @@ of size :math:`L` by forming :math:`K=N-L+1` *lagged vectors*
 The *trajectory matrix* of the series :math:`A_N` is:
 
 .. math::
-   :label: eq:traj_m
+   :label: eq_traj_m
 
    \mathbf{T} = [A_1:\ldots:A_K]=(T_{ij})_{i,j=1}^{L,K}=
    \left(
