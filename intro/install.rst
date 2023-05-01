@@ -56,7 +56,7 @@ inside the source tree myself, e.g.:
 
 .. code-block:: bash
 
-   $ mkdir -p build cd build
+   $ mkdir -p build; cd build
 
 This allows one to have build various versions avaialble from the same
 source, such as Release and Debug.
@@ -112,13 +112,13 @@ location in the ``FFTWDIR`` environment variable.
 A typical CMake build invocation without Cuda is:
 
 .. code-block:: bash
-		
+
    $ cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
 A typical invocation with Cuda is:
 
 .. code-block:: bash
-		
+
    $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
 Some installations provide an EIGEN_BASE environment variable that
@@ -221,7 +221,7 @@ Using a Python virtual environment (recommended)
 .. index:: Lua modules
 
 .. note:: TL;DR: We recommend installing pyEXP inside a virtual environment
-	  on all platforms that use ``lmod modules``.  
+	  on all platforms that use ``lmod modules``.
 
 Python packages can be installed either globally (a.k.a system wide),
 or in user-space.
