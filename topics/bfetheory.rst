@@ -129,7 +129,7 @@ written as:
 
    \frac{d}{dx}\left[p(x)\frac{d\Phi(x)}{dx}\right] - q(x)\Phi(x) =
    \lambda \omega(x) \Phi(x)
-	   
+
 where :math:`\lambda` is a constant, and :math:`\omega(x)` is a
 weighting function. The eigenfunctions :math:`\phi_j` of the SLE form
 a complete basis set with eigenfunctions :math:`\lambda_j`, where
@@ -166,7 +166,7 @@ each density element :math:`\rho(R, z)\,d^3x` contributes
 
 .. math::
    :label: contrib
-   
+
         \frac{1}{4\pi G}\phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3 x
 
 to the expansion coefficient :math:`a_{lm}^j`, or
@@ -309,7 +309,7 @@ gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
 biases results for grossly asymmetric systems.  A simple example of
-this is centering (see Sec. `EJ`).   Please be vigilant. 
+this is centering (see Sec. `EJ`).   Please be vigilant.
 
 On the up side, a basis function representation provides an
 information--rich summary of the gravitational field and provides
@@ -362,4 +362,3 @@ separately.
 .. [weinberg21] M. D. Weinberg and M. S. Petersen. Using multichannel
 		singular spectrum analysis to study galaxy
 		dynamics. MNRAS, 501:5408-5423, Mar. 2021
-
