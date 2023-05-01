@@ -58,7 +58,7 @@ inside the source tree myself, e.g.:
 
    $ mkdir -p build; cd build
 
-This allows one to have build various versions avaialble from the same
+This allows one to have build various versions available from the same
 source, such as Release and Debug.
 
 .. index:: Eigen3, Cuda
@@ -103,7 +103,7 @@ by default.  The important ones are:
 Finding packages
 ================
 
-CMake will do its best to find your FFTW pacakge by default.  If
+CMake will do its best to find your FFTW package by default.  If
 that fails, and if you need or want FFTW and your FFTW is installed
 in an unusual location, you can define that location using
 ``-DFFTW_ROOT=/path/to/fftw/location``.  Or you can provide the
