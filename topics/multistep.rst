@@ -1,6 +1,6 @@
 .. _multistep:
 
-The EXP multistep implementation
+N-Body optimisation in EXP
 ================================
 
 Overview
@@ -93,7 +93,7 @@ where :math:`\mathbf{z} = (\mathbf{q}, \mathbf{p})` and
 .. math::
 
    \mathbf{f} = \left(
-   \frac{\partial H}{\partial\mathbf{p}}, 
+   \frac{\partial H}{\partial\mathbf{p}},
    -\frac{\partial H}{\partial\mathbf{q}}
    \right).
 

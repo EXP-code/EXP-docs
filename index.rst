@@ -1,7 +1,3 @@
-.. EXP documentation master file, created by sphinx-quickstart on Mon
-   Dec 26 12:58:04 2022.  You can adapt this file completely to your
-   liking, but it should at least contain the root `toctree`
-   directive.
 
 .. _topics-index:
 
@@ -18,25 +14,27 @@ EXP |version| documentation
 
 EXP is a fast high-level C++ library with Python bindings for
 performing and analyzing n-body simulations using biorthogonal and
-orthogonal expansions.  The library can use expansion coefficients for
-time series analysis using multivariate Singular Spectrum Analysis
-(mSSA) to discover new dynamical correlations, separate signal from
-noise, and visualize these in two- and three-dimensional renderings.
+orthogonal expansions, also known as *basis function expansions (BFE)*.
+The library also supports time series analysis of expansion coefficients
+using multivariate Singular Spectrum Analysis (mSSA) to discover new
+dynamical correlations, separate signal from noise, and visualize these
+in two- and three-dimensional renderings.
 
 There are two *entry points* into EXP:
 
 1. The N-body code itself and Unix-style auxiliary utilities for
    manipulating and analyzing N-body phase space.
-2. The Python interface to the same C++ libraries used by the N-body
+2. The Python interface to basis  C++ libraries used by the N-body
    code.  These are designed to enable your post-processing analyses
    on both EXP and other N-body simulation snapshots (Gadget, Gizmo,
-   Arepo, etc.) within the Python/Jupyter ecosystem.
+   Arepo, etc.) within the Python/Jupyter ecosystem. The Python interface
+   is the primary method for time series analyses.
 
 In this documentation, **EXP** refers to the entire code base and
-**pyEXP** refers to the Python EXP API.  We anticipate that many users
-will be interested in *only* pyEXP.  Since the concepts and
-mathematics are the same for both, we will describe both together in
-this documentation.
+**pyEXP** refers to the Python EXP API.  Many users may only be
+interested in pyEXP.  Since the basis function expansion concepts and
+mathematics are the shared between EXP and pyEXP, we will describe
+both together in this documentation.
 
 .. _quick-start:
 
@@ -89,8 +87,7 @@ EXP concepts
 
    topics/bfetheory
    topics/codeintro
-   topics/ssa
-   topics/edmd
+   topics/timesseries
    topics/multistep
    topics/yamlconfig
 
@@ -103,11 +100,8 @@ mathematics used in EXP.
 :doc:`topics/bfetheory`
     Learn about the mathematical principles behind BFE and EXP
 
-:doc:`topics/ssa`
-    A review of Singular Spectrum Analysis and its application to BFE 
-
-:doc:`topics/edmd`
-    A quick introduction to Dynamical Mode Decomposition
+:doc:`topics/timesseries`
+    Descriptions for methods to analyze BFE time series
 
 :doc:`topics/multistep`
     A quick review of EXP's ODE solver and multi time step ladder
