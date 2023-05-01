@@ -33,9 +33,9 @@ SSA analysis separates the observed time series into the sum of
 interpretable components with no a priori information about the time
 series structure. We begin with a statement of the underlying
 algorithm for a single time series.  Think: one particular
-coefficient :math:`a_j(t)` from equation (\ref{eq:coefdef}) at a
-particular time step.  Let us simply denote the coefficient at time
-step :math:`k` as :math:`a_{j,k} = a_j(t_o+hk)` where :math:`h` is the time-step
+coefficient :math:`a_j(t)` at a particular time step.  Let us simply
+denote the coefficient at time step :math:`k` as
+:math:`a_{j,k} = a_j(t_o+hk)` where :math:`h` is the time-step
 interval.
 
 Algorithm of SSA analysis
@@ -44,20 +44,15 @@ Algorithm of SSA analysis
 Now, consider the real-valued time series of coefficients
 :math:`\mathbf{a}_N=(a_1,\ldots,a_{N})` of length :math:`N`.  Since we
 are considering a single coefficient :math:`a_j(t)`, we will drop the
-coefficient index :math:`j` for now.  Define the \emph{window length}
+coefficient index :math:`j` for now.  Define the *window length*
 :math:`L` and let :math:`K=N-L+1`. The SSA algorithm (1) decomposes the
 temporal cross-correlation matrix by an eigenfunction analysis into
 uncorrelated components and then (2) reconstructs relevant parts of
 the time series.  We will now consider each step in detail.
 
-Decomposition
-^^^^^^^^^^^^^
 
-.. index:: pair: singular spectrum analysis; decomposition
-
-
-**Embedding**
-"""""""""""""
+Embedding
+"""""""""
 
 .. index:: pair: singular spectrum analysis; embedding
 
@@ -72,7 +67,8 @@ of size :math:`L` by forming :math:`K=N-L+1` *lagged vectors*
 The *trajectory matrix* of the series :math:`A_N` is:
 
 .. math::
-   \label{eq:traj_m}
+   :label: eq:traj_m
+
    \mathbf{T} = [A_1:\ldots:A_K]=(T_{ij})_{i,j=1}^{L,K}=
    \left(
    \begin{array}{lllll}
@@ -96,16 +92,19 @@ From the trajectory matrix, we can form the *lag-covariance*
 matrix:
 
 .. math::
-   \label{eq:lagcovar}
+   :label: eq_lagcovar
+
    \mathbf{C} = \frac{1}{K} \mathbf{T}^\top\cdot\mathbf{T}.
 
 
-*Decomposition*
-"""""""""""""""
+Decomposition
+"""""""""""""
+
+.. index:: pair: singular spectrum analysis; decomposition
 
 We may analyze the lag-covariance matrix using the standard singular
 value decomposition (SVD). \index{singular value decomposition (SVD)}
-From the form of equation (\ref{eq:lagcovar}), we observe that
+From the form of equation (:eq:`eq_lagcovar`), we observe that
 :math:`\mathbf{C}` is real, symmetric and positive definite, so the SVD
 yields a decomposition of the form: :math:`\mathbf{C} =
 \mathbf{U}\cdot\mathbf{\Lambda}\cdot\mathbf{V}^\top` where
@@ -132,15 +131,15 @@ eigenvalues are placed in the decreasing order.  The Toeplitz
 formulation reduces approximately to the covariance form for
 stationary time series with zero mean.  Since this is not the case for
 most of our simulations, we will adopt Choice 1. The pair
-:math:`(\sqrt{\lambda_k}, \mathbf{E}^k)` will be called :math:`k`th
-\emph{eigenpair}.  I will assume that the eigenpairs are sorted in
+:math:`(\sqrt{\lambda_k}, \mathbf{E}^k)` will be called :math:`k` th
+*eigenpair*.  I will assume that the eigenpairs are sorted in
 order of decreasing value of :math:`\lambda_k>0`, which is traditional for
 SVD.  As before, we may write this decomposition in *elementary
 matrix* form as
 
 .. math::
    \mathbf{C} = \sum_k \lambda_k \mathbf{E}^k \mathbf{E}^{k\top}
-   = \sum_k \lambda_k \mathbf{E}^k \otimes \mathbf{E}^{k}   
+   = \sum_k \lambda_k \mathbf{E}^k \otimes \mathbf{E}^{k}
    = \sum_k \mathbf{C}_k
 
 where :math:`\mathbf{a}\otimes\mathbf{b}` denotes the outer or Kronecker
@@ -163,7 +162,7 @@ partitions the set of indices :math:`\{1,\ldots,d\}` into :math:`m` disjoint
 subsets :math:`I_1,\ldots,I_m`.
 
 Define :math:`\mathbf{C}_I=\sum_{k\in I} \mathbf{C_k}`.
-Thisleads to the decomposition
+This leads to the decomposition
 
 .. math::
    \mathbf{C}=\mathbf{C}_{I_1}+\ldots+\mathbf{C}_{I_m}.
@@ -183,13 +182,14 @@ optimality property of the SVD.
 We may now project the original time series represented in the
 trajectory matrix in to the new basis represented by :math:`\mathbf{E}`:
 :math:`\mathbf{P} = \mathbf{E}^\top\cdot \mathbf{T}`. The columns of
-:math:`\mathbf{P}` are known as the \emph{principal components}, following
+:math:`\mathbf{P}` are known as the *principal components*, following
 the terminology of standard Principal Component Analysis (PCA).  In
 components, the :math:`k` eigenpair yields at time step :math:`j` is
 
 .. math::
-   \label{eq:pc1d}
-   P^k_j = \sum_{l=1}^L E^k_l T_{lj}  = \sum_{l=1}^L E^k_l a_{j+l-1} 
+   :label: eq_pc1d
+
+   P^k_j = \sum_{l=1}^L E^k_l T_{lj}  = \sum_{l=1}^L E^k_l a_{j+l-1}
 
 The principal components are uncorrelated (i.e. orthogonal) by
 construction.
@@ -231,7 +231,7 @@ identified based on their similar temporal properties.  For example,
 if the underlying dynamical signals are periodic, then the eigenvectors
 will reflect that by producing sine- and cosine-like pairs with
 distinct frequencies.
-Thus, graphs of eigenvectors or discrete Fourier transforms can help 
+Thus, graphs of eigenvectors or discrete Fourier transforms can help
 identify like components.
 
 Very helpful information for separation is contained in the so-called
@@ -345,7 +345,8 @@ In practice, we often want to sum up the reconstructions for specific
 groupings:
 
 .. math::
-   \label{eq:recongroup}
+   :label: eq_recongroup
+
    \tilde{a}_{m,i}^{I_j} = \sum_{k\in I_j} \tilde{a}^k_{m,i}
 
 
@@ -369,7 +370,7 @@ Applications of mSSA
 
 - *Diagnostics.*  Similarly, we can use the
       :math:`\tilde{a}_{m,i}^{I_j}` to reconstruct the underlying
-      potential or density fields in physical space using the standard 
+      potential or density fields in physical space using the standard
       BFE series.
 
 - *Channel contributions.* One can use the reconstructions to an
@@ -411,4 +412,4 @@ Applications of mSSA
       harmonic subspaces that would be uncoupled at linear order.  By
       selecting particular coefficients from various harmonics
       (:math:`m=1, 2` in our case), we can look for the joint mode.
-  
+
