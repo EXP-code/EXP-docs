@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EXP'
-copyright = '2023, Martin D. Weinberg'
-author = 'Martin D. Weinberg'
+copyright = '2023, EXP-code collaboration'
+author = 'EXP-code collaboration'
 release = '0.11'
 version = '7.x'
 
