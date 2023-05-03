@@ -93,8 +93,8 @@ We support an additional strategy that allows you to work directly
 from the `main` EXP repo without a private local branch or a fork.  In
 this alternative scenario, you would make a private git repository,
 either on your local machine or git server (e.g. GitHub) and install
-your repository as a git submodule in the `extern/user-modules`
-directory.  This steps for this are:
+your repository in the `extern/user-modules` directory.  This steps
+for this are:
 
 1. Copy `CMakeLists.txt` from `src/user` to your new git repository as
    a template.
@@ -103,8 +103,10 @@ directory.  This steps for this are:
    source for your new module, just as in the instructions for Step 2
    at the top of this section.
 
-3. You may include any number submodules with multiple code
-   repositories into `extern/user-modules`.  Just remember to use
+3. `git clone` your repository into the `extern/user-modules`
+   directory with your new `CMakeLists.txt` in the top level of the
+   cloned repository.  You may include any number user module code
+   directories into `extern/user-modules`.  Just remember to use
    unique names for each.
     
 4. Now, when you build EXP, your private modules will be automatically
