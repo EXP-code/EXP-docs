@@ -67,28 +67,35 @@ approximately 12 wall clock hours for 10 Gyr of simulation for a
 Milky-Way-like model.  Similar throughput for a CPU cluster requires
 approximately 512 cores.
 
-My HPC cluster does not have the required libraries.  What do I do now?
------------------------------------------------------------------------
+My HPC cluster does not have the required dependencies.  What are my options?
+-----------------------------------------------------------------------------
 Ask your HPC administrators about running applications in containers.
 We have had good success with `Singularity/Apptainer
 <https://apptainer.org/>`_.  Singularity/Apptainer containers provide
 all of the libraries and executable objects necessary to run EXP as an
 MPI application in a Linux environment of their choosing.
 
-Your administrator will have recommendations for a base container OS
-image.  There are two ways of getting EXP into a container:
+Most likely, your HPC admin will have recommendations for a base
+container OS image that will work with your cluster.  There are two
+ways of getting EXP into a container:
 
 1. Building natively on an OS instance that is the same as your target
-   container.  Then you can copy the compiled EXP into the
-   container. This `repo <https://github.com/EXP-code/EXP-apptainer>`_
-   gives a simple example of this approach.
+   container.  Installing the OS in VirtualBox is a good strategy if
+   you do not have a native installation. Then you can copy the
+   compiled EXP into the container. This `repo
+   <https://github.com/EXP-code/EXP-apptainer>`_ gives a simple
+   example of this approach for an Ubuntu image.
    
-2. You can build EXP inside the container.  This is more robust, in
-   some sense, but will require some work.  See `this link
+2. You can build EXP inside the container.  This is more
+   self-contained but will require some work.  See `this link
    <https://apptainer.org/user-docs/3.1/build_a_container.html>`_ for
    generic instructions.  Also: please consider contributing your
    working recipe to `this repo <https://github.com/EXP-code/EXP-apptainer>`_!
 
+Some HPC centers are exploring Kubernetes, also known as K8s.  This is
+an open-source system for automating deployment, scaling, and
+management of containerized applications.  We have no experience with
+EXP as a Kubernetes app.  So, again, please share your experience!
 
 I got a "seg fault", now what do I do?
 --------------------------------------
