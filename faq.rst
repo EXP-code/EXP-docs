@@ -86,7 +86,8 @@ image.  There are two ways of getting EXP into a container:
 2. You can build EXP inside the container.  This is more robust, in
    some sense, but will require some work.  See `this link
    <https://apptainer.org/user-docs/3.1/build_a_container.html>`_ for
-   generic instructions.
+   generic instructions.  Also: please consider contributing your
+   working recipe to `this repo <https://github.com/EXP-code/EXP-apptainer>`_!
 
 
 I got a "seg fault", now what do I do?
