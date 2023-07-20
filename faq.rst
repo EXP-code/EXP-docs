@@ -35,6 +35,60 @@ simulation output and prefer the Jupyter/Python ecosystem, pyEXP is
 what you want.
 
 
+What hardware do I need to run EXP and pyEXP?
+---------------------------------------------
+EXP and pyEXP can run on a wide variety of hardware, from laptops and
+HPC clusters.  EXP and pyEXP can make use of multiple cores on a single laptop
+or compute node using a combination of POSIX threads and OpenMP.
+
+pyEXP in particular is optimized to run on a single node.  In Linux
+you can use the environment setting to tell pyEXP to use 8 cores:
+
+.. code-block:: bash
+
+   export OMP_NUM_THREADS=8
+
+This will speed up your mSSA computation in particular.
+
+The core EXP libraries are use `MPI <https://www.mpi-forum.org/>`_
+which allows EXP and pyEXP in some instances use many compute nodes.
+While this is key for simulations with large numbers of particles,
+pyEXP can be run on a cluster as well.  See the `pyEXP examples repo
+<https://github.com/EXP-code/pyEXP-examples>`_ for some sample scripts
+that use MPI.
+
+Some of the core force implementations in EXP have GPU
+implementations.  Even a simple commodity gaming card provides enough
+power to allow you to easily perform a simulation with 1 million
+particles.  Moreover, EXP can be run on GPU clusters, enabling
+simulations of 100 million particles and larger.  For example, a
+galaxy halo simulation on 8 NVidia V100 GPU cards will take
+approximately 12 wall clock hours for 10 Gyr of simulation for a
+Milky-Way-like model.  Similar throughput for a CPU cluster requires
+approximately 512 cores.
+
+My HPC cluster does not have the required libraries.  What do I do now?
+-----------------------------------------------------------------------
+Ask your HPC administrators about running applications in containers.
+We have had good success with `Singularity/Apptainer
+<https://apptainer.org/>`_.  Singularity/Apptainer containers provide
+all of the libraries and executable objects necessary to run EXP as an
+MPI application in a Linux environment of their choosing.
+
+Your administrator will have recommendations for a base container OS
+image.  There are two ways of getting EXP into a container:
+
+1. Building natively on an OS instance that is the same as your target
+   container.  Then you can copy the compiled EXP into the
+   container. This `repo <https://github.com/EXP-code/EXP-apptainer>`_
+   gives a simple example of this approach.
+   
+2. You can build EXP inside the container.  This is more robust, in
+   some sense, but will require some work.  See `this link
+   <https://apptainer.org/user-docs/3.1/build_a_container.html>`_ for
+   generic instructions.
+
+
 I got a "seg fault", now what do I do?
 --------------------------------------
 
