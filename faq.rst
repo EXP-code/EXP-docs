@@ -70,8 +70,8 @@ approximately 512 cores.
 My HPC cluster does not have the required dependencies.  What are my options?
 -----------------------------------------------------------------------------
 Ask your HPC administrators about running applications in containers.
-We have had good success with `Singularity/Apptainer
-<https://apptainer.org/>`_.  Singularity/Apptainer containers provide
+We have had good success with `Apptainer
+<https://apptainer.org/>`_ (formerly known as `Singularity`).  Apptainer containers provide
 all of the libraries and executable objects necessary to run EXP as an
 MPI application in a Linux environment of their choosing.
 
@@ -85,7 +85,7 @@ ways of getting EXP into a container:
    compiled EXP into the container. This `repo
    <https://github.com/EXP-code/EXP-apptainer>`_ gives a simple
    example of this approach for an Ubuntu image.
-   
+
 2. You can build EXP inside the container.  This is more
    self-contained but will require some work.  See `this link
    <https://apptainer.org/user-docs/3.1/build_a_container.html>`_ for
@@ -144,4 +144,3 @@ onto the users stack.
 A simple example of this in practice is provided in the
 ``sample_part1_callback.ipynb`` in `pyEXP-examples repo
 <https://github.com/EXP-code/pyEXP-examples>`_).
-
