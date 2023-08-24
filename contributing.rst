@@ -150,6 +150,24 @@ changes in separate commits from functional changes. This will make
 pull requests easier to review and more likely to get merged.
 
 
+Adding a Git Commit
+-------------------
+
+All code updates are done by pull request (PR) as described in
+:ref:`topics-contributing`.  The GitHub EXP-code includes Continuous
+Integration (CI) support which can get very chatty and take up
+unnecessary compute resources.  When your changes only affect
+documentation (e.g. docstring additions or software comments) or
+provide code snippets that you know still need work, you may add a
+`[no ci]` in your commit message. For example:
+.. code-block:: bash
+
+   git commit -m "Updated some docstrings [no ci]"
+
+When this commit is pushed out to your fork and branch associated with a pull
+request, all CI will be skipped. 
+
+
 .. _documentation-strategy:
 
 Documentation strategy
@@ -174,6 +192,58 @@ EXP and pyEXP has three types of documentation:
    just for the EXP source code as described in :ref:`submitting-patches`.
 
 .. _writing-examples:
+
+
+Contributing Documentation
+--------------------------
+
+Our goal is a set of consistent documentation that provides users and
+developers a shallow learning curve for using and adding to EXP.  For
+end users, we strive to write simple step-by-step instructions for
+common tasks and give a clear description of the features and
+capabilities of the EXP software.
+
+However, it *is* hard to know what everyone needs.  As you work with
+this package, we would love help with this and encourage all of your
+contributions.
+
+This section is an attempt to provide some stylistic guidelines for
+documentation writers and developers.  For EXP and the documentation
+overall, we hope that the existing documentation is a good starting
+point.  For internal Python documentation in pyEXP, we are trying to
+follow the now familiar style of code documentation of both the
+Astropy and Numpy projects.  In particular, we have adopted the Numpy
+style guidelines `here
+<https://numpy.org/doc/devdocs/docs/howto_document.html>`_.
+
+
+Adding pyEXP docstrings
+-----------------------
+
+pyEXP is a set of bindings implemented by `pybind11`_ and a small
+amount of native Python code.  It has a full set of docstrings to
+provide users with easy access to interactive tips and call
+signatures.  If you would like to contribute new code, please try to
+follow the following guidelines:
+
+* Please write docstrings for all public classes, methods, and functions
+
+* Please consult the _numpydoc_ format from the link above whenever
+  possible
+
+* We would like to encourage references to internal EXP project links
+  in docstrings when useful.  This is still a work in progress.
+
+* Examples and/or tutorials are strongly encouraged for typical
+  use-cases of a particular module or class.  These can be included in
+  the `EXP examples repository
+  <https://github.com/EXP-code/EXP-examples>`_ or the `pyEXP examples
+  repository <https://github.com/EXP-code/pyEXP-examples>`_) as
+  appropriate.
+
+.. _pybind11: https://pybind11.readthedocs.io/
+
+
 
 Writing examples
 ================
