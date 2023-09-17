@@ -226,7 +226,7 @@ the vertically antisymmetric basis functions.
          plt.colorbar(cx)
          plt.show()
   
-The first three anti-symmetric basis are:
+The first three anti-symmetric basis functions are:
 
 .. image:: cyl_basis_0_5.png
    :height: 600 px
