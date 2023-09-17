@@ -116,7 +116,7 @@ Empirical Orthogonal Functions
 
 A BFE computes the gravitational potential by projecting particles
 onto a set of biorthogonal basis functions that satisfy the Poisson
-equation as described in XXX. Then, the force at the
+equation as described in [petersen2022]_. Then, the force at the
 position of each particle is evaluated from the basis-function
 approximation to the field at the particle position.  Fundamentally,
 this approach relies on the mathematical properties of the
@@ -221,17 +221,20 @@ and potential fields.
 We can represent the potential and density of a galaxy as a
 superposition of several basis functions. This allows us to decompose
 the galaxy based on their geometry and symmetry. For an initially
-axisymmetric example, azimuthal harmonics :math:`m`, where :math:`m=0` is the
-monopole, :math:`m=1` is the dipole, :math:`m=2` is the quadrupole, and so
-on, will efficiently summarize the degree and nature of the
-asymmetries. The sine and cosine terms of each azimuthal order give
-the phase angle of the harmonic that can be used to calculate the
-pattern speed.  For disks, each azimuthal harmonics represents both
-the radial and vertical structure simultaneously; that is each basis
-function is a two-dimensional meridional plane multipled by
-:math:`e^{im\phi}`.  The symmetry of the input basis and the covariance
-matrix further demands that the singular value decomposition produce
-vertically symmetric or anti-symmetric functions.
+axisymmetric example, azimuthal harmonics :math:`m`, where :math:`m=0`
+is the monopole, :math:`m=1` is the dipole, :math:`m=2` is the
+quadrupole, and so on, will efficiently summarize the degree and
+nature of the asymmetries. The sine and cosine terms of each azimuthal
+order give the phase angle of the harmonic that can be used to
+calculate the pattern speed.  For disks, each azimuthal harmonics
+represents both the radial and vertical structure simultaneously; that
+is each basis function is a two-dimensional meridional plane multipled
+by :math:`e^{im\phi}`.  The symmetry of the input basis and the
+covariance matrix further demands that the singular value
+decomposition produce vertically symmetric or anti-symmetric
+functions.  See :ref:`Visualizing bases
+<visualizing-cylindrical-basis>` for examples of both types of
+functions and hints on how to explore them using pyEXP.
 
 After some exploration, we determined that a radial scale factor for
 the spherical profile of approximately :math:`\sqrt{2}` time larger than
@@ -362,3 +365,8 @@ separately.
 .. [weinberg21] M. D. Weinberg and M. S. Petersen. Using multichannel
 		singular spectrum analysis to study galaxy
 		dynamics. MNRAS, 501:5408-5423, Mar. 2021
+
+.. [petersen2022] M. S. Petersen, M. D. Weinberg, and N. Katz.
+		  EXP: N-body integration using basis function
+		  expansions. MNRAS, 510:6201-6217, Mar. 2022
+		  
