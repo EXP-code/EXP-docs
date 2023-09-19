@@ -9,7 +9,10 @@ a ``getBasis`` member function that returns the basis functions in
 their native geometry.
 
 Let's work a few simple examples to give you all you need to look at
-your bases.
+your bases.  A Jupyter notebook implementing these examples, `'viewing
+a basis.ipynb` is available in the `pyEXP examples repository
+<https://github.com/EXP-code/pyEXP-examples>`_ in the
+`Tutorials/Basis` directory.
 
 
 A spherical basis

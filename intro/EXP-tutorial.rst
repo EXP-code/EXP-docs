@@ -38,11 +38,16 @@ on a laptop or workstation.
 
 1. `SimpleHalo`: an halo with 10000 bodies
 
-2. `LowFi`: a disk and halo phase space, each component has 10000
+2. `DiskHalo`: a disk and halo phase space, each component has 10000
    particles, and a cylindrial disk expansion up to :math:`m=1`.
 
-3. `Better`: similar to `LowFi` but 100000 halo particles, and a
+3. `Nbody`: similar to `DiskHalo` but 100000 halo particles, and a
    high-resolution cylindrial disk expansion up to :math:`m=6`.
+
+4. `Binary`: is a simple simulation two-body binary system.  While
+   mostly a trivial test and example of calling EXP, it is a sanity
+   check and possibly useful for experimenting integration tuning
+   parameters. 
 
 To run any or all of these, we recommend copy the directory to some
 local scratch location.  Then adjust the `outdir` and `ldlibdir`
