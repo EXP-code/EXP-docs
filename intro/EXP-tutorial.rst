@@ -31,18 +31,24 @@ changes.
 
 Perhaps the best way to learn how to use this code is through an
 example.  As described in :ref:`tutorial intro <intro-tutorial>`, we
-have provided a separate git repository with three quick examples.
+have provided a separate `git repository
+<https://github.com/orgs/EXP-examples>`_ with three quick examples.
 Each example contains all of the body files, configuration files and
 model files necessary to run the simulation.  All of these can be run
 on a laptop or workstation.
 
-1. `SimpleHalo`: an halo with 10000 bodies
+1. ``Halo``: a spherical halo with 10000 bodies
 
-2. `LowFi`: a disk and halo phase space, each component has 10000
+2. ``DiskHalo``: a disk and halo phase space, each component has 10000
    particles, and a cylindrial disk expansion up to :math:`m=1`.
 
-3. `Better`: similar to `LowFi` but 100000 halo particles, and a
+3. ``Nbody``: similar to ``DiskHalo`` but 100000 halo particles, and a
    high-resolution cylindrial disk expansion up to :math:`m=6`.
+
+4. ``Binary``: is a simple simulation two-body binary system.  While
+   mostly a trivial test and example of calling EXP, it is a sanity
+   check and possibly useful for experimenting integration tuning
+   parameters. 
 
 To run any or all of these, we recommend copy the directory to some
 local scratch location.  Then adjust the `outdir` and `ldlibdir`

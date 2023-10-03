@@ -273,7 +273,7 @@ pyEXP changes, respectively:
 
 1. For EXP, clone the `EXP examples repo
    <https://github.com/EXP-code/EXP-examples>`_ to test changes to the
-   EXP simulation code.  At the very least, please try the ``Better``
+   EXP simulation code.  At the very least, please try the ``Nbody``
    example, but please try as many as you can to make sure that your
    change will not break an existing use case for someone else.  If
    your change introduces a feature, please try to devise and

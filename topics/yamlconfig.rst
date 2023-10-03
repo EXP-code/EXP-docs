@@ -42,11 +42,11 @@ is an EXP YAML file with annotation.
    # These parameters control the simulation
    # ------------------------------------------------------
    Global:
-     outdir     : /home/weinberg/Nbody/DiskHaloExample
+     outdir     : /home/user/Nbody
      nbodmax    : 100000
      nthrds     : 1
      dtime      : 0.05
-     ldlibdir   : /home/weinberg/lib/user
+     ldlibdir   : /home/user/lib/user
      runtag     : run1
      nsteps     : 5
      multistep  : 10

@@ -1,8 +1,5 @@
 .. _faq:
 
-Frequently Asked Questions (FAQ)
-================================
-
 .. _faq-EXP-bs-cmp:
 
 I only want pyEXP, do I need C++ to compile EXP?

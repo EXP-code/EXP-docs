@@ -6,10 +6,10 @@ How to  generate coefficients from phase-space snapshots
 
 This example assumes that you have pulled the (`EXP examples
 repository <https://github.com/EXP-code/EXP-examples>`_) and run the
-``EXP/examples/Better`` simulation.  We have also provided output from
-this simulation in the `Better/data` directory for your convenience.
-But this methods in the example can be adapted for any simulation you
-like, not only EXP-generated simulations.
+`Nbody` simulation.  We have also provided output from this simulation
+in the `Nbody/data` directory for your convenience.  But this methods
+in the example can be adapted for any simulation you like, not only
+EXP-generated simulations.
 
 Many of the examples described in this documentation also have
 corresponding Jupyter notebooks in the (`pyEXP repo
@@ -24,12 +24,12 @@ setting the working directory.
     import yaml
     import pyEXP
     
-    # I have the Better run in my personal direcotry; obviously
-    # another you will want to change this a directory containing
+    # I have the `EXP-examples/Nbody` run in my personal directory.
+    # You will want to change this path to some directory containing
     # some snapshots of your own or point at the output provided in
     # the EXP examples repo.
     #
-    os.chdir('/home/weinberg/Nbody/Better')
+    os.chdir('/home/user/Nbody')
 
 Create the basis
 ----------------

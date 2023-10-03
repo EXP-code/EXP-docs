@@ -110,6 +110,18 @@ mathematics used in EXP.
     An example YAML configuration file for EXP
 
 
+Frequently Asked Questions
+==========================
+
+.. toctree::
+   :caption: Frequently Asked Questions (FAQ)
+      
+   faq
+
+:doc:`faq`
+    Get answers to most frequently asked questions.
+
+
 How to solve specific problems
 ==============================
 
@@ -117,7 +129,6 @@ How to solve specific problems
    :caption: How to solve specific problems
    :hidden:
 
-   faq
    topics/visualizing-bases
    topics/making-coefficients
    topics/saving-coefficients
@@ -129,9 +140,6 @@ How to solve specific problems
    topics/exp-phase-space
    topics/EXP-output
    topics/debug
-
-:doc:`faq`
-    Get answers to most frequently asked questions.
 
 :doc:`topics/visualizing-bases`
     Learn how to visualize the EXP bases using pyEXP
