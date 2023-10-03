@@ -37,7 +37,7 @@ Each example contains all of the body files, configuration files and
 model files necessary to run the simulation.  All of these can be run
 on a laptop or workstation.
 
-1. ``SimpleHalo``: an halo with 10000 bodies
+1. ``Halo``: a spherical halo with 10000 bodies
 
 2. ``DiskHalo``: a disk and halo phase space, each component has 10000
    particles, and a cylindrial disk expansion up to :math:`m=1`.
