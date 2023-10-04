@@ -6,8 +6,6 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-import sphinx_rtd_theme
-
 project = 'EXP'
 copyright = '2023, EXP-code collaboration'
 author = 'EXP-code collaboration'
