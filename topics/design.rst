@@ -151,12 +151,30 @@ user to specify the number of threads per process using the ``nthrds``
 parameter.  For example, on a cluster where nodes have 20 cores,
 specifying ``nthrds: 20`` and one process per node using
 
-.. code-block: bash
+.. code-block:: bash
 
    mpirun -bind-to none -npernode 1 exp -f myjob.yml
+
+or for a Slurm job
+
+.. code-block:: bash
+
+   srun --ntasks-per-node=1 exp -f myjob.yml
 
 allow code bottlenecks to using pthreads rather than MPI for
 parallelization.  For MPI parallelization only, specify ``nthrds: 1``,
 which is the default value.  Not all force methods are thread aware,
 but many are.
+
+Both pyEXP and EXP are use OpenMP to parallelize bottleneck loops. The
+`FieldGenerator` in pyEXP, in particular, can achieve linear scaling
+with the number of available cores.  To take advantage of this,
+specify the `OMP_NUM_THREADS` environment variable and set it to the
+number of available cores on your machine.  For example, in Bash:
+
+.. code-block:: bash
+
+   export OMP_NUM_THREADS=16
+
+for an 16-core architecture.
 
