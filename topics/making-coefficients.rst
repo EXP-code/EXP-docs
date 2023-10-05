@@ -74,7 +74,7 @@ constructing the basis, assigned to the variable `basis`.
       rmax: 1.95
       Lmax: 4
       nmax: 10
-      scale: 0.0667
+      rmapping: 0.0667
       modelname: SLGridSph.model
     ...
     """
@@ -106,7 +106,7 @@ constructing the basis, assigned to the variable `basis`.
       numr: 2000
       rmax: 1.95
       rmin: 0.0001
-      scale: 0.0667
+      rmapping: 0.0667
     
     ------------------------------------------------------------
     Constructed from string
@@ -120,7 +120,7 @@ constructing the basis, assigned to the variable `basis`.
       rmax: 1.95
       Lmax: 4
       nmax: 10
-      scale: 0.0667
+      rmapping: 0.0667
       modelname: SLGridSph.model
     ...
     

@@ -73,7 +73,7 @@ Here's the code for computing coefficients::
        rmax: 1.95
        Lmax: 4
        nmax: 10
-       scale: 0.0667
+       rmapping: 0.0667
        modelname: SLGridSph.model
      ...
      """

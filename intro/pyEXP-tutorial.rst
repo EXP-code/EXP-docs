@@ -49,7 +49,7 @@ the profile in the file as follows:
      rmax: 1.95
      Lmax: 4
      nmax: 10
-     scale: 0.0667
+     rmapping: 0.0667
      modelname: SLGridSph.model
    ...
    """
@@ -62,7 +62,7 @@ The string `config` is the :index:`YAML` file needed by pyEXP to
 specify the basis.  In this case, the adaptive spherical basis is the
 `sphereSL` type.  The parameters `rmin` and `rmax` define the inner
 and outer radii for the basis, `Lmax` and `nmax` describe the maximum
-harmonic and radial orders for the basis, respectively.  The `scale`
+harmonic and radial orders for the basis, respectively.  The `rmapping`
 parameter adjusts the internal coordinate mapping and a good choice is
 the characteristic radius of the halo.
 
