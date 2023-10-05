@@ -35,7 +35,7 @@ instantiate the basis:
      rmax:  1.95                  # largest radial grid point
      Lmax:  4                     # maximum spherical harmonic degree
      nmax:  10                    # maximum radial order
-     scale: 0.0667                # scale radius for mapping
+     rmapping: 0.0667             # radius for coordinate mapping
      modelname: SLGridSph.model   # model file name
    ...
    """
