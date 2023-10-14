@@ -186,4 +186,34 @@ Some key features of YAML syntax:
 For those who want to try YAML in all its forms, there's an online
 syntax checker called `yamllint`. It validates your text and
 outputs the result in various formats.  The important part is just
-checking the syntax validity.
+checking the syntax validity.  A commonly used downloadable versions
+in Python can be installed with
+
+.. code-block:: bash
+
+   $ python3 -m pip install --user yamllint		
+
+The EXP n-body installation provides a simple EXP-specific YAML
+checker, `explint` implemented using the `yaml-cpp`_ library. This
+will be installed in the same directory as `exp` if you have specified
+`ENABLE_NBODY` in your CMake configuration (see
+:ref:`compile-features`).  Since it uses the same parser as the EXP
+code, a successful check implies that the YAML syntax is correct.  It
+does not provide detailed syntax diagnostics like `yamllint`.  You can
+optionally print the parsed YAML database tree to standard output or a
+file and turn off EXP stanza detection using the `--noEXP` flag.  Some
+typical examples are shown below:
+
+
+.. code-block:: bash
+
+   explint config.yml     # Quick syntax check
+   explint -v config.yml  # Syntax check, parsed data to stdout
+   explint -o test.yml config.yml  # Parsed data to file 'test.yml'
+   
+
+The `explint` code will warn you by default if any necessary map
+entries are missing or duplicated.
+
+
+.. _yaml-cpp: https://github.com/jbeder/yaml-cpp
