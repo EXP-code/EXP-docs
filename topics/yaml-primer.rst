@@ -183,6 +183,10 @@ Some key features of YAML syntax:
   `Sally`, `name:Sally` is an identifier with a Null value.  This
   allows colons inside values like date/time fields: `time_created:19:03`.
 
+
+How to check your syntax!
+-------------------------
+
 For those who want to try YAML in all its forms, there's an online
 syntax checker called `yamllint`. It validates your text and
 outputs the result in various formats.  The important part is just
