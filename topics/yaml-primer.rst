@@ -184,7 +184,7 @@ Some key features of YAML syntax:
   allows colons inside values like date/time fields: `time_created:19:03`.
 
 
-How to check your syntax!
+How to check your syntax?
 -------------------------
 
 For those who want to try YAML in all its forms, there's an online

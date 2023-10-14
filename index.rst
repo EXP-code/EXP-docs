@@ -109,17 +109,12 @@ mathematics used in EXP.
 :doc:`topics/yamlconfig`
     An example YAML configuration file for EXP
 
-
-Frequently Asked Questions
-==========================
-
 .. toctree::
    :caption: Frequently Asked Questions (FAQ)
       
    faq
 
 :doc:`faq`
-    Get answers to most frequently asked questions.
 
 
 How to solve specific problems
