@@ -188,17 +188,20 @@ How to check your syntax?
 -------------------------
 
 For those who want to try YAML in all its forms, there's an online
-syntax checker called `yamllint`. It validates your text and
-outputs the result in various formats.  The important part is just
-checking the syntax validity.  A commonly used downloadable versions
-in Python can be installed with
+syntax checker called `YAMLlint <https://www.yamllint.com/>`_. It
+validates your text and outputs the result in various formats.  The
+important part is just checking the syntax validity.  A commonly used
+downloadable version in Python can be installed with
 
 .. code-block:: bash
 
    $ python3 -m pip install --user yamllint		
 
+.. note:: Python's `yamllint` routine is more conservative then the YAML
+	  standard
+
 The EXP n-body installation provides a simple EXP-specific YAML
-checker, `explint` implemented using the `yaml-cpp`_ library. This
+checker, `expyaml` implemented using the `yaml-cpp`_ library. This
 will be installed in the same directory as `exp` if you have specified
 `ENABLE_NBODY` in your CMake configuration (see
 :ref:`compile-features`).  Since it uses the same parser as the EXP
@@ -211,12 +214,12 @@ typical examples are shown below:
 
 .. code-block:: bash
 
-   explint config.yml     # Quick syntax check
-   explint -v config.yml  # Syntax check, parsed data to stdout
-   explint -o test.yml config.yml  # Parsed data to file 'test.yml'
+   expyaml config.yml     # Quick syntax check
+   expyaml -v config.yml  # Syntax check, parsed data to stdout
+   expyaml -o test.yml config.yml  # Parsed data to file 'test.yml'
    
 
-The `explint` code will warn you by default if any necessary map
+The `expyaml` code will warn you by default if any necessary map
 entries are missing or duplicated.
 
 
