@@ -235,5 +235,7 @@ and they will be ignored by EXP.  For example, you can include a
      - Date: June 23, 2022
    # EXP will ignore the above stanza
    Global:
-   ...
+   .
+   .
+   .
 
