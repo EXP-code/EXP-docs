@@ -201,15 +201,16 @@ downloadable version in Python can be installed with
 	  standard
 
 The EXP n-body installation provides a simple EXP-specific YAML
-checker, `expyaml` implemented using the `yaml-cpp`_ library. This
-will be installed in the same directory as `exp` if you have specified
-`ENABLE_NBODY` in your CMake configuration (see
-:ref:`compile-features`).  Since it uses the same parser as the EXP
-code, a successful check implies that the YAML syntax is correct.  It
-does not provide detailed syntax diagnostics like `yamllint`.  You can
-optionally print the parsed YAML database tree to standard output or a
-file and turn off EXP stanza detection using the `--noEXP` flag.  Some
-typical examples are shown below:
+checker, `expyaml` implemented using the `yaml-cpp
+<https://github.com/jbeder/yaml-cpp>`_ library. This will be installed
+in the same directory as `exp` if you have specified `ENABLE_NBODY` in
+your CMake configuration (see :ref:`compile-features`).  Since it uses
+the same parser as the EXP code, a successful check implies that the
+YAML syntax is correct.  It does not provide detailed syntax
+diagnostics like `yamllint`.  You can optionally print the parsed YAML
+database tree to standard output or a file and turn off EXP stanza
+detection using the `--noEXP` flag.  Some typical examples are shown
+below:
 
 
 .. code-block:: bash
@@ -222,5 +223,17 @@ typical examples are shown below:
 The `expyaml` code will warn you by default if any necessary map
 entries are missing or duplicated.
 
+You can include entries that are not part of the EXP YAML convention
+and they will be ignored by EXP.  For example, you can include a
+`Comment` stanza as follows:
 
-.. _yaml-cpp: https://github.com/jbeder/yaml-cpp
+.. code-block:: YAML
+
+   Comment:
+     - Project: This is Run0 for the tidal interaction project
+     - Author: Martin Weinberg
+     - Date: June 23, 2022
+   # EXP will ignore the above stanza
+   Global:
+   ...
+
