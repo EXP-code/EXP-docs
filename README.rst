@@ -3,6 +3,8 @@
 EXP documentation quick start guide
 ===================================
 
+[![Documentation](https://readthedocs.org/projects/exp-docs/badge/?version=latest)](https://exp-docs.readthedocs.io/)
+
 This file provides a quick guide on how to compile the EXP documentation.
 
 
