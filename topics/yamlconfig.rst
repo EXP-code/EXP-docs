@@ -270,3 +270,26 @@ automatically supplied default value that you get without the key word.
   restart_cmd       command used to restart simulation on termination
   =============     ===========
 
+
+Additional metadata
+-------------------
+
+.. index: metadata; config; yaml
+.. _add metadata:
+
+You can include entries that are not part of the EXP YAML convention
+and they will be ignored by EXP.  For example, you can include a
+`Comment` stanza as follows:
+
+.. code-block:: YAML
+
+   Comment:
+     - Project: This is Run0 for the tidal interaction project
+     - Author: Martin Weinberg
+     - Date: June 23, 2022
+   # EXP will ignore the above stanza
+   Global:
+   .
+   .
+   .
+

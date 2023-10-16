@@ -212,7 +212,6 @@ database tree to standard output or a file and turn off EXP stanza
 detection using the `--noEXP` flag.  Some typical examples are shown
 below:
 
-
 .. code-block:: bash
 
    expyaml config.yml     # Quick syntax check
@@ -221,21 +220,11 @@ below:
    
 
 The `expyaml` code will warn you by default if any necessary map
-entries are missing or duplicated.
+entries are missing or duplicated.  It will also report any stanzas
+not used by EXP.  For example, if you include a `Comments:` stanza as
+described in the :ref:`previous <add metadata>` section, the `expyaml`
+checker will report:
 
-You can include entries that are not part of the EXP YAML convention
-and they will be ignored by EXP.  For example, you can include a
-`Comment` stanza as follows:
+.. code-block:: bash
 
-.. code-block:: YAML
-
-   Comment:
-     - Project: This is Run0 for the tidal interaction project
-     - Author: Martin Weinberg
-     - Date: June 23, 2022
-   # EXP will ignore the above stanza
-   Global:
-   .
-   .
-   .
-
+   The following stanzas are not used by EXP: Comments
