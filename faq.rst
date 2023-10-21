@@ -1,5 +1,6 @@
 .. _faq:
 
+.. _faq-EXP-bs-cmp:
 
 I only want pyEXP, do I need C++ to compile EXP?
 ------------------------------------------------
@@ -65,11 +66,20 @@ approximately 512 cores.
 
 My HPC cluster does not have the required dependencies.  What are my options?
 -----------------------------------------------------------------------------
+
+See next question...
+
+Can I run EXP or pyEXP in a container?
+--------------------------------------
+
 Ask your HPC administrators about running applications in containers.
-We have had good success with `Apptainer
-<https://apptainer.org/>`_ (formerly known as `Singularity`).  Apptainer containers provide
-all of the libraries and executable objects necessary to run EXP as an
-MPI application in a Linux environment of their choosing.
+This will help you avoid module conflicts and non-standard development
+environments with missing dependencies.
+
+We have had good success with `Apptainer <https://apptainer.org/>`_
+(formerly known as `Singularity`).  Apptainer containers provide all
+of the libraries and executable objects necessary to run EXP as an MPI
+application in a Linux environment of their choosing.
 
 Most likely, your HPC admin will have recommendations for a base
 container OS image that will work with your cluster.  There are two
@@ -85,8 +95,19 @@ ways of getting EXP into a container:
 2. You can build EXP inside the container.  This is more
    self-contained but will require some work.  See `this link
    <https://apptainer.org/user-docs/3.1/build_a_container.html>`_ for
-   generic instructions.  Also: please consider contributing your
-   working recipe to `this repo <https://github.com/EXP-code/EXP-apptainer>`_!
+   generic instructions.
+
+3. The NVidia people have developed the `HPC Container Maker
+   <https://github.com/NVIDIA/hpc-container-maker>`_, a Python tool
+   called `hpccm` for generating an Apptainer/Singularity definition
+   file using base images for Linux distributions with Cuda support.
+   Our `repo <https://github.com/EXP-code/EXP-apptainer>`_ also gives
+   an `hpccm` recipe for an Ubuntu image.  The container includes EXP
+   and pyEXP with AstroPy, NumPy, Matplotlib, and mpi4py. EXP in this
+   container has been tested but remains experimental (esp. for pyEXP.
+   Please provide feedback and bug reports on this and please consider
+   contributing your working recipe to `our EXP repo
+   <https://github.com/EXP-code/EXP-apptainer>`_!
 
 Some HPC centers are exploring Kubernetes, also known as K8s.  This is
 an open-source system for automating deployment, scaling, and
