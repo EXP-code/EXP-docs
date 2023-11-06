@@ -1,6 +1,8 @@
 Three-dimensional rectangular bases
 ===================================
 
+.. index:: periodic cube
+
 The latest version of EXP includes support for a three-dimensional
 rectangular prism using the classic trigonometric basis with periodic
 or reflective boundary conditions.  This basis is ideal for
@@ -63,3 +65,20 @@ we only need the expensive evaluation of :math:`e^{i2\pi x}`,
 :math:`(x, y, z)` and all the basis functions follow by successive
 multiplication.
 
+Boundary conditions
+-------------------
+
+.. index:: pair: boundary conditions; cube
+
+Your particles *only* contribute to the density if they are inside the
+unit cube.  Specifically, the `Cube` routine *does not* wrap the
+positions periodically into the unit cube.  If you would like
+phase-space positions to be wrapped into the unit cube, use the
+`PeriodicBC` external routine with origin at zero, lengths of one, and
+periodic boundary conditions (these are the defaults).  The
+`PeriodicBC` allows periodic ('p'), reflecting ('r'), and vacuum ('v')
+boundary conditions.  The boundary-condition-type parameter are passed
+as a string to the `Cube` routine with desired boundary conditions for
+'xyz'.  For example, periodic boundary conditions in each dimension is
+'rrr'.  Boundary condition type may be different in each
+axis.
