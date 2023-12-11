@@ -122,11 +122,11 @@ A typical invocation with Cuda is:
    $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
 Some installations provide an EIGEN_BASE environment variable that
-locates the install directory what contains 'include' and 'share'.
+locates the install directory that contains 'include' and 'share'.
 Alternatively, replace EIGEN_BASE with that path or set EIGEN_BASE
 manually.
 
-Many users will like configuring with one the CMake gui tools, such as
+Many users will like configuring with one of the CMake gui tools, such as
 ``ccmake`` or ``cmake-gui`` instead of the command-line ``cmake``.  The
 gui will allow you to change the parameters interactively and display the
 help info for each parameter.  For example:
@@ -240,7 +240,7 @@ virtual environment installation is:
 .. code-block:: bash
 
    $ python3 -m venv ~/venv/python9
-   $ source ~/venv/python3.9/activate
+   $ source ~/venv/python9/activate
 
 This creates and activates the virtual Python environments.  I called
 my virtual environment ``python9`` to distinguish it from a venv that
@@ -259,7 +259,7 @@ install those with
 .. index:: sort: Python; path
 
 Once you have created a virtual environment, you can copy or link the
-shared library to your site packages directory. The actual name
+shared library to your site-packages directory. The actual name
 depends on your build environment.  For example, in Ubuntu 22.04 using
 Python3.9, the library is called
 ``pyEXP.cpython-309-x86_64-linux-gnu.so``.  In this same case, this
@@ -270,7 +270,7 @@ below for known dependencies that you may need to install beforehand).
 
 .. _intro-install-platform-notes:
 
-Platform specific installation notes
+Platform-specific installation notes
 ====================================
 
 .. _intro-install-windows:
@@ -289,7 +289,7 @@ Ubuntu 18.04 and above
 
 EXP has been currently developed under Ubuntu for 10 years and Debian
 before that.  It currently requires the C++-17 language features and
-has been thorougly tested with recent versions of Ubuntu.  A typical
+has been thoroughly tested with recent versions of Ubuntu.  A typical
 recipe to install packages might be:
 
 .. code-block:: bash
@@ -319,7 +319,7 @@ The most recent versions of *clang* use a C++ standard library ABI
 that is incompatible with the GNU `libstdc++` ABI. EXP uses the HDF5
 C++ libraries.  Therefore, you will need to compile the HDF5
 development package yourself with *clang* to build EXP with *clang*.
-This not difficult and we have confirmed that it works.  We downloaded
+This is not difficult and we have confirmed that it works.  We downloaded
 and built the `HDF5 source
 <https://portal.hdfgroup.org/display/support/Download+HDF5>`_ for
 version 1.10.9.  Other stable versions should work, too.
@@ -337,7 +337,7 @@ install modules might be:
 Although no specific versions were specified in the command, we
 recommend being specific by version.  E.g. ``module load
 gcc/11.3.0`` to get a specific release instead of simply ``module load
-gcc`` that may be an older system defult.  I recommend examining the
+gcc`` that may be an older system default.  I recommend examining the
 available modules using ``module avail`` and pick recent versions of
 the packages.  Many HPC centers have older ones for backward
 compatibility.
@@ -357,7 +357,7 @@ Work in progress.
 Troubleshooting
 ===============
 
-Some strange error that we've seen
+Some strange errors that we've seen
 ----------------------------------
 
 Provide a fix or suggestion.
