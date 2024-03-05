@@ -22,6 +22,26 @@ documents.
      An optional quick introduction to YAML syntax
 
 
+.. warning::
+
+   Here and throughout the documentation, we give examples of
+   configuring EXP.  However, this is not a complete description of
+   all the available parameters and options for every method.
+
+   For a more complete description of EXP classes and methods, you may
+   configure and build the Doxygen manual which provides a detailed
+   description of the classes, methods, and their arguments.  You may
+   do this by specifying `-DBUILD_DOCS=ON` when invoking CMake or
+   toggle the `BUILD_DOCS` parameter in ``ccmake``.  `BUILD_DOCS=OFF`
+   by default.
+
+   The Doxygen web manual will be built in the ``docs/html`` directory
+   in the top-level ``EXP`` directory.  You can start the Doxygen
+   manual in a web browser with the URL
+   ``file:///<top-level-EXP-src>/docs/html/index.html``. Doxygen
+   provides a search bar in the upper right corner and a navigation
+   bar on the left.
+
 .. _exp-config:
 
 An annotated EXP YAML configuration
@@ -190,10 +210,10 @@ documentation <doxygen>`.
   The list of output methods to be run after each step at the user
   specified frequency.  Again, each list item begins with '-' and
   there are two fields:
+
   ==========     ===========
   Key word       Explanation
   ==========     ===========
-
   id             the name of the ``Output`` class
   parameters     a list of key: value pairs
   ==========     ===========
@@ -269,4 +289,27 @@ automatically supplied default value that you get without the key word.
   runtag            suffix or prefix used for labeling report files
   restart_cmd       command used to restart simulation on termination
   =============     ===========
+
+
+Additional metadata
+-------------------
+
+.. index: metadata; config; yaml
+.. _add metadata:
+
+You can include entries that are not part of the EXP YAML convention
+and they will be ignored by EXP.  For example, you can include a
+`Comment` stanza as follows:
+
+.. code-block:: YAML
+
+   Comment:
+     - Project: This is Run0 for the tidal interaction project
+     - Author: Martin Weinberg
+     - Date: June 23, 2022
+   # EXP will ignore the above stanza
+   Global:
+   .
+   .
+   .
 

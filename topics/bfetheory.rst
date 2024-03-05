@@ -25,10 +25,10 @@ to begin using the code (:ref:`EXP tutorial <intro-EXP-tutorial>` and
 :ref:`pyEXP tutorial <intro-pyEXP-tutorial>`).  Additional technical
 details will be summarized in later chapters.
 
+.. _bfedefs:
+
 The basic BFE algorithm
 =======================
-
-.. _bfedefs:
 
 The harmonic basis-function expansion (BFE) technique has been used to
 both study and compare simulations to theoretical predictions, owing
@@ -287,6 +287,7 @@ subspace.
 
 .. include:: two_d_disk.rst
 
+.. include:: cube.rst
 
 Final comments and caveats
 ==========================

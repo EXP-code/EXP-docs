@@ -5,7 +5,7 @@ How to use mSSA with your coefficient series in pyEXP
 
 Begin with the usual imports
 
-.. code:: ipython3
+.. code:: python
 
     import os
     import copy
@@ -26,14 +26,14 @@ I like to be explicit about my working directory but you don’t need to
 do this here. It would be sufficient to simply pass the full path to the
 coefficient factory below.
 
-.. code:: ipython3
+.. code:: python
 
     # os.chdir('/data/Nbody/Run101')
 
 Read the EXP config files and generate the bases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: ipython3
+.. code:: python
 
     # Read the basis info from the EXP file
     #
@@ -97,7 +97,7 @@ Read the EXP config files and generate the bases
 Read the coefficients and the MSSA files
 ----------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     # Just do star component for now
     #
@@ -160,7 +160,7 @@ Read the coefficients and the MSSA files
 Plot the eigenvalues
 --------------------
 
-.. code:: ipython3
+.. code:: python
 
     # Make a plot of the eigenvalues
     #
@@ -180,7 +180,7 @@ Plot the eigenvalues
 Let’s look at some PCs
 ----------------------
 
-.. code:: ipython3
+.. code:: python
 
     for m in [0,1,2,3,4]:
         pcs = ssa[m].getPC()
@@ -214,11 +214,11 @@ Let’s look at some PCs
 .. image:: disk_mssa_files/disk_mssa_11_4.png
 
 
-.. code:: ipython3
+.. code:: python
 
     ssa[2].reconstruct([0,1,2,3])
 
-.. code:: ipython3
+.. code:: python
 
     coefs.zerodata()
     ssa[2].getReconstructed()
@@ -236,7 +236,7 @@ Check by making some surface renderings
 Uses the final time slice but you could easily loop through all of them
 to make a movie, etc.
 
-.. code:: ipython3
+.. code:: python
 
     # Make the coefficients by the factory method
     #
@@ -353,7 +353,7 @@ to make a movie, etc.
 Okay, now make a movie
 ----------------------
 
-.. code:: ipython3
+.. code:: python
 
     size  = 0.05
     npix  = 50
@@ -368,7 +368,7 @@ Okay, now make a movie
     
     surfaces = fields.slices(basis[comp], coefs)
 
-.. code:: ipython3
+.. code:: python
 
     # Get the shape
     keys = list(surfaces.keys())
@@ -425,6 +425,6 @@ Make a mp4 file from the frames using ffmpeg
 
 This only work if you have ‘ffmpeg’ installed, of course …
 
-.. code:: ipython3
+.. code:: python
 
     os.system('ffmpeg -y -i \'{0}_mssa_{1}_%04d.png\' mssa_{0}_{1}.mp4'.format(comp, runtag))

@@ -109,17 +109,12 @@ mathematics used in EXP.
 :doc:`topics/yamlconfig`
     An example YAML configuration file for EXP
 
-
-Frequently Asked Questions
-==========================
-
 .. toctree::
    :caption: Frequently Asked Questions (FAQ)
       
    faq
 
 :doc:`faq`
-    Get answers to most frequently asked questions.
 
 
 How to solve specific problems
@@ -139,6 +134,7 @@ How to solve specific problems
    topics/replay
    topics/exp-phase-space
    topics/EXP-output
+   topics/flatdisk
    topics/debug
 
 :doc:`topics/visualizing-bases`
@@ -171,6 +167,9 @@ How to solve specific problems
 
 :doc:`topics/EXP-output`
     A description of the EXP N-body output generator
+
+:doc:`topics/flatdisk`
+    How to configure a thin-disk in EXP
 
 :doc:`topics/debug`
     Learn how to debug common problems in EXP/pyEXP

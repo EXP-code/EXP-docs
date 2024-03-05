@@ -183,7 +183,48 @@ Some key features of YAML syntax:
   `Sally`, `name:Sally` is an identifier with a Null value.  This
   allows colons inside values like date/time fields: `time_created:19:03`.
 
+
+How to check your syntax?
+-------------------------
+
 For those who want to try YAML in all its forms, there's an online
-syntax checker called `yamllint`. It validates your text and
-outputs the result in various formats.  The important part is just
-checking the syntax validity.
+syntax checker called `YAMLlint <https://www.yamllint.com/>`_. It
+validates your text and outputs the result in various formats.  The
+important part is just checking the syntax validity.  A commonly used
+downloadable version in Python can be installed with
+
+.. code-block:: bash
+
+   $ python3 -m pip install --user yamllint		
+
+.. note:: Python's `yamllint` routine is more conservative then the YAML
+	  standard
+
+The EXP n-body installation provides a simple EXP-specific YAML
+checker, `expyaml` implemented using the `yaml-cpp
+<https://github.com/jbeder/yaml-cpp>`_ library. This will be installed
+in the same directory as `exp` if you have specified `ENABLE_NBODY` in
+your CMake configuration (see :ref:`compile-features`).  Since it uses
+the same parser as the EXP code, a successful check implies that the
+YAML syntax is correct.  It does not provide detailed syntax
+diagnostics like `yamllint`.  You can optionally print the parsed YAML
+database tree to standard output or a file and turn off EXP stanza
+detection using the `--noEXP` flag.  Some typical examples are shown
+below:
+
+.. code-block:: bash
+
+   expyaml config.yml     # Quick syntax check
+   expyaml -v config.yml  # Syntax check, parsed data to stdout
+   expyaml -o test.yml config.yml  # Parsed data to file 'test.yml'
+   
+
+The `expyaml` code will warn you by default if any necessary map
+entries are missing or duplicated.  It will also report any stanzas
+not used by EXP.  For example, if you include a `Comments:` stanza as
+described in the :ref:`previous <add metadata>` section, the `expyaml`
+checker will report:
+
+.. code-block:: bash
+
+   The following stanzas are not used by EXP: Comments

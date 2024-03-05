@@ -1,7 +1,7 @@
 .. _multistep:
 
-N-Body optimisation in EXP
-================================
+N-Body optimization in EXP
+==========================
 
 Overview
 --------

@@ -14,7 +14,7 @@ Begin with the usual imports
 You may need to append the pyEXP location to your Python path, depending
 on your installation.
 
-.. code:: ipython3
+.. code:: python
 
     import os
     import copy
@@ -40,7 +40,7 @@ The rest of the notebook should then run without changes.
 Two optional parameters: - The half size of each axis - Number of pixels
 along each axis
 
-.. code:: ipython3
+.. code:: python
 
     # key parameters
     exp_config = 'step3_try9.yml'
@@ -58,14 +58,14 @@ do this here. It would be sufficient to simply pass the full path to the
 coefficient factory below or launch the notebook from a working
 directory.
 
-.. code:: ipython3
+.. code:: python
 
     # os.chdir('/data/Nbody/Test')
 
 Read the EXP config file, generate the basis from the config, and get the run tag for convenience
 -------------------------------------------------------------------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     # Open and read the yaml file
     #
@@ -92,14 +92,14 @@ Read the EXP config file, generate the basis from the config, and get the run ta
 Read the coefficients
 ---------------------
 
-.. code:: ipython3
+.. code:: python
 
     coefs = pyEXP.coefs.Coefs.factory(coeffile)
 
 Set the output field grid and render the slices
 -----------------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     times = coefs.Times()
     pmin  = [-size, -size, 0.0]
@@ -115,7 +115,7 @@ Set the output field grid and render the slices
 Make a movie frames
 -------------------
 
-.. code:: ipython3
+.. code:: python
 
     # Get the shape
     keys = list(surfaces.keys())
@@ -171,14 +171,14 @@ Make a mp4 file from the frames using ffmpeg
 
 This only work if you have ‘ffmpeg’ installed, of course …
 
-.. code:: ipython3
+.. code:: python
 
     os.system('ffmpeg -y -i \'{0}_movie_{1}_%04d.png\' movie_{0}_{1}.mp4'.format(component, runtag))
 
 Preview the new movie
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: ipython3
+.. code:: python
 
     from IPython.display import Video
     Video('movie_{0}_{1}.mp4'.format(component, runtag), embed=True, width=800)

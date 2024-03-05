@@ -18,7 +18,7 @@ corresponding Jupyter notebooks in the (`pyEXP repo
 Let's just dive in.  We begin by importing ``pyEXP`` and friends and
 setting the working directory.
 
-.. code:: ipython3
+.. code:: python
 
     import os
     import yaml
@@ -55,7 +55,7 @@ or you may construct it in Python as a text string, here called
 `bconfig`.  The final line of the code snippit does the work of
 constructing the basis, assigned to the variable `basis`.
 
-.. code:: ipython3
+.. code:: python
 
     # Get the basis config
     #
@@ -166,7 +166,7 @@ per snapshot, they will look something like ``myrun.00000_0001``,
 
 Here is the call for a file:
 
-.. code:: ipython3
+.. code:: python
 
     # Construct batches of files the particle reader.  One could use the
     # parseStringList to create batches from a vector/list of files.  NB:
@@ -181,7 +181,7 @@ returns the coefficients. The coefficients are added to a coefficient
 container called ``coefs``. Note: on the first call ``coefs=None`` so a
 new container is created on the first time through.
 
-.. code:: ipython3
+.. code:: python
 
     # This will contain the coefficient container, need to start will a
     # null instance to trigger construction
@@ -327,7 +327,7 @@ You can load your entire phase space into the mass and position arrays
 and call ``createFromArray`` for each time slice.  This might look
 something like this:
 
-.. code:: ipython3
+.. code:: python
 
     # This will contain the coefficient container, need to start will a
     # null instance to trigger construction
@@ -376,7 +376,7 @@ of the three separate calls under the hood.
 
 Here is an example code snippet:
     
-.. code:: ipython3
+.. code:: python
 
     # This will contain the coefficient container, need to start will a
     # null instance to trigger construction
