@@ -30,7 +30,7 @@ A complete example
 ------------------
 
 ``FlatDisk`` uses the empirical orthogonal function method (EOF)
-described in :ref:`2dcyl` to find potential-density pairs that best
+described in :ref:`twodcyl` to find potential-density pairs that best
 fit a target disk density.  This method also computes the potential
 and force above and below the disk plane for coupling to
 three-dimensional components. The desired target model is specified in
@@ -95,7 +95,7 @@ Please note that many of these parameters have sensible defaults and
 can be left out of the configuration.  They are included here as an
 example.  By default, `FlatDisk` uses Bessel functions to construct
 the full three-dimensional fields from the flat-disk density using the
-Hankel transform (see :ref:`2dcyl`).  This method is very accurate
+Hankel transform (see :ref:`twodcyl`).  This method is very accurate
 when the initial basis set itself are proportional to Bessel functions
 and that is the default.  However, the initial basis may use the
 Clutton-Brock two-dimensional basis set, optionally.  This is

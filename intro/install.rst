@@ -381,7 +381,7 @@ Troubleshooting
 ===============
 
 Some strange errors that we've seen
-----------------------------------
+-----------------------------------
 
 Provide a fix or suggestion.
 

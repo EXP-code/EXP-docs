@@ -285,6 +285,7 @@ the spatial scales in the basis. In both panels, the color has been
 normalized to the maximum amplitude of the :math:`m=2` harmonic
 subspace.
 
+.. _twodcyl:
 .. include:: two_d_disk.rst
 
 .. include:: cube.rst

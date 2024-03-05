@@ -1,6 +1,3 @@
-.. _2dcyl:
-
-
 Two-dimensional cylindrical bases
 =================================
 
