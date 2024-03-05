@@ -6,6 +6,26 @@ Installation guide
 
 .. _faq-supported-systems:
 
+.. note::
+
+   You may download a Docker container with EXP and pyEXP from the
+   Docker Hub and run it immediately with no additional configuration
+   needed.  This give you access to both the simulation code, EXP, and
+   the Python module, pyEXP using Jupyter Notebooks and Lab in the
+   Docker container.
+
+   Super quick start: download `this Bash script
+   <https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox>`_
+   and run it.  This will download the Docker image and start a
+   Jupyter notebook by default.  Use the `-t` flag for an interactive
+   terminal.  Use the `-h` flag for additional options.  For further
+   details, see `this README
+   <https://github.com/EXP-code/EXP-container/tree/main/Docker>`_.
+
+   Please read on if you would would like to configure and install EXP
+   on your native system.
+
+
 Supported system versions
 =========================
 
