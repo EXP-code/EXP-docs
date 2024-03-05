@@ -167,6 +167,9 @@ How to solve specific problems
 :doc:`topics/EXP-output`
     A description of the EXP N-body output generator
 
+:doc:`topics/flatdisk`
+    How to configure a thin-disk in EXP
+
 :doc:`topics/debug`
     Learn how to debug common problems in EXP/pyEXP
 

@@ -190,10 +190,10 @@ documentation <doxygen>`.
   The list of output methods to be run after each step at the user
   specified frequency.  Again, each list item begins with '-' and
   there are two fields:
+
   ==========     ===========
   Key word       Explanation
   ==========     ===========
-
   id             the name of the ``Output`` class
   parameters     a list of key: value pairs
   ==========     ===========
