@@ -134,6 +134,7 @@ How to solve specific problems
    topics/replay
    topics/exp-phase-space
    topics/EXP-output
+   topics/flatdisk
    topics/debug
 
 :doc:`topics/visualizing-bases`

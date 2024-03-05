@@ -22,6 +22,26 @@ documents.
      An optional quick introduction to YAML syntax
 
 
+.. warning::
+
+   Here and throughout the documentation, we give examples of
+   configuring EXP.  However, this is not a complete description of
+   all the available parameters and options for every method.
+
+   For a more complete description of EXP classes and methods, you may
+   configure and build the Doxygen manual which provides a detailed
+   description of the classes, methods, and their arguments.  You may
+   do this by specifying `-DBUILD_DOCS=ON` when invoking CMake or
+   toggle the `BUILD_DOCS` parameter in ``ccmake``.  `BUILD_DOCS=OFF`
+   by default.
+
+   The Doxygen web manual will be built in the ``docs/html`` directory
+   in the top-level ``EXP`` directory.  You can start the Doxygen
+   manual in a web browser with the URL
+   ``file:///<top-level-EXP-src>/docs/html/index.html``. Doxygen
+   provides a search bar in the upper right corner and a navigation
+   bar on the left.
+
 .. _exp-config:
 
 An annotated EXP YAML configuration

@@ -180,37 +180,40 @@ work perfectly.  However, if Cuda is enabled in one build and not the
 other, you will need to manually delete the top-level config.h when
 changing build directories.  This will trigger a full recompile.
 
-Things that are good to know
-----------------------------
+Essential build prerequisites
+=============================
 
-EXP is written in C++-17 (largely) and depends on a few key C++ packages:
+EXP requires C++-17 features and has been tested with GCC and Clang.
+EXP depends on a few key C++ packages that are common in HPC
+environements. The first four must be provided by your system or
+loadable modules.  The last two, `HighFive` and `libyaml-cpp` are
+download and configured by `git submodule` command.
 
-* `FFTW`_, an efficient Fast-Fourier Transform implementation
+1. `FFTW`_, an efficient Fast-Fourier Transform implementation
 
-* `OpenMPI`_, a modern MPI-2/3 implementation.  Other implementation
-  (e.g MPICH) should also work but we have not verified them recently.
+2. `OpenMPI`_, a modern MPI-2/3 implementation.  Other implementation
+   (e.g MPICH) should also work but we have not verified them
+   recently.
 
-* `HDF5`_, an implementation of the HDF5 standard as provided by the
-  HDF5 consortium.  We use the HighFive C++ header-only interface with
-  the C-API.
+3. `HDF5`_, an implementation of the HDF5 standard as provided by the
+   HDF5 consortium.  We use the HighFive C++ header-only interface
+   with the C-API.
 
-* `Eigen3`_, a suite of vector/matrix classes along with standard
-  linear algebra and eigen problem solvers.
+4. `Eigen3`_, a suite of vector/matrix classes along with standard
+   linear algebra and eigen problem solvers.
 
-* `HighFive`_, a header-only C++ API for HDF5 used by EXP as provided
-  as a git submodule.
+5. `HighFive`_, a header-only C++ API for HDF5 used by EXP as provided
+   as a git submodule.
 
-* `libyaml-cpp`_, a C++ library implementing YAML reading, parsing and
-  emitting.  Also provided as a git submodule.
-
-
+6. `libyaml-cpp`_, a C++ library implementing YAML reading, parsing
+   and emitting.  Also provided as a git submodule.
 
 Some of these packages might require additional installation steps
 depending on your platform.  Please check :ref:`platform-specific
 guides below <intro-install-platform-notes>`.
 
 In case of any trouble related to these dependencies,
-please refer to their respective installation instructions:
+please refer to their respective installation instructions.
 
 .. _intro-using-virtualenv:
 

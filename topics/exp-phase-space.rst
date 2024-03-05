@@ -10,7 +10,7 @@ Why another format?
 
 When EXP was written, there was no common N-body format.  The
 typical structures were serial lists of each phase-space variable
-:math:`m_1, m_2, \ldots, m_N, x_1, \- x_2, \ldots, y_i, \ldots, `.  On the
+:math:`m_1, m_2, \ldots, m_N, x_1, x_2, \ldots, y_i, \ldots,`.  On the
 other hand, for the object-orientated design strategy described in
 \S\ref{sec:design}, the smallest object is the particle phase space
 described by :math:`m_i, \mathbf{x}_i, \mathbf{v_i}, \ldots`, for

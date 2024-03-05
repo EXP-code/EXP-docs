@@ -9,7 +9,7 @@ Saving the coefficients
 At this point, it makes sense to save the coefficients that you have
 just created. This is sone with the following call:
 
-.. code:: ipython3
+.. code:: python
 
     coefs.WriteH5Coefs('test_better')
 
@@ -18,7 +18,7 @@ example, let’s try reading the newly created file into another
 coefficient container, ``coefs2``. The container has a member function
 called ``CompareStanzas`` which will check on the contents. Let’s do it.
 
-.. code:: ipython3
+.. code:: python
 
     # Now try reading it in
     #

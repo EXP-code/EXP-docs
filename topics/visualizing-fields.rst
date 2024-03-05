@@ -7,7 +7,7 @@ Now that we have our new coefficients, we can use the ``FieldGenerator``
 to view the BFE representation of the underlying fields. Here is an
 example:
 
-.. code:: ipython3
+.. code:: python
 
     # Now try some slices for rendering
     #
