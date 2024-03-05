@@ -19,7 +19,7 @@ Installation guide
    and run it.  This will download the Docker image and start a
    Jupyter notebook by default.  Use the `-t` flag for an interactive
    terminal.  Use the `-h` flag for additional options.  For further
-   details, see `this README
+   details and links to installing Docker, see `this README
    <https://github.com/EXP-code/EXP-container/tree/main/Docker>`_.
 
    Please read on if you would would like to configure and install EXP
