@@ -314,7 +314,7 @@ gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
 biases results for grossly asymmetric systems.  A simple example of
-this is centering (see Sec. `EJ`).   Please be vigilant.
+this is centering (see Sec. :ref:`centering`).   Please be vigilant.
 
 On the up side, a basis function representation provides an
 information--rich summary of the gravitational field and provides
