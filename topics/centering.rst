@@ -38,26 +38,28 @@ Euler matrix whose that makes the :math:`L_z` direction the transformed
 
 The naive application of these transformations is jittery.  To reduce
 the jitter, we only perform the transformation after first logging
-``nEJkeep`` steps.  We use a linear least-squares solution of
-temporal trajectory of both the center and :math:`\mathbf{L}` axes to
+``nEJkeep`` steps.  We use a linear least-squares solution of temporal
+trajectory of both the center and the :math:`L_x, L_y, L_z` axes to
 predict the current value of the center and axes.  We retain the last
-``nEJkeep`` data points for all subsequent steps.  We provide the
-user the option to _damp_ the linear solution by interpolating to
-an earlier time point by setting the `EJdamp` value less than
-its default value of one.
+``nEJkeep`` data points for all subsequent steps.  We provide the user
+the option to *damp* the linear solution by interpolating to an
+earlier time point by setting the ``EJdamp`` value less than its default
+value of one.
 
 The EJ algorithm is controlled by the ``EJ`` bit flag in the
-``Component``configuration.  A value ``1``, ``2`` enables axis
-orientation and centering, respectively.  For example, both may be
-enabled by setting ``EJ: 3``. Diagnostic information about the EJ
-center computation is enabled by setting ``EJdiag: true`.  I often use
-the EJ centering computation as an internal diagnostic without
-changing the expansion center by using ``EJdryrun: true` along with
-``EJdiag: true``.  I strongly recommend doing this.  See
-:ref:`yamlconfig` for an example of setting EJ parameters in the
-component stanza of the YAML config file.
+``Component`` configuration.  A value ``1``, ``2`` enables
+axis-orientation and centering, respectively.  For example, both may
+be enabled by setting ``EJ: 3``. Diagnostic information about the EJ
+center computation is enabled by setting ``EJdiag: true``.  We often
+use the EJ centering computation as an internal diagnostic without
+changing the expansion center by using ``EJdryrun: true`` along with
+``EJdiag: true``.  We strongly recommend doing this for simulations of
+isolated galaxies.  See :ref:`yamlconfig` for an example of setting EJ
+parameters in the component stanza of the YAML config file.
 
 .. rubric:: Footnotes
 
 .. [#f1] Of course, a non-truncated one does not, owing to the
-         translation property of harmonics.
+         translation property of harmonics.  In other words, the
+	 center would be irrelevant with a arbitrarily large number of
+	 terms in the expansion.
