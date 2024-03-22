@@ -49,7 +49,7 @@ maintain stability and backward compatibility through major versions,
 if possible.
 
 Methods or functions that start with a single dash (``_``) are private and
-should never be relied as stable.
+should never be relied upon as stable.
 
 Also, keep in mind that stable doesn't mean complete: stable APIs could grow
 new methods or functionality but the existing methods should keep working the

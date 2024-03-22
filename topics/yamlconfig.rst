@@ -223,7 +223,7 @@ documentation <doxygen>`.
   parsed and used to construct a class of that type.  EXP
   will terminate with an error message if the class does not exist.
   You can have as many instances of these as you like (there might be
-  occasion reasons to have duplicates).
+  occasional reasons to have duplicates).
 
 4. ``External:``
 
@@ -260,7 +260,7 @@ automatically supplied default value that you get without the key word.
   =============     ===========
   nsteps            maximum number of steps to execute
   nthrds            number of threads per process (e.g. one per processor)
-  ngpus             the number of GPUs to assign on each node (can be more than than the physical number)
+  ngpus             the number of GPUs to assign on each node (can be more than the physical number)
   nbalance          number of steps between load balancing (use 0 for none)
   dbthresh          load balancing threshold (larger difference initiates balancing)
   time              current or initial time on start up
@@ -313,3 +313,72 @@ and they will be ignored by EXP.  For example, you can include a
    .
    .
 
+The Config Parameters
+------------------------
+Above we gave an example of a YAML configuration that has **dark halo** and **star disk**, 
+and each component has some parameters. Here we provide a bit more explanation of the 
+parameters given in the config.
+
+The **dark halo** is the dark matter halo with a spherical basis. The following parameters
+must be specified:
+
+.. code-block:: python
+
+   # Make the halo basis config
+   halo_config="""
+   ---
+   id: sphereSL
+   parameters :
+     numr:  2000                  # number of radial grid points
+     rmin:  0.0001                # smallest radial grid point
+     rmax:  1.95                  # largest radial grid point
+     Lmax:  4                     # maximum spherical harmonic degree
+     nmax:  10                    # maximum radial order
+     rmapping: 0.0667             # radius for coordinate mapping
+     modelname: SLGridSph.model   # model file name
+   ...
+   """
+The parameters *rmin* and *rmax* define the inner and outer radii for the basis in virial units
+ (e.g. where :math:`R_{vir} = 1`), 
+*Lmax* and *nmax* describe the maximum harmonic and radial orders for the basis, respectively. 
+The *rmapping* parameter adjusts the internal coordinate mapping and a good choice is the 
+characteristic or scale radius of the halo.
+
+
+
+
+The **star disk** is the stellar disk with a cylindrical basis. The following parameters
+must be specified: 
+
+.. code-block:: python
+	
+   # Make the disk basis config
+   disk_config = """
+   ---
+   id: cylinder
+   parameters:
+     acyl: 0.01                   # exponential disk scale length
+     hcyl: 0.001                  # exponential disk scale height
+     nmaxfid: 32                  # maximum radial order for spherical basis
+     lmaxfid: 32                  # maximum harmonic order for spherical basis
+     mmax: 6                      # maximum azimuthal order of cylindrical basis
+     nmax: 8                      # maximum radial order of cylindrical basis
+     ncylodd: 3                   # vertically anti-symmetric basis functions
+     ncylnx: 256                  # grid points in radial direction
+     ncylny: 128                  # grid points in vertical direction
+     rnum: 200                    # radial quadrature knots for Gram matrix
+     pnum: 0                      # azimuthal quadrature knots for Gram matrix
+     tnum: 80                     # latitudinal quadrature knots for Gram matrix
+     ashift: 0.5                  # basis shift for variance generation
+     vflag: 0                     # verbose output flag
+     logr: false                  # logarithmically spaced radial grid
+     density: false               # generate density basis functions
+     eof_file: .eof.cache.run0    # EOF cache file name
+   ...
+   """
+
+The *ncylodd* parameters sets the number of vertically anti-symmetric basis functions. The first 
+*nmax-ncylodd* basis functions are symmetric and the last *ncylodd* are vertically anti-symmetric. 
+You can adjust these parameters to provide the desired number of basis functions, 
+anticipating the degree of vertical symmetry. The parameters *acyl* and *hcyl* are the scale length and height, respectively,
+in virial units. 

@@ -25,11 +25,11 @@ commonly used Microsoft Windows INI?  There are two main reasons:
   support, I use `PyYAML <https://pyyaml.org>`.  For example, this
   enables Python-based control scripts that generate initial
   conditions, configuration files, etc. and archive or manipulate
-  \textsc{EXP} output.  This level of support tipped the balance for
+  EXP output.  This level of support tipped the balance for
   me when deciding on upgrading from my home-brewed INI-like parsing
   class.
 
-You may wish to skip back to the `EXP YAML example <yamlconfig>` if
+You may wish to skip back to the :ref:`EXP YAML example <yamlconfig>` if
 you are already familiar with YAML.
 
 Quick introduction to YAML
@@ -87,7 +87,8 @@ For example, we can are actually a map, where I give names to values.
    person:
      name: Sally # this is a simple string
      age: 42 # this is an integer scalar field
-     description: Sally was this age once # This is a string but that was a long time ago # that spans two lines
+     description: Sally was this age once # This is a string 
+     but that was a long time ago # that spans two lines
      # this is a string sequence
      cities:  ['Cambridge', 'London', 'New York', 'Berkeley'] 
      # this is a sequence of sequences
@@ -127,7 +128,7 @@ we could get Mark's data as follows:
    data = yaml.load(file)
    print(data['people'][1])
 
-which would print the node a dictionary.  PyYAML has pretty print
+which would print the node as a dictionary.  PyYAML has pretty print
 options as well.  Running this little Python snippet should give:
 
 .. code-block:: bash
@@ -166,7 +167,7 @@ In principle, using reference variables might be useful when you need
 to change a variable on several items. In this example, if I change
 the folder where I hold my data, all I need to do is change that one
 single line, instead of editing every object that reference that
-variable.  I am not current using this feature of YAML in my \textsc{exp}
+variable.  I am not current using this feature of YAML in my EXP
 configurations, but the parser will parse these features correctly, in
 case you want to use these features.
 

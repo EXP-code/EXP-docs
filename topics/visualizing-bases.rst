@@ -9,8 +9,8 @@ a ``getBasis`` member function that returns the basis functions in
 their native geometry.
 
 Let's work a few simple examples to give you all you need to look at
-your bases.  A Jupyter notebook implementing these examples, `'viewing
-a basis.ipynb` is available in the `pyEXP examples repository
+your bases.  A Jupyter notebook implementing these examples, 
+``viewing_a_basis.ipynb``, is available in the `pyEXP examples repository
 <https://github.com/EXP-code/pyEXP-examples>`_ in the
 `Tutorials/Basis` directory.
 
@@ -43,7 +43,7 @@ instantiate the basis:
    halo_basis = pyEXP.basis.Basis.factory(halo_config)
 
 
-The ``getBasis`` member for each basis returns a vectors of arrays for
+The ``getBasis`` member for each basis returns a vector of arrays for
 the basis functions on the grid you have defined.  For the spherical
 or flat disk case, the basis functions are one-dimensional functions.
 We provide a beginning and ending radius in logarithmic units along
@@ -58,11 +58,11 @@ with a grid size:
    rnum  = 200
    halo_grid = halo_basis.getBasis(lrmin, lrmax, rnum)
 
-   Now that we have the basis function grids, we can plot them.  For example:
+Now that we have the basis function grids, we can plot them.  For example:
 
 .. code-block:: python
 
-   # Make a logarithmically space grid in radius
+   # Make a logarithmically spaced grid in radius
    #
    r = np.linspace(lrmin, lrmax, rnum)
    r = np.power(10.0, r)
@@ -106,7 +106,7 @@ Cylindrical basis
 .. _visualizing-cylindrical-basis:
 
 Now let's do the same for a cylindrical basis.  The main difference
-here is that the basis functions are two-dimensional merional planes.
+here is that the basis functions are two-dimensional meriodinal planes.
 
 As before let's begin by configuring and instantiating our basis:
 
@@ -145,7 +145,8 @@ these parameters to provide the desired number of basis functions,
 anticipating the degree of vertical symmetry.
 
 We provide a beginning and ending cylindrical radius and a beginning
-and ending vertical extent, this time in linear units:
+and ending vertical extent, this time in linear units (matching the *logr*
+parameter given in the config):
 
 .. code-block:: python
 

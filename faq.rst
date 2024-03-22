@@ -104,7 +104,7 @@ ways of getting EXP into a container:
    Our `repo <https://github.com/EXP-code/EXP-apptainer>`_ also gives
    an `hpccm` recipe for an Ubuntu image.  The container includes EXP
    and pyEXP with AstroPy, NumPy, Matplotlib, and mpi4py. EXP in this
-   container has been tested but remains experimental (esp. for pyEXP.
+   container has been tested but remains experimental (esp. for pyEXP).
    Please provide feedback and bug reports on this and please consider
    contributing your working recipe to `our EXP repo
    <https://github.com/EXP-code/EXP-apptainer>`_!
@@ -135,7 +135,7 @@ providing a fix, this is what we usually do:
   ``gdb python3`` and run your script in the debugger.
 
 * Look for failures such as undefined arrays, vectors, etc.  Even if
-  you only report the approximately location in the source file, you
+  you only report the approximate location in the source file, you
   will have saved the developers a lot of time and sped up the time to
   a fix.
 
