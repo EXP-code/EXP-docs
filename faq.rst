@@ -47,8 +47,8 @@ you can use the environment setting to tell pyEXP to use 8 cores:
 
 This will speed up your mSSA computation in particular.
 
-The core EXP libraries are use `MPI <https://www.mpi-forum.org/>`_
-which allows EXP and pyEXP in some instances use many compute nodes.
+The core EXP libraries use `MPI <https://www.mpi-forum.org/>`_
+which allows EXP (and pyEXP in some instances) to use many compute nodes.
 While this is key for simulations with large numbers of particles,
 pyEXP can be run on a cluster as well.  See the `pyEXP examples repo
 <https://github.com/EXP-code/pyEXP-examples>`_ for some sample scripts
