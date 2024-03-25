@@ -160,4 +160,4 @@ onto the users stack.
 
 A simple example of this in practice is provided in the
 ``sample_part1_callback.ipynb`` in `pyEXP-examples repo
-<https://github.com/EXP-code/pyEXP-examples>`_).
+<https://github.com/EXP-code/pyEXP-examples>`_.
