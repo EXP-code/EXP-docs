@@ -313,8 +313,13 @@ order to provide a low-noise, bandwidth-limited representation of the
 gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
+<<<<<<< HEAD
 biased results for grossly asymmetric systems.  A simple example of
-this is centering (see Sec. `EJ`).   Please be vigilant.
+this is centering (see Sec. :ref:`centering`).   Please be vigilant.
+=======
+biases results for grossly asymmetric systems.  A simple example of
+this is centering (see Sec. :ref:`centering`).   Please be vigilant.
+>>>>>>> origin/addEJ
 
 On the up side, a basis function representation provides an
 information--rich summary of the gravitational field and provides
