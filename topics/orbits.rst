@@ -23,7 +23,7 @@ orbits are:
       disk_basis = pyEXP.basis.Basis.factory(disk_config)
       halo_basis = pyEXP.basis.Basis.factory(halo_config)
 
-2. Read in the coefficient sets that you generated previous.  For example:
+2. Read in the coefficient sets that you generated previously.  For example:
 
    .. code-block:: python
 

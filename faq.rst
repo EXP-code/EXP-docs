@@ -47,8 +47,8 @@ you can use the environment setting to tell pyEXP to use 8 cores:
 
 This will speed up your mSSA computation in particular.
 
-The core EXP libraries are use `MPI <https://www.mpi-forum.org/>`_
-which allows EXP and pyEXP in some instances use many compute nodes.
+The core EXP libraries use `MPI <https://www.mpi-forum.org/>`_
+which allows EXP (and pyEXP in some instances) to use many compute nodes.
 While this is key for simulations with large numbers of particles,
 pyEXP can be run on a cluster as well.  See the `pyEXP examples repo
 <https://github.com/EXP-code/pyEXP-examples>`_ for some sample scripts
@@ -104,7 +104,7 @@ ways of getting EXP into a container:
    Our `repo <https://github.com/EXP-code/EXP-apptainer>`_ also gives
    an `hpccm` recipe for an Ubuntu image.  The container includes EXP
    and pyEXP with AstroPy, NumPy, Matplotlib, and mpi4py. EXP in this
-   container has been tested but remains experimental (esp. for pyEXP.
+   container has been tested but remains experimental (esp. for pyEXP).
    Please provide feedback and bug reports on this and please consider
    contributing your working recipe to `our EXP repo
    <https://github.com/EXP-code/EXP-apptainer>`_!
@@ -135,7 +135,7 @@ providing a fix, this is what we usually do:
   ``gdb python3`` and run your script in the debugger.
 
 * Look for failures such as undefined arrays, vectors, etc.  Even if
-  you only report the approximately location in the source file, you
+  you only report the approximate location in the source file, you
   will have saved the developers a lot of time and sped up the time to
   a fix.
 
@@ -160,4 +160,4 @@ onto the users stack.
 
 A simple example of this in practice is provided in the
 ``sample_part1_callback.ipynb`` in `pyEXP-examples repo
-<https://github.com/EXP-code/pyEXP-examples>`_).
+<https://github.com/EXP-code/pyEXP-examples>`_.

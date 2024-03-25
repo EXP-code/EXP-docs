@@ -2,6 +2,10 @@
 
 How to use mSSA with your coefficient series in pyEXP
 =====================================================
+There are a number of examples, tutorials, and how-to code and Jupyter notebooks
+for getting started with mSSA on the `GitHub <https://github.com/EXP-code/pyEXP-examples/tree/main>`_ .
+Here we provide an example of running mSSA, plotting the eigenvalues and principal components (PCs),
+and reconstructing the bases. 
 
 Begin with the usual imports
 
@@ -38,10 +42,10 @@ Read the EXP config files and generate the bases
     # Read the basis info from the EXP file
     #
     exp_config = 'step3_try25.yml'
-    stride     = 2
-    npc        = 40
-    size       = 0.05
-    npix       = 50
+    stride     = 2 #stride length
+    npc        = 40 #number of principal components (PCs)
+    size       = 0.05 #min/max of x, y axes for later plotting
+    npix       = 50 #number of pixels in grid for later plotting
     
     # Open and read the EXP yaml file.  Get the runtag. Create the bases
     # and construct coefficient file names
@@ -94,8 +98,8 @@ Read the EXP config files and generate the bases
     Slave    0: tables allocated, MMAX=6
 
 
-Read the coefficients and the MSSA files
-----------------------------------------
+Read the coefficients and generate MSSA files
+----------------------------------------------
 
 .. code:: python
 
@@ -123,7 +127,15 @@ Read the coefficients and the MSSA files
         config = {coefs.getName(): (coefs, keylst[m], [])}
     
         window = int(len(coefs.Times())/2)
-    
+    # Make some parameter flags as YAML.  The defaults should work fine
+    # for most people. 
+    # totPow = True, detrend according to the total power
+    # noMean = True, do not subtract the mean when reading in channels
+    # (noMean = True is valid only for totPow detrending method)
+    # RedSym = True, use the randomized symmetric eigenvalue solver
+    # (RedSym) rather than RedSVD. This toggle is mainly for checking
+    # the accuracy of the default randomized matrix methods 
+
         flags ="""
     ---
     RedSym : true
@@ -216,10 +228,12 @@ Let’s look at some PCs
 
 .. code:: python
 
+    # try a reconstruction using m = 2 and eigenvalues 0 - 3
     ssa[2].reconstruct([0,1,2,3])
 
 .. code:: python
-
+    
+    # zero all but the reconstructed
     coefs.zerodata()
     ssa[2].getReconstructed()
     print(len(coefs.Times()))
@@ -254,6 +268,7 @@ to make a movie, etc.
     
     print('Created fields instance')
     
+    #note - the 'coefs' here is the reconstruction!
     surfaces = fields.slices(basis[comp], coefs)
     
     print('Created surfaces')
@@ -275,9 +290,11 @@ to make a movie, etc.
     y = np.linspace(pmin[1], pmax[1], ny)
     xv, yv = np.meshgrid(x, y)
     
+    # for log scale, uncomment below
     # cont1 = plt.contour(xv, yv, surfaces[final]['d'].transpose(), colors='k', locator=ticker.LogLocator())
     cont1 = plt.contour(xv, yv, surfaces[final]['d'].transpose(), colors='k')
     plt.clabel(cont1, fontsize=9, inline=True)
+    # for log scale, uncomment below
     # cont2 = plt.contourf(xv, yv, surfaces[final]['d'].transpose(), locator=ticker.LogLocator())
     cont2 = plt.contourf(xv, yv, surfaces[final]['d'].transpose())
     plt.colorbar(cont2)
@@ -423,7 +440,7 @@ Okay, now make a movie
 Make a mp4 file from the frames using ffmpeg
 --------------------------------------------
 
-This only work if you have ‘ffmpeg’ installed, of course …
+This will only work if you have ‘ffmpeg’ installed, of course …
 
 .. code:: python
 

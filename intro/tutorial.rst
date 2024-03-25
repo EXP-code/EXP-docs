@@ -32,7 +32,7 @@ and to get the EXP N-body examples do:
 	  illustrate some key features of pyEXP.  For pyEXP-only
 	  users, we provide an abbreviated output set that may be
 	  copied from ``EXP-examples/Nbody/data``.  In addition, for
-	  those of you interested in _both_ EXP and pyEXP, we
+	  those of you interested in *both* EXP and pyEXP, we
 	  recommend studying the example in ``EXP-examples/Nbody`` as
 	  a template for an astronomically relevant simulation.
 

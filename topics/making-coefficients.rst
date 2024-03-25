@@ -4,16 +4,16 @@ How to  generate coefficients from phase-space snapshots
 ========================================================
 
 
-This example assumes that you have pulled the (`EXP examples
-repository <https://github.com/EXP-code/EXP-examples>`_) and run the
+This example assumes that you have pulled the `EXP examples
+repository <https://github.com/EXP-code/EXP-examples>`_ and run the
 `Nbody` simulation.  We have also provided output from this simulation
-in the `Nbody/data` directory for your convenience.  But this methods
-in the example can be adapted for any simulation you like, not only
+in the `Nbody/data` directory for your convenience. The methods
+in this example can be adapted for any simulation you like, not only
 EXP-generated simulations.
 
 Many of the examples described in this documentation also have
-corresponding Jupyter notebooks in the (`pyEXP repo
-<https://github.com/EXP-code/pyEXP-examples>`_).
+corresponding Jupyter notebooks in the `pyEXP repo
+<https://github.com/EXP-code/pyEXP-examples>`_ .
 
 Let's just dive in.  We begin by importing ``pyEXP`` and friends and
 setting the working directory.
@@ -141,8 +141,8 @@ coefficients:
    Gadget HDF5, Bonsai and of course EXP.
 
 2. Using arrays of masses and positions supplied by the users own
-   post-processing pipeline.  In this case, these Python `np.ndarray``
-   types are passed to the `Basis.createFromArray`` member.
+   post-processing pipeline.  In this case, these Python ``np.ndarray``
+   types are passed to the ``Basis.createFromArray`` member.
 
 
 In both cases the ``createFrom*`` members take an optional expansion center
@@ -168,7 +168,7 @@ Here is the call for a file:
 
 .. code:: python
 
-    # Construct batches of files the particle reader.  One could use the
+    # Construct batches of files for the particle reader.  One could use the
     # parseStringList to create batches from a vector/list of files.  NB:
     # a std::vector in C++ becomes a Python.list and vice versa
     #
@@ -183,7 +183,7 @@ new container is created on the first time through.
 
 .. code:: python
 
-    # This will contain the coefficient container, need to start will a
+    # This will contain the coefficient container, need to start with a
     # null instance to trigger construction
     #
     coefs   = None
@@ -205,7 +205,8 @@ new container is created on the first time through.
         reader.SelectType(compname)
         print('Selected', compname)
     
-        print('Call createFromReader at Time', reader.CurrentTime(), 'for', reader.CurrentNumber(), 'particles')
+        print('Call createFromReader at Time', reader.CurrentTime(), 'for', reader.CurrentNumber(), 
+              'particles')
     
         coef = basis.createFromReader(reader)
         print("Created coef")
@@ -329,7 +330,7 @@ something like this:
 
 .. code:: python
 
-    # This will contain the coefficient container, need to start will a
+    # This will contain the coefficient container, need to start with a
     # null instance to trigger construction
     #
     coefs   = None
@@ -378,7 +379,7 @@ Here is an example code snippet:
     
 .. code:: python
 
-    # This will contain the coefficient container, need to start will a
+    # This will contain the coefficient container, need to start with a
     # null instance to trigger construction
     #
     coefs   = None

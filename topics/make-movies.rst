@@ -31,13 +31,16 @@ on your installation.
 Configure the basis and component
 ---------------------------------
 
-| At minimum, you need to - Define the EXP config file to import the
+| At minimum, you need to: 
+| - Define the EXP config file to import the
   config.
 | - Define the target component.
 
 The rest of the notebook should then run without changes.
 
-Two optional parameters: - The half size of each axis - Number of pixels
+Two optional parameters: 
+- The half size of each axis 
+- Number of pixels
 along each axis
 
 .. code:: python
@@ -169,7 +172,7 @@ Make a movie frames
 Make a mp4 file from the frames using ffmpeg
 --------------------------------------------
 
-This only work if you have ‘ffmpeg’ installed, of course …
+This will only work if you have ‘ffmpeg’ installed, of course …
 
 .. code:: python
 

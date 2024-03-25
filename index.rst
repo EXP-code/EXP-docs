@@ -89,6 +89,7 @@ EXP concepts
    topics/codeintro
    topics/timesseries
    topics/multistep
+   topics/centering
    topics/yamlconfig
 
 These topics provide some background detail on the software and
@@ -105,6 +106,9 @@ mathematics used in EXP.
 
 :doc:`topics/multistep`
     A quick review of EXP's ODE solver and multi time step ladder
+
+:doc: `topics/centering`
+    How to choose and monitor the expansion center
 
 :doc:`topics/yamlconfig`
     An example YAML configuration file for EXP

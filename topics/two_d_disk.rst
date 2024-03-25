@@ -32,7 +32,7 @@ The coupling between the two-dimensional disk and other
 three-dimensional components (e.g. the dark-matter halo or a bulge)
 requires evaluating the gravitational potential and its gradient
 everywhere in space.  The three-dimensional gravitational potential is
-not _automatically_ provided by the two-dimensional recursion
+not *automatically* provided by the two-dimensional recursion
 relations that define the biorthogonal functions but must be evaluated
 by Hankel transform.  This can be done very accurately over a finite
 domain with the quasi-discrete Hankel transformation on a finite

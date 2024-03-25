@@ -7,7 +7,7 @@ Saving the coefficients
 -----------------------
 
 At this point, it makes sense to save the coefficients that you have
-just created. This is sone with the following call:
+just created. This is done with the following call:
 
 .. code:: python
 
