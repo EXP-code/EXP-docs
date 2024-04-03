@@ -161,3 +161,40 @@ onto the users stack.
 A simple example of this in practice is provided in the
 ``sample_part1_callback.ipynb`` in `pyEXP-examples repo
 <https://github.com/EXP-code/pyEXP-examples>`_.
+
+What do these parameters mean?
+--------------------------------------
+
+There are a lot of parameters that you can set in EXP/pyEXP! We describe
+some of them below.
+
+``numr`` is the number of radial grid points for spherical expansion, this
+sets the interpolation length between grid points. There is really no downside to making this 
+large, but anything larger than ~2000 is overkill. This generally doesn't need to
+be changed from the defaults.
+
+
+``rnum``, ``pnum``, and ``tnum`` are the radial, azimuthal, latitudinal quadrature knots, 
+respectively, for Gram matrix. These are for computing orthogonal functions for cylindrical 
+bases. You generally want ``rnum`` to be of order ``numr`` (like 1000), ``tnum`` can be a 
+factor of 10 down from that (~100). ``pnum`` should be 1 *unless* you do not have an axisymmetric 
+mass distribution (e.g. if you are starting with an arbitrary set of particles and you want to
+build a basis from that with the most naive approach - here you would use ``pnum`` ~ 100 and let it go).
+These generally don't need to be changed from the defaults.
+
+The EJ parameters are explained in :ref: `the section on centering <centering>`.
+You only want to change these values from their defaults if you have an external perturber,
+these shouldn't be changed if you are working with with simulations of isolated systems.
+
+``ratefile`` is an expert parameter for load balancing, this file gives diagnostics about
+the different nodes/processesors on your system. EXP will produce a ``ratefile`` when running
+simulations.
+
+
+``nmax``, ``lmax``, ``mmax`` are the maximum radial order of cylindrical or spherical basis, the
+the maximum spherical harmonic order, and maximum azimuthal order of the cylindrical basis. There 
+are benchmark numbers but no hard-and-fast recommendations for these values. For simulations with
+~ one million particles in the halo, we typically use ``lmax`` = 6,  ``nmax`` = 18 in the spherical
+halo ``mmax`` = 6, ``nmax`` = 18 for the disk. This should give you all or most of the signal but 
+some coefficients will be noisy. In general, we recommend that you go slightly past what you want
+so that you get all the components and can analyse the significance of each coefficient post-facto.

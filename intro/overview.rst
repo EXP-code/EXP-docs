@@ -153,7 +153,7 @@ You've seen a simple example of using pyEXP to make coefficients from
 phase-space data using an adaptive basis made from a halo model of
 your choice. A more detailed example is provided in the 
 :ref:`How to generate coefficients from phase-space snapshots<making-coefficients>` 
-page.  This is just the surface. EXp and pyEXP provide many
+page.  This is just the surface. EXP and pyEXP provide many
 powerful features for learning about the dynamical details of your
 simulations, including:
 

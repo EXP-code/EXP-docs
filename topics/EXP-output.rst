@@ -1,4 +1,4 @@
-.. output-container:
+.. _EXP-output:
 
 How the EXP N-body code selects what and when to write data
 ===========================================================
@@ -24,15 +24,19 @@ the Doxygen generated man pages or the source code itself.
   for each step.  The file name can be specified with the `filename`
   parameter.
 
-- `outps, outpsn, outpsp, outchkpt` produce phase-space dumps. The
+- `outps, outpsn, outpsp, outpsq, outchkpt` produce phase-space dumps. The
   first method appends successive dumps to the same file.  The second
   and third methods generate an individual sequentially numbered file
   for each call.  The `outpsn` uses a native phase-space consolidation
   routine which gather all phase space at the root node before
-  writing.  The `outpsp` uses MPI-IO to write phase-space files.  This
-  will be faster if you have fast, parallel network hardware.  All of
+  writing.  The `outpsp` uses MPI-IO to write phase-space files. This
+  will be faster if you have fast, parallel network hardware. All of
   the floating data fields are written as 4-byte floats (single
-  precision).
+  precision). 
+
+- `outpsq` is the parallel version of `outpsp`, it results in ``SPL`` split
+   PSP files. This format is recommended for large phase spaces, as it can
+   be faster to output these files.
 
 - `outchkpt` is a version of `outpsp` that writes floating fields as
   8-byte floats whose primary use is restarting your simulation with
@@ -53,6 +57,11 @@ the Doxygen generated man pages or the source code itself.
   for each specified component and frequency.  This method will work
   for any component but makes the most sense for near-equilibrium
   galaxy components such as disks, bulges and halos.
+
+- `orbtrace` will output a select number of orbits to the same file, appending phase space
+   information to the end at each time step. This is helpful for quick looks, but 
+   is not meant to be science product output (i.e. one should probably not try to set 
+   `orbtrace` to the number of disk particles).
 
 
 An example

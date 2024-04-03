@@ -14,7 +14,7 @@ the vertical axis with the current :math:`L_z` axis, which we call
 :math:`J`-centering. Both may be used together.
 
 The algorithms for both centering types rely on the same logic as
-follows.  The user specifies the desired number of states for
+follows.  The user specifies the desired number of particles for
 specifying the center or orientation, called ``nEJwant``.  On the
 first call, all particles are ranked by binding energy.  The
 ``nEJwant`` values are retained and the center-of-mass and/or angular
