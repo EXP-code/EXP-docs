@@ -141,6 +141,10 @@ A typical invocation with Cuda is:
 
    $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
 
+In the example above, ``DCMAKE_INSTALL_PREFIX'' set the installation path and 
+you need to have write permissions to ``/home/user''. If not, change it to a
+directory you own, for example, ``/path/to/directory/.local''  
+
 Some installations provide an EIGEN_BASE environment variable that
 locates the install directory that contains 'include' and 'share'.
 Alternatively, replace EIGEN_BASE with that path or set EIGEN_BASE
