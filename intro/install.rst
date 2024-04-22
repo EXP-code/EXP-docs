@@ -133,17 +133,17 @@ A typical CMake build invocation without Cuda is:
 
 .. code-block:: bash
 
-   $ cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
+   $ cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=$HOME -Wno-dev ..
 
 A typical invocation with Cuda is:
 
 .. code-block:: bash
 
-   $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=/home/user -Wno-dev ..
+   $ cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_USE_STATIC_CUDA_RUNTIME=off -DENABLE_CUDA=YES -DENABLE_USER=YES -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -DCMAKE_INSTALL_PREFIX=$HOME -Wno-dev ..
 
-In the example above, ``DCMAKE_INSTALL_PREFIX'' set the installation path and 
-you need to have write permissions to ``/home/user''. If not, change it to a
-directory you own, for example, ``/path/to/directory/.local''  
+
+-DCMAKE_INSTALL_PREFIX' sets the installation path to the user's home directory.
+Feel free to change this to any directory you own, for example, /path/to/directory/.local. Alternatively, you can omit -DCMAKE_INSTALL_PREIFX to use the default /usr/local path and install EXP with system privileges (e.g. sudo).
 
 Some installations provide an EIGEN_BASE environment variable that
 locates the install directory that contains 'include' and 'share'.
