@@ -50,9 +50,9 @@ suite to get you started.
     Your first EXP example project.
 
 The ``pyEXP-examples/Tutorials/EXP`` directory contains Python notebooks that
-run simulations and analyze their output all from the notebook!  While we do not 
+run simulations and analyze their output all from the notebook.  While we do not 
 recommend this as a strategy for *production* simulations, this is a good way to 
-learn EXP and pyEXP together.
+learn EXP and pyEXP together!
 
 For a quick start up, consider using our Docker container which
 requires no compilation.  See :ref:`Exploring EXP using Docker
