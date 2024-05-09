@@ -12,16 +12,16 @@ When EXP was written, there was no common N-body format.  The
 typical structures were serial lists of each phase-space variable
 :math:`m_1, m_2, \ldots, m_N, x_1, x_2, \ldots, y_i, \ldots,`.  On the
 other hand, for the object-orientated design strategy described in
-\S\ref{sec:design}, the smallest object is the particle phase space
+:ref:`design`, the smallest object is the particle phase space
 described by :math:`m_i, \mathbf{x}_i, \mathbf{v_i}, \ldots`, for
 :math:`i=1,\ldots, N`.  Similarly, each distinct astronomical component
-(think \emph{stellar disk}, \emph{dark-matter halo}, etc.) is
+(think *stellar disk*, *dark-matter halo*, etc.) is
 described by a group of phase-space particle along with any geometric
 or physical parameters common the the component.  That is, an
 object-oriented code motivates a phase-space description which not
 only contains the phase-space elements but the associated methods for
 computing the gravitational field together with all information
-required to reproduce the fields, together along with any common
+required to reproduce the fields, along with any common
 properties of all components together, such as the current time.
 
 The result was the EXP phase-space protocol (PSP).  This

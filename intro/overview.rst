@@ -54,7 +54,9 @@ A simple pyEXP illustration
 We anticipate that most users will be interested in using pyEXP in
 their N-body analysis workflow.  In order to show you what pyEXP
 brings to the table, we'll walk you through an example of a simulation
-analysis.
+analysis. Here, we assume that you have phase-space data for a halo
+at a given time from some simulation and that you  
+want to compute its coefficients.
 
 Here's the code for computing coefficients::
 
@@ -118,17 +120,21 @@ The script ``make_coefs.py`` begins by defining a spherical basis to
 represent your halo.  The configuration is specified by YAML schema
 called ``config``.  This file defines the type of basis and parameters
 needed for basis construction, including a file describing the density
-and potential model for your basis.
+and potential model for your basis. More detailed information on YAML
+and config parameters is available in the :ref:`What is YAML?<yamlconfig>`
+and :ref:`How to visualize the BFE bases used to make your coefficients<visualizing-bases>`
+pages.
 
 pyEXP is then ready to make the coefficients from your phase-space
 data.  This example assumes that the mass and positions of your
-particles are in columns 1, 2, 3, 4 of the file.  In most cases, you
+particles are in columns 1, 2, 3, 4 of the file and that the positions
+are in Cartesian coordinates.  In most cases, you
 will use your standard phase-space pipeline for any necessary
 reprocessing such as centering and other coordinate transformations.
 
 The coefficients are then computed by the newly made basis from this
 data in the ``basis.createFromArray()`` call.  The coefficients are
-then written to an HDF5 file safe keeping and installed in the
+then written to an HDF5 file for safe keeping and installed in the
 ``basis``.   The ``basis`` can be evaluated to provide visualizations
 of the field values implied by these coefficients.
 
@@ -136,7 +142,7 @@ of the field values implied by these coefficients.
 
    The class ``Basis`` class interacts with a ``ParticleReader`` class
    that can read most standard HDF5-type phase-space and Tipsy files
-   directly without have to make a data table.
+   directly without having to make a data table.
 
 .. _topics-whatelse:
 
@@ -145,7 +151,9 @@ What else?
 
 You've seen a simple example of using pyEXP to make coefficients from
 phase-space data using an adaptive basis made from a halo model of
-your choice.  This is just the surface. EXp and pyEXP provide many
+your choice. A more detailed example is provided in the 
+:ref:`How to generate coefficients from phase-space snapshots<making-coefficients>` 
+page.  This is just the surface. EXP and pyEXP provide many
 powerful features for learning about the dynamical details of your
 simulations, including:
 

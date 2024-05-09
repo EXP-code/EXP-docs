@@ -22,7 +22,7 @@ Like many research codes, this code has many flags and parameters that
 allow detailed control of methods.  Many of these were used for
 testing the implemenation and algorithm and do not need adjustment.  I
 have endeavored to provide sane values as defaults, but some
-combinations are likely to fail on occasion and require study the
+combinations are likely to fail on occasion and require study of the
 source code to understand.  The class documentation often provides
 details on specific parameters.  If you get stuck or confused, I will
 do my best to help and will add to the documentation in response to
@@ -37,7 +37,7 @@ Each example contains all of the body files, configuration files and
 model files necessary to run the simulation.  All of these can be run
 on a laptop or workstation.
 
-1. ``Halo``: a spherical halo with 10000 bodies
+1. ``Halo``: a spherical halo with 10000 particles
 
 2. ``DiskHalo``: a disk and halo phase space, each component has 10000
    particles, and a cylindrial disk expansion up to :math:`m=1`.
@@ -47,10 +47,10 @@ on a laptop or workstation.
 
 4. ``Binary``: is a simple simulation two-body binary system.  While
    mostly a trivial test and example of calling EXP, it is a sanity
-   check and possibly useful for experimenting integration tuning
+   check and possibly useful for experimenting with integration and tuning
    parameters. 
 
-To run any or all of these, we recommend copy the directory to some
+To run any or all of these, we recommend that you copy the directory to some
 local scratch location.  Then adjust the `outdir` and `ldlibdir`
 parameters in the YAML `Global` stanza to reflect the location for
 data output and the `user` directory of the library install location.

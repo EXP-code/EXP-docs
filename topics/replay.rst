@@ -24,7 +24,7 @@ parameter options.  For example:
        parameters : {..., playback: outcoef.xxxx.h5}
 
 where ``outcoef.dark.run0.h5`` is the coefficient file for
-simulation.  You can playback one coefficient file with the others
+simulation.  You can playback one component (specifying one coefficient file) with the others
 self-consistent or playback all components by specifying ``playback``
 for every component.  
 

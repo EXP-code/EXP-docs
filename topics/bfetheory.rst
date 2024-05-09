@@ -43,7 +43,7 @@ of the pair is the Kronecker delta.  The BFE method constructs a
 biorthongal system :math:`d_j(\mathbf{x}), p_k(\mathbf{c})` such that
 :math:`\nabla^2 p_i = 4\pi G d_i` and :math:`\int d\mathbf{x}\,
 d_j(\mathbf{x}) p_k(\mathbf{x}) = 4\pi G\delta_{jk}.` Let the density
-of our particle distribution of :math`N` points with masses
+of our particle distribution of :math:`N` points with masses
 :math:`m_i` described by
 
 .. math::
@@ -78,7 +78,7 @@ phase of each function. In addition, the time-dependence of the
 coefficients themselves provides another dimension for studying
 evolution that may not clearly manifest itself in analytic studies
 (see :ref:`mSSA <mssa>` and [weinberg21]_). Using harmonic
-function analysis in BFE simulations, no matter what Poisson solver is
+function analysis in BFE simulations -- no matter what Poisson solver -- is
 reconstruction of the potential at any time in the simulation, for any
 arbitrary combinations of particles.
 
@@ -132,7 +132,7 @@ written as:
 
 where :math:`\lambda` is a constant, and :math:`\omega(x)` is a
 weighting function. The eigenfunctions :math:`\phi_j` of the SLE form
-a complete basis set with eigenfunctions :math:`\lambda_j`, where
+a complete basis set with eigenvalues :math:`\lambda_j`, where
 :math:`j` may be truncated from the theoretically infinite
 series. When applied to the Poisson equation specifically, the
 equation separates in conic coordinate systems.  For Cartesian, the
@@ -158,7 +158,7 @@ biorthogonal basis using the SLEDGE solver [pruess_fulton93]_.
 
 The disk is more complicated.  Although one can construct a disk basis
 from the eigenfunctions of the Laplacian as in the spherical case
-\citep[e.g.][]{earn96}, the boundary conditions in cylindrical
+(e.g. [earn96]_), the boundary conditions in cylindrical
 coordinates make the basis hard to implement. To get around this, our
 solution method starts with a spherical basis with :math:`l\le36` and
 uses a singular value decomposition (SVD) to define a rotation in
@@ -188,14 +188,14 @@ coordinates.  The second equation shows the approximation for
 The covariance of the coefficient given the density :math:`\rho(R,
 z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly.  The
 covariance matrix describes which terms :math:`a_{lm}^j` contribute
-the most variance.  By diagonalizing :math:`\mbox{cov}(\mathbf{a})`,
-we may find a new basis, uncorrelated by the target density .  Because
+the most variance.  By diagonalizing :math:`\mbox{cov}(\mathbf{a}),`
+we may find a new basis, uncorrelated by the target density.  Because
 :math:`\mbox{cov}(\mathbf{a})` is symmetric and positive definite, all
 eigenvalues will be positive.  The term with the largest eigenvalue
 describes the majority of the correlated contribution, and so on for
 the second largest eigenvalue, etc.  EXP performs this diagonalization
 using the singular value decomposition (SVD) and the singular matrices
-(now mutual transposes owing to symmetry) describe an rotation of the
+(now mutual transposes owing to symmetry) describe a rotation of the
 original basis into the uncorrelated basis.
 
 The new basis functions optimally approximate the true distribution
@@ -214,20 +214,20 @@ an analytic disk density such that the lowest-order potential-density
 pair matches the initial analytic mass distribution. This choice also
 acts to reduce small-scale discreteness noise as compared to
 conditioning the basis function on the realized positions of the
-particles \citep{weinberg98}. Although there could be some other
+particles [weinberg98]_. Although there could be some other
 biases introduced by this procedure, our experience to date suggests
 that this approach provides a fair representation of the disk density
 and potential fields.
 
 We can represent the potential and density of a galaxy as a
 superposition of several basis functions. This allows us to decompose
-the galaxy based on their geometry and symmetry. For an initially
+the galaxy based on its geometry and symmetry. For an initially
 axisymmetric example, azimuthal harmonics :math:`m`, where :math:`m=0`
 is the monopole, :math:`m=1` is the dipole, :math:`m=2` is the
 quadrupole, and so on, will efficiently summarize the degree and
 nature of the asymmetries. The sine and cosine terms of each azimuthal
 order give the phase angle of the harmonic that can be used to
-calculate the pattern speed.  For disks, each azimuthal harmonics
+calculate the pattern speed.  For disks, each azimuthal harmonic
 represents both the radial and vertical structure simultaneously; that
 is each basis function is a two-dimensional meridional plane multipled
 by :math:`e^{im\phi}`.  The symmetry of the input basis and the
@@ -263,7 +263,7 @@ to smaller radii. Additionally, the spacing of nodes gives an
 approximate value for the force resolution of the simulation. For
 example, the highest order :math:`m=0` radial function (:math:`n=12`)
 has a zero at :math:`R=0.2a`, or 600 pc in a MW-like
-galaxy. Additionally, the radial orders are interleaved between
+galaxy, where :math:`a` is the scale length. Additionally, the radial orders are interleaved between
 harmonic orders, such that the location of the first node,
 :math:`R^{[1st]}`, is given by
 
@@ -299,22 +299,22 @@ Final comments and caveats
 ==========================
 
 The basic expansion algorithm is described at the beginning of this
-chapter. EXP can be configured to log coefficients each step or in any
-multiple of steps (see :ref:`design` and :ref:`yamlconfig`).  The
+chapter. EXP can be configured to log coefficients at each step or in any
+multiple of steps (see :ref:`design` and :ref:`yamlconfig`). Additional 
+details about using multiple time-step levels along with the leap-frog 
+algorithm can be found in Section :ref:`multistep`. The
 coefficients for each :math:`n` order are generally complex.  The real
 and imaginary parts correspond to the cosine and sine components of
 the analogous Fourier terms :math:`A_m` and :math:`B_m`. The
 coefficients are written in sine and cosine form for easy
 interpretation.  Thus, the user may compute the phase angle for any
 basis function and use the total amplitude or modulus as an indicator
-of power.  Additional details about using multiple time-step levels
-along with the leap-frog algorithm can be found in Section
-:ref:`multistep`.
+of power.
 
 The BFE approach trades off precision and degrees-of-freedom with
 adaptability. The truncated series of basis functions intentionally
 limits the possible degrees of freedom in the gravitational field in
-order to provide a low-noise bandwidth-limited representation of the
+order to provide a low-noise, bandwidth-limited representation of the
 gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
@@ -357,6 +357,11 @@ separately.
 .. [navarro97] J. F. Navarro, C. S. Frenk, and S. D. M. White. A
 	       Universal Density Profile from Hierarchical
 	       Clustering. ApJ, 490:493–508, Dec. 1997.
+
+
+.. [weinberg98] Weinberg M. D. MNRAS, 297:101, June 1998.
+
+.. [weinberg99] M. D. Weinberg. AJ, 117:629, Jan. 1999.
 
 .. [pruess_fulton93] S. Pruess and C. T. Fulton. Mathematical Software
 		     for Sturm-Liouville Problems. ACM Transactions on

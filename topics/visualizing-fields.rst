@@ -219,7 +219,7 @@ example:
        1.6130940e-03  1.5374866e-03]]
 
 
-These could be make into images and so forth. We’ll do this in another
+These could be made into images and so forth. We’ll do this in another
 example notebook.
 
 
