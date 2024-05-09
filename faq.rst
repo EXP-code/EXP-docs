@@ -2,6 +2,28 @@
 
 .. _faq-EXP-bs-cmp:
 
+
+Are there pre-compiled versions of pyEXP and EXP?
+-------------------------------------------------
+
+Yes! We have a Docker containers for the Intel/AMD 64 and ARM64
+architectures that will run under Linux, MacOS and Windows (using
+WSL).  These will give you access to both the simulation code, EXP,
+and the Python module, pyEXP using Jupyter Notebooks and Lab without
+any additional configuration or code building.
+
+Super quick start: download `this Bash script
+<https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox>`_
+and run it.  This will download the Docker image and start a Jupyter
+notebook by default.  Use the `-t` flag for an interactive terminal.
+Use the `-h` flag for additional options.  For further details and
+links to installing Docker, see `this README
+<https://github.com/EXP-code/EXP-container/tree/main/Docker>`_.
+
+A native installation will be a bit faster and allow you to fine tune
+package versions in HPC environments. See :ref:`the Installation Guide
+<intro-install>` for details.
+
 I only want pyEXP, do I need C++ to compile EXP?
 ------------------------------------------------
 
