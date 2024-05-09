@@ -12,6 +12,7 @@ Tutorials
 
    pyEXP-tutorial
    EXP-tutorial
+   docker
 
 These tutorials are based on the companion :index:`GitHub` EXP
 repositories which you can clone to your working computer in the usual
@@ -48,3 +49,6 @@ suite to get you started.
 :doc:`EXP-tutorial`
     Your first EXP example project.
 
+For a quick start up, consider using our Docker container which
+requires no compilation.  See :ref:`Exploring EXP using Docker
+<intro-docker-notes>` for an introduction.

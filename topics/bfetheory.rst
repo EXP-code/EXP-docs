@@ -33,7 +33,7 @@ The basic BFE algorithm
 The harmonic basis-function expansion (BFE) technique has been used to
 both study and compare simulations to theoretical predictions, owing
 to its natural relationship with analytic perturbation theory
-([weinberg07a]_, [weinberg07b]_}. To use the BFE approach for $n$-body
+([weinberg07a]_, [weinberg07b]_). To use the BFE approach for $n$-body
 simulations, one uses the :index:`biorthogonal` nature of the
 appropriately chosen basis functions to solve the :index:`Poisson
 equation` using separable azimuthal harmonics at the same time as the
@@ -153,7 +153,8 @@ we may derive an infinity of radial bases.  In particular, the
 weighting function :math:`\omega` in equation :eq:`sle` may be
 selected to be an equilibrium solution of the Poisson equation.  In
 other words, the unperturbed potential would be represented by a
-single term!
+single term! In EXP, we solve the SLE to get the new
+biorthogonal basis using the SLEDGE solver [pruess_fulton93]_.
 
 The disk is more complicated.  Although one can construct a disk basis
 from the eigenfunctions of the Laplacian as in the spherical case
@@ -288,6 +289,10 @@ subspace.
 .. _twodcyl:
 .. include:: two_d_disk.rst
 
+.. _slabSL:
+.. include:: slab.rst
+
+.. _cube:
 .. include:: cube.rst
 
 Final comments and caveats
@@ -352,6 +357,10 @@ separately.
 .. [navarro97] J. F. Navarro, C. S. Frenk, and S. D. M. White. A
 	       Universal Density Profile from Hierarchical
 	       Clustering. ApJ, 490:493–508, Dec. 1997.
+
+.. [pruess_fulton93] S. Pruess and C. T. Fulton. Mathematical Software
+		     for Sturm-Liouville Problems. ACM Transactions on
+		     Mathematical Software, 19:360–376, Sept. 1993.
 
 .. [weinberg99] M. D. Weinberg. AJ, 117:629, 1999.
 
