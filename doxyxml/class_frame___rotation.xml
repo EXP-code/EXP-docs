@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_frame___rotation" kind="class" language="C++" prot="public">
+    <compoundname>Frame_Rotation</compoundname>
+    <includes refid="phase_8_h" local="no">phase.H</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Frame_Rotation::omega</definition>
+        <argsstring></argsstring>
+        <name>omega</name>
+        <qualifiedname>Frame_Rotation::omega</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="144" column="10" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" compoundref="phase_8_h" startline="151" endline="157">set_corotation</referencedby>
+        <referencedby refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" compoundref="phase_8_h" startline="145" endline="150">set_omega</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Frame_Rotation::omega2</definition>
+        <argsstring></argsstring>
+        <name>omega2</name>
+        <qualifiedname>Frame_Rotation::omega2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="144" column="24" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" compoundref="phase_8_h" startline="151" endline="157">set_corotation</referencedby>
+        <referencedby refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" compoundref="phase_8_h" startline="145" endline="150">set_omega</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Frame_Rotation::omegasq</definition>
+        <argsstring></argsstring>
+        <name>omegasq</name>
+        <qualifiedname>Frame_Rotation::omegasq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="144" column="16" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" compoundref="phase_8_h" startline="151" endline="157">set_corotation</referencedby>
+        <referencedby refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" compoundref="phase_8_h" startline="145" endline="150">set_omega</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Frame_Rotation::set_corotation</definition>
+        <argsstring>(double rc)</argsstring>
+        <name>set_corotation</name>
+        <qualifiedname>Frame_Rotation::set_corotation</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>rc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="151" column="8" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="151" bodyend="157"/>
+        <references refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" compoundref="phase_8_h" startline="144">omega</references>
+        <references refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" compoundref="phase_8_h" startline="144">omega2</references>
+        <references refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" compoundref="phase_8_h" startline="144">omegasq</references>
+        <references refid="phase_8_h_1aa7e32e3c67df0b9093a055eccd20062a">v_circ</references>
+      </memberdef>
+      <memberdef kind="function" id="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Frame_Rotation::set_omega</definition>
+        <argsstring>(double w)</argsstring>
+        <name>set_omega</name>
+        <qualifiedname>Frame_Rotation::set_omega</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="145" column="8" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="145" bodyend="150"/>
+        <references refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" compoundref="phase_8_h" startline="144">omega</references>
+        <references refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" compoundref="phase_8_h" startline="144">omega2</references>
+        <references refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" compoundref="phase_8_h" startline="144">omegasq</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/phase.H" line="141" column="1" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="142" bodyend="158"/>
+    <listofallmembers>
+      <member refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" prot="public" virt="non-virtual"><scope>Frame_Rotation</scope><name>omega</name></member>
+      <member refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" prot="public" virt="non-virtual"><scope>Frame_Rotation</scope><name>omega2</name></member>
+      <member refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" prot="public" virt="non-virtual"><scope>Frame_Rotation</scope><name>omegasq</name></member>
+      <member refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" prot="public" virt="non-virtual"><scope>Frame_Rotation</scope><name>set_corotation</name></member>
+      <member refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" prot="public" virt="non-virtual"><scope>Frame_Rotation</scope><name>set_omega</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

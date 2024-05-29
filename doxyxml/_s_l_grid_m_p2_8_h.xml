@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_s_l_grid_m_p2_8_h" kind="file" language="C++">
+    <compoundname>SLGridMP2.H</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">mpi.h</includes>
+    <includes refid="localmpi_8_h" local="no">localmpi.H</includes>
+    <includes local="no">config_exp.h</includes>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <includes refid="sltable_m_p2_8_h" local="no">sltableMP2.H</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes refid="libvars_8_h" local="no">libvars.H</includes>
+    <includedby refid="_emp_cyl_s_l_8_h" local="no">/home/weinberg/Projects/EXP/include/EmpCylSL.H</includedby>
+    <includedby refid="sphere_s_l_8_h" local="no">/home/weinberg/Projects/EXP/include/sphereSL.H</includedby>
+    <includedby refid="_slab_s_l_8_h" local="no">/home/weinberg/Projects/EXP/src/SlabSL.H</includedby>
+    <includedby refid="_sphere_8_h" local="no">/home/weinberg/Projects/EXP/src/Sphere.H</includedby>
+    <includedby refid="_two_center_8_h" local="no">/home/weinberg/Projects/EXP/src/TwoCenter.H</includedby>
+    <includedby refid="_sph_s_l_8_h" local="no">/home/weinberg/Projects/EXP/utils/Analysis/SphSL.H</includedby>
+    <includedby refid="_spherical_s_l_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/SphericalSL.H</includedby>
+    <incdepgraph>
+      <node id="25">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="9">
+        <label>config_exp.h</label>
+      </node>
+      <node id="23">
+        <label>cstdlib</label>
+      </node>
+      <node id="16">
+        <label>deque</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="20">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iomanip</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+      </node>
+      <node id="12">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>mpi.h</label>
+      </node>
+      <node id="13">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="27">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/include/DiskModels.H</label>
+        <link refid="_disk_models_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/weinberg/Projects/EXP/include/sphereSL.H</label>
+        <link refid="sphere_s_l_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="10">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="14">
+        <label>/home/weinberg/Projects/EXP/src/SlabSL.H</label>
+        <link refid="_slab_s_l_8_h"/>
+      </node>
+      <node id="15">
+        <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
+        <link refid="_sphere_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/weinberg/Projects/EXP/utils/Analysis/SphSL.H</label>
+        <link refid="_sph_s_l_8_h"/>
+      </node>
+      <node id="11">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H</label>
+        <link refid="_cyl_disk_8_h"/>
+      </node>
+      <node id="18">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2dHalo.H</label>
+        <link refid="_disk2d_halo_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</label>
+        <link refid="_disk_eval_8_h"/>
+      </node>
+      <node id="12">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H</label>
+        <link refid="_disk_halo_8_h"/>
+      </node>
+      <node id="17">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/SphericalSL.H</label>
+        <link refid="_spherical_s_l_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_l_grid_slab_1_1_coord_map" prot="private">SLGridSlab::CoordMap</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_linear_map" prot="private">SLGridSlab::LinearMap</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_sech_map" prot="private">SLGridSlab::SechMap</innerclass>
+    <innerclass refid="class_slab_model" prot="public">SlabModel</innerclass>
+    <innerclass refid="class_s_l_grid_slab" prot="public">SLGridSlab</innerclass>
+    <innerclass refid="class_s_l_grid_sph" prot="public">SLGridSph</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_tanh_map" prot="private">SLGridSlab::TanhMap</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SLGridMP_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SLGridMP_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="localmpi_8_h" kindref="compound">localmpi.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="massmodel_8_h" kindref="compound">massmodel.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sltable_m_p2_8_h" kindref="compound">sltableMP2.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libvars_8_h" kindref="compound">libvars.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">__EXP__;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaUtil.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaMappingConstants.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_s_l_grid_sph" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_sph" kindref="compound">SLGridSph</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="class_s_l_grid_sph_1a98f33cee4a3a93be7209e4b26f16b0d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a98f33cee4a3a93be7209e4b26f16b0d3" kindref="member">lmax</ref>,<sp/><ref refid="class_s_l_grid_sph_1a821c02701e9a8e31b47af2d3eccf27b8" kindref="member">nmax</ref>,<sp/><ref refid="class_s_l_grid_sph_1a360e31f364063db2236bb554a7b49939" kindref="member">numr</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_s_l_grid_sph_1a04985be5f03154610e1936eb535a0ec4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aae736cf4583b1f351dccf33cfb2760c8" kindref="member">rmin</ref>,<sp/><ref refid="class_s_l_grid_sph_1a04985be5f03154610e1936eb535a0ec4" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_s_l_grid_sph_1a3648c40afe4fa6c3771327496f7e7378" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a3648c40afe4fa6c3771327496f7e7378" kindref="member">cmap</ref>,<sp/><ref refid="class_s_l_grid_sph_1acd74b97ab84a983a9a32b9fc87aea8e7" kindref="member">diverge</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_s_l_grid_sph_1a187de697240f6e2ebf0c5fe89eda6deb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a139f50426e685e271c7fac4dc2e6165a" kindref="member">rmap</ref>,<sp/><ref refid="class_s_l_grid_sph_1a187de697240f6e2ebf0c5fe89eda6deb" kindref="member">dfac</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_s_l_grid_sph_1a9d95ca862e68606aa3ae5dbc11a15511" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a3011eca1c0c798506f69ae81d5d74e22" kindref="member">xmin</ref>,<sp/><ref refid="class_s_l_grid_sph_1a3ea5affe28f119b873476f7546f6e21f" kindref="member">xmax</ref>,<sp/><ref refid="class_s_l_grid_sph_1a9d95ca862e68606aa3ae5dbc11a15511" kindref="member">dxi</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_s_l_grid_sph_1ae84ca6d8e6621023939681b7dad5e769" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_sph_1ae84ca6d8e6621023939681b7dad5e769" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_s_l_grid_sph_1a13cdd52f3df7160a06e49fbb92c90d33" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_sph_1a13cdd52f3df7160a06e49fbb92c90d33" kindref="member">xi</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_s_l_grid_sph_1a2ac57c8cff2acf0552982fd814489b96" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_sph_1a2ac57c8cff2acf0552982fd814489b96" kindref="member">p0</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_s_l_grid_sph_1a6b1dfc6e83f3f9181275a91013b6d2c2" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_sph_1a6b1dfc6e83f3f9181275a91013b6d2c2" kindref="member">d0</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>shared<sp/>pointers<sp/>to<sp/>avoid<sp/>copying<sp/>and<sp/>memory<sp/>leaks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_s_l_grid_sph_1a2cd7f22c9725b46cc111468c8cc0e54b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_sph_1a2cd7f22c9725b46cc111468c8cc0e54b" kindref="member">table_ptr_1D</ref><sp/>=<sp/>std::shared_ptr&lt;TableSph[]&gt;;</highlight></codeline>
+<codeline lineno="48" refid="class_s_l_grid_sph_1af9ef477ea505753f1186beb8985c92fc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_sph_1a2cd7f22c9725b46cc111468c8cc0e54b" kindref="member">table_ptr_1D</ref><sp/><ref refid="class_s_l_grid_sph_1af9ef477ea505753f1186beb8985c92fc" kindref="member">table</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_s_l_grid_sph_1ae86ad2c7a2f0aaca24c340654fe7905f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ae86ad2c7a2f0aaca24c340654fe7905f" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LMAX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NMAX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NUMR,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMIN,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMAX,<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CACHE,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CMAP,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMAP);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_s_l_grid_sph_1a53064ba83592997af7ef9db2b4c3a168" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a53064ba83592997af7ef9db2b4c3a168" kindref="member">init_table</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55" refid="class_s_l_grid_sph_1adc69631b7180c1696cfa4889a866ffcb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1adc69631b7180c1696cfa4889a866ffcb" kindref="member">compute_table</ref>(<ref refid="class_table_sph" kindref="compound">TableSph</ref>*<sp/><ref refid="class_s_l_grid_sph_1af9ef477ea505753f1186beb8985c92fc" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L);</highlight></codeline>
+<codeline lineno="56" refid="class_s_l_grid_sph_1ad1a0965f57c08b748f27ac6edf9963ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ad1a0965f57c08b748f27ac6edf9963ff" kindref="member">compute_table_worker</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Local<sp/>MPI<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_s_l_grid_sph_1a5ccb33849b3ad7c1b3b9e0f3b543749e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a5ccb33849b3ad7c1b3b9e0f3b543749e" kindref="member">mpi_setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61" refid="class_s_l_grid_sph_1a44b73c659f6150712bedd4c65bd73ad9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a44b73c659f6150712bedd4c65bd73ad9" kindref="member">mpi_unpack_table</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62" refid="class_s_l_grid_sph_1a77fa9c94eee0db659571fb651d648cfd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_sph_1a77fa9c94eee0db659571fb651d648cfd" kindref="member">mpi_pack_table</ref>(<ref refid="class_table_sph" kindref="compound">TableSph</ref>*<sp/><ref refid="class_s_l_grid_sph_1af9ef477ea505753f1186beb8985c92fc" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_s_l_grid_sph_1a91105146d8a0da9dd88ca1ef3cbfbba4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a91105146d8a0da9dd88ca1ef3cbfbba4" kindref="member">mpi_myid</ref>,<sp/><ref refid="class_s_l_grid_sph_1a2ce45d787ce5d7d38b45b758ff1d2ac8" kindref="member">mpi_numprocs</ref>;</highlight></codeline>
+<codeline lineno="65" refid="class_s_l_grid_sph_1a1d02e85ec936ec5bfb3a53aee3fbbf8e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a1d02e85ec936ec5bfb3a53aee3fbbf8e" kindref="member">mpi_bufsz</ref>;</highlight></codeline>
+<codeline lineno="66" refid="class_s_l_grid_sph_1a02f9febe228b8ab460b308aa8c5f3b33" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;char<sp/>[]&gt;<sp/><ref refid="class_s_l_grid_sph_1a02f9febe228b8ab460b308aa8c5f3b33" kindref="member">mpi_buf</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_s_l_grid_sph_1ae31a5a0d0286e82a2897962f2be9f05f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ae31a5a0d0286e82a2897962f2be9f05f" kindref="member">bomb</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>oops);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_s_l_grid_sph_1ad8ae914daf3e01a12f79a8c0e65d71df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ad8ae914daf3e01a12f79a8c0e65d71df" kindref="member">cache</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_s_l_grid_sph_1a348a4860961f860e95289c1003fa09f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a348a4860961f860e95289c1003fa09f2" kindref="member">tbdbg</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_s_l_grid_sph_1a54572f3f82e4145cadb176a4da4dc1cd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_s_l_grid_sph_1a54572f3f82e4145cadb176a4da4dc1cd" kindref="member">default_model</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SLGridSph.model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_s_l_grid_sph_1ae699f8de2cd4982887712cc8797b2f56" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_s_l_grid_sph_1ae699f8de2cd4982887712cc8797b2f56" kindref="member">default_cache</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;.slgrid_sph_cache&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_s_l_grid_sph_1a7936821e8dd19b7806d574a74ce3fdcc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_s_l_grid_sph_1a7936821e8dd19b7806d574a74ce3fdcc" kindref="member">model_file_name</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_s_l_grid_sph_1a9989c0fc0f39b8834319582435aacb5a" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_s_l_grid_sph_1a9989c0fc0f39b8834319582435aacb5a" kindref="member">sph_cache_name</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_s_l_grid_sph_1aac80af79ab59895fb9e889270408da3a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aac80af79ab59895fb9e889270408da3a" kindref="member">WriteH5Cache</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_s_l_grid_sph_1a8129e8ca1aecf9408f58d4f612524f4b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a8129e8ca1aecf9408f58d4f612524f4b" kindref="member">ReadH5Cache</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_s_l_grid_sph_1ae482fb3249a70db4b09bb599fd8e2d14" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_s_l_grid_sph_1ae482fb3249a70db4b09bb599fd8e2d14" kindref="member">Version</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_s_l_grid_sph_1a88680088d03b1513cd6b41d7fde37fed" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a88680088d03b1513cd6b41d7fde37fed" kindref="member">mpi</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="class_s_l_grid_sph_1a79f8158e72bc4b09de2ab9d52274eb2e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_sph_1a79f8158e72bc4b09de2ab9d52274eb2e" kindref="member">SLGridSph</ref>(std::shared_ptr&lt;SphericalModelTable&gt;<sp/>mod,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a98f33cee4a3a93be7209e4b26f16b0d3" kindref="member">lmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a821c02701e9a8e31b47af2d3eccf27b8" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a360e31f364063db2236bb554a7b49939" kindref="member">numr</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aae736cf4583b1f351dccf33cfb2760c8" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a04985be5f03154610e1936eb535a0ec4" kindref="member">rmax</ref>,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ad8ae914daf3e01a12f79a8c0e65d71df" kindref="member">cache</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Cmap,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMAP,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>cachename=</highlight><highlight class="stringliteral">&quot;.slgrid_sph_cache&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="class_s_l_grid_sph_1acd989ab899fd4a3cae0842a7b645506e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_sph_1acd989ab899fd4a3cae0842a7b645506e" kindref="member">SLGridSph</ref>(std::string<sp/>modelname,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a98f33cee4a3a93be7209e4b26f16b0d3" kindref="member">lmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a821c02701e9a8e31b47af2d3eccf27b8" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a360e31f364063db2236bb554a7b49939" kindref="member">numr</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aae736cf4583b1f351dccf33cfb2760c8" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a04985be5f03154610e1936eb535a0ec4" kindref="member">rmax</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ad8ae914daf3e01a12f79a8c0e65d71df" kindref="member">cache</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Cmap,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMAP,<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DIVERGE,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DFAC,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>cachename=</highlight><highlight class="stringliteral">&quot;.slgrid_sph_cache&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_s_l_grid_sph_1a0447ca0bd5ccf6f1af8f34198a312ca1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a0447ca0bd5ccf6f1af8f34198a312ca1" kindref="member">~SLGridSph</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_s_l_grid_sph_1a29d45462f080477ea497df50d5a25f9f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>YAML::Node<sp/><ref refid="class_s_l_grid_sph_1a29d45462f080477ea497df50d5a25f9f" kindref="member">getHeader</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>cachefile);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_s_l_grid_sph_1a9aebc866a79fdb771d76c0c843649b32" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a9aebc866a79fdb771d76c0c843649b32" kindref="member">eigenvalue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1af9ef477ea505753f1186beb8985c92fc" kindref="member">table</ref>[l].ev[n];}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_s_l_grid_sph_1abd551a1660dd7f05b08729c2f177c9a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1abd551a1660dd7f05b08729c2f177c9a5" kindref="member">r_to_xi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ae84ca6d8e6621023939681b7dad5e769" kindref="member">r</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_s_l_grid_sph_1a6faeba3e71cfc3f8995fbebdedce438f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a6faeba3e71cfc3f8995fbebdedce438f" kindref="member">xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="class_s_l_grid_sph_1a3453326410450ada459541e2fa27653a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a3453326410450ada459541e2fa27653a" kindref="member">d_xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="class_s_l_grid_sph_1a9aae31bb1274acf5d3f75f4e55b9bc47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a9aae31bb1274acf5d3f75f4e55b9bc47" kindref="member">get_pot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_s_l_grid_sph_1ae78ffa77c2d3a979c6b495e86bcaea08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ae78ffa77c2d3a979c6b495e86bcaea08" kindref="member">get_dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="class_s_l_grid_sph_1a7f52a541599980c1b6b1510c031ba94f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a7f52a541599980c1b6b1510c031ba94f" kindref="member">get_force</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_s_l_grid_sph_1a3c349d263e7fc0a82e11fcdebd5bf727" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a3c349d263e7fc0a82e11fcdebd5bf727" kindref="member">get_pot</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::string&gt;</highlight></codeline>
+<codeline lineno="160" refid="class_s_l_grid_sph_1a0a2d442ec88e96e720b03d2d74626232" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_sph_1a0a2d442ec88e96e720b03d2d74626232" kindref="member">cacheInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>cachefile,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="class_s_l_grid_sph_1a6ee9d9a7235b0729623c24a3a36a3ec3" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_s_l_grid_sph_1a6ee9d9a7235b0729623c24a3a36a3ec3" kindref="member">orthoCheck</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>knots=40);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" kindref="member">initialize_cuda</ref>(std::vector&lt;cudaArray_t&gt;&amp;<sp/>cuArray,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust::host_vector&lt;cudaTextureObject_t&gt;&amp;<sp/>tex);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>cudaMappingConstants<sp/>getCudaMappingConstants()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaMappingConstants<sp/>ret;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.rscale<sp/>=<sp/><ref refid="class_s_l_grid_sph_1a139f50426e685e271c7fac4dc2e6165a" kindref="member">rmap</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.hscale<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.xmin<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_sph_1a3011eca1c0c798506f69ae81d5d74e22" kindref="member">xmin</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.xmax<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_sph_1a3ea5affe28f119b873476f7546f6e21f" kindref="member">xmax</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.ymin<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.ymax<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numr<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_sph_1a360e31f364063db2236bb554a7b49939" kindref="member">numr</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numx<sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numy<sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.dxi<sp/><sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_sph_1a9d95ca862e68606aa3ae5dbc11a15511" kindref="member">dxi</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.dyi<sp/><sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.cmapR<sp/><sp/>=<sp/><ref refid="class_s_l_grid_sph_1a3648c40afe4fa6c3771327496f7e7378" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="class_s_l_grid_sph_1ac0a42f88f11bcf873f22f872713d4403" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1ac0a42f88f11bcf873f22f872713d4403" kindref="member">get_dens</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="196" refid="class_s_l_grid_sph_1a8b7e66262789b194108d9201658a0d18" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a8b7e66262789b194108d9201658a0d18" kindref="member">get_force</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="class_s_l_grid_sph_1aa7c51d6c6cb365ccec7a593c3fda299b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aa7c51d6c6cb365ccec7a593c3fda299b" kindref="member">get_pot</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="class_s_l_grid_sph_1afbf0043312e5c39d6ce2f634662e65d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1afbf0043312e5c39d6ce2f634662e65d6" kindref="member">get_dens</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_s_l_grid_sph_1a80b386ffdf810dab68fde482b5d69672" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a80b386ffdf810dab68fde482b5d69672" kindref="member">get_force</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="class_s_l_grid_sph_1a8e6d4ecf525a519593b74105fb6e6e09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a8e6d4ecf525a519593b74105fb6e6e09" kindref="member">getRmin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1aae736cf4583b1f351dccf33cfb2760c8" kindref="member">rmin</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="216" refid="class_s_l_grid_sph_1afe90870e2518f304449f805815c86432" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1afe90870e2518f304449f805815c86432" kindref="member">getRmax</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_sph_1a04985be5f03154610e1936eb535a0ec4" kindref="member">rmax</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="class_slab_model" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_slab_model" kindref="compound">SlabModel</ref></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="227" refid="class_slab_model_1af46aec018ca87986e34255969501b979" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_slab_model_1af46aec018ca87986e34255969501b979" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="class_slab_model_1a67a16e8d5d31282974d0c3a9071c0054" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;SlabModel&gt;<sp/><ref refid="class_slab_model_1a67a16e8d5d31282974d0c3a9071c0054" kindref="member">createModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>type);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_slab_model_1a674b8108920991da09a93432c15c6fbf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_slab_model_1a674b8108920991da09a93432c15c6fbf" kindref="member">pot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="class_slab_model_1a25670aa6c64fdaf1e5b1d818398837e6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_slab_model_1a25670aa6c64fdaf1e5b1d818398837e6" kindref="member">dpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="class_slab_model_1acf84752a8838c0b2f1c02e2b395e45c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_slab_model_1acf84752a8838c0b2f1c02e2b395e45c3" kindref="member">dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="class_slab_model_1a5da645e2820ccc913eb6c0de81a6ad13" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_slab_model_1a5da645e2820ccc913eb6c0de81a6ad13" kindref="member">ID</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_slab_model_1af46aec018ca87986e34255969501b979" kindref="member">id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="class_s_l_grid_slab" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab" kindref="compound">SLGridSlab</ref></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="253" refid="class_s_l_grid_slab_1a4c4c811937afcbb1336983ef5938436c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a52a55eaff1bec7489b8e94d1adf836d7" kindref="member">numk</ref>,<sp/><ref refid="class_s_l_grid_slab_1a4c4c811937afcbb1336983ef5938436c" kindref="member">nmax</ref>,<sp/><ref refid="class_s_l_grid_slab_1ad821ab70b7b032167ae0f57f3a40c5ba" kindref="member">numz</ref>;</highlight></codeline>
+<codeline lineno="254" refid="class_s_l_grid_slab_1a1620ef679ef02a7dc88bea3b85eab1cd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a1620ef679ef02a7dc88bea3b85eab1cd" kindref="member">zmax</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="class_s_l_grid_slab_1a721d878a968cdb9098765ebd0c407c50" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aa8bd43c9df4464f8f32e658a39098905" kindref="member">xmin</ref>,<sp/><ref refid="class_s_l_grid_slab_1af409c189501a0ad14774fda616b57714" kindref="member">xmax</ref>,<sp/><ref refid="class_s_l_grid_slab_1a721d878a968cdb9098765ebd0c407c50" kindref="member">dxi</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="259" refid="class_s_l_grid_slab_1ab759f5dcb4ee1b351e305bdf3bf1a273" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_slab_1ab759f5dcb4ee1b351e305bdf3bf1a273" kindref="member">xi</ref>;</highlight></codeline>
+<codeline lineno="260" refid="class_s_l_grid_slab_1a36315e1052acde53d50dd86afed37be8" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_slab_1a36315e1052acde53d50dd86afed37be8" kindref="member">p0</ref>;</highlight></codeline>
+<codeline lineno="261" refid="class_s_l_grid_slab_1a7051a8f5d3b33a606b0f89545a1515bd" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_s_l_grid_slab_1a7051a8f5d3b33a606b0f89545a1515bd" kindref="member">d0</ref>;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>shared<sp/>pointers<sp/>to<sp/>avoid<sp/>copying<sp/>and<sp/>memory<sp/>leaks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="class_s_l_grid_slab_1ab2215c5afe2ff65f595055bfba83fdd4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1ab2215c5afe2ff65f595055bfba83fdd4" kindref="member">table_ptr_1D</ref><sp/>=<sp/>std::shared_ptr&lt;TableSlab[]&gt;;</highlight></codeline>
+<codeline lineno="265" refid="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" kindref="member">table_ptr_2D</ref><sp/>=<sp/>std::shared_ptr&lt;table_ptr_1D[]&gt;;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" kindref="member">table_ptr_2D</ref><sp/><ref refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" kindref="member">table</ref>;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="class_s_l_grid_slab_1ac9425e2e2bb0983f3fc805796fc504ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ac9425e2e2bb0983f3fc805796fc504ac" kindref="member">init_table</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="270" refid="class_s_l_grid_slab_1a2cb71c392879d0b0b2d516c9afb01e30" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a2cb71c392879d0b0b2d516c9afb01e30" kindref="member">compute_table</ref>(<ref refid="class_table_slab" kindref="compound">TableSlab</ref>*<sp/><ref refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky);</highlight></codeline>
+<codeline lineno="271" refid="class_s_l_grid_slab_1a754db729d4e23e1e95990f2393d8f783" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a754db729d4e23e1e95990f2393d8f783" kindref="member">compute_table_worker</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Local<sp/>MPI<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="class_s_l_grid_slab_1a9d8a16280b58587b4d349cea7d8d4704" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a9d8a16280b58587b4d349cea7d8d4704" kindref="member">mpi_setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="276" refid="class_s_l_grid_slab_1aa7c05313c2d64d507f0a9b9db1d3be63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aa7c05313c2d64d507f0a9b9db1d3be63" kindref="member">mpi_unpack_table</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277" refid="class_s_l_grid_slab_1afca0e5d7104fa100fb846563cd571455" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_slab_1afca0e5d7104fa100fb846563cd571455" kindref="member">mpi_pack_table</ref>(<ref refid="class_table_slab" kindref="compound">TableSlab</ref>*<sp/><ref refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky);</highlight></codeline>
+<codeline lineno="278" refid="class_s_l_grid_slab_1af20736a0f97918a5ea229c6452fca9ad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1af20736a0f97918a5ea229c6452fca9ad" kindref="member">ReadH5Cache</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="279" refid="class_s_l_grid_slab_1a482af5c4664d3300b373d1bfdf7017a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a482af5c4664d3300b373d1bfdf7017a0" kindref="member">WriteH5Cache</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="class_s_l_grid_slab_1a3139827f842bca00ac61015370863654" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a3139827f842bca00ac61015370863654" kindref="member">mpi_myid</ref>,<sp/><ref refid="class_s_l_grid_slab_1ab534b8922203c5bcea6357217520868c" kindref="member">mpi_numprocs</ref>;</highlight></codeline>
+<codeline lineno="282" refid="class_s_l_grid_slab_1a3ef3dca87ffb4bbb96e254fa6155a86f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a3ef3dca87ffb4bbb96e254fa6155a86f" kindref="member">mpi_bufsz</ref>;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="class_s_l_grid_slab_1a052f43f3e37dfcf1442d63057f09580a" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;char[]&gt;<sp/><ref refid="class_s_l_grid_slab_1a052f43f3e37dfcf1442d63057f09580a" kindref="member">mpi_buf</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="class_s_l_grid_slab_1a22aad815f3b29b50d18e6c8933c26d2a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a22aad815f3b29b50d18e6c8933c26d2a" kindref="member">bomb</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>oops);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="class_s_l_grid_slab_1a767ebf4ed389cb3c6a23be4308c2cc58" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a767ebf4ed389cb3c6a23be4308c2cc58" kindref="member">tbdbg</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"></codeline>
+<codeline lineno="295" refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" kindref="member">CoordMapTypes</ref><sp/>{<ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a28b2a86d2fa2bb19260d6522d5cf45c1" kindref="member">Tanh</ref>,<sp/><ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a436d25903feb1fffdcd24470cbc321f8" kindref="member">Sech</ref>,<sp/><ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a888e6a6ba5a4141f687e45b5d4cebf09" kindref="member">Linear</ref>};</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="class_s_l_grid_slab_1_1_coord_map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="302" refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="306" refid="class_s_l_grid_slab_1_1_coord_map_1aa5bf84ec8451a510fe23993ef4f4d3cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1aa5bf84ec8451a510fe23993ef4f4d3cc" kindref="member">CoordMap</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>:<sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>(<ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="309" refid="class_s_l_grid_slab_1_1_coord_map_1a1e32fa3531c060d8b1940e57a00c3fda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a1e32fa3531c060d8b1940e57a00c3fda" kindref="member">z_to_xi</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="class_s_l_grid_slab_1_1_coord_map_1aad4b4aa9d11c2007616a12138797805c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1aad4b4aa9d11c2007616a12138797805c" kindref="member">xi_to_z</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="class_s_l_grid_slab_1_1_coord_map_1a455b7aef1988fe5d769ce5e17b2874e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a455b7aef1988fe5d769ce5e17b2874e8" kindref="member">d_xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="class_s_l_grid_slab_1_1_coord_map_1a4b74c95d6748b73f6f18f76f28f58c5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;CoordMap&gt;<sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a4b74c95d6748b73f6f18f76f28f58c5f" kindref="member">factory</ref></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" kindref="member">CoordMapTypes</ref><sp/><ref refid="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" kindref="member">type</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="class_s_l_grid_slab_1_1_tanh_map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1_1_tanh_map" kindref="compound">TanhMap</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="327" refid="class_s_l_grid_slab_1_1_tanh_map_1a709119ecbc78a4a550838dd2610e86ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_l_grid_slab_1_1_tanh_map_1a709119ecbc78a4a550838dd2610e86ff" kindref="member">TanhMap</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>:<sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref>(<ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="328" refid="class_s_l_grid_slab_1_1_tanh_map_1ae4a5220ba00756f5278a077f80833df2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_tanh_map_1ae4a5220ba00756f5278a077f80833df2" kindref="member">z_to_xi</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="329" refid="class_s_l_grid_slab_1_1_tanh_map_1a8537819ce0983fa7e9fcb84084d082de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_tanh_map_1a8537819ce0983fa7e9fcb84084d082de" kindref="member">xi_to_z</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="330" refid="class_s_l_grid_slab_1_1_tanh_map_1aacf536df13b2443871e40c9d2a89a304" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_tanh_map_1aacf536df13b2443871e40c9d2a89a304" kindref="member">d_xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334" refid="class_s_l_grid_slab_1_1_sech_map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1_1_sech_map" kindref="compound">SechMap</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="337" refid="class_s_l_grid_slab_1_1_sech_map_1ac53782f030f14535e3b00a8c1b680df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_l_grid_slab_1_1_sech_map_1ac53782f030f14535e3b00a8c1b680df8" kindref="member">SechMap</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>:<sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref>(<ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="338" refid="class_s_l_grid_slab_1_1_sech_map_1a2db5175dfdf7207d5b2efe61eaff22cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_sech_map_1a2db5175dfdf7207d5b2efe61eaff22cf" kindref="member">z_to_xi</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="339" refid="class_s_l_grid_slab_1_1_sech_map_1a77cc9f55ade022a7c3796dde30ae6641" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_sech_map_1a77cc9f55ade022a7c3796dde30ae6641" kindref="member">xi_to_z</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="340" refid="class_s_l_grid_slab_1_1_sech_map_1aef4157e125111c391081d8d474362867" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_sech_map_1aef4157e125111c391081d8d474362867" kindref="member">d_xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="class_s_l_grid_slab_1_1_linear_map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_l_grid_slab_1_1_linear_map" kindref="compound">LinearMap</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="347" refid="class_s_l_grid_slab_1_1_linear_map_1a8b481e555d5ee584bf4641b234e2ae50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_l_grid_slab_1_1_linear_map_1a8b481e555d5ee584bf4641b234e2ae50" kindref="member">LinearMap</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>:<sp/><ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref>(<ref refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" kindref="member">H</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="348" refid="class_s_l_grid_slab_1_1_linear_map_1a6984158bb10b3ee56eb60797b73ae7d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_linear_map_1a6984158bb10b3ee56eb60797b73ae7d6" kindref="member">z_to_xi</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="349" refid="class_s_l_grid_slab_1_1_linear_map_1a56cabd4b1f622fe1771fc4764af005e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_linear_map_1a56cabd4b1f622fe1771fc4764af005e3" kindref="member">xi_to_z</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="350" refid="class_s_l_grid_slab_1_1_linear_map_1aca3585409228dd04e0568d6f1658dc8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1_1_linear_map_1aca3585409228dd04e0568d6f1658dc8d" kindref="member">d_xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357" refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;CoordMap&gt;<sp/><ref refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" kindref="member">mM</ref>;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="class_s_l_grid_slab_1a1d1dca8947ac6171513804c5f44c4e3f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a1d1dca8947ac6171513804c5f44c4e3f" kindref="member">mpi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="class_s_l_grid_slab_1aa6f37f2c77794781b8d850421f47c4f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aa6f37f2c77794781b8d850421f47c4f7" kindref="member">cache</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="class_s_l_grid_slab_1a177ec61236f459a075ac41e36aa7fdc6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a177ec61236f459a075ac41e36aa7fdc6" kindref="member">H</ref>;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="class_s_l_grid_slab_1a63d69efe0f595b49c47cb0edf536c039" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a63d69efe0f595b49c47cb0edf536c039" kindref="member">L</ref>;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374" refid="class_s_l_grid_slab_1a0427cb1ee4437eaa78b1761a95c6c2df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a0427cb1ee4437eaa78b1761a95c6c2df" kindref="member">ZBEG</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="class_s_l_grid_slab_1a3ff861d4cbb4fa66ccf8b3f30424becc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a3ff861d4cbb4fa66ccf8b3f30424becc" kindref="member">ZEND</ref>;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="class_s_l_grid_slab_1a99c51a8549a6a1b203d5b8f179cf221c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_slab_1a99c51a8549a6a1b203d5b8f179cf221c" kindref="member">SLGridSlab</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a4c4c811937afcbb1336983ef5938436c" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ad821ab70b7b032167ae0f57f3a40c5ba" kindref="member">numz</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a1620ef679ef02a7dc88bea3b85eab1cd" kindref="member">zmax</ref>,</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" kindref="member">type</ref>=</highlight><highlight class="stringliteral">&quot;isothermal&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385" refid="class_s_l_grid_slab_1a436f9bfe2aaaf95e689cd68898399601" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_l_grid_slab_1a436f9bfe2aaaf95e689cd68898399601" kindref="member">~SLGridSlab</ref>();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392" refid="class_s_l_grid_slab_1acd9ce2706e9a2449ffe69197945f12e2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1acd9ce2706e9a2449ffe69197945f12e2" kindref="member">eigenvalue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" kindref="member">table</ref>[kx][ky].ev[n];}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395" refid="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" kindref="member">z_to_xi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>)<sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" kindref="member">mM</ref>-&gt;z_to_xi(<ref refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" kindref="member">z</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398" refid="class_s_l_grid_slab_1a1c73ea39ff0739ca2e37809553af8438" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a1c73ea39ff0739ca2e37809553af8438" kindref="member">xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" kindref="member">mM</ref>-&gt;xi_to_z(x);<sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401" refid="class_s_l_grid_slab_1ac9ca51c7f210c88ca3d50fe7a815864e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ac9ca51c7f210c88ca3d50fe7a815864e" kindref="member">d_xi_to_z</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" kindref="member">mM</ref>-&gt;d_xi_to_z(x);<sp/>}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404" refid="class_s_l_grid_slab_1a92d655d4c68ea145815a3aa9a3b13768" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a92d655d4c68ea145815a3aa9a3b13768" kindref="member">get_pot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407" refid="class_s_l_grid_slab_1a3c5e1b64ac43a09745c9a37a1bc65745" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a3c5e1b64ac43a09745c9a37a1bc65745" kindref="member">get_dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="class_s_l_grid_slab_1aef28a5e5a126e4d39c40063ed75b8f4c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1aef28a5e5a126e4d39c40063ed75b8f4c" kindref="member">get_force</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415" refid="class_s_l_grid_slab_1a6f44042c8f9373175855d448fa68c902" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a6f44042c8f9373175855d448fa68c902" kindref="member">get_pot</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="419" refid="class_s_l_grid_slab_1a8dda8abe537999c8bff271e7afb255ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a8dda8abe537999c8bff271e7afb255ae" kindref="member">get_dens</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="423" refid="class_s_l_grid_slab_1ab71e9c5b9a755a0b5f03ce92f0678a81" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ab71e9c5b9a755a0b5f03ce92f0678a81" kindref="member">get_force</ref>(Eigen::VectorXd&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ky,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429" refid="class_s_l_grid_slab_1a62e203e934e311f078a30ed31e4cbd02" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a62e203e934e311f078a30ed31e4cbd02" kindref="member">get_pot</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="434" refid="class_s_l_grid_slab_1ae543f10e58a1fff08906695200e53b1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1ae543f10e58a1fff08906695200e53b1a" kindref="member">get_dens</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="439" refid="class_s_l_grid_slab_1a05989512bdacd27d6025db172b8a57d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_l_grid_slab_1a05989512bdacd27d6025db172b8a57d6" kindref="member">get_force</ref>(Eigen::MatrixXd&amp;<sp/>tab,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which=1);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443" refid="class_s_l_grid_slab_1aae582c113d6266751ada0612e2658a4c" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_s_l_grid_slab_1aae582c113d6266751ada0612e2658a4c" kindref="member">orthoCheck</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>knots=40);</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" kindref="member">initialize_cuda</ref>(std::vector&lt;cudaArray_t&gt;&amp;<sp/>cuArray,</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust::host_vector&lt;cudaTextureObject_t&gt;&amp;<sp/>tex);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>cudaMappingConstants<sp/>getCudaMappingConstants()</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaMappingConstants<sp/>ret;</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.hscale<sp/>=<sp/><ref refid="class_s_l_grid_slab_1a177ec61236f459a075ac41e36aa7fdc6" kindref="member">H</ref>;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.xmin<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_slab_1aa8bd43c9df4464f8f32e658a39098905" kindref="member">xmin</ref>;</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.xmax<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_slab_1af409c189501a0ad14774fda616b57714" kindref="member">xmax</ref>;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.ymin<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.ymax<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numr<sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_slab_1ad821ab70b7b032167ae0f57f3a40c5ba" kindref="member">numz</ref>;</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numx<sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.numy<sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.dxi<sp/><sp/><sp/><sp/>=<sp/><ref refid="class_s_l_grid_slab_1a721d878a968cdb9098765ebd0c407c50" kindref="member">dxi</ref>;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.dyi<sp/><sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_SLGridMP_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H"/>
+  </compounddef>
+</doxygen>

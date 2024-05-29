@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_icont" kind="class" language="C++" prot="public">
+    <compoundname>Icont</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">C&lt; K, V, Args... &gt;</basecompoundref>
+    <includes refid="_init_container_8_h" local="no">InitContainer.H</includes>
+    <templateparamlist>
+      <param>
+        <type>template&lt; class, class, class... &gt; class</type>
+        <declname>C</declname>
+        <defname>C</defname>
+      </param>
+      <param>
+        <type>typename K</type>
+      </param>
+      <param>
+        <type>typename V</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_icont_1a95419daaf624c5690c7e6383b17a81bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>V</type>
+        <definition>virtual V Icont&lt; C, K, V, Args &gt;::Default</definition>
+        <argsstring>()</argsstring>
+        <name>Default</name>
+        <qualifiedname>Icont::Default</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default value is zero for simple arithmetic types, but may be specialized as necessary. If it fails to compile, it probably needs to be specialized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/InitContainer.H" line="52" column="13" bodyfile="/home/weinberg/Projects/EXP/include/InitContainer.H" bodystart="52" bodyend="52"/>
+        <referencedby refid="class_icont_1a65ba76160892e686d56ca9c5d005607a" compoundref="_init_container_8_h" startline="55" endline="64">Icont&lt; C, K, V, Args &gt;::operator[]</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_icont_1a65ba76160892e686d56ca9c5d005607a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V &amp;</type>
+        <definition>V &amp; Icont&lt; C, K, V, Args &gt;::operator[]</definition>
+        <argsstring>(const K &amp;key)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Icont::operator[]</qualifiedname>
+        <param>
+          <type>const K &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/InitContainer.H" line="55" column="5" bodyfile="/home/weinberg/Projects/EXP/include/InitContainer.H" bodystart="55" bodyend="64"/>
+        <references refid="class_icont_1a95419daaf624c5690c7e6383b17a81bb" compoundref="_init_container_8_h" startline="52" endline="52">Icont&lt; C, K, V, Args &gt;::Default</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This does the same thing as the non-invasive templates above using inheritance to wrap the container </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>C&lt; K, V, Args... &gt;</label>
+      </node>
+      <node id="1">
+        <label>Icont&lt; C, K, V, Args &gt;</label>
+        <link refid="class_icont"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>C&lt; K, V, Args... &gt;</label>
+      </node>
+      <node id="1">
+        <label>Icont&lt; C, K, V, Args &gt;</label>
+        <link refid="class_icont"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/InitContainer.H" line="46" column="1" bodyfile="/home/weinberg/Projects/EXP/include/InitContainer.H" bodystart="47" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_icont_1a95419daaf624c5690c7e6383b17a81bb" prot="public" virt="virtual"><scope>Icont</scope><name>Default</name></member>
+      <member refid="class_icont_1a65ba76160892e686d56ca9c5d005607a" prot="public" virt="non-virtual"><scope>Icont</scope><name>operator[]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

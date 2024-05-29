@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_cspline" kind="class" language="C++" prot="public">
+    <compoundname>Cspline</compoundname>
+    <includes refid="_cspline_8_h" local="no">Cspline.H</includes>
+    <innerclass refid="class_cspline_1_1_element" prot="protected">Cspline::Element</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename X</type>
+      </param>
+      <param>
+        <type>typename Y</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_cspline_1a3c46eab83a7860156a3c88e9a6066203" prot="protected" static="no">
+        <type><ref refid="class_cspline_1_1_element" kindref="compound">Element</ref></type>
+        <definition>typedef Element Cspline&lt; X, Y &gt;::element_type</definition>
+        <argsstring></argsstring>
+        <name>element_type</name>
+        <qualifiedname>Cspline::element_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="158" column="19" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_cspline_1a3c46eab83a7860156a3c88e9a6066203" kindref="member">element_type</ref> &gt;</type>
+        <definition>std::vector&lt;element_type&gt; Cspline&lt; X, Y &gt;::elems</definition>
+        <argsstring></argsstring>
+        <name>elems</name>
+        <qualifiedname>Cspline::elems</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="159" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_cspline_1ad6fa4d810f545fe1967399d20eceb378" compoundref="_cspline_8_h" startline="22" endline="68">Cspline&lt; X, Y &gt;::Cspline</referencedby>
+        <referencedby refid="class_cspline_1ae38e1c7b2692662c18b26164b17fa475" compoundref="_cspline_8_h" startline="100" endline="118">Cspline&lt; X, Y &gt;::interpolate</referencedby>
+        <referencedby refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" compoundref="_cspline_8_h" startline="80" endline="91">Cspline&lt; X, Y &gt;::interpolate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cspline_1ac98f7297092af1eb9d4909c171bdcec2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Cspline&lt; X, Y &gt;::Cspline</definition>
+        <argsstring>()</argsstring>
+        <name>Cspline</name>
+        <qualifiedname>Cspline::Cspline</qualifiedname>
+        <briefdescription>
+<para>Null constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="19" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1ad6fa4d810f545fe1967399d20eceb378" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Cspline&lt; X, Y &gt;::Cspline</definition>
+        <argsstring>(const std::vector&lt; X &gt; &amp;x, const std::vector&lt; Y &gt; &amp;y)</argsstring>
+        <name>Cspline</name>
+        <qualifiedname>Cspline::Cspline</qualifiedname>
+        <param>
+          <type>const std::vector&lt; X &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; Y &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for spline with x and y vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="22" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="22" bodyend="68"/>
+        <references refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" compoundref="_cspline_8_h" startline="159">Cspline&lt; X, Y &gt;::elems</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1ae38e1c7b2692662c18b26164b17fa475" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; Y &gt;</type>
+        <definition>std::vector&lt; Y &gt; Cspline&lt; X, Y &gt;::interpolate</definition>
+        <argsstring>(const std::vector&lt; X &gt; &amp;xx) const</argsstring>
+        <name>interpolate</name>
+        <qualifiedname>Cspline::interpolate</qualifiedname>
+        <param>
+          <type>const std::vector&lt; X &gt; &amp;</type>
+          <declname>xx</declname>
+        </param>
+        <briefdescription>
+<para>Evaluation function for vector input, assuming xx is sorted ascending. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="100" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="100" bodyend="118"/>
+        <references refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" compoundref="_cspline_8_h" startline="159">Cspline&lt; X, Y &gt;::elems</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1ad8a518270aa62168c4951fd25db97459" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Y</type>
+        <definition>Y Cspline&lt; X, Y &gt;::interpolate</definition>
+        <argsstring>(const X &amp;x) const</argsstring>
+        <name>interpolate</name>
+        <qualifiedname>Cspline::interpolate</qualifiedname>
+        <param>
+          <type>const X &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluation function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="80" column="5" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="80" bodyend="91"/>
+        <references refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" compoundref="_cspline_8_h" startline="159">Cspline&lt; X, Y &gt;::elems</references>
+        <referencedby refid="class_cspline_1a4e88fff38b950858c598092fa7785866" compoundref="_cspline_8_h" startline="94" endline="97">Cspline&lt; X, Y &gt;::operator()</referencedby>
+        <referencedby refid="class_cspline_1a448c189bb54e7a1eaf56d3947456776e" compoundref="_cspline_8_h" startline="74" endline="77">Cspline&lt; X, Y &gt;::operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1a4e88fff38b950858c598092fa7785866" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; Y &gt;</type>
+        <definition>std::vector&lt; Y &gt; Cspline&lt; X, Y &gt;::operator()</definition>
+        <argsstring>(const std::vector&lt; X &gt; &amp;xx) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Cspline::operator()</qualifiedname>
+        <param>
+          <type>const std::vector&lt; X &gt; &amp;</type>
+          <declname>xx</declname>
+        </param>
+        <briefdescription>
+<para>Evaluation operator for vector input, assuming xx is sorted ascending. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="94" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="94" bodyend="97"/>
+        <references refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" compoundref="_cspline_8_h" startline="80" endline="91">Cspline&lt; X, Y &gt;::interpolate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1a448c189bb54e7a1eaf56d3947456776e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Y</type>
+        <definition>Y Cspline&lt; X, Y &gt;::operator()</definition>
+        <argsstring>(const X &amp;x) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Cspline::operator()</qualifiedname>
+        <param>
+          <type>const X &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluation opterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="74" column="5" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="74" bodyend="77"/>
+        <references refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" compoundref="_cspline_8_h" startline="80" endline="91">Cspline&lt; X, Y &gt;::interpolate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cspline_1a4b826231286c043394b9977affcf8fbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Cspline&lt; X, Y &gt;::~Cspline</definition>
+        <argsstring>()</argsstring>
+        <name>~Cspline</name>
+        <qualifiedname>Cspline::~Cspline</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="71" column="11" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="71" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A cubic spline evaluator templated on data types X, Y. Types X and Y must have operator +, -, *, Y must have defined a constructor that takes a scalar. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/Cspline.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/Cspline.H" bodystart="15" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_cspline_1ac98f7297092af1eb9d4909c171bdcec2" prot="public" virt="non-virtual"><scope>Cspline</scope><name>Cspline</name></member>
+      <member refid="class_cspline_1ad6fa4d810f545fe1967399d20eceb378" prot="public" virt="non-virtual"><scope>Cspline</scope><name>Cspline</name></member>
+      <member refid="class_cspline_1a3c46eab83a7860156a3c88e9a6066203" prot="protected" virt="non-virtual"><scope>Cspline</scope><name>element_type</name></member>
+      <member refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" prot="protected" virt="non-virtual"><scope>Cspline</scope><name>elems</name></member>
+      <member refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" prot="public" virt="non-virtual"><scope>Cspline</scope><name>interpolate</name></member>
+      <member refid="class_cspline_1ae38e1c7b2692662c18b26164b17fa475" prot="public" virt="non-virtual"><scope>Cspline</scope><name>interpolate</name></member>
+      <member refid="class_cspline_1a448c189bb54e7a1eaf56d3947456776e" prot="public" virt="non-virtual"><scope>Cspline</scope><name>operator()</name></member>
+      <member refid="class_cspline_1a4e88fff38b950858c598092fa7785866" prot="public" virt="non-virtual"><scope>Cspline</scope><name>operator()</name></member>
+      <member refid="class_cspline_1a4b826231286c043394b9977affcf8fbf" prot="public" virt="virtual"><scope>Cspline</scope><name>~Cspline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

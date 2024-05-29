@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_grid" kind="class" language="C++" prot="public">
+    <compoundname>DataGrid</compoundname>
+    <basecompoundref refid="class_three_d_grid" prot="public" virt="non-virtual">ThreeDGrid</basecompoundref>
+    <includes refid="_data_grid_8_h" local="no">DataGrid.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" prot="private" static="no" mutable="no">
+        <type><ref refid="_three_d_grid_8_h_1abc218c0a19f8602e69200454c9561499" kindref="member">ThreeDGridPtr</ref></type>
+        <definition>ThreeDGridPtr DataGrid::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>DataGrid::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="27" column="17" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" compoundref="_data_grid_8_h" startline="51" endline="54">Add</referencedby>
+        <referencedby refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" compoundref="_data_grid_8_h" startline="32" endline="48">DataGrid</referencedby>
+        <referencedby refid="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" compoundref="_data_grid_8_h" startline="57" endline="60">Write</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_grid_1a01496cbad06db14c9214a675df1997e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void DataGrid::Add</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;data, const std::string &amp;name)</argsstring>
+        <name>Add</name>
+        <qualifiedname>DataGrid::Add</qualifiedname>
+        <reimplements refid="class_three_d_grid_1affe7a7b6bca0874f96c654ae34c8190a">Add</reimplements>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Add data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="51" column="8" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="51" bodyend="54"/>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DataGrid::DataGrid</definition>
+        <argsstring>(int nx, int ny, int nz, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax)</argsstring>
+        <name>DataGrid</name>
+        <qualifiedname>DataGrid::DataGrid</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ny</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nz</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zmax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="32" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="32" bodyend="48"/>
+        <references refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::nx</references>
+        <references refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::ny</references>
+        <references refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::nz</references>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+        <references refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::xmax</references>
+        <references refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::xmin</references>
+        <references refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::ymax</references>
+        <references refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::ymin</references>
+        <references refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::zmax</references>
+        <references refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::zmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void DataGrid::Write</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Write</name>
+        <qualifiedname>DataGrid::Write</qualifiedname>
+        <reimplements refid="class_three_d_grid_1a52f6cbab42f66577b8d5abd46e1de265">Write</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Write output file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="57" column="8" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="57" bodyend="60"/>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This implementation of <ref refid="class_three_d_grid" kindref="compound">ThreeDGrid</ref> instantiates at <ref refid="class_vtk_grid" kindref="compound">VtkGrid</ref> if VTK is available and <ref refid="class_table_grid" kindref="compound">TableGrid</ref> if not.</para>
+<para>This is really syntactic glue that allows one call without checking for VTK in application codes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DataGrid</label>
+        <link refid="class_data_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ThreeDGrid</label>
+        <link refid="class_three_d_grid"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DataGrid</label>
+        <link refid="class_data_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ThreeDGrid</label>
+        <link refid="class_three_d_grid"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="23" column="1" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="24" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" prot="public" virt="virtual"><scope>DataGrid</scope><name>Add</name></member>
+      <member refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" prot="public" virt="non-virtual"><scope>DataGrid</scope><name>DataGrid</name></member>
+      <member refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>nx</name></member>
+      <member refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>ny</name></member>
+      <member refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>nz</name></member>
+      <member refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" prot="private" virt="non-virtual"><scope>DataGrid</scope><name>ptr</name></member>
+      <member refid="class_three_d_grid_1a602e5d83286c984b71154d538efa97d5" prot="public" virt="non-virtual"><scope>DataGrid</scope><name>ThreeDGrid</name></member>
+      <member refid="class_three_d_grid_1aa50af21f0edbc4004e349ff140335452" prot="public" virt="non-virtual"><scope>DataGrid</scope><name>ThreeDGrid</name></member>
+      <member refid="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" prot="public" virt="virtual"><scope>DataGrid</scope><name>Write</name></member>
+      <member refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>xmax</name></member>
+      <member refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>xmin</name></member>
+      <member refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>ymax</name></member>
+      <member refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>ymin</name></member>
+      <member refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>zmax</name></member>
+      <member refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>zmin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_axi_sym_biorth" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AxiSymBiorth</compoundname>
+    <basecompoundref refid="class_biorth" prot="public" virt="non-virtual">Biorth</basecompoundref>
+    <derivedcompoundref refid="class_b_s_disk" prot="public" virt="non-virtual">BSDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_b_s_sphere" prot="public" virt="non-virtual">BSSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_biorth_grid" prot="public" virt="non-virtual">BiorthGrid</derivedcompoundref>
+    <derivedcompoundref refid="class_c_b_disk" prot="public" virt="non-virtual">CBDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_c_b_sphere" prot="public" virt="non-virtual">CBSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_h_q_sphere" prot="public" virt="non-virtual">HQSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_sphere_s_l" prot="public" virt="non-virtual">SphereSL</derivedcompoundref>
+    <includes refid="biorth_8_h" local="no">biorth.H</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_axi_sym_biorth_1ab8503e21d6282991853c921409deb150" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class BiorthWake</definition>
+        <argsstring></argsstring>
+        <name>BiorthWake</name>
+        <qualifiedname>AxiSymBiorth::BiorthWake</qualifiedname>
+        <param>
+          <type><ref refid="class_biorth_wake" kindref="compound">BiorthWake</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="46" column="14" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymBiorth::dof</definition>
+        <argsstring></argsstring>
+        <name>dof</name>
+        <qualifiedname>AxiSymBiorth::dof</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="49" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" compoundref="biorth_8_h" startline="52" endline="52">AxiSymBiorth</referencedby>
+        <referencedby refid="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" compoundref="biorth_8_h" startline="72" endline="72">get_dof</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AxiSymBiorth::AxiSymBiorth</definition>
+        <argsstring>(int DOF=0)</argsstring>
+        <name>AxiSymBiorth</name>
+        <qualifiedname>AxiSymBiorth::AxiSymBiorth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>DOF</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="52" column="3" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="52" bodyend="52"/>
+        <references refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" compoundref="biorth_8_h" startline="49">dof</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1aaaf67379cdeb608b5f9c07509bb22631" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::d_r_to_rb</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>d_r_to_rb</name>
+        <qualifiedname>AxiSymBiorth::d_r_to_rb</qualifiedname>
+        <reimplementedby refid="class_biorth_grid_1aef59b4452969227f3b8c9bc652924480">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a12e2482b698749baac5e6e38a102b0a6">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1a9c18f2ff0bb31ab91e09fed0d3a164b3">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a58cad23005f4dbd36e2ac2b307b4d464">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_sphere_s_l_1ad6ef39426a4f8d8aaa3f8f0840fbf511">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a5e5174cddc3660e600e894d8747f01c2">d_r_to_rb</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a73ee63f0e7429ffbb2bfa4784bcb1d2a">d_r_to_rb</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="67" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a6cb90b729dbfb31340bf8930049df4cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::dens</definition>
+        <argsstring>(const int, const int, const double)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>AxiSymBiorth::dens</qualifiedname>
+        <reimplements refid="class_biorth_1ae6bb6919cb7f72259d5ad36946f1f088">dens</reimplements>
+        <reimplementedby refid="class_sphere_s_l_1af160b934c0c8e1ad328fd2c6fab28adf">dens</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1a3e080da0f86efef7dffa9d81854eaed4">dens</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a04a5bc7ae5e418394ebf7b3ba4492b85">dens</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1a063a0e7a1e95de7279c414ec1a6efbe9">dens</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1aa15eab84732036c237fed5b453f26890">dens</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a396c43ce8324193aa47a5873e025cfd1">dens</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a9f75d80acfcf6adcfb4409dfea289d44">dens</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="57" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a6222c8a860d4e41a3d81b74d790442c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AxiSymBiorth::dens</definition>
+        <argsstring>(const int, const int, const double, Eigen::VectorXd &amp;)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>AxiSymBiorth::dens</qualifiedname>
+        <reimplementedby refid="class_sphere_s_l_1afcc06b98a7e0e4aebeccf1d64bc053b6">dens</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1a7367cfa5968af0036f19681c640f64bb">dens</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1ae7896e0832f51233e30c419228e105ef">dens</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1aba6b23af9b9d4be2884efe5f9001f615">dens</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1ac145373105c5cfe9ee48aed86e45cc6b">dens</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a752eb9da99ccd28691475dc11613a122">dens</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1af208912e2b5129238361122d26ba570f">dens</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="63" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a87004c3a9f3587d69b8e131389d53046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AxiSymBiorth::get_dens</definition>
+        <argsstring>(double r, int l, const Eigen::VectorXd &amp;coef)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>AxiSymBiorth::get_dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AxiSymBiorth::get_dof</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_dof</name>
+        <qualifiedname>AxiSymBiorth::get_dof</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="72" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="72" bodyend="72"/>
+        <references refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" compoundref="biorth_8_h" startline="49">dof</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a1220954284feb464502dd18a8a74440b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AxiSymBiorth::get_potl</definition>
+        <argsstring>(double r, int l, const Eigen::VectorXd &amp;coef)</argsstring>
+        <name>get_potl</name>
+        <qualifiedname>AxiSymBiorth::get_potl</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1aaec9137305d7c2eed46ca59c5ea777b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::potl</definition>
+        <argsstring>(const int, const int, const double)=0</argsstring>
+        <name>potl</name>
+        <qualifiedname>AxiSymBiorth::potl</qualifiedname>
+        <reimplements refid="class_biorth_1a26e01c406def571a76990d1fc1a02b7f">potl</reimplements>
+        <reimplementedby refid="class_sphere_s_l_1a0618be0d4ee7e18fce3656cff6701794">potl</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1ad86384f193c49f257cedc5344df6c2ae">potl</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a176472b6fa88fe5307bd2d9835c22cc9">potl</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1acfeb044faae7f0297ea3ec03c1bd5d3c">potl</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a8e11342a326bd8d9162ed1f080b2289d">potl</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a473272545f1cba15a45d79ece84cbae2">potl</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a74e4f6e7bb5a702c339b7ed08b1b147f">potl</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="56" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a2216fefb9a71a8dcdd378da8c3d82fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AxiSymBiorth::potl</definition>
+        <argsstring>(const int, const int, const double, Eigen::VectorXd &amp;)=0</argsstring>
+        <name>potl</name>
+        <qualifiedname>AxiSymBiorth::potl</qualifiedname>
+        <reimplementedby refid="class_sphere_s_l_1ad123d7ae428a8efc093510dc676e1d30">potl</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1a679f542434214c22c85d47178e0fdd12">potl</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1aa4c16e34587f360b1ddf03d3a53828a1">potl</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1a2606ea4a67841e413c65fabd64290f24">potl</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1ac678e8f4063c7fe7969cea966bee306f">potl</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a600350ad6e621b31394b9b6292b1ccc0">potl</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a5bc613ac2c95ca1f6004a4adb316782b">potl</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="62" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a63c2bf04065efbbdcb005377836e0894" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::potlR</definition>
+        <argsstring>(const int, const int, const double)=0</argsstring>
+        <name>potlR</name>
+        <qualifiedname>AxiSymBiorth::potlR</qualifiedname>
+        <reimplementedby refid="class_sphere_s_l_1ae73b7d81422a55ab7f4b7120e9aed111">potlR</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1abfe35d6748b8413206eecca684657510">potlR</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a1dd23fdeb570114b89487070b38e9370">potlR</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1a720e595bfb5f186c4f7b8c068df2ca89">potlR</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1ab51702582eaf87903dfcb67dde076bfc">potlR</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a12c53c076d3aacdcf393c40aecef57a7">potlR</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1afc6b63870d35546e85b9a234689d14f2">potlR</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="58" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1afa024ea053a13ae6094ed1ee65653eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::potlRZ</definition>
+        <argsstring>(const int, const int, const double, const double)=0</argsstring>
+        <name>potlRZ</name>
+        <qualifiedname>AxiSymBiorth::potlRZ</qualifiedname>
+        <reimplementedby refid="class_sphere_s_l_1a4879573d3c8657afe4efafc03565b862">potlRZ</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1af5743acce055d23034dde1d460142827">potlRZ</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a9925619abb620d0266b0c015997253d4">potlRZ</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1afb16120068d63a28c18861cc30aeb125">potlRZ</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a016c904c50ee75df408a579864050fce">potlRZ</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a90ea3c5f29a8f5fd97105ec4c05ca5a4">potlRZ</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a6b207a89cd7816edad8d5b4e89917ae5">potlRZ</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="59" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a5fea78e59e755b9d3e05965b223f10aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::r_to_rb</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>r_to_rb</name>
+        <qualifiedname>AxiSymBiorth::r_to_rb</qualifiedname>
+        <reimplementedby refid="class_biorth_grid_1af3484d627f5c19fda04b841138ba5f6e">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1a81281856517002989aae97dd6b9dea1c">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1a7b2573edfceba78c6085161c4be303ab">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1afefe9914f9a1a2106ed2488054b172ca">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_sphere_s_l_1ab9f7e8bfe2355df79dc7e745d2af063e">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a7feeedd098bdabc064714e74ddaff5b2">r_to_rb</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe">r_to_rb</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="66" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a8a0737fc879f5950452fd0a0b895a57b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::rb_max</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>rb_max</name>
+        <qualifiedname>AxiSymBiorth::rb_max</qualifiedname>
+        <reimplementedby refid="class_biorth_grid_1a7357d2b62f3b84ffb74ddee3d454fb34">rb_max</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a1a2c5078e9e6a69522275c6febb534f6">rb_max</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a0b37f25b7ccf91842521b36322ac8c30">rb_max</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1ae93400d3088e00815b34976e83fb1393">rb_max</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1af244ab399c5394cd56597d8732c29916">rb_max</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1ae740485f16b8b4058f8fedb3b0ebd9e2">rb_max</reimplementedby>
+        <reimplementedby refid="class_sphere_s_l_1a490f65d960649770981d83d66d958435">rb_max</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="70" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a732c3f77a9d9968f5a06ba7d57c69832" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::rb_min</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>rb_min</name>
+        <qualifiedname>AxiSymBiorth::rb_min</qualifiedname>
+        <reimplementedby refid="class_biorth_grid_1a8136aca7e670b7d53af834872a36851c">rb_min</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1a55d6ae71c13aeeb6701b9a1be043b954">rb_min</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a1471a710645006971ffb8b05f05c3d69">rb_min</reimplementedby>
+        <reimplementedby refid="class_b_s_sphere_1ab54f1a8062883e7dd6f0e117a43eeb59">rb_min</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1aeefbbc5e3a2ca01af2078cd8400f5606">rb_min</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1a30cc2dcd5a418aa9930df28b54aa79c6">rb_min</reimplementedby>
+        <reimplementedby refid="class_sphere_s_l_1a6f8a05e49cc970cbf590cd237ca3cd25">rb_min</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1a3815fa706249dff779ff597d8ab37c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymBiorth::rb_to_r</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>rb_to_r</name>
+        <qualifiedname>AxiSymBiorth::rb_to_r</qualifiedname>
+        <reimplementedby refid="class_b_s_sphere_1a16b38cfe134475522d1d6ab0515852e7">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_c_b_disk_1ad60036a7c84e1d8f1e19ef315c8e5eff">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_b_s_disk_1af996ebef3ef60b1c15a9e3f97db4a427">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_biorth_grid_1a189de4839a2992723978e4ec20d27d2d">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_sphere_s_l_1a670017621747229de479ba578cef996a">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_c_b_sphere_1aac3759c7d3a469085bce3564b1fbef78">rb_to_r</reimplementedby>
+        <reimplementedby refid="class_h_q_sphere_1a8c4a12167858d921738b4e3c70a342b9">rb_to_r</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="65" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_biorth_1adcf402d63d58581bfb671cc97b213222" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AxiSymBiorth::~AxiSymBiorth</definition>
+        <argsstring>()</argsstring>
+        <name>~AxiSymBiorth</name>
+        <qualifiedname>AxiSymBiorth::~AxiSymBiorth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="54" column="11" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="54" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BSDisk</label>
+        <link refid="class_b_s_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BSSphere</label>
+        <link refid="class_b_s_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="5">
+        <label>BiorthGrid</label>
+        <link refid="class_biorth_grid"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CBDisk</label>
+        <link refid="class_c_b_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>CBSphere</label>
+        <link refid="class_c_b_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>HQSphere</label>
+        <link refid="class_h_q_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SphereSL</label>
+        <link refid="class_sphere_s_l"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="43" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="44" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a2e936fa39b497ab4f2316f7b6bd2f226" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>BiorthID</name></member>
+      <member refid="class_axi_sym_biorth_1ab8503e21d6282991853c921409deb150" prot="private" virt="non-virtual"><scope>AxiSymBiorth</scope><name>BiorthWake</name></member>
+      <member refid="class_biorth_1a3331c0ec9dabbed562c32c3d59c7b1bb" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>bomb</name></member>
+      <member refid="class_axi_sym_biorth_1aaaf67379cdeb608b5f9c07509bb22631" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>d_r_to_rb</name></member>
+      <member refid="class_axi_sym_biorth_1a6cb90b729dbfb31340bf8930049df4cd" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>dens</name></member>
+      <member refid="class_axi_sym_biorth_1a6222c8a860d4e41a3d81b74d790442c8" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>dens</name></member>
+      <member refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" prot="protected" virt="non-virtual"><scope>AxiSymBiorth</scope><name>dof</name></member>
+      <member refid="class_axi_sym_biorth_1a87004c3a9f3587d69b8e131389d53046" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>get_dens</name></member>
+      <member refid="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>get_dof</name></member>
+      <member refid="class_axi_sym_biorth_1a1220954284feb464502dd18a8a74440b" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>get_potl</name></member>
+      <member refid="class_biorth_1a732367609f458cf4128bb37f2641c30b" prot="public" virt="non-virtual"><scope>AxiSymBiorth</scope><name>id</name></member>
+      <member refid="class_biorth_1a582200336065fac43a3282ee0671cffb" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>krnl</name></member>
+      <member refid="class_biorth_1a4997a44fb308362868547f4eb0f23c5a" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>norm</name></member>
+      <member refid="class_axi_sym_biorth_1aaec9137305d7c2eed46ca59c5ea777b1" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>potl</name></member>
+      <member refid="class_axi_sym_biorth_1a2216fefb9a71a8dcdd378da8c3d82fbb" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>potl</name></member>
+      <member refid="class_axi_sym_biorth_1a63c2bf04065efbbdcb005377836e0894" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>potlR</name></member>
+      <member refid="class_axi_sym_biorth_1afa024ea053a13ae6094ed1ee65653eac" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>potlRZ</name></member>
+      <member refid="class_axi_sym_biorth_1a5fea78e59e755b9d3e05965b223f10aa" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>r_to_rb</name></member>
+      <member refid="class_axi_sym_biorth_1a8a0737fc879f5950452fd0a0b895a57b" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>rb_max</name></member>
+      <member refid="class_axi_sym_biorth_1a732c3f77a9d9968f5a06ba7d57c69832" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>rb_min</name></member>
+      <member refid="class_axi_sym_biorth_1a3815fa706249dff779ff597d8ab37c71" prot="public" virt="pure-virtual"><scope>AxiSymBiorth</scope><name>rb_to_r</name></member>
+      <member refid="class_axi_sym_biorth_1adcf402d63d58581bfb671cc97b213222" prot="public" virt="virtual"><scope>AxiSymBiorth</scope><name>~AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a83c4824d7003048794102f54152cfdbc" prot="public" virt="virtual"><scope>AxiSymBiorth</scope><name>~Biorth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

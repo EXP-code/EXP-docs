@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_b_n_8_h" kind="file" language="C++">
+    <compoundname>BN.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/BN.H</label>
+        <link refid="_b_n_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcoulomb_select" prot="public">coulombSelect</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_BN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classcoulomb_select" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcoulomb_select" kindref="compound">coulombSelect</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classcoulomb_select_1a25699c4ca601303413e487bcf9f1522c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a25699c4ca601303413e487bcf9f1522c" kindref="member">f</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/tanh(x)<sp/>-<sp/>1.0/x;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classcoulomb_select_1a7e69b497d26413bb994b71e8104827bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a7e69b497d26413bb994b71e8104827bc" kindref="member">deriv</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x&gt;100.0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/(x*x);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>sinh(x);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/(x*x)<sp/>-<sp/>1.0/(z*z);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classcoulomb_select_1a873ee9ee22a9579fc5b13f7a7c4667fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a873ee9ee22a9579fc5b13f7a7c4667fc" kindref="member">func</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tol<sp/>=<sp/>1.0e-12;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>itmax<sp/><sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fac<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>exp(-2.0*tau),<sp/>corr;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;itmax;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>corr<sp/><sp/>=<sp/>(<ref refid="classcoulomb_select_1a25699c4ca601303413e487bcf9f1522c" kindref="member">f</ref>(x)<sp/>-<sp/>fac)/<ref refid="classcoulomb_select_1a7e69b497d26413bb994b71e8104827bc" kindref="member">deriv</ref>(x);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/><sp/><sp/><sp/>-=<sp/>corr;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fabs(corr)&lt;tol)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classcoulomb_select_1a6a5af9d3c31a90830fe6c099603fcc8a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a252f9b0d6f53b944cc53cf761afeb9cc" kindref="member">tau_i</ref><sp/>=<sp/>0.0001,<sp/><ref refid="classcoulomb_select_1a7aa9114a8f06d85fe2ecbddd14d7de6c" kindref="member">tau_m</ref><sp/>=<sp/>1.0e-8,<sp/><ref refid="classcoulomb_select_1a6a5af9d3c31a90830fe6c099603fcc8a" kindref="member">tau_f</ref><sp/>=<sp/>4.0,<sp/><ref refid="classcoulomb_select_1ade93bccff7b5fbf98914a56b191703f7" kindref="member">tau_z</ref><sp/>=<sp/>40.0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" kindref="member">numT</ref><sp/>=<sp/>2000;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>,<sp/><ref refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" kindref="member">cA</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="classcoulomb_select_1a68b1ba64d4220d9be986665d66875d84" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcoulomb_select_1a68b1ba64d4220d9be986665d66875d84" kindref="member">coulombSelect</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>.resize(<ref refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" kindref="member">numT</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" kindref="member">cA</ref>.resize(<ref refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" kindref="member">numT</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>del<sp/>=<sp/>(log(<ref refid="classcoulomb_select_1a6a5af9d3c31a90830fe6c099603fcc8a" kindref="member">tau_f</ref>)<sp/>-<sp/>log(<ref refid="classcoulomb_select_1a252f9b0d6f53b944cc53cf761afeb9cc" kindref="member">tau_i</ref>))/(<ref refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" kindref="member">numT</ref>-1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A<sp/><sp/><sp/>=<sp/>0.5/<ref refid="classcoulomb_select_1a252f9b0d6f53b944cc53cf761afeb9cc" kindref="member">tau_i</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classcoulomb_select_1aa84ee2e92783c66ee25abd0cd548827b" kindref="member">numT</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>[i]<sp/>=<sp/><ref refid="classcoulomb_select_1a252f9b0d6f53b944cc53cf761afeb9cc" kindref="member">tau_i</ref>*exp(del*i);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" kindref="member">cA</ref>[i]<sp/>=<sp/>A<sp/>=<sp/><ref refid="classcoulomb_select_1a873ee9ee22a9579fc5b13f7a7c4667fc" kindref="member">func</ref>(<ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>[i],<sp/>A);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classcoulomb_select_1a9ad69d33e33506c4d9a4e9ad7163b0fb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a9ad69d33e33506c4d9a4e9ad7163b0fb" kindref="member">eval</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Elastic<sp/>limit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(tau<sp/>&gt;=<sp/><ref refid="classcoulomb_select_1ade93bccff7b5fbf98914a56b191703f7" kindref="member">tau_z</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Large<sp/>tau<sp/>asymptotic<sp/>behavior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tau<sp/>&gt;=<sp/><ref refid="classcoulomb_select_1a6a5af9d3c31a90830fe6c099603fcc8a" kindref="member">tau_f</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3.0*exp(-2.0*tau);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Limiting<sp/>value<sp/>tiny<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tau<sp/>&lt;=<sp/><ref refid="classcoulomb_select_1a7aa9114a8f06d85fe2ecbddd14d7de6c" kindref="member">tau_m</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/(2.0*<ref refid="classcoulomb_select_1a7aa9114a8f06d85fe2ecbddd14d7de6c" kindref="member">tau_m</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Small<sp/>tau<sp/>asumptotic<sp/>behavior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tau<sp/>&lt;=<sp/><ref refid="classcoulomb_select_1a252f9b0d6f53b944cc53cf761afeb9cc" kindref="member">tau_i</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/(2.0*tau);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>grid<sp/>for<sp/>intermediate<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/><sp/><sp/><sp/>=<sp/>std::lower_bound(<ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>.begin(),<sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>.end(),<sp/>tau);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/><sp/><sp/>=<sp/>std::distance(<ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>.begin(),<sp/>it);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lo<sp/><sp/>=<sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>[indx-1];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hi<sp/><sp/>=<sp/><ref refid="classcoulomb_select_1ab7721c9758ac3bca9ebced990c7ddc06" kindref="member">cT</ref>[indx];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>del<sp/>=<sp/>hi<sp/>-<sp/>lo;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A<sp/><sp/><sp/>=<sp/>(hi<sp/>-<sp/>tau)/del;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>B<sp/><sp/><sp/>=<sp/>(tau<sp/>-<sp/>lo)/del;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>A*<ref refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" kindref="member">cA</ref>[indx-1]<sp/>+<sp/>B*<ref refid="classcoulomb_select_1aadead4c37b5f3df4688fee34e39012fe" kindref="member">cA</ref>[indx];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classcoulomb_select_1a04e3019374e0fb5b397ac7a7143610d9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcoulomb_select_1a04e3019374e0fb5b397ac7a7143610d9" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>U)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A<sp/>=<sp/><ref refid="classcoulomb_select_1a9ad69d33e33506c4d9a4e9ad7163b0fb" kindref="member">eval</ref>(tau);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(U&lt;1.0e-14)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1.0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(A&lt;1.0e-10)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2.0*U<sp/>-<sp/>1.0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(A&gt;40.0)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0<sp/>+<sp/>log(U)/A;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log(exp(-A)<sp/>+<sp/>2.0*U*sinh(A))/A;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_BN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/BN.H"/>
+  </compounddef>
+</doxygen>

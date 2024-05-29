@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_ortho_function_8_h" kind="file" language="C++">
+    <compoundname>OrthoFunction.H</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/OrthoFunction.H</label>
+        <link refid="_ortho_function_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_ortho_function" prot="public">OrthoFunction</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OrthoFunction_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OrthoFunction_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gauss_q_8_h" kindref="compound">gaussQ.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_ortho_function" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ortho_function" kindref="compound">OrthoFunction</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" kindref="member">DensFunc</ref><sp/>=<sp/>std::function&lt;double(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)&gt;;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_ortho_function_1a27bf66591a8c18be3f5ca572703554d0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" kindref="member">DensFunc</ref><sp/><ref refid="class_ortho_function_1a27bf66591a8c18be3f5ca572703554d0" kindref="member">W</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_ortho_function_1a89d9c79cdafc9b54dbc3d8d8bbc4efc9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a89d9c79cdafc9b54dbc3d8d8bbc4efc9" kindref="member">nmax</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" kindref="member">dof</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_ortho_function_1a1a9ce9fcf086f7cc99741db4daafcc90" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a1a9ce9fcf086f7cc99741db4daafcc90" kindref="member">segment</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_ortho_function_1a8352622b6558a4f039e69d54562509df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1ad7f7640272b85b2c697cceb25e61a049" kindref="member">rmin</ref>,<sp/><ref refid="class_ortho_function_1a8352622b6558a4f039e69d54562509df" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_ortho_function_1a3a2733eb9891d1b40ed7a9a98cc99f4b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a76cc8c546e2193411a454dab3271824e" kindref="member">xmin</ref>,<sp/><ref refid="class_ortho_function_1a696a02f38c75aa85334ff36a337a6f36" kindref="member">xmax</ref>,<sp/><ref refid="class_ortho_function_1a3a2733eb9891d1b40ed7a9a98cc99f4b" kindref="member">dx</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_ortho_function_1abcda02877da0939ed12bf55417b2a082" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_ortho_function_1abcda02877da0939ed12bf55417b2a082" kindref="member">alph</ref>,<sp/><ref refid="class_ortho_function_1ab721d5201751cc3eedf241fa51b4428d" kindref="member">beta</ref>,<sp/><ref refid="class_ortho_function_1a28fbb28fd3c6a67877e7166a79f2e247" kindref="member">norm</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" kindref="member">knots</ref><sp/>=<sp/>400;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;LegeQuad&gt;<sp/><ref refid="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" kindref="member">lq</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="class_ortho_function_1a6b1e4f353cd771970a6062f68205282c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a6b1e4f353cd771970a6062f68205282c" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ra<sp/>=<sp/>r/<ref refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ra<sp/>-<sp/>1.0)/(ra<sp/>+<sp/>1.0);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_ortho_function_1a9aabff39825d50734517fad79ee458b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a9aabff39825d50734517fad79ee458b0" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" kindref="member">scale</ref><sp/>*<sp/>(1.0<sp/>+<sp/>x)/(1.0<sp/>-<sp/>x);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" kindref="member">d_r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mx<sp/>=<sp/>1.0<sp/>-<sp/>x;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2.0<sp/>*<sp/><ref refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" kindref="member">scale</ref><sp/>/<sp/>(<sp/>mx<sp/>*<sp/>mx<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"></codeline>
+<codeline lineno="74" refid="class_ortho_function_1a1db6981a7296814ae36ccc824b208c77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a1db6981a7296814ae36ccc824b208c77" kindref="member">scalar_prod</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_ortho_function_1ae7690d4e1253a6784e7978f41679bae2" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_ortho_function_1ae7690d4e1253a6784e7978f41679bae2" kindref="member">poly_eval</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_ortho_function_1ad48d9a2800afd2d519ee48a104dc1d43" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1ad48d9a2800afd2d519ee48a104dc1d43" kindref="member">generate</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_ortho_function_1a5fba8890bba5e3ab528e590687ae559a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ortho_function_1a5fba8890bba5e3ab528e590687ae559a" kindref="member">OrthoFunction</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a89d9c79cdafc9b54dbc3d8d8bbc4efc9" kindref="member">nmax</ref>,<sp/><ref refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" kindref="member">DensFunc</ref><sp/><ref refid="class_ortho_function_1a27bf66591a8c18be3f5ca572703554d0" kindref="member">W</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1ad7f7640272b85b2c697cceb25e61a049" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a8352622b6558a4f039e69d54562509df" kindref="member">rmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" kindref="member">scale</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" kindref="member">dof</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a1a9ce9fcf086f7cc99741db4daafcc90" kindref="member">segment</ref>=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_ortho_function_1a3f176d99aaac1e31727176967e9b8bce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a3f176d99aaac1e31727176967e9b8bce" kindref="member">~OrthoFunction</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_ortho_function_1a5dce33e098819f50e474faaec38f8e6d" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_ortho_function_1a5dce33e098819f50e474faaec38f8e6d" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" kindref="member">setKnots</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" kindref="member">knots</ref><sp/>=<sp/>N;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" kindref="member">lq</ref><sp/>=<sp/>std::make_shared&lt;LegeQuad&gt;(N);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_ortho_function_1aeb8b4c618c4f0d8be7be8ecd20f39bc5" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_ortho_function_1aeb8b4c618c4f0d8be7be8ecd20f39bc5" kindref="member">testOrtho</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_out_coef_8_h" kind="file" language="C++">
+    <compoundname>OutCoef.H</compoundname>
+    <includes refid="_out_coef_8_h" local="no">OutCoef.H</includes>
+    <includedby refid="_out_coef_8_h" local="no">/home/weinberg/Projects/EXP/src/OutCoef.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutCoef.H</label>
+        <link refid="_out_coef_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutCoef.H</label>
+        <link refid="_out_coef_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_out_coef" prot="public">OutCoef</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OutCoef_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OutCoef_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_out_coef_8_h" kindref="compound">OutCoef.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_out_coef" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_out_coef" kindref="compound">OutCoef</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_output" kindref="compound">Output</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_out_coef_1a61424a6820881114f27fc4739d7ae092" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_out_coef_1a61424a6820881114f27fc4739d7ae092" kindref="member">filename</ref>;</highlight></codeline>
+<codeline lineno="22" refid="class_out_coef_1a1cce1046b87c56c64e45e23ae01cffa7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_out_coef_1a1cce1046b87c56c64e45e23ae01cffa7" kindref="member">prev</ref><sp/>=<sp/>-std::numeric_limits&lt;double&gt;::max();</highlight></codeline>
+<codeline lineno="23" refid="class_out_coef_1ae5d416d4c5dacbb4e1ebb4d8f16b342f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_component" kindref="compound">Component</ref><sp/>*<ref refid="class_out_coef_1ae5d416d4c5dacbb4e1ebb4d8f16b342f" kindref="member">tcomp</ref>;</highlight></codeline>
+<codeline lineno="24" refid="class_out_coef_1a0f3c9ffb790b9ed5d734fe0f0f321a20" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_out_coef_1a0f3c9ffb790b9ed5d734fe0f0f321a20" kindref="member">native</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_out_coef_1a004865edcd8ef66cd83adff57b49c564" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_coef_1a004865edcd8ef66cd83adff57b49c564" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_out_coef_1a756249356030a2b5667c50bb6c919536" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="class_out_coef_1a756249356030a2b5667c50bb6c919536" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_out_coef_1a104cb10e976d385b1d843a134f3383df" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_out_coef_1a104cb10e976d385b1d843a134f3383df" kindref="member">OutCoef</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" kindref="member">conf</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_out_coef_1a1bc2ffd2ed33add9431a473b41eef9b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_coef_1a1bc2ffd2ed33add9431a473b41eef9b8" kindref="member">Run</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nstep,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" kindref="member">mstep</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>last);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/OutCoef.H"/>
+  </compounddef>
+</doxygen>

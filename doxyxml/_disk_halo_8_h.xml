@@ -1,0 +1,712 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_disk_halo_8_h" kind="file" language="C++">
+    <compoundname>DiskHalo.H</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">string</includes>
+    <includes local="no">random</includes>
+    <includes local="no">cmath</includes>
+    <includes refid="exponential_8_h" local="no">exponential.H</includes>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <includes refid="localmpi_8_h" local="no">localmpi.H</includes>
+    <includes refid="_add_disk_8_h" local="no">AddDisk.H</includes>
+    <includes refid="_spherical_s_l_8_h" local="no">SphericalSL.H</includes>
+    <includes refid="_emp_cyl_s_l_8_h" local="no">EmpCylSL.H</includes>
+    <includes refid="_s_particle_8_h" local="no">SParticle.H</includes>
+    <includes refid="libvars_8_h" local="no">libvars.H</includes>
+    <incdepgraph>
+      <node id="23">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Particle.H</label>
+        <link refid="include_2_particle_8_h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>coef.H</label>
+        <link refid="include_2coef_8_h"/>
+      </node>
+      <node id="8">
+        <label>exponential.H</label>
+        <link refid="exponential_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>AddDisk.H</label>
+        <link refid="_add_disk_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H</label>
+        <link refid="_disk_halo_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>SParticle.H</label>
+        <link refid="_s_particle_8_h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SphericalSL.H</label>
+        <link refid="_spherical_s_l_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="29">
+        <label>Particle.H</label>
+      </node>
+      <node id="39">
+        <label>chrono</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="32">
+        <label>config_exp.h</label>
+      </node>
+      <node id="21">
+        <label>cstdlib</label>
+      </node>
+      <node id="14">
+        <label>deque</label>
+      </node>
+      <node id="26">
+        <label>fstream</label>
+      </node>
+      <node id="18">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>iomanip</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="37">
+        <label>limits</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="31">
+        <label>math.h</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+      <node id="25">
+        <label>mpi.h</label>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+      <node id="20">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="41">
+        <label>unordered_map</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_disk_halo_1_1_c_lin" prot="private">DiskHalo::CLin</innerclass>
+    <innerclass refid="class_disk_halo_1_1_c_log" prot="private">DiskHalo::CLog</innerclass>
+    <innerclass refid="class_disk_halo_1_1_c_map" prot="private">DiskHalo::CMap</innerclass>
+    <innerclass refid="class_disk_halo_1_1_c_rat" prot="private">DiskHalo::CRat</innerclass>
+    <innerclass refid="class_disk_halo" prot="public">DiskHalo</innerclass>
+    <innerclass refid="class_disk_halo_exception" prot="public">DiskHaloException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_DiskHalo_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DiskHalo_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="exponential_8_h" kindref="compound">exponential.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="massmodel_8_h" kindref="compound">massmodel.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gauss_q_8_h" kindref="compound">gaussQ.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="localmpi_8_h" kindref="compound">localmpi.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_add_disk_8_h" kindref="compound">AddDisk.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_spherical_s_l_8_h" kindref="compound">SphericalSL.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_emp_cyl_s_l_8_h" kindref="compound">EmpCylSL.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_s_particle_8_h" kindref="compound">SParticle.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libvars_8_h" kindref="compound">libvars.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_disk_halo_exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo_exception" kindref="compound">DiskHaloException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_disk_halo_exception_1ac8dfd37ff38e420395484b1de34c8055" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_exception_1ac8dfd37ff38e420395484b1de34c8055" kindref="member">DiskHaloException</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message,<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sourcefilename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sourcelinenumber)<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>runtime_error(message)<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Thrown<sp/>from<sp/>source<sp/>file<sp/>&lt;&quot;</highlight><highlight class="normal"><sp/><sp/>&lt;&lt;<sp/>message<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;<sp/>at<sp/>line<sp/>number<sp/>&lt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>sourcelinenumber<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_disk_halo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo" kindref="compound">DiskHalo</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_disk_halo_1a1e59a2417dd9dbc4b78fca23e22268a0" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AddDisk&gt;<sp/><ref refid="class_disk_halo_1a1e59a2417dd9dbc4b78fca23e22268a0" kindref="member">newmod</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_disk_halo_1abcbe56a6930566972f0c7ce08b37daf9" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;SphericalModelTable&gt;<sp/><ref refid="class_disk_halo_1abcbe56a6930566972f0c7ce08b37daf9" kindref="member">halo</ref>,<sp/><ref refid="class_disk_halo_1a11533cc005a6b07dcbae37aa5ad01615" kindref="member">halo2</ref>,<sp/><ref refid="class_disk_halo_1a6e814f3f29455307b6bd561f9ae212f2" kindref="member">halo3</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_disk_halo_1a965f8a6dcc1614231524dd03d9185459" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;SphericalModelMulti&gt;<sp/><ref refid="class_disk_halo_1a965f8a6dcc1614231524dd03d9185459" kindref="member">multi</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_disk_halo_1a8053a482accb22f54ff5d364bf2700b4" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ExponentialDisk&gt;<sp/><ref refid="class_disk_halo_1a8053a482accb22f54ff5d364bf2700b4" kindref="member">disk</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_disk_halo_1a9dacc614aa5ba4cb332af85e5a694f0f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a0d93aba88b6ef036ab1ca7b917c05b19" kindref="member">scalelength</ref>,<sp/><ref refid="class_disk_halo_1a60b7e2735f74d6a2a877962f308f18b9" kindref="member">scaleheight</ref>,<sp/><ref refid="class_disk_halo_1a9dacc614aa5ba4cb332af85e5a694f0f" kindref="member">dmass</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_disk_halo_1ae21e949ca3cb96f7be9be2321cd25698" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ae21e949ca3cb96f7be9be2321cd25698" kindref="member">center_pos</ref>[3],<sp/><ref refid="class_disk_halo_1a07ef76d6c4dac9992219acb4d68d8ebe" kindref="member">center_vel</ref>[3];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_disk_halo_1af8ff0dbb1f05d6fbd3bb568d3355aa62" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_spherical_s_l_8_h_1a14dbfa24326bd24607c4a8f13b181fe5" kindref="member">SphericalSLptr</ref><sp/><ref refid="class_disk_halo_1af8ff0dbb1f05d6fbd3bb568d3355aa62" kindref="member">expandh</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_disk_halo_1a19b6e717b6fa153ab4667ff08c5a7292" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_emp_cyl_s_l_8_h_1aa0ef74652fa64c2615c9ff54a5d9e8e2" kindref="member">EmpCylSLptr</ref><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a19b6e717b6fa153ab4667ff08c5a7292" kindref="member">expandd</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_disk_halo_1ad8b6b7b46b33b6e187f1f6b0ffd05661" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_disk_halo_1addec04835e0622efea6d8e3c3a7b3154" kindref="member">disktableP</ref>,<sp/><ref refid="class_disk_halo_1ad8b6b7b46b33b6e187f1f6b0ffd05661" kindref="member">disktableN</ref>;</highlight></codeline>
+<codeline lineno="51" refid="class_disk_halo_1a90f39248f69d3ff532b0c432d6761d19" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_disk_halo_1a3740176841d0941ed546bfaf0103908d" kindref="member">epitable</ref>,<sp/><ref refid="class_disk_halo_1adf41d4d8ffb88f0b9a9bf3742eb1ed4e" kindref="member">dv2table</ref>,<sp/><ref refid="class_disk_halo_1a90f39248f69d3ff532b0c432d6761d19" kindref="member">asytable</ref>;</highlight></codeline>
+<codeline lineno="52" refid="class_disk_halo_1a37d12ca6ae26861d3e8bf1db62857a2d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a37d12ca6ae26861d3e8bf1db62857a2d" kindref="member">dP</ref>,<sp/><ref refid="class_disk_halo_1ab79a0012110cdc330e6980ef1133f132" kindref="member">dR</ref>,<sp/><ref refid="class_disk_halo_1a9ed06cb0e1ffad0d4358e300db25536b" kindref="member">dZ</ref>,<sp/><ref refid="class_disk_halo_1ab0b1521e2f5315db64b686b016421577" kindref="member">sigma0</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_disk_halo_1aad744bfcc7314b16b5958ca34a5db9ad" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_disk_halo_1aad744bfcc7314b16b5958ca34a5db9ad" kindref="member">halotable</ref>;</highlight></codeline>
+<codeline lineno="55" refid="class_disk_halo_1a22f7a1282b13fd66403eb2033e7e013b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a7de35ed5bb63164e000e1d69ee37ad87" kindref="member">dr</ref>,<sp/><ref refid="class_disk_halo_1a22f7a1282b13fd66403eb2033e7e013b" kindref="member">dc</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_disk_halo_1ad1d90a521998fcb18fec87c1a47272af" refkind="member"><highlight class="normal"><sp/><sp/>std::mt19937<sp/><ref refid="class_disk_halo_1ad1d90a521998fcb18fec87c1a47272af" kindref="member">gen</ref>;</highlight></codeline>
+<codeline lineno="58" refid="class_disk_halo_1acdd928e74da4cd3617c51dcf56cb071f" refkind="member"><highlight class="normal"><sp/><sp/>std::uniform_real_distribution&lt;&gt;<sp/><ref refid="class_disk_halo_1acdd928e74da4cd3617c51dcf56cb071f" kindref="member">rndU</ref>;</highlight></codeline>
+<codeline lineno="59" refid="class_disk_halo_1a31a1d7fc5315f52d461c4dc3740f8c26" refkind="member"><highlight class="normal"><sp/><sp/>std::normal_distribution&lt;&gt;<sp/><ref refid="class_disk_halo_1a31a1d7fc5315f52d461c4dc3740f8c26" kindref="member">rndN</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_disk_halo_1aeec5dcba963c3f5c4e0f579a61c133aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aeec5dcba963c3f5c4e0f579a61c133aa" kindref="member">DF</ref>;</highlight></codeline>
+<codeline lineno="62" refid="class_disk_halo_1a07b76b82e3825f4666f9f53346793bea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a07b76b82e3825f4666f9f53346793bea" kindref="member">MULTI</ref>;</highlight></codeline>
+<codeline lineno="63" refid="class_disk_halo_1a34b17e5f5dfd9421b062d296b7838762" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a34b17e5f5dfd9421b062d296b7838762" kindref="member">com</ref>;</highlight></codeline>
+<codeline lineno="64" refid="class_disk_halo_1aaaab422ba80a90be3ccef7167b0d1512" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aaaab422ba80a90be3ccef7167b0d1512" kindref="member">cov</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_disk_halo_1ac8711d9a0d117730c0f4e514cae02c0c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ac8711d9a0d117730c0f4e514cae02c0c" kindref="member">bunchcnt</ref><sp/>=<sp/>16384;</highlight></codeline>
+<codeline lineno="67" refid="class_disk_halo_1a6666c43554db850822dc97e073aa3f31" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6666c43554db850822dc97e073aa3f31" kindref="member">bufcnt</ref>;</highlight></codeline>
+<codeline lineno="68" refid="class_disk_halo_1a3c56b44538cdd18eb93d2139d58fed31" refkind="member"><highlight class="normal"><sp/><sp/>std::ostringstream<sp/><ref refid="class_disk_halo_1a3c56b44538cdd18eb93d2139d58fed31" kindref="member">bufout</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_disk_halo_1a04e4978ed6349709fcb3ea6729fe8011" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a04e4978ed6349709fcb3ea6729fe8011" kindref="member">disk_density</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z);</highlight></codeline>
+<codeline lineno="71" refid="class_disk_halo_1a56b882978dd5ef8d22460404858f3e85" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a56b882978dd5ef8d22460404858f3e85" kindref="member">disk_surface_density</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R);</highlight></codeline>
+<codeline lineno="72" refid="class_disk_halo_1a605cd4369cff6d25fd62ff90ae0aa4ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a605cd4369cff6d25fd62ff90ae0aa4ff" kindref="member">write_record</ref>(ostream<sp/>&amp;out,<sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="73" refid="class_disk_halo_1a0effc015249073e1bded7dc25ed72d2d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a0effc015249073e1bded7dc25ed72d2d" kindref="member">write_record</ref>(ostream<sp/>&amp;out,<sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>&amp;p)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref><sp/>P(p);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a605cd4369cff6d25fd62ff90ae0aa4ff" kindref="member">write_record</ref>(out,<sp/>P);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78" refid="class_disk_halo_1aceca248aeba3ea3c07760d379beb378e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aceca248aeba3ea3c07760d379beb378e" kindref="member">flush_buffer</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="79" refid="class_disk_halo_1a175925c9df4f22671efa85c0d29b93b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a175925c9df4f22671efa85c0d29b93b0" kindref="member">table_halo_disp</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>frequency<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>mass<sp/>and<sp/>number<sp/>bins,<sp/>log<sp/>spaced</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_disk_halo_1a10f803fe9e4b89fdbf0da2b182943a1d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a10f803fe9e4b89fdbf0da2b182943a1d" kindref="member">nh</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>number<sp/>on<sp/>grid<sp/>before<sp/>computing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_disk_halo_1a130d45213d76fda36d624ff9e01ef0db" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a130d45213d76fda36d624ff9e01ef0db" kindref="member">mh</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Boundaries<sp/>and<sp/>delta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_disk_halo_1a49bcb1fc8025ca83ea874f130190d05b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ab5d7902fd96878bcdc079f4fc1663e1f" kindref="member">hDmin</ref>,<sp/><ref refid="class_disk_halo_1a2ab9af2c6adda03e617057b33f86ae80" kindref="member">hDmax</ref>,<sp/><ref refid="class_disk_halo_1a49bcb1fc8025ca83ea874f130190d05b" kindref="member">dRh</ref>;</highlight></codeline>
+<codeline lineno="89" refid="class_disk_halo_1ae1a319cf23af0b120b1508850a717d3e" refkind="member"><highlight class="normal"><sp/><sp/>vector&lt;double&gt;<sp/><sp/><sp/><ref refid="class_disk_halo_1ae1a319cf23af0b120b1508850a717d3e" kindref="member">nhD</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mass<sp/>in<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_disk_halo_1ad31198223e22185cde029eee0502f487" refkind="member"><highlight class="normal"><sp/><sp/>vector&lt;double&gt;<sp/><sp/><sp/><ref refid="class_disk_halo_1ad31198223e22185cde029eee0502f487" kindref="member">nhM</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cumulative<sp/>mass<sp/>in<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_disk_halo_1a0dba7f3b5c4d71719112a01e5aa1e9a5" refkind="member"><highlight class="normal"><sp/><sp/>vector&lt;unsigned&gt;<sp/><ref refid="class_disk_halo_1a0dba7f3b5c4d71719112a01e5aa1e9a5" kindref="member">nhN</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>in<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_disk_halo_1a326d640335349492c6715d905c52ad33" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a326d640335349492c6715d905c52ad33" kindref="member">nzero</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Computed<sp/>minimum<sp/>mesh<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_disk_halo_1a233f9e7203da7d352b7f3cd8728250b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a233f9e7203da7d352b7f3cd8728250b4" kindref="member">nzepi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Computed<sp/>minimum<sp/>epi<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>Spline<sp/>integration<sp/>rather<sp/>than<sp/>Trapezoidal<sp/>rule</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_disk_halo_1a3f01d08f0f3793460399bbc5ffbcd097" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a3f01d08f0f3793460399bbc5ffbcd097" kindref="member">use_spline</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_disk_halo_1_1_c_map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo_1_1_c_map" kindref="compound">CMap</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102" refid="class_disk_halo_1_1_c_map_1a4cb11ff9d639153146a10c93ea800bc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_map_1a4cb11ff9d639153146a10c93ea800bc6" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103" refid="class_disk_halo_1_1_c_map_1ad1b12dd747f576457c99a5b8bc15b7dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_map_1ad1b12dd747f576457c99a5b8bc15b7dc" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_disk_halo_1_1_c_lin" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo_1_1_c_lin" kindref="compound">CLin</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_map" kindref="compound">CMap</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_disk_halo_1_1_c_lin_1a468d63ce8cdcf50378f10e5e4dada84c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_lin_1a468d63ce8cdcf50378f10e5e4dada84c" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
+<codeline lineno="111" refid="class_disk_halo_1_1_c_lin_1aec200dc55db3f7d8c9daa70350f8ac0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_lin_1aec200dc55db3f7d8c9daa70350f8ac0c" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;<sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_disk_halo_1_1_c_log" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo_1_1_c_log" kindref="compound">CLog</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_map" kindref="compound">CMap</ref></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_disk_halo_1_1_c_log_1a31092d32f4515aa413d10b0e39a83843" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_log_1a31092d32f4515aa413d10b0e39a83843" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exp(x);<sp/>}</highlight></codeline>
+<codeline lineno="119" refid="class_disk_halo_1_1_c_log_1add2e31b38ce77758e1da963ab70ac859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_log_1add2e31b38ce77758e1da963ab70ac859" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log(r);<sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_disk_halo_1_1_c_rat" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_halo_1_1_c_rat" kindref="compound">CRat</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_map" kindref="compound">CMap</ref></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="125" refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_disk_halo_1_1_c_rat_1ac611b9854ba4a314a7cb6ab72e103230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1_1_c_rat_1ac611b9854ba4a314a7cb6ab72e103230" kindref="member">CRat</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>)<sp/><sp/>:<sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>(<ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>)<sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="130" refid="class_disk_halo_1_1_c_rat_1a69a95909c03f8e0086bd332a848f7c8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1_1_c_rat_1a69a95909c03f8e0086bd332a848f7c8d" kindref="member">CRat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat" kindref="compound">CRat</ref>&amp;<sp/>p)<sp/>:<sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>(p.<ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="class_disk_halo_1_1_c_rat_1abae3a5351124d7ecdec5a0ff08834e74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat_1abae3a5351124d7ecdec5a0ff08834e74" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>*(x<sp/>+<sp/>1.0)/(x<sp/>-<sp/>1.0);<sp/>}</highlight></codeline>
+<codeline lineno="133" refid="class_disk_halo_1_1_c_rat_1a47e8e9d3476c8c7a92867d8172923f24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1_1_c_rat_1a47e8e9d3476c8c7a92867d8172923f24" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(r<sp/>+<sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>)/(r<sp/>-<sp/><ref refid="class_disk_halo_1_1_c_rat_1a07e44965f926604b3ded4aba5949f638" kindref="member">scale</ref>);<sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;CMap&gt;<sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="137" refid="class_disk_halo_1af99610b708fde8e1340d44090ed5ee00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a16b32dac2df1eb3083f98bbfcbaf364b" kindref="member">Xmin</ref>,<sp/><ref refid="class_disk_halo_1af99610b708fde8e1340d44090ed5ee00" kindref="member">Xmax</ref>;</highlight></codeline>
+<codeline lineno="138" refid="class_disk_halo_1a80198e4edf9f8a77239ecad18690f4bc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_disk_halo_1a80198e4edf9f8a77239ecad18690f4bc" kindref="member">mtype</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="class_disk_halo_1aae39db932a59fb46a79098cf97f06ae8" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;CMap&gt;<sp/><ref refid="class_disk_halo_1aae39db932a59fb46a79098cf97f06ae8" kindref="member">make_cmap</ref>(std::string<sp/><ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::for_each(<ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>.begin(),<sp/><ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>.end(),<sp/>[](</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;<sp/>c){<sp/>c<sp/>=<sp/>::tolower(c);<sp/>});</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;CMap&gt;<sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>.find(</highlight><highlight class="stringliteral">&quot;linear&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/><sp/><sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref><sp/>=<sp/>std::make_shared&lt;CLin&gt;();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>.find(</highlight><highlight class="stringliteral">&quot;log&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref><sp/>=<sp/>std::make_shared&lt;CLog&gt;();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>.find(</highlight><highlight class="stringliteral">&quot;rat&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref><sp/>=<sp/>std::make_shared&lt;CRat&gt;(scale);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref><sp/>=<sp/>std::make_shared&lt;CLog&gt;();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a63ee4b75f4d48d5399a0e22636341e1b" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7af632b5b63f510e67172781e47c4618df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7" kindref="member">DiskGenType</ref><sp/>{<sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7a2a6906e3e4918fc61c5e41c89e36ddba" kindref="member">Jeans</ref>,<sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7af632b5b63f510e67172781e47c4618df" kindref="member">Asymmetric</ref>,<sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7aace54a716c027b1d32476c5cd00f2130" kindref="member">Epicyclic</ref><sp/>};</highlight></codeline>
+<codeline lineno="157" refid="class_disk_halo_1a502375330bee39cb28c043e9cb45055a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>DiskGenType&gt;<sp/><ref refid="class_disk_halo_1a502375330bee39cb28c043e9cb45055a" kindref="member">getDiskGenType</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_disk_halo_1a21826d2c3b8d4ff91a56851a13171d1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a21826d2c3b8d4ff91a56851a13171d1a" kindref="member">NDP</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>knots<sp/>in<sp/>disk<sp/>table<sp/>phi<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_disk_halo_1a3868ea2cb616fea090307cb94e87c126" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a3868ea2cb616fea090307cb94e87c126" kindref="member">NDZ</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>knots<sp/>in<sp/>disk<sp/>table<sp/>z<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="class_disk_halo_1a6a2ee5d3f22c6b820b24dfc97ac557a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6a2ee5d3f22c6b820b24dfc97ac557a1" kindref="member">NDR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>knots<sp/>in<sp/>disk<sp/>table<sp/>R<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_disk_halo_1a714139a9d1a7d0dec9455836f39a4515" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a714139a9d1a7d0dec9455836f39a4515" kindref="member">NHR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>knots<sp/>in<sp/>halo<sp/>table<sp/>r<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="class_disk_halo_1a4df75d86d8f538d244df42612a90aba1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a4df75d86d8f538d244df42612a90aba1" kindref="member">NHT</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>knots<sp/>in<sp/>halo<sp/>table<sp/>theta<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="class_disk_halo_1ab11718bcf0112d0615fed4351a25cac5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ab11718bcf0112d0615fed4351a25cac5" kindref="member">RHMIN</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Smallest<sp/>radius<sp/>in<sp/>halo<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="class_disk_halo_1aab00fe5448b6574a8c253818bf79b6b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aab00fe5448b6574a8c253818bf79b6b7" kindref="member">RHMAX</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Largest<sp/>radius<sp/>in<sp/>halo<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="class_disk_halo_1a048554ca5987cbbcb32599a73e829f3d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a048554ca5987cbbcb32599a73e829f3d" kindref="member">RDMIN</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Smallest<sp/>radius<sp/>in<sp/>disk<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="class_disk_halo_1a495d8662a68a4584a86afc34be844f4d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a495d8662a68a4584a86afc34be844f4d" kindref="member">RDMAX</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Largest<sp/>radius<sp/>in<sp/>disk<sp/>grid<sp/>&amp;<sp/>model</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="class_disk_halo_1a8bd0ecc3f059aa56b28959ba7efbf97b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a8bd0ecc3f059aa56b28959ba7efbf97b" kindref="member">COMPRESSION</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extra<sp/>effective<sp/>mass<sp/>due<sp/>to<sp/>disk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="class_disk_halo_1afb14f5d49aac6d1145c5afd191e65d92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1afb14f5d49aac6d1145c5afd191e65d92" kindref="member">SHFACTOR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>vertical<sp/>integration<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>units<sp/>of<sp/>scale<sp/>height</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="class_disk_halo_1ab134b814316aec061831a283dd90fbdc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ab134b814316aec061831a283dd90fbdc" kindref="member">TOLE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Energy<sp/>offset<sp/>for<sp/>particle<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>0.003</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_disk_halo_1a22b68e63a9adce99ee77139853193749" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a22b68e63a9adce99ee77139853193749" kindref="member">Q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Toomre<sp/>Q.<sp/><sp/>Default:<sp/>0.0<sp/>(use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>exponential)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="class_disk_halo_1a1f7889f91e26a5ceb8b5ac696c366464" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a1f7889f91e26a5ceb8b5ac696c366464" kindref="member">XI</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ratio<sp/>of<sp/>radial<sp/>to<sp/>tangential</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>velocity<sp/>dispersion<sp/>scale</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>length.<sp/>Default:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_disk_halo_1a7ae9a65e8ff0c07616fd0f1e445e547c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a7ae9a65e8ff0c07616fd0f1e445e547c" kindref="member">SIG0</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Velocity<sp/>dispersion<sp/>fraction<sp/>at<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>length.<sp/>Default:<sp/>0.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="class_disk_halo_1a1990fe14a51f8e21fd4191f3f3726783" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a1990fe14a51f8e21fd4191f3f3726783" kindref="member">R_DF</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Change<sp/>over<sp/>points<sp/>for<sp/>DF<sp/>and<sp/>Jeans</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="class_disk_halo_1a6754a3982cb7404c4b64dbcf2d640f36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6754a3982cb7404c4b64dbcf2d640f36" kindref="member">DR_DF</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="class_disk_halo_1a8896fee312a81b383e1a1f74e85aa63b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a8896fee312a81b383e1a1f74e85aa63b" kindref="member">NBUF</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>particles<sp/>in<sp/>MPI<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>default:<sp/>8192</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="class_disk_halo_1a5bd5e8d15ef312340cbfa62921590190" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a5bd5e8d15ef312340cbfa62921590190" kindref="member">LOGR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Radial<sp/>grid<sp/>for<sp/>Eddington<sp/>inversion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="class_disk_halo_1aa5023c6dd6094e4d1d543ea7608f3290" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aa5023c6dd6094e4d1d543ea7608f3290" kindref="member">CHEBY</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>Cheybshev<sp/>fit<sp/>for<sp/>epicylic<sp/>derivatives</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_disk_halo_1a6ce7ae73573a7dfa30ce8516cdf4e933" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1a6ce7ae73573a7dfa30ce8516cdf4e933" kindref="member">NCHEB</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Order<sp/>for<sp/>Cheybshev<sp/>fit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="class_disk_halo_1a564a8fa46b75a69aa8aca08bf5089540" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a564a8fa46b75a69aa8aca08bf5089540" kindref="member">ALLOW</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Turn<sp/>off<sp/>negative<sp/>mass<sp/>requeueing<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>multimass<sp/>model</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="class_disk_halo_1affcbe4fe376f3fb19ab64975d140acc6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1affcbe4fe376f3fb19ab64975d140acc6" kindref="member">SEED</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>seed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="class_disk_halo_1a6c621166eec69d66e170e7d11b7cb98f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6c621166eec69d66e170e7d11b7cb98f" kindref="member">ITMAX</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Maximum<sp/>number<sp/>of<sp/>DF<sp/>iterations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="class_disk_halo_1a0b66e7eff857ebd7ae887eaf91aa247a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a0b66e7eff857ebd7ae887eaf91aa247a" kindref="member">use_mono</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>monopole<sp/>approximation<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>computing<sp/>total<sp/>d(phi)/dr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="class_disk_halo_1abb00a8f631abf913188d1b65037d90b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1abb00a8f631abf913188d1b65037d90b9" kindref="member">RA</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Anisotropy<sp/>radius<sp/>(default:<sp/>1e20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="class_disk_halo_1acf7681a52d9b10203844900d78fe7750" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1acf7681a52d9b10203844900d78fe7750" kindref="member">NUMDF</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>DF<sp/>grid<sp/>points<sp/>(default:<sp/>1200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="class_disk_halo_1abca114be72dc8df914274c271df513d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1abca114be72dc8df914274c271df513d3" kindref="member">RNUM</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>model<sp/>grid<sp/>points<sp/>for<sp/>added</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>component<sp/>(default:<sp/>1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="class_disk_halo_1ad28f2d8d8f8eac6e85eeb8dd3c027f66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ad28f2d8d8f8eac6e85eeb8dd3c027f66" kindref="member">VFLAG</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verbose<sp/>debugging<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bit<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Informational</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Model<sp/>diagnostics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Table<sp/>diagnostics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Velocity<sp/>diagnostics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ID<sp/>string<sp/>for<sp/>debugging<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="class_disk_halo_1a7a25c51f247b7c89e4c9dcf85cd40c2e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a7a25c51f247b7c89e4c9dcf85cd40c2e" kindref="member">RUNTAG</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>&quot;debug&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="class_disk_halo_1a967ed5b5eb61f41c80a495c347d4d825" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1a967ed5b5eb61f41c80a495c347d4d825" kindref="member">DiskHalo</ref>();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="class_disk_halo_1a08890e60645b6ac133b892e5e9cae817" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1a08890e60645b6ac133b892e5e9cae817" kindref="member">DiskHalo</ref>(<ref refid="_spherical_s_l_8_h_1a14dbfa24326bd24607c4a8f13b181fe5" kindref="member">SphericalSLptr</ref><sp/><ref refid="class_disk_halo_1af8ff0dbb1f05d6fbd3bb568d3355aa62" kindref="member">expandh</ref>,<sp/><ref refid="_emp_cyl_s_l_8_h_1aa0ef74652fa64c2615c9ff54a5d9e8e2" kindref="member">EmpCylSLptr</ref><sp/><ref refid="class_disk_halo_1a19b6e717b6fa153ab4667ff08c5a7292" kindref="member">expandd</ref>,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>H,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DMass,<sp/>std::string<sp/>maptype,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aeec5dcba963c3f5c4e0f579a61c133aa" kindref="member">DF</ref>=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DIVERGE=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DIVERGE_RFAC=1.0,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7" kindref="member">DiskGenType</ref><sp/><ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>=<ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7af632b5b63f510e67172781e47c4618df" kindref="member">Asymmetric</ref>);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="class_disk_halo_1a2914cb9f30e78d32db7bda12290b5f15" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1a2914cb9f30e78d32db7bda12290b5f15" kindref="member">DiskHalo</ref>(<ref refid="_spherical_s_l_8_h_1a14dbfa24326bd24607c4a8f13b181fe5" kindref="member">SphericalSLptr</ref><sp/>haloexp,<sp/><ref refid="_emp_cyl_s_l_8_h_1aa0ef74652fa64c2615c9ff54a5d9e8e2" kindref="member">EmpCylSLptr</ref><sp/>diskexp,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>H,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DMass,<sp/>std::string<sp/>maptype,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filename1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DIVERGE,<sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DIVERGE_RFAC,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filename2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DIVERGE2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DIVERGE_RFAC2,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7" kindref="member">DiskGenType</ref><sp/><ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>=<ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7af632b5b63f510e67172781e47c4618df" kindref="member">Asymmetric</ref>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="class_disk_halo_1ac66b266a337d735c5f274c7ce690b427" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1ac66b266a337d735c5f274c7ce690b427" kindref="member">DiskHalo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo" kindref="compound">DiskHalo</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="class_disk_halo_1ad5b73cf365de8a78874dc3f797ac7036" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1ad5b73cf365de8a78874dc3f797ac7036" kindref="member">~DiskHalo</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="class_disk_halo_1a31f4c09a27f2611a64d0cc35fb52a274" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a31f4c09a27f2611a64d0cc35fb52a274" kindref="member">set_halo</ref>(vector&lt;Particle&gt;&amp;<sp/>phalo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nhalo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npart);</highlight></codeline>
+<codeline lineno="266" refid="class_disk_halo_1a89e916e7288b0eb9602d29947a32f3d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a89e916e7288b0eb9602d29947a32f3d5" kindref="member">set_halo_coordinates</ref>(vector&lt;Particle&gt;&amp;<sp/>phalo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nhalo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npart);</highlight></codeline>
+<codeline lineno="267" refid="class_disk_halo_1a4a283558b830368a20ea38c1baf56ae8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a4a283558b830368a20ea38c1baf56ae8" kindref="member">set_disk_coordinates</ref>(vector&lt;Particle&gt;&amp;<sp/>pdisk,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndisk,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npart);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="class_disk_halo_1ad55594d03d945e015539e141f8455733" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ad55594d03d945e015539e141f8455733" kindref="member">set_halo_table_single</ref>(vector&lt;Particle&gt;&amp;<sp/>phalo);</highlight></codeline>
+<codeline lineno="270" refid="class_disk_halo_1a528b2213397b8176ae83783ab6fe3655" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a528b2213397b8176ae83783ab6fe3655" kindref="member">set_halo_table_multi</ref><sp/>(vector&lt;Particle&gt;&amp;<sp/>phalo);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="class_disk_halo_1a9f0ea7490629b857c57fbb12cc6db161" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a9f0ea7490629b857c57fbb12cc6db161" kindref="member">set_pos_origin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>z)<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1ae21e949ca3cb96f7be9be2321cd25698" kindref="member">center_pos</ref>[0]<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1ae21e949ca3cb96f7be9be2321cd25698" kindref="member">center_pos</ref>[1]<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1ae21e949ca3cb96f7be9be2321cd25698" kindref="member">center_pos</ref>[2]<sp/>=<sp/>z;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="class_disk_halo_1afb9cde783f0f6819ae9e8b4ed2e0af74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1afb9cde783f0f6819ae9e8b4ed2e0af74" kindref="member">set_vel_origin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>z)<sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a07ef76d6c4dac9992219acb4d68d8ebe" kindref="member">center_vel</ref>[0]<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a07ef76d6c4dac9992219acb4d68d8ebe" kindref="member">center_vel</ref>[1]<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_disk_halo_1a07ef76d6c4dac9992219acb4d68d8ebe" kindref="member">center_vel</ref>[2]<sp/>=<sp/>z;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="class_disk_halo_1a2b2adba7a7e57d38db73274770fc9c59" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a2b2adba7a7e57d38db73274770fc9c59" kindref="member">get_hpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="class_disk_halo_1a1063e3162c7a27ae25ec238a2508c1de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a1063e3162c7a27ae25ec238a2508c1de" kindref="member">get_dpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="class_disk_halo_1a2b3057d43acae935b50088810227480c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a2b3057d43acae935b50088810227480c" kindref="member">get_hdpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="class_disk_halo_1aa6dfeb288029b4390db309ebee76285b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1aa6dfeb288029b4390db309ebee76285b" kindref="member">get_ddpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="class_disk_halo_1ad17e4cf6a093ebe42103d07ec2f9ff77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ad17e4cf6a093ebe42103d07ec2f9ff77" kindref="member">deri_pot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="class_disk_halo_1a939375d80ff750160070621f6367a8ec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a939375d80ff750160070621f6367a8ec" kindref="member">deri_pot_disk</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="class_disk_halo_1a05ee53071936efdda61ae178b4c91013" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a05ee53071936efdda61ae178b4c91013" kindref="member">deri_pot_halo</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="class_disk_halo_1a04db80770e471ab63ffc87179afa81e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a04db80770e471ab63ffc87179afa81e0" kindref="member">disk_eval</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;fr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;fz,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;fp);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="class_disk_halo_1a6b0c9e2c209e56d0eea28b5fca203e8f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6b0c9e2c209e56d0eea28b5fca203e8f" kindref="member">epi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="class_disk_halo_1a5d9768a3c81784c15caa5c2c9c19a331" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a5d9768a3c81784c15caa5c2c9c19a331" kindref="member">table_disk</ref>(vector&lt;Particle&gt;&amp;<sp/>part);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="class_disk_halo_1ab7e59c8984171fd64f832ce6af568c6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ab7e59c8984171fd64f832ce6af568c6c" kindref="member">vz_disp2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="class_disk_halo_1a9e368c3397604f8b491fb536f48b9e80" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a9e368c3397604f8b491fb536f48b9e80" kindref="member">vr_disp2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="class_disk_halo_1a498dc3c45898c51270bbe9c6b48d5e45" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a498dc3c45898c51270bbe9c6b48d5e45" kindref="member">a_drift</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="class_disk_halo_1afcd53163c0b27571599370db80c02987" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1afcd53163c0b27571599370db80c02987" kindref="member">vp_disp2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="class_disk_halo_1a07a4917e58daf565082f1dfd49bdbaa5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a07a4917e58daf565082f1dfd49bdbaa5" kindref="member">v_circ</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="class_disk_halo_1a42c06af7d29efb58b5f417a29234194b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a42c06af7d29efb58b5f417a29234194b" kindref="member">set_vel_disk</ref>(vector&lt;Particle&gt;&amp;<sp/>part);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="class_disk_halo_1acfc5d54d530620a385328bfa97a012f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1acfc5d54d530620a385328bfa97a012f7" kindref="member">table_halo</ref>(vector&lt;Particle&gt;&amp;<sp/>part);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="class_disk_halo_1a174215c0e2148caf208ac7e4ba3e4928" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a174215c0e2148caf208ac7e4ba3e4928" kindref="member">get_disp</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zp);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="class_disk_halo_1adad758940b44be5a3022c72b12fae5ef" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1adad758940b44be5a3022c72b12fae5ef" kindref="member">set_vel_halo</ref>(vector&lt;Particle&gt;&amp;<sp/>part);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325" refid="class_disk_halo_1a371da444e51e432f0412104156a4cd85" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a371da444e51e432f0412104156a4cd85" kindref="member">write_file</ref>(ostream<sp/>&amp;fou,<sp/>vector&lt;Particle&gt;&amp;<sp/>part);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="class_disk_halo_1a62c375ae24d2db9b0286bc05c845e8f3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a62c375ae24d2db9b0286bc05c845e8f3" kindref="member">virial_ratio</ref>(vector&lt;Particle&gt;&amp;<sp/>hpart,<sp/>vector&lt;Particle&gt;&amp;<sp/>dpart);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="class_disk_halo_1ad88d6fe1c7f1a8d6bc4d5a379b3cec73" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1ad88d6fe1c7f1a8d6bc4d5a379b3cec73" kindref="member">virial_ratio</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="class_disk_halo_1a2c7f95bed1c38adab0bd399587191e7d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a2c7f95bed1c38adab0bd399587191e7d" kindref="member">zero_com</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val)<sp/>{<sp/><ref refid="class_disk_halo_1a34b17e5f5dfd9421b062d296b7838762" kindref="member">com</ref><sp/>=<sp/>val;<sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="class_disk_halo_1a6535ae97cef5deb742c066015280ebdb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6535ae97cef5deb742c066015280ebdb" kindref="member">zero_cov</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val)<sp/>{<sp/><ref refid="class_disk_halo_1aaaab422ba80a90be3ccef7167b0d1512" kindref="member">cov</ref><sp/>=<sp/>val;<sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335" refid="class_disk_halo_1a6cb42802fb69e0381c8d9476add9ba80" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a6cb42802fb69e0381c8d9476add9ba80" kindref="member">profile</ref>(std::ostream<sp/>&amp;rotfile,<sp/>vector&lt;Particle&gt;&amp;<sp/>dpart,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numr);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="class_disk_halo_1a97d2c89cc3f75574e52b5ce67983c9eb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_halo_1a97d2c89cc3f75574e52b5ce67983c9eb" kindref="member">disk_model</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;modfile);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="341" refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_halo_1ac427edb5013419bc746bc425e7a536b7" kindref="member">DiskGenType</ref><sp/><ref refid="class_disk_halo_1ab9fee88921608c7d1d488202a4302cab" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H"/>
+  </compounddef>
+</doxygen>

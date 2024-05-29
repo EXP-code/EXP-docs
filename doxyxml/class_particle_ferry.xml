@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_particle_ferry" kind="class" language="C++" prot="public">
+    <compoundname>ParticleFerry</compoundname>
+    <includes refid="_particle_ferry_8_h" local="no">ParticleFerry.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_particle_ferry_1a9b1df17fe39d32a0c918a535e0b00171" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt;char&gt; ParticleFerry::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <qualifiedname>ParticleFerry::buf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="20" column="15" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a2766c3d4d30e9f2da84dcf72a37afc58" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned ParticleFerry::bufpos</definition>
+        <argsstring></argsstring>
+        <name>bufpos</name>
+        <qualifiedname>ParticleFerry::bufpos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="22" column="12" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a48c119b69b5f548e4dbe87f3989ade7d" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ParticleFerry::bufsiz</definition>
+        <argsstring></argsstring>
+        <name>bufsiz</name>
+        <qualifiedname>ParticleFerry::bufsiz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="19" column="10" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_particle_ferry_1abfab74b8ba486afa91e757074b8d5a94" compoundref="_particle_ferry_8_h" startline="60" endline="60">getBufsize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a134bfcd88436c94804d24c3d244b267e" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned ParticleFerry::ibufcount</definition>
+        <argsstring></argsstring>
+        <name>ibufcount</name>
+        <qualifiedname>ParticleFerry::ibufcount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="22" column="19" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a7170c3f77b954e66c7a92033a671aaa4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFerry::idxpos</definition>
+        <argsstring></argsstring>
+        <name>idxpos</name>
+        <qualifiedname>ParticleFerry::idxpos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="25" column="22" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a3d59cc67a8834ae723ffe5676facffc0" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned ParticleFerry::itotcount</definition>
+        <argsstring></argsstring>
+        <name>itotcount</name>
+        <qualifiedname>ParticleFerry::itotcount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="22" column="29" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a085af18de974b3d75bd80023d39b6e53" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFerry::keypos</definition>
+        <argsstring></argsstring>
+        <name>keypos</name>
+        <qualifiedname>ParticleFerry::keypos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="25" column="7" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a786643ea2e4b606db70b01996b823f83" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFerry::ndmax</definition>
+        <argsstring></argsstring>
+        <name>ndmax</name>
+        <qualifiedname>ParticleFerry::ndmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="18" column="13" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a8da9f51543b67b0891bc1888b0d0c96e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFerry::nimax</definition>
+        <argsstring></argsstring>
+        <name>nimax</name>
+        <qualifiedname>ParticleFerry::nimax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="18" column="7" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_ferry_1a4174e6cd52ab29e704fcc74177bfb52e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFerry::treepos</definition>
+        <argsstring></argsstring>
+        <name>treepos</name>
+        <qualifiedname>ParticleFerry::treepos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="25" column="14" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_particle_ferry_1a4e5f03c1fd509974fd8e1bc7e3303f3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::BufferRecv</definition>
+        <argsstring>()</argsstring>
+        <name>BufferRecv</name>
+        <qualifiedname>ParticleFerry::BufferRecv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="28" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1ae9b995e951a15078a2c2a473abc90a01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::BufferSend</definition>
+        <argsstring>()</argsstring>
+        <name>BufferSend</name>
+        <qualifiedname>ParticleFerry::BufferSend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="27" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1a3e0cc48d7e45755d0913f48b0913b22f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::particleBufInit</definition>
+        <argsstring>()</argsstring>
+        <name>particleBufInit</name>
+        <qualifiedname>ParticleFerry::particleBufInit</qualifiedname>
+        <briefdescription>
+<para>Determine size of buffer needed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="31" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_particle_ferry_1abfab74b8ba486afa91e757074b8d5a94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ParticleFerry::getBufsize</definition>
+        <argsstring>()</argsstring>
+        <name>getBufsize</name>
+        <qualifiedname>ParticleFerry::getBufsize</qualifiedname>
+        <briefdescription>
+<para>Size needed for a single particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="60" column="10" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="60" bodyend="60"/>
+        <references refid="class_particle_ferry_1a48c119b69b5f548e4dbe87f3989ade7d" compoundref="_particle_ferry_8_h" startline="19">bufsiz</references>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1afcfcd2fc8e4f3b63286f6500ecba435c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParticleFerry::ParticleFerry</definition>
+        <argsstring>(int nimax, int ndmax)</argsstring>
+        <name>ParticleFerry</name>
+        <qualifiedname>ParticleFerry::ParticleFerry</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nimax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndmax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="36" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1aeb928058fd99d1070c8abd44cb509949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::particlePack</definition>
+        <argsstring>(PartPtr in, char *buffer)</argsstring>
+        <name>particlePack</name>
+        <qualifiedname>ParticleFerry::particlePack</qualifiedname>
+        <param>
+          <type><ref refid="include_2_particle_8_h_1a039a67a69386088763cbab97ec0c5f03" kindref="member">PartPtr</ref></type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Pack particle into buffer. Caller provides buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="42" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1aae73e8ee1a6f5ec6148f2f63d05a0d80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::particleUnpack</definition>
+        <argsstring>(PartPtr out, char *buffer)</argsstring>
+        <name>particleUnpack</name>
+        <qualifiedname>ParticleFerry::particleUnpack</qualifiedname>
+        <param>
+          <type><ref refid="include_2_particle_8_h_1a039a67a69386088763cbab97ec0c5f03" kindref="member">PartPtr</ref></type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Unpack buffer into particle. Caller provides buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="45" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1a56c22b187bffd63dafe52e543b9e6c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="include_2_particle_8_h_1a039a67a69386088763cbab97ec0c5f03" kindref="member">PartPtr</ref></type>
+        <definition>PartPtr ParticleFerry::RecvParticle</definition>
+        <argsstring>()</argsstring>
+        <name>RecvParticle</name>
+        <qualifiedname>ParticleFerry::RecvParticle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="56" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1a216878dcd10a3d40e6b94a667733aa8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::SendParticle</definition>
+        <argsstring>(PartPtr part)</argsstring>
+        <name>SendParticle</name>
+        <qualifiedname>ParticleFerry::SendParticle</qualifiedname>
+        <param>
+          <type><ref refid="include_2_particle_8_h_1a039a67a69386088763cbab97ec0c5f03" kindref="member">PartPtr</ref></type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send and receive particles. Uses <ref refid="class_particle_ferry" kindref="compound">ParticleFerry</ref> internally maintained buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="54" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1a64420347f8ebb09f0f0e0a5068debf05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFerry::ShipParticles</definition>
+        <argsstring>(unsigned to, unsigned from, unsigned &amp;total)</argsstring>
+        <name>ShipParticles</name>
+        <qualifiedname>ParticleFerry::ShipParticles</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>unsigned &amp;</type>
+          <declname>total</declname>
+        </param>
+        <briefdescription>
+<para>Send message to receiver: get ready for bulk shipment of particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="48" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_ferry_1ac24a7d926c9de17e112a01d2c4278412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParticleFerry::~ParticleFerry</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleFerry</name>
+        <qualifiedname>ParticleFerry::~ParticleFerry</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="39" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>For interprocess communication, need static structure for MPI mapping </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/src/ParticleFerry.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/src/ParticleFerry.H" bodystart="15" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_particle_ferry_1a9b1df17fe39d32a0c918a535e0b00171" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>buf</name></member>
+      <member refid="class_particle_ferry_1a4e5f03c1fd509974fd8e1bc7e3303f3b" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>BufferRecv</name></member>
+      <member refid="class_particle_ferry_1ae9b995e951a15078a2c2a473abc90a01" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>BufferSend</name></member>
+      <member refid="class_particle_ferry_1a2766c3d4d30e9f2da84dcf72a37afc58" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>bufpos</name></member>
+      <member refid="class_particle_ferry_1a48c119b69b5f548e4dbe87f3989ade7d" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>bufsiz</name></member>
+      <member refid="class_particle_ferry_1abfab74b8ba486afa91e757074b8d5a94" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>getBufsize</name></member>
+      <member refid="class_particle_ferry_1a134bfcd88436c94804d24c3d244b267e" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>ibufcount</name></member>
+      <member refid="class_particle_ferry_1a7170c3f77b954e66c7a92033a671aaa4" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>idxpos</name></member>
+      <member refid="class_particle_ferry_1a3d59cc67a8834ae723ffe5676facffc0" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>itotcount</name></member>
+      <member refid="class_particle_ferry_1a085af18de974b3d75bd80023d39b6e53" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>keypos</name></member>
+      <member refid="class_particle_ferry_1a786643ea2e4b606db70b01996b823f83" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>ndmax</name></member>
+      <member refid="class_particle_ferry_1a8da9f51543b67b0891bc1888b0d0c96e" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>nimax</name></member>
+      <member refid="class_particle_ferry_1a3e0cc48d7e45755d0913f48b0913b22f" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>particleBufInit</name></member>
+      <member refid="class_particle_ferry_1afcfcd2fc8e4f3b63286f6500ecba435c" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>ParticleFerry</name></member>
+      <member refid="class_particle_ferry_1aeb928058fd99d1070c8abd44cb509949" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>particlePack</name></member>
+      <member refid="class_particle_ferry_1aae73e8ee1a6f5ec6148f2f63d05a0d80" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>particleUnpack</name></member>
+      <member refid="class_particle_ferry_1a56c22b187bffd63dafe52e543b9e6c28" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>RecvParticle</name></member>
+      <member refid="class_particle_ferry_1a216878dcd10a3d40e6b94a667733aa8d" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>SendParticle</name></member>
+      <member refid="class_particle_ferry_1a64420347f8ebb09f0f0e0a5068debf05" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>ShipParticles</name></member>
+      <member refid="class_particle_ferry_1a4174e6cd52ab29e704fcc74177bfb52e" prot="private" virt="non-virtual"><scope>ParticleFerry</scope><name>treepos</name></member>
+      <member refid="class_particle_ferry_1ac24a7d926c9de17e112a01d2c4278412" prot="public" virt="non-virtual"><scope>ParticleFerry</scope><name>~ParticleFerry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_disk_eval" kind="class" language="C++" prot="public">
+    <compoundname>DiskEval</compoundname>
+    <includes refid="_disk_eval_8_h" local="no">DiskEval.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiskEval::ascl</definition>
+        <argsstring></argsstring>
+        <name>ascl</name>
+        <qualifiedname>DiskEval::ascl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="77" column="23" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_disk_eval_1ae661096778110e8d4c90fdad7e8d0130" compoundref="_disk_eval_8_h" startline="133" endline="136">dr_to_dx</referencedby>
+        <referencedby refid="class_disk_eval_1a65550808b09515ef148580f1fb1af8e5" compoundref="_disk_eval_8_h" startline="128" endline="131">r_to_x</referencedby>
+        <referencedby refid="class_disk_eval_1af527e5bb033d5f040b59b43146555752" compoundref="_disk_eval_8_h" startline="123" endline="126">x_to_r</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1aa7d9f20640072144f3ccbe2793127a8c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiskEval::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <qualifiedname>DiskEval::dx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="77" column="20" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a1c00adcc1cdda792a4a77dca8fe5e274" prot="private" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned DiskEval::hmagic</definition>
+        <argsstring></argsstring>
+        <name>hmagic</name>
+        <qualifiedname>DiskEval::hmagic</qualifiedname>
+        <initializer>= 0x57ee1ed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="141" column="18" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a07a14f99df80b07aca77ef70cb362a15" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DiskEval::lmax</definition>
+        <argsstring></argsstring>
+        <name>lmax</name>
+        <qualifiedname>DiskEval::lmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="78" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a4d7b296868f95b0c7008cbde2779ba25" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DiskEval::logr</definition>
+        <argsstring></argsstring>
+        <name>logr</name>
+        <qualifiedname>DiskEval::logr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="79" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a3ffe9dfcbe9afcc38ce44d6844d2067d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_emp_cyl_s_l_1a686c18b7deb23a96b0608d96a7d13164" kindref="member">EmpCylSL::AxiDiskPtr</ref></type>
+        <definition>EmpCylSL::AxiDiskPtr DiskEval::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>DiskEval::model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="76" column="24" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a17099b805a674d5327d11a93b8ee7487" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DiskEval::numr</definition>
+        <argsstring></argsstring>
+        <name>numr</name>
+        <qualifiedname>DiskEval::numr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="78" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a6478dc29d714013eb6ae122dd5d2f725" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; std::vector&lt;double&gt; &gt; &gt; DiskEval::rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <qualifiedname>DiskEval::rho</qualifiedname>
+        <briefdescription>
+<para>Rho(l, r), Term1(l, r), Term2(l, r) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rho(l, m, r), Term1(l, m, r), Term2(l, m, r) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="87" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1ad9a6d11cf445bc90b38854568c1d0e56" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; std::vector&lt;double&gt; &gt; &gt; DiskEval::T1</definition>
+        <argsstring></argsstring>
+        <name>T1</name>
+        <qualifiedname>DiskEval::T1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="87" column="19" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1ab0ae8955161880282a16bf606ad9c363" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; std::vector&lt;double&gt; &gt; &gt; DiskEval::T2</definition>
+        <argsstring></argsstring>
+        <name>T2</name>
+        <qualifiedname>DiskEval::T2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="87" column="22" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a50f747dbf3e409c37c424ec15fe7b060" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiskEval::xmax</definition>
+        <argsstring></argsstring>
+        <name>xmax</name>
+        <qualifiedname>DiskEval::xmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="77" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a1f0cd262d36bc29dde3e42efc1f471d8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiskEval::xmin</definition>
+        <argsstring></argsstring>
+        <name>xmin</name>
+        <qualifiedname>DiskEval::xmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_eval_1a2371913d523ac9a51d9a66bdbf677566" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DiskEval::xscl</definition>
+        <argsstring></argsstring>
+        <name>xscl</name>
+        <qualifiedname>DiskEval::xscl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="79" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_disk_eval_1ad9c11dc30d6bbf9c7466e758e5365394" prot="private" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string DiskEval::cachefile</definition>
+        <argsstring></argsstring>
+        <name>cachefile</name>
+        <qualifiedname>DiskEval::cachefile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="81" column="28" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_disk_eval_1ae661096778110e8d4c90fdad7e8d0130" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::dr_to_dx</definition>
+        <argsstring>(double x)</argsstring>
+        <name>dr_to_dx</name>
+        <qualifiedname>DiskEval::dr_to_dx</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="133" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="133" bodyend="136"/>
+        <references refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" compoundref="_disk_eval_8_h" startline="77">ascl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::Nlm</definition>
+        <argsstring>(int l, int m)</argsstring>
+        <name>Nlm</name>
+        <qualifiedname>DiskEval::Nlm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Ylm angular factors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="91" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="91" bodyend="95"/>
+        <referencedby refid="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" compoundref="_disk_eval_8_h" startline="99" endline="107">Ylm</referencedby>
+        <referencedby refid="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" compoundref="_disk_eval_8_h" startline="110" endline="121">Zlm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1a65550808b09515ef148580f1fb1af8e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::r_to_x</definition>
+        <argsstring>(double r)</argsstring>
+        <name>r_to_x</name>
+        <qualifiedname>DiskEval::r_to_x</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="128" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="128" bodyend="131"/>
+        <references refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" compoundref="_disk_eval_8_h" startline="77">ascl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1a0a0a51858a2446b97e37a077edb26ea8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DiskEval::read_cache</definition>
+        <argsstring>()</argsstring>
+        <name>read_cache</name>
+        <qualifiedname>DiskEval::read_cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="138" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1aea106478a15d4b33c66e65a4d7b272fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DiskEval::write_cache</definition>
+        <argsstring>()</argsstring>
+        <name>write_cache</name>
+        <qualifiedname>DiskEval::write_cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="139" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1af527e5bb033d5f040b59b43146555752" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::x_to_r</definition>
+        <argsstring>(double x)</argsstring>
+        <name>x_to_r</name>
+        <qualifiedname>DiskEval::x_to_r</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="123" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="123" bodyend="126"/>
+        <references refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" compoundref="_disk_eval_8_h" startline="77">ascl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::Ylm</definition>
+        <argsstring>(int l, int m, double cosx)</argsstring>
+        <name>Ylm</name>
+        <qualifiedname>DiskEval::Ylm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cosx</declname>
+        </param>
+        <briefdescription>
+<para>Ylm evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="99" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="99" bodyend="107"/>
+        <references refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" compoundref="_disk_eval_8_h" startline="91" endline="95">Nlm</references>
+        <references refid="_disk_eval_8_h_1aa779218c2cd573c2cb55bb571cd42329">plgndr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double DiskEval::Zlm</definition>
+        <argsstring>(int l, int m, double cosx)</argsstring>
+        <name>Zlm</name>
+        <qualifiedname>DiskEval::Zlm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cosx</declname>
+        </param>
+        <briefdescription>
+<para>Partial derivative of Ylm in theta. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="110" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="110" bodyend="121"/>
+        <references refid="_disk_eval_8_h_1a8ed48869a8e12ee6a57c5387755e58fa">dplgndr</references>
+        <references refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" compoundref="_disk_eval_8_h" startline="91" endline="95">Nlm</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_disk_eval_1a975ea4ad5d850beb4eb93b82db93dc9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DiskEval::DiskEval</definition>
+        <argsstring>(EmpCylSL::AxiDiskPtr model, double rmin, double rmax, double ascl, int lmax, int numr, int nint, bool progress=true, int mmax=1, int nump=1, bool cache=true)</argsstring>
+        <name>DiskEval</name>
+        <qualifiedname>DiskEval::DiskEval</qualifiedname>
+        <param>
+          <type><ref refid="class_emp_cyl_s_l_1a686c18b7deb23a96b0608d96a7d13164" kindref="member">EmpCylSL::AxiDiskPtr</ref></type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ascl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nint</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>progress</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mmax</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nump</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cache</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="146" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_eval_1ab44b19c6418969bc1555ce63b74a1cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; double, double, double, double &gt;</type>
+        <definition>std::tuple&lt; double, double, double, double &gt; DiskEval::operator()</definition>
+        <argsstring>(double R, double z, double phi=0)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>DiskEval::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Evaluation where the return tuple is potential, dPhi/dR, dPhi/dz, dPhi/dphi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="150" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Compute the axisymmetric force of a three-dimensional disk density using the multipole expansion</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the target model for potential computation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the minimum radius for potential evaluation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radius for potential evaluation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ascl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the scale radius for maping r to the unit interval. This is only used if ascl&gt;0, otherwise it is linear if rmin=0 or logarithmic if rmin&gt;0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum order of the spherical harmonics </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of grid points in the radial table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of quadrature knots for the x=cos(theta) integral @parm progress set to true prints a progress bar</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>{Mathematics}</para>
+</simplesect>
+Using the standard multipole formula  <formula id="113">\[
+\Phi(\mathbf{r}) = -4\pi G \sum_{lm} Y_{lm}(\mathbf{\Omega})
+\left[
+\frac{1}{r^{l+1}}\int_0^r da a^{l+2}\rho_{lm}(a) +
+r^l\int_r^{\infty} da \frac{\rho_{lm}(a)}{a^{l-1}}
+\right]
+\]</formula> where  <formula id="114">\[
+\rho_{lm} = \int d\mathbf{\Omega}Y_{lm}(\mathbf{\Omega}) \rho(\mathbf{r}).
+\]</formula></para>
+<para>The forces follow by analytic differentiation. Specifically, the forces follows by differentiation of <formula id="85">$\Phi(\mathbf{r})$</formula> with respect to <formula id="86">$r$</formula> and <formula id="87">$\theta$</formula> where:  <formula id="115">\[
+F_R = -\frac{\partial\Phi}{\partial r} \frac{R}{r} - 
+\frac{\partial\Phi}{\partial\theta} \frac{z}{r^2}
+\]</formula> and  <formula id="116">\[
+F_z = -\frac{\partial\Phi}{\partial r} \frac{z}{r} +
+\frac{\partial\Phi}{\partial\theta} \frac{R}{r^2}
+\]</formula> </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="73" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" bodystart="74" bodyend="152"/>
+    <listofallmembers>
+      <member refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>ascl</name></member>
+      <member refid="class_disk_eval_1ad9c11dc30d6bbf9c7466e758e5365394" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>cachefile</name></member>
+      <member refid="class_disk_eval_1a975ea4ad5d850beb4eb93b82db93dc9f" prot="public" virt="non-virtual"><scope>DiskEval</scope><name>DiskEval</name></member>
+      <member refid="class_disk_eval_1ae661096778110e8d4c90fdad7e8d0130" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>dr_to_dx</name></member>
+      <member refid="class_disk_eval_1aa7d9f20640072144f3ccbe2793127a8c" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>dx</name></member>
+      <member refid="class_disk_eval_1a1c00adcc1cdda792a4a77dca8fe5e274" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>hmagic</name></member>
+      <member refid="class_disk_eval_1a07a14f99df80b07aca77ef70cb362a15" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>lmax</name></member>
+      <member refid="class_disk_eval_1a4d7b296868f95b0c7008cbde2779ba25" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>logr</name></member>
+      <member refid="class_disk_eval_1a3ffe9dfcbe9afcc38ce44d6844d2067d" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>model</name></member>
+      <member refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>Nlm</name></member>
+      <member refid="class_disk_eval_1a17099b805a674d5327d11a93b8ee7487" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>numr</name></member>
+      <member refid="class_disk_eval_1ab44b19c6418969bc1555ce63b74a1cea" prot="public" virt="non-virtual"><scope>DiskEval</scope><name>operator()</name></member>
+      <member refid="class_disk_eval_1a65550808b09515ef148580f1fb1af8e5" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>r_to_x</name></member>
+      <member refid="class_disk_eval_1a0a0a51858a2446b97e37a077edb26ea8" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>read_cache</name></member>
+      <member refid="class_disk_eval_1a6478dc29d714013eb6ae122dd5d2f725" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>rho</name></member>
+      <member refid="class_disk_eval_1ad9a6d11cf445bc90b38854568c1d0e56" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>T1</name></member>
+      <member refid="class_disk_eval_1ab0ae8955161880282a16bf606ad9c363" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>T2</name></member>
+      <member refid="class_disk_eval_1aea106478a15d4b33c66e65a4d7b272fe" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>write_cache</name></member>
+      <member refid="class_disk_eval_1af527e5bb033d5f040b59b43146555752" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>x_to_r</name></member>
+      <member refid="class_disk_eval_1a50f747dbf3e409c37c424ec15fe7b060" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>xmax</name></member>
+      <member refid="class_disk_eval_1a1f0cd262d36bc29dde3e42efc1f471d8" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>xmin</name></member>
+      <member refid="class_disk_eval_1a2371913d523ac9a51d9a66bdbf677566" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>xscl</name></member>
+      <member refid="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>Ylm</name></member>
+      <member refid="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" prot="private" virt="non-virtual"><scope>DiskEval</scope><name>Zlm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_ndisk" kind="class" language="C++" prot="public">
+    <compoundname>MNdisk</compoundname>
+    <basecompoundref refid="class_emp_cyl_s_l_1_1_axi_disk" prot="public" virt="non-virtual">EmpCylSL::AxiDisk</basecompoundref>
+    <includes refid="_disk_models_8_h" local="no">DiskModels.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_ndisk_1a6173104bbac743368588c8057ee7e72b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MNdisk::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <qualifiedname>MNdisk::a</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskModels.H" line="179" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskModels.H" bodystart="179" bodyend="-1"/>
+        <referencedby refid="class_m_ndisk_1a4a9fb4f3d860c03e500f35a4979d6179" compoundref="_disk_models_8_h" startline="183" endline="188">MNdisk</referencedby>
+        <referencedby refid="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe" compoundref="_disk_models_8_h" startline="190" endline="196">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_ndisk_1a6139c74d96cc745363923f4581070897" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MNdisk::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>MNdisk::h</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskModels.H" line="179" column="12" bodyfile="/home/weinberg/Projects/EXP/include/DiskModels.H" bodystart="179" bodyend="-1"/>
+        <referencedby refid="class_m_ndisk_1a4a9fb4f3d860c03e500f35a4979d6179" compoundref="_disk_models_8_h" startline="183" endline="188">MNdisk</referencedby>
+        <referencedby refid="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe" compoundref="_disk_models_8_h" startline="190" endline="196">operator()</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_ndisk_1a4a9fb4f3d860c03e500f35a4979d6179" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MNdisk::MNdisk</definition>
+        <argsstring>(double a, double h, double M=1)</argsstring>
+        <name>MNdisk</name>
+        <qualifiedname>MNdisk::MNdisk</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>M</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskModels.H" line="183" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DiskModels.H" bodystart="183" bodyend="188"/>
+        <references refid="class_m_ndisk_1a6173104bbac743368588c8057ee7e72b" compoundref="_disk_models_8_h" startline="179">a</references>
+        <references refid="class_m_ndisk_1a6139c74d96cc745363923f4581070897" compoundref="_disk_models_8_h" startline="179">h</references>
+        <references refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" compoundref="_emp_cyl_s_l_8_h" startline="367">EmpCylSL::AxiDisk::params</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double MNdisk::operator()</definition>
+        <argsstring>(double R, double z, double phi=0.)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MNdisk::operator()</qualifiedname>
+        <reimplements refid="class_emp_cyl_s_l_1_1_axi_disk_1a1ed84b13e59c6571fd49aeb90c452675">operator()</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+<para>Density function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskModels.H" line="190" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskModels.H" bodystart="190" bodyend="196"/>
+        <references refid="class_m_ndisk_1a6173104bbac743368588c8057ee7e72b" compoundref="_disk_models_8_h" startline="179">a</references>
+        <references refid="class_m_ndisk_1a6139c74d96cc745363923f4581070897" compoundref="_disk_models_8_h" startline="179">h</references>
+        <references refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" compoundref="_emp_cyl_s_l_8_h" startline="368">EmpCylSL::AxiDisk::M</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Miyamoto-Nagai disk. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EmpCylSL::AxiDisk</label>
+        <link refid="class_emp_cyl_s_l_1_1_axi_disk"/>
+      </node>
+      <node id="1">
+        <label>MNdisk</label>
+        <link refid="class_m_ndisk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EmpCylSL::AxiDisk</label>
+        <link refid="class_emp_cyl_s_l_1_1_axi_disk"/>
+      </node>
+      <node id="1">
+        <label>MNdisk</label>
+        <link refid="class_m_ndisk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/DiskModels.H" line="176" column="1" bodyfile="/home/weinberg/Projects/EXP/include/DiskModels.H" bodystart="177" bodyend="197"/>
+    <listofallmembers>
+      <member refid="class_m_ndisk_1a6173104bbac743368588c8057ee7e72b" prot="private" virt="non-virtual"><scope>MNdisk</scope><name>a</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1a47284137e24ca113e6250992a26d5920" prot="public" virt="non-virtual"><scope>MNdisk</scope><name>AxiDisk</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1ab1aa18251d8ad3196952f490dde2b6cb" prot="public" virt="non-virtual"><scope>MNdisk</scope><name>getID</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1af9114d56b03e52a9a939b091d44f191f" prot="public" virt="non-virtual"><scope>MNdisk</scope><name>getMass</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1a15ec720689676ef218d343bffdc86c2a" prot="public" virt="non-virtual"><scope>MNdisk</scope><name>getParams</name></member>
+      <member refid="class_m_ndisk_1a6139c74d96cc745363923f4581070897" prot="private" virt="non-virtual"><scope>MNdisk</scope><name>h</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1a9f5ac6ec69ca06b68d48b23b6c8c034f" prot="protected" virt="non-virtual"><scope>MNdisk</scope><name>ID</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" prot="protected" virt="non-virtual"><scope>MNdisk</scope><name>M</name></member>
+      <member refid="class_m_ndisk_1a4a9fb4f3d860c03e500f35a4979d6179" prot="public" virt="non-virtual"><scope>MNdisk</scope><name>MNdisk</name></member>
+      <member refid="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe" prot="public" virt="virtual"><scope>MNdisk</scope><name>operator()</name></member>
+      <member refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" prot="protected" virt="non-virtual"><scope>MNdisk</scope><name>params</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

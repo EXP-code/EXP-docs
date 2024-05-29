@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classfoarray" kind="class" language="C++" prot="public">
+    <compoundname>foarray</compoundname>
+    <includes refid="foarray_8_h" local="no">foarray.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfoarray_1ab9fd4c149bd88dc82a0e0a6ae3e98533" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned foarray::fnum</definition>
+        <argsstring></argsstring>
+        <name>fnum</name>
+        <qualifiedname>foarray::fnum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="14" column="12" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classfoarray_1a00dbe5bc427c0cc59cdf36cba11c839c" compoundref="foarray_8_h" startline="18" endline="32">foarray</referencedby>
+        <referencedby refid="classfoarray_1aa628a8f891d5bbca52c2185df626d934" compoundref="foarray_8_h" startline="34" endline="37">~foarray</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classfoarray_1aee0297dd51e58572455503a9a6425fd4" prot="private" static="no" mutable="no">
+        <type>vector&lt; ofstream * &gt;</type>
+        <definition>vector&lt;ofstream*&gt; foarray::fo</definition>
+        <argsstring></argsstring>
+        <name>fo</name>
+        <qualifiedname>foarray::fo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="13" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classfoarray_1a00dbe5bc427c0cc59cdf36cba11c839c" compoundref="foarray_8_h" startline="18" endline="32">foarray</referencedby>
+        <referencedby refid="classfoarray_1a1aed6f4d1e0cda07e609f47e1ff2e8e1" compoundref="foarray_8_h" startline="39" endline="43">operator[]</referencedby>
+        <referencedby refid="classfoarray_1aa628a8f891d5bbca52c2185df626d934" compoundref="foarray_8_h" startline="34" endline="37">~foarray</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfoarray_1a00dbe5bc427c0cc59cdf36cba11c839c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>foarray::foarray</definition>
+        <argsstring>(vector&lt; string &gt; &amp;names, bool append=false)</argsstring>
+        <name>foarray</name>
+        <qualifiedname>foarray::foarray</qualifiedname>
+        <param>
+          <type>vector&lt; string &gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>append</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="18" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="18" bodyend="32"/>
+        <references refid="classfoarray_1ab9fd4c149bd88dc82a0e0a6ae3e98533" compoundref="foarray_8_h" startline="14">fnum</references>
+        <references refid="classfoarray_1aee0297dd51e58572455503a9a6425fd4" compoundref="foarray_8_h" startline="13">fo</references>
+      </memberdef>
+      <memberdef kind="function" id="classfoarray_1a1aed6f4d1e0cda07e609f47e1ff2e8e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ofstream &amp;</type>
+        <definition>ofstream &amp; foarray::operator[]</definition>
+        <argsstring>(int n)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>foarray::operator[]</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="39" column="12" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="39" bodyend="43"/>
+        <references refid="classfoarray_1aee0297dd51e58572455503a9a6425fd4" compoundref="foarray_8_h" startline="13">fo</references>
+      </memberdef>
+      <memberdef kind="function" id="classfoarray_1aa628a8f891d5bbca52c2185df626d934" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>foarray::~foarray</definition>
+        <argsstring>()</argsstring>
+        <name>~foarray</name>
+        <qualifiedname>foarray::~foarray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="34" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="34" bodyend="37"/>
+        <references refid="classfoarray_1ab9fd4c149bd88dc82a0e0a6ae3e98533" compoundref="foarray_8_h" startline="14">fnum</references>
+        <references refid="classfoarray_1aee0297dd51e58572455503a9a6425fd4" compoundref="foarray_8_h" startline="13">fo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" line="10" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/foarray.H" bodystart="11" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classfoarray_1ab9fd4c149bd88dc82a0e0a6ae3e98533" prot="private" virt="non-virtual"><scope>foarray</scope><name>fnum</name></member>
+      <member refid="classfoarray_1aee0297dd51e58572455503a9a6425fd4" prot="private" virt="non-virtual"><scope>foarray</scope><name>fo</name></member>
+      <member refid="classfoarray_1a00dbe5bc427c0cc59cdf36cba11c839c" prot="public" virt="non-virtual"><scope>foarray</scope><name>foarray</name></member>
+      <member refid="classfoarray_1a1aed6f4d1e0cda07e609f47e1ff2e8e1" prot="public" virt="non-virtual"><scope>foarray</scope><name>operator[]</name></member>
+      <member refid="classfoarray_1aa628a8f891d5bbca52c2185df626d934" prot="public" virt="non-virtual"><scope>foarray</scope><name>~foarray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

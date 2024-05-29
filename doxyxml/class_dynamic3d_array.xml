@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_dynamic3d_array" kind="class" language="C++" prot="public">
+    <compoundname>Dynamic3dArray</compoundname>
+    <includes refid="_three_d_grid_8_h" local="no">ThreeDGrid.H</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_dynamic2d_array" kindref="compound">Dynamic2dArray</ref>&lt; T &gt; &gt;</type>
+        <definition>std::vector&lt;Dynamic2dArray&lt;T&gt; &gt; Dynamic3dArray&lt; T &gt;::tArray</definition>
+        <argsstring></argsstring>
+        <name>tArray</name>
+        <qualifiedname>Dynamic3dArray::tArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="125" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_dynamic3d_array_1abc05682e076ed211b4a5b0fc4ff7a364" compoundref="_three_d_grid_8_h" startline="99" endline="103">Dynamic3dArray&lt; T &gt;::Dynamic3dArray</referencedby>
+        <referencedby refid="class_dynamic3d_array_1a114b36e18abf11f118f4ed86ac202c17" compoundref="_three_d_grid_8_h" startline="106" endline="109">Dynamic3dArray&lt; T &gt;::operator[]</referencedby>
+        <referencedby refid="class_dynamic3d_array_1a15b31ba303b483f05add87775a7de056" compoundref="_three_d_grid_8_h" startline="112" endline="115">Dynamic3dArray&lt; T &gt;::operator[]</referencedby>
+        <referencedby refid="class_dynamic3d_array_1a7850770bb999857a61d7652f1954cc98" compoundref="_three_d_grid_8_h" startline="118" endline="122">Dynamic3dArray&lt; T &gt;::resize</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dynamic3d_array_1adfa407aa844be1abcc009f2a879b4d4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dynamic3dArray&lt; T &gt;::Dynamic3dArray</definition>
+        <argsstring>()</argsstring>
+        <name>Dynamic3dArray</name>
+        <qualifiedname>Dynamic3dArray::Dynamic3dArray</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="96" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic3d_array_1abc05682e076ed211b4a5b0fc4ff7a364" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dynamic3dArray&lt; T &gt;::Dynamic3dArray</definition>
+        <argsstring>(int rows, int cols, int levs)</argsstring>
+        <name>Dynamic3dArray</name>
+        <qualifiedname>Dynamic3dArray::Dynamic3dArray</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>levs</declname>
+        </param>
+        <briefdescription>
+<para>Allocation constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="99" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="99" bodyend="103"/>
+        <references refid="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" compoundref="_three_d_grid_8_h" startline="125">Dynamic3dArray&lt; T &gt;::tArray</references>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic3d_array_1a114b36e18abf11f118f4ed86ac202c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_dynamic2d_array" kindref="compound">Dynamic2dArray</ref>&lt; T &gt; &amp;</type>
+        <definition>Dynamic2dArray&lt; T &gt; &amp; Dynamic3dArray&lt; T &gt;::operator[]</definition>
+        <argsstring>(int i)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Dynamic3dArray::operator[]</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Return a Dynamic2DArray reference for first index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="106" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="106" bodyend="109"/>
+        <references refid="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" compoundref="_three_d_grid_8_h" startline="125">Dynamic3dArray&lt; T &gt;::tArray</references>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic3d_array_1a15b31ba303b483f05add87775a7de056" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_dynamic2d_array" kindref="compound">Dynamic2dArray</ref>&lt; T &gt; &amp;</type>
+        <definition>const Dynamic2dArray&lt; T &gt; &amp; Dynamic3dArray&lt; T &gt;::operator[]</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Dynamic3dArray::operator[]</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Return a Dynamic2DArray reference for first index (constant version) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="112" column="25" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="112" bodyend="115"/>
+        <references refid="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" compoundref="_three_d_grid_8_h" startline="125">Dynamic3dArray&lt; T &gt;::tArray</references>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic3d_array_1a7850770bb999857a61d7652f1954cc98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dynamic3dArray&lt; T &gt;::resize</definition>
+        <argsstring>(int rows, int cols, int levs)</argsstring>
+        <name>resize</name>
+        <qualifiedname>Dynamic3dArray::resize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>levs</declname>
+        </param>
+        <briefdescription>
+<para>Resize the three dimentional array . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="118" column="8" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="118" bodyend="122"/>
+        <references refid="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" compoundref="_three_d_grid_8_h" startline="125">Dynamic3dArray&lt; T &gt;::tArray</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Make a three-d wrapper for nested std::vectors. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" line="92" column="1" bodyfile="/home/weinberg/Projects/EXP/include/ThreeDGrid.H" bodystart="93" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_dynamic3d_array_1adfa407aa844be1abcc009f2a879b4d4c" prot="public" virt="non-virtual"><scope>Dynamic3dArray</scope><name>Dynamic3dArray</name></member>
+      <member refid="class_dynamic3d_array_1abc05682e076ed211b4a5b0fc4ff7a364" prot="public" virt="non-virtual"><scope>Dynamic3dArray</scope><name>Dynamic3dArray</name></member>
+      <member refid="class_dynamic3d_array_1a114b36e18abf11f118f4ed86ac202c17" prot="public" virt="non-virtual"><scope>Dynamic3dArray</scope><name>operator[]</name></member>
+      <member refid="class_dynamic3d_array_1a15b31ba303b483f05add87775a7de056" prot="public" virt="non-virtual"><scope>Dynamic3dArray</scope><name>operator[]</name></member>
+      <member refid="class_dynamic3d_array_1a7850770bb999857a61d7652f1954cc98" prot="public" virt="non-virtual"><scope>Dynamic3dArray</scope><name>resize</name></member>
+      <member refid="class_dynamic3d_array_1a74875cb6475c43326f68fd6cbffc2801" prot="private" virt="non-virtual"><scope>Dynamic3dArray</scope><name>tArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

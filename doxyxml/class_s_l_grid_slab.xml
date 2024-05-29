@@ -1,0 +1,1149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_l_grid_slab" kind="class" language="C++" prot="public">
+    <compoundname>SLGridSlab</compoundname>
+    <includes refid="_s_l_grid_m_p2_8_h" local="no">SLGridMP2.H</includes>
+    <innerclass refid="class_s_l_grid_slab_1_1_coord_map" prot="private">SLGridSlab::CoordMap</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_linear_map" prot="private">SLGridSlab::LinearMap</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_sech_map" prot="private">SLGridSlab::SechMap</innerclass>
+    <innerclass refid="class_s_l_grid_slab_1_1_tanh_map" prot="private">SLGridSlab::TanhMap</innerclass>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" prot="private" static="no" strong="no">
+        <type></type>
+        <name>CoordMapTypes</name>
+        <qualifiedname>SLGridSlab::CoordMapTypes</qualifiedname>
+        <enumvalue id="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a28b2a86d2fa2bb19260d6522d5cf45c1" prot="private">
+          <name>Tanh</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a436d25903feb1fffdcd24470cbc321f8" prot="private">
+          <name>Sech</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a888e6a6ba5a4141f687e45b5d4cebf09" prot="private">
+          <name>Linear</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines a class providing selectable maps from the infinite to finite interval </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="295" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_l_grid_slab_1ab2215c5afe2ff65f595055bfba83fdd4" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_table_slab" kindref="compound">TableSlab</ref>[]&gt;</type>
+        <definition>using SLGridSlab::table_ptr_1D =  std::shared_ptr&lt;TableSlab[]&gt;</definition>
+        <argsstring></argsstring>
+        <name>table_ptr_1D</name>
+        <qualifiedname>SLGridSlab::table_ptr_1D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="264" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_s_l_grid_slab_1ab2215c5afe2ff65f595055bfba83fdd4" kindref="member">table_ptr_1D</ref>[]&gt;</type>
+        <definition>using SLGridSlab::table_ptr_2D =  std::shared_ptr&lt;table_ptr_1D[]&gt;</definition>
+        <argsstring></argsstring>
+        <name>table_ptr_2D</name>
+        <qualifiedname>SLGridSlab::table_ptr_2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="265" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="265" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a7051a8f5d3b33a606b0f89545a1515bd" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd SLGridSlab::d0</definition>
+        <argsstring></argsstring>
+        <name>d0</name>
+        <qualifiedname>SLGridSlab::d0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="261" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a721d878a968cdb9098765ebd0c407c50" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::dxi</definition>
+        <argsstring></argsstring>
+        <name>dxi</name>
+        <qualifiedname>SLGridSlab::dxi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="256" column="20" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;CoordMap&gt; SLGridSlab::mM</definition>
+        <argsstring></argsstring>
+        <name>mM</name>
+        <qualifiedname>SLGridSlab::mM</qualifiedname>
+        <briefdescription>
+<para>The current map created by the <ref refid="class_s_l_grid_slab" kindref="compound">SLGridSlab</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="357" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="357" bodyend="-1"/>
+        <referencedby refid="class_s_l_grid_slab_1ac9ca51c7f210c88ca3d50fe7a815864e" compoundref="_s_l_grid_m_p2_8_h" startline="401" endline="401">d_xi_to_z</referencedby>
+        <referencedby refid="class_s_l_grid_slab_1a1c73ea39ff0739ca2e37809553af8438" compoundref="_s_l_grid_m_p2_8_h" startline="398" endline="398">xi_to_z</referencedby>
+        <referencedby refid="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" compoundref="_s_l_grid_m_p2_8_h" startline="395" endline="395">z_to_xi</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a052f43f3e37dfcf1442d63057f09580a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; char[]&gt;</type>
+        <definition>std::shared_ptr&lt;char[]&gt; SLGridSlab::mpi_buf</definition>
+        <argsstring></argsstring>
+        <name>mpi_buf</name>
+        <qualifiedname>SLGridSlab::mpi_buf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="284" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a3ef3dca87ffb4bbb96e254fa6155a86f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::mpi_bufsz</definition>
+        <argsstring></argsstring>
+        <name>mpi_bufsz</name>
+        <qualifiedname>SLGridSlab::mpi_bufsz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="282" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a3139827f842bca00ac61015370863654" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::mpi_myid</definition>
+        <argsstring></argsstring>
+        <name>mpi_myid</name>
+        <qualifiedname>SLGridSlab::mpi_myid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="281" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1ab534b8922203c5bcea6357217520868c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::mpi_numprocs</definition>
+        <argsstring></argsstring>
+        <name>mpi_numprocs</name>
+        <qualifiedname>SLGridSlab::mpi_numprocs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="281" column="16" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a4c4c811937afcbb1336983ef5938436c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>SLGridSlab::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="253" column="12" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a52a55eaff1bec7489b8e94d1adf836d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::numk</definition>
+        <argsstring></argsstring>
+        <name>numk</name>
+        <qualifiedname>SLGridSlab::numk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="253" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1ad821ab70b7b032167ae0f57f3a40c5ba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::numz</definition>
+        <argsstring></argsstring>
+        <name>numz</name>
+        <qualifiedname>SLGridSlab::numz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="253" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a36315e1052acde53d50dd86afed37be8" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd SLGridSlab::p0</definition>
+        <argsstring></argsstring>
+        <name>p0</name>
+        <qualifiedname>SLGridSlab::p0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="260" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" kindref="member">table_ptr_2D</ref></type>
+        <definition>table_ptr_2D SLGridSlab::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <qualifiedname>SLGridSlab::table</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="267" column="16" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="267" bodyend="-1"/>
+        <referencedby refid="class_s_l_grid_slab_1acd9ce2706e9a2449ffe69197945f12e2" compoundref="_s_l_grid_m_p2_8_h" startline="392" endline="392">eigenvalue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a767ebf4ed389cb3c6a23be4308c2cc58" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SLGridSlab::tbdbg</definition>
+        <argsstring></argsstring>
+        <name>tbdbg</name>
+        <qualifiedname>SLGridSlab::tbdbg</qualifiedname>
+        <briefdescription>
+<para>For deep debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="289" column="8" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SLGridSlab::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>SLGridSlab::type</qualifiedname>
+        <briefdescription>
+<para>Model type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="354" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1ab759f5dcb4ee1b351e305bdf3bf1a273" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd SLGridSlab::xi</definition>
+        <argsstring></argsstring>
+        <name>xi</name>
+        <qualifiedname>SLGridSlab::xi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="259" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1af409c189501a0ad14774fda616b57714" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::xmax</definition>
+        <argsstring></argsstring>
+        <name>xmax</name>
+        <qualifiedname>SLGridSlab::xmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="256" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1aa8bd43c9df4464f8f32e658a39098905" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::xmin</definition>
+        <argsstring></argsstring>
+        <name>xmin</name>
+        <qualifiedname>SLGridSlab::xmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="256" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd SLGridSlab::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>SLGridSlab::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="258" column="19" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="258" bodyend="-1"/>
+        <referencedby refid="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" compoundref="_s_l_grid_m_p2_8_h" startline="395" endline="395">z_to_xi</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a1620ef679ef02a7dc88bea3b85eab1cd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::zmax</definition>
+        <argsstring></argsstring>
+        <name>zmax</name>
+        <qualifiedname>SLGridSlab::zmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="254" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="254" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_s_l_grid_slab_1aa6f37f2c77794781b8d850421f47c4f7" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>SLGridSlab::cache</qualifiedname>
+        <briefdescription>
+<para>Check for cached table, default: 1=yes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="365" column="14" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a177ec61236f459a075ac41e36aa7fdc6" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <qualifiedname>SLGridSlab::H</qualifiedname>
+        <briefdescription>
+<para>Scale height, default=0.1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="368" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a63d69efe0f595b49c47cb0edf536c039" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <qualifiedname>SLGridSlab::L</qualifiedname>
+        <briefdescription>
+<para>Periodic box size, default=1.0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="371" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a1d1dca8947ac6171513804c5f44c4e3f" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int SLGridSlab::mpi</definition>
+        <argsstring></argsstring>
+        <name>mpi</name>
+        <qualifiedname>SLGridSlab::mpi</qualifiedname>
+        <briefdescription>
+<para>Global MPI flag, default: 0=off. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="362" column="14" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a0427cb1ee4437eaa78b1761a95c6c2df" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::ZBEG</definition>
+        <argsstring></argsstring>
+        <name>ZBEG</name>
+        <qualifiedname>SLGridSlab::ZBEG</qualifiedname>
+        <briefdescription>
+<para>Offset from origin, default=1.0e-4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="374" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_l_grid_slab_1a3ff861d4cbb4fa66ccf8b3f30424becc" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::ZEND</definition>
+        <argsstring></argsstring>
+        <name>ZEND</name>
+        <qualifiedname>SLGridSlab::ZEND</qualifiedname>
+        <briefdescription>
+<para>Potential offset, default=1.0e-5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="377" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="377" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_l_grid_slab_1a22aad815f3b29b50d18e6c8933c26d2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::bomb</definition>
+        <argsstring>(string oops)</argsstring>
+        <name>bomb</name>
+        <qualifiedname>SLGridSlab::bomb</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>oops</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="286" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a2cb71c392879d0b0b2d516c9afb01e30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::compute_table</definition>
+        <argsstring>(TableSlab *table, int kx, int ky)</argsstring>
+        <name>compute_table</name>
+        <qualifiedname>SLGridSlab::compute_table</qualifiedname>
+        <param>
+          <type><ref refid="class_table_slab" kindref="compound">TableSlab</ref> *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="270" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a754db729d4e23e1e95990f2393d8f783" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::compute_table_worker</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_table_worker</name>
+        <qualifiedname>SLGridSlab::compute_table_worker</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="271" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1ac9425e2e2bb0983f3fc805796fc504ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::init_table</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_table</name>
+        <qualifiedname>SLGridSlab::init_table</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="269" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1afca0e5d7104fa100fb846563cd571455" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SLGridSlab::mpi_pack_table</definition>
+        <argsstring>(TableSlab *table, int kx, int ky)</argsstring>
+        <name>mpi_pack_table</name>
+        <qualifiedname>SLGridSlab::mpi_pack_table</qualifiedname>
+        <param>
+          <type><ref refid="class_table_slab" kindref="compound">TableSlab</ref> *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="277" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a9d8a16280b58587b4d349cea7d8d4704" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::mpi_setup</definition>
+        <argsstring>(void)</argsstring>
+        <name>mpi_setup</name>
+        <qualifiedname>SLGridSlab::mpi_setup</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="275" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1aa7c05313c2d64d507f0a9b9db1d3be63" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::mpi_unpack_table</definition>
+        <argsstring>(void)</argsstring>
+        <name>mpi_unpack_table</name>
+        <qualifiedname>SLGridSlab::mpi_unpack_table</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="276" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1af20736a0f97918a5ea229c6452fca9ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SLGridSlab::ReadH5Cache</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReadH5Cache</name>
+        <qualifiedname>SLGridSlab::ReadH5Cache</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="278" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a482af5c4664d3300b373d1bfdf7017a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::WriteH5Cache</definition>
+        <argsstring>(void)</argsstring>
+        <name>WriteH5Cache</name>
+        <qualifiedname>SLGridSlab::WriteH5Cache</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="279" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_l_grid_slab_1ac9ca51c7f210c88ca3d50fe7a815864e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::d_xi_to_z</definition>
+        <argsstring>(double x)</argsstring>
+        <name>d_xi_to_z</name>
+        <qualifiedname>SLGridSlab::d_xi_to_z</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Jacobian of coordinate mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="401" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="401" bodyend="401"/>
+        <references refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" compoundref="_s_l_grid_m_p2_8_h" startline="357">mM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1acd9ce2706e9a2449ffe69197945f12e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::eigenvalue</definition>
+        <argsstring>(int kx, int ky, int n)</argsstring>
+        <name>eigenvalue</name>
+        <qualifiedname>SLGridSlab::eigenvalue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Members. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get n^th eigenvalue for given wave number indices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="392" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="392" bodyend="392"/>
+        <references refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" compoundref="_s_l_grid_m_p2_8_h" startline="267">table</references>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a3c5e1b64ac43a09745c9a37a1bc65745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::get_dens</definition>
+        <argsstring>(double x, int kx, int ky, int n, int which=1)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>SLGridSlab::get_dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Get density for dimensionless coord with given wave numbers and index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="407" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1ae543f10e58a1fff08906695200e53b1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_dens</definition>
+        <argsstring>(Eigen::MatrixXd &amp;tab, double x, int which=1)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>SLGridSlab::get_dens</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get density for dimensionless coord with given wave numbers Return Matrix with first dimension containing x and y wavenumbers packed with y index varying most quicly, second index is vertical order. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="434" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a8dda8abe537999c8bff271e7afb255ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_dens</definition>
+        <argsstring>(Eigen::VectorXd &amp;vec, double x, int kx, int ky, int which=1)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>SLGridSlab::get_dens</qualifiedname>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get density for dimensionless coord with given wave numbers Return Vector for all indices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="419" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1aef28a5e5a126e4d39c40063ed75b8f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::get_force</definition>
+        <argsstring>(double x, int kx, int ky, int n, int which=1)</argsstring>
+        <name>get_force</name>
+        <qualifiedname>SLGridSlab::get_force</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Get force for dimensionless coord with given wave numbers and index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="410" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a05989512bdacd27d6025db172b8a57d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_force</definition>
+        <argsstring>(Eigen::MatrixXd &amp;tab, double x, int which=1)</argsstring>
+        <name>get_force</name>
+        <qualifiedname>SLGridSlab::get_force</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get force for dimensionless coord with given wave numbers Return Matrix with first dimension containing x and y wavenumbers packed with y index varying most quicly, second index is vertical order. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="439" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1ab71e9c5b9a755a0b5f03ce92f0678a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_force</definition>
+        <argsstring>(Eigen::VectorXd &amp;vec, double x, int kx, int ky, int which=1)</argsstring>
+        <name>get_force</name>
+        <qualifiedname>SLGridSlab::get_force</qualifiedname>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get force for dimensionless coord with given wave numbers Return Vector for all indices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="423" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a92d655d4c68ea145815a3aa9a3b13768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::get_pot</definition>
+        <argsstring>(double x, int kx, int ky, int n, int which=1)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>SLGridSlab::get_pot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Get potential for dimensionless coord with given wave numbers and index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="404" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a62e203e934e311f078a30ed31e4cbd02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_pot</definition>
+        <argsstring>(Eigen::MatrixXd &amp;tab, double x, int which=1)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>SLGridSlab::get_pot</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get potential for dimensionless coord with given wave numbers Return Matrix with first dimension containing x and y wavenumbers packed with y index varying most quicly, second index is vertical order. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="429" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a6f44042c8f9373175855d448fa68c902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SLGridSlab::get_pot</definition>
+        <argsstring>(Eigen::VectorXd &amp;vec, double x, int kx, int ky, int which=1)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>SLGridSlab::get_pot</qualifiedname>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ky</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get potential for member for dimensionless coord with given wave numbers Return Vector for all indices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="415" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1aae582c113d6266751ada0612e2658a4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt; Eigen::MatrixXd &gt; SLGridSlab::orthoCheck</definition>
+        <argsstring>(int knots=40)</argsstring>
+        <name>orthoCheck</name>
+        <qualifiedname>SLGridSlab::orthoCheck</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>knots</declname>
+          <defval>40</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the orthogonality of the basis by returning inner produce matrices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="443" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a99c51a8549a6a1b203d5b8f179cf221c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SLGridSlab::SLGridSlab</definition>
+        <argsstring>(int kmax, int nmax, int numz, double zmax, const std::string type=&quot;isothermal&quot;, bool Verbose=false)</argsstring>
+        <name>SLGridSlab</name>
+        <qualifiedname>SLGridSlab::SLGridSlab</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>kmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numz</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zmax</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>type</declname>
+          <defval>&quot;isothermal&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="381" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a1c73ea39ff0739ca2e37809553af8438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::xi_to_z</definition>
+        <argsstring>(double x)</argsstring>
+        <name>xi_to_z</name>
+        <qualifiedname>SLGridSlab::xi_to_z</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Map from dimensionless coordinate to vertical coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="398" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="398" bodyend="398"/>
+        <references refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" compoundref="_s_l_grid_m_p2_8_h" startline="357">mM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SLGridSlab::z_to_xi</definition>
+        <argsstring>(double z)</argsstring>
+        <name>z_to_xi</name>
+        <qualifiedname>SLGridSlab::z_to_xi</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Map from vertical coordinate to dimensionless coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="395" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="395" bodyend="395"/>
+        <references refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" compoundref="_s_l_grid_m_p2_8_h" startline="357">mM</references>
+        <references refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" compoundref="_s_l_grid_m_p2_8_h" startline="258">z</references>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1a436f9bfe2aaaf95e689cd68898399601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SLGridSlab::~SLGridSlab</definition>
+        <argsstring>()</argsstring>
+        <name>~SLGridSlab</name>
+        <qualifiedname>SLGridSlab::~SLGridSlab</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="385" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Slab (one-dimensional) SL grid class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="248" column="1" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="249" bodyend="471"/>
+    <listofallmembers>
+      <member refid="class_s_l_grid_slab_1a22aad815f3b29b50d18e6c8933c26d2a" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>bomb</name></member>
+      <member refid="class_s_l_grid_slab_1aa6f37f2c77794781b8d850421f47c4f7" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>cache</name></member>
+      <member refid="class_s_l_grid_slab_1a2cb71c392879d0b0b2d516c9afb01e30" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>compute_table</name></member>
+      <member refid="class_s_l_grid_slab_1a754db729d4e23e1e95990f2393d8f783" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>compute_table_worker</name></member>
+      <member refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>CoordMapTypes</name></member>
+      <member refid="class_s_l_grid_slab_1a7051a8f5d3b33a606b0f89545a1515bd" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>d0</name></member>
+      <member refid="class_s_l_grid_slab_1ac9ca51c7f210c88ca3d50fe7a815864e" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>d_xi_to_z</name></member>
+      <member refid="class_s_l_grid_slab_1a721d878a968cdb9098765ebd0c407c50" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>dxi</name></member>
+      <member refid="class_s_l_grid_slab_1acd9ce2706e9a2449ffe69197945f12e2" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>eigenvalue</name></member>
+      <member refid="class_s_l_grid_slab_1a3c5e1b64ac43a09745c9a37a1bc65745" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_dens</name></member>
+      <member refid="class_s_l_grid_slab_1a8dda8abe537999c8bff271e7afb255ae" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_dens</name></member>
+      <member refid="class_s_l_grid_slab_1ae543f10e58a1fff08906695200e53b1a" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_dens</name></member>
+      <member refid="class_s_l_grid_slab_1aef28a5e5a126e4d39c40063ed75b8f4c" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_force</name></member>
+      <member refid="class_s_l_grid_slab_1ab71e9c5b9a755a0b5f03ce92f0678a81" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_force</name></member>
+      <member refid="class_s_l_grid_slab_1a05989512bdacd27d6025db172b8a57d6" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_force</name></member>
+      <member refid="class_s_l_grid_slab_1a92d655d4c68ea145815a3aa9a3b13768" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_pot</name></member>
+      <member refid="class_s_l_grid_slab_1a6f44042c8f9373175855d448fa68c902" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_pot</name></member>
+      <member refid="class_s_l_grid_slab_1a62e203e934e311f078a30ed31e4cbd02" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>get_pot</name></member>
+      <member refid="class_s_l_grid_slab_1a177ec61236f459a075ac41e36aa7fdc6" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>H</name></member>
+      <member refid="class_s_l_grid_slab_1ac9425e2e2bb0983f3fc805796fc504ac" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>init_table</name></member>
+      <member refid="class_s_l_grid_slab_1a63d69efe0f595b49c47cb0edf536c039" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>L</name></member>
+      <member refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a888e6a6ba5a4141f687e45b5d4cebf09" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>Linear</name></member>
+      <member refid="class_s_l_grid_slab_1a7f120b3cf92257406299e566fee0e917" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mM</name></member>
+      <member refid="class_s_l_grid_slab_1a1d1dca8947ac6171513804c5f44c4e3f" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi</name></member>
+      <member refid="class_s_l_grid_slab_1a052f43f3e37dfcf1442d63057f09580a" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_buf</name></member>
+      <member refid="class_s_l_grid_slab_1a3ef3dca87ffb4bbb96e254fa6155a86f" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_bufsz</name></member>
+      <member refid="class_s_l_grid_slab_1a3139827f842bca00ac61015370863654" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_myid</name></member>
+      <member refid="class_s_l_grid_slab_1ab534b8922203c5bcea6357217520868c" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_numprocs</name></member>
+      <member refid="class_s_l_grid_slab_1afca0e5d7104fa100fb846563cd571455" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_pack_table</name></member>
+      <member refid="class_s_l_grid_slab_1a9d8a16280b58587b4d349cea7d8d4704" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_setup</name></member>
+      <member refid="class_s_l_grid_slab_1aa7c05313c2d64d507f0a9b9db1d3be63" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>mpi_unpack_table</name></member>
+      <member refid="class_s_l_grid_slab_1a4c4c811937afcbb1336983ef5938436c" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>nmax</name></member>
+      <member refid="class_s_l_grid_slab_1a52a55eaff1bec7489b8e94d1adf836d7" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>numk</name></member>
+      <member refid="class_s_l_grid_slab_1ad821ab70b7b032167ae0f57f3a40c5ba" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>numz</name></member>
+      <member refid="class_s_l_grid_slab_1aae582c113d6266751ada0612e2658a4c" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>orthoCheck</name></member>
+      <member refid="class_s_l_grid_slab_1a36315e1052acde53d50dd86afed37be8" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>p0</name></member>
+      <member refid="class_s_l_grid_slab_1af20736a0f97918a5ea229c6452fca9ad" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>ReadH5Cache</name></member>
+      <member refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a436d25903feb1fffdcd24470cbc321f8" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>Sech</name></member>
+      <member refid="class_s_l_grid_slab_1a99c51a8549a6a1b203d5b8f179cf221c" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>SLGridSlab</name></member>
+      <member refid="class_s_l_grid_slab_1ae6f3704552e774905f09675c3a64dadf" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>table</name></member>
+      <member refid="class_s_l_grid_slab_1ab2215c5afe2ff65f595055bfba83fdd4" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>table_ptr_1D</name></member>
+      <member refid="class_s_l_grid_slab_1af9fe85c0b6379ecc7e8d29027d9abf44" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>table_ptr_2D</name></member>
+      <member refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3a28b2a86d2fa2bb19260d6522d5cf45c1" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>Tanh</name></member>
+      <member refid="class_s_l_grid_slab_1a767ebf4ed389cb3c6a23be4308c2cc58" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>tbdbg</name></member>
+      <member refid="class_s_l_grid_slab_1a9ad081359ff735116418533721db9a80" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>type</name></member>
+      <member refid="class_s_l_grid_slab_1a482af5c4664d3300b373d1bfdf7017a0" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>WriteH5Cache</name></member>
+      <member refid="class_s_l_grid_slab_1ab759f5dcb4ee1b351e305bdf3bf1a273" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>xi</name></member>
+      <member refid="class_s_l_grid_slab_1a1c73ea39ff0739ca2e37809553af8438" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>xi_to_z</name></member>
+      <member refid="class_s_l_grid_slab_1af409c189501a0ad14774fda616b57714" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>xmax</name></member>
+      <member refid="class_s_l_grid_slab_1aa8bd43c9df4464f8f32e658a39098905" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>xmin</name></member>
+      <member refid="class_s_l_grid_slab_1aaab093f2aeacce9ef49efb3920b280d0" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>z</name></member>
+      <member refid="class_s_l_grid_slab_1a937f1bda842b754de3e31264b588cbac" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>z_to_xi</name></member>
+      <member refid="class_s_l_grid_slab_1a0427cb1ee4437eaa78b1761a95c6c2df" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>ZBEG</name></member>
+      <member refid="class_s_l_grid_slab_1a3ff861d4cbb4fa66ccf8b3f30424becc" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>ZEND</name></member>
+      <member refid="class_s_l_grid_slab_1a1620ef679ef02a7dc88bea3b85eab1cd" prot="private" virt="non-virtual"><scope>SLGridSlab</scope><name>zmax</name></member>
+      <member refid="class_s_l_grid_slab_1a436f9bfe2aaaf95e689cd68898399601" prot="public" virt="non-virtual"><scope>SLGridSlab</scope><name>~SLGridSlab</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_yaml_config_error" kind="class" language="C++" prot="public">
+    <compoundname>YamlConfigError</compoundname>
+    <basecompoundref refid="class_e_x_p_exception" prot="public" virt="non-virtual">EXPException</basecompoundref>
+    <includes refid="_e_x_p_exception_8_h" local="no">EXPException.H</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>YamlConfigError::YamlConfigError</definition>
+        <argsstring>(const std::string classname, const std::string type, const std::set&lt; std::string &gt; keys, const std::string sourcefilename, int sourcelinenumber, int errorcode=-1, bool deadlock=false)</argsstring>
+        <name>YamlConfigError</name>
+        <qualifiedname>YamlConfigError::YamlConfigError</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>classname</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>sourcefilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sourcelinenumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errorcode</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deadlock</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="250" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="250" bodyend="265"/>
+        <references refid="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" compoundref="_e_x_p_exception_8_h" startline="95">EXPException::errormessage</references>
+        <references refid="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" compoundref="_e_x_p_exception_8_h" startline="92">EXPException::exceptionname</references>
+        <references refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">EXPException::getErrorMessage</references>
+        <references refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" compoundref="_e_x_p_exception_8_h" startline="98">EXPException::msg_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Configuration error. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EXPException</label>
+        <link refid="class_e_x_p_exception"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>YamlConfigError</label>
+        <link refid="class_yaml_config_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EXPException</label>
+        <link refid="class_e_x_p_exception"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>YamlConfigError</label>
+        <link refid="class_yaml_config_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="246" column="1" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="247" bodyend="266"/>
+    <listofallmembers>
+      <member refid="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>deadlock</name></member>
+      <member refid="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>errorcode</name></member>
+      <member refid="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>errormessage</name></member>
+      <member refid="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>exceptionname</name></member>
+      <member refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" prot="public" virt="non-virtual"><scope>YamlConfigError</scope><name>EXPException</name></member>
+      <member refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>EXPException</name></member>
+      <member refid="class_e_x_p_exception_1a47936a221431359a96c20ab5363d9f1c" prot="public" virt="non-virtual"><scope>YamlConfigError</scope><name>getDeadlock</name></member>
+      <member refid="class_e_x_p_exception_1a2428b09c9f0c5dddf9fbefbcbbbcb6fd" prot="public" virt="non-virtual"><scope>YamlConfigError</scope><name>getErrorcode</name></member>
+      <member refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" prot="public" virt="non-virtual"><scope>YamlConfigError</scope><name>getErrorMessage</name></member>
+      <member refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" prot="protected" virt="non-virtual"><scope>YamlConfigError</scope><name>msg_</name></member>
+      <member refid="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" prot="private" virt="non-virtual"><scope>YamlConfigError</scope><name>sourcefilename</name></member>
+      <member refid="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" prot="private" virt="non-virtual"><scope>YamlConfigError</scope><name>sourcelinenumber</name></member>
+      <member refid="class_e_x_p_exception_1a70b8b589dba043be10dc65482e56769a" prot="public" virt="virtual"><scope>YamlConfigError</scope><name>what</name></member>
+      <member refid="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" prot="public" virt="non-virtual"><scope>YamlConfigError</scope><name>YamlConfigError</name></member>
+      <member refid="class_e_x_p_exception_1aba9356b726727d39e19c88ca2be5e846" prot="public" virt="virtual"><scope>YamlConfigError</scope><name>~EXPException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

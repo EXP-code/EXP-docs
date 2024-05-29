@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_timer" kind="class" language="C++" prot="public">
+    <compoundname>Timer</compoundname>
+    <includes refid="_timer_8_h" local="no">Timer.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point Timer::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <qualifiedname>Timer::begin</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_time" kindref="compound">Time</ref> structures (will initialize to zero by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="15" column="50" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">getTime</referencedby>
+        <referencedby refid="class_timer_1a9020542d73357a4eef512eefaf57524b" compoundref="_timer_8_h" startline="67" endline="72">reset</referencedby>
+        <referencedby refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" compoundref="_timer_8_h" startline="45" endline="50">start</referencedby>
+        <referencedby refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" compoundref="_timer_8_h" startline="54" endline="63">stop</referencedby>
+        <referencedby refid="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" compoundref="_timer_8_h" startline="36" endline="42">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_1aed5b157c7a8df7ca7cf942a282458e70" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point Timer::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <qualifiedname>Timer::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="15" column="56" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">getTime</referencedby>
+        <referencedby refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" compoundref="_timer_8_h" startline="54" endline="63">stop</referencedby>
+        <referencedby refid="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" compoundref="_timer_8_h" startline="36" endline="42">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_1a928da8bffd437752e3d436f996be306b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Timer::rtime</definition>
+        <argsstring></argsstring>
+        <name>rtime</name>
+        <qualifiedname>Timer::rtime</qualifiedname>
+        <briefdescription>
+<para>The time measured so far. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="20" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">getTime</referencedby>
+        <referencedby refid="class_timer_1a9020542d73357a4eef512eefaf57524b" compoundref="_timer_8_h" startline="67" endline="72">reset</referencedby>
+        <referencedby refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" compoundref="_timer_8_h" startline="54" endline="63">stop</referencedby>
+        <referencedby refid="class_timer_1a5f16e8da27d2a5a5242dead46de05d97" compoundref="_timer_8_h" startline="29" endline="33">Timer</referencedby>
+        <referencedby refid="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" compoundref="_timer_8_h" startline="36" endline="42">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Timer::started</definition>
+        <argsstring></argsstring>
+        <name>started</name>
+        <qualifiedname>Timer::started</qualifiedname>
+        <briefdescription>
+<para>Indicate whether the timer has been started. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="24" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">getTime</referencedby>
+        <referencedby refid="class_timer_1a2c03be883cf950d14e058b4205f1526e" compoundref="_timer_8_h" startline="90" endline="90">isStarted</referencedby>
+        <referencedby refid="class_timer_1a9020542d73357a4eef512eefaf57524b" compoundref="_timer_8_h" startline="67" endline="72">reset</referencedby>
+        <referencedby refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" compoundref="_timer_8_h" startline="45" endline="50">start</referencedby>
+        <referencedby refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" compoundref="_timer_8_h" startline="54" endline="63">stop</referencedby>
+        <referencedby refid="class_timer_1a5f16e8da27d2a5a5242dead46de05d97" compoundref="_timer_8_h" startline="29" endline="33">Timer</referencedby>
+        <referencedby refid="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" compoundref="_timer_8_h" startline="36" endline="42">Timer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Timer::getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <qualifiedname>Timer::getTime</qualifiedname>
+        <briefdescription>
+<para>Return time measured up to this point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="75" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="75" bodyend="84"/>
+        <references refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" compoundref="_timer_8_h" startline="15">begin</references>
+        <references refid="class_timer_1aed5b157c7a8df7ca7cf942a282458e70" compoundref="_timer_8_h" startline="15">end</references>
+        <references refid="class_timer_1a928da8bffd437752e3d436f996be306b" compoundref="_timer_8_h" startline="20">rtime</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">RunningTime::append</referencedby>
+        <referencedby refid="class_component_1a3d90d8e34006bd62686c42aaa031cf80" compoundref="_component_8_h" startline="924" endline="924">Component::get_time_sofar</referencedby>
+        <referencedby refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" compoundref="_barrier_wrapper_8_h" startline="197" endline="202">BarrierWrapper::getTime</referencedby>
+        <referencedby refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" compoundref="_running_time_8_h" startline="42" endline="46">RunningTime::lap</referencedby>
+        <referencedby refid="class_timer_1a860454865273e43fff52176d2410a4ed" compoundref="_timer_8_h" startline="87" endline="87">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a2c03be883cf950d14e058b4205f1526e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Timer::isStarted</definition>
+        <argsstring>()</argsstring>
+        <name>isStarted</name>
+        <qualifiedname>Timer::isStarted</qualifiedname>
+        <briefdescription>
+<para>Return the status of the timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="90" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="90" bodyend="90"/>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a860454865273e43fff52176d2410a4ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Timer::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Timer::operator()</qualifiedname>
+        <briefdescription>
+<para>Return time measured up to this point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="87" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="87" bodyend="87"/>
+        <references refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">getTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a9020542d73357a4eef512eefaf57524b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Timer::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset the timer, this will reset the time measured to 0 and reset the zero point if the timer is active </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="67" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="67" bodyend="72"/>
+        <references refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" compoundref="_timer_8_h" startline="15">begin</references>
+        <references refid="class_timer_1a928da8bffd437752e3d436f996be306b" compoundref="_timer_8_h" startline="20">rtime</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+        <referencedby refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" compoundref="_barrier_wrapper_8_h" startline="197" endline="202">BarrierWrapper::getTime</referencedby>
+        <referencedby refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" compoundref="_running_time_8_h" startline="67" endline="73">RunningTime::Stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a3a8b5272198d029779dc9302a54305a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>Timer::start</qualifiedname>
+        <briefdescription>
+<para>Start timer, if already started then do nothing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="45" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="45" bodyend="50"/>
+        <references refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" compoundref="_timer_8_h" startline="15">begin</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+        <referencedby refid="class_running_time_1a417626fc2c1c07dcc1465e55fcfcef16" compoundref="_running_time_8_h" startline="62" endline="65">RunningTime::Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a988f79aa183d9d5473c13106f5babe48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Timer::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>Timer::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop timer and return time measured so far. If timer was stopped the time returned will be the current elapsed time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="54" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="54" bodyend="63"/>
+        <references refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" compoundref="_timer_8_h" startline="15">begin</references>
+        <references refid="class_timer_1aed5b157c7a8df7ca7cf942a282458e70" compoundref="_timer_8_h" startline="15">end</references>
+        <references refid="class_timer_1a928da8bffd437752e3d436f996be306b" compoundref="_timer_8_h" startline="20">rtime</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+        <referencedby refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" compoundref="_running_time_8_h" startline="67" endline="73">RunningTime::Stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a5f16e8da27d2a5a5242dead46de05d97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Timer::Timer</definition>
+        <argsstring>()</argsstring>
+        <name>Timer</name>
+        <qualifiedname>Timer::Timer</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="29" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="29" bodyend="33"/>
+        <references refid="class_timer_1a928da8bffd437752e3d436f996be306b" compoundref="_timer_8_h" startline="20">rtime</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Timer::Timer</definition>
+        <argsstring>(const Timer &amp;t)</argsstring>
+        <name>Timer</name>
+        <qualifiedname>Timer::Timer</qualifiedname>
+        <param>
+          <type>const <ref refid="class_timer" kindref="compound">Timer</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Copy consructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="36" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="36" bodyend="42"/>
+        <references refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" compoundref="_timer_8_h" startline="15">begin</references>
+        <references refid="class_timer_1aed5b157c7a8df7ca7cf942a282458e70" compoundref="_timer_8_h" startline="15">end</references>
+        <references refid="class_timer_1a928da8bffd437752e3d436f996be306b" compoundref="_timer_8_h" startline="20">rtime</references>
+        <references refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" compoundref="_timer_8_h" startline="24">started</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This is a diagnostic stopwatch-like timer implemented using std::chrono. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/Timer.H" line="9" column="1" bodyfile="/home/weinberg/Projects/EXP/include/Timer.H" bodystart="10" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_timer_1a25ed7d842fa9ef75da6eac3ccea0c6f1" prot="private" virt="non-virtual"><scope>Timer</scope><name>begin</name></member>
+      <member refid="class_timer_1aed5b157c7a8df7ca7cf942a282458e70" prot="private" virt="non-virtual"><scope>Timer</scope><name>end</name></member>
+      <member refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" prot="public" virt="non-virtual"><scope>Timer</scope><name>getTime</name></member>
+      <member refid="class_timer_1a2c03be883cf950d14e058b4205f1526e" prot="public" virt="non-virtual"><scope>Timer</scope><name>isStarted</name></member>
+      <member refid="class_timer_1a860454865273e43fff52176d2410a4ed" prot="public" virt="non-virtual"><scope>Timer</scope><name>operator()</name></member>
+      <member refid="class_timer_1a9020542d73357a4eef512eefaf57524b" prot="public" virt="non-virtual"><scope>Timer</scope><name>reset</name></member>
+      <member refid="class_timer_1a928da8bffd437752e3d436f996be306b" prot="private" virt="non-virtual"><scope>Timer</scope><name>rtime</name></member>
+      <member refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" prot="public" virt="non-virtual"><scope>Timer</scope><name>start</name></member>
+      <member refid="class_timer_1ab3cd20a0909df03a384a09b1b8151d3e" prot="private" virt="non-virtual"><scope>Timer</scope><name>started</name></member>
+      <member refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" prot="public" virt="non-virtual"><scope>Timer</scope><name>stop</name></member>
+      <member refid="class_timer_1a5f16e8da27d2a5a5242dead46de05d97" prot="public" virt="non-virtual"><scope>Timer</scope><name>Timer</name></member>
+      <member refid="class_timer_1a51e326087ac10f98e6658bdc5e1e1b6d" prot="public" virt="non-virtual"><scope>Timer</scope><name>Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="over" kind="page">
+    <compoundname>over</compoundname>
+    <title>Code overview</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="2">Motivation </heading>
+</para>
+<para>This code uses object-oriented design patterns to exploit the similarity in overall structure of all biorthogonal expansions for ease of implementation and maintenance. The class hierarchy enables reuse and reconfiguration for any number of phase-space components whose gravity may be represented by a appropriate biorthgonal bases and direct gravity methods. The object-oriented design enforces minimal consistency while retaining flexibility. </para>
+<para>Users may write, compile and contribute new phase space operators for applying perturbations, new force methods, etc. without changing or recompiling the base code. See <ref refid="modules" kindref="compound">User loadable modules</ref> for details and a simple example. </para>
+<para><heading level="2">Organization </heading>
+</para>
+<para>The main organizational element is the phase space <ref refid="class_component" kindref="compound">Component</ref>. On construction, a <ref refid="class_component" kindref="compound">Component</ref> instance associates a particular named group of phase space particles with a <ref refid="class_pot_accel" kindref="compound">PotAccel</ref> &quot;force&quot; method. These components are named by the user with some mnemonic ascii string. For example, a dark halo component might be named &quot;dark&quot; and associated with a spherical basis expansion, <ref refid="class_spherical_basis" kindref="compound">SphericalBasis</ref>. Similarly, a stellar disk component named &quot;stars&quot; would be associated with cylindrical disk-shaped basis expansion, <ref refid="class_cylinder" kindref="compound">Cylinder</ref>. One could include some small number of smoothed point source objects, e.g. &quot;substructures&quot; or &quot;satellites&quot;, which use the <ref refid="class_direct" kindref="compound">Direct</ref> force method. </para>
+<para>All of these force methods inherit from the <ref refid="class_pot_accel" kindref="compound">PotAccel</ref> base class, most often used to provide internal and external accelerations. However, <ref refid="class_pot_accel" kindref="compound">PotAccel</ref> implements a bare-bones interface of a general operator which acts on phase space. For example, periodic boundary conditions are implemented by the user module UserPeriodic which performes the modulo arithmetric and optionally reflective or vacuum boundary conditions. </para>
+<para>A particular simulation may have any number of components. These are grouped together in a <ref refid="class_component_container" kindref="compound">ComponentContainer</ref>. At the very top level, the time stepper operates on the <ref refid="class_component_container" kindref="compound">ComponentContainer</ref> to advance the phase space in time. This would allows the integration method to be generic and reimplemented as needed, without changing anything else in the code. Currently, the only time stepper implemented is leap frog using a binary multiple time step algorithm (see <ref refid="multistep" kindref="compound">Multiple time stepping</ref>). </para>
+<para>The phase-space components can interact with each other or not, allowing a wide variety of experiments that help investigate dynamical mechanism. The interactions are specified explicitly in configuration file (see <ref refid="config" kindref="compound">Configuration files</ref>) by component mnemonic. For example, a mutually interacting disk (named &quot;star&quot;) and halo (named &quot;dark&quot;) would be specified as <verbatim>[interaction]
+star : dark
+dark : star
+</verbatim> in the input configuration file. </para>
+<para>After each step, the code runs a list of post-processing routines defined by the user using the <ref refid="class_output_container" kindref="compound">OutputContainer</ref> class. All of these inherit from the <ref refid="class_output" kindref="compound">Output</ref> class. For example, the OutLOG routine prints summary statistics such as mean position, velocity, angular momentum energies, into a log file with one line per time step. The <ref refid="class_out_p_s_n" kindref="compound">OutPSN</ref> routine outputs phase space &quot;dumps&quot; and the <ref refid="class_out_c_h_k_p_t" kindref="compound">OutCHKPT</ref> makes phase space checkpoints with full double precision values. The time step frequency for output is user selectable. These <ref refid="class_output" kindref="compound">Output</ref> instances are defined by the user in the input configuration file; here is an example: <verbatim>[output]
+outlog : nint=1
+outpsn : nint=100
+outchkpt : nint=100
+</verbatim> For these three, <computeroutput>nint=xx</computeroutput> is the time-step frequency for output. </para>
+<para><heading level="2">Learning how to use this code </heading>
+</para>
+<para>A final note: like many research codes, this code has many flags and parameters that allow detailed control of methods. Many of these were used for testing the implemenation and algorithm and do not need adjustment. I have endeavored to provide sane values as defaults, but some combinations are likely to fail on occasion and require study the source code to understand. The class documentation often provides details on specific parameters. If you get stuck or confused, I will do my best to help and will add to the documentation in response to questions. Also, feel free to contribute documentation and propose changes.</para>
+<para>Perhaps the best way to learn how to use this code is through an example. I have provided a separate tar ball in the <computeroutput>examples</computeroutput> directory, which has two examples with a small halo and disk phase space components and a full set of configuraton files. The first, in <computeroutput>examples/LowFi</computeroutput>, has <formula id="0">$10^4$</formula> disk and halo particles and a cylindrial disk expansion up to <formula id="1">$m=1$</formula>. The second, in <computeroutput>examples/Better</computeroutput>, has <formula id="0">$10^4$</formula> disk and <formula id="2">$10^5$</formula> halo particles and a high-resolution cylindrial disk expansion up to <formula id="3">$m=6$</formula>.</para>
+<para>Once you have compiled, the following commands will start the test run: <verbatim>cd examples/LowFi
+mpirun -v -np X exp -f IN.FILE
+</verbatim> where <computeroutput>-np X</computeroutput> should be replaced with the number of cores on your machine. I may be able to provide some more complex (and larger!) examples on request.</para>
+<para>I also strongly recommend a read through of the documentation in the side bar (also listed in the Related Pages tab). Additional documentation will be added as time allows. <linebreak/>
+ </para>
+    </detaileddescription>
+    <location file="overview.doc"/>
+  </compounddef>
+</doxygen>

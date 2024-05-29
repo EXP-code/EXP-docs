@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_c_b_disk" kind="class" language="C++" prot="public">
+    <compoundname>CBDisk</compoundname>
+    <basecompoundref refid="class_axi_sym_biorth" prot="public" virt="non-virtual">AxiSymBiorth</basecompoundref>
+    <includes refid="biorth2d_8_h" local="no">biorth2d.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_b_disk_1a5e62923bdfde1d582f2daf2484fc7de4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CBDisk::numz</definition>
+        <argsstring></argsstring>
+        <name>numz</name>
+        <qualifiedname>CBDisk::numz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="17" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_c_b_disk_1a1160213d2f102a628b7d0ffbd1923279" compoundref="biorth2d_8_h" startline="42" endline="42">set_numz</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_b_disk_1ae0ed415245ad56ca9857fc9f8f663eac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double CBDisk::phif</definition>
+        <argsstring>(const int n, const int m, const double r)</argsstring>
+        <name>phif</name>
+        <qualifiedname>CBDisk::phif</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="18" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_b_disk_1a44ba475f7449a1b4890c48b6cf434f93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CBDisk::CBDisk</definition>
+        <argsstring>(void)</argsstring>
+        <name>CBDisk</name>
+        <qualifiedname>CBDisk::CBDisk</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="22" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a9c18f2ff0bb31ab91e09fed0d3a164b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::d_r_to_rb</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>d_r_to_rb</name>
+        <qualifiedname>CBDisk::d_r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaaf67379cdeb608b5f9c07509bb22631">d_r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="46" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a3e080da0f86efef7dffa9d81854eaed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::dens</definition>
+        <argsstring>(const int n, const int m, const double r)</argsstring>
+        <name>dens</name>
+        <qualifiedname>CBDisk::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6cb90b729dbfb31340bf8930049df4cd">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="27" column="10"/>
+        <referencedby refid="class_c_b_disk_1a1b27ba7f86b77c8480404201ad31be5e" compoundref="biorth2d_8_h" startline="38" endline="39">densR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a7367cfa5968af0036f19681c640f64bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBDisk::dens</definition>
+        <argsstring>(const int n, const int m, const double r, Eigen::VectorXd &amp;a)</argsstring>
+        <name>dens</name>
+        <qualifiedname>CBDisk::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6222c8a860d4e41a3d81b74d790442c8">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="31" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a1b27ba7f86b77c8480404201ad31be5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double CBDisk::densR</definition>
+        <argsstring>(const int n, const int m, const double r)</argsstring>
+        <name>densR</name>
+        <qualifiedname>CBDisk::densR</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="38" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="38" bodyend="39"/>
+        <references refid="class_c_b_disk_1a3e080da0f86efef7dffa9d81854eaed4">dens</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a0f1296ba29fdfedbd51b4331820c514a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::krnl</definition>
+        <argsstring>(const int n, const int m)</argsstring>
+        <name>krnl</name>
+        <qualifiedname>CBDisk::krnl</qualifiedname>
+        <reimplements refid="class_biorth_1a582200336065fac43a3282ee0671cffb">krnl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="28" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a20a66684834ce4eb9ecf61e3d2eebf28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::norm</definition>
+        <argsstring>(const int n, const int m)</argsstring>
+        <name>norm</name>
+        <qualifiedname>CBDisk::norm</qualifiedname>
+        <reimplements refid="class_biorth_1a4997a44fb308362868547f4eb0f23c5a">norm</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="29" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1ad86384f193c49f257cedc5344df6c2ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::potl</definition>
+        <argsstring>(const int n, const int m, const double r)</argsstring>
+        <name>potl</name>
+        <qualifiedname>CBDisk::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaec9137305d7c2eed46ca59c5ea777b1">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="26" column="10"/>
+        <referencedby refid="class_c_b_disk_1abfe35d6748b8413206eecca684657510" compoundref="biorth2d_8_h" startline="36" endline="37">potlR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a679f542434214c22c85d47178e0fdd12" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBDisk::potl</definition>
+        <argsstring>(const int n, const int m, const double r, Eigen::VectorXd &amp;a)</argsstring>
+        <name>potl</name>
+        <qualifiedname>CBDisk::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a2216fefb9a71a8dcdd378da8c3d82fbb">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="30" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1abfe35d6748b8413206eecca684657510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::potlR</definition>
+        <argsstring>(const int n, const int m, const double r)</argsstring>
+        <name>potlR</name>
+        <qualifiedname>CBDisk::potlR</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a63c2bf04065efbbdcb005377836e0894">potlR</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="36" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="36" bodyend="37"/>
+        <references refid="class_c_b_disk_1ad86384f193c49f257cedc5344df6c2ae">potl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1af5743acce055d23034dde1d460142827" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::potlRZ</definition>
+        <argsstring>(const int n, const int m, const double r, const double z)</argsstring>
+        <name>potlRZ</name>
+        <qualifiedname>CBDisk::potlRZ</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1afa024ea053a13ae6094ed1ee65653eac">potlRZ</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a7b2573edfceba78c6085161c4be303ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::r_to_rb</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>r_to_rb</name>
+        <qualifiedname>CBDisk::r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a5fea78e59e755b9d3e05965b223f10aa">r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="45" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1af244ab399c5394cd56597d8732c29916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::rb_max</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_max</name>
+        <qualifiedname>CBDisk::rb_max</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a8a0737fc879f5950452fd0a0b895a57b">rb_max</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="49" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1aeefbbc5e3a2ca01af2078cd8400f5606" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::rb_min</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_min</name>
+        <qualifiedname>CBDisk::rb_min</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a732c3f77a9d9968f5a06ba7d57c69832">rb_min</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="48" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1ad60036a7c84e1d8f1e19ef315c8e5eff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CBDisk::rb_to_r</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>rb_to_r</name>
+        <qualifiedname>CBDisk::rb_to_r</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a3815fa706249dff779ff597d8ab37c71">rb_to_r</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="44" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_b_disk_1a1160213d2f102a628b7d0ffbd1923279" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBDisk::set_numz</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_numz</name>
+        <qualifiedname>CBDisk::set_numz</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="42" column="8" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="42" bodyend="42"/>
+        <references refid="class_c_b_disk_1a5e62923bdfde1d582f2daf2484fc7de4" compoundref="biorth2d_8_h" startline="17">numz</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>CBDisk</label>
+        <link refid="class_c_b_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>CBDisk</label>
+        <link refid="class_c_b_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth2d.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth2d.H" bodystart="15" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a2e936fa39b497ab4f2316f7b6bd2f226" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>BiorthID</name></member>
+      <member refid="class_biorth_1a3331c0ec9dabbed562c32c3d59c7b1bb" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>bomb</name></member>
+      <member refid="class_c_b_disk_1a44ba475f7449a1b4890c48b6cf434f93" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>CBDisk</name></member>
+      <member refid="class_c_b_disk_1a9c18f2ff0bb31ab91e09fed0d3a164b3" prot="public" virt="virtual"><scope>CBDisk</scope><name>d_r_to_rb</name></member>
+      <member refid="class_c_b_disk_1a3e080da0f86efef7dffa9d81854eaed4" prot="public" virt="virtual"><scope>CBDisk</scope><name>dens</name></member>
+      <member refid="class_c_b_disk_1a7367cfa5968af0036f19681c640f64bb" prot="public" virt="virtual"><scope>CBDisk</scope><name>dens</name></member>
+      <member refid="class_c_b_disk_1a1b27ba7f86b77c8480404201ad31be5e" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>densR</name></member>
+      <member refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" prot="protected" virt="non-virtual"><scope>CBDisk</scope><name>dof</name></member>
+      <member refid="class_axi_sym_biorth_1a87004c3a9f3587d69b8e131389d53046" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>get_dens</name></member>
+      <member refid="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>get_dof</name></member>
+      <member refid="class_axi_sym_biorth_1a1220954284feb464502dd18a8a74440b" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>get_potl</name></member>
+      <member refid="class_biorth_1a732367609f458cf4128bb37f2641c30b" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>id</name></member>
+      <member refid="class_c_b_disk_1a0f1296ba29fdfedbd51b4331820c514a" prot="public" virt="virtual"><scope>CBDisk</scope><name>krnl</name></member>
+      <member refid="class_c_b_disk_1a20a66684834ce4eb9ecf61e3d2eebf28" prot="public" virt="virtual"><scope>CBDisk</scope><name>norm</name></member>
+      <member refid="class_c_b_disk_1a5e62923bdfde1d582f2daf2484fc7de4" prot="private" virt="non-virtual"><scope>CBDisk</scope><name>numz</name></member>
+      <member refid="class_c_b_disk_1ae0ed415245ad56ca9857fc9f8f663eac" prot="private" virt="non-virtual"><scope>CBDisk</scope><name>phif</name></member>
+      <member refid="class_c_b_disk_1ad86384f193c49f257cedc5344df6c2ae" prot="public" virt="virtual"><scope>CBDisk</scope><name>potl</name></member>
+      <member refid="class_c_b_disk_1a679f542434214c22c85d47178e0fdd12" prot="public" virt="virtual"><scope>CBDisk</scope><name>potl</name></member>
+      <member refid="class_c_b_disk_1abfe35d6748b8413206eecca684657510" prot="public" virt="virtual"><scope>CBDisk</scope><name>potlR</name></member>
+      <member refid="class_c_b_disk_1af5743acce055d23034dde1d460142827" prot="public" virt="virtual"><scope>CBDisk</scope><name>potlRZ</name></member>
+      <member refid="class_c_b_disk_1a7b2573edfceba78c6085161c4be303ab" prot="public" virt="virtual"><scope>CBDisk</scope><name>r_to_rb</name></member>
+      <member refid="class_c_b_disk_1af244ab399c5394cd56597d8732c29916" prot="public" virt="virtual"><scope>CBDisk</scope><name>rb_max</name></member>
+      <member refid="class_c_b_disk_1aeefbbc5e3a2ca01af2078cd8400f5606" prot="public" virt="virtual"><scope>CBDisk</scope><name>rb_min</name></member>
+      <member refid="class_c_b_disk_1ad60036a7c84e1d8f1e19ef315c8e5eff" prot="public" virt="virtual"><scope>CBDisk</scope><name>rb_to_r</name></member>
+      <member refid="class_c_b_disk_1a1160213d2f102a628b7d0ffbd1923279" prot="public" virt="non-virtual"><scope>CBDisk</scope><name>set_numz</name></member>
+      <member refid="class_axi_sym_biorth_1adcf402d63d58581bfb671cc97b213222" prot="public" virt="virtual"><scope>CBDisk</scope><name>~AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a83c4824d7003048794102f54152cfdbc" prot="public" virt="virtual"><scope>CBDisk</scope><name>~Biorth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_cyl_disk_8_h" kind="file" language="C++">
+    <compoundname>CylDisk.H</compoundname>
+    <includes refid="massmodel_8_h" local="yes">massmodel.H</includes>
+    <includes refid="_emp_cyl_s_l_8_h" local="yes">EmpCylSL.H</includes>
+    <includes refid="interp_8_h" local="yes">interp.H</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Particle.H</label>
+        <link refid="include_2_particle_8_h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>coef.H</label>
+        <link refid="include_2coef_8_h"/>
+      </node>
+      <node id="14">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H</label>
+        <link refid="_cyl_disk_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="25">
+        <label>chrono</label>
+      </node>
+      <node id="23">
+        <label>cmath</label>
+      </node>
+      <node id="33">
+        <label>config_exp.h</label>
+      </node>
+      <node id="18">
+        <label>cstdlib</label>
+      </node>
+      <node id="8">
+        <label>deque</label>
+      </node>
+      <node id="30">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="16">
+        <label>iomanip</label>
+      </node>
+      <node id="15">
+        <label>iostream</label>
+      </node>
+      <node id="22">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="29">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="31">
+        <label>mpi.h</label>
+      </node>
+      <node id="5">
+        <label>random</label>
+      </node>
+      <node id="17">
+        <label>sstream</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="27">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="35">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_cyl_disk" prot="public">CylDisk</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>is<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Two<sp/>dimensional<sp/>disk<sp/>from<sp/>Cylindrical<sp/>expansion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CylDisk_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CylDisk_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="massmodel_8_h" kindref="compound">massmodel.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_emp_cyl_s_l_8_h" kindref="compound">EmpCylSL.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interp_8_h" kindref="compound">interp.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_cyl_disk" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cyl_disk" kindref="compound">CylDisk</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl_s_l" kindref="compound">EmpCylSL</ref><sp/>*<ref refid="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" kindref="member">d</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a" kindref="member">setup_model</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" kindref="member">rmax</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>;</highlight></codeline>
+<codeline lineno="22" refid="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" refkind="member"><highlight class="normal"><sp/><sp/>vector&lt;double&gt;<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" kindref="member">dd</ref>,<sp/><ref refid="class_cyl_disk_1a5a00b733696c58f0929af0a377c1aca7" kindref="member">mm</ref>,<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>,<sp/><ref refid="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" kindref="member">rmin</ref>,<sp/><ref refid="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>radial<sp/>points<sp/>in<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" kindref="member">NUMR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Linear<sp/>(false)<sp/>or<sp/>logarithmic<sp/>(true)<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_cyl_disk_1a7cc9a87e8ee93e542068e4696b8877ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a7cc9a87e8ee93e542068e4696b8877ea" kindref="member">RLOG</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default:<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" kindref="member">CylDisk</ref>(<ref refid="class_emp_cyl_s_l" kindref="compound">EmpCylSL</ref><sp/>*D,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Rmin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Rmax)<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" kindref="member">d</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>D;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" kindref="member">dim</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1acf360c000464aca6299bc47894672d70" kindref="member">ModelID</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CylDisk&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" kindref="member">dist_defined</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a" kindref="member">setup_model</ref>(Rmin,<sp/>Rmax);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" kindref="member">get_mass</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" kindref="member">odd2</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1a5a00b733696c58f0929af0a377c1aca7" kindref="member">mm</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" kindref="member">get_density</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" kindref="member">odd2</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" kindref="member">dd</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" kindref="member">get_pot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" kindref="member">odd2</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" kindref="member">get_dpot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d" kindref="member">drv2</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" kindref="member">get_dpot2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/><ref refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614" kindref="member">Vlocate</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indx<sp/>&gt;=<sp/><ref refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" kindref="member">NUMR</ref>-2)<sp/>indx<sp/>=<sp/><ref refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" kindref="member">NUMR</ref>-4;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indx&gt;0)<sp/>indx--;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+3]<sp/>-<sp/>3.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+2]+<sp/>3.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+1]<sp/>-<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx])*(R<sp/>-<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>[indx])</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+3]<sp/>-<sp/>4.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+2]+<sp/>5.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+1]<sp/>-<sp/>2.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx])*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref><sp/>)<sp/>/</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" kindref="member">get_pot_dpot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;ur,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dur)<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R<sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" kindref="member">rlog</ref>)<sp/>R<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ur<sp/><sp/>=<sp/><ref refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d" kindref="member">drv2</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>,<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/><ref refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614" kindref="member">Vlocate</ref>(R,<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indx<sp/>&gt;=<sp/><ref refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" kindref="member">NUMR</ref>-2)<sp/>indx<sp/>=<sp/><ref refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" kindref="member">NUMR</ref>-4;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indx&gt;0)<sp/>indx--;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>dur<sp/>=<sp/>(<sp/>(<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+3]<sp/>-<sp/>3.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+2]+<sp/>3.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+1]<sp/>-<sp/><ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx])*(R<sp/>-<sp/><ref refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" kindref="member">rr</ref>[indx])</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+3]<sp/>-<sp/>4.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+2]+<sp/>5.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx+1]<sp/>-<sp/>2.0*<ref refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" kindref="member">pp</ref>[indx])*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref><sp/>)<sp/>/</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>*<ref refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" kindref="member">dr</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Addiional<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c" kindref="member">get_min_radius</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" kindref="member">rmin</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107" refid="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1" kindref="member">get_max_radius</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="class_cyl_disk_1ae9ef54bc692ed877ea1a6521eca9cf2e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1ae9ef54bc692ed877ea1a6521eca9cf2e" kindref="member">distf</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;Dist<sp/>fct<sp/>not<sp/>defined!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_cyl_disk_1af0e30c235213217773f8d8267642b9e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1af0e30c235213217773f8d8267642b9e9" kindref="member">dfde</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;Dist<sp/>fct<sp/>not<sp/>defined!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_cyl_disk_1aa154476667df93960f11db39c913c5da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1aa154476667df93960f11db39c913c5da" kindref="member">dfdl</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;Dist<sp/>fct<sp/>not<sp/>defined!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="class_cyl_disk_1a0da36c44b6817549006433de12916474" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cyl_disk_1a0da36c44b6817549006433de12916474" kindref="member">d2fde2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;Dist<sp/>fct<sp/>not<sp/>defined!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H"/>
+  </compounddef>
+</doxygen>

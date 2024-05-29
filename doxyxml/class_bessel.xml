@@ -1,0 +1,1105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_bessel" kind="class" language="C++" prot="public">
+    <compoundname>Bessel</compoundname>
+    <basecompoundref refid="class_spherical_basis" prot="public" virt="non-virtual">SphericalBasis</basecompoundref>
+    <includes refid="_bessel_8_h" local="no">Bessel.H</includes>
+    <innerclass refid="class_bessel_1_1_r_grid" prot="private">Bessel::RGrid</innerclass>
+    <innerclass refid="class_bessel_1_1_roots" prot="private">Bessel::Roots</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bessel_1a9cb5e42e13a8312ea49202b6675204ca" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_bessel_1_1_r_grid" kindref="compound">RGrid</ref> &gt;</type>
+        <definition>std::vector&lt;RGrid&gt; Bessel::dens_grid</definition>
+        <argsstring></argsstring>
+        <name>dens_grid</name>
+        <qualifiedname>Bessel::dens_grid</qualifiedname>
+        <briefdescription>
+<para>Grid storage and parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="50" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1aa2f3ecee293522f31d7a43300b8259d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Bessel::firstime_accel</definition>
+        <argsstring></argsstring>
+        <name>firstime_accel</name>
+        <qualifiedname>Bessel::firstime_accel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="37" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1a130d6cddd30c2e20a29d5124929389c2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Bessel::firstime_coef</definition>
+        <argsstring></argsstring>
+        <name>firstime_coef</name>
+        <qualifiedname>Bessel::firstime_coef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="36" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1ab6a7985fc7abc4bf90c606e2901488f4" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_bessel_1_1_roots" kindref="compound">Roots</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Roots&gt; Bessel::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <qualifiedname>Bessel::p</qualifiedname>
+        <briefdescription>
+<para>Root database isntance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="73" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1a1821dbe893dd1686dde6942bffa6f19f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_bessel_1_1_r_grid" kindref="compound">RGrid</ref> &gt;</type>
+        <definition>std::vector&lt;RGrid&gt; Bessel::potl_grid</definition>
+        <argsstring></argsstring>
+        <name>potl_grid</name>
+        <qualifiedname>Bessel::potl_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="50" column="25" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1a7a6860aa0217c019251672f61605fc6f" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd Bessel::r_grid</definition>
+        <argsstring></argsstring>
+        <name>r_grid</name>
+        <qualifiedname>Bessel::r_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="51" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1a6f08a0ebccea5edf38f5c89af2b7b616" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Bessel::r_grid_del</definition>
+        <argsstring></argsstring>
+        <name>r_grid_del</name>
+        <qualifiedname>Bessel::r_grid_del</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="52" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bessel_1a71e4d3aace12dd36957a2293fa5ac5cd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Bessel::RNUM</definition>
+        <argsstring></argsstring>
+        <name>RNUM</name>
+        <qualifiedname>Bessel::RNUM</qualifiedname>
+        <briefdescription>
+<para>Number of entries in the fixed table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="88" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bessel_1a5517b3e21b16d68e2d2b9b7f655bc7e9" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; Bessel::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>Bessel::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="85" column="25" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bessel_1a30877e645193490090537ddc48aa1634" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Bessel::dens</definition>
+        <argsstring>(double r, int n)</argsstring>
+        <name>dens</name>
+        <qualifiedname>Bessel::dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Density and potential members. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a03bab043703d385f3889780dfbf52337" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Bessel::get_dens</definition>
+        <argsstring>(double r, int l, double *coef)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>Bessel::get_dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a2880028fe7092ce5a0dbcc2faeee3fc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Bessel::get_dens</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, int tid)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>Bessel::get_dens</qualifiedname>
+        <reimplements refid="class_spherical_basis_1a0e2377c1cdc1335562343e01e4dee7cd">get_dens</reimplements>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get derivative of potential <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum harmonic order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the evaluation radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the density </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the thread enumerator that allows the function to provide some thread safety </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="28" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a6d72c85b86f8a75cbe0e6b68ed79372b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bessel::get_dens_coefs</definition>
+        <argsstring>(int l, double *coef, double *p)</argsstring>
+        <name>get_dens_coefs</name>
+        <qualifiedname>Bessel::get_dens_coefs</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="25" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1ac29bd18788d05f1c59fe5d631b439f24" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Bessel::get_dpotl</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;dp, int tid)</argsstring>
+        <name>get_dpotl</name>
+        <qualifiedname>Bessel::get_dpotl</qualifiedname>
+        <reimplements refid="class_spherical_basis_1ac3eafe5175c669b7b7b86932c764af32">get_dpotl</reimplements>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>dp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get derivative of potential <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum harmonic order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the evaluation radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the potential </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the derivative of the potential </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the thread enumerator that allows the function to provide some thread safety </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="26" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1aec83b6133254edacb1c16f88a3293d51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bessel::get_pot_coefs</definition>
+        <argsstring>(int l, double *coef, double *p, double *dp)</argsstring>
+        <name>get_pot_coefs</name>
+        <qualifiedname>Bessel::get_pot_coefs</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+<para>Required members for Spherical <ref refid="class_basis" kindref="compound">Basis</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="22" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a76a89cfe9a226d504415a12ef6904e82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bessel::get_pot_coefs_safe</definition>
+        <argsstring>(int l, double *coef, double *p, double *dp, double **potd1, double **dpot1)</argsstring>
+        <name>get_pot_coefs_safe</name>
+        <qualifiedname>Bessel::get_pot_coefs_safe</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dp</declname>
+        </param>
+        <param>
+          <type>double **</type>
+          <declname>potd1</declname>
+        </param>
+        <param>
+          <type>double **</type>
+          <declname>dpot1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="23" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a50c293c90a3bca22c6146e0239edb15b" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Bessel::get_potl</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, int tid)</argsstring>
+        <name>get_potl</name>
+        <qualifiedname>Bessel::get_potl</qualifiedname>
+        <reimplements refid="class_spherical_basis_1a63cdde991a10a6309a97e3af6b5833b3">get_potl</reimplements>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get derivative of potential <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum harmonic order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the evaluation radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the potential </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the thread enumerator that allows the function to provide some thread safety </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="27" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a478e81687b976d233bc5d81b572bafb5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Bessel::get_potl_dens</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;d, int tid)</argsstring>
+        <name>get_potl_dens</name>
+        <qualifiedname>Bessel::get_potl_dens</qualifiedname>
+        <reimplements refid="class_spherical_basis_1a2823c30f130d1a33768cce788b05c34e">get_potl_dens</reimplements>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get derivative of potential <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum harmonic order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the evaluation radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the potential </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be returned array in harmonics l and radial order n for the density </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the thread enumerator that allows the function to provide some thread safety </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="29" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1abab1334fcaeedd6ad07b0afda79741d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Bessel::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>Bessel::initialize</qualifiedname>
+        <reimplements refid="class_spherical_basis_1a33f78daf1c5dcf5ac4d327662963b1a5">initialize</reimplements>
+        <briefdescription>
+<para>Initialize parameters from YAML. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="34" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1abbd18ef40e3f33de7be5e83d18e91edf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bessel::make_grid</definition>
+        <argsstring>(double rmin, double rmax, int lmax, int nmax)</argsstring>
+        <name>make_grid</name>
+        <qualifiedname>Bessel::make_grid</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <briefdescription>
+<para>Make the density and potential grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="82" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a44e0f1965c8d21ef4fc2c8d50a4c0853" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Bessel::potl</definition>
+        <argsstring>(double r, int n)</argsstring>
+        <name>potl</name>
+        <qualifiedname>Bessel::potl</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="78" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bessel_1a75ccbb379912afb3dafd8239ea615ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Bessel::Bessel</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;conf, MixtureBasis *m=0)</argsstring>
+        <name>Bessel</name>
+        <qualifiedname>Bessel::Bessel</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mixture_basis" kindref="compound">MixtureBasis</ref> *</type>
+          <declname>m</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="93" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bessel_1a5ce729b084cdc83945b8ee78e9d46971" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Bessel::~Bessel</definition>
+        <argsstring>()</argsstring>
+        <name>~Bessel</name>
+        <qualifiedname>Bessel::~Bessel</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="96" column="11" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="96" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Computes the potential, acceleration and density using eigenfunctions of the Spherical Laplacian: spherical <ref refid="class_bessel" kindref="compound">Bessel</ref> functions </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bessel</label>
+        <link refid="class_bessel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+      <node id="2">
+        <label>SphericalBasis</label>
+        <link refid="class_spherical_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bessel</label>
+        <link refid="class_bessel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="11">
+        <label>MixtureBasis</label>
+        <link refid="class_mixture_basis"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SphericalBasis</label>
+        <link refid="class_spherical_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mix</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="12">
+        <label>TwoCenter</label>
+        <link refid="class_two_center"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>exp_in</edgelabel>
+          <edgelabel>exp_out</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mix_in</edgelabel>
+          <edgelabel>mix_out</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/Bessel.H" line="15" column="1" bodyfile="/home/weinberg/Projects/EXP/src/Bessel.H" bodystart="16" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>atol</name></member>
+      <member refid="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" virt="non-virtual"><scope>Bessel</scope><name>AxisymmetricBasis</name></member>
+      <member refid="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" virt="non-virtual"><scope>Bessel</scope><name>b_Hall</name></member>
+      <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>Bessel</scope><name>Basis</name></member>
+      <member refid="class_bessel_1a75ccbb379912afb3dafd8239ea615ddd" prot="public" virt="non-virtual"><scope>Bessel</scope><name>Bessel</name></member>
+      <member refid="class_spherical_basis_1a1066050b6ba526768710115eced4144f" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>biorthogonality_check</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>cC</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>Bessel</scope><name>cc_lock</name></member>
+      <member refid="class_spherical_basis_1a1fb812ef3e4559b795aa1407ceaa6079" prot="protected" virt="virtual"><scope>Bessel</scope><name>check_range</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>Bessel</scope><name>ClearExternal</name></member>
+      <member refid="class_spherical_basis_1aac8c95f365acb42630d38d2b8a2c79f4" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>cmagic</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>coef_dump</name></member>
+      <member refid="class_spherical_basis_1a27cb5e14065b26a1eaf8fecde6210db9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>coefMaster</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>Bessel</scope><name>compute</name></member>
+      <member refid="class_spherical_basis_1ac6b350512a9ae518f4c8cbecb4a46593" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>compute_multistep_coefficients</name></member>
+      <member refid="class_spherical_basis_1ac6d657e39329e543766a4503f25d3a37" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>compute_rms_coefs</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>conf</name></member>
+      <member refid="class_spherical_basis_1a843a19b3a3dc282c24cd1a6e19aab3ca" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>cosm</name></member>
+      <member refid="class_axisymmetric_basis_1a7bd4492f833f728f99891d38b7493631" prot="private" virt="non-virtual"><scope>Bessel</scope><name>covar</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>Bessel</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>Bessel</scope><name>cudaAware</name></member>
+      <member refid="class_axisymmetric_basis_1a739cec07895fdd02850006d6a52639a8" prot="private" virt="non-virtual"><scope>Bessel</scope><name>cuml</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a1dbf0ed28469f49a393a25a7b67753c3" prot="public" virt="non-virtual"><scope>Bessel</scope><name>CumulativeCut</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>current_keys</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>Bessel</scope><name>cylinder</name></member>
+      <member refid="class_spherical_basis_1a8371f1f235cbd49dbf0bd89541d8fdaf" prot="protected" virt="virtual"><scope>Bessel</scope><name>d_r_to_xi</name></member>
+      <member refid="class_axisymmetric_basis_1ad3b6c5272fa2aae68be0177ebb3f2edd" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>defSampT</name></member>
+      <member refid="class_spherical_basis_1a3cfea1dc5ab6ba11187c8ce618f4bd22" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>dend</name></member>
+      <member refid="class_bessel_1a30877e645193490090537ddc48aa1634" prot="private" virt="non-virtual"><scope>Bessel</scope><name>dens</name></member>
+      <member refid="class_bessel_1a9cb5e42e13a8312ea49202b6675204ca" prot="private" virt="non-virtual"><scope>Bessel</scope><name>dens_grid</name></member>
+      <member refid="class_spherical_basis_1a73773546d4e45c0ac442a9853ef42225" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_acceleration_and_potential</name></member>
+      <member refid="class_spherical_basis_1a45f237bae8eb688588b95f8a0522b10d" prot="protected" virt="virtual"><scope>Bessel</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_spherical_basis_1a91e8b02d7a7482ba2dd12cbae311533c" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_coefficients</name></member>
+      <member refid="class_spherical_basis_1a8ff7907cd7af5f79b63f11282c277cb2" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_coefficients</name></member>
+      <member refid="class_spherical_basis_1af9309f6e0f2eb72d4e3c046a15634a70" prot="protected" virt="virtual"><scope>Bessel</scope><name>determine_coefficients_particles</name></member>
+      <member refid="class_spherical_basis_1a100361ca78665ea58fb37f141f98bf07" prot="protected" virt="virtual"><scope>Bessel</scope><name>determine_coefficients_playback</name></member>
+      <member refid="class_spherical_basis_1a7ad9fad36d8b7074c7b47d0126ca26ef" prot="protected" virt="virtual"><scope>Bessel</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_spherical_basis_1a84fc725d4e62f743a3846b8b5908a42e" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_fields_at_point</name></member>
+      <member refid="class_spherical_basis_1ab11fe59ba8d3a8e251ea96e72d93b654" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_fields_at_point_cyl</name></member>
+      <member refid="class_spherical_basis_1ab139a46a2cc6813b375b041dbe3b6498" prot="public" virt="virtual"><scope>Bessel</scope><name>determine_fields_at_point_sph</name></member>
+      <member refid="class_spherical_basis_1acf7e4a3d55ca7d250a2b814bd95321ba" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>differ1</name></member>
+      <member refid="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>dlegendre_R</name></member>
+      <member refid="class_spherical_basis_1aff89452a2ddcef22eb9333b5c04df0ef" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>dlegs</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>Bessel</scope><name>dof</name></member>
+      <member refid="class_spherical_basis_1aa1ad955dd550cd637a32cc11cccc3100" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>dpot</name></member>
+      <member refid="class_spherical_basis_1a91d743a30554403f62492950613bea5b" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>du</name></member>
+      <member refid="class_spherical_basis_1a518203f6db28e171c7dccd04611994b5" prot="public" virt="virtual"><scope>Bessel</scope><name>dump_coefs</name></member>
+      <member refid="class_spherical_basis_1a34866d25c28ce00edf20be346f43361f" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>dump_coefs_all</name></member>
+      <member refid="class_spherical_basis_1aababccfd0ab296c683963963caead0be" prot="public" virt="virtual"><scope>Bessel</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_axisymmetric_basis_1a45362e008f1389402494647b75931e1e" prot="private" virt="non-virtual"><scope>Bessel</scope><name>eval</name></member>
+      <member refid="class_axisymmetric_basis_1ae30dc4a6d54a9b90dbe31e2b03821382" prot="private" virt="non-virtual"><scope>Bessel</scope><name>evec</name></member>
+      <member refid="class_spherical_basis_1a68de61b1e9ba7549723513791436e087" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>EVEN_L</name></member>
+      <member refid="class_spherical_basis_1acb6cedabe692304779492aaea2efb698" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>EVEN_M</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>Bessel</scope><name>exp_thread_fork</name></member>
+      <member refid="class_axisymmetric_basis_1afae69589bd4f7341ab42b8c48c22b707" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoef</name></member>
+      <member refid="class_spherical_basis_1a678f0fd3cf6338763c2acd325a3e3b18" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoef0</name></member>
+      <member refid="class_axisymmetric_basis_1ad68406307042d772a285f40728a70cf6" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoef1</name></member>
+      <member refid="class_axisymmetric_basis_1ad60eac81d3f5d960af091345128485a8" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefL</name></member>
+      <member refid="class_axisymmetric_basis_1acc9740eafab3aa6d3b935bb310c568bd" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefM</name></member>
+      <member refid="class_axisymmetric_basis_1a11d3819929833b80de31120b99912e96" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefM1</name></member>
+      <member refid="class_axisymmetric_basis_1abe415ce8067b52c57aeb4beccbd85d7f" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefN</name></member>
+      <member refid="class_axisymmetric_basis_1ad344d65e16dfdea9aed2e478185bc8e7" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefP</name></member>
+      <member refid="class_axisymmetric_basis_1acd8494e7bb875fc2c8677ca92a0c6f01" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefT</name></member>
+      <member refid="class_axisymmetric_basis_1a699990cc53ec82eb867cf9c85cb57f70" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>expcoefT1</name></member>
+      <member refid="class_axisymmetric_basis_1ae6dd8f205982c2e3ef87f6f467976018" prot="private" virt="non-virtual"><scope>Bessel</scope><name>fac02</name></member>
+      <member refid="class_spherical_basis_1a39e31915305ef9daa6b39d3c5cbd9dad" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>factorial</name></member>
+      <member refid="class_bessel_1aa2f3ecee293522f31d7a43300b8259d5" prot="private" virt="non-virtual"><scope>Bessel</scope><name>firstime_accel</name></member>
+      <member refid="class_bessel_1a130d6cddd30c2e20a29d5124929389c2" prot="private" virt="non-virtual"><scope>Bessel</scope><name>firstime_coef</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>Bessel</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>Bessel</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>geoname</name></member>
+      <member refid="class_spherical_basis_1a05f775f3bae56543829492fae9a0b75f" prot="public" virt="virtual"><scope>Bessel</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_bessel_1a2880028fe7092ce5a0dbcc2faeee3fc9" prot="private" virt="virtual"><scope>Bessel</scope><name>get_dens</name></member>
+      <member refid="class_bessel_1a03bab043703d385f3889780dfbf52337" prot="private" virt="non-virtual"><scope>Bessel</scope><name>get_dens</name></member>
+      <member refid="class_bessel_1a6d72c85b86f8a75cbe0e6b68ed79372b" prot="private" virt="non-virtual"><scope>Bessel</scope><name>get_dens_coefs</name></member>
+      <member refid="class_spherical_basis_1ababeb377d9cc8f3150b3dac614fed0bb" prot="protected" virt="non-virtual" ambiguityscope="SphericalBasis::"><scope>Bessel</scope><name>get_dens_coefs</name></member>
+      <member refid="class_bessel_1ac29bd18788d05f1c59fe5d631b439f24" prot="private" virt="virtual"><scope>Bessel</scope><name>get_dpotl</name></member>
+      <member refid="class_bessel_1aec83b6133254edacb1c16f88a3293d51" prot="private" virt="non-virtual"><scope>Bessel</scope><name>get_pot_coefs</name></member>
+      <member refid="class_spherical_basis_1ab38a879d817874f75e324347afe33cb6" prot="protected" virt="non-virtual" ambiguityscope="SphericalBasis::"><scope>Bessel</scope><name>get_pot_coefs</name></member>
+      <member refid="class_bessel_1a76a89cfe9a226d504415a12ef6904e82" prot="private" virt="non-virtual"><scope>Bessel</scope><name>get_pot_coefs_safe</name></member>
+      <member refid="class_spherical_basis_1a590da9389de7deca03880fc5b1c6e3a4" prot="protected" virt="non-virtual" ambiguityscope="SphericalBasis::"><scope>Bessel</scope><name>get_pot_coefs_safe</name></member>
+      <member refid="class_bessel_1a50c293c90a3bca22c6146e0239edb15b" prot="private" virt="virtual"><scope>Bessel</scope><name>get_potl</name></member>
+      <member refid="class_bessel_1a478e81687b976d233bc5d81b572bafb5" prot="private" virt="virtual"><scope>Bessel</scope><name>get_potl_dens</name></member>
+      <member refid="class_axisymmetric_basis_1a81196ff99fb4254c4e37866ca3d2c7de" prot="public" virt="non-virtual"><scope>Bessel</scope><name>getCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1a392660898c9be95471072adb3f0faa25" prot="public" virt="non-virtual"><scope>Bessel</scope><name>getLmax</name></member>
+      <member refid="class_axisymmetric_basis_1ab09be7b0782949e27379ea930eb10171" prot="public" virt="non-virtual"><scope>Bessel</scope><name>getMmax</name></member>
+      <member refid="class_axisymmetric_basis_1a3026462dfa88e923d7673f3d56dc4de4" prot="public" virt="non-virtual"><scope>Bessel</scope><name>getNmax</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>Bessel</scope><name>getScale</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a355c2a93725cd932da5408330dec2a6b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>Hall</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>Bessel</scope><name>HaveCoefDump</name></member>
+      <member refid="class_axisymmetric_basis_1af0b7e5ba06a1acf652e61b9b4ecadfec" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>hexp</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>Bessel</scope><name>id</name></member>
+      <member refid="class_bessel_1abab1334fcaeedd6ad07b0afda79741d6" prot="private" virt="virtual"><scope>Bessel</scope><name>initialize</name></member>
+      <member refid="class_axisymmetric_basis_1abe6cac911f0415ee15378c104bd3fd16" prot="private" virt="non-virtual"><scope>Bessel</scope><name>inv</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>Bessel</scope><name>kill_mutex</name></member>
+      <member refid="class_spherical_basis_1a601c0bfd766bc3de1f4983430b110663" prot="public" virt="virtual"><scope>Bessel</scope><name>knl</name></member>
+      <member refid="class_spherical_basis_1a79dc94b3d9151be5c82758e785f27102" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>krnl</name></member>
+      <member refid="class_axisymmetric_basis_1a77c3332bf7286f04c94af7d068c7b2c4" prot="private" virt="non-virtual"><scope>Bessel</scope><name>L0</name></member>
+      <member refid="class_spherical_basis_1aa594052066fda40758b8e4757fbab0aa" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>lastPlayTime</name></member>
+      <member refid="class_axisymmetric_basis_1a570f3d24187073d3354933ace93a6bd6" prot="private" virt="non-virtual"><scope>Bessel</scope><name>Ldim</name></member>
+      <member refid="class_basis_1a80975218d67cc019d69fefb7a207d344" prot="public" virt="non-virtual"><scope>Bessel</scope><name>legendre_R</name></member>
+      <member refid="class_spherical_basis_1a172c954d497270d8bb6561367b990b5d" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>legs</name></member>
+      <member refid="class_axisymmetric_basis_1abed8db010c45ad27e769043c68ab3101" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>Lmax</name></member>
+      <member refid="class_spherical_basis_1a463dfd0a4b7a6f16a7a814e887dce037" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>M0_only</name></member>
+      <member refid="class_bessel_1abbd18ef40e3f33de7be5e83d18e91edf" prot="private" virt="non-virtual"><scope>Bessel</scope><name>make_grid</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>make_mutex</name></member>
+      <member refid="class_axisymmetric_basis_1a0c051b9729ad5af02ed9ca626b56d999" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>massT</name></member>
+      <member refid="class_axisymmetric_basis_1a695b88eea00afd8f04b80c7f08be1b82" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>massT1</name></member>
+      <member refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>MatrixP</name></member>
+      <member refid="class_spherical_basis_1ae90709b119fc3f5df1c76abb8145bee8" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>meanC</name></member>
+      <member refid="class_spherical_basis_1af0c80585c72228373e886563448ba6e2" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>mix</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>mlevel</name></member>
+      <member refid="class_axisymmetric_basis_1a2307130cf92a81e6cfb6f69fb2279585" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>Mmax</name></member>
+      <member refid="class_spherical_basis_1af0aaa7a1ef27c5ccb866190e5cefd90a" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_add_debug</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_debug</name></member>
+      <member refid="class_spherical_basis_1aef978544ce5d90a116759fd3a87a8634" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_reset</name></member>
+      <member refid="class_spherical_basis_1a92c55df02156ac2f3633bfa950eb795b" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_update</name></member>
+      <member refid="class_spherical_basis_1af2393d23ec465c58280cc952a92c6fa8" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_update_begin</name></member>
+      <member refid="class_spherical_basis_1a50f766814b5eb9fd2d3922da477c16e5" prot="public" virt="virtual"><scope>Bessel</scope><name>multistep_update_finish</name></member>
+      <member refid="class_axisymmetric_basis_1a066a011ea1511b649a093b17a01bee1e" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>muse</name></member>
+      <member refid="class_spherical_basis_1a5d72272244c58109d29a4d3e03f51ce9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>muse0</name></member>
+      <member refid="class_spherical_basis_1aee6466e0b29f8c1f9c4df8baa0e607d6" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>muse1</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>nbodies</name></member>
+      <member refid="class_spherical_basis_1a3a81bde48ab3654d1dbe004efcd06782" prot="public" virt="non-virtual"><scope>Bessel</scope><name>NewCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>nmax</name></member>
+      <member refid="class_spherical_basis_1a67a78c946ad3a87bafd4be8ea267f266" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>NO_L0</name></member>
+      <member refid="class_spherical_basis_1ae51f8f0ffc23b5826245038719998eb6" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>NO_L1</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>Bessel</scope><name>NoCoefs</name></member>
+      <member refid="class_spherical_basis_1a27229561fbae3c1f7bf416933767a494" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>NOISE</name></member>
+      <member refid="class_spherical_basis_1a3cbbfe1042e83cf11ab096ec01b5a518" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>noise_model_file</name></member>
+      <member refid="class_spherical_basis_1af4a0835e95c0e0f5406977a92c11ed6f" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>noiseN</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a85300903a059bd6e3a193bd92112a16f" prot="public" virt="non-virtual"><scope>Bessel</scope><name>None</name></member>
+      <member refid="class_spherical_basis_1ad436a9e7fe4b8dca580322b59dd1b9fe" prot="public" virt="virtual"><scope>Bessel</scope><name>norm</name></member>
+      <member refid="class_axisymmetric_basis_1a5cffa9ce5ca3b98aeca288e4c5e11c73" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>normM</name></member>
+      <member refid="class_axisymmetric_basis_1afa81d9394890b9ebc0a7989651b021d9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>npca</name></member>
+      <member refid="class_axisymmetric_basis_1a68be4e14ebd23388b75d8df12af76667" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>npca0</name></member>
+      <member refid="class_spherical_basis_1a64ddd550a0b2994a5800a064883814e6" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>nrand</name></member>
+      <member refid="class_spherical_basis_1a2c45c3e7a097ab190a77f882dac5c2c2" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>occt</name></member>
+      <member refid="class_spherical_basis_1a7db3a78056025d8c840dd22bae0b2692" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>occt_output</name></member>
+      <member refid="class_spherical_basis_1a69a29f7fd957e20aebe7797ba7f266bf" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>ortho_check</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>Bessel</scope><name>other</name></member>
+      <member refid="class_bessel_1ab6a7985fc7abc4bf90c606e2901488f4" prot="private" virt="non-virtual"><scope>Bessel</scope><name>p</name></member>
+      <member refid="class_spherical_basis_1aa78ad9fca6de2d329ffc43522b1f067c" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>pack</name></member>
+      <member refid="class_axisymmetric_basis_1a0ba9093da208645ba67931e04a61f4c7" prot="protected" virt="virtual"><scope>Bessel</scope><name>parallel_distribute_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a1aba7be747336c8e6a67613a3109e285" prot="protected" virt="virtual"><scope>Bessel</scope><name>parallel_gather_coef2</name></member>
+      <member refid="class_axisymmetric_basis_1a01ab8064885a073b48ad562790b89f86" prot="protected" virt="virtual"><scope>Bessel</scope><name>parallel_gather_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a408a19fff1093c88f6a9bcf9ad2601d4" prot="public" virt="non-virtual"><scope>Bessel</scope><name>pca_hall</name></member>
+      <member refid="class_axisymmetric_basis_1ae0353b5d1b82b19517ede95a862d7484" prot="public" virt="non-virtual"><scope>Bessel</scope><name>pca_hall_2d</name></member>
+      <member refid="class_axisymmetric_basis_1ab971c10417b2e844c9251d6a667103d4" prot="public" virt="non-virtual"><scope>Bessel</scope><name>pca_hall_3d</name></member>
+      <member refid="class_axisymmetric_basis_1aea08169a329b6608c42fdeeb1db91183" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>pcadiag</name></member>
+      <member refid="class_axisymmetric_basis_1af2a1f4efbdc887b29a6d49b770c1f060" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>pcaeof</name></member>
+      <member refid="class_axisymmetric_basis_1a8da7266925e30ee0056cf97e84d4809e" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>pcavar</name></member>
+      <member refid="class_axisymmetric_basis_1ad53aa251aa38d7645a4d3eece99dc9d5" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>pcavtk</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>play_cnew</name></member>
+      <member refid="class_spherical_basis_1a4c8c57602fd3b7eb58c08c35c2964f90" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>playback</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>Bessel</scope><name>PotAccel</name></member>
+      <member refid="class_spherical_basis_1a843909b7df76df454ca77ca502e05065" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>potd</name></member>
+      <member refid="class_bessel_1a44e0f1965c8d21ef4fc2c8d50a4c0853" prot="private" virt="non-virtual"><scope>Bessel</scope><name>potl</name></member>
+      <member refid="class_bessel_1a1821dbe893dd1686dde6942bffa6f19f" prot="private" virt="non-virtual"><scope>Bessel</scope><name>potl_grid</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>Bessel</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>Bessel</scope><name>print_timings</name></member>
+      <member refid="class_bessel_1a7a6860aa0217c019251672f61605fc6f" prot="private" virt="non-virtual"><scope>Bessel</scope><name>r_grid</name></member>
+      <member refid="class_bessel_1a6f08a0ebccea5edf38f5c89af2b7b616" prot="private" virt="non-virtual"><scope>Bessel</scope><name>r_grid_del</name></member>
+      <member refid="class_spherical_basis_1ad1b2e558ad5f084a43d5368e86910763" prot="protected" virt="virtual"><scope>Bessel</scope><name>r_to_xi</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>Bessel</scope><name>RegisterComponent</name></member>
+      <member refid="class_spherical_basis_1ab5d753ab8f0ddfb814fe73a027af323d" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>resetT</name></member>
+      <member refid="class_spherical_basis_1a99942ed4bb5830034724f7f32c284cea" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>rgen</name></member>
+      <member refid="class_spherical_basis_1a498d5da25a19e0eaf75cb539fcda5227" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>rmax</name></member>
+      <member refid="class_spherical_basis_1a1eda652331347885bac46d659ae02b8d" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>rmin</name></member>
+      <member refid="class_spherical_basis_1a89d96243aa9a5c5932555116a3ce59e9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>rmsC</name></member>
+      <member refid="class_bessel_1a71e4d3aace12dd36957a2293fa5ac5cd" prot="private" virt="non-virtual"><scope>Bessel</scope><name>RNUM</name></member>
+      <member refid="class_axisymmetric_basis_1a5116daa842c0f604c2a312db8e0ce97e" prot="private" virt="non-virtual"><scope>Bessel</scope><name>s_Hall</name></member>
+      <member refid="class_axisymmetric_basis_1a9e5bccb2a796e19083511f4e637cffda" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>sampT</name></member>
+      <member refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>scale</name></member>
+      <member refid="class_spherical_basis_1a73e589dd6b66a1a015e065d34021f525" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>seedN</name></member>
+      <member refid="class_spherical_basis_1a8a21a2f59849e53f52c532be168a5800" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>self_consistent</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>Bessel</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>Bessel</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>Bessel</scope><name>setScale</name></member>
+      <member refid="class_axisymmetric_basis_1a6af1bcb2359adc5091625d457a953efa" prot="public" virt="non-virtual"><scope>Bessel</scope><name>setTK</name></member>
+      <member refid="class_spherical_basis_1aa6cc607bac98ab8abef4c46a6a06fee2" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>setup</name></member>
+      <member refid="class_spherical_basis_1ad9ea2d324f62151073b6cb3b4da9f28a" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>setup_noise</name></member>
+      <member refid="class_basis_1a0779c0b0f74361d7861bbc19a194b63c" prot="public" virt="non-virtual"><scope>Bessel</scope><name>sinecosine_R</name></member>
+      <member refid="class_spherical_basis_1a01e5435d45829ea1fa2a7eaa94ca967a" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>sinm</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>Bessel</scope><name>slab</name></member>
+      <member refid="class_axisymmetric_basis_1a52873b88250c954ccca613fab178c5ee" prot="private" virt="non-virtual"><scope>Bessel</scope><name>smth</name></member>
+      <member refid="class_axisymmetric_basis_1ac4fce6a4930030f49b46844753ce3052" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>snr</name></member>
+      <member refid="class_spherical_basis_1a985aeb555ac7cadb48ada5aa0b87a0a4" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>sphCoefs</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>Bessel</scope><name>sphere</name></member>
+      <member refid="class_spherical_basis_1a597c70fc53eab8ec04f7ab86c04fec42" prot="public" virt="non-virtual"><scope>Bessel</scope><name>SphericalBasis</name></member>
+      <member refid="class_spherical_basis_1a37942ed713092a019dbc750b2c44c2d7" prot="public" virt="non-virtual"><scope>Bessel</scope><name>SphericalBasis</name></member>
+      <member refid="class_axisymmetric_basis_1a2dd973d8ace9db32c65938425d159af9" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>sqnorm</name></member>
+      <member refid="class_spherical_basis_1aa69f1ee5a2a5ab8269b4cd0b97aa274a" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>ssfrac</name></member>
+      <member refid="class_axisymmetric_basis_1a592dd952d0301e3c55da82f78eb3cfe8" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>subsamp</name></member>
+      <member refid="class_spherical_basis_1ac8ace6001c8d041fb39f13cb27b2ca19" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>subset</name></member>
+      <member refid="class_axisymmetric_basis_1a8298f44c8cc6e6401b471c4a50c52662" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>swap_coefs</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>Bessel</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>Bessel</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>Bessel</scope><name>td</name></member>
+      <member refid="class_axisymmetric_basis_1a196db3f26a946c2dcbaabcbe31883b4a" prot="private" virt="non-virtual"><scope>Bessel</scope><name>Tevec</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>Bessel</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>Bessel</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>timer_list</name></member>
+      <member refid="class_axisymmetric_basis_1a3e85225ea1c3c408fe2bcf23ad09b555" prot="private" virt="non-virtual"><scope>Bessel</scope><name>tk_type</name></member>
+      <member refid="class_axisymmetric_basis_1a3a98442a6149253a6881c33cf6792e38" prot="private" virt="non-virtual"><scope>Bessel</scope><name>tkcum</name></member>
+      <member refid="class_axisymmetric_basis_1ad4dabce5bd04809a4644cb36705312f9" prot="private" virt="non-virtual"><scope>Bessel</scope><name>tksmooth</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" prot="public" virt="non-virtual"><scope>Bessel</scope><name>TKType</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>Bessel</scope><name>TList</name></member>
+      <member refid="class_axisymmetric_basis_1a8acdd32795c612cdcefee5da62cc5b3a" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>tvar</name></member>
+      <member refid="class_spherical_basis_1a3c3e727fad925e72690bb0dbd39a2676" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>u</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>Bessel</scope><name>unmatched</name></member>
+      <member refid="class_spherical_basis_1adb25dced63b1f56d205dd7d8e659f0ef" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>unpack</name></member>
+      <member refid="class_spherical_basis_1aeee5549cb30e7c608c8255783ab10a52" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>update_noise</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>Bessel</scope><name>use</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>Bessel</scope><name>Used</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>used</name></member>
+      <member refid="class_bessel_1a5517b3e21b16d68e2d2b9b7f655bc7e9" prot="private" virt="non-virtual"><scope>Bessel</scope><name>valid_keys</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a27bdb8b3a4040b794e7418581fda2615" prot="public" virt="non-virtual"><scope>Bessel</scope><name>VarianceCut</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a7381bdf9e2231e55827cf72d86f7f415" prot="public" virt="non-virtual"><scope>Bessel</scope><name>VarianceWeighted</name></member>
+      <member refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>VectorP</name></member>
+      <member refid="class_spherical_basis_1a4927dfcbaf0910033fcc37a4892f8bde" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>VectorXdP</name></member>
+      <member refid="class_axisymmetric_basis_1ab0d1d51da0dc7f33cf3091bab41866d1" prot="protected" virt="non-virtual"><scope>Bessel</scope><name>vtkfreq</name></member>
+      <member refid="class_axisymmetric_basis_1a3708ccfcde62cc3e88dbde5994d08f26" prot="private" virt="non-virtual"><scope>Bessel</scope><name>weight</name></member>
+      <member refid="class_spherical_basis_1a84edfe45c66d8221046d65aa63d19f8a" prot="protected" virt="virtual"><scope>Bessel</scope><name>xi_to_r</name></member>
+      <member refid="class_axisymmetric_basis_1a98dbe87cedd6dc28d03bba5aba133dd4" prot="public" virt="virtual"><scope>Bessel</scope><name>~AxisymmetricBasis</name></member>
+      <member refid="class_bessel_1a5ce729b084cdc83945b8ee78e9d46971" prot="public" virt="virtual"><scope>Bessel</scope><name>~Bessel</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>Bessel</scope><name>~PotAccel</name></member>
+      <member refid="class_spherical_basis_1aa752534f77e17674a6a99da2549af843" prot="public" virt="virtual"><scope>Bessel</scope><name>~SphericalBasis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

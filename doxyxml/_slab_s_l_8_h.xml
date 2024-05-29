@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_slab_s_l_8_h" kind="file" language="C++">
+    <compoundname>SlabSL.H</compoundname>
+    <includes local="no">complex</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes local="no">unsupported/Eigen/CXX11/Tensor</includes>
+    <includes local="no">Coefficients.H</includes>
+    <includes refid="_s_l_grid_m_p2_8_h" local="no">SLGridMP2.H</includes>
+    <includes refid="biorth1d_8_h" local="no">biorth1d.H</includes>
+    <includes refid="_pot_accel_8_h" local="no">PotAccel.H</includes>
+    <incdepgraph>
+      <node id="29">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>StringTok.H</label>
+        <link refid="_string_tok_8_h"/>
+      </node>
+      <node id="41">
+        <label>YamlCheck.H</label>
+        <link refid="_yaml_check_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>biorth.H</label>
+        <link refid="biorth_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>biorth1d.H</label>
+        <link refid="biorth1d_8_h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>PotAccel.H</label>
+        <link refid="_pot_accel_8_h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/SlabSL.H</label>
+        <link refid="_slab_s_l_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Coefficients.H</label>
+      </node>
+      <node id="3">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="39">
+        <label>Particle.H</label>
+      </node>
+      <node id="37">
+        <label>chrono</label>
+      </node>
+      <node id="34">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>complex</label>
+      </node>
+      <node id="14">
+        <label>config_exp.h</label>
+      </node>
+      <node id="27">
+        <label>cstdlib</label>
+      </node>
+      <node id="20">
+        <label>deque</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="24">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>iomanip</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="38">
+        <label>list</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="17">
+        <label>memory</label>
+      </node>
+      <node id="11">
+        <label>mpi.h</label>
+      </node>
+      <node id="18">
+        <label>random</label>
+      </node>
+      <node id="42">
+        <label>set</label>
+      </node>
+      <node id="26">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>unsupported/Eigen/CXX11/Tensor</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+      <node id="31">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_slab_s_l" prot="public">SlabSL</innerclass>
+    <innerclass refid="struct_slab_s_l_1_1_slab_s_l_coef_header" prot="private">SlabSL::SlabSLCoefHeader</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SlabSL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SlabSL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unsupported/Eigen/CXX11/Tensor&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Coefficients.H&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_s_l_grid_m_p2_8_h" kindref="compound">SLGridMP2.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="biorth1d_8_h" kindref="compound">biorth1d.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_pot_accel_8_h" kindref="compound">PotAccel.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thrust/complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaParticle.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaMappingConstants.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_slab_s_l" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_slab_s_l" kindref="compound">SlabSL</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_pot_accel" kindref="compound">PotAccel</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="struct_slab_s_l_1_1_slab_s_l_coef_header" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header" kindref="compound">SlabSLCoefHeader</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1aec297657d667a4b59be1b0265b480dc6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1aec297657d667a4b59be1b0265b480dc6" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="30" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a0fecba0903bd544a630c5ff8400175c9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a0fecba0903bd544a630c5ff8400175c9" kindref="member">zmax</ref>;</highlight></codeline>
+<codeline lineno="31" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a4ecff0f085fd829e6bfc9b2a169d70ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a4ecff0f085fd829e6bfc9b2a169d70ae" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="32" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1af840d148734f82c031337ccc4d575ac6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1af840d148734f82c031337ccc4d575ac6" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="33" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a77c431f28ea2639f3b452357613b6299" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a77c431f28ea2639f3b452357613b6299" kindref="member">nmaxx</ref>,<sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1adf8f003dd53c86e15de7029e387e781e" kindref="member">nmaxy</ref>,<sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1a3b37675920d474a0f1cd278755709746" kindref="member">nmaxz</ref>;</highlight></codeline>
+<codeline lineno="34" refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1aee8294b3bd72f3d483949ca126cccb39" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header_1aee8294b3bd72f3d483949ca126cccb39" kindref="member">jmax</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_slab_s_l_1aa1d43333ba857a58169ec6a428be3473" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;SLGridSlab&gt;<sp/><ref refid="class_slab_s_l_1aa1d43333ba857a58169ec6a428be3473" kindref="member">grid</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_slab_s_l_1a522d719367477fc609ef5da4851c77c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_slab_s_l_1a522d719367477fc609ef5da4851c77c2" kindref="member">coefType</ref><sp/>=<sp/>Eigen::Tensor&lt;std::complex&lt;double&gt;,<sp/>3&gt;;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_slab_s_l_1a83072280d47480e7f24ac4b269ee8a1e" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;coefType&gt;<sp/><ref refid="class_slab_s_l_1a83072280d47480e7f24ac4b269ee8a1e" kindref="member">expccof</ref>,<sp/><ref refid="class_slab_s_l_1a967832769efea804b747310387fc079c" kindref="member">expccofP</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_slab_s_l_1a5230854427d717fc77cfdff6aedd5d2c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a5230854427d717fc77cfdff6aedd5d2c" kindref="member">nminx</ref>,<sp/><ref refid="class_slab_s_l_1af072d42e03227a25d0a5034a85d6e77e" kindref="member">nminy</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_slab_s_l_1af25aba0a9911049fa651f9f9ec7f8182" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1af25aba0a9911049fa651f9f9ec7f8182" kindref="member">nmaxx</ref>,<sp/><ref refid="class_slab_s_l_1aeb08b2c1dd672a3f6171fe67db1daa20" kindref="member">nmaxy</ref>,<sp/><ref refid="class_slab_s_l_1aa98601cf636258c046366cf1cd3f2f94" kindref="member">nmaxz</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_slab_s_l_1a903fb381cdeac5f01e9b843b744ed95c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1aa755c07fffc17ecb46106348e26f135e" kindref="member">zmax</ref>,<sp/><ref refid="class_slab_s_l_1a903fb381cdeac5f01e9b843b744ed95c" kindref="member">hslab</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_slab_s_l_1ad925b2d5584e06879723ae032f733200" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1ad925b2d5584e06879723ae032f733200" kindref="member">imx</ref>,<sp/><ref refid="class_slab_s_l_1aefff3111543608ef2c99cb272edc1d27" kindref="member">imy</ref>,<sp/><ref refid="class_slab_s_l_1a825046f581f2299dbb00385839277fb5" kindref="member">imz</ref>,<sp/><ref refid="class_slab_s_l_1a33bdd3ed77e3316b2737359f3d8206d7" kindref="member">jmax</ref>,<sp/><ref refid="class_slab_s_l_1a7429986d460d82594e47a4ffda7a91c2" kindref="member">nnmax</ref>;</highlight></codeline>
+<codeline lineno="52" refid="class_slab_s_l_1a55e8654aada27a263c2e81bfce30a3df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="class_slab_s_l_1a55e8654aada27a263c2e81bfce30a3df" kindref="member">dfac</ref>;</highlight></codeline>
+<codeline lineno="53" refid="class_slab_s_l_1a514cf61d01c6ae9cc8aa8715b7fae940" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_slab_s_l_1a514cf61d01c6ae9cc8aa8715b7fae940" kindref="member">kfac</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_slab_s_l_1ae1bc4f4db8f0a8db04f594aa5c0ecff7" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::VectorXd&gt;<sp/><ref refid="class_slab_s_l_1ae1bc4f4db8f0a8db04f594aa5c0ecff7" kindref="member">zfrc</ref>,<sp/><ref refid="class_slab_s_l_1a2e3a20f13e1612d7dea594a118ef5d2e" kindref="member">zpot</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_slab_s_l_1ab55c0c05f5a2dccc43553ba98cda8887" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_slab_s_l_1_1_slab_s_l_coef_header" kindref="compound">SlabSLCoefHeader</ref><sp/><ref refid="class_slab_s_l_1ab55c0c05f5a2dccc43553ba98cda8887" kindref="member">coefheader</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>determine_coefficients_cuda();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>determine_acceleration_cuda();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>multistep_update_cuda();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>thrust::host_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>host_coefs;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>thrust::device_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>dev_coefs;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HtoD_coefs();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DtoH_coefs(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initialize_constants();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy_cuda();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>thrust::device_vector&lt;cudaTextureObject_t&gt;<sp/>t_d;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>std::vector&lt;cudaArray_t&gt;<sp/>cuInterpArray;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>thrust::host_vector&lt;cudaTextureObject_t&gt;<sp/>tex;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cudaStorage</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>thrust::device_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>dN_coef;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>thrust::device_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>dc_coef;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>thrust::device_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>dw_coef;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>thrust::device_vector&lt;thrust::complex&lt;cuFP_t&gt;&gt;<sp/>df_coef;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resize_coefs(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>osize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gridSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stride);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>cudaStorage<sp/>cuS;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialize_cuda_slab<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cuda_initialize();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" kindref="member">initialize_cuda</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_slab_s_l_1aa1d43333ba857a58169ec6a428be3473" kindref="member">grid</ref>-&gt;initialize_cuda(cuInterpArray,<sp/>tex);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cuda_zero_coefs();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_slab_s_l_1a61a7a2f2d1306ae8e71ccd9fc049d7a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a61a7a2f2d1306ae8e71ccd9fc049d7a7" kindref="member">ngrid</ref><sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_slab_s_l_1a90f47058bbda05bc7ad8771fa567b354" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_slab_s_l_1a90f47058bbda05bc7ad8771fa567b354" kindref="member">type</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;isothermal&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_slab_s_l_1ade2ef48d95981861d5dba8eb8fe1b392" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1ade2ef48d95981861d5dba8eb8fe1b392" kindref="member">determine_coefficients</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129" refid="class_slab_s_l_1a0424b21e20c21a17fd2180fc0b5eeba1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a0424b21e20c21a17fd2180fc0b5eeba1" kindref="member">get_acceleration_and_potential</ref>(<ref refid="class_component" kindref="compound">Component</ref>*);</highlight></codeline>
+<codeline lineno="131"></codeline>
+<codeline lineno="133" refid="class_slab_s_l_1acf131843a426e15f93065da298737934" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1acf131843a426e15f93065da298737934" kindref="member">swap_coefs</ref>(std::vector&lt;coefType&gt;&amp;<sp/>from,<sp/>std::vector&lt;coefType&gt;&amp;<sp/>to)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from.size()<sp/>!=<sp/>to.size())<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>sout;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;swap_coefs:<sp/>size(from)=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>from.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>!=<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;size(to)=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>to.size();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(sout.str());</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;coefType&gt;<sp/>tmp(from);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>=<sp/>to;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>to<sp/><sp/><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_slab_s_l_1a86e9fff4171b9d29f9550ce73727f1c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="class_slab_s_l_1a86e9fff4171b9d29f9550ce73727f1c0" kindref="member">determine_coefficients_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg);</highlight></codeline>
+<codeline lineno="150" refid="class_slab_s_l_1ac45b33a96db109994ba0fe35547a3269" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="class_slab_s_l_1ac45b33a96db109994ba0fe35547a3269" kindref="member">determine_acceleration_and_potential_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg);</highlight></codeline>
+<codeline lineno="152"></codeline>
+<codeline lineno="157" refid="class_slab_s_l_1a1b767b7d6539901a8cd4a2c95f2587f3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a1b767b7d6539901a8cd4a2c95f2587f3" kindref="member">compute_multistep_coefficients</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"></codeline>
+<codeline lineno="161" refid="class_slab_s_l_1a3d092fffb3a9ad22e087da55836793cb" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;coefType&gt;<sp/>&gt;<sp/><ref refid="class_slab_s_l_1a3d092fffb3a9ad22e087da55836793cb" kindref="member">differ1</ref>;</highlight></codeline>
+<codeline lineno="162" refid="class_slab_s_l_1a218f2b58cceddc3f6e806abf2f398986" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::complex&lt;double&gt;<sp/>&gt;<sp/><ref refid="class_slab_s_l_1a218f2b58cceddc3f6e806abf2f398986" kindref="member">pack</ref>,<sp/><ref refid="class_slab_s_l_1a240fe5a1f485bf015eacb51ac09c10d9" kindref="member">unpack</ref>;</highlight></codeline>
+<codeline lineno="164"></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="class_slab_s_l_1a0cf74b3103814010731c05f9cba94498" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_slab_s_l_1a0cf74b3103814010731c05f9cba94498" kindref="member">coefTypePtr</ref><sp/>=<sp/>std::shared_ptr&lt;coefType&gt;;</highlight></codeline>
+<codeline lineno="168" refid="class_slab_s_l_1a00bf7aee439434580338f8897173c695" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;coefTypePtr&gt;<sp/><ref refid="class_slab_s_l_1a00bf7aee439434580338f8897173c695" kindref="member">expccofN</ref>;</highlight></codeline>
+<codeline lineno="169" refid="class_slab_s_l_1a62f99bc0a639b0f1bd29e9ee1fd6d715" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;coefTypePtr&gt;<sp/><ref refid="class_slab_s_l_1a62f99bc0a639b0f1bd29e9ee1fd6d715" kindref="member">expccofL</ref>;</highlight></codeline>
+<codeline lineno="171"></codeline>
+<codeline lineno="177" refid="class_slab_s_l_1a200cb31ebcaa0d7573aece5765d5a0bb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a200cb31ebcaa0d7573aece5765d5a0bb" kindref="member">multistep_update_begin</ref>();</highlight></codeline>
+<codeline lineno="178" refid="class_slab_s_l_1a4a725652fef931de51889699f6f942db" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a4a725652fef931de51889699f6f942db" kindref="member">multistep_update</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cur,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next,<sp/><ref refid="class_component" kindref="compound">Component</ref>*<sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179" refid="class_slab_s_l_1a7cffd18e053e3cdf8cfc459430019238" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a7cffd18e053e3cdf8cfc459430019238" kindref="member">multistep_update_finish</ref>();</highlight></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="183" refid="class_slab_s_l_1abcc90c9b4986352c5ba1fc19bd07f47d" refkind="member"><highlight class="normal"><sp/><sp/>CoefClasses::SlabCoefs<sp/><ref refid="class_slab_s_l_1abcc90c9b4986352c5ba1fc19bd07f47d" kindref="member">slabCoefs</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Biorth<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="class_slab_s_l_1a6d0b51f5f0db708c5eabc84c9d5a56b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a6d0b51f5f0db708c5eabc84c9d5a56b8" kindref="member">ID</ref>=1;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_slab_s_l_1adcfe2a7cda812280a978793ccd8997e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1adcfe2a7cda812280a978793ccd8997e8" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="class_slab_s_l_1a0657ce43ccefeb7b32ce5ef83d31f747" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="class_slab_s_l_1a0657ce43ccefeb7b32ce5ef83d31f747" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="class_slab_s_l_1aa5680ab11124aa23c2cb1fdcb5c511a8" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_slab_s_l_1aa5680ab11124aa23c2cb1fdcb5c511a8" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="class_slab_s_l_1a794cfa67733dd42c028a7f966c743218" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_slab_s_l_1a794cfa67733dd42c028a7f966c743218" kindref="member">SlabSL</ref>(<ref refid="class_component" kindref="compound">Component</ref>*<sp/>c0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" kindref="member">conf</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="class_slab_s_l_1a7635145cb28d52b58c2863045ec0d410" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1a7635145cb28d52b58c2863045ec0d410" kindref="member">~SlabSL</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_slab_s_l_1aa35f069d1743fa627eea28b53e78f514" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_slab_s_l_1aa35f069d1743fa627eea28b53e78f514" kindref="member">dump_coefs_h5</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/SlabSL.H"/>
+  </compounddef>
+</doxygen>

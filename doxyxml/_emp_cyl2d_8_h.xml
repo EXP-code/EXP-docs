@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_emp_cyl2d_8_h" kind="file" language="C++">
+    <compoundname>EmpCyl2d.H</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">array</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes local="no">Eigen/Eigenvalues</includes>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes local="no">config_exp.h</includes>
+    <includes local="no">highfive/highfive.hpp</includes>
+    <includes local="no">highfive/eigen.hpp</includes>
+    <includedby refid="_biorth_cube_8_h" local="no">/home/weinberg/Projects/EXP/include/BiorthCube.H</includedby>
+    <includedby refid="_biorth_cyl_8_h" local="no">/home/weinberg/Projects/EXP/include/BiorthCyl.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/EmpCyl2d.H</label>
+        <link refid="_emp_cyl2d_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="9">
+        <label>Eigen/Eigenvalues</label>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="6">
+        <label>array</label>
+      </node>
+      <node id="16">
+        <label>config_exp.h</label>
+      </node>
+      <node id="14">
+        <label>cstdlib</label>
+      </node>
+      <node id="18">
+        <label>highfive/eigen.hpp</label>
+      </node>
+      <node id="17">
+        <label>highfive/highfive.hpp</label>
+      </node>
+      <node id="12">
+        <label>iomanip</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="15">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCube.H</label>
+        <link refid="_biorth_cube_8_h"/>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCyl.H</label>
+        <link refid="_biorth_cyl_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/EmpCyl2d.H</label>
+        <link refid="_emp_cyl2d_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/FlatDisk.H</label>
+        <link refid="_flat_disk_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/PolarBasis.H</label>
+        <link refid="_polar_basis_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2d.H</label>
+        <link refid="_disk2d_8_h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2dHalo.H</label>
+        <link refid="_disk2d_halo_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_emp_cyl2d_1_1_basis2d" prot="protected">EmpCyl2d::Basis2d</innerclass>
+    <innerclass refid="class_emp_cyl2d" prot="public">EmpCyl2d</innerclass>
+    <innerclass refid="class_emp_cyl2d_1_1_mapping" prot="public">EmpCyl2d::Mapping</innerclass>
+    <innerclass refid="class_emp_cyl2d_1_1_model_cyl" prot="public">EmpCyl2d::ModelCyl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_EmpCyl2d_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_EmpCyl2d_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigenvalues&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gauss_q_8_h" kindref="compound">gaussQ.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters<sp/>parsing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>config<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>reading<sp/>and<sp/>writing<sp/>cache<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/highfive.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/eigen.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_emp_cyl2d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_emp_cyl2d_1_1_model_cyl" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_emp_cyl2d_1_1_model_cyl" kindref="compound">ModelCyl</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_emp_cyl2d_1_1_model_cyl_1a590bae8af6992903978f94d799bdd012" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1a590bae8af6992903978f94d799bdd012" kindref="member">parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda" kindref="member">pot</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41" refid="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" kindref="member">dpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42" refid="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a" kindref="member">dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" kindref="member">ID</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" kindref="member">id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_emp_cyl2d_1_1_mapping" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="52" refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_emp_cyl2d_1_1_mapping_1aac468b17199576b0c5f5eac575385257" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1aac468b17199576b0c5f5eac575385257" kindref="member">Mapping</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_emp_cyl2d_1_1_mapping_1ad9f5d2a3de2c851b773fd32361611db2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1ad9f5d2a3de2c851b773fd32361611db2" kindref="member">Mapping</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" kindref="member">scale</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" kindref="member">cmap</ref>)<sp/>:<sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" kindref="member">scale</ref>(<ref refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" kindref="member">scale</ref>),<sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" kindref="member">cmap</ref>(<ref refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" kindref="member">cmap</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_emp_cyl2d_1_1_mapping_1ab4a35a4ba916b538bffbf8aaa7abb27f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1ab4a35a4ba916b538bffbf8aaa7abb27f" kindref="member">r_to_xi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_emp_cyl2d_1_1_mapping_1a10ade36ddb79b97616bc077766b14697" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1a10ade36ddb79b97616bc077766b14697" kindref="member">xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xi);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_emp_cyl2d_1_1_mapping_1af91fd35ce4a5c4b043f4cb586540812c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_mapping_1af91fd35ce4a5c4b043f4cb586540812c" kindref="member">d_xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xi);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_emp_cyl2d_1a01bb476da94c7d55ab449a78f23382f6" refkind="member"><highlight class="normal"><sp/><sp/>YAML::Node<sp/><ref refid="class_emp_cyl2d_1a01bb476da94c7d55ab449a78f23382f6" kindref="member">Params</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" kindref="member">rmin</ref>,<sp/><ref refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" kindref="member">rmax</ref>,<sp/><ref refid="class_emp_cyl2d_1a10793f785f2a8b413ff7e69845e99ac7" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="78" refid="class_emp_cyl2d_1a45ae32ac42d9f74d2a0b27213fbaf52b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a4425ff692c823bf4327f96f4433f0269" kindref="member">xmin</ref>,<sp/><ref refid="class_emp_cyl2d_1a22ffab7ffb4aeae38564e87d82874470" kindref="member">xmax</ref>,<sp/><ref refid="class_emp_cyl2d_1a45ae32ac42d9f74d2a0b27213fbaf52b" kindref="member">dxi</ref>;</highlight></codeline>
+<codeline lineno="79" refid="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" kindref="member">mmax</ref>,<sp/><ref refid="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" kindref="member">nmaxfid</ref>,<sp/><ref refid="class_emp_cyl2d_1af573bb26ae59ac054b667c76041e07b4" kindref="member">numr</ref>,<sp/><ref refid="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" kindref="member">knots</ref>,<sp/><ref refid="class_emp_cyl2d_1a4420b46de42622236236210640bd5156" kindref="member">nmax</ref>;</highlight></codeline>
+<codeline lineno="80" refid="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1aff08124c9b5ae900ef2873a36c5e8e1f" kindref="member">model</ref>,<sp/><ref refid="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" kindref="member">biorth</ref>;</highlight></codeline>
+<codeline lineno="81" refid="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1aeb2fbcb6010dc78fe3e3f186cde372a9" kindref="member">cmap</ref>,<sp/><ref refid="class_emp_cyl2d_1a9e0a423a2001bbe311d61fd84687551a" kindref="member">logr</ref>,<sp/><ref refid="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" kindref="member">basis_test</ref>,<sp/><ref refid="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" kindref="member">configured</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_emp_cyl2d_1afe18203b85a4253cf06b2418328ca0dc" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_emp_cyl2d_1a0f5bfc9472480f146893e2ded214006c" kindref="member">potl_array</ref>,<sp/><ref refid="class_emp_cyl2d_1afe18203b85a4253cf06b2418328ca0dc" kindref="member">dens_array</ref>,<sp/><ref refid="class_emp_cyl2d_1ab562ff93bc6447bc31d905edf3c9dde0" kindref="member">dpot_array</ref>;</highlight></codeline>
+<codeline lineno="84" refid="class_emp_cyl2d_1aba1d590dc62ef3feb07e63ff2a5a2c1d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_emp_cyl2d_1aba1d590dc62ef3feb07e63ff2a5a2c1d" kindref="member">rot_matrix</ref>;</highlight></codeline>
+<codeline lineno="85" refid="class_emp_cyl2d_1a5c0e2f279eeaba97716625052e537a15" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_emp_cyl2d_1a5c0e2f279eeaba97716625052e537a15" kindref="member">xgrid</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_emp_cyl2d_1_1_basis2d" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_emp_cyl2d_1_1_basis2d" kindref="compound">Basis2d</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_emp_cyl2d_1_1_basis2d_1a04a6d8d492a470b81893a6e9310b40c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1a04a6d8d492a470b81893a6e9310b40c3" kindref="member">debug</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Basis2d&gt;</highlight></codeline>
+<codeline lineno="97" refid="class_emp_cyl2d_1_1_basis2d_1aaa653892b1658706d8f737894581bdda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1aaa653892b1658706d8f737894581bdda" kindref="member">createBasis</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" kindref="member">mmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" kindref="member">nmaxfid</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" kindref="member">rmax</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="class_emp_cyl2d_1_1_basis2d_1a1482bda5f0afb012c3a212180f90c595" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1a1482bda5f0afb012c3a212180f90c595" kindref="member">potl</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102" refid="class_emp_cyl2d_1_1_basis2d_1a9f0f5f2ec2a6a0a110c8ab220afd1625" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1a9f0f5f2ec2a6a0a110c8ab220afd1625" kindref="member">dens</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103" refid="class_emp_cyl2d_1_1_basis2d_1a376b74d34c32bffea73b4f0b8ad8126e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1a376b74d34c32bffea73b4f0b8ad8126e" kindref="member">dpot</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104" refid="class_emp_cyl2d_1_1_basis2d_1a3af91254a074558b722b692799b388c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1_1_basis2d_1a3af91254a074558b722b692799b388c5" kindref="member">norm</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CluttonBrock;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bessel" kindref="compound">Bessel</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ModelCyl&gt;<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>;</highlight></codeline>
+<codeline lineno="112" refid="class_emp_cyl2d_1ab0e5c03e30a56cdba86aa199b1af8cb7" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Basis2d&gt;<sp/><sp/><ref refid="class_emp_cyl2d_1ab0e5c03e30a56cdba86aa199b1af8cb7" kindref="member">basis</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_emp_cyl2d_1add20591d92d3e8deb4c4693510fb4668" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ModelCyl&gt;<sp/><ref refid="class_emp_cyl2d_1add20591d92d3e8deb4c4693510fb4668" kindref="member">createModel</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ExponCyl;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MestelCyl;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">KuzminCyl;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ZangCyl;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref><sp/><ref refid="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" kindref="member">map</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_emp_cyl2d_1aefdd4dab54583e2f99e121b088de2e02" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1aefdd4dab54583e2f99e121b088de2e02" kindref="member">create_tables</ref>();</highlight></codeline>
+<codeline lineno="125" refid="class_emp_cyl2d_1ad6006930a078d5b2d262f5de7e80aa7e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ad6006930a078d5b2d262f5de7e80aa7e" kindref="member">ReadH5Cache</ref>();</highlight></codeline>
+<codeline lineno="126" refid="class_emp_cyl2d_1a514e73e00f42cb61189cae8857069274" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a514e73e00f42cb61189cae8857069274" kindref="member">WriteH5Cache</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_emp_cyl2d_1a8c9c878a19ea4aab1ecb3357efdc5d0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1a8c9c878a19ea4aab1ecb3357efdc5d0e" kindref="member">Version</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="class_emp_cyl2d_1a88cfb80d74560dcf00c0f861c6eb0e0b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a88cfb80d74560dcf00c0f861c6eb0e0b" kindref="member">hmagic</ref><sp/>=<sp/>0xc0a57a1;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_emp_cyl2d_1a233d8da77204244b57df3d0338e09281" refkind="member"><highlight class="normal"><sp/><sp/>std::tuple&lt;int,<sp/>int,<sp/>double,<sp/>double&gt;<sp/><ref refid="class_emp_cyl2d_1a233d8da77204244b57df3d0338e09281" kindref="member">linear_interp</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="137" refid="class_emp_cyl2d_1ac2d64888010aae79a0b505e46551bbe4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ac2d64888010aae79a0b505e46551bbe4" kindref="member">checkMN</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>N,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>member);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="class_emp_cyl2d_1a7eabba734e4255f726d27b18e57f6fbd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1a7eabba734e4255f726d27b18e57f6fbd" kindref="member">default_cache_name</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_emp_cyl2d_1a1e0b8bab39d8578da97fb09e052bf996" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1a1e0b8bab39d8578da97fb09e052bf996" kindref="member">cache_name_2d</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_emp_cyl2d_1af9581cde255fa3fc6d9168b2d2381b22" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl2d_1af9581cde255fa3fc6d9168b2d2381b22" kindref="member">EmpCyl2d</ref>()<sp/>:<sp/><ref refid="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" kindref="member">configured</ref>(false)<sp/>{}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_emp_cyl2d_1ab642280e8a6d18a4d71c51700425c8df" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl2d_1ab642280e8a6d18a4d71c51700425c8df" kindref="member">EmpCyl2d</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" kindref="member">mmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" kindref="member">nmaxfid</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a4420b46de42622236236210640bd5156" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" kindref="member">knots</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1af573bb26ae59ac054b667c76041e07b4" kindref="member">numr</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" kindref="member">rmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a10793f785f2a8b413ff7e69845e99ac7" kindref="member">scale</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1aeb2fbcb6010dc78fe3e3f186cde372a9" kindref="member">cmap</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a9e0a423a2001bbe311d61fd84687551a" kindref="member">logr</ref>,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/>P,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" kindref="member">biorth</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>cache=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="class_emp_cyl2d_1a48ac0eda97ae5025f35eceeafe2335a5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl2d_1a48ac0eda97ae5025f35eceeafe2335a5" kindref="member">EmpCyl2d</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" kindref="member">mmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" kindref="member">nmaxfid</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a4420b46de42622236236210640bd5156" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" kindref="member">knots</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1af573bb26ae59ac054b667c76041e07b4" kindref="member">numr</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" kindref="member">rmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" kindref="member">rmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a10793f785f2a8b413ff7e69845e99ac7" kindref="member">scale</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1aeb2fbcb6010dc78fe3e3f186cde372a9" kindref="member">cmap</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a9e0a423a2001bbe311d61fd84687551a" kindref="member">logr</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ModelCyl&gt;<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" kindref="member">biorth</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>cache=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="class_emp_cyl2d_1a76c54f44a8d14c3fe17562494a2dcc40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a76c54f44a8d14c3fe17562494a2dcc40" kindref="member">basisTest</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>which)<sp/>{<sp/><ref refid="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" kindref="member">basis_test</ref><sp/>=<sp/>which;<sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="class_emp_cyl2d_1a7f828a74ed264276c3214679a77763b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a7f828a74ed264276c3214679a77763b4" kindref="member">get_potl</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="class_emp_cyl2d_1a917dfe4aece2571715a3dd216943203e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a917dfe4aece2571715a3dd216943203e" kindref="member">get_dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_emp_cyl2d_1a8ebcf2237094e2912d4f21e486eac9e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a8ebcf2237094e2912d4f21e486eac9e1" kindref="member">get_dpot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_emp_cyl2d_1a324215c0a67e42db53e6c8d61f04d7c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a324215c0a67e42db53e6c8d61f04d7c2" kindref="member">get_pot</ref><sp/><sp/>(Eigen::MatrixXd&amp;<sp/>mat,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="178" refid="class_emp_cyl2d_1a49efdfc87d6db745996f0e5082a93914" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a49efdfc87d6db745996f0e5082a93914" kindref="member">get_dens</ref><sp/>(Eigen::MatrixXd&amp;<sp/>mat,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="179" refid="class_emp_cyl2d_1add9a31b0b9becabff604695cc688932c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1add9a31b0b9becabff604695cc688932c" kindref="member">get_force</ref>(Eigen::MatrixXd&amp;<sp/>mat,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="183" refid="class_emp_cyl2d_1a9d5a136698db5daa5472d7c596600dee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a9d5a136698db5daa5472d7c596600dee" kindref="member">writeBasis</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="class_emp_cyl2d_1a0d16955d370bd0d662433c46a191f5b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a0d16955d370bd0d662433c46a191f5b6" kindref="member">writeTrans</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_emp_cyl2d_1af3394365c2151065cc8b165288017a96" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1af3394365c2151065cc8b165288017a96" kindref="member">orthoCheck</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="class_emp_cyl2d_1a43e01112e8e552742158f64337b1e2af" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Eigen::MatrixXd&gt;<sp/><ref refid="class_emp_cyl2d_1a43e01112e8e552742158f64337b1e2af" kindref="member">orthoCheck</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_emp_cyl2d_1aeae06b336f4325934f1d1956bd234d00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1aeae06b336f4325934f1d1956bd234d00" kindref="member">checkCoefs</ref>();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="class_emp_cyl2d_1a748053549fc20ebecf3b6417cfc5630d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a748053549fc20ebecf3b6417cfc5630d" kindref="member">getRmin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" kindref="member">rmin</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="class_emp_cyl2d_1ac9ddd679d2071b64edcaf54d43b8b5bd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1ac9ddd679d2071b64edcaf54d43b8b5bd" kindref="member">getRmax</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" kindref="member">rmax</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="class_emp_cyl2d_1a09b9797b1650a7f37a714a14c242b937" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a09b9797b1650a7f37a714a14c242b937" kindref="member">operator()</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" kindref="member">configured</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_emp_cyl2d_1a31b15fac3975ac0c771840c06736bb2d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a31b15fac3975ac0c771840c06736bb2d" kindref="member">background</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>dr)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>p<sp/><sp/>=<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>-&gt;pot(r);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>dr<sp/>=<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>-&gt;dpot(r);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="class_emp_cyl2d_1a9d3d0c2a69d02bf30715212178cc1484" refkind="member"><highlight class="normal"><sp/><sp/>std::tuple&lt;double,<sp/>double,<sp/>double&gt;<sp/><ref refid="class_emp_cyl2d_1a9d3d0c2a69d02bf30715212178cc1484" kindref="member">background</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>-&gt;pot(r),<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>-&gt;dpot(r),<sp/><ref refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" kindref="member">disk</ref>-&gt;dens(r)};</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"></codeline>
+<codeline lineno="224" refid="class_emp_cyl2d_1a44acdc5f9a2dddff075be3a63f0fa0f0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref><sp/><ref refid="class_emp_cyl2d_1a44acdc5f9a2dddff075be3a63f0fa0f0" kindref="member">getMapping</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" kindref="member">map</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H"/>
+  </compounddef>
+</doxygen>

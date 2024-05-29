@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_data_grid_8_h" kind="file" language="C++">
+    <compoundname>DataGrid.H</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">config_exp.h</includes>
+    <includes refid="_table_grid_8_h" local="no">TableGrid.H</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/DataGrid.H</label>
+        <link refid="_data_grid_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>TableGrid.H</label>
+        <link refid="_table_grid_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ThreeDGrid.H</label>
+        <link refid="_three_d_grid_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>config_exp.h</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_data_grid" prot="public">DataGrid</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_data_grid_8_h_1a25f37cf92309f2fdc81111a77e5bb827" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_data_grid" kindref="compound">DataGrid</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;DataGrid&gt; DataGridPtr</definition>
+        <argsstring></argsstring>
+        <name>DataGridPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="63" column="25" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="63" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_DataGrid_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DataGrid_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_table_grid_8_h" kindref="compound">TableGrid.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_VTK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_vtk_grid_8_h" kindref="compound">VtkGrid.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_data_grid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_grid" kindref="compound">DataGrid</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid" kindref="compound">ThreeDGrid</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_three_d_grid_8_h_1abc218c0a19f8602e69200454c9561499" kindref="member">ThreeDGridPtr</ref><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" kindref="member">DataGrid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_VTK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;VtkGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;TableGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" kindref="member">Add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref>-&gt;Add(data,<sp/>name);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" kindref="member">Write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref>-&gt;Write(name);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_data_grid_8_h_1a25f37cf92309f2fdc81111a77e5bb827" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;DataGrid&gt;<sp/><ref refid="_data_grid_8_h_1a25f37cf92309f2fdc81111a77e5bb827" kindref="member">DataGridPtr</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/DataGrid.H"/>
+  </compounddef>
+</doxygen>

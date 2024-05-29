@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_r_1_1_tipsy" kind="class" language="C++" prot="public">
+    <compoundname>PR::Tipsy</compoundname>
+    <basecompoundref refid="class_p_r_1_1_particle_reader" prot="public" virt="non-virtual">PR::ParticleReader</basecompoundref>
+    <includes refid="_particle_reader_8_h" local="no">ParticleReader.H</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TipsyType</name>
+        <qualifiedname>PR::Tipsy::TipsyType</qualifiedname>
+        <enumvalue id="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9a8e5f3adee38c8fccc13c1f3be0143796" prot="public">
+          <name>native</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9a05e46a892c9f038a22dddb6b2877477c" prot="public">
+          <name>xdr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9a90155b2515ab6ecfbb2275c03a47472a" prot="public">
+          <name>bonsai</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="485" column="5" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="485" bodyend="485"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a196f9443ea19812440e858c6b76c1461" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;::iterator</type>
+        <definition>std::vector&lt;std::string&gt;::iterator PR::Tipsy::curfile</definition>
+        <argsstring></argsstring>
+        <name>curfile</name>
+        <qualifiedname>PR::Tipsy::curfile</qualifiedname>
+        <briefdescription>
+<para>Current file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="492" column="28" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1ac8211969e32fde3fd5ac6e2c76ecb560" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PR::Tipsy::curName</definition>
+        <argsstring></argsstring>
+        <name>curName</name>
+        <qualifiedname>PR::Tipsy::curName</qualifiedname>
+        <briefdescription>
+<para>Current name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="504" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a781177372bc346ee137b101da29213e8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::Tipsy::curTypes</definition>
+        <argsstring></argsstring>
+        <name>curTypes</name>
+        <qualifiedname>PR::Tipsy::curTypes</qualifiedname>
+        <briefdescription>
+<para>Current types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="501" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="501" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_tipsy_1ae9180a2edcf20c6902e4fd2bb9cc5f9f" compoundref="_particle_reader_8_h" startline="540" endline="540">GetTypes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1ad486d41fa373ead22ced9851919d0fa6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::Tipsy::files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <qualifiedname>PR::Tipsy::files</qualifiedname>
+        <briefdescription>
+<para>List of files. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="489" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a31178dc266e3e3bf35690698494a815c" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::Tipsy::Ndark</definition>
+        <argsstring></argsstring>
+        <name>Ndark</name>
+        <qualifiedname>PR::Tipsy::Ndark</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="507" column="24" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a9e23dca62c8156c64da0dd973c28a605" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::Tipsy::Ngas</definition>
+        <argsstring></argsstring>
+        <name>Ngas</name>
+        <qualifiedname>PR::Tipsy::Ngas</qualifiedname>
+        <briefdescription>
+<para>Totals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="507" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a88be6d3b3b5bf441e76ee77ecb771c78" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::Tipsy::Nstar</definition>
+        <argsstring></argsstring>
+        <name>Nstar</name>
+        <qualifiedname>PR::Tipsy::Nstar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="507" column="30" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a98a9f8ee827371e340f26e45a98fd790" prot="private" static="no" mutable="no">
+        <type><ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>Particle PR::Tipsy::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <qualifiedname>PR::Tipsy::P</qualifiedname>
+        <briefdescription>
+<para>Temporary for packing array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="498" column="14" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a2d39f6045070a3c0f492c19932d97dfd" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_tipsy_reader_1_1_tipsy_file" kindref="compound">TipsyReader::TipsyFile</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;TipsyReader::TipsyFile&gt; PR::Tipsy::ps</definition>
+        <argsstring></argsstring>
+        <name>ps</name>
+        <qualifiedname>PR::Tipsy::ps</qualifiedname>
+        <briefdescription>
+<para>Pointer to <ref refid="class_p_r_1_1_tipsy" kindref="compound">Tipsy</ref> particle structures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="495" column="21" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="495" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_tipsy_1a2a30817723dd66082d7c53385f2160e0" compoundref="_particle_reader_8_h" startline="549" endline="549">CurrentTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a919d7144ab6e008ef75f604b339cd569" prot="private" static="no" mutable="no">
+        <type><ref refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9" kindref="member">TipsyType</ref></type>
+        <definition>TipsyType PR::Tipsy::ttype</definition>
+        <argsstring></argsstring>
+        <name>ttype</name>
+        <qualifiedname>PR::Tipsy::ttype</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_p_r_1_1_tipsy" kindref="compound">Tipsy</ref> file type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="510" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="510" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a90f3dd570086ac3194d23b75c4c7a3e1" prot="protected" static="yes" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; PR::Tipsy::findP</definition>
+        <argsstring></argsstring>
+        <name>findP</name>
+        <qualifiedname>PR::Tipsy::findP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="515" column="31" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a8704c791527d7a01c4dbea7d27a07f15" prot="protected" static="yes" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::Tipsy::Ptypes</definition>
+        <argsstring></argsstring>
+        <name>Ptypes</name>
+        <qualifiedname>PR::Tipsy::Ptypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="514" column="24" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="514" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1a86eb068baf2da718ef595e81d9081965" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned PR::Tipsy::pcount</definition>
+        <argsstring></argsstring>
+        <name>pcount</name>
+        <qualifiedname>PR::Tipsy::pcount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="518" column="14" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_tipsy_1ae58f9aef468a7962caead2d067a2243e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::Tipsy::ptype</definition>
+        <argsstring></argsstring>
+        <name>ptype</name>
+        <qualifiedname>PR::Tipsy::ptype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="516" column="9" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="516" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a14a5d4da099e3363c9227ad1420f6b5b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::Tipsy::getNumbers</definition>
+        <argsstring>()</argsstring>
+        <name>getNumbers</name>
+        <qualifiedname>PR::Tipsy::getNumbers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="520" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1aee9665014a8e0068abd90ef0e699fb4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PR::Tipsy::nextFile</definition>
+        <argsstring>()</argsstring>
+        <name>nextFile</name>
+        <qualifiedname>PR::Tipsy::nextFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="522" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1ad39e1a4e56ccfc26467519adabecdd43" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::Tipsy::packParticle</definition>
+        <argsstring>()</argsstring>
+        <name>packParticle</name>
+        <qualifiedname>PR::Tipsy::packParticle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="521" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1ad92eead4b9155d00ae2707bda0e2f850" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned long</type>
+        <definition>virtual unsigned long PR::Tipsy::CurrentNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentNumber</name>
+        <qualifiedname>PR::Tipsy::CurrentNumber</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1ad07059133f265c81866db1aad2026cdf">CurrentNumber</reimplements>
+        <briefdescription>
+<para>Number of particles in the chosen type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="546" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a2a30817723dd66082d7c53385f2160e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double PR::Tipsy::CurrentTime</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentTime</name>
+        <qualifiedname>PR::Tipsy::CurrentTime</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a10927485f5e04ee75096e70b52dca6a9">CurrentTime</reimplements>
+        <briefdescription>
+<para>Get current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="549" column="20" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="549" bodyend="549"/>
+        <references refid="class_p_r_1_1_tipsy_1a2d39f6045070a3c0f492c19932d97dfd" compoundref="_particle_reader_8_h" startline="495">ps</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a947f48d1fbf5acdc58f012c46c7d0b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::Tipsy::firstParticle</definition>
+        <argsstring>()</argsstring>
+        <name>firstParticle</name>
+        <qualifiedname>PR::Tipsy::firstParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a8b50438acca8230e8eb45a91781b9152">firstParticle</reimplements>
+        <briefdescription>
+<para><ref refid="class_particle" kindref="compound">Particle</ref> access. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="553" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1ae9180a2edcf20c6902e4fd2bb9cc5f9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt; std::string &gt; PR::Tipsy::GetTypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetTypes</name>
+        <qualifiedname>PR::Tipsy::GetTypes</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1aaa7bdf2a176d8446e6229fd03256ab58">GetTypes</reimplements>
+        <briefdescription>
+<para>Return list of particle types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="540" column="25" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="540" bodyend="540"/>
+        <references refid="class_p_r_1_1_tipsy_1a781177372bc346ee137b101da29213e8" compoundref="_particle_reader_8_h" startline="501">curTypes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a614737fbbdddfde0987a85dbcbc926d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::Tipsy::nextParticle</definition>
+        <argsstring>()</argsstring>
+        <name>nextParticle</name>
+        <qualifiedname>PR::Tipsy::nextParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a5768007e1583c7c59031fd611c699768">nextParticle</reimplements>
+        <briefdescription>
+<para>Get the next particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="554" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a00ef302e96bd8bad1103ae5446295290" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PR::Tipsy::SelectType</definition>
+        <argsstring>(const std::string &amp;type)</argsstring>
+        <name>SelectType</name>
+        <qualifiedname>PR::Tipsy::SelectType</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a63c8f579270234489399e7e920ee59bd">SelectType</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Select a particular particle type and reset the iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="543" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1adb35a9d48ae22cdc236d4dc4aaae4545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PR::Tipsy::Tipsy</definition>
+        <argsstring>(const std::string &amp;file, TipsyType type=TipsyType::native, bool verbose=false)</argsstring>
+        <name>Tipsy</name>
+        <qualifiedname>PR::Tipsy::Tipsy</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9" kindref="member">TipsyType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9a8e5f3adee38c8fccc13c1f3be0143796" kindref="member">TipsyType::native</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Single-file constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="527" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a8a54becbffc8b8e84b31ade0e152e221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PR::Tipsy::Tipsy</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;file, TipsyType type=TipsyType::native, bool verbose=false)</argsstring>
+        <name>Tipsy</name>
+        <qualifiedname>PR::Tipsy::Tipsy</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9" kindref="member">TipsyType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9a8e5f3adee38c8fccc13c1f3be0143796" kindref="member">TipsyType::native</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="532" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_tipsy_1a2582ba5fcc6bdb0868d695243570050c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual PR::Tipsy::~Tipsy</definition>
+        <argsstring>()</argsstring>
+        <name>~Tipsy</name>
+        <qualifiedname>PR::Tipsy::~Tipsy</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="537" column="13" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="537" bodyend="537"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to access a <ref refid="class_p_r_1_1_tipsy" kindref="compound">Tipsy</ref> file </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="1">
+        <label>PR::Tipsy</label>
+        <link refid="class_p_r_1_1_tipsy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="1">
+        <label>PR::Tipsy</label>
+        <link refid="class_p_r_1_1_tipsy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>P</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="480" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="481" bodyend="556"/>
+    <listofallmembers>
+      <member refid="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>createReader</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a196f9443ea19812440e858c6b76c1461" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>curfile</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ac8211969e32fde3fd5ac6e2c76ecb560" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>curName</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ad92eead4b9155d00ae2707bda0e2f850" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>CurrentNumber</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a2a30817723dd66082d7c53385f2160e0" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>CurrentTime</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a781177372bc346ee137b101da29213e8" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>curTypes</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ad486d41fa373ead22ced9851919d0fa6" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>files</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a90f3dd570086ac3194d23b75c4c7a3e1" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>findP</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a947f48d1fbf5acdc58f012c46c7d0b42" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>firstParticle</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a14a5d4da099e3363c9227ad1420f6b5b" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>getNumbers</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ae9180a2edcf20c6902e4fd2bb9cc5f9f" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>GetTypes</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>myid</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a31178dc266e3e3bf35690698494a815c" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>Ndark</name></member>
+      <member refid="class_p_r_1_1_tipsy_1aee9665014a8e0068abd90ef0e699fb4c" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>nextFile</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a614737fbbdddfde0987a85dbcbc926d4" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>nextParticle</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a9e23dca62c8156c64da0dd973c28a605" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>Ngas</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a88be6d3b3b5bf441e76ee77ecb771c78" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>Nstar</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>numprocs</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a98a9f8ee827371e340f26e45a98fd790" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>P</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ad39e1a4e56ccfc26467519adabecdd43" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>packParticle</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>parseFileList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>parseStringList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>ParticleReader</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a86eb068baf2da718ef595e81d9081965" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>pcount</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a2d39f6045070a3c0f492c19932d97dfd" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>ps</name></member>
+      <member refid="class_p_r_1_1_tipsy_1ae58f9aef468a7962caead2d067a2243e" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>ptype</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a8704c791527d7a01c4dbea7d27a07f15" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>Ptypes</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>readerTypes</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a00ef302e96bd8bad1103ae5446295290" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>SelectType</name></member>
+      <member refid="class_p_r_1_1_tipsy_1adb35a9d48ae22cdc236d4dc4aaae4545" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>Tipsy</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a8a54becbffc8b8e84b31ade0e152e221" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>Tipsy</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a9c0347dad5187f34ebe2ae9fc91178d9" prot="public" virt="non-virtual"><scope>PR::Tipsy</scope><name>TipsyType</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a919d7144ab6e008ef75f604b339cd569" prot="private" virt="non-virtual"><scope>PR::Tipsy</scope><name>ttype</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" virt="non-virtual"><scope>PR::Tipsy</scope><name>use_mpi</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>~ParticleReader</name></member>
+      <member refid="class_p_r_1_1_tipsy_1a2582ba5fcc6bdb0868d695243570050c" prot="public" virt="virtual"><scope>PR::Tipsy</scope><name>~Tipsy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

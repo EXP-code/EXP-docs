@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_center_file" kind="class" language="C++" prot="public">
+    <compoundname>CenterFile</compoundname>
+    <includes refid="_center_file_8_h" local="no">CenterFile.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_center_file_1a014be1406060a29204ed834bbd8e42c6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::array&lt; double, 3 &gt; &gt;</type>
+        <definition>std::vector&lt;std::array&lt;double, 3&gt; &gt; CenterFile::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>CenterFile::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/CenterFile.H" line="24" column="15" bodyfile="/home/weinberg/Projects/EXP/include/CenterFile.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_center_file_1af65c46b4ba4983630e6d3de7e552f533" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; CenterFile::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>CenterFile::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/CenterFile.H" line="23" column="15" bodyfile="/home/weinberg/Projects/EXP/include/CenterFile.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_center_file_1ae6d695f51c862fde2deb9b73580fb086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CenterFile::CenterFile</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>CenterFile</name>
+        <qualifiedname>CenterFile::CenterFile</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Read in the file and cache the data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/CenterFile.H" line="29" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_center_file_1a6bb42c69e83690b3ba95d52a53dbfd5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; CenterFile::operator()</definition>
+        <argsstring>(double T)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>CenterFile::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+<para>Interpolate and provide the desired center. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/CenterFile.H" line="32" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Read a file in @Orient format and provide the center interpolated in time. The YAML node needs two key word<ndash/>value pairs:</para>
+<para>file: file name of orient-style center info type: EJ or COM</para>
+<para>This implementation will exit for <emphasis>safety</emphasis> if it is called beyond its range. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/CenterFile.H" line="20" column="1" bodyfile="/home/weinberg/Projects/EXP/include/CenterFile.H" bodystart="21" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_center_file_1ae6d695f51c862fde2deb9b73580fb086" prot="public" virt="non-virtual"><scope>CenterFile</scope><name>CenterFile</name></member>
+      <member refid="class_center_file_1a014be1406060a29204ed834bbd8e42c6" prot="private" virt="non-virtual"><scope>CenterFile</scope><name>data</name></member>
+      <member refid="class_center_file_1a6bb42c69e83690b3ba95d52a53dbfd5f" prot="public" virt="non-virtual"><scope>CenterFile</scope><name>operator()</name></member>
+      <member refid="class_center_file_1af65c46b4ba4983630e6d3de7e552f533" prot="private" virt="non-virtual"><scope>CenterFile</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

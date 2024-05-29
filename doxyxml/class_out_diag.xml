@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_diag" kind="class" language="C++" prot="public">
+    <compoundname>OutDiag</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_diag_8_h" local="no">OutDiag.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_diag_1a8766f4bf4255d618eaca1652517266c2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutDiag::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutDiag::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="12" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1a61b84dfe38ddc430791e3a38bad5b033" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="class_component" kindref="compound">Component</ref> * &gt;</type>
+        <definition>std::list&lt;Component*&gt; OutDiag::lcomp</definition>
+        <argsstring></argsstring>
+        <name>lcomp</name>
+        <qualifiedname>OutDiag::lcomp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="13" column="13" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1af3a7ebf633010ba6f5371fe415b05626" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; OutDiag::names</definition>
+        <argsstring></argsstring>
+        <name>names</name>
+        <qualifiedname>OutDiag::names</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="14" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1ac57d6a72db2ca3c561966301eb61a413" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OutDiag::NUM</definition>
+        <argsstring></argsstring>
+        <name>NUM</name>
+        <qualifiedname>OutDiag::NUM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="17" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1a1403d00b1e898227b7e2c8bb38bb74ee" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutDiag::PHI</definition>
+        <argsstring></argsstring>
+        <name>PHI</name>
+        <qualifiedname>OutDiag::PHI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="18" column="16" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1a04c6ef3c364c9573bc34a91b99d9b4fa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutDiag::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <qualifiedname>OutDiag::prev</qualifiedname>
+        <initializer>= -std::numeric_limits&lt;double&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="15" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1abcbf8f4922db87da05b2abc4b6c3671c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutDiag::RMAX</definition>
+        <argsstring></argsstring>
+        <name>RMAX</name>
+        <qualifiedname>OutDiag::RMAX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="18" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1aa021c5de3050479f2229b3fe41ed4d60" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutDiag::RMIN</definition>
+        <argsstring></argsstring>
+        <name>RMIN</name>
+        <qualifiedname>OutDiag::RMIN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="18" column="20" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_diag_1a6d14e3dc8e19aeb5b65a0e047a2558ae" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutDiag::THETA</definition>
+        <argsstring></argsstring>
+        <name>THETA</name>
+        <qualifiedname>OutDiag::THETA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="18" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_diag_1aff27312b0ad45e479a7ab03b66bcb89e" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutDiag::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutDiag::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="24" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_diag_1a5965e4614910a5d89f2b2912ad06906f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OutDiag::header</definition>
+        <argsstring>(ostream &amp;out)</argsstring>
+        <name>header</name>
+        <qualifiedname>OutDiag::header</qualifiedname>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="21" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_diag_1a8d711333b84ec6d18d3bc443dda2d362" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutDiag::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutDiag::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="20" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_diag_1aa65d264636e4d5d012f19ef7d9f9911f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutDiag::OutDiag</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutDiag</name>
+        <qualifiedname>OutDiag::OutDiag</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="29" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_diag_1af9f72ba95e44ebae58f3476b747751f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutDiag::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutDiag::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Generate the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time step used to decide whether or not to dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should be true on final step to force phase space dump indepentently of whether or not the frequency criterion is met </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="38" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Print field quantities for spherical and cylindrical bases. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutDiag</label>
+        <link refid="class_out_diag"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OutDiag</label>
+        <link refid="class_out_diag"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutDiag.H" line="7" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutDiag.H" bodystart="8" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>conf</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>current_keys</name></member>
+      <member refid="class_out_diag_1a8766f4bf4255d618eaca1652517266c2" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>filename</name></member>
+      <member refid="class_out_diag_1a5965e4614910a5d89f2b2912ad06906f" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>header</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutDiag</scope><name>id</name></member>
+      <member refid="class_out_diag_1a8d711333b84ec6d18d3bc443dda2d362" prot="private" virt="virtual"><scope>OutDiag</scope><name>initialize</name></member>
+      <member refid="class_out_diag_1a61b84dfe38ddc430791e3a38bad5b033" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>lcomp</name></member>
+      <member refid="class_out_diag_1af3a7ebf633010ba6f5371fe415b05626" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>names</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_diag_1ac57d6a72db2ca3c561966301eb61a413" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>NUM</name></member>
+      <member refid="class_out_diag_1aa65d264636e4d5d012f19ef7d9f9911f" prot="public" virt="non-virtual"><scope>OutDiag</scope><name>OutDiag</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutDiag</scope><name>Output</name></member>
+      <member refid="class_out_diag_1a1403d00b1e898227b7e2c8bb38bb74ee" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>PHI</name></member>
+      <member refid="class_out_diag_1a04c6ef3c364c9573bc34a91b99d9b4fa" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>prev</name></member>
+      <member refid="class_out_diag_1abcbf8f4922db87da05b2abc4b6c3671c" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>RMAX</name></member>
+      <member refid="class_out_diag_1aa021c5de3050479f2229b3fe41ed4d60" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>RMIN</name></member>
+      <member refid="class_out_diag_1af9f72ba95e44ebae58f3476b747751f7" prot="public" virt="virtual"><scope>OutDiag</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>stopWatch</name></member>
+      <member refid="class_out_diag_1a6d14e3dc8e19aeb5b65a0e047a2558ae" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>THETA</name></member>
+      <member refid="class_output_1a69f42df0c1eab6a81fb2346e59c66943" prot="protected" virt="non-virtual"><scope>OutDiag</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutDiag</scope><name>unmatched</name></member>
+      <member refid="class_out_diag_1aff27312b0ad45e479a7ab03b66bcb89e" prot="private" virt="non-virtual"><scope>OutDiag</scope><name>valid_keys</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutDiag</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

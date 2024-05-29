@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_ellip_force_8_h" kind="file" language="C++">
+    <compoundname>EllipForce.H</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes refid="interp_8_h" local="no">interp.H</includes>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H</label>
+        <link refid="_ellip_force_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cstdlib</label>
+      </node>
+      <node id="9">
+        <label>deque</label>
+      </node>
+      <node id="4">
+        <label>iomanip</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="14">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_ellip_force" prot="public">EllipForce</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>EllipForce_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EllipForce_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interp_8_h" kindref="compound">interp.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gauss_q_8_h" kindref="compound">gaussQ.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_ellip_force" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ellip_force" kindref="compound">EllipForce</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_ellip_force_1ab13babd22f986650e5f4082fbdd5286f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ab13babd22f986650e5f4082fbdd5286f" kindref="member">a</ref>,<sp/><ref refid="class_ellip_force_1aaff158f80cc8c72f63dff8a68336bf9d" kindref="member">b</ref>,<sp/><ref refid="class_ellip_force_1a8a77ca0985d9b6eea8cef85e04e838d6" kindref="member">c</ref>,<sp/><ref refid="class_ellip_force_1ad1f627eacabbda40d769027bf3a9a3c8" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_ellip_force_1afc3eedf5df997af963d4116c9382fb00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1afc3eedf5df997af963d4116c9382fb00" kindref="member">num</ref>,<sp/><ref refid="class_ellip_force_1ad7759528048e9e269834d3bf5bf8a8cc" kindref="member">numr</ref>;</highlight></codeline>
+<codeline lineno="18" refid="class_ellip_force_1a5915a76a613aa4f5cca490cc49875b05" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;LegeQuad&gt;<sp/><ref refid="class_ellip_force_1a5915a76a613aa4f5cca490cc49875b05" kindref="member">lq</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_ellip_force_1a57d781b086065f7c36c325d9e3b7b927" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_ellip_force_1a8dc76cdf11145af6eb95ef7ea761453d" kindref="member">r</ref>,<sp/><ref refid="class_ellip_force_1a57d781b086065f7c36c325d9e3b7b927" kindref="member">m</ref>,<sp/><ref refid="class_ellip_force_1a153da902359097bdbc6aa4fa85b845b3" kindref="member">p</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_ellip_force_1a136d0d094c5016dfc10bcd1d3c17678f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a136d0d094c5016dfc10bcd1d3c17678f" kindref="member">write_cache</ref>();</highlight></codeline>
+<codeline lineno="23" refid="class_ellip_force_1ac9e683c0f70610770c0e914a4ac6b03d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ac9e683c0f70610770c0e914a4ac6b03d" kindref="member">read_cache</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_ellip_force_1a9e39796ed90470fe8093d8f325e0ddf3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a9e39796ed90470fe8093d8f325e0ddf3" kindref="member">cache_file</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_ellip_force_1a1cbe16b33f009aa68fa40aa704c30df8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ellip_force_1a1cbe16b33f009aa68fa40aa704c30df8" kindref="member">EllipForce</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ab13babd22f986650e5f4082fbdd5286f" kindref="member">a</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1aaff158f80cc8c72f63dff8a68336bf9d" kindref="member">b</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a8a77ca0985d9b6eea8cef85e04e838d6" kindref="member">c</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ad1f627eacabbda40d769027bf3a9a3c8" kindref="member">mass</ref>,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1afc3eedf5df997af963d4116c9382fb00" kindref="member">num</ref>=100,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ad7759528048e9e269834d3bf5bf8a8cc" kindref="member">numr</ref>=100);</highlight></codeline>
+<codeline lineno="31" refid="class_ellip_force_1a11e485a5dd75b5136b20b60ded3385f3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ellip_force_1a11e485a5dd75b5136b20b60ded3385f3" kindref="member">~EllipForce</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_ellip_force_1a3f96c5d4b51c152e95a88895b2330c0b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a3f96c5d4b51c152e95a88895b2330c0b" kindref="member">getMass</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="34" refid="class_ellip_force_1a3f0ab83b9ad2aac92e57105bdfa5425d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a3f0ab83b9ad2aac92e57105bdfa5425d" kindref="member">getPot</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="35" refid="class_ellip_force_1a526d285f61a4fffc42288650a9671af8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a526d285f61a4fffc42288650a9671af8" kindref="member">PrintTable</ref>();</highlight></codeline>
+<codeline lineno="36" refid="class_ellip_force_1ae929918a02f4b7295a7a85242002a3af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1ae929918a02f4b7295a7a85242002a3af" kindref="member">PrintModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;);</highlight></codeline>
+<codeline lineno="37" refid="class_ellip_force_1a3b96289e6a6422a854b0a29e16311fa8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ellip_force_1a3b96289e6a6422a854b0a29e16311fa8" kindref="member">TestTable</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EllipForce</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_vtk_p_c_a" kind="class" language="C++" prot="public">
+    <compoundname>VtkPCA</compoundname>
+    <includes refid="_vtk_p_c_a_8_h" local="no">VtkPCA.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a3c052b1682c2652bc67b2abb8e2966f9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::coef</definition>
+        <argsstring></argsstring>
+        <name>coef</name>
+        <qualifiedname>VtkPCA::coef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="15" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1ada851bd4911ed7e3c2b69bbfd8f67f19" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::covr</definition>
+        <argsstring></argsstring>
+        <name>covr</name>
+        <qualifiedname>VtkPCA::covr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="45" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1adf0630702b2d1ba4e3844b9975d57394" prot="private" static="no" mutable="no">
+        <type><ref refid="_vtk_p_c_a_8_h_1a79cd2d149302154311ed7385f5e7c637" kindref="member">vtkRectilinearGridP</ref></type>
+        <definition>vtkRectilinearGridP VtkPCA::dataSet</definition>
+        <argsstring></argsstring>
+        <name>dataSet</name>
+        <qualifiedname>VtkPCA::dataSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="43" column="31" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1abafaa3454c68c75a2a5b953e06a99c7c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; VtkPCA::elab</definition>
+        <argsstring></argsstring>
+        <name>elab</name>
+        <qualifiedname>VtkPCA::elab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="40" column="18" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a4ab2e59898e7b08c5617c89b8aa45b0b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::eval</definition>
+        <argsstring></argsstring>
+        <name>eval</name>
+        <qualifiedname>VtkPCA::eval</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="25" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1aea0050b4ffee839446dcca6db24cdd5a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::hall</definition>
+        <argsstring></argsstring>
+        <name>hall</name>
+        <qualifiedname>VtkPCA::hall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="20" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a8e13bbdbb04ea956d8514a559964447b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VtkPCA::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>VtkPCA::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="31" column="7" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a29622983a8eaa1f6e479255cc4844fb7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VtkPCA::reorder</definition>
+        <argsstring></argsstring>
+        <name>reorder</name>
+        <qualifiedname>VtkPCA::reorder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="49" column="31" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a78ec19a3be1ba9f610f2739a4de4c5ef" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VtkPCA::smooth</definition>
+        <argsstring></argsstring>
+        <name>smooth</name>
+        <qualifiedname>VtkPCA::smooth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="46" column="31" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a524e77563003b220502c69780fe10365" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::snrv</definition>
+        <argsstring></argsstring>
+        <name>snrv</name>
+        <qualifiedname>VtkPCA::snrv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="30" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1af9aa2a7137688d618d19b5e12f58744c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::vec2</definition>
+        <argsstring></argsstring>
+        <name>vec2</name>
+        <qualifiedname>VtkPCA::vec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="40" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a476dac75711ab454b7de6f96f54881db" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>std::vector&lt;vtkFloatArrayP&gt; VtkPCA::vecs</definition>
+        <argsstring></argsstring>
+        <name>vecs</name>
+        <qualifiedname>VtkPCA::vecs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="37" column="35" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1ad911f39deea5ed996a6f1cfdf6eb1de0" prot="private" static="no" mutable="no">
+        <type><ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref></type>
+        <definition>vtkFloatArrayP VtkPCA::XX</definition>
+        <argsstring></argsstring>
+        <name>XX</name>
+        <qualifiedname>VtkPCA::XX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="34" column="18" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a3f20f2da79dd81719ef200177de0bcc5" prot="private" static="no" mutable="no">
+        <type><ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref></type>
+        <definition>vtkFloatArrayP VtkPCA::YY</definition>
+        <argsstring></argsstring>
+        <name>YY</name>
+        <qualifiedname>VtkPCA::YY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="34" column="21" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_p_c_a_1a0a064267f75edf03f0b1445b2bd78f58" prot="private" static="no" mutable="no">
+        <type><ref refid="_vtk_p_c_a_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref></type>
+        <definition>vtkFloatArrayP VtkPCA::ZZ</definition>
+        <argsstring></argsstring>
+        <name>ZZ</name>
+        <qualifiedname>VtkPCA::ZZ</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="34" column="24" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vtk_p_c_a_1ad42aa1abf8a2af689257d82870a8d36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VtkPCA::Add</definition>
+        <argsstring>(const Eigen::VectorXd &amp;coef, const Eigen::VectorXd &amp;hall, const Eigen::VectorXd &amp;snr, const Eigen::VectorXd &amp;eval, const Eigen::MatrixXd &amp;evec, const Eigen::MatrixXd &amp;covr, int l, int m)</argsstring>
+        <name>Add</name>
+        <qualifiedname>VtkPCA::Add</qualifiedname>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>hall</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>snr</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>eval</declname>
+        </param>
+        <param>
+          <type>const Eigen::MatrixXd &amp;</type>
+          <declname>evec</declname>
+        </param>
+        <param>
+          <type>const Eigen::MatrixXd &amp;</type>
+          <declname>covr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Add data for three-dimensional spherical basis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vtk_p_c_a_1af6d36246eafb57e753b018424a10a04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VtkPCA::Add</definition>
+        <argsstring>(const Eigen::VectorXd &amp;coef, const Eigen::VectorXd &amp;hall, const Eigen::VectorXd &amp;snr, const Eigen::VectorXd &amp;eval, const Eigen::MatrixXd &amp;evec, const Eigen::MatrixXd &amp;covr, int m)</argsstring>
+        <name>Add</name>
+        <qualifiedname>VtkPCA::Add</qualifiedname>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>hall</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>snr</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>eval</declname>
+        </param>
+        <param>
+          <type>const Eigen::MatrixXd &amp;</type>
+          <declname>evec</declname>
+        </param>
+        <param>
+          <type>const Eigen::MatrixXd &amp;</type>
+          <declname>covr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Add data for two-dimensional cylindrical basis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="56" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vtk_p_c_a_1a6cb1a01c132517df484042012c20c0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VtkPCA::VtkPCA</definition>
+        <argsstring>(int N, bool reorder=false, bool smooth=false)</argsstring>
+        <name>VtkPCA</name>
+        <qualifiedname>VtkPCA::VtkPCA</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reorder</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>smooth</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="53" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vtk_p_c_a_1a7bd7eb05e3b1389a80a40b20052b9d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VtkPCA::Write</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Write</name>
+        <qualifiedname>VtkPCA::Write</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Write output file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="74" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/VtkPCA.H" line="28" column="1" bodyfile="/home/weinberg/Projects/EXP/include/VtkPCA.H" bodystart="29" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_vtk_p_c_a_1af6d36246eafb57e753b018424a10a04a" prot="public" virt="non-virtual"><scope>VtkPCA</scope><name>Add</name></member>
+      <member refid="class_vtk_p_c_a_1ad42aa1abf8a2af689257d82870a8d36e" prot="public" virt="non-virtual"><scope>VtkPCA</scope><name>Add</name></member>
+      <member refid="class_vtk_p_c_a_1a3c052b1682c2652bc67b2abb8e2966f9" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>coef</name></member>
+      <member refid="class_vtk_p_c_a_1ada851bd4911ed7e3c2b69bbfd8f67f19" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>covr</name></member>
+      <member refid="class_vtk_p_c_a_1adf0630702b2d1ba4e3844b9975d57394" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>dataSet</name></member>
+      <member refid="class_vtk_p_c_a_1abafaa3454c68c75a2a5b953e06a99c7c" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>elab</name></member>
+      <member refid="class_vtk_p_c_a_1a4ab2e59898e7b08c5617c89b8aa45b0b" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>eval</name></member>
+      <member refid="class_vtk_p_c_a_1aea0050b4ffee839446dcca6db24cdd5a" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>hall</name></member>
+      <member refid="class_vtk_p_c_a_1a8e13bbdbb04ea956d8514a559964447b" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>nmax</name></member>
+      <member refid="class_vtk_p_c_a_1a29622983a8eaa1f6e479255cc4844fb7" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>reorder</name></member>
+      <member refid="class_vtk_p_c_a_1a78ec19a3be1ba9f610f2739a4de4c5ef" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>smooth</name></member>
+      <member refid="class_vtk_p_c_a_1a524e77563003b220502c69780fe10365" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>snrv</name></member>
+      <member refid="class_vtk_p_c_a_1af9aa2a7137688d618d19b5e12f58744c" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>vec2</name></member>
+      <member refid="class_vtk_p_c_a_1a476dac75711ab454b7de6f96f54881db" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>vecs</name></member>
+      <member refid="class_vtk_p_c_a_1a6cb1a01c132517df484042012c20c0a0" prot="public" virt="non-virtual"><scope>VtkPCA</scope><name>VtkPCA</name></member>
+      <member refid="class_vtk_p_c_a_1a7bd7eb05e3b1389a80a40b20052b9d8a" prot="public" virt="non-virtual"><scope>VtkPCA</scope><name>Write</name></member>
+      <member refid="class_vtk_p_c_a_1ad911f39deea5ed996a6f1cfdf6eb1de0" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>XX</name></member>
+      <member refid="class_vtk_p_c_a_1a3f20f2da79dd81719ef200177de0bcc5" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>YY</name></member>
+      <member refid="class_vtk_p_c_a_1a0a064267f75edf03f0b1445b2bd78f58" prot="private" virt="non-virtual"><scope>VtkPCA</scope><name>ZZ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

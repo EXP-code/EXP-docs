@@ -1,0 +1,791 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_embedded_disk_model" kind="class" language="C++" prot="public">
+    <compoundname>EmbeddedDiskModel</compoundname>
+    <basecompoundref refid="class_axi_sym_model" prot="public" virt="non-virtual">AxiSymModel</basecompoundref>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_embedded_disk_model_1a305e72fa2bf96219c22bf3fe60be53ea" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_q_p_dist_f" kindref="compound">QPDistF</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;QPDistF&gt; EmbeddedDiskModel::df</definition>
+        <argsstring></argsstring>
+        <name>df</name>
+        <qualifiedname>EmbeddedDiskModel::df</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="277" column="19" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1af7ea75e1ee4bb4f445cb73aef8bd1db6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EmbeddedDiskModel::m_scale</definition>
+        <argsstring></argsstring>
+        <name>m_scale</name>
+        <qualifiedname>EmbeddedDiskModel::m_scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="271" column="15" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1a8cd2eda102d370ea71686d5d29f87c35" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmbeddedDiskModel::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <qualifiedname>EmbeddedDiskModel::number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="273" column="7" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1a13be365db0b8ec677925da151c9c1925" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EmbeddedDiskModel::r_scale</definition>
+        <argsstring></argsstring>
+        <name>r_scale</name>
+        <qualifiedname>EmbeddedDiskModel::r_scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="272" column="15" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1a013a9cf3680cd4312e8c87eb6fedc940" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>EmbeddedDiskModel::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="275" column="15" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="275" bodyend="-1"/>
+        <referencedby refid="class_embedded_disk_model_1ad0b95260439369297ff2477923a26f02" compoundref="massmodel_8_h" startline="305" endline="305">get_max_radius</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1a741b14e7a7660a9bff0ea1d4b8740a85" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>EmbeddedDiskModel::rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="275" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="275" bodyend="-1"/>
+        <referencedby refid="class_embedded_disk_model_1a8f2ea37fe3204aa4b0007550d16502c8" compoundref="massmodel_8_h" startline="304" endline="304">get_min_radius</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_embedded_disk_model_1a60259225298ae2b78f06eb1069913894" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;AxiSymModel&gt; &gt; EmbeddedDiskModel::t</definition>
+        <argsstring></argsstring>
+        <name>t</name>
+        <qualifiedname>EmbeddedDiskModel::t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="270" column="15" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="270" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_embedded_disk_model_1ae4147a269a409ebc897970fd781d1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::d2fde2</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>EmbeddedDiskModel::d2fde2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="322" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a526648e3e521b7e20c849ee946e1c9bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::dfde</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfde</name>
+        <qualifiedname>EmbeddedDiskModel::dfde</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="320" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1ab602c8ab25b558773b02c597f9e893ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::dfdl</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>EmbeddedDiskModel::dfdl</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="321" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a5938bf509e455e6a650532281381ef74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::distf</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>distf</name>
+        <qualifiedname>EmbeddedDiskModel::distf</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="319" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a3d5457b4263c763c7155d39457ea686c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EmbeddedDiskModel::EmbeddedDiskModel</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; AxiSymModel &gt; &gt; &amp;T, std::vector&lt; double &gt; &amp;M_scale, std::vector&lt; double &gt; &amp;R_scale, int NUMBER)</argsstring>
+        <name>EmbeddedDiskModel</name>
+        <qualifiedname>EmbeddedDiskModel::EmbeddedDiskModel</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt; &gt; &amp;</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>M_scale</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_scale</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>NUMBER</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="280" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a5c763b865ff6b4caeb10eac78e753195" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::get_density</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>EmbeddedDiskModel::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5">get_density</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The density at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="296" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="296" bodyend="297"/>
+        <references refid="class_embedded_disk_model_1a3ffbd7a622f73cfe9b67ffae80cfed7f">get_density</references>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a3ffbd7a622f73cfe9b67ffae80cfed7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double EmbeddedDiskModel::get_density</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>EmbeddedDiskModel::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="287" column="18"/>
+        <referencedby refid="class_embedded_disk_model_1a5c763b865ff6b4caeb10eac78e753195" compoundref="massmodel_8_h" startline="296" endline="297">get_density</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a2d94fa2b784f522685eac97b24814511" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double EmbeddedDiskModel::get_dpot</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>EmbeddedDiskModel::get_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845">get_dpot</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="289" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a6f1261707e304ed949152834f9d0546d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double EmbeddedDiskModel::get_dpot2</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>EmbeddedDiskModel::get_dpot2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae">get_dpot2</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="290" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1af5bbd571cbf33b33a467787f0573dd86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::get_mass</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>EmbeddedDiskModel::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the mass inside of position (x, y, z) (this is ambiguous in general and will depend on the model) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="293" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="293" bodyend="294"/>
+        <references refid="class_embedded_disk_model_1ad924cd677753a5086cb9a732141b6890">get_mass</references>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1ad924cd677753a5086cb9a732141b6890" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double EmbeddedDiskModel::get_mass</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>EmbeddedDiskModel::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="286" column="18"/>
+        <referencedby refid="class_embedded_disk_model_1af5bbd571cbf33b33a467787f0573dd86" compoundref="massmodel_8_h" startline="293" endline="294">get_mass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1ad0b95260439369297ff2477923a26f02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::get_max_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>EmbeddedDiskModel::get_max_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c">get_max_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="305" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="305" bodyend="305"/>
+        <references refid="class_embedded_disk_model_1a013a9cf3680cd4312e8c87eb6fedc940" compoundref="massmodel_8_h" startline="275">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a8f2ea37fe3204aa4b0007550d16502c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::get_min_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>EmbeddedDiskModel::get_min_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9">get_min_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="304" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="304" bodyend="304"/>
+        <references refid="class_embedded_disk_model_1a741b14e7a7660a9bff0ea1d4b8740a85" compoundref="massmodel_8_h" startline="275">rmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a4cd777af4aeb22c21232eeb6bdae8ceb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmbeddedDiskModel::get_pot</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>EmbeddedDiskModel::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The potential at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="299" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="299" bodyend="300"/>
+        <references refid="class_embedded_disk_model_1adcae86dad89afdc7dc8fd5b47ee61341">get_pot</references>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1adcae86dad89afdc7dc8fd5b47ee61341" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double EmbeddedDiskModel::get_pot</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>EmbeddedDiskModel::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="288" column="18"/>
+        <referencedby refid="class_embedded_disk_model_1a4cd777af4aeb22c21232eeb6bdae8ceb" compoundref="massmodel_8_h" startline="299" endline="300">get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a1d6c6b5414d1b9dcf4ec0f0da0195975" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void EmbeddedDiskModel::get_pot_dpot</definition>
+        <argsstring>(const double, double &amp;, double &amp;)</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>EmbeddedDiskModel::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632">get_pot_dpot</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="291" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1ad576ae0fd642854f3ffb9af2cb3945d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmbeddedDiskModel::save_df</definition>
+        <argsstring>(string &amp;file)</argsstring>
+        <name>save_df</name>
+        <qualifiedname>EmbeddedDiskModel::save_df</qualifiedname>
+        <param>
+          <type>string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="323" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1ab75172efea01ab09a33a428f7d93c816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmbeddedDiskModel::setup_df</definition>
+        <argsstring>(int egrid=10, int kgrid=5, int mgrid=20, double lambda=0.0, double alpha=-6.0, double beta=1.0, double gama=1.0, double sigma=2.0, double rmmax=-1, double roff=0.05, double eoff=0.5, double koff=0.5, double kmin=0.0, double kmax=1.0, int nint=20, int numt=20)</argsstring>
+        <name>setup_df</name>
+        <qualifiedname>EmbeddedDiskModel::setup_df</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>egrid</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>kgrid</declname>
+          <defval>5</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mgrid</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lambda</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+          <defval>-6.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>beta</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gama</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+          <defval>2.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmmax</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>roff</declname>
+          <defval>0.05</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eoff</declname>
+          <defval>0.5</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>koff</declname>
+          <defval>0.5</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kmin</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kmax</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nint</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numt</declname>
+          <defval>20</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="307" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a5ff2809557c68d961591f38015d15e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmbeddedDiskModel::setup_df</definition>
+        <argsstring>(string &amp;file)</argsstring>
+        <name>setup_df</name>
+        <qualifiedname>EmbeddedDiskModel::setup_df</qualifiedname>
+        <param>
+          <type>string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="316" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a94c9dc67a4fe9ce9e6781c94038ac912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmbeddedDiskModel::verbose_df</definition>
+        <argsstring>(void)</argsstring>
+        <name>verbose_df</name>
+        <qualifiedname>EmbeddedDiskModel::verbose_df</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="318" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_embedded_disk_model_1a08374bd50847d14c440ef6dcc74db9b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual EmbeddedDiskModel::~EmbeddedDiskModel</definition>
+        <argsstring>()</argsstring>
+        <name>~EmbeddedDiskModel</name>
+        <qualifiedname>EmbeddedDiskModel::~EmbeddedDiskModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="284" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EmbeddedDiskModel</label>
+        <link refid="class_embedded_disk_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EmbeddedDiskModel</label>
+        <link refid="class_embedded_disk_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="6">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="5">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="267" column="1" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="268" bodyend="325"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>bomb</name></member>
+      <member refid="class_embedded_disk_model_1ae4147a269a409ebc897970fd781d1f69" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>dEgrid</name></member>
+      <member refid="class_embedded_disk_model_1a305e72fa2bf96219c22bf3fe60be53ea" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>df</name></member>
+      <member refid="class_embedded_disk_model_1a526648e3e521b7e20c849ee946e1c9bc" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>dfde</name></member>
+      <member refid="class_embedded_disk_model_1ab602c8ab25b558773b02c597f9e893ea" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>dist_defined</name></member>
+      <member refid="class_embedded_disk_model_1a5938bf509e455e6a650532281381ef74" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>dof</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Emax_grid</name></member>
+      <member refid="class_embedded_disk_model_1a3d5457b4263c763c7155d39457ea686c" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>EmbeddedDiskModel</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Emin_grid</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>gen_velocity</name></member>
+      <member refid="class_embedded_disk_model_1a3ffbd7a622f73cfe9b67ffae80cfed7f" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_density</name></member>
+      <member refid="class_embedded_disk_model_1a5c763b865ff6b4caeb10eac78e753195" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_density</name></member>
+      <member refid="class_embedded_disk_model_1a2d94fa2b784f522685eac97b24814511" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_dpot</name></member>
+      <member refid="class_embedded_disk_model_1a6f1261707e304ed949152834f9d0546d" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_dpot2</name></member>
+      <member refid="class_embedded_disk_model_1ad924cd677753a5086cb9a732141b6890" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_mass</name></member>
+      <member refid="class_embedded_disk_model_1af5bbd571cbf33b33a467787f0573dd86" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_mass</name></member>
+      <member refid="class_embedded_disk_model_1ad0b95260439369297ff2477923a26f02" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_max_radius</name></member>
+      <member refid="class_embedded_disk_model_1a8f2ea37fe3204aa4b0007550d16502c8" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_min_radius</name></member>
+      <member refid="class_embedded_disk_model_1adcae86dad89afdc7dc8fd5b47ee61341" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_pot</name></member>
+      <member refid="class_embedded_disk_model_1a4cd777af4aeb22c21232eeb6bdae8ceb" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_pot</name></member>
+      <member refid="class_embedded_disk_model_1a1d6c6b5414d1b9dcf4ec0f0da0195975" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>get_pot_dpot</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Kgrid</name></member>
+      <member refid="class_embedded_disk_model_1af7ea75e1ee4bb4f445cb73aef8bd1db6" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>m_scale</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>ModelID</name></member>
+      <member refid="class_embedded_disk_model_1a8cd2eda102d370ea71686d5d29f87c35" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>number</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>numr</name></member>
+      <member refid="class_embedded_disk_model_1a13be365db0b8ec677925da151c9c1925" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>r_scale</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Rgrid</name></member>
+      <member refid="class_embedded_disk_model_1a013a9cf3680cd4312e8c87eb6fedc940" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>rmax</name></member>
+      <member refid="class_embedded_disk_model_1a741b14e7a7660a9bff0ea1d4b8740a85" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>rmin</name></member>
+      <member refid="class_embedded_disk_model_1ad576ae0fd642854f3ffb9af2cb3945d6" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>save_df</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>set_itmax</name></member>
+      <member refid="class_embedded_disk_model_1ab75172efea01ab09a33a428f7d93c816" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>setup_df</name></member>
+      <member refid="class_embedded_disk_model_1a5ff2809557c68d961591f38015d15e84" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>setup_df</name></member>
+      <member refid="class_embedded_disk_model_1a60259225298ae2b78f06eb1069913894" prot="private" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>t</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>Unit</name></member>
+      <member refid="class_embedded_disk_model_1a94c9dc67a4fe9ce9e6781c94038ac912" prot="public" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>verbose_df</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>EmbeddedDiskModel</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>~AxiSymModel</name></member>
+      <member refid="class_embedded_disk_model_1a08374bd50847d14c440ef6dcc74db9b2" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>~EmbeddedDiskModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>EmbeddedDiskModel</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

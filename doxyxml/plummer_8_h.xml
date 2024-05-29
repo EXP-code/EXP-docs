@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="plummer_8_h" kind="file" language="C++">
+    <compoundname>plummer.H</compoundname>
+    <includes local="no">cmath</includes>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/plummer.H</label>
+        <link refid="plummer_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstdlib</label>
+      </node>
+      <node id="9">
+        <label>deque</label>
+      </node>
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="17">
+        <label>iomanip</label>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+      <node id="18">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_plummer_sphere" prot="public">PlummerSphere</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_plummer_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_plummer_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="massmodel_8_h" kindref="compound">massmodel.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_plummer_sphere" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_plummer_sphere" kindref="compound">PlummerSphere</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" kindref="member">rmin</ref>;</highlight></codeline>
+<codeline lineno="12" refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="13" refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>;</highlight></codeline>
+<codeline lineno="14" refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" kindref="member">dfac</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" kindref="member">ffac</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" kindref="member">PlummerSphere</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RSCL<sp/>=<sp/>1.0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMIN<sp/>=<sp/>1.0e-6,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RMAX<sp/>=<sp/>1.0e6,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MASS<sp/>=<sp/>1.0)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>=<sp/>RSCL;<sp/><ref refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" kindref="member">rmin</ref><sp/>=<sp/>RMIN;<sp/><ref refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" kindref="member">rmax</ref><sp/>=<sp/>RMAX;<sp/><ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref><sp/>=<sp/>MASS;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" kindref="member">dist_defined</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1acf360c000464aca6299bc47894672d70" kindref="member">ModelID</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PlummerSphere&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" kindref="member">dim</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" kindref="member">dfac</ref><sp/>=<sp/>3.0*<ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>/(4.0*M_PI);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" kindref="member">ffac</ref><sp/>=<sp/>128.0/7.0<sp/>/<sp/>(sqrt(8.0)*M_PI*M_PI)<sp/>*<sp/>3.0*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>4.0*M_PI*pow(<ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref>,<sp/>4.0)<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" kindref="member">get_mass</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>r/<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref>*q*q*q/pow(1<sp/>+<sp/>q*q,<sp/>1.5);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" kindref="member">get_density</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" kindref="member">dfac</ref><sp/>*<sp/>pow(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r,<sp/>-2.5<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" kindref="member">get_pot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref><sp/>/<sp/>sqrt(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r<sp/>);<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" kindref="member">get_dpot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref>*r<sp/>*<sp/>pow(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r,<sp/>-1.5<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" kindref="member">get_dpot2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref><sp/>*<sp/><sp/>pow(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r,<sp/>-2.5<sp/>)<sp/>*<sp/>(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>-<sp/>2.0*r*r<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" kindref="member">get_pot_dpot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;ur,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dur)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ur<sp/>=<sp/>-<ref refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" kindref="member">mass</ref><sp/>/<sp/>sqrt(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r<sp/>);<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>dur<sp/>=<sp/>-ur<sp/>*<sp/>r<sp/>/<sp/>(<sp/><ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref>*<ref refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" kindref="member">rscl</ref><sp/>+<sp/>r*r<sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Addiional<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c" kindref="member">get_min_radius</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" kindref="member">rmin</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="65" refid="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1" kindref="member">get_max_radius</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" kindref="member">rmax</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906" kindref="member">distf</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" kindref="member">ffac</ref><sp/>*<sp/>pow(-E,<sp/>3.5);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d" kindref="member">dfde</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-3.5*<ref refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" kindref="member">ffac</ref>*pow(-E,<sp/>2.5);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_plummer_sphere_1a803e60961f740a9cf5acf605de13ef98" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1a803e60961f740a9cf5acf605de13ef98" kindref="member">dfdl</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43" kindref="member">d2fde2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3.5*2.5*<ref refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" kindref="member">ffac</ref>*pow(-E,<sp/>1.5);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/plummer.H"/>
+  </compounddef>
+</doxygen>

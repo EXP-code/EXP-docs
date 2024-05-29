@@ -1,0 +1,1032 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_biorth_wake" kind="class" language="C++" prot="public">
+    <compoundname>BiorthWake</compoundname>
+    <includes refid="biorth__wake_8_h" local="no">biorth_wake.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_biorth_wake_1a918a339d53b3129001f1e9ef55cec03f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; BiorthWake::ambp</definition>
+        <argsstring></argsstring>
+        <name>ambp</name>
+        <qualifiedname>BiorthWake::ambp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="51" column="15" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a9dcaf70ce76acceba188a9d4cea64ab7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; BiorthWake::amby</definition>
+        <argsstring></argsstring>
+        <name>amby</name>
+        <qualifiedname>BiorthWake::amby</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="50" column="31" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a3d122ae4cd8d8465387df760aa8f1dd7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_axi_sym_biorth" kindref="compound">AxiSymBiorth</ref> *</type>
+        <definition>AxiSymBiorth* BiorthWake::bio</definition>
+        <argsstring></argsstring>
+        <name>bio</name>
+        <qualifiedname>BiorthWake::bio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="17" column="16" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a3c45bdfd6d5703fe31a50bc9cb29d11c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BiorthWake::coefs_defined</definition>
+        <argsstring></argsstring>
+        <name>coefs_defined</name>
+        <qualifiedname>BiorthWake::coefs_defined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="24" column="8" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aace083657da48c081b9ac18f8079a3de" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BiorthWake::expcoef</definition>
+        <argsstring></argsstring>
+        <name>expcoef</name>
+        <qualifiedname>BiorthWake::expcoef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="26" column="19" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aced7d6005f42aaf2f485c6d00d4a039e" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BiorthWake::factorial</definition>
+        <argsstring></argsstring>
+        <name>factorial</name>
+        <qualifiedname>BiorthWake::factorial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="25" column="19" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aa010d45b49ace3cca6d3778993596cbb" prot="private" static="no" mutable="no">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt;double&gt; BiorthWake::I</definition>
+        <argsstring></argsstring>
+        <name>I</name>
+        <qualifiedname>BiorthWake::I</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="47" column="16" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1adeb9b2447bdf61c6d571409e19d94e8d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BiorthWake::init_orientation</definition>
+        <argsstring></argsstring>
+        <name>init_orientation</name>
+        <qualifiedname>BiorthWake::init_orientation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="49" column="8" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a761aabc81cf82cbd06c203e67b0ab55b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::iter</definition>
+        <argsstring></argsstring>
+        <name>iter</name>
+        <qualifiedname>BiorthWake::iter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="53" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1ac91d3df81b1752f899e0924c292d98b6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::ll</definition>
+        <argsstring></argsstring>
+        <name>ll</name>
+        <qualifiedname>BiorthWake::ll</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="53" column="12" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aec6b021a838a46b213837a34c49fe8f0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::lmax</definition>
+        <argsstring></argsstring>
+        <name>lmax</name>
+        <qualifiedname>BiorthWake::lmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="18" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a13d4e382bae25d228ccfd7240a7bcdb9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <qualifiedname>BiorthWake::mm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="53" column="15" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::nfunk</definition>
+        <argsstring></argsstring>
+        <name>nfunk</name>
+        <qualifiedname>BiorthWake::nfunk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="59" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_biorth_wake_1a52a8d9073ffeaf19633bad02a9553b08" compoundref="biorth__wake_8_h" startline="94" endline="94">get_amoeba_iterations</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a29ebef81ff3db1e400d26c0f8d97b3e7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>BiorthWake::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="18" column="12" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aecc0e08f2416a67c723ae0c652df3863" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BiorthWake::norm_grid</definition>
+        <argsstring></argsstring>
+        <name>norm_grid</name>
+        <qualifiedname>BiorthWake::norm_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="20" column="19" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a33604e947e18c8667959bb409f172669" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; BiorthWake::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>BiorthWake::param</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="50" column="15" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aaa25ed3e8333ab6f0a3954fb3a81ed1a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; BiorthWake::psum</definition>
+        <argsstring></argsstring>
+        <name>psum</name>
+        <qualifiedname>BiorthWake::psum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="50" column="21" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aaa4fe067c7fb6656cf1458b1939b98b5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; BiorthWake::ptry</definition>
+        <argsstring></argsstring>
+        <name>ptry</name>
+        <qualifiedname>BiorthWake::ptry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="50" column="26" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BiorthWake::rscl</definition>
+        <argsstring></argsstring>
+        <name>rscl</name>
+        <qualifiedname>BiorthWake::rscl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="27" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_biorth_wake_1a11f4732dd628b2a39980e443894fe7be" compoundref="biorth__wake_8_h" startline="80" endline="80">set_scale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a79ab99d2abf834967c34a0e16c4dbd67" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BiorthWake::tol</definition>
+        <argsstring></argsstring>
+        <name>tol</name>
+        <qualifiedname>BiorthWake::tol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="54" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a1b4e13bcd12d9150089c2254874eaece" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::used</definition>
+        <argsstring></argsstring>
+        <name>used</name>
+        <qualifiedname>BiorthWake::used</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="28" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1aad2d849bd09404af716e29fef07b4122" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXcd</type>
+        <definition>Eigen::VectorXcd BiorthWake::ylm</definition>
+        <argsstring></argsstring>
+        <name>ylm</name>
+        <qualifiedname>BiorthWake::ylm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="48" column="20" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_biorth_wake_1a8ec22ea36595c50f4e85973b9e0936b9" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::iterDef</definition>
+        <argsstring></argsstring>
+        <name>iterDef</name>
+        <qualifiedname>BiorthWake::iterDef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="55" column="14" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a6532bf593c12958d7a4b50dd50e963b0" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int BiorthWake::ndim</definition>
+        <argsstring></argsstring>
+        <name>ndim</name>
+        <qualifiedname>BiorthWake::ndim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="57" column="14" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_biorth_wake_1a5abedd0c94ab4d8187e85949f114c129" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double BiorthWake::tolDef</definition>
+        <argsstring></argsstring>
+        <name>tolDef</name>
+        <qualifiedname>BiorthWake::tolDef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="56" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_biorth_wake_1a2d4d92d6847b2bbfe14fb2fbb0bcd6b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::accumulate_2d</definition>
+        <argsstring>(double x, double y, double mass)</argsstring>
+        <name>accumulate_2d</name>
+        <qualifiedname>BiorthWake::accumulate_2d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="30" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1af8ececf0c02944c32180bd6a6d5dd222" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::accumulate_3d</definition>
+        <argsstring>(double x, double y, double z, double mass)</argsstring>
+        <name>accumulate_3d</name>
+        <qualifiedname>BiorthWake::accumulate_3d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="31" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a2537c6bb228af55b38f8fc6c629826bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::amoeba</definition>
+        <argsstring>(void)</argsstring>
+        <name>amoeba</name>
+        <qualifiedname>BiorthWake::amoeba</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="64" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a1d7317ae9d7d411e574d44d15a0b54bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double BiorthWake::amoeba_energy</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;params)</argsstring>
+        <name>amoeba_energy</name>
+        <qualifiedname>BiorthWake::amoeba_energy</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a9abfe7e8c9bb0b38386afbf032ac3953" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double BiorthWake::amotry</definition>
+        <argsstring>(int ihi, double fac)</argsstring>
+        <name>amotry</name>
+        <qualifiedname>BiorthWake::amotry</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ihi</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fac</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a8698d99f8318a8bad2138a3e342462ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::bomb</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>bomb</name>
+        <qualifiedname>BiorthWake::bomb</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="43" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a7779142bb94939f2dd22775efae362fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::check_orientation</definition>
+        <argsstring>(double, double, double)</argsstring>
+        <name>check_orientation</name>
+        <qualifiedname>BiorthWake::check_orientation</qualifiedname>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="68" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1af0802d0387df6ed380b8468314117809" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::get_transform</definition>
+        <argsstring>(double &amp;phi, double &amp;theta, double &amp;psi, double &amp;cost)</argsstring>
+        <name>get_transform</name>
+        <qualifiedname>BiorthWake::get_transform</qualifiedname>
+        <param>
+          <type>double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="63" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1ac14c747f7eaf2d519442452d695b1fca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::modulo_param</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;params)</argsstring>
+        <name>modulo_param</name>
+        <qualifiedname>BiorthWake::modulo_param</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="60" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a1ce0e032fa1d45bfdbcce3fe8a7e79fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::orientation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>orientation_init</name>
+        <qualifiedname>BiorthWake::orientation_init</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="61" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a87be94370d011ecd85bed933703ecd1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::reconstruct_2d</definition>
+        <argsstring>(double r, double phi, double &amp;dens0, double &amp;dens, double &amp;potl0, double &amp;potl, int L1=0, int L2=10000)</argsstring>
+        <name>reconstruct_2d</name>
+        <qualifiedname>BiorthWake::reconstruct_2d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L1</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L2</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="33" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a34de97783782ae415d3006463dd6bf49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::reconstruct_3d</definition>
+        <argsstring>(double r, double costh, double phi, double &amp;dens0, double &amp;dens, double &amp;potl0, double &amp;potl, int L1=0, int L2=10000)</argsstring>
+        <name>reconstruct_3d</name>
+        <qualifiedname>BiorthWake::reconstruct_3d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>costh</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L1</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L2</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="38" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a00e2faa814f3dd3532e5435be310ba7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt; double &gt; BiorthWake::test_fct</definition>
+        <argsstring>(double, double)</argsstring>
+        <name>test_fct</name>
+        <qualifiedname>BiorthWake::test_fct</qualifiedname>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="69" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1aef928f5838a6b280af71e9e35402495e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::test_transform</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_transform</name>
+        <qualifiedname>BiorthWake::test_transform</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="67" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_biorth_wake_1a827b4044524ba2cf003e095c3a816dc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::accumulate</definition>
+        <argsstring>(double x, double y, double z, double mass)</argsstring>
+        <name>accumulate</name>
+        <qualifiedname>BiorthWake::accumulate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="83" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a1936e7cdf4462a5b6d4e87d25fbb8dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BiorthWake::BiorthWake</definition>
+        <argsstring>(AxiSymBiorth *BIO, int LMAX, int NMAX)</argsstring>
+        <name>BiorthWake</name>
+        <qualifiedname>BiorthWake::BiorthWake</qualifiedname>
+        <param>
+          <type><ref refid="class_axi_sym_biorth" kindref="compound">AxiSymBiorth</ref> *</type>
+          <declname>BIO</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>LMAX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>NMAX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="74" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1ae2790829691ba08e94b9d0ad138af8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double BiorthWake::energy</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;params)</argsstring>
+        <name>energy</name>
+        <qualifiedname>BiorthWake::energy</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a52a8d9073ffeaf19633bad02a9553b08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int BiorthWake::get_amoeba_iterations</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_amoeba_iterations</name>
+        <qualifiedname>BiorthWake::get_amoeba_iterations</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="94" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="94" bodyend="94"/>
+        <references refid="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" compoundref="biorth__wake_8_h" startline="59">nfunk</references>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a32d6e7c92f91510e003a922eea897a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::orientation</definition>
+        <argsstring>(int L, int M, Eigen::VectorXd &amp;phi, Eigen::VectorXd &amp;theta, Eigen::VectorXd &amp;psi, Eigen::VectorXd &amp;cost)</argsstring>
+        <name>orientation</name>
+        <qualifiedname>BiorthWake::orientation</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="90" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a33ea42ffb26ee85d13242a4b4c792cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::reconstruct</definition>
+        <argsstring>(double r, double costh, double phi, double &amp;dens0, double &amp;dens, double &amp;potl0, double &amp;potl, int L1=0, int L2=10000)</argsstring>
+        <name>reconstruct</name>
+        <qualifiedname>BiorthWake::reconstruct</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>costh</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dens</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl0</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>potl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L1</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L2</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="85" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a64a0b3883833ee60dd5ad6e273c80dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::reset_coefs</definition>
+        <argsstring>(void)</argsstring>
+        <name>reset_coefs</name>
+        <qualifiedname>BiorthWake::reset_coefs</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="81" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a11f4732dd628b2a39980e443894fe7be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiorthWake::set_scale</definition>
+        <argsstring>(const double scl)</argsstring>
+        <name>set_scale</name>
+        <qualifiedname>BiorthWake::set_scale</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>scl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="80" column="8" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="80" bodyend="80"/>
+        <references refid="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" compoundref="biorth__wake_8_h" startline="27">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_biorth_wake_1a7513c664ff8f046c35faa17690935671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BiorthWake::~BiorthWake</definition>
+        <argsstring>(void)</argsstring>
+        <name>~BiorthWake</name>
+        <qualifiedname>BiorthWake::~BiorthWake</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="77" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>BiorthWake</label>
+        <link refid="class_biorth_wake"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>bio</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H" line="12" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth_wake.H" bodystart="13" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_biorth_wake_1a827b4044524ba2cf003e095c3a816dc0" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>accumulate</name></member>
+      <member refid="class_biorth_wake_1a2d4d92d6847b2bbfe14fb2fbb0bcd6b0" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>accumulate_2d</name></member>
+      <member refid="class_biorth_wake_1af8ececf0c02944c32180bd6a6d5dd222" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>accumulate_3d</name></member>
+      <member refid="class_biorth_wake_1a918a339d53b3129001f1e9ef55cec03f" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>ambp</name></member>
+      <member refid="class_biorth_wake_1a9dcaf70ce76acceba188a9d4cea64ab7" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>amby</name></member>
+      <member refid="class_biorth_wake_1a2537c6bb228af55b38f8fc6c629826bd" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>amoeba</name></member>
+      <member refid="class_biorth_wake_1a1d7317ae9d7d411e574d44d15a0b54bb" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>amoeba_energy</name></member>
+      <member refid="class_biorth_wake_1a9abfe7e8c9bb0b38386afbf032ac3953" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>amotry</name></member>
+      <member refid="class_biorth_wake_1a3d122ae4cd8d8465387df760aa8f1dd7" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>bio</name></member>
+      <member refid="class_biorth_wake_1a1936e7cdf4462a5b6d4e87d25fbb8dd2" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>BiorthWake</name></member>
+      <member refid="class_biorth_wake_1a8698d99f8318a8bad2138a3e342462ae" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>bomb</name></member>
+      <member refid="class_biorth_wake_1a7779142bb94939f2dd22775efae362fd" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>check_orientation</name></member>
+      <member refid="class_biorth_wake_1a3c45bdfd6d5703fe31a50bc9cb29d11c" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>coefs_defined</name></member>
+      <member refid="class_biorth_wake_1ae2790829691ba08e94b9d0ad138af8b4" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>energy</name></member>
+      <member refid="class_biorth_wake_1aace083657da48c081b9ac18f8079a3de" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>expcoef</name></member>
+      <member refid="class_biorth_wake_1aced7d6005f42aaf2f485c6d00d4a039e" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>factorial</name></member>
+      <member refid="class_biorth_wake_1a52a8d9073ffeaf19633bad02a9553b08" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>get_amoeba_iterations</name></member>
+      <member refid="class_biorth_wake_1af0802d0387df6ed380b8468314117809" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>get_transform</name></member>
+      <member refid="class_biorth_wake_1aa010d45b49ace3cca6d3778993596cbb" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>I</name></member>
+      <member refid="class_biorth_wake_1adeb9b2447bdf61c6d571409e19d94e8d" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>init_orientation</name></member>
+      <member refid="class_biorth_wake_1a761aabc81cf82cbd06c203e67b0ab55b" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>iter</name></member>
+      <member refid="class_biorth_wake_1a8ec22ea36595c50f4e85973b9e0936b9" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>iterDef</name></member>
+      <member refid="class_biorth_wake_1ac91d3df81b1752f899e0924c292d98b6" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>ll</name></member>
+      <member refid="class_biorth_wake_1aec6b021a838a46b213837a34c49fe8f0" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>lmax</name></member>
+      <member refid="class_biorth_wake_1a13d4e382bae25d228ccfd7240a7bcdb9" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>mm</name></member>
+      <member refid="class_biorth_wake_1ac14c747f7eaf2d519442452d695b1fca" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>modulo_param</name></member>
+      <member refid="class_biorth_wake_1a6532bf593c12958d7a4b50dd50e963b0" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>ndim</name></member>
+      <member refid="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>nfunk</name></member>
+      <member refid="class_biorth_wake_1a29ebef81ff3db1e400d26c0f8d97b3e7" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>nmax</name></member>
+      <member refid="class_biorth_wake_1aecc0e08f2416a67c723ae0c652df3863" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>norm_grid</name></member>
+      <member refid="class_biorth_wake_1a32d6e7c92f91510e003a922eea897a90" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>orientation</name></member>
+      <member refid="class_biorth_wake_1a1ce0e032fa1d45bfdbcce3fe8a7e79fa" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>orientation_init</name></member>
+      <member refid="class_biorth_wake_1a33604e947e18c8667959bb409f172669" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>param</name></member>
+      <member refid="class_biorth_wake_1aaa25ed3e8333ab6f0a3954fb3a81ed1a" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>psum</name></member>
+      <member refid="class_biorth_wake_1aaa4fe067c7fb6656cf1458b1939b98b5" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>ptry</name></member>
+      <member refid="class_biorth_wake_1a33ea42ffb26ee85d13242a4b4c792cb2" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>reconstruct</name></member>
+      <member refid="class_biorth_wake_1a87be94370d011ecd85bed933703ecd1f" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>reconstruct_2d</name></member>
+      <member refid="class_biorth_wake_1a34de97783782ae415d3006463dd6bf49" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>reconstruct_3d</name></member>
+      <member refid="class_biorth_wake_1a64a0b3883833ee60dd5ad6e273c80dd2" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>reset_coefs</name></member>
+      <member refid="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>rscl</name></member>
+      <member refid="class_biorth_wake_1a11f4732dd628b2a39980e443894fe7be" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>set_scale</name></member>
+      <member refid="class_biorth_wake_1a00e2faa814f3dd3532e5435be310ba7f" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>test_fct</name></member>
+      <member refid="class_biorth_wake_1aef928f5838a6b280af71e9e35402495e" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>test_transform</name></member>
+      <member refid="class_biorth_wake_1a79ab99d2abf834967c34a0e16c4dbd67" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>tol</name></member>
+      <member refid="class_biorth_wake_1a5abedd0c94ab4d8187e85949f114c129" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>tolDef</name></member>
+      <member refid="class_biorth_wake_1a1b4e13bcd12d9150089c2254874eaece" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>used</name></member>
+      <member refid="class_biorth_wake_1aad2d849bd09404af716e29fef07b4122" prot="private" virt="non-virtual"><scope>BiorthWake</scope><name>ylm</name></member>
+      <member refid="class_biorth_wake_1a7513c664ff8f046c35faa17690935671" prot="public" virt="non-virtual"><scope>BiorthWake</scope><name>~BiorthWake</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_b_w_helper_8_h" kind="file" language="C++">
+    <compoundname>BWHelper.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">set</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/BWHelper.H</label>
+        <link refid="_b_w_helper_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classbw__struct" prot="public">bw_struct</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BWHelper_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BWHelper_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classbw__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classbw__struct" kindref="compound">bw_struct</ref><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classbw__struct_1a1431bc0cffe5a4d0b1b1a3b07f25cce7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classbw__struct_1a1431bc0cffe5a4d0b1b1a3b07f25cce7" kindref="member">dt1</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classbw__struct_1a59ad587205266e918655da76ee51837c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classbw__struct_1a59ad587205266e918655da76ee51837c" kindref="member">dt2</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classbw__struct_1aabe3f0f44d98957436bc4210aad99767" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="classbw__struct_1a6508f6eb8ad0f0bad37d43476dc257f4" kindref="member">first</ref>,<sp/><ref refid="classbw__struct_1aabe3f0f44d98957436bc4210aad99767" kindref="member">expire</ref>;</highlight></codeline>
+<codeline lineno="25" refid="classbw__struct_1ae3d387163a92ffa86de33db5948b9690" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;bool&gt;<sp/><ref refid="classbw__struct_1ae3d387163a92ffa86de33db5948b9690" kindref="member">nd</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classbw__struct_1a6c9bb2bef151769928bac29c86788138" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classbw__struct_1a6c9bb2bef151769928bac29c86788138" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="27" refid="classbw__struct_1a8e1d3e72ceadb06828799428f2b947e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classbw__struct_1a8e1d3e72ceadb06828799428f2b947e0" kindref="member">owner</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classbw__struct_1aedf91c46e2304d6f5dd481cdfde9c056" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classbw__struct_1aedf91c46e2304d6f5dd481cdfde9c056" kindref="member">bw_struct</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>localid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>commsize)<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1a6508f6eb8ad0f0bad37d43476dc257f4" kindref="member">first</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>time(0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1aabe3f0f44d98957436bc4210aad99767" kindref="member">expire</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="classbw__struct_1a6508f6eb8ad0f0bad37d43476dc257f4" kindref="member">first</ref><sp/>+<sp/><ref refid="classbw__struct_1a1431bc0cffe5a4d0b1b1a3b07f25cce7" kindref="member">dt1</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1a8e1d3e72ceadb06828799428f2b947e0" kindref="member">owner</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>localid;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1a6c9bb2bef151769928bac29c86788138" kindref="member">count</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1ae3d387163a92ffa86de33db5948b9690" kindref="member">nd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>std::vector&lt;bool&gt;(commsize);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbw__struct_1ae3d387163a92ffa86de33db5948b9690" kindref="member">nd</ref>[localid]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classbw__struct_1a0cecf7b6bddc1d8b390e25c0f59ebd5a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classbw__struct_1a0cecf7b6bddc1d8b390e25c0f59ebd5a" kindref="member">bw_struct</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classbw__struct_1a8e1d3e72ceadb06828799428f2b947e0" kindref="member">owner</ref>,<sp/>time_t<sp/><ref refid="classbw__struct_1a6508f6eb8ad0f0bad37d43476dc257f4" kindref="member">first</ref>)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;owner<sp/><sp/>=<sp/><ref refid="classbw__struct_1a8e1d3e72ceadb06828799428f2b947e0" kindref="member">owner</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;first<sp/><sp/>=<sp/><ref refid="classbw__struct_1a6508f6eb8ad0f0bad37d43476dc257f4" kindref="member">first</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;expire<sp/>=<sp/>INT_MAX;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/BWHelper.H"/>
+  </compounddef>
+</doxygen>

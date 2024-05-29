@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_vtk_grid" kind="class" language="C++" prot="public">
+    <compoundname>VtkGrid</compoundname>
+    <basecompoundref refid="class_three_d_grid" prot="public" virt="non-virtual">ThreeDGrid</basecompoundref>
+    <includes refid="_vtk_grid_8_h" local="no">VtkGrid.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vtk_grid_1aad794c634f2fd3a2acbd43882d37abac" prot="private" static="no" mutable="no">
+        <type><ref refid="_vtk_grid_8_h_1a79cd2d149302154311ed7385f5e7c637" kindref="member">vtkRectilinearGridP</ref></type>
+        <definition>vtkRectilinearGridP VtkGrid::dataSet</definition>
+        <argsstring></argsstring>
+        <name>dataSet</name>
+        <qualifiedname>VtkGrid::dataSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="42" column="23" bodyfile="/home/weinberg/Projects/EXP/include/VtkGrid.H" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_grid_1a5224bd630e5e9be1ac094432c2cdbe2f" prot="private" static="no" mutable="no">
+        <type>vtkSmartPointer&lt; <ref refid="_vtk_grid_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>vtkSmartPointer&lt;vtkFloatArrayP&gt; VtkGrid::XX</definition>
+        <argsstring></argsstring>
+        <name>XX</name>
+        <qualifiedname>VtkGrid::XX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="39" column="19" bodyfile="/home/weinberg/Projects/EXP/include/VtkGrid.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_grid_1a0948d3f19e34ca781de69d04b253ce72" prot="private" static="no" mutable="no">
+        <type>vtkSmartPointer&lt; <ref refid="_vtk_grid_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>vtkSmartPointer&lt;vtkFloatArrayP&gt; VtkGrid::YY</definition>
+        <argsstring></argsstring>
+        <name>YY</name>
+        <qualifiedname>VtkGrid::YY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="39" column="22" bodyfile="/home/weinberg/Projects/EXP/include/VtkGrid.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vtk_grid_1a26bdda88b52dcf199925c851a441211b" prot="private" static="no" mutable="no">
+        <type>vtkSmartPointer&lt; <ref refid="_vtk_grid_8_h_1a91ec4adb62732a5e935da8cd519eedca" kindref="member">vtkFloatArrayP</ref> &gt;</type>
+        <definition>vtkSmartPointer&lt;vtkFloatArrayP&gt; VtkGrid::ZZ</definition>
+        <argsstring></argsstring>
+        <name>ZZ</name>
+        <qualifiedname>VtkGrid::ZZ</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="39" column="25" bodyfile="/home/weinberg/Projects/EXP/include/VtkGrid.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vtk_grid_1a0e17ff56b7dca22354e1ad12fc9a3136" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VtkGrid::Add</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;data, const std::string &amp;name)</argsstring>
+        <name>Add</name>
+        <qualifiedname>VtkGrid::Add</qualifiedname>
+        <reimplements refid="class_three_d_grid_1affe7a7b6bca0874f96c654ae34c8190a">Add</reimplements>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Add data for two-dimensional cylindrical basis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="52" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vtk_grid_1a708cc3f68c13e7e532f89cec61dbbf38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VtkGrid::VtkGrid</definition>
+        <argsstring>(int nx, int ny, int nz, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax)</argsstring>
+        <name>VtkGrid</name>
+        <qualifiedname>VtkGrid::VtkGrid</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ny</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nz</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zmax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="46" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vtk_grid_1ae022ee7d864ef6881bbbb3aef0206576" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VtkGrid::Write</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Write</name>
+        <qualifiedname>VtkGrid::Write</qualifiedname>
+        <reimplements refid="class_three_d_grid_1a52f6cbab42f66577b8d5abd46e1de265">Write</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Write output file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="55" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="class_three_d_grid" kindref="compound">ThreeDGrid</ref> implementation of the rectangular grid database implement in VTK and designed for consumption by PyVTK or ParaView. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ThreeDGrid</label>
+        <link refid="class_three_d_grid"/>
+      </node>
+      <node id="1">
+        <label>VtkGrid</label>
+        <link refid="class_vtk_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ThreeDGrid</label>
+        <link refid="class_three_d_grid"/>
+      </node>
+      <node id="1">
+        <label>VtkGrid</label>
+        <link refid="class_vtk_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/VtkGrid.H" line="35" column="1" bodyfile="/home/weinberg/Projects/EXP/include/VtkGrid.H" bodystart="36" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_vtk_grid_1a0e17ff56b7dca22354e1ad12fc9a3136" prot="public" virt="virtual"><scope>VtkGrid</scope><name>Add</name></member>
+      <member refid="class_vtk_grid_1aad794c634f2fd3a2acbd43882d37abac" prot="private" virt="non-virtual"><scope>VtkGrid</scope><name>dataSet</name></member>
+      <member refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>nx</name></member>
+      <member refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>ny</name></member>
+      <member refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>nz</name></member>
+      <member refid="class_three_d_grid_1a602e5d83286c984b71154d538efa97d5" prot="public" virt="non-virtual"><scope>VtkGrid</scope><name>ThreeDGrid</name></member>
+      <member refid="class_three_d_grid_1aa50af21f0edbc4004e349ff140335452" prot="public" virt="non-virtual"><scope>VtkGrid</scope><name>ThreeDGrid</name></member>
+      <member refid="class_vtk_grid_1a708cc3f68c13e7e532f89cec61dbbf38" prot="public" virt="non-virtual"><scope>VtkGrid</scope><name>VtkGrid</name></member>
+      <member refid="class_vtk_grid_1ae022ee7d864ef6881bbbb3aef0206576" prot="public" virt="virtual"><scope>VtkGrid</scope><name>Write</name></member>
+      <member refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>xmax</name></member>
+      <member refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>xmin</name></member>
+      <member refid="class_vtk_grid_1a5224bd630e5e9be1ac094432c2cdbe2f" prot="private" virt="non-virtual"><scope>VtkGrid</scope><name>XX</name></member>
+      <member refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>ymax</name></member>
+      <member refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>ymin</name></member>
+      <member refid="class_vtk_grid_1a0948d3f19e34ca781de69d04b253ce72" prot="private" virt="non-virtual"><scope>VtkGrid</scope><name>YY</name></member>
+      <member refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>zmax</name></member>
+      <member refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" prot="protected" virt="non-virtual"><scope>VtkGrid</scope><name>zmin</name></member>
+      <member refid="class_vtk_grid_1a26bdda88b52dcf199925c851a441211b" prot="private" virt="non-virtual"><scope>VtkGrid</scope><name>ZZ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -21,3 +21,8 @@ compiling EXP using the ``BUILD_DOCS`` feature (:ref:`installing EXP
 <https://www.doxygen.nl>` to learn more.
 
 
+Doxygen-generated manual
+------------------------
+
+.. doxygenindex::
+   :allow-dot-graphs:

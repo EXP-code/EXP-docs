@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_ortho_function" kind="class" language="C++" prot="public">
+    <compoundname>OrthoFunction</compoundname>
+    <includes refid="_ortho_function_8_h" local="no">OrthoFunction.H</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" prot="public" static="no">
+        <type>std::function&lt; double(double)&gt;</type>
+        <definition>using OrthoFunction::DensFunc =  std::function&lt;double(double)&gt;</definition>
+        <argsstring></argsstring>
+        <name>DensFunc</name>
+        <qualifiedname>OrthoFunction::DensFunc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="18" column="3" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ortho_function_1abcda02877da0939ed12bf55417b2a082" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd OrthoFunction::alph</definition>
+        <argsstring></argsstring>
+        <name>alph</name>
+        <qualifiedname>OrthoFunction::alph</qualifiedname>
+        <briefdescription>
+<para>Recursion coefficients and norm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="44" column="19" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1ab721d5201751cc3eedf241fa51b4428d" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd OrthoFunction::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <qualifiedname>OrthoFunction::beta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="44" column="24" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OrthoFunction::dof</definition>
+        <argsstring></argsstring>
+        <name>dof</name>
+        <qualifiedname>OrthoFunction::dof</qualifiedname>
+        <briefdescription>
+<para>Degrees of freedom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="32" column="7" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a3a2733eb9891d1b40ed7a9a98cc99f4b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <qualifiedname>OrthoFunction::dx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="41" column="20" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OrthoFunction::knots</definition>
+        <argsstring></argsstring>
+        <name>knots</name>
+        <qualifiedname>OrthoFunction::knots</qualifiedname>
+        <initializer>= 400</initializer>
+        <briefdescription>
+<para><ref refid="class_legendre" kindref="compound">Legendre</ref> knots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="47" column="7" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" compoundref="_ortho_function_8_h" startline="95" endline="99">setKnots</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_lege_quad" kindref="compound">LegeQuad</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;LegeQuad&gt; OrthoFunction::lq</definition>
+        <argsstring></argsstring>
+        <name>lq</name>
+        <qualifiedname>OrthoFunction::lq</qualifiedname>
+        <briefdescription>
+<para>Gaussian quadrature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="50" column="19" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" compoundref="_ortho_function_8_h" startline="95" endline="99">setKnots</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a89d9c79cdafc9b54dbc3d8d8bbc4efc9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OrthoFunction::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>OrthoFunction::nmax</qualifiedname>
+        <briefdescription>
+<para>Polynomial order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="26" column="7" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a28fbb28fd3c6a67877e7166a79f2e247" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd OrthoFunction::norm</definition>
+        <argsstring></argsstring>
+        <name>norm</name>
+        <qualifiedname>OrthoFunction::norm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="44" column="29" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a8352622b6558a4f039e69d54562509df" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>OrthoFunction::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="38" column="15" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1ad7f7640272b85b2c697cceb25e61a049" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>OrthoFunction::rmin</qualifiedname>
+        <briefdescription>
+<para>Radial boundaries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="38" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>OrthoFunction::scale</qualifiedname>
+        <briefdescription>
+<para>Mapping scale. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="29" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" compoundref="_ortho_function_8_h" startline="66" endline="70">d_r_to_x</referencedby>
+        <referencedby refid="class_ortho_function_1a6b1e4f353cd771970a6062f68205282c" compoundref="_ortho_function_8_h" startline="55" endline="59">r_to_x</referencedby>
+        <referencedby refid="class_ortho_function_1a9aabff39825d50734517fad79ee458b0" compoundref="_ortho_function_8_h" startline="61" endline="64">x_to_r</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a1a9ce9fcf086f7cc99741db4daafcc90" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OrthoFunction::segment</definition>
+        <argsstring></argsstring>
+        <name>segment</name>
+        <qualifiedname>OrthoFunction::segment</qualifiedname>
+        <briefdescription>
+<para>Orthogonal in x rather than r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="35" column="8" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a27bf66591a8c18be3f5ca572703554d0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" kindref="member">DensFunc</ref></type>
+        <definition>DensFunc OrthoFunction::W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <qualifiedname>OrthoFunction::W</qualifiedname>
+        <briefdescription>
+<para>Sqrt root weight function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="23" column="12" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a696a02f38c75aa85334ff36a337a6f36" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::xmax</definition>
+        <argsstring></argsstring>
+        <name>xmax</name>
+        <qualifiedname>OrthoFunction::xmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="41" column="15" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ortho_function_1a76cc8c546e2193411a454dab3271824e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OrthoFunction::xmin</definition>
+        <argsstring></argsstring>
+        <name>xmin</name>
+        <qualifiedname>OrthoFunction::xmin</qualifiedname>
+        <briefdescription>
+<para>Mapped radial boundaries and range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="41" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double OrthoFunction::d_r_to_x</definition>
+        <argsstring>(double x)</argsstring>
+        <name>d_r_to_x</name>
+        <qualifiedname>OrthoFunction::d_r_to_x</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="66" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="66" bodyend="70"/>
+        <references refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" compoundref="_ortho_function_8_h" startline="29">scale</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1ad48d9a2800afd2d519ee48a104dc1d43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthoFunction::generate</definition>
+        <argsstring>()</argsstring>
+        <name>generate</name>
+        <qualifiedname>OrthoFunction::generate</qualifiedname>
+        <briefdescription>
+<para>Generate the recursion for the orthogonal polynomials. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="80" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1ae7690d4e1253a6784e7978f41679bae2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd OrthoFunction::poly_eval</definition>
+        <argsstring>(double t, int n)</argsstring>
+        <name>poly_eval</name>
+        <qualifiedname>OrthoFunction::poly_eval</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Polynomial evaluation at t for orders j=0,...,n. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="77" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a6b1e4f353cd771970a6062f68205282c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double OrthoFunction::r_to_x</definition>
+        <argsstring>(double r)</argsstring>
+        <name>r_to_x</name>
+        <qualifiedname>OrthoFunction::r_to_x</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Coordinate scaling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="55" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="55" bodyend="59"/>
+        <references refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" compoundref="_ortho_function_8_h" startline="29">scale</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a1db6981a7296814ae36ccc824b208c77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double OrthoFunction::scalar_prod</definition>
+        <argsstring>(int n, int m)</argsstring>
+        <name>scalar_prod</name>
+        <qualifiedname>OrthoFunction::scalar_prod</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Inner product polynomial of order n with moment m. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a9aabff39825d50734517fad79ee458b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double OrthoFunction::x_to_r</definition>
+        <argsstring>(double x)</argsstring>
+        <name>x_to_r</name>
+        <qualifiedname>OrthoFunction::x_to_r</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="61" column="10" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="61" bodyend="64"/>
+        <references refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" compoundref="_ortho_function_8_h" startline="29">scale</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ortho_function_1a5dce33e098819f50e474faaec38f8e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd OrthoFunction::operator()</definition>
+        <argsstring>(double r)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>OrthoFunction::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate orthogonal functions at r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="92" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a5fba8890bba5e3ab528e590687ae559a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OrthoFunction::OrthoFunction</definition>
+        <argsstring>(int nmax, DensFunc W, double rmin, double rmax, double scale, int dof, bool segment=false)</argsstring>
+        <name>OrthoFunction</name>
+        <qualifiedname>OrthoFunction::OrthoFunction</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" kindref="member">DensFunc</ref></type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dof</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>segment</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="85" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthoFunction::setKnots</definition>
+        <argsstring>(int N)</argsstring>
+        <name>setKnots</name>
+        <qualifiedname>OrthoFunction::setKnots</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Reset <ref refid="class_legendre" kindref="compound">Legendre</ref> knots and weights for inner product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="95" column="8" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="95" bodyend="99"/>
+        <references refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" compoundref="_ortho_function_8_h" startline="47">knots</references>
+        <references refid="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" compoundref="_ortho_function_8_h" startline="50">lq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1aeb8b4c618c4f0d8be7be8ecd20f39bc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd OrthoFunction::testOrtho</definition>
+        <argsstring>()</argsstring>
+        <name>testOrtho</name>
+        <qualifiedname>OrthoFunction::testOrtho</qualifiedname>
+        <briefdescription>
+<para>Test orthogonality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="102" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ortho_function_1a3f176d99aaac1e31727176967e9b8bce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual OrthoFunction::~OrthoFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~OrthoFunction</name>
+        <qualifiedname>OrthoFunction::~OrthoFunction</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="89" column="11" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="89" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Compute orthogonal functions whose lowest-order member is the background density using the Stieltjes procedure for generating 3-term recursion </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="15" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_ortho_function_1abcda02877da0939ed12bf55417b2a082" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>alph</name></member>
+      <member refid="class_ortho_function_1ab721d5201751cc3eedf241fa51b4428d" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>beta</name></member>
+      <member refid="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>d_r_to_x</name></member>
+      <member refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>DensFunc</name></member>
+      <member refid="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>dof</name></member>
+      <member refid="class_ortho_function_1a3a2733eb9891d1b40ed7a9a98cc99f4b" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>dx</name></member>
+      <member refid="class_ortho_function_1ad48d9a2800afd2d519ee48a104dc1d43" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>generate</name></member>
+      <member refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>knots</name></member>
+      <member refid="class_ortho_function_1a3338b7e38105d023860cffe98c1ffee7" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>lq</name></member>
+      <member refid="class_ortho_function_1a89d9c79cdafc9b54dbc3d8d8bbc4efc9" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>nmax</name></member>
+      <member refid="class_ortho_function_1a28fbb28fd3c6a67877e7166a79f2e247" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>norm</name></member>
+      <member refid="class_ortho_function_1a5dce33e098819f50e474faaec38f8e6d" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>operator()</name></member>
+      <member refid="class_ortho_function_1a5fba8890bba5e3ab528e590687ae559a" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>OrthoFunction</name></member>
+      <member refid="class_ortho_function_1ae7690d4e1253a6784e7978f41679bae2" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>poly_eval</name></member>
+      <member refid="class_ortho_function_1a6b1e4f353cd771970a6062f68205282c" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>r_to_x</name></member>
+      <member refid="class_ortho_function_1a8352622b6558a4f039e69d54562509df" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>rmax</name></member>
+      <member refid="class_ortho_function_1ad7f7640272b85b2c697cceb25e61a049" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>rmin</name></member>
+      <member refid="class_ortho_function_1a1db6981a7296814ae36ccc824b208c77" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>scalar_prod</name></member>
+      <member refid="class_ortho_function_1af4aacee81cb8981f01f1c6d37ade2d5b" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>scale</name></member>
+      <member refid="class_ortho_function_1a1a9ce9fcf086f7cc99741db4daafcc90" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>segment</name></member>
+      <member refid="class_ortho_function_1a49de6972d696ee6175ecc4a552d9f3e7" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>setKnots</name></member>
+      <member refid="class_ortho_function_1aeb8b4c618c4f0d8be7be8ecd20f39bc5" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>testOrtho</name></member>
+      <member refid="class_ortho_function_1a27bf66591a8c18be3f5ca572703554d0" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>W</name></member>
+      <member refid="class_ortho_function_1a9aabff39825d50734517fad79ee458b0" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>x_to_r</name></member>
+      <member refid="class_ortho_function_1a696a02f38c75aa85334ff36a337a6f36" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>xmax</name></member>
+      <member refid="class_ortho_function_1a76cc8c546e2193411a454dab3271824e" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>xmin</name></member>
+      <member refid="class_ortho_function_1a3f176d99aaac1e31727176967e9b8bce" prot="public" virt="virtual"><scope>OrthoFunction</scope><name>~OrthoFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

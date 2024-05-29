@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classkdtree" kind="class" language="C++" prot="public">
+    <compoundname>kdtree</compoundname>
+    <includes refid="_k_dtree_8_h" local="no">KDtree.H</includes>
+    <innerclass refid="structkdtree_1_1node" prot="private">kdtree::node</innerclass>
+    <innerclass refid="structkdtree_1_1node__cmp" prot="private">kdtree::node_cmp</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename coordinate_type</type>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>dimensions</declname>
+        <defname>dimensions</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" prot="public" static="no">
+        <type><ref refid="classpoint" kindref="compound">point</ref>&lt; coordinate_type, dimensions &gt;</type>
+        <definition>typedef point&lt;coordinate_type, dimensions&gt; kdtree&lt; coordinate_type, dimensions &gt;::point_type</definition>
+        <argsstring></argsstring>
+        <name>point_type</name>
+        <qualifiedname>kdtree::point_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="166" column="17" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="166" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classkdtree_1a40498943803799971278a34d7c12e262" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cache" kindref="compound">Cache</ref>&lt; double, <ref refid="structkdtree_1_1node" kindref="compound">node</ref> * &gt;</type>
+        <definition>Cache&lt;double, node*&gt; kdtree&lt; coordinate_type, dimensions &gt;::best_</definition>
+        <argsstring></argsstring>
+        <name>best_</name>
+        <qualifiedname>kdtree::best_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="191" column="9" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="191" bodyend="-1"/>
+        <referencedby refid="classkdtree_1ac7105581fdfa27eff43b84795bbe4079" compoundref="_k_dtree_8_h" startline="308" endline="311">kdtree&lt; coordinate_type, dimensions &gt;::distance</referencedby>
+        <referencedby refid="classkdtree_1aa6c3e72813575db619b49f8c9d6a5f7f" compoundref="_k_dtree_8_h" startline="378" endline="383">kdtree&lt; coordinate_type, dimensions &gt;::getDist</referencedby>
+        <referencedby refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" compoundref="_k_dtree_8_h" startline="277" endline="285">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" compoundref="_k_dtree_8_h" startline="258" endline="266">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" compoundref="_k_dtree_8_h" startline="357" endline="376">kdtree&lt; coordinate_type, dimensions &gt;::nearestList</referencedby>
+        <referencedby refid="classkdtree_1ad2394e7a648855812b72a46d4788792f" compoundref="_k_dtree_8_h" startline="324" endline="344">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+        <referencedby refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structkdtree_1_1node" kindref="compound">node</ref> &gt;</type>
+        <definition>std::vector&lt;node&gt; kdtree&lt; coordinate_type, dimensions &gt;::nodes_</definition>
+        <argsstring></argsstring>
+        <name>nodes_</name>
+        <qualifiedname>kdtree::nodes_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="194" column="15" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="194" bodyend="-1"/>
+        <referencedby refid="classkdtree_1aefd25b527afcce143759b77853ce198f" compoundref="_k_dtree_8_h" startline="290" endline="293">kdtree&lt; coordinate_type, dimensions &gt;::empty</referencedby>
+        <referencedby refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" compoundref="_k_dtree_8_h" startline="277" endline="285">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" compoundref="_k_dtree_8_h" startline="258" endline="266">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" compoundref="_k_dtree_8_h" startline="209" endline="218">kdtree&lt; coordinate_type, dimensions &gt;::make_tree</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classkdtree_1a014a9c4289f5d991781376974c540351" prot="private" static="no" mutable="no">
+        <type><ref refid="structkdtree_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* kdtree&lt; coordinate_type, dimensions &gt;::root_</definition>
+        <argsstring></argsstring>
+        <name>root_</name>
+        <qualifiedname>kdtree::root_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="189" column="8" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="189" bodyend="-1"/>
+        <referencedby refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" compoundref="_k_dtree_8_h" startline="277" endline="285">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" compoundref="_k_dtree_8_h" startline="258" endline="266">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" compoundref="_k_dtree_8_h" startline="357" endline="376">kdtree&lt; coordinate_type, dimensions &gt;::nearestList</referencedby>
+        <referencedby refid="classkdtree_1ad2394e7a648855812b72a46d4788792f" compoundref="_k_dtree_8_h" startline="324" endline="344">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t kdtree&lt; coordinate_type, dimensions &gt;::visited_</definition>
+        <argsstring></argsstring>
+        <name>visited_</name>
+        <qualifiedname>kdtree::visited_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="193" column="10" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="193" bodyend="-1"/>
+        <referencedby refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" compoundref="_k_dtree_8_h" startline="277" endline="285">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" compoundref="_k_dtree_8_h" startline="258" endline="266">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" compoundref="_k_dtree_8_h" startline="357" endline="376">kdtree&lt; coordinate_type, dimensions &gt;::nearestList</referencedby>
+        <referencedby refid="classkdtree_1ad2394e7a648855812b72a46d4788792f" compoundref="_k_dtree_8_h" startline="324" endline="344">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+        <referencedby refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+        <referencedby refid="classkdtree_1a2c19e2011f2f139b34c7feacccf8cb2a" compoundref="_k_dtree_8_h" startline="299" endline="302">kdtree&lt; coordinate_type, dimensions &gt;::visited</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structkdtree_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node * kdtree&lt; coordinate_type, dimensions &gt;::make_tree</definition>
+        <argsstring>(size_t begin, size_t end, size_t index)</argsstring>
+        <name>make_tree</name>
+        <qualifiedname>kdtree::make_tree</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="209" column="8" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="209" bodyend="218"/>
+        <references refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" compoundref="_k_dtree_8_h" startline="209" endline="218">kdtree&lt; coordinate_type, dimensions &gt;::make_tree</references>
+        <references refid="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" compoundref="_k_dtree_8_h" startline="194">kdtree&lt; coordinate_type, dimensions &gt;::nodes_</references>
+        <referencedby refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" compoundref="_k_dtree_8_h" startline="277" endline="285">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" compoundref="_k_dtree_8_h" startline="258" endline="266">kdtree&lt; coordinate_type, dimensions &gt;::kdtree</referencedby>
+        <referencedby refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" compoundref="_k_dtree_8_h" startline="209" endline="218">kdtree&lt; coordinate_type, dimensions &gt;::make_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void kdtree&lt; coordinate_type, dimensions &gt;::nearestN</definition>
+        <argsstring>(node *root, const point_type &amp;point, size_t index, int N)</argsstring>
+        <name>nearestN</name>
+        <qualifiedname>kdtree::nearestN</qualifiedname>
+        <param>
+          <type><ref refid="structkdtree_1_1node" kindref="compound">node</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" kindref="member">point_type</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="220" column="8" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="220" bodyend="241"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+        <references refid="structkdtree_1_1node_1ace33495c2e0c094b3335b84c929d0af9" compoundref="_k_dtree_8_h" startline="180" endline="183">kdtree&lt; coordinate_type, dimensions &gt;::node::distance</references>
+        <references refid="classpoint_1ad627b50ee8e9fcfc20f24323aa4ab88d" compoundref="_k_dtree_8_h" startline="84" endline="87">point&lt; coordinate_type, dimensions &gt;::get</references>
+        <references refid="structkdtree_1_1node_1a7b27330dc074cbdba7811f7c01e59f55" compoundref="_k_dtree_8_h" startline="175" endline="178">kdtree&lt; coordinate_type, dimensions &gt;::node::get</references>
+        <references refid="structkdtree_1_1node_1a7568fecffbfa6341bc93910fe5f47d71" compoundref="_k_dtree_8_h" startline="185">kdtree&lt; coordinate_type, dimensions &gt;::node::left_</references>
+        <references refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</references>
+        <references refid="structkdtree_1_1node_1a3194e5a72c284c67f2dc66b323f13bf4" compoundref="_k_dtree_8_h" startline="186">kdtree&lt; coordinate_type, dimensions &gt;::node::right_</references>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+        <referencedby refid="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" compoundref="_k_dtree_8_h" startline="357" endline="376">kdtree&lt; coordinate_type, dimensions &gt;::nearestList</referencedby>
+        <referencedby refid="classkdtree_1ad2394e7a648855812b72a46d4788792f" compoundref="_k_dtree_8_h" startline="324" endline="344">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+        <referencedby refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classkdtree_1ac7105581fdfa27eff43b84795bbe4079" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double kdtree&lt; coordinate_type, dimensions &gt;::distance</definition>
+        <argsstring>() const</argsstring>
+        <name>distance</name>
+        <qualifiedname>kdtree::distance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the distance between the input point and return value from the last call to nearest(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="308" column="10" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="308" bodyend="311"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1aefd25b527afcce143759b77853ce198f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kdtree&lt; coordinate_type, dimensions &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>kdtree::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the tree is empty, false otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="290" column="8" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="290" bodyend="293"/>
+        <references refid="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" compoundref="_k_dtree_8_h" startline="194">kdtree&lt; coordinate_type, dimensions &gt;::nodes_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1aa6c3e72813575db619b49f8c9d6a5f7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; kdtree&lt; coordinate_type, dimensions &gt;::getDist</definition>
+        <argsstring>()</argsstring>
+        <name>getDist</name>
+        <qualifiedname>kdtree::getDist</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="378" column="15" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="378" bodyend="383"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1a239be0ab1dc217108956f8657003a3f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kdtree&lt; coordinate_type, dimensions &gt;::kdtree</definition>
+        <argsstring>(const kdtree &amp;)=delete</argsstring>
+        <name>kdtree</name>
+        <qualifiedname>kdtree::kdtree</qualifiedname>
+        <param>
+          <type>const <ref refid="classkdtree" kindref="compound">kdtree</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy constructor2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="246" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1a23b773415b5f9d273166786a4152c1df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename func</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>kdtree&lt; coordinate_type, dimensions &gt;::kdtree</definition>
+        <argsstring>(func &amp;&amp;f, size_t n)</argsstring>
+        <name>kdtree</name>
+        <qualifiedname>kdtree::kdtree</qualifiedname>
+        <param>
+          <type>func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor taking a function object that generates points. The function object will be called n times to populate the tree.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function that returns a point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of points to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="277" column="3" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="277" bodyend="285"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+        <references refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" compoundref="_k_dtree_8_h" startline="209" endline="218">kdtree&lt; coordinate_type, dimensions &gt;::make_tree</references>
+        <references refid="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" compoundref="_k_dtree_8_h" startline="194">kdtree&lt; coordinate_type, dimensions &gt;::nodes_</references>
+        <references refid="classkdtree_1a014a9c4289f5d991781376974c540351" compoundref="_k_dtree_8_h" startline="189">kdtree&lt; coordinate_type, dimensions &gt;::root_</references>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1af81d819fc31a308bbfa24797da951f42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename iterator</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>kdtree&lt; coordinate_type, dimensions &gt;::kdtree</definition>
+        <argsstring>(iterator begin, iterator end)</argsstring>
+        <name>kdtree</name>
+        <qualifiedname>kdtree::kdtree</qualifiedname>
+        <param>
+          <type>iterator</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor taking a pair of iterators. Adds each point in the range [begin, end) to the tree.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start of range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end of range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="258" column="3" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="258" bodyend="266"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+        <references refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" compoundref="_k_dtree_8_h" startline="209" endline="218">kdtree&lt; coordinate_type, dimensions &gt;::make_tree</references>
+        <references refid="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" compoundref="_k_dtree_8_h" startline="194">kdtree&lt; coordinate_type, dimensions &gt;::nodes_</references>
+        <references refid="classkdtree_1a014a9c4289f5d991781376974c540351" compoundref="_k_dtree_8_h" startline="189">kdtree&lt; coordinate_type, dimensions &gt;::root_</references>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; std::vector&lt; <ref refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" kindref="member">point_type</ref> &gt;, double &gt;</type>
+        <definition>std::tuple&lt; std::vector&lt; point_type &gt;, double &gt; kdtree&lt; coordinate_type, dimensions &gt;::nearestList</definition>
+        <argsstring>(const point_type &amp;pt, int N)</argsstring>
+        <name>nearestList</name>
+        <qualifiedname>kdtree::nearestList</qualifiedname>
+        <param>
+          <type>const <ref refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" kindref="member">point_type</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the nearest N points in the tree to the given point. It is not valid to call this function if the tree is empty.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of nearest points</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns: tuple of the nearest point list and the radius of the Nth point </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="357" column="3" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="357" bodyend="376"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+        <references refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</references>
+        <references refid="classkdtree_1a014a9c4289f5d991781376974c540351" compoundref="_k_dtree_8_h" startline="189">kdtree&lt; coordinate_type, dimensions &gt;::root_</references>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1ad2394e7a648855812b72a46d4788792f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; <ref refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" kindref="member">point_type</ref>, double, double &gt;</type>
+        <definition>std::tuple&lt; point_type, double, double &gt; kdtree&lt; coordinate_type, dimensions &gt;::nearestN</definition>
+        <argsstring>(const point_type &amp;pt, int N)</argsstring>
+        <name>nearestN</name>
+        <qualifiedname>kdtree::nearestN</qualifiedname>
+        <param>
+          <type>const <ref refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" kindref="member">point_type</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the nearest N points in the tree to the given point. It is not valid to call this function if the tree is empty.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of nearest points</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns: tuple of the first points, summed weight, and the radius of the Nth point </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="324" column="3" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="324" bodyend="344"/>
+        <references refid="classkdtree_1a40498943803799971278a34d7c12e262" compoundref="_k_dtree_8_h" startline="191">kdtree&lt; coordinate_type, dimensions &gt;::best_</references>
+        <references refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" compoundref="_k_dtree_8_h" startline="220" endline="241">kdtree&lt; coordinate_type, dimensions &gt;::nearestN</references>
+        <references refid="classkdtree_1a014a9c4289f5d991781376974c540351" compoundref="_k_dtree_8_h" startline="189">kdtree&lt; coordinate_type, dimensions &gt;::root_</references>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1aca7199af6149fdb94fa8cdc5024d345b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkdtree" kindref="compound">kdtree</ref> &amp;</type>
+        <definition>kdtree &amp; kdtree&lt; coordinate_type, dimensions &gt;::operator=</definition>
+        <argsstring>(const kdtree &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>kdtree::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classkdtree" kindref="compound">kdtree</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="247" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkdtree_1a2c19e2011f2f139b34c7feacccf8cb2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t kdtree&lt; coordinate_type, dimensions &gt;::visited</definition>
+        <argsstring>() const</argsstring>
+        <name>visited</name>
+        <qualifiedname>kdtree::visited</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of nodes visited by the last call to nearest(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="299" column="10" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="299" bodyend="302"/>
+        <references refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" compoundref="_k_dtree_8_h" startline="193">kdtree&lt; coordinate_type, dimensions &gt;::visited_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>k-d tree implementation </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Cache&lt; double, kdtree::node * &gt;</label>
+        <link refid="class_cache"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>kdtree&lt; coordinate_type, dimensions &gt;::node</label>
+        <link refid="structkdtree_1_1node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>left_</edgelabel>
+          <edgelabel>right_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>kdtree&lt; coordinate_type, dimensions &gt;</label>
+        <link refid="classkdtree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>best_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::map&lt; double , kdtree::node *  &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="163" column="1" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="164" bodyend="385"/>
+    <listofallmembers>
+      <member refid="classkdtree_1a40498943803799971278a34d7c12e262" prot="private" virt="non-virtual"><scope>kdtree</scope><name>best_</name></member>
+      <member refid="classkdtree_1ac7105581fdfa27eff43b84795bbe4079" prot="public" virt="non-virtual"><scope>kdtree</scope><name>distance</name></member>
+      <member refid="classkdtree_1aefd25b527afcce143759b77853ce198f" prot="public" virt="non-virtual"><scope>kdtree</scope><name>empty</name></member>
+      <member refid="classkdtree_1aa6c3e72813575db619b49f8c9d6a5f7f" prot="public" virt="non-virtual"><scope>kdtree</scope><name>getDist</name></member>
+      <member refid="classkdtree_1a239be0ab1dc217108956f8657003a3f3" prot="public" virt="non-virtual"><scope>kdtree</scope><name>kdtree</name></member>
+      <member refid="classkdtree_1af81d819fc31a308bbfa24797da951f42" prot="public" virt="non-virtual"><scope>kdtree</scope><name>kdtree</name></member>
+      <member refid="classkdtree_1a23b773415b5f9d273166786a4152c1df" prot="public" virt="non-virtual"><scope>kdtree</scope><name>kdtree</name></member>
+      <member refid="classkdtree_1a0025ccd7ffb2b1e6a4f6b8a3c652a0bf" prot="private" virt="non-virtual"><scope>kdtree</scope><name>make_tree</name></member>
+      <member refid="classkdtree_1a80d99a07f74d96efb06a76787ef1d029" prot="public" virt="non-virtual"><scope>kdtree</scope><name>nearestList</name></member>
+      <member refid="classkdtree_1abc92f4a3965e484862bc5b8c2e96e3a6" prot="private" virt="non-virtual"><scope>kdtree</scope><name>nearestN</name></member>
+      <member refid="classkdtree_1ad2394e7a648855812b72a46d4788792f" prot="public" virt="non-virtual"><scope>kdtree</scope><name>nearestN</name></member>
+      <member refid="classkdtree_1a926ea253eccd6721ea00c76f6ea360f0" prot="private" virt="non-virtual"><scope>kdtree</scope><name>nodes_</name></member>
+      <member refid="classkdtree_1aca7199af6149fdb94fa8cdc5024d345b" prot="public" virt="non-virtual"><scope>kdtree</scope><name>operator=</name></member>
+      <member refid="classkdtree_1a65952573e13fbddf5da4dd6468cf0d56" prot="public" virt="non-virtual"><scope>kdtree</scope><name>point_type</name></member>
+      <member refid="classkdtree_1a014a9c4289f5d991781376974c540351" prot="private" virt="non-virtual"><scope>kdtree</scope><name>root_</name></member>
+      <member refid="classkdtree_1a2c19e2011f2f139b34c7feacccf8cb2a" prot="public" virt="non-virtual"><scope>kdtree</scope><name>visited</name></member>
+      <member refid="classkdtree_1a0a89c07e4ad621a76bcf5a3222f8a09c" prot="private" virt="non-virtual"><scope>kdtree</scope><name>visited_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

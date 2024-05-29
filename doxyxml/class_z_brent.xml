@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_z_brent" kind="class" language="C++" prot="public">
+    <compoundname>ZBrent</compoundname>
+    <includes refid="_z_brent_8_h" local="no">ZBrent.H</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_z_brent_1a10af6ea5ce242942973c6f33e22b0b54" prot="private" static="no">
+        <type>std::function&lt; double(double, T &amp;)&gt;</type>
+        <definition>using ZBrent&lt; T &gt;::func_T =  std::function&lt;double(double, T&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>func_T</name>
+        <qualifiedname>ZBrent::func_T</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="19" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_z_brent_1a49d441d34dcbbe7cba34c5809d442819" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double ZBrent&lt; T &gt;::EPS</definition>
+        <argsstring></argsstring>
+        <name>EPS</name>
+        <qualifiedname>ZBrent::EPS</qualifiedname>
+        <initializer>=1.0e-16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="23" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_z_brent_1a451559430cf79b261c6eb354690eea41" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double ZBrent&lt; T &gt;::epsilon</definition>
+        <argsstring></argsstring>
+        <name>epsilon</name>
+        <qualifiedname>ZBrent::epsilon</qualifiedname>
+        <initializer>=1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="24" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_z_brent_1a61d4ec528e5044386c5e998bd82f2c44" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ZBrent&lt; T &gt;::ITMAX</definition>
+        <argsstring></argsstring>
+        <name>ITMAX</name>
+        <qualifiedname>ZBrent::ITMAX</qualifiedname>
+        <initializer>=100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="22" column="14" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_z_brent_1a865d518a616320d31a5b82ab8c93bbb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_z_brent_8_h_1afed7781c1ff415e0185b4847de0fce93" kindref="member">ZBrentReturn</ref></type>
+        <definition>ZBrentReturn ZBrent&lt; T &gt;::find</definition>
+        <argsstring>(func_T func, T &amp;param, double x1, double x2, double tol, double &amp;result)</argsstring>
+        <name>find</name>
+        <qualifiedname>ZBrent::find</qualifiedname>
+        <param>
+          <type><ref refid="class_z_brent_1a10af6ea5ce242942973c6f33e22b0b54" kindref="member">func_T</ref></type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tol</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="27" column="16" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="38" bodyend="123"/>
+        <references refid="_z_brent_8_h_1afed7781c1ff415e0185b4847de0fce93a269c13c2affa9b7cff07a4aa1e9c5f2e" compoundref="_z_brent_8_h" startline="12">Bracket</references>
+        <references refid="_z_brent_8_h_1afed7781c1ff415e0185b4847de0fce93aa9e10f610083e262e7aa4004c9b68fe9" compoundref="_z_brent_8_h" startline="11">Good</references>
+        <references refid="_z_brent_8_h_1afed7781c1ff415e0185b4847de0fce93ad99cee9bc75fdda19c9973426672e410" compoundref="_z_brent_8_h" startline="13">Iteration</references>
+      </memberdef>
+      <memberdef kind="function" id="class_z_brent_1a06ed750f92022929c60ff960b6b5ecde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ZBrent&lt; T &gt;::ZBrent</definition>
+        <argsstring>()</argsstring>
+        <name>ZBrent</name>
+        <qualifiedname>ZBrent::ZBrent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="26" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/ZBrent.H" line="17" column="1" bodyfile="/home/weinberg/Projects/EXP/include/ZBrent.H" bodystart="18" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_z_brent_1a49d441d34dcbbe7cba34c5809d442819" prot="public" virt="non-virtual"><scope>ZBrent</scope><name>EPS</name></member>
+      <member refid="class_z_brent_1a451559430cf79b261c6eb354690eea41" prot="public" virt="non-virtual"><scope>ZBrent</scope><name>epsilon</name></member>
+      <member refid="class_z_brent_1a865d518a616320d31a5b82ab8c93bbb0" prot="public" virt="non-virtual"><scope>ZBrent</scope><name>find</name></member>
+      <member refid="class_z_brent_1a10af6ea5ce242942973c6f33e22b0b54" prot="private" virt="non-virtual"><scope>ZBrent</scope><name>func_T</name></member>
+      <member refid="class_z_brent_1a61d4ec528e5044386c5e998bd82f2c44" prot="public" virt="non-virtual"><scope>ZBrent</scope><name>ITMAX</name></member>
+      <member refid="class_z_brent_1a06ed750f92022929c60ff960b6b5ecde" prot="public" virt="non-virtual"><scope>ZBrent</scope><name>ZBrent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

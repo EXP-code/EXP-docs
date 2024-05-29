@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_c_h_k_p_t" kind="class" language="C++" prot="public">
+    <compoundname>OutCHKPT</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_c_h_k_p_t_8_h" local="no">OutCHKPT.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_c_h_k_p_t_1ab8f0c868be3c6d3a756da440364b7cbc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutCHKPT::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutCHKPT::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="27" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_c_h_k_p_t_1a681f23c5c00a8b9504f9171a4dc62ff5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutCHKPT::mpio</definition>
+        <argsstring></argsstring>
+        <name>mpio</name>
+        <qualifiedname>OutCHKPT::mpio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="28" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_c_h_k_p_t_1ac558cbd1533c1d8f041dc812e62b4475" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutCHKPT::nagg</definition>
+        <argsstring></argsstring>
+        <name>nagg</name>
+        <qualifiedname>OutCHKPT::nagg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="27" column="24" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_c_h_k_p_t_1a4c59f11d51d3c0fe67a7b1c3abcde9fb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutCHKPT::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>OutCHKPT::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="28" column="8" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_c_h_k_p_t_1a97110c37dda49518829e6e0ef346ebd3" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutCHKPT::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutCHKPT::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="33" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_c_h_k_p_t_1aa6eb4b8a25a08e746160c3f888a07de3" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutCHKPT::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutCHKPT::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="30" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_c_h_k_p_t_1ab6d2039d671cba8faef45a13784cdf18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutCHKPT::OutCHKPT</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutCHKPT</name>
+        <qualifiedname>OutCHKPT::OutCHKPT</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="38" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_c_h_k_p_t_1a918198b8462ca963530e8477ab32790a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutCHKPT::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutCHKPT::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Provided by derived class to generate some output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time step used to decide whether or not to dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should be true on final step to force phase space dump indepentently of whether or not the frequency criterion is met </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="47" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Writes a checkpoint file at regular intervals</para>
+<para>Previously written checkpoint file will be rename to &lt;filename&gt;.bak</para>
+<para>Sending the root process a SIGHUP will cause the first of <ref refid="class_out_p_s" kindref="compound">OutPS</ref>, <ref refid="class_out_p_s_p" kindref="compound">OutPSP</ref>, <ref refid="class_out_p_s_n" kindref="compound">OutPSN</ref>, <ref refid="class_out_p_s_q" kindref="compound">OutPSQ</ref>, or <ref refid="class_out_c_h_k_p_t" kindref="compound">OutCHKPT</ref> in the <ref refid="class_output" kindref="compound">Output</ref> list to execute. This may not always be possible to signal for batch scheduled jobs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of the output file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of steps between dumps </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true uses MPI-IO output with arbitrarily sequenced particles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nagg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of MPI-IO aggregators </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutCHKPT</label>
+        <link refid="class_out_c_h_k_p_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OutCHKPT</label>
+        <link refid="class_out_c_h_k_p_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H" line="22" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutCHKPT.H" bodystart="23" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>conf</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>current_keys</name></member>
+      <member refid="class_out_c_h_k_p_t_1ab8f0c868be3c6d3a756da440364b7cbc" prot="private" virt="non-virtual"><scope>OutCHKPT</scope><name>filename</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutCHKPT</scope><name>id</name></member>
+      <member refid="class_out_c_h_k_p_t_1aa6eb4b8a25a08e746160c3f888a07de3" prot="private" virt="virtual"><scope>OutCHKPT</scope><name>initialize</name></member>
+      <member refid="class_out_c_h_k_p_t_1a681f23c5c00a8b9504f9171a4dc62ff5" prot="private" virt="non-virtual"><scope>OutCHKPT</scope><name>mpio</name></member>
+      <member refid="class_out_c_h_k_p_t_1ac558cbd1533c1d8f041dc812e62b4475" prot="private" virt="non-virtual"><scope>OutCHKPT</scope><name>nagg</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_c_h_k_p_t_1ab6d2039d671cba8faef45a13784cdf18" prot="public" virt="non-virtual"><scope>OutCHKPT</scope><name>OutCHKPT</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutCHKPT</scope><name>Output</name></member>
+      <member refid="class_out_c_h_k_p_t_1a918198b8462ca963530e8477ab32790a" prot="public" virt="virtual"><scope>OutCHKPT</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutCHKPT</scope><name>stopWatch</name></member>
+      <member refid="class_out_c_h_k_p_t_1a4c59f11d51d3c0fe67a7b1c3abcde9fb" prot="private" virt="non-virtual"><scope>OutCHKPT</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutCHKPT</scope><name>unmatched</name></member>
+      <member refid="class_out_c_h_k_p_t_1a97110c37dda49518829e6e0ef346ebd3" prot="private" virt="non-virtual"><scope>OutCHKPT</scope><name>valid_keys</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutCHKPT</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

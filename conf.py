@@ -9,18 +9,19 @@
 project = 'EXP'
 copyright = '2023-2024, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.12'
+release = '0.13'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_rtd_theme',]
+extensions = ['sphinx_rtd_theme', 'breathe', 'sphinx.ext.graphviz']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 
-
+breathe_projects = {"EXP": "doxyxml/"}
+breathe_default_project = "EXP"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

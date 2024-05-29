@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_ring_iterator" kind="class" language="C++" prot="public">
+    <compoundname>RingIterator</compoundname>
+    <includes refid="_circular_8_h" local="no">Circular.H</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Container</type>
+        <defval>std::vector&lt;T&gt;</defval>
+      </param>
+      <param>
+        <type>typename <ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <defval>typename Container::iterator</defval>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_ring_iterator_1aa56768696f64d6226c4c04c8631bca67" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using RingIterator&lt; T, Container, Iterator &gt;::difference_type =  std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>RingIterator::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="21" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_ring_iterator_1ac49a5e2521cbc023a3da64469b695381" prot="public" static="no">
+        <type>std::bidirectional_iterator_tag</type>
+        <definition>using RingIterator&lt; T, Container, Iterator &gt;::iterator_category =  std::bidirectional_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>RingIterator::iterator_category</qualifiedname>
+        <briefdescription>
+<para>Add typedefs for std::iterator_traits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="19" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_ring_iterator_1ad378b21b5c3dcf41c9aaefd857d5327c" prot="public" static="no">
+        <type>T *</type>
+        <definition>using RingIterator&lt; T, Container, Iterator &gt;::pointer =  T*</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>RingIterator::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="22" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_ring_iterator_1a4c8c168322f82bda3bef534515d2e15b" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using RingIterator&lt; T, Container, Iterator &gt;::reference =  T&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>RingIterator::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="23" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_ring_iterator_1a93c857cfb2880488146cd6cb9a500813" prot="public" static="no">
+        <type>T</type>
+        <definition>using RingIterator&lt; T, Container, Iterator &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>RingIterator::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="20" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ring_iterator_1a2f5b3b9ab9c063edf48854870358035e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator RingIterator&lt; T, Container, Iterator &gt;::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <qualifiedname>RingIterator::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="13" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_ring_iterator_1a6f8f6f1863544e91fc6f9e99cbf0e5e1" compoundref="_circular_8_h" startline="69" endline="74">RingIterator&lt; T, Container, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_ring_iterator_1ac42ba90c6e63d42524fd0486258ee68e" compoundref="_circular_8_h" startline="85" endline="90">RingIterator&lt; T, Container, Iterator &gt;::operator--</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator RingIterator&lt; T, Container, Iterator &gt;::cursor</definition>
+        <argsstring></argsstring>
+        <name>cursor</name>
+        <qualifiedname>RingIterator::cursor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="12" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_ring_iterator_1a86fb027f699663c7fc14759010fecfea" compoundref="_circular_8_h" startline="107" endline="110">RingIterator&lt; T, Container, Iterator &gt;::erase</referencedby>
+        <referencedby refid="class_ring_iterator_1a8accd267e289db7968db2d050987df4b" compoundref="_circular_8_h" startline="101" endline="104">RingIterator&lt; T, Container, Iterator &gt;::insert</referencedby>
+        <referencedby refid="class_ring_iterator_1a1c0937fc0eba4a174a83f426d4d45339" compoundref="_circular_8_h" startline="57" endline="60">RingIterator&lt; T, Container, Iterator &gt;::operator*</referencedby>
+        <referencedby refid="class_ring_iterator_1a6f8f6f1863544e91fc6f9e99cbf0e5e1" compoundref="_circular_8_h" startline="69" endline="74">RingIterator&lt; T, Container, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_ring_iterator_1ac42ba90c6e63d42524fd0486258ee68e" compoundref="_circular_8_h" startline="85" endline="90">RingIterator&lt; T, Container, Iterator &gt;::operator--</referencedby>
+        <referencedby refid="class_ring_iterator_1a9452810131d236d9fd5be1aaa1542871" compoundref="_circular_8_h" startline="63" endline="66">RingIterator&lt; T, Container, Iterator &gt;::operator-&gt;</referencedby>
+        <referencedby refid="class_ring_iterator_1a0ac243d97d7568233aa27f1b065de960" compoundref="_circular_8_h" startline="45" endline="48">RingIterator&lt; T, Container, Iterator &gt;::operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_iterator_1adf02a88bf9d690e0966556ebff6ea3eb" prot="private" static="no" mutable="no">
+        <type>Container &amp;</type>
+        <definition>Container&amp; RingIterator&lt; T, Container, Iterator &gt;::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>RingIterator::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="10" column="13" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_ring_iterator_1a86fb027f699663c7fc14759010fecfea" compoundref="_circular_8_h" startline="107" endline="110">RingIterator&lt; T, Container, Iterator &gt;::erase</referencedby>
+        <referencedby refid="class_ring_iterator_1a8accd267e289db7968db2d050987df4b" compoundref="_circular_8_h" startline="101" endline="104">RingIterator&lt; T, Container, Iterator &gt;::insert</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_iterator_1ae298e97dc73d45278bfdeceabf23c8db" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator RingIterator&lt; T, Container, Iterator &gt;::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <qualifiedname>RingIterator::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="14" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_ring_iterator_1a6f8f6f1863544e91fc6f9e99cbf0e5e1" compoundref="_circular_8_h" startline="69" endline="74">RingIterator&lt; T, Container, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_ring_iterator_1ac42ba90c6e63d42524fd0486258ee68e" compoundref="_circular_8_h" startline="85" endline="90">RingIterator&lt; T, Container, Iterator &gt;::operator--</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ring_iterator_1a86fb027f699663c7fc14759010fecfea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref></type>
+        <definition>RingIterator RingIterator&lt; T, Container, Iterator &gt;::erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <qualifiedname>RingIterator::erase</qualifiedname>
+        <briefdescription>
+<para>Erase the current element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="107" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="107" bodyend="110"/>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+        <references refid="class_ring_iterator_1adf02a88bf9d690e0966556ebff6ea3eb" compoundref="_circular_8_h" startline="10">RingIterator&lt; T, Container, Iterator &gt;::data</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a8accd267e289db7968db2d050987df4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref></type>
+        <definition>RingIterator RingIterator&lt; T, Container, Iterator &gt;::insert</definition>
+        <argsstring>(const T &amp;x)</argsstring>
+        <name>insert</name>
+        <qualifiedname>RingIterator::insert</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new element at the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="101" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="101" bodyend="104"/>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+        <references refid="class_ring_iterator_1adf02a88bf9d690e0966556ebff6ea3eb" compoundref="_circular_8_h" startline="10">RingIterator&lt; T, Container, Iterator &gt;::data</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a27a92b4feb984bcf9cdc6ad170d99448" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RingIterator&lt; T, Container, Iterator &gt;::operator!=</definition>
+        <argsstring>(const RingIterator &amp;x) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>RingIterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_ring_iterator" kindref="compound">RingIterator</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Test for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="51" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a1c0937fc0eba4a174a83f426d4d45339" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T RingIterator&lt; T, Container, Iterator &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>RingIterator::operator*</qualifiedname>
+        <briefdescription>
+<para>Return current data element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="57" column="5" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="57" bodyend="60"/>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a6f8f6f1863544e91fc6f9e99cbf0e5e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref> &amp;</type>
+        <definition>RingIterator &amp; RingIterator&lt; T, Container, Iterator &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>RingIterator::operator++</qualifiedname>
+        <briefdescription>
+<para>Pre-increment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="69" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="69" bodyend="74"/>
+        <references refid="class_ring_iterator_1a2f5b3b9ab9c063edf48854870358035e" compoundref="_circular_8_h" startline="13">RingIterator&lt; T, Container, Iterator &gt;::begin</references>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+        <references refid="class_ring_iterator_1ae298e97dc73d45278bfdeceabf23c8db" compoundref="_circular_8_h" startline="14">RingIterator&lt; T, Container, Iterator &gt;::end</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1ae3deef3e4d5bdd5a69c70338f4084744" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref></type>
+        <definition>RingIterator RingIterator&lt; T, Container, Iterator &gt;::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>RingIterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-increment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="77" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="77" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1ac42ba90c6e63d42524fd0486258ee68e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref> &amp;</type>
+        <definition>RingIterator &amp; RingIterator&lt; T, Container, Iterator &gt;::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <qualifiedname>RingIterator::operator--</qualifiedname>
+        <briefdescription>
+<para>Pre-decrement operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="85" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="85" bodyend="90"/>
+        <references refid="class_ring_iterator_1a2f5b3b9ab9c063edf48854870358035e" compoundref="_circular_8_h" startline="13">RingIterator&lt; T, Container, Iterator &gt;::begin</references>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+        <references refid="class_ring_iterator_1ae298e97dc73d45278bfdeceabf23c8db" compoundref="_circular_8_h" startline="14">RingIterator&lt; T, Container, Iterator &gt;::end</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a539146f25b901da7cd60879593a6e298" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ring_iterator" kindref="compound">RingIterator</ref></type>
+        <definition>RingIterator RingIterator&lt; T, Container, Iterator &gt;::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <qualifiedname>RingIterator::operator--</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-decrement operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="93" column="16" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a9452810131d236d9fd5be1aaa1542871" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator RingIterator&lt; T, Container, Iterator &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>RingIterator::operator-&gt;</qualifiedname>
+        <briefdescription>
+<para>Return current iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="63" column="12" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="63" bodyend="66"/>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a0ac243d97d7568233aa27f1b065de960" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RingIterator&lt; T, Container, Iterator &gt;::operator==</definition>
+        <argsstring>(const RingIterator &amp;x) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>RingIterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_ring_iterator" kindref="compound">RingIterator</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Test for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="45" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="45" bodyend="48"/>
+        <references refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" compoundref="_circular_8_h" startline="12">RingIterator&lt; T, Container, Iterator &gt;::cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a8221f1f69f05955630d4168f0dae47fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RingIterator&lt; T, Container, Iterator &gt;::RingIterator</definition>
+        <argsstring>(Container &amp;v)</argsstring>
+        <name>RingIterator</name>
+        <qualifiedname>RingIterator::RingIterator</qualifiedname>
+        <param>
+          <type>Container &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Create from v and position at the beginning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="29" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1acc7c90da362983763e792a910e6e45d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RingIterator&lt; T, Container, Iterator &gt;::RingIterator</definition>
+        <argsstring>(Container &amp;v, const Iterator &amp;i)</argsstring>
+        <name>RingIterator</name>
+        <qualifiedname>RingIterator::RingIterator</qualifiedname>
+        <param>
+          <type>Container &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Create from v and begin at iterator i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="33" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="33" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1a8712aceaf5984862579f0a23c7b253bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RingIterator&lt; T, Container, Iterator &gt;::RingIterator</definition>
+        <argsstring>(Container &amp;v, const Iterator &amp;i, const Iterator &amp;j)</argsstring>
+        <name>RingIterator</name>
+        <qualifiedname>RingIterator::RingIterator</qualifiedname>
+        <param>
+          <type>Container &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Create from v using positions i through j. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="37" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_iterator_1ad537892d5b5d58ba26e0aca4d7ceb608" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RingIterator&lt; T, Container, Iterator &gt;::RingIterator</definition>
+        <argsstring>(Container &amp;v, size_t i)</argsstring>
+        <name>RingIterator</name>
+        <qualifiedname>RingIterator::RingIterator</qualifiedname>
+        <param>
+          <type>Container &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Create from v and begin at position i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="41" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="41" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="8" column="1" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="9" bodyend="111"/>
+    <listofallmembers>
+      <member refid="class_ring_iterator_1a2f5b3b9ab9c063edf48854870358035e" prot="private" virt="non-virtual"><scope>RingIterator</scope><name>begin</name></member>
+      <member refid="class_ring_iterator_1a5540dbc176b644a8d2249a875e943f3d" prot="private" virt="non-virtual"><scope>RingIterator</scope><name>cursor</name></member>
+      <member refid="class_ring_iterator_1adf02a88bf9d690e0966556ebff6ea3eb" prot="private" virt="non-virtual"><scope>RingIterator</scope><name>data</name></member>
+      <member refid="class_ring_iterator_1aa56768696f64d6226c4c04c8631bca67" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>difference_type</name></member>
+      <member refid="class_ring_iterator_1ae298e97dc73d45278bfdeceabf23c8db" prot="private" virt="non-virtual"><scope>RingIterator</scope><name>end</name></member>
+      <member refid="class_ring_iterator_1a86fb027f699663c7fc14759010fecfea" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>erase</name></member>
+      <member refid="class_ring_iterator_1a8accd267e289db7968db2d050987df4b" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>insert</name></member>
+      <member refid="class_ring_iterator_1ac49a5e2521cbc023a3da64469b695381" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>iterator_category</name></member>
+      <member refid="class_ring_iterator_1a27a92b4feb984bcf9cdc6ad170d99448" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator!=</name></member>
+      <member refid="class_ring_iterator_1a1c0937fc0eba4a174a83f426d4d45339" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator*</name></member>
+      <member refid="class_ring_iterator_1a6f8f6f1863544e91fc6f9e99cbf0e5e1" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator++</name></member>
+      <member refid="class_ring_iterator_1ae3deef3e4d5bdd5a69c70338f4084744" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator++</name></member>
+      <member refid="class_ring_iterator_1ac42ba90c6e63d42524fd0486258ee68e" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator--</name></member>
+      <member refid="class_ring_iterator_1a539146f25b901da7cd60879593a6e298" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator--</name></member>
+      <member refid="class_ring_iterator_1a9452810131d236d9fd5be1aaa1542871" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator-&gt;</name></member>
+      <member refid="class_ring_iterator_1a0ac243d97d7568233aa27f1b065de960" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>operator==</name></member>
+      <member refid="class_ring_iterator_1ad378b21b5c3dcf41c9aaefd857d5327c" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>pointer</name></member>
+      <member refid="class_ring_iterator_1a4c8c168322f82bda3bef534515d2e15b" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>reference</name></member>
+      <member refid="class_ring_iterator_1a8221f1f69f05955630d4168f0dae47fa" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>RingIterator</name></member>
+      <member refid="class_ring_iterator_1acc7c90da362983763e792a910e6e45d5" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>RingIterator</name></member>
+      <member refid="class_ring_iterator_1a8712aceaf5984862579f0a23c7b253bc" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>RingIterator</name></member>
+      <member refid="class_ring_iterator_1ad537892d5b5d58ba26e0aca4d7ceb608" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>RingIterator</name></member>
+      <member refid="class_ring_iterator_1a93c857cfb2880488146cd6cb9a500813" prot="public" virt="non-virtual"><scope>RingIterator</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

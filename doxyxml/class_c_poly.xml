@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_c_poly" kind="class" language="C++" prot="public">
+    <compoundname>CPoly</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Eigen::VectorXcd</basecompoundref>
+    <includes refid="cpoly_8_h" local="no">cpoly.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CPoly::order</definition>
+        <argsstring></argsstring>
+        <name>order</name>
+        <qualifiedname>CPoly::order</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="11" column="7" bodyfile="/home/weinberg/Projects/EXP/include/cpoly.H" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_c_poly_1ac452104fdea710634e68f09e5d4e60d3" compoundref="cpoly_8_h" startline="36" endline="36">getorder</referencedby>
+        <referencedby refid="class_c_poly_1a8dd20f6c37eb654f8633ea4ba3e24ccc" compoundref="cpoly_8_h" startline="31" endline="31">Pop</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_poly_1a60135c14cac772b71b1c4d37e50a2412" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPoly::reduce_order</definition>
+        <argsstring>(void)</argsstring>
+        <name>reduce_order</name>
+        <qualifiedname>CPoly::reduce_order</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="12" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_poly_1a072bfe6b04887d8deb20e24af6656a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="22" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1ab62837853f1a1cba09c4b9838d2b41e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(const Eigen::VectorXcd &amp;)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>const Eigen::VectorXcd &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="21" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a36107e6801caadd73d9a688dea55faf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(const int)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>const int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="19" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a6caca1b239a8568ce40712e96ce20d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(const Poly &amp;)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>const <ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="23" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a63566119ef1b5867909ccaf2354584d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(int, double *)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>double *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="20" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a9886569156df79ca44fbe6b1fb7cec0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPoly::CPoly</definition>
+        <argsstring>(void)</argsstring>
+        <name>CPoly</name>
+        <qualifiedname>CPoly::CPoly</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="18" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a8bf7ec5ff2bfd2f9664849cae1c35ef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt; double &gt; CPoly::deriv</definition>
+        <argsstring>(std::complex&lt; double &gt; z)</argsstring>
+        <name>deriv</name>
+        <qualifiedname>CPoly::deriv</qualifiedname>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="60" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1ac4b081a0d67388d5a595ea766aed62ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt; double &gt; CPoly::eval</definition>
+        <argsstring>(std::complex&lt; double &gt; z)</argsstring>
+        <name>eval</name>
+        <qualifiedname>CPoly::eval</qualifiedname>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="59" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1ac452104fdea710634e68f09e5d4e60d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int</type>
+        <definition>const int CPoly::getorder</definition>
+        <argsstring>(void)</argsstring>
+        <name>getorder</name>
+        <qualifiedname>CPoly::getorder</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="36" column="13" bodyfile="/home/weinberg/Projects/EXP/include/cpoly.H" bodystart="36" bodyend="36"/>
+        <references refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" compoundref="cpoly_8_h" startline="11">order</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1ad4f3d405618035449e32b077bf483b2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        <definition>CPoly &amp; CPoly::operator%=</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>operator%=</name>
+        <qualifiedname>CPoly::operator%=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="54" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1af5ce12201cb3816d72d6c0c993481afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        <definition>CPoly &amp; CPoly::operator&amp;=</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>CPoly::operator&amp;=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="51" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1af4549741abcfc4ebe0f0740694f1a909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly CPoly::operator+</definition>
+        <argsstring>()</argsstring>
+        <name>operator+</name>
+        <qualifiedname>CPoly::operator+</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="40" column="9" bodyfile="/home/weinberg/Projects/EXP/include/cpoly.H" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1ae0060d8389401745d5447b32181d6db2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        <definition>CPoly &amp; CPoly::operator+=</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>CPoly::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="45" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1afd7ea1863ae07aaf76c39b86cb30aed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly CPoly::operator-</definition>
+        <argsstring>()</argsstring>
+        <name>operator-</name>
+        <qualifiedname>CPoly::operator-</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="41" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a3c08062a3e3317e81f269bfc8f224ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        <definition>CPoly &amp; CPoly::operator-=</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>CPoly::operator-=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="48" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a7a4451ba4caada9dd73cdcb541ebc0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        <definition>CPoly &amp; CPoly::operator=</definition>
+        <argsstring>(const CPoly &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>CPoly::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="35" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a8dd20f6c37eb654f8633ea4ba3e24ccc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPoly::Pop</definition>
+        <argsstring>(int i)</argsstring>
+        <name>Pop</name>
+        <qualifiedname>CPoly::Pop</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="31" column="8" bodyfile="/home/weinberg/Projects/EXP/include/cpoly.H" bodystart="31" bodyend="31"/>
+        <references refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" compoundref="cpoly_8_h" startline="11">order</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_poly_1a87cfa383f120f5a4214e1fda5c2cb167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPoly::print</definition>
+        <argsstring>(ostream &amp;)</argsstring>
+        <name>print</name>
+        <qualifiedname>CPoly::print</qualifiedname>
+        <param>
+          <type>ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="64" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_c_poly_1a47ff1b905e5b8133a1a1d07c8e055c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly operator%</definition>
+        <argsstring>(const CPoly &amp;, const CPoly &amp;)</argsstring>
+        <name>operator%</name>
+        <qualifiedname>CPoly::operator%</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="55" column="16"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_c_poly_1af3cc5f442bae41cd78cacb888b534e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly operator&amp;</definition>
+        <argsstring>(const CPoly &amp;, const CPoly &amp;)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>CPoly::operator&amp;</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="52" column="16"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_c_poly_1acbc6c01d4af95b1d8a63a60dd0a7738e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly operator+</definition>
+        <argsstring>(const CPoly &amp;, const CPoly &amp;)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>CPoly::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="46" column="16"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_c_poly_1a1d200439c93c6d65b62f7cc475b5569c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_poly" kindref="compound">CPoly</ref></type>
+        <definition>CPoly operator-</definition>
+        <argsstring>(const CPoly &amp;, const CPoly &amp;)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>CPoly::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_c_poly" kindref="compound">CPoly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="49" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CPoly</label>
+        <link refid="class_c_poly"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eigen::VectorXcd</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CPoly</label>
+        <link refid="class_c_poly"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eigen::VectorXcd</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="6" column="1" bodyfile="/home/weinberg/Projects/EXP/include/cpoly.H" bodystart="7" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_c_poly_1a9886569156df79ca44fbe6b1fb7cec0a" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1a36107e6801caadd73d9a688dea55faf1" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1a63566119ef1b5867909ccaf2354584d2" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1ab62837853f1a1cba09c4b9838d2b41e7" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1a072bfe6b04887d8deb20e24af6656a74" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1a6caca1b239a8568ce40712e96ce20d30" prot="public" virt="non-virtual"><scope>CPoly</scope><name>CPoly</name></member>
+      <member refid="class_c_poly_1a8bf7ec5ff2bfd2f9664849cae1c35ef6" prot="public" virt="non-virtual"><scope>CPoly</scope><name>deriv</name></member>
+      <member refid="class_c_poly_1ac4b081a0d67388d5a595ea766aed62ea" prot="public" virt="non-virtual"><scope>CPoly</scope><name>eval</name></member>
+      <member refid="class_c_poly_1ac452104fdea710634e68f09e5d4e60d3" prot="public" virt="non-virtual"><scope>CPoly</scope><name>getorder</name></member>
+      <member refid="class_c_poly_1a47ff1b905e5b8133a1a1d07c8e055c50" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator%</name></member>
+      <member refid="class_c_poly_1ad4f3d405618035449e32b077bf483b2c" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator%=</name></member>
+      <member refid="class_c_poly_1af3cc5f442bae41cd78cacb888b534e09" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator&amp;</name></member>
+      <member refid="class_c_poly_1af5ce12201cb3816d72d6c0c993481afe" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator&amp;=</name></member>
+      <member refid="class_c_poly_1af4549741abcfc4ebe0f0740694f1a909" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator+</name></member>
+      <member refid="class_c_poly_1acbc6c01d4af95b1d8a63a60dd0a7738e" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator+</name></member>
+      <member refid="class_c_poly_1ae0060d8389401745d5447b32181d6db2" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator+=</name></member>
+      <member refid="class_c_poly_1afd7ea1863ae07aaf76c39b86cb30aed5" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator-</name></member>
+      <member refid="class_c_poly_1a1d200439c93c6d65b62f7cc475b5569c" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator-</name></member>
+      <member refid="class_c_poly_1a3c08062a3e3317e81f269bfc8f224ce9" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator-=</name></member>
+      <member refid="class_c_poly_1a7a4451ba4caada9dd73cdcb541ebc0db" prot="public" virt="non-virtual"><scope>CPoly</scope><name>operator=</name></member>
+      <member refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" prot="private" virt="non-virtual"><scope>CPoly</scope><name>order</name></member>
+      <member refid="class_c_poly_1a8dd20f6c37eb654f8633ea4ba3e24ccc" prot="public" virt="non-virtual"><scope>CPoly</scope><name>Pop</name></member>
+      <member refid="class_c_poly_1a87cfa383f120f5a4214e1fda5c2cb167" prot="public" virt="non-virtual"><scope>CPoly</scope><name>print</name></member>
+      <member refid="class_c_poly_1a60135c14cac772b71b1c4d37e50a2412" prot="private" virt="non-virtual"><scope>CPoly</scope><name>reduce_order</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_cspline_8_h" kind="file" language="C++">
+    <compoundname>Cspline.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/Cspline.H</label>
+        <link refid="_cspline_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_cspline" prot="public">Cspline</innerclass>
+    <innerclass refid="class_cspline_1_1_element" prot="protected">Cspline::Element</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Cspline_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Cspline_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Y&gt;</highlight></codeline>
+<codeline lineno="14" refid="class_cspline" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cspline" kindref="compound">Cspline</ref><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_cspline_1ac98f7297092af1eb9d4909c171bdcec2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cspline_1ac98f7297092af1eb9d4909c171bdcec2" kindref="member">Cspline</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="class_cspline_1ad6fa4d810f545fe1967399d20eceb378" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cspline_1ad6fa4d810f545fe1967399d20eceb378" kindref="member">Cspline</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;X&gt;&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Y&gt;&amp;<sp/>y)<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x.size()<sp/>!=<sp/>y.size())<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;X[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>x.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>and<sp/>Y[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>y.size()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>must<sp/>be<sp/>the<sp/>same<sp/>size<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x.size()<sp/>&lt;<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Must<sp/>have<sp/>at<sp/>least<sp/>three<sp/>points<sp/>for<sp/>interpolation,<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;current<sp/>size<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>x.size()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;X&gt;::difference_type<sp/>size_type;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>size_type<sp/>n<sp/>=<sp/>y.size()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Y&gt;<sp/>b(n),<sp/>d(n),<sp/>a(n),<sp/>c(n+1),<sp/>l(n+1),<sp/>u(n+1),<sp/>z(n+1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;X&gt;<sp/>h(n+1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>l[0]<sp/>=<sp/>Y(1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>u[0]<sp/>=<sp/>Y(0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>z[0]<sp/>=<sp/>Y(0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>h[0]<sp/>=<sp/>x[1]<sp/>-<sp/>x[0];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(size_type<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>h[i]<sp/>=<sp/>x[i+1]<sp/>-<sp/>x[i];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>l[i]<sp/>=<sp/>Y(2<sp/>*<sp/>(x[i+1]<sp/>-<sp/>x[i-1]))<sp/>-<sp/>Y(h[i-1])<sp/>*<sp/>u[i-1];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>u[i]<sp/>=<sp/>Y(h[i])<sp/>/<sp/>l[i];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>a[i]<sp/>=<sp/>(Y(3)<sp/>/<sp/>Y(h[i]))<sp/>*<sp/>(y[i+1]<sp/>-<sp/>y[i])<sp/>-<sp/>(Y(3)<sp/>/<sp/>Y(h[i-1]))<sp/>*<sp/>(y[i]<sp/>-<sp/>y[i-1]);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>z[i]<sp/>=<sp/>(a[i]<sp/>-<sp/>Y(h[i-1])<sp/>*<sp/>z[i-1])<sp/>/<sp/>l[i];</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>l[n]<sp/>=<sp/>Y(1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>z[n]<sp/>=<sp/>c[n]<sp/>=<sp/>Y(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(size_type<sp/>j<sp/>=<sp/>n-1;<sp/>j<sp/>&gt;=<sp/>0;<sp/>j--)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>c[j]<sp/>=<sp/>z[j]<sp/>-<sp/>u[j]<sp/>*<sp/>c[j+1];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>b[j]<sp/>=<sp/>(y[j+1]<sp/>-<sp/>y[j])<sp/>/<sp/>Y(h[j])<sp/>-<sp/>(Y(h[j])<sp/>*<sp/>(c[j+1]<sp/>+<sp/>Y(2)<sp/>*<sp/>c[j]))<sp/>/<sp/>Y(3);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d[j]<sp/>=<sp/>(c[j+1]<sp/>-<sp/>c[j])<sp/>/<sp/>Y(3<sp/>*<sp/>h[j]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(size_type<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.push_back(<ref refid="class_cspline_1_1_element" kindref="compound">Element</ref>(x[i],<sp/>y[i],<sp/>b[i],<sp/>c[i],<sp/>d[i]));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_cspline_1a4b826231286c043394b9977affcf8fbf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1a4b826231286c043394b9977affcf8fbf" kindref="member">~Cspline</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="class_cspline_1a448c189bb54e7a1eaf56d3947456776e" refkind="member"><highlight class="normal"><sp/><sp/>Y<sp/><ref refid="class_cspline_1a448c189bb54e7a1eaf56d3947456776e" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>X&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" kindref="member">interpolate</ref>(x);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" refkind="member"><highlight class="normal"><sp/><sp/>Y<sp/><ref refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" kindref="member">interpolate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>X&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.size()<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Y();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;element_type&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>std::lower_bound(<ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.begin(),<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.end(),<sp/><ref refid="class_cspline_1_1_element" kindref="compound">element_type</ref>(x));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.begin())<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>it--;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it-&gt;eval(x);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_cspline_1a4e88fff38b950858c598092fa7785866" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Y&gt;<sp/><ref refid="class_cspline_1a4e88fff38b950858c598092fa7785866" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;X&gt;&amp;<sp/>xx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1ad8a518270aa62168c4951fd25db97459" kindref="member">interpolate</ref>(xx);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="class_cspline_1ae38e1c7b2692662c18b26164b17fa475" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Y&gt;<sp/><ref refid="class_cspline_1ae38e1c7b2692662c18b26164b17fa475" kindref="member">interpolate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;X&gt;&amp;<sp/>xx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.size()<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::vector&lt;Y&gt;(xx.size());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;X&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;element_type&gt;::const_iterator<sp/>it2;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>it2<sp/>=<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.begin();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Y&gt;<sp/>ys;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it<sp/>=<sp/>xx.begin();<sp/>it<sp/>!=<sp/>xx.end();<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>it2<sp/>=<sp/>std::lower_bound(it2,<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.end(),<sp/><ref refid="class_cspline_1_1_element" kindref="compound">element_type</ref>(*it));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it2<sp/>!=<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>.begin())<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it2--;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ys.push_back(it2-&gt;eval(*it));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ys;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="class_cspline_1_1_element" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cspline_1_1_element" kindref="compound">Element</ref><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="127" refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_cspline_1_1_element_1ab8eee4f586ed59e3ec087886a51c3962" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Y<sp/><ref refid="class_cspline_1_1_element_1ab8eee4f586ed59e3ec087886a51c3962" kindref="member">a</ref>,<sp/><ref refid="class_cspline_1_1_element_1ae271037d9bb62ce91a78940c36300209" kindref="member">b</ref>,<sp/><ref refid="class_cspline_1_1_element_1a56d0aaef4e3e6f669bf3d564fe1f5ef3" kindref="member">c</ref>,<sp/><ref refid="class_cspline_1_1_element_1a94f1f08e4f9def88aac03c33566d14a7" kindref="member">d</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_cspline_1_1_element_1a1a0231e6a7d5d8ead2f6c79a866137f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cspline_1_1_element_1a1a0231e6a7d5d8ead2f6c79a866137f1" kindref="member">Element</ref>(X<sp/>_x)<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref>(_x),<sp/><ref refid="class_cspline_1_1_element_1ab8eee4f586ed59e3ec087886a51c3962" kindref="member">a</ref>(0),<sp/><ref refid="class_cspline_1_1_element_1ae271037d9bb62ce91a78940c36300209" kindref="member">b</ref>(0),<sp/><ref refid="class_cspline_1_1_element_1a56d0aaef4e3e6f669bf3d564fe1f5ef3" kindref="member">c</ref>(0),<sp/><ref refid="class_cspline_1_1_element_1a94f1f08e4f9def88aac03c33566d14a7" kindref="member">d</ref>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="class_cspline_1_1_element_1a08e8e2037fcca100f743c4f1f82ad6d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cspline_1_1_element_1a08e8e2037fcca100f743c4f1f82ad6d9" kindref="member">Element</ref>(X<sp/>_x,<sp/>Y<sp/>_a,<sp/>Y<sp/>_b,<sp/>Y<sp/>_c,<sp/>Y<sp/>_d)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref>(_x),<sp/><ref refid="class_cspline_1_1_element_1ab8eee4f586ed59e3ec087886a51c3962" kindref="member">a</ref>(_a),<sp/><ref refid="class_cspline_1_1_element_1ae271037d9bb62ce91a78940c36300209" kindref="member">b</ref>(_b),<sp/><ref refid="class_cspline_1_1_element_1a56d0aaef4e3e6f669bf3d564fe1f5ef3" kindref="member">c</ref>(_c),<sp/><ref refid="class_cspline_1_1_element_1a94f1f08e4f9def88aac03c33566d14a7" kindref="member">d</ref>(_d)<sp/>{}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="class_cspline_1_1_element_1aa4d538b676dd7cea1822f8c2ff988b46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Y<sp/><ref refid="class_cspline_1_1_element_1aa4d538b676dd7cea1822f8c2ff988b46" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>X&amp;<sp/>xx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>X<sp/>xix(xx<sp/>-<sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element_1ab8eee4f586ed59e3ec087886a51c3962" kindref="member">a</ref><sp/>+<sp/><ref refid="class_cspline_1_1_element_1ae271037d9bb62ce91a78940c36300209" kindref="member">b</ref><sp/>*<sp/>xix<sp/>+<sp/><ref refid="class_cspline_1_1_element_1a56d0aaef4e3e6f669bf3d564fe1f5ef3" kindref="member">c</ref><sp/>*<sp/>(xix<sp/>*<sp/>xix)<sp/>+<sp/><ref refid="class_cspline_1_1_element_1a94f1f08e4f9def88aac03c33566d14a7" kindref="member">d</ref><sp/>*<sp/>(xix<sp/>*<sp/>xix<sp/>*<sp/>xix);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="class_cspline_1_1_element_1ad543a799407dc088f23fc39d0dd50cc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element_1ad543a799407dc088f23fc39d0dd50cc8" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element" kindref="compound">Element</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref><sp/>&lt;<sp/>e.<ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151" refid="class_cspline_1_1_element_1a163309bdd9e64c3eab1805a454691fd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element_1a163309bdd9e64c3eab1805a454691fd2" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>X&amp;<sp/>xx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element_1a619eec3164dd8e6790a6b9cf3de94ced" kindref="member">x</ref><sp/>&lt;<sp/>xx;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="class_cspline_1a3c46eab83a7860156a3c88e9a6066203" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_cspline_1_1_element" kindref="compound">Element</ref><sp/><ref refid="class_cspline_1a3c46eab83a7860156a3c88e9a6066203" kindref="member">element_type</ref>;</highlight></codeline>
+<codeline lineno="159" refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;element_type&gt;<sp/><ref refid="class_cspline_1ae15b871aeb0f0e4485237f5946a80f78" kindref="member">elems</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/Cspline.H"/>
+  </compounddef>
+</doxygen>

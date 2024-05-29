@@ -1,0 +1,927 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_log" kind="class" language="C++" prot="public">
+    <compoundname>OutLog</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_log_8_h" local="no">OutLog.H</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" prot="private" static="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>typedef vector&lt;double&gt; OutLog::dvector</definition>
+        <argsstring></argsstring>
+        <name>dvector</name>
+        <qualifiedname>OutLog::dvector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="49" column="18" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_log_1aef8e4f17dc77fc23880caabebcd0f61b" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::angm</definition>
+        <argsstring></argsstring>
+        <name>angm</name>
+        <qualifiedname>OutLog::angm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="69" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a7018109ceca28a7b0d327e89b8d51e58" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::angm0</definition>
+        <argsstring></argsstring>
+        <name>angm0</name>
+        <qualifiedname>OutLog::angm0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="27" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aebe88176b86a6fd4d10bb3012c92e480" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::angm1</definition>
+        <argsstring></argsstring>
+        <name>angm1</name>
+        <qualifiedname>OutLog::angm1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="69" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a8d5c42134d4f869081afb528a0200491" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::angmG</definition>
+        <argsstring></argsstring>
+        <name>angmG</name>
+        <qualifiedname>OutLog::angmG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="21" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a994372e7bd9d9a657e5fef96d624d5c1" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::clausius</definition>
+        <argsstring></argsstring>
+        <name>clausius</name>
+        <qualifiedname>OutLog::clausius</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="71" column="30" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ac9855dd016418ff1fb1df4f55fd4c442" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::clausius1</definition>
+        <argsstring></argsstring>
+        <name>clausius1</name>
+        <qualifiedname>OutLog::clausius1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="72" column="33" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a8dc76f4d941e242c947b500cce356c11" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::com</definition>
+        <argsstring></argsstring>
+        <name>com</name>
+        <qualifiedname>OutLog::com</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="67" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a305d899be996d350ffb80225b115b4bc" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::com0</definition>
+        <argsstring></argsstring>
+        <name>com0</name>
+        <qualifiedname>OutLog::com0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="11" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a963dfca6a7193ce2646495a8f2fd90b5" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::com1</definition>
+        <argsstring></argsstring>
+        <name>com1</name>
+        <qualifiedname>OutLog::com1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="67" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ae0ec8b9c39bf176a8eec985d281c6877" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::comG</definition>
+        <argsstring></argsstring>
+        <name>comG</name>
+        <qualifiedname>OutLog::comG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="11" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a0a011eed8ce3fba378a49816e5ddeed7" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::comL</definition>
+        <argsstring></argsstring>
+        <name>comL</name>
+        <qualifiedname>OutLog::comL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="21" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1af4cddc93537c55e6253784b15c03dab7" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::cov</definition>
+        <argsstring></argsstring>
+        <name>cov</name>
+        <qualifiedname>OutLog::cov</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="68" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a14438006bc72709cfe475e2c15c78812" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::cov0</definition>
+        <argsstring></argsstring>
+        <name>cov0</name>
+        <qualifiedname>OutLog::cov0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="16" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aa4e28e37a3903adf2af3fb6b422b4221" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::cov1</definition>
+        <argsstring></argsstring>
+        <name>cov1</name>
+        <qualifiedname>OutLog::cov1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="68" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aba9d77442756868cc9d775bc430e74ed" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::covG</definition>
+        <argsstring></argsstring>
+        <name>covG</name>
+        <qualifiedname>OutLog::covG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="16" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a649e3136c06a8da8213565e0189efd41" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::covL</definition>
+        <argsstring></argsstring>
+        <name>covL</name>
+        <qualifiedname>OutLog::covL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="26" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a510808727dd55e7d0bd48fed5697175e" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" kindref="member">dvector</ref> &gt;</type>
+        <definition>vector&lt;dvector&gt; OutLog::ctr</definition>
+        <argsstring></argsstring>
+        <name>ctr</name>
+        <qualifiedname>OutLog::ctr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="70" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ab12fe893df30d5d295070324fd64c83b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutLog::curwtime</definition>
+        <argsstring></argsstring>
+        <name>curwtime</name>
+        <qualifiedname>OutLog::curwtime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="58" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a920671f22f6668efde9c781db925f155" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::ektot</definition>
+        <argsstring></argsstring>
+        <name>ektot</name>
+        <qualifiedname>OutLog::ektot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="71" column="11" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ac6817c127aaa7268ab32620065985a36" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::ektot1</definition>
+        <argsstring></argsstring>
+        <name>ektot1</name>
+        <qualifiedname>OutLog::ektot1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="72" column="11" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a82a5a6696f1e23b534f322e4320398d1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutLog::ektotxy</definition>
+        <argsstring></argsstring>
+        <name>ektotxy</name>
+        <qualifiedname>OutLog::ektotxy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="59" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a921fc35dd2c3c2d75afb35103095298e" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::eptot</definition>
+        <argsstring></argsstring>
+        <name>eptot</name>
+        <qualifiedname>OutLog::eptot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="71" column="17" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a6079cbe066395da0732e3914f6627aa9" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::eptot1</definition>
+        <argsstring></argsstring>
+        <name>eptot1</name>
+        <qualifiedname>OutLog::eptot1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="72" column="18" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1add4bbb549656cb7a97d1bf5945ffd404" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::eptotx</definition>
+        <argsstring></argsstring>
+        <name>eptotx</name>
+        <qualifiedname>OutLog::eptotx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="71" column="23" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a3017d18fba475516e1d933c62ad6bdbd" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::eptotx1</definition>
+        <argsstring></argsstring>
+        <name>eptotx1</name>
+        <qualifiedname>OutLog::eptotx1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="72" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1af5f1fe665d6f749f180cab802a0a55f4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutLog::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutLog::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="53" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aeca69382ffe6ca5e0e228bb919705022" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutLog::firstime</definition>
+        <argsstring></argsstring>
+        <name>firstime</name>
+        <qualifiedname>OutLog::firstime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="62" column="8" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aed7845e6611279a44d427e7f7c669961" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OutLog::laststep</definition>
+        <argsstring></argsstring>
+        <name>laststep</name>
+        <qualifiedname>OutLog::laststep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="55" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a9b8f1ad5dd6997147c18d4a627d93698" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutLog::lastwtime</definition>
+        <argsstring></argsstring>
+        <name>lastwtime</name>
+        <qualifiedname>OutLog::lastwtime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="58" column="19" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a3537ffc52d6c59df1d6ae0476505e81c" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::mtot</definition>
+        <argsstring></argsstring>
+        <name>mtot</name>
+        <qualifiedname>OutLog::mtot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="66" column="11" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a46e809d60bcf51f1683d4d5f23c3c8ff" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::mtot1</definition>
+        <argsstring></argsstring>
+        <name>mtot1</name>
+        <qualifiedname>OutLog::mtot1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="66" column="16" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ade2efef9dfb63fc7ae39fc8feca046a7" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; OutLog::nbodies</definition>
+        <argsstring></argsstring>
+        <name>nbodies</name>
+        <qualifiedname>OutLog::nbodies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="64" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a629a94eeb01a8eab82f668b619ef146d" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; OutLog::nbodies1</definition>
+        <argsstring></argsstring>
+        <name>nbodies1</name>
+        <qualifiedname>OutLog::nbodies1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="64" column="22" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ac9c1d9ca704cd7ed2247d5abb5000222" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OutLog::nfreq</definition>
+        <argsstring></argsstring>
+        <name>nfreq</name>
+        <qualifiedname>OutLog::nfreq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="54" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a2e38610d867ddf5057dc93bf0b46ce56" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::pos0</definition>
+        <argsstring></argsstring>
+        <name>pos0</name>
+        <qualifiedname>OutLog::pos0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="33" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a45f920cd6940854c6df93a220b381956" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::posL</definition>
+        <argsstring></argsstring>
+        <name>posL</name>
+        <qualifiedname>OutLog::posL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="31" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a08f62b2aac09b9957e6e3cafa5e9a148" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OutLog::precision</definition>
+        <argsstring></argsstring>
+        <name>precision</name>
+        <qualifiedname>OutLog::precision</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="56" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ae74e4331db6c6d138f5dd39cbf7df5a6" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; OutLog::used</definition>
+        <argsstring></argsstring>
+        <name>used</name>
+        <qualifiedname>OutLog::used</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="65" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a43a02715b10102e5d0704db707b9dd64" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; OutLog::used1</definition>
+        <argsstring></argsstring>
+        <name>used1</name>
+        <qualifiedname>OutLog::used1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="65" column="19" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a135771f615b80f529f0ca4797acaf336" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::vel0</definition>
+        <argsstring></argsstring>
+        <name>vel0</name>
+        <qualifiedname>OutLog::vel0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="74" column="38" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a4c663eaeee393425366f92cd22f48567" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; OutLog::velL</definition>
+        <argsstring></argsstring>
+        <name>velL</name>
+        <qualifiedname>OutLog::velL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="75" column="36" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_log_1aca73f9367a55c26119824145912fae9e" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutLog::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutLog::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="78" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_out_log_1a58fff77f80b495528e1b8951b9642cef" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char OutLog::lab_component[][20]</definition>
+        <argsstring>[][20]</argsstring>
+        <name>lab_component</name>
+        <qualifiedname>OutLog::lab_component</qualifiedname>
+        <briefdescription>
+<para>Per-component column labels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="90" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1ac8aeb513b21fe99b76d7cc35d855b355" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char OutLog::lab_global[][19]</definition>
+        <argsstring>[][19]</argsstring>
+        <name>lab_global</name>
+        <qualifiedname>OutLog::lab_global</qualifiedname>
+        <briefdescription>
+<para>Global column labels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="88" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1a986fca14bf6cd650c0e1165f47f05b09" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int OutLog::num_component</definition>
+        <argsstring></argsstring>
+        <name>num_component</name>
+        <qualifiedname>OutLog::num_component</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+<para>Number of per-component entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="85" column="20" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_log_1aa69f90c81bf0d2a7ce5439d69613ccc3" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int OutLog::num_global</definition>
+        <argsstring></argsstring>
+        <name>num_global</name>
+        <qualifiedname>OutLog::num_global</qualifiedname>
+        <initializer>= 19</initializer>
+        <briefdescription>
+<para>Number of global entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="83" column="20" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_log_1acd41ff417c00032abea376062948cd91" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutLog::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutLog::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="61" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_log_1abf0c95b18184027a638e7020e2dda9e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutLog::OutLog</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutLog</name>
+        <qualifiedname>OutLog::OutLog</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>token list of specific parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="95" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_log_1a2eb1fae0f0506763bb267a86fc62ec11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutLog::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutLog::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Generate output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current step number (used e.g. to decide whether or not to write output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current multistep level to decide whether or not to dump multisteps </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, output is generated independent of the step number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="105" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Log vital statistics every n steps. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>New version of log file puts all entries on a single line. This makes for difficult human reading but great for machines.</para>
+<para>Centers of mass, Centers of velocity, Virial of Clausius and 2T/VC will be computed for each component</para>
+<para>NB: the &quot;Virial of Clausius&quot; is a better indicatator of the true potential energy for multiple components or external forces</para>
+<para>Current ordering (will be labeled in the file):<itemizedlist>
+<listitem><para>Global statistics<orderedlist>
+<listitem><para>Current time</para>
+</listitem></orderedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Total mass<orderedlist>
+<listitem><para>Number of bodies</para>
+</listitem><listitem><para>COM (x, y, z)</para>
+</listitem><listitem><para>COV (x, y, z)</para>
+</listitem><listitem><para>Ang mom (x, y, z)</para>
+</listitem><listitem><para>Total KE</para>
+</listitem><listitem><para>Total PE</para>
+</listitem><listitem><para>Total E</para>
+</listitem><listitem><para>Virial of Clausius (VC)</para>
+</listitem><listitem><para>2T/VC</para>
+</listitem><listitem><para><ref refid="class_time" kindref="compound">Time</ref> per step</para>
+</listitem><listitem><para>Total particles used</para>
+</listitem></orderedlist>
+</para>
+<para>For each component in succession<orderedlist>
+<listitem><para>Total mass</para>
+</listitem></orderedlist>
+</para>
+<para>Number of bodies<orderedlist>
+<listitem><para>COM (x, y, z)</para>
+</listitem><listitem><para>COV (x, y, z)</para>
+</listitem><listitem><para>Ang mom (x, y, z)</para>
+</listitem><listitem><para>Total KE</para>
+</listitem><listitem><para>Total PE</para>
+</listitem><listitem><para>Total E</para>
+</listitem><listitem><para>Virial of Clausius (VC)</para>
+</listitem><listitem><para>2T/VC</para>
+</listitem><listitem><para>Particles used </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutLog</label>
+        <link refid="class_out_log"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OutLog</label>
+        <link refid="class_out_log"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutLog.H" line="46" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutLog.H" bodystart="47" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_out_log_1aef8e4f17dc77fc23880caabebcd0f61b" prot="private" virt="non-virtual"><scope>OutLog</scope><name>angm</name></member>
+      <member refid="class_out_log_1a7018109ceca28a7b0d327e89b8d51e58" prot="private" virt="non-virtual"><scope>OutLog</scope><name>angm0</name></member>
+      <member refid="class_out_log_1aebe88176b86a6fd4d10bb3012c92e480" prot="private" virt="non-virtual"><scope>OutLog</scope><name>angm1</name></member>
+      <member refid="class_out_log_1a8d5c42134d4f869081afb528a0200491" prot="private" virt="non-virtual"><scope>OutLog</scope><name>angmG</name></member>
+      <member refid="class_out_log_1a994372e7bd9d9a657e5fef96d624d5c1" prot="private" virt="non-virtual"><scope>OutLog</scope><name>clausius</name></member>
+      <member refid="class_out_log_1ac9855dd016418ff1fb1df4f55fd4c442" prot="private" virt="non-virtual"><scope>OutLog</scope><name>clausius1</name></member>
+      <member refid="class_out_log_1a8dc76f4d941e242c947b500cce356c11" prot="private" virt="non-virtual"><scope>OutLog</scope><name>com</name></member>
+      <member refid="class_out_log_1a305d899be996d350ffb80225b115b4bc" prot="private" virt="non-virtual"><scope>OutLog</scope><name>com0</name></member>
+      <member refid="class_out_log_1a963dfca6a7193ce2646495a8f2fd90b5" prot="private" virt="non-virtual"><scope>OutLog</scope><name>com1</name></member>
+      <member refid="class_out_log_1ae0ec8b9c39bf176a8eec985d281c6877" prot="private" virt="non-virtual"><scope>OutLog</scope><name>comG</name></member>
+      <member refid="class_out_log_1a0a011eed8ce3fba378a49816e5ddeed7" prot="private" virt="non-virtual"><scope>OutLog</scope><name>comL</name></member>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>conf</name></member>
+      <member refid="class_out_log_1af4cddc93537c55e6253784b15c03dab7" prot="private" virt="non-virtual"><scope>OutLog</scope><name>cov</name></member>
+      <member refid="class_out_log_1a14438006bc72709cfe475e2c15c78812" prot="private" virt="non-virtual"><scope>OutLog</scope><name>cov0</name></member>
+      <member refid="class_out_log_1aa4e28e37a3903adf2af3fb6b422b4221" prot="private" virt="non-virtual"><scope>OutLog</scope><name>cov1</name></member>
+      <member refid="class_out_log_1aba9d77442756868cc9d775bc430e74ed" prot="private" virt="non-virtual"><scope>OutLog</scope><name>covG</name></member>
+      <member refid="class_out_log_1a649e3136c06a8da8213565e0189efd41" prot="private" virt="non-virtual"><scope>OutLog</scope><name>covL</name></member>
+      <member refid="class_out_log_1a510808727dd55e7d0bd48fed5697175e" prot="private" virt="non-virtual"><scope>OutLog</scope><name>ctr</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>current_keys</name></member>
+      <member refid="class_out_log_1ab12fe893df30d5d295070324fd64c83b" prot="private" virt="non-virtual"><scope>OutLog</scope><name>curwtime</name></member>
+      <member refid="class_out_log_1a7edd18b7ee621211eea1505d6c9495e5" prot="private" virt="non-virtual"><scope>OutLog</scope><name>dvector</name></member>
+      <member refid="class_out_log_1a920671f22f6668efde9c781db925f155" prot="private" virt="non-virtual"><scope>OutLog</scope><name>ektot</name></member>
+      <member refid="class_out_log_1ac6817c127aaa7268ab32620065985a36" prot="private" virt="non-virtual"><scope>OutLog</scope><name>ektot1</name></member>
+      <member refid="class_out_log_1a82a5a6696f1e23b534f322e4320398d1" prot="private" virt="non-virtual"><scope>OutLog</scope><name>ektotxy</name></member>
+      <member refid="class_out_log_1a921fc35dd2c3c2d75afb35103095298e" prot="private" virt="non-virtual"><scope>OutLog</scope><name>eptot</name></member>
+      <member refid="class_out_log_1a6079cbe066395da0732e3914f6627aa9" prot="private" virt="non-virtual"><scope>OutLog</scope><name>eptot1</name></member>
+      <member refid="class_out_log_1add4bbb549656cb7a97d1bf5945ffd404" prot="private" virt="non-virtual"><scope>OutLog</scope><name>eptotx</name></member>
+      <member refid="class_out_log_1a3017d18fba475516e1d933c62ad6bdbd" prot="private" virt="non-virtual"><scope>OutLog</scope><name>eptotx1</name></member>
+      <member refid="class_out_log_1af5f1fe665d6f749f180cab802a0a55f4" prot="private" virt="non-virtual"><scope>OutLog</scope><name>filename</name></member>
+      <member refid="class_out_log_1aeca69382ffe6ca5e0e228bb919705022" prot="private" virt="non-virtual"><scope>OutLog</scope><name>firstime</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutLog</scope><name>id</name></member>
+      <member refid="class_out_log_1acd41ff417c00032abea376062948cd91" prot="private" virt="virtual"><scope>OutLog</scope><name>initialize</name></member>
+      <member refid="class_out_log_1a58fff77f80b495528e1b8951b9642cef" prot="public" virt="non-virtual"><scope>OutLog</scope><name>lab_component</name></member>
+      <member refid="class_out_log_1ac8aeb513b21fe99b76d7cc35d855b355" prot="public" virt="non-virtual"><scope>OutLog</scope><name>lab_global</name></member>
+      <member refid="class_out_log_1aed7845e6611279a44d427e7f7c669961" prot="private" virt="non-virtual"><scope>OutLog</scope><name>laststep</name></member>
+      <member refid="class_out_log_1a9b8f1ad5dd6997147c18d4a627d93698" prot="private" virt="non-virtual"><scope>OutLog</scope><name>lastwtime</name></member>
+      <member refid="class_out_log_1a3537ffc52d6c59df1d6ae0476505e81c" prot="private" virt="non-virtual"><scope>OutLog</scope><name>mtot</name></member>
+      <member refid="class_out_log_1a46e809d60bcf51f1683d4d5f23c3c8ff" prot="private" virt="non-virtual"><scope>OutLog</scope><name>mtot1</name></member>
+      <member refid="class_out_log_1ade2efef9dfb63fc7ae39fc8feca046a7" prot="private" virt="non-virtual"><scope>OutLog</scope><name>nbodies</name></member>
+      <member refid="class_out_log_1a629a94eeb01a8eab82f668b619ef146d" prot="private" virt="non-virtual"><scope>OutLog</scope><name>nbodies1</name></member>
+      <member refid="class_out_log_1ac9c1d9ca704cd7ed2247d5abb5000222" prot="private" virt="non-virtual"><scope>OutLog</scope><name>nfreq</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_log_1a986fca14bf6cd650c0e1165f47f05b09" prot="public" virt="non-virtual"><scope>OutLog</scope><name>num_component</name></member>
+      <member refid="class_out_log_1aa69f90c81bf0d2a7ce5439d69613ccc3" prot="public" virt="non-virtual"><scope>OutLog</scope><name>num_global</name></member>
+      <member refid="class_out_log_1abf0c95b18184027a638e7020e2dda9e0" prot="public" virt="non-virtual"><scope>OutLog</scope><name>OutLog</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutLog</scope><name>Output</name></member>
+      <member refid="class_out_log_1a2e38610d867ddf5057dc93bf0b46ce56" prot="private" virt="non-virtual"><scope>OutLog</scope><name>pos0</name></member>
+      <member refid="class_out_log_1a45f920cd6940854c6df93a220b381956" prot="private" virt="non-virtual"><scope>OutLog</scope><name>posL</name></member>
+      <member refid="class_out_log_1a08f62b2aac09b9957e6e3cafa5e9a148" prot="private" virt="non-virtual"><scope>OutLog</scope><name>precision</name></member>
+      <member refid="class_out_log_1a2eb1fae0f0506763bb267a86fc62ec11" prot="public" virt="virtual"><scope>OutLog</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>stopWatch</name></member>
+      <member refid="class_output_1a69f42df0c1eab6a81fb2346e59c66943" prot="protected" virt="non-virtual"><scope>OutLog</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutLog</scope><name>unmatched</name></member>
+      <member refid="class_out_log_1ae74e4331db6c6d138f5dd39cbf7df5a6" prot="private" virt="non-virtual"><scope>OutLog</scope><name>used</name></member>
+      <member refid="class_out_log_1a43a02715b10102e5d0704db707b9dd64" prot="private" virt="non-virtual"><scope>OutLog</scope><name>used1</name></member>
+      <member refid="class_out_log_1aca73f9367a55c26119824145912fae9e" prot="private" virt="non-virtual"><scope>OutLog</scope><name>valid_keys</name></member>
+      <member refid="class_out_log_1a135771f615b80f529f0ca4797acaf336" prot="private" virt="non-virtual"><scope>OutLog</scope><name>vel0</name></member>
+      <member refid="class_out_log_1a4c663eaeee393425366f92cd22f48567" prot="private" virt="non-virtual"><scope>OutLog</scope><name>velL</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutLog</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

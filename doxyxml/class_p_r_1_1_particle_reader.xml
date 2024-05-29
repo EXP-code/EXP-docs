@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_r_1_1_particle_reader" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PR::ParticleReader</compoundname>
+    <derivedcompoundref refid="class_p_r_1_1_gadget_h_d_f5" prot="public" virt="non-virtual">PR::GadgetHDF5</derivedcompoundref>
+    <derivedcompoundref refid="class_p_r_1_1_gadget_native" prot="public" virt="non-virtual">PR::GadgetNative</derivedcompoundref>
+    <derivedcompoundref refid="class_p_r_1_1_p_s_p" prot="public" virt="non-virtual">PR::PSP</derivedcompoundref>
+    <derivedcompoundref refid="class_p_r_1_1_tipsy" prot="public" virt="non-virtual">PR::Tipsy</derivedcompoundref>
+    <includes refid="_particle_reader_8_h" local="no">ParticleReader.H</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" static="yes" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::ParticleReader::readerTypes</definition>
+        <argsstring></argsstring>
+        <name>readerTypes</name>
+        <qualifiedname>PR::ParticleReader::readerTypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="35" column="24" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::ParticleReader::myid</definition>
+        <argsstring></argsstring>
+        <name>myid</name>
+        <qualifiedname>PR::ParticleReader::myid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="36" column="18" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" compoundref="_particle_reader_8_h" startline="42" endline="55">ParticleReader</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::ParticleReader::numprocs</definition>
+        <argsstring></argsstring>
+        <name>numprocs</name>
+        <qualifiedname>PR::ParticleReader::numprocs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="36" column="9" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" compoundref="_particle_reader_8_h" startline="42" endline="55">ParticleReader</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PR::ParticleReader::use_mpi</definition>
+        <argsstring></argsstring>
+        <name>use_mpi</name>
+        <qualifiedname>PR::ParticleReader::use_mpi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="37" column="10" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" compoundref="_particle_reader_8_h" startline="42" endline="55">ParticleReader</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1ad07059133f265c81866db1aad2026cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned long</type>
+        <definition>virtual unsigned long PR::ParticleReader::CurrentNumber</definition>
+        <argsstring>()=0</argsstring>
+        <name>CurrentNumber</name>
+        <qualifiedname>PR::ParticleReader::CurrentNumber</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1acb886c19ac37c185a2c117ab817698ee">CurrentNumber</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1ac26138eecb62ad48b6d838c8b4e9e487">CurrentNumber</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1a30508c9bcea21d4c88f3bb097935c13d">CurrentNumber</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1ad92eead4b9155d00ae2707bda0e2f850">CurrentNumber</reimplementedby>
+        <briefdescription>
+<para>Number of particles in the chosen type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="64" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a10927485f5e04ee75096e70b52dca6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double PR::ParticleReader::CurrentTime</definition>
+        <argsstring>()=0</argsstring>
+        <name>CurrentTime</name>
+        <qualifiedname>PR::ParticleReader::CurrentTime</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1a354d4611ea99923c8622eb50ef27a569">CurrentTime</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1a9134eda7c9eeb4c7389b0b8725048fe6">CurrentTime</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1adceed7e0b520c1e2b97875428fad369c">CurrentTime</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1a2a30817723dd66082d7c53385f2160e0">CurrentTime</reimplementedby>
+        <briefdescription>
+<para>Get current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="70" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a8b50438acca8230e8eb45a91781b9152" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::ParticleReader::firstParticle</definition>
+        <argsstring>()=0</argsstring>
+        <name>firstParticle</name>
+        <qualifiedname>PR::ParticleReader::firstParticle</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1ac55817d77f80ccf30763ec5afa564c6b">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1aa5d78d2bfe77626133c2018b6e9edbb2">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pout_1a8bfaa7b449c0a698fd6839330d89503e">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pspl_1ad7a167749de40943fc65d3a17cf75cf7">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1a947f48d1fbf5acdc58f012c46c7d0b42">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1a5c7372c606bfa1860e47f80abb50dc41">firstParticle</reimplementedby>
+        <briefdescription>
+<para>Reset to beginning of particles for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="73" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1aaa7bdf2a176d8446e6229fd03256ab58" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt; std::string &gt; PR::ParticleReader::GetTypes</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetTypes</name>
+        <qualifiedname>PR::ParticleReader::GetTypes</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1a9122f85b25cb3e363870f89b7a969bb5">GetTypes</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1aa1e6ac26ae6c7bd3780e382fc31e7fb9">GetTypes</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1aad3b887d40b88207ea894fc0024c4884">GetTypes</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1ae9180a2edcf20c6902e4fd2bb9cc5f9f">GetTypes</reimplementedby>
+        <briefdescription>
+<para>Return list of particle types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="67" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a5768007e1583c7c59031fd611c699768" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::ParticleReader::nextParticle</definition>
+        <argsstring>()=0</argsstring>
+        <name>nextParticle</name>
+        <qualifiedname>PR::ParticleReader::nextParticle</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1acba766d12aa59d40490d77b805a86628">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1ae4f7d5e8fed97bdb27a9b200c64b7b30">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pout_1addda79bc2ff8cad57564329ecc24e347">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pspl_1a2e0e812854ced4ea81424e553605e6fc">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1a614737fbbdddfde0987a85dbcbc926d4">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1aa1049c277a7602af55f565d299cc3042">nextParticle</reimplementedby>
+        <briefdescription>
+<para>Get the next particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="76" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PR::ParticleReader::ParticleReader</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleReader</name>
+        <qualifiedname>PR::ParticleReader::ParticleReader</qualifiedname>
+        <briefdescription>
+<para>Constructor: check for and set up MPI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="42" column="5" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="42" bodyend="55"/>
+        <references refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" compoundref="_particle_reader_8_h" startline="36">myid</references>
+        <references refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" compoundref="_particle_reader_8_h" startline="36">numprocs</references>
+        <references refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" compoundref="_particle_reader_8_h" startline="37">use_mpi</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PR::ParticleReader::PrintSummary</definition>
+        <argsstring>(std::ostream &amp;out, bool stats=false, bool timeonly=false)</argsstring>
+        <name>PrintSummary</name>
+        <qualifiedname>PR::ParticleReader::PrintSummary</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stats</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>timeonly</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Print summary phase-space info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="79" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a63c8f579270234489399e7e920ee59bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void PR::ParticleReader::SelectType</definition>
+        <argsstring>(const std::string &amp;type)=0</argsstring>
+        <name>SelectType</name>
+        <qualifiedname>PR::ParticleReader::SelectType</qualifiedname>
+        <reimplementedby refid="class_p_r_1_1_p_s_p_1a3c5ed37a3c7a2311f368f287a36cbfcc">SelectType</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e">SelectType</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_gadget_h_d_f5_1a57edc697f801746ef7dd0e02c705ab9c">SelectType</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_tipsy_1a00ef302e96bd8bad1103ae5446295290">SelectType</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Select a particular particle type and reset the iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="61" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual PR::ParticleReader::~ParticleReader</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleReader</name>
+        <qualifiedname>PR::ParticleReader::~ParticleReader</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="58" column="13" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="58" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_p_r_1_1_particle_reader" kindref="compound">ParticleReader</ref> &gt;</type>
+        <definition>static std::shared_ptr&lt; ParticleReader &gt; PR::ParticleReader::createReader</definition>
+        <argsstring>(const std::string &amp;type, const std::vector&lt; std::string &gt; &amp;file, int myid=0, bool verbose=false)</argsstring>
+        <name>createReader</name>
+        <qualifiedname>PR::ParticleReader::createReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>myid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create a shared pointer to derived instance of the desired type and return it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>static std::vector&lt; std::vector&lt; std::string &gt; &gt; PR::ParticleReader::parseFileList</definition>
+        <argsstring>(const std::string &amp;file, const std::string &amp;delimit)</argsstring>
+        <name>parseFileList</name>
+        <qualifiedname>PR::ParticleReader::parseFileList</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>delimit</declname>
+        </param>
+        <briefdescription>
+<para>Order file list into batches at single times from file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="83" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>static std::vector&lt; std::vector&lt; std::string &gt; &gt; PR::ParticleReader::parseStringList</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;file, const std::string &amp;delimit)</argsstring>
+        <name>parseStringList</name>
+        <qualifiedname>PR::ParticleReader::parseStringList</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>delimit</declname>
+        </param>
+        <briefdescription>
+<para>Order file list into batches at single times from vector of strings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="87" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Base class for reading particle phase space from any simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PR::GadgetHDF5</label>
+        <link refid="class_p_r_1_1_gadget_h_d_f5"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PR::GadgetNative</label>
+        <link refid="class_p_r_1_1_gadget_native"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PR::PSP</label>
+        <link refid="class_p_r_1_1_p_s_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PR::PSPout</label>
+        <link refid="class_p_r_1_1_p_s_pout"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PR::PSPspl</label>
+        <link refid="class_p_r_1_1_p_s_pspl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="7">
+        <label>PR::Tipsy</label>
+        <link refid="class_p_r_1_1_tipsy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="31" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="32" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" virt="non-virtual"><scope>PR::ParticleReader</scope><name>createReader</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ad07059133f265c81866db1aad2026cdf" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>CurrentNumber</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a10927485f5e04ee75096e70b52dca6a9" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>CurrentTime</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a8b50438acca8230e8eb45a91781b9152" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>firstParticle</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aaa7bdf2a176d8446e6229fd03256ab58" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>GetTypes</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" virt="non-virtual"><scope>PR::ParticleReader</scope><name>myid</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a5768007e1583c7c59031fd611c699768" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>nextParticle</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" virt="non-virtual"><scope>PR::ParticleReader</scope><name>numprocs</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" virt="non-virtual"><scope>PR::ParticleReader</scope><name>parseFileList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" virt="non-virtual"><scope>PR::ParticleReader</scope><name>parseStringList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" virt="non-virtual"><scope>PR::ParticleReader</scope><name>ParticleReader</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" virt="virtual"><scope>PR::ParticleReader</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" virt="non-virtual"><scope>PR::ParticleReader</scope><name>readerTypes</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a63c8f579270234489399e7e920ee59bd" prot="public" virt="pure-virtual"><scope>PR::ParticleReader</scope><name>SelectType</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" virt="non-virtual"><scope>PR::ParticleReader</scope><name>use_mpi</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" virt="virtual"><scope>PR::ParticleReader</scope><name>~ParticleReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

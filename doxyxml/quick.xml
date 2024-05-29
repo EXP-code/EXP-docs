@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="quick" kind="page">
+    <compoundname>quick</compoundname>
+    <title>Quick Start     &lt;br&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="quick_1requirements">
+<title>Requirements</title>
+<para>You will need the following libraries: <orderedlist>
+<listitem>
+<para>Some MPI implementation. I use OpenMPI (previously LAM). Your success may vary with other implementations but it should work. I have tried MPICH in the past without trouble, but MPICH has not been tested with EXP in some time. </para>
+</listitem>
+<listitem>
+<para>C++ compiler for most of the code and Fortran for one subroutine. </para>
+</listitem>
+<listitem>
+<para>POSIX threads (<computeroutput>pthreads</computeroutput> in GNU/Linux) and OpenMP. OpenMP is supported in most compilers these days. </para>
+</listitem>
+<listitem>
+<para>Boost libraries </para>
+</listitem>
+<listitem>
+<para>The Visualization Toolkit (VTK) </para>
+</listitem>
+</orderedlist>
+Most of these are standard in a Linux/GNU development environment (e.g. most national centers). All local UMASS &apos;Eagle&apos; astro cluster should have everything you need, of course.</para>
+</sect1>
+<sect1 id="quick_1compiling">
+<title>Compiling the code</title>
+<para><orderedlist>
+<listitem>
+<para>Run <computeroutput>./configure <ndash/>prefix=/home/user</computeroutput> where <computeroutput>/home/user</computeroutput> is the directory where the code will be installed. </para>
+</listitem>
+<listitem>
+<para>make </para>
+</listitem>
+<listitem>
+<para>make install </para>
+</listitem>
+</orderedlist>
+</para>
+<para>In this example, the executable and its utilities will be installed in <computeroutput>/home/user/bin</computeroutput> and the libraries will be installed in <computeroutput>/home/user/lib</computeroutput>. The default prefix is <computeroutput>/usr/local</computeroutput> is probably not what you want in most cases.</para>
+</sect1>
+<sect1 id="quick_1version">
+<title>Checking the EXP version</title>
+<para>As you know by now, EXP is currently maintained in a git repository. There are three main branches: <orderedlist>
+<listitem>
+<para><emphasis>release</emphasis> is the current public release </para>
+</listitem>
+<listitem>
+<para><emphasis>master</emphasis> is the current stable repo used for staging the <emphasis>release</emphasis> </para>
+</listitem>
+<listitem>
+<para><emphasis>devel</emphasis> is the current development branch where new features are staged for testing. </para>
+</listitem>
+</orderedlist>
+</para>
+<para>EXP automatically stashes its compile time, git branch, and git commit hash when &apos;make&apos; is invoked in the src directory.</para>
+<para>EXP will report this info when invoked with the <computeroutput>-v</computeroutput> flag, i.e. <computeroutput>mpirun -np 1 exp -v</computeroutput> or <computeroutput>exp -v</computeroutput>. Note: some MPI implementations require the MPI-aware executable to be run using <computeroutput>mpirun</computeroutput>.</para>
+</sect1>
+<sect1 id="quick_1running">
+<title>Running a simulation</title>
+<para>Here are the basic steps you need to start a simulation: <orderedlist>
+<listitem>
+<para>Choose a working directory</para>
+<para></para>
+</listitem>
+<listitem>
+<para>This code reads the phase space for each component from a separate file. See <ref refid="bodies" kindref="compound">Phase space file format</ref>.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>For each component, you need to decide which force to use. All available forces are derived from the abstract class <ref refid="class_pot_accel" kindref="compound">PotAccel</ref>. All forces but those of type <ref refid="class_external_force" kindref="compound">ExternalForce</ref> are suitable for a component.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>Decide the type of output you would like to see. A typical choice would be <ref refid="class_out_log" kindref="compound">OutLog</ref> and <ref refid="class_out_p_s" kindref="compound">OutPS</ref> or <ref refid="class_out_p_s_n" kindref="compound">OutPSN</ref>. You can browse the list of descendents in the abstract class <ref refid="class_output" kindref="compound">Output</ref>.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>Decide whether or not you need an external force. All of these are derived from <ref refid="class_external_force" kindref="compound">ExternalForce</ref> (browse the descendent list). You can add your own <ref refid="class_external_force" kindref="compound">ExternalForce</ref> type without recompiling the code as a user module (advanced topic: <ref refid="modules" kindref="compound">User loadable modules</ref>).</para>
+<para></para>
+</listitem>
+<listitem>
+<para>Make the main configuration file. Here, you specify the global parameters, the components, the output, and the external forces. See <ref refid="config" kindref="compound">Configuration files</ref> for details and <ref refid="global" kindref="compound">Global variables</ref> for an enumeration of overall global variables. You can look at the example(s) in examples directory and use IN.FILE as a template.</para>
+<para>In short, each of your choices has a stanza. <linebreak/>
+ <itemizedlist>
+<listitem>
+<para>The overall parameters such as library locations, step size, etc. goes at the top of the file in the <computeroutput>[global]</computeroutput> stanza </para>
+</listitem>
+<listitem>
+<para>The components are listed in the <computeroutput>[component]</computeroutput> stanza. The key is the name/mnemonic of the component followed by the name of its definition file. Every component you want will have an entry here. </para>
+</listitem>
+<listitem>
+<para>The <computeroutput>[output]</computeroutput> stanza lists the output types you want followed by the parameter list for each one. </para>
+</listitem>
+<listitem>
+<para>The <computeroutput>[external]</computeroutput> stanza lists the external force types followed by the parameter list for each one. </para>
+</listitem>
+<listitem>
+<para>The <computeroutput>[interaction]</computeroutput> stanza defines the mutual interaction between the components. E.g. if you want all N of your components to interact, you will need N(N-1)/2 entries in this stanza. </para>
+</listitem>
+</itemizedlist>
+</para>
+<para></para>
+</listitem>
+<listitem>
+<para>A typical mpirun command: <preformatted>
+        mpirun -v -wd /home/weinberg/work -np 32 \
+                N /home/weinberg/bin/exp -- -f IN.FILE
+        </preformatted></para>
+<para></para>
+</listitem>
+<listitem>
+<para>One can force a phase-space dump by signalling the root process with a SIGHUP</para>
+<para></para>
+</listitem>
+<listitem>
+<para>One can force a clean stop on the next step by signalling the root process with a SIGHUP</para>
+<para></para>
+</listitem>
+</orderedlist>
+<linebreak/>
+ </para>
+</sect1>
+    </detaileddescription>
+    <location file="quick.doc"/>
+  </compounddef>
+</doxygen>

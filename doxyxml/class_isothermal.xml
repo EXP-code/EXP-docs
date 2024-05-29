@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_isothermal" kind="class" language="C++" prot="public">
+    <compoundname>Isothermal</compoundname>
+    <includes refid="models_8_h" local="no">models.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_isothermal_1a3cb8cd4438dce94dc4df07b3d466238b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Isothermal::r0</definition>
+        <argsstring></argsstring>
+        <name>r0</name>
+        <qualifiedname>Isothermal::r0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="54" column="10" bodyfile="/home/weinberg/Projects/EXP/include/models.H" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_isothermal_1a9e7356929e282e3077531a3be1de2226" compoundref="models_8_h" startline="58" endline="63">set_Isothermal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_isothermal_1a0a7901c7a674db1d6d07cf415e2daf0e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Isothermal::vc</definition>
+        <argsstring></argsstring>
+        <name>vc</name>
+        <qualifiedname>Isothermal::vc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="55" column="10" bodyfile="/home/weinberg/Projects/EXP/include/models.H" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_isothermal_1a9e7356929e282e3077531a3be1de2226" compoundref="models_8_h" startline="58" endline="63">set_Isothermal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_isothermal_1a9e1b4b7f27352df65d5d7881cdac2569" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Isothermal::vcsq</definition>
+        <argsstring></argsstring>
+        <name>vcsq</name>
+        <qualifiedname>Isothermal::vcsq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="56" column="10" bodyfile="/home/weinberg/Projects/EXP/include/models.H" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_isothermal_1a9e7356929e282e3077531a3be1de2226" compoundref="models_8_h" startline="58" endline="63">set_Isothermal</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_isothermal_1a1aa556d635c1000cf91b28015677d33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d Isothermal::force</definition>
+        <argsstring>(Eigen::Vector3d &amp;)</argsstring>
+        <name>force</name>
+        <qualifiedname>Isothermal::force</qualifiedname>
+        <param>
+          <type>Eigen::Vector3d &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="65" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_isothermal_1a2fe32e8f3d44852e5c7f43c35e3f8473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Isothermal::potential</definition>
+        <argsstring>(Eigen::Vector3d &amp;)</argsstring>
+        <name>potential</name>
+        <qualifiedname>Isothermal::potential</qualifiedname>
+        <param>
+          <type>Eigen::Vector3d &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_isothermal_1a9e7356929e282e3077531a3be1de2226" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Isothermal::set_Isothermal</definition>
+        <argsstring>(double r0init, double vcinit)</argsstring>
+        <name>set_Isothermal</name>
+        <qualifiedname>Isothermal::set_Isothermal</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r0init</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vcinit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/models.H" line="58" column="8" bodyfile="/home/weinberg/Projects/EXP/include/models.H" bodystart="58" bodyend="63"/>
+        <references refid="class_isothermal_1a3cb8cd4438dce94dc4df07b3d466238b" compoundref="models_8_h" startline="54">r0</references>
+        <references refid="class_isothermal_1a0a7901c7a674db1d6d07cf415e2daf0e" compoundref="models_8_h" startline="55">vc</references>
+        <references refid="class_isothermal_1a9e1b4b7f27352df65d5d7881cdac2569" compoundref="models_8_h" startline="56">vcsq</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/models.H" line="51" column="1" bodyfile="/home/weinberg/Projects/EXP/include/models.H" bodystart="52" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_isothermal_1a1aa556d635c1000cf91b28015677d33c" prot="public" virt="non-virtual"><scope>Isothermal</scope><name>force</name></member>
+      <member refid="class_isothermal_1a2fe32e8f3d44852e5c7f43c35e3f8473" prot="public" virt="non-virtual"><scope>Isothermal</scope><name>potential</name></member>
+      <member refid="class_isothermal_1a3cb8cd4438dce94dc4df07b3d466238b" prot="protected" virt="non-virtual"><scope>Isothermal</scope><name>r0</name></member>
+      <member refid="class_isothermal_1a9e7356929e282e3077531a3be1de2226" prot="public" virt="non-virtual"><scope>Isothermal</scope><name>set_Isothermal</name></member>
+      <member refid="class_isothermal_1a0a7901c7a674db1d6d07cf415e2daf0e" prot="protected" virt="non-virtual"><scope>Isothermal</scope><name>vc</name></member>
+      <member refid="class_isothermal_1a9e1b4b7f27352df65d5d7881cdac2569" prot="protected" virt="non-virtual"><scope>Isothermal</scope><name>vcsq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

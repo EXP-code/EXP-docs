@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="gauss_q_8_h" kind="file" language="C++">
+    <compoundname>gaussQ.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_emp_cyl2d_8_h" local="no">/home/weinberg/Projects/EXP/include/EmpCyl2d.H</includedby>
+    <includedby refid="_emp_cyl_s_l_8_h" local="no">/home/weinberg/Projects/EXP/include/EmpCylSL.H</includedby>
+    <includedby refid="_ortho_function_8_h" local="no">/home/weinberg/Projects/EXP/include/OrthoFunction.H</includedby>
+    <includedby refid="orbit_8_h" local="no">/home/weinberg/Projects/EXP/include/orbit.H</includedby>
+    <includedby refid="_disk2d_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/Disk2d.H</includedby>
+    <includedby refid="_disk2d_halo_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/Disk2dHalo.H</includedby>
+    <includedby refid="_disk_eval_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</includedby>
+    <includedby refid="_disk_halo_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H</includedby>
+    <includedby refid="_ellip_force_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H</includedby>
+    <includedby refid="_ellipsoid_force_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/EllipsoidForce.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdlib</label>
+      </node>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCube.H</label>
+        <link refid="_biorth_cube_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCyl.H</label>
+        <link refid="_biorth_cyl_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/weinberg/Projects/EXP/include/DiskModels.H</label>
+        <link refid="_disk_models_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/weinberg/Projects/EXP/include/DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/EmpCyl2d.H</label>
+        <link refid="_emp_cyl2d_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/weinberg/Projects/EXP/include/EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/weinberg/Projects/EXP/include/GenPoly.H</label>
+        <link refid="_gen_poly_8_h"/>
+      </node>
+      <node id="26">
+        <label>/home/weinberg/Projects/EXP/include/HunterX.H</label>
+        <link refid="_hunter_x_8_h"/>
+      </node>
+      <node id="20">
+        <label>/home/weinberg/Projects/EXP/include/OrthoFunction.H</label>
+        <link refid="_ortho_function_8_h"/>
+      </node>
+      <node id="22">
+        <label>/home/weinberg/Projects/EXP/include/QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/weinberg/Projects/EXP/include/SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>/home/weinberg/Projects/EXP/include/exponential.H</label>
+        <link refid="exponential_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/weinberg/Projects/EXP/include/hernquist_model.H</label>
+        <link refid="hernquist__model_8_h"/>
+      </node>
+      <node id="35">
+        <label>/home/weinberg/Projects/EXP/include/hunter.H</label>
+        <link refid="hunter_8_h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>/home/weinberg/Projects/EXP/include/isothermal.H</label>
+        <link refid="isothermal_8_h"/>
+      </node>
+      <node id="37">
+        <label>/home/weinberg/Projects/EXP/include/king.H</label>
+        <link refid="king_8_h"/>
+      </node>
+      <node id="23">
+        <label>/home/weinberg/Projects/EXP/include/massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>/home/weinberg/Projects/EXP/include/mestel.H</label>
+        <link refid="mestel_8_h"/>
+      </node>
+      <node id="21">
+        <label>/home/weinberg/Projects/EXP/include/orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/weinberg/Projects/EXP/include/plummer.H</label>
+        <link refid="plummer_8_h"/>
+      </node>
+      <node id="28">
+        <label>/home/weinberg/Projects/EXP/include/sphereSL.H</label>
+        <link refid="sphere_s_l_8_h"/>
+      </node>
+      <node id="40">
+        <label>/home/weinberg/Projects/EXP/include/toomre.H</label>
+        <link refid="toomre_8_h"/>
+      </node>
+      <node id="12">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="14">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>/home/weinberg/Projects/EXP/src/Direct.H</label>
+        <link refid="_direct_8_h"/>
+      </node>
+      <node id="16">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/FlatDisk.H</label>
+        <link refid="_flat_disk_8_h"/>
+      </node>
+      <node id="17">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/PolarBasis.H</label>
+        <link refid="_polar_basis_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>/home/weinberg/Projects/EXP/src/Shells.H</label>
+        <link refid="_shells_8_h"/>
+      </node>
+      <node id="29">
+        <label>/home/weinberg/Projects/EXP/src/SlabSL.H</label>
+        <link refid="_slab_s_l_8_h"/>
+      </node>
+      <node id="30">
+        <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
+        <link refid="_sphere_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>/home/weinberg/Projects/EXP/src/externalShock.H</label>
+        <link refid="external_shock_8_h"/>
+      </node>
+      <node id="31">
+        <label>/home/weinberg/Projects/EXP/utils/Analysis/SphSL.H</label>
+        <link refid="_sph_s_l_8_h"/>
+      </node>
+      <node id="44">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/AddDisk.H</label>
+        <link refid="_add_disk_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H</label>
+        <link refid="_add_spheres_8_h"/>
+      </node>
+      <node id="18">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H</label>
+        <link refid="_cyl_disk_8_h"/>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2d.H</label>
+        <link refid="_disk2d_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2dHalo.H</label>
+        <link refid="_disk2d_halo_8_h"/>
+      </node>
+      <node id="11">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</label>
+        <link refid="_disk_eval_8_h"/>
+      </node>
+      <node id="19">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H</label>
+        <link refid="_disk_halo_8_h"/>
+      </node>
+      <node id="48">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H</label>
+        <link refid="_ellip_force_8_h"/>
+      </node>
+      <node id="49">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/EllipsoidForce.H</label>
+        <link refid="_ellipsoid_force_8_h"/>
+      </node>
+      <node id="32">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/SphericalSL.H</label>
+        <link refid="_spherical_s_l_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H</label>
+        <link refid="massmodel1d_8_h"/>
+      </node>
+      <node id="47">
+        <label>/home/weinberg/Projects/EXP/utils/PhaseSpace/MakeModel.H</label>
+        <link refid="_make_model_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_gauss_quad" prot="public">GaussQuad</innerclass>
+    <innerclass refid="class_herm_quad" prot="public">HermQuad</innerclass>
+    <innerclass refid="class_jaco_quad" prot="public">JacoQuad</innerclass>
+    <innerclass refid="class_lagu_quad" prot="public">LaguQuad</innerclass>
+    <innerclass refid="class_lege_quad" prot="public">LegeQuad</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">SYNOPSIS</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;gaussQ.H&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">DESCRIPTION</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>The<sp/>functions<sp/>compute<sp/>the<sp/>abscissas<sp/>and<sp/><sp/>weight<sp/><sp/>factors<sp/><sp/>of</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>various<sp/><sp/><sp/>Gaussian<sp/><sp/><sp/>quadrature<sp/><sp/><sp/>formulas.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>For<sp/>the<sp/>&quot;Jacobi&quot;<sp/>series,<sp/>the<sp/>weight<sp/>function<sp/>is</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>w(x)<sp/>=<sp/>x**alpha<sp/>*<sp/>(1-x)**beta</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>over<sp/>the<sp/>interval<sp/>0<sp/>&lt;=<sp/>x<sp/>&lt;=<sp/>1,<sp/>with<sp/>alpha,<sp/>beta<sp/>&gt;<sp/>-1.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>For<sp/>the<sp/>&quot;Legendre&quot;<sp/>series,<sp/>the<sp/>weight<sp/>function<sp/>is</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>w(x)<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>over<sp/>the<sp/>interval<sp/>0<sp/>&lt;=<sp/>x<sp/>&lt;=<sp/>1</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>(This<sp/>is<sp/>computed<sp/>as<sp/>a<sp/>special<sp/>case<sp/>of<sp/>the<sp/>Jacobi<sp/>series)</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>For<sp/>the<sp/>&quot;Laguerre&quot;<sp/>series,<sp/>the<sp/>weight<sp/>function<sp/>is</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>w(x)<sp/>=<sp/>x**alpha<sp/>*<sp/>exp(-x)</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>over<sp/>the<sp/>interval<sp/>0<sp/>&lt;=<sp/>x<sp/>&lt;<sp/>+infinity,<sp/>with<sp/>alpha<sp/>&gt;<sp/>-1.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>For<sp/>the<sp/>&quot;Hermite&quot;<sp/>series,<sp/>the<sp/>weight<sp/>function<sp/>is</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>w(x)<sp/>=<sp/>abs(x)**alpha<sp/>*<sp/>exp(-x**2)</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>over<sp/>the<sp/>interval<sp/>-infinity<sp/>&lt;<sp/>x<sp/>&lt;<sp/>+infinity,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>with<sp/>alpha<sp/>&gt;<sp/>-1.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">DIAGNOSTICS</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Aborts<sp/>with<sp/>error<sp/>message<sp/>on<sp/>creation<sp/>if<sp/>alpha<sp/>or<sp/>beta<sp/>&lt;=<sp/>-1.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">HISTORY</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>22-Sep-85<sp/><sp/>asselin<sp/>at<sp/>Carnegie-Mellon<sp/>University</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created.<sp/>(C-code)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"></highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>01/18/94<sp/>C++<sp/>wrapper<sp/>MDW</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_gaussQ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_gaussQ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_gauss_quad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gauss_quad" kindref="compound">GaussQuad</ref><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" kindref="member">FunctionID</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="60" refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="61" refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" kindref="member">alpha</ref>;</highlight></codeline>
+<codeline lineno="62" refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" kindref="member">beta</ref>;</highlight></codeline>
+<codeline lineno="63" refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_gauss_quad_1a2d164fe57b165dcd45a3f9ad4b102903" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_gauss_quad_1a2d164fe57b165dcd45a3f9ad4b102903" kindref="member">GaussQuad</ref>()<sp/>:<sp/><ref refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" kindref="member">alpha</ref>(0),<sp/><ref refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" kindref="member">beta</ref>(0),<sp/><ref refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" kindref="member">n</ref>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" kindref="member">weight</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;0<sp/>||<sp/>i&gt;=<ref refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" kindref="member">n</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;index<sp/>out<sp/>of<sp/>bounds&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" kindref="member">w</ref>[i];<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" kindref="member">knot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;0<sp/>||<sp/>i&gt;=<ref refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" kindref="member">n</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;index<sp/>out<sp/>of<sp/>bounds&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" kindref="member">r</ref>[i];<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_gauss_quad_1a788426d5845819287474b161975389a0" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/><ref refid="class_gauss_quad_1a788426d5845819287474b161975389a0" kindref="member">wV</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" kindref="member">w</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="74" refid="class_gauss_quad_1ab5ce159e90af9f0912424e4351844882" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/><ref refid="class_gauss_quad_1ab5ce159e90af9f0912424e4351844882" kindref="member">kV</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" kindref="member">r</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="75" refid="class_gauss_quad_1a4522920cf5303e3d0040b626b6ada8a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a4522920cf5303e3d0040b626b6ada8a6" kindref="member">get_n</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" kindref="member">n</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="76" refid="class_gauss_quad_1ad0ff3faadab8afbd0ff35111a02938dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1ad0ff3faadab8afbd0ff35111a02938dc" kindref="member">get_alpha</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" kindref="member">alpha</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="77" refid="class_gauss_quad_1a647dda30c76a016d266d6ccc83ae79a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a647dda30c76a016d266d6ccc83ae79a7" kindref="member">get_beta</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" kindref="member">beta</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" kindref="member">bomb</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>sout;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>sout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR<sp/>from<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" kindref="member">FunctionID</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(sout.str());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_herm_quad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_herm_quad" kindref="compound">HermQuad</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad" kindref="compound">GaussQuad</ref></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="89" refid="class_herm_quad_1a57421fe7c96898260f3b384843797cd6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_herm_quad_1a57421fe7c96898260f3b384843797cd6" kindref="member">HermQuad</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N=10,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ALPHA=0.0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_lagu_quad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lagu_quad" kindref="compound">LaguQuad</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad" kindref="compound">GaussQuad</ref></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="95" refid="class_lagu_quad_1aa121cf9a2780d51efc18dc64949c3f5a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_lagu_quad_1aa121cf9a2780d51efc18dc64949c3f5a" kindref="member">LaguQuad</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N=10,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ALPHA=0.0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_jaco_quad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_jaco_quad" kindref="compound">JacoQuad</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_gauss_quad" kindref="compound">GaussQuad</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101" refid="class_jaco_quad_1a24fc7048830d0b9c963fdd94d2729ed8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_jaco_quad_1a24fc7048830d0b9c963fdd94d2729ed8" kindref="member">JacoQuad</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N=10,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ALPHA=0.0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BETA=0.0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="class_lege_quad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lege_quad" kindref="compound">LegeQuad</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_jaco_quad" kindref="compound">JacoQuad</ref></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="107" refid="class_lege_quad_1ab46a851e9eb49f0d184df4903b2a036f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_lege_quad_1ab46a851e9eb49f0d184df4903b2a036f" kindref="member">LegeQuad</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N=10)<sp/>:<sp/><ref refid="class_jaco_quad" kindref="compound">JacoQuad</ref>(N,<sp/>0.0,<sp/>0.0)<sp/>{<sp/><ref refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" kindref="member">FunctionID</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;LegeQuad&quot;</highlight><highlight class="normal">;<sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/gaussQ.H"/>
+  </compounddef>
+</doxygen>

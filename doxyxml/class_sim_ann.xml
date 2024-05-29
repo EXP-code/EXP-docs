@@ -1,0 +1,859 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sim_ann" kind="class" language="C++" prot="public">
+    <compoundname>SimAnn</compoundname>
+    <includes refid="_sim_ann_8_h" local="no">SimAnn.H</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" prot="private" static="no">
+        <type>std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt;</type>
+        <definition>typedef std::function&lt;double(std::vector&lt;double&gt;&amp;)&gt; SimAnn::Func1d</definition>
+        <argsstring></argsstring>
+        <name>Func1d</name>
+        <qualifiedname>SimAnn::Func1d</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="16" column="25" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" prot="private" static="no">
+        <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt; &amp;)&gt;</type>
+        <definition>typedef std::function&lt;std::vector&lt;double&gt;(std::vector&lt;double&gt;&amp;)&gt; SimAnn::FuncMap</definition>
+        <argsstring></argsstring>
+        <name>FuncMap</name>
+        <qualifiedname>SimAnn::FuncMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="17" column="27" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::c_jump</definition>
+        <argsstring></argsstring>
+        <name>c_jump</name>
+        <qualifiedname>SimAnn::c_jump</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="32" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1accde6cb2f42366109a58055dff05787d" compoundref="_sim_ann_8_h" startline="91" endline="92">jump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimAnn::ddwell</definition>
+        <argsstring></argsstring>
+        <name>ddwell</name>
+        <qualifiedname>SimAnn::ddwell</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="24" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a71ed23c796300b121eb7134944db6976" compoundref="_sim_ann_8_h" startline="79" endline="80">dwell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a5657470e78cf7c7126cd13e28f3cc6f0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <qualifiedname>SimAnn::dt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="29" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a7e082d7470b2a2a53377c99ed147c242" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::dy</definition>
+        <argsstring></argsstring>
+        <name>dy</name>
+        <qualifiedname>SimAnn::dy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="40" column="12" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a7ccbfabce4fa83789c86a46cde2ab97d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimAnn::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <qualifiedname>SimAnn::err</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="38" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SimAnn::fname</definition>
+        <argsstring></argsstring>
+        <name>fname</name>
+        <qualifiedname>SimAnn::fname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="43" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" compoundref="_sim_ann_8_h" startline="107" endline="111">save_states</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimAnn::fsave</definition>
+        <argsstring></argsstring>
+        <name>fsave</name>
+        <qualifiedname>SimAnn::fsave</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="33" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" compoundref="_sim_ann_8_h" startline="113" endline="117">report_states</referencedby>
+        <referencedby refid="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" compoundref="_sim_ann_8_h" startline="107" endline="111">save_states</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1adc39a3f39d3473c3686b66fe1d8165c6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" kindref="member">Func1d</ref></type>
+        <definition>Func1d SimAnn::func</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <qualifiedname>SimAnn::func</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="21" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a7cab4f04fc3a8f295f2bd195fedaf929" prot="private" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 SimAnn::gen</definition>
+        <argsstring></argsstring>
+        <name>gen</name>
+        <qualifiedname>SimAnn::gen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="35" column="16" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::K</definition>
+        <argsstring></argsstring>
+        <name>K</name>
+        <qualifiedname>SimAnn::K</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="27" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a595d97ae542a87095840fe899cefa1f8" compoundref="_sim_ann_8_h" startline="82" endline="83">Boltzmann</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimAnn::maxit</definition>
+        <argsstring></argsstring>
+        <name>maxit</name>
+        <qualifiedname>SimAnn::maxit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="31" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a47452478f0c753fc80a4f15bb3272cee" compoundref="_sim_ann_8_h" startline="76" endline="77">iterations</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" prot="private" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; double &gt;</type>
+        <definition>std::uniform_real_distribution&lt;double&gt; SimAnn::number_01</definition>
+        <argsstring></argsstring>
+        <name>number_01</name>
+        <qualifiedname>SimAnn::number_01</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="36" column="47" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" compoundref="_sim_ann_8_h" startline="49" endline="55">SimAnn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" prot="private" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; double &gt;</type>
+        <definition>std::uniform_real_distribution&lt;double&gt; SimAnn::number_range</definition>
+        <argsstring></argsstring>
+        <name>number_range</name>
+        <qualifiedname>SimAnn::number_range</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="36" column="34" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" compoundref="_sim_ann_8_h" startline="94" endline="101">range</referencedby>
+        <referencedby refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" compoundref="_sim_ann_8_h" startline="49" endline="55">SimAnn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" kindref="member">FuncMap</ref></type>
+        <definition>FuncMap SimAnn::pmap</definition>
+        <argsstring></argsstring>
+        <name>pmap</name>
+        <qualifiedname>SimAnn::pmap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="22" column="11" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1aad654e40f98e7e0875c5b5df1ed46357" compoundref="_sim_ann_8_h" startline="68" endline="68">set_map</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <qualifiedname>SimAnn::rho</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="28" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1afa312929c01db4d0429bbbe33434db6d" compoundref="_sim_ann_8_h" startline="85" endline="86">learning_rate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::rrange</definition>
+        <argsstring></argsstring>
+        <name>rrange</name>
+        <qualifiedname>SimAnn::rrange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="25" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" compoundref="_sim_ann_8_h" startline="94" endline="101">range</referencedby>
+        <referencedby refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" compoundref="_sim_ann_8_h" startline="49" endline="55">SimAnn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" prot="private" static="no" mutable="no">
+        <type>std::ostream *</type>
+        <definition>std::ostream* SimAnn::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <qualifiedname>SimAnn::str</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="45" column="16" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" compoundref="_sim_ann_8_h" startline="113" endline="117">report_states</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::t0</definition>
+        <argsstring></argsstring>
+        <name>t0</name>
+        <qualifiedname>SimAnn::t0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="26" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1ad2f0499488a5c74b86044f77c63f4c6a" compoundref="_sim_ann_8_h" startline="88" endline="89">temperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1a0aa857452114450f48f0a16f26cd0301" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::tscale</definition>
+        <argsstring></argsstring>
+        <name>tscale</name>
+        <qualifiedname>SimAnn::tscale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="30" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; SimAnn::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>SimAnn::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="39" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1a9906a615f365c3be71b9976f558cd11b" compoundref="_sim_ann_8_h" startline="104" endline="104">current</referencedby>
+        <referencedby refid="class_sim_ann_1a139aedb9b6fed482e463d71485894ca1" compoundref="_sim_ann_8_h" startline="103" endline="103">initial</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1ac29ebf9d3ec73d4151feb28bc4766a7f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; SimAnn::xbest</definition>
+        <argsstring></argsstring>
+        <name>xbest</name>
+        <qualifiedname>SimAnn::xbest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="39" column="22" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_sim_ann_1ad0b259a0b490ab224fd3f3dc6c70c8ee" compoundref="_sim_ann_8_h" startline="105" endline="105">optimum</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1acd655bd1ca3733fe4e041d9b1e7c4781" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; SimAnn::xnew</definition>
+        <argsstring></argsstring>
+        <name>xnew</name>
+        <qualifiedname>SimAnn::xnew</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="39" column="17" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1aee5571003287381eb596e22b12f1513e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>SimAnn::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="40" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sim_ann_1ad14b958020294036f74cf84ae3b2e7c4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SimAnn::ybest</definition>
+        <argsstring></argsstring>
+        <name>ybest</name>
+        <qualifiedname>SimAnn::ybest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="40" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sim_ann_1ae20159c138105d13f5aa8f75688f7474" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SimAnn::equilibrate</definition>
+        <argsstring>(const double t, const int n)</argsstring>
+        <name>equilibrate</name>
+        <qualifiedname>SimAnn::equilibrate</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="42" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a7ec2e47c033b31641cd5df9f8af62549" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::log_state</definition>
+        <argsstring>(int)</argsstring>
+        <name>log_state</name>
+        <qualifiedname>SimAnn::log_state</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="44" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sim_ann_1a702b2663bfc3609ab4335e46caf1e877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::anneal</definition>
+        <argsstring>(const int iters=-1)</argsstring>
+        <name>anneal</name>
+        <qualifiedname>SimAnn::anneal</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>iters</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Perform the annealing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a595d97ae542a87095840fe899cefa1f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::Boltzmann</definition>
+        <argsstring>(const double k=-1.0)</argsstring>
+        <name>Boltzmann</name>
+        <qualifiedname>SimAnn::Boltzmann</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>k</declname>
+          <defval>-1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="82" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="82" bodyend="83"/>
+        <references refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" compoundref="_sim_ann_8_h" startline="27">K</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a9906a615f365c3be71b9976f558cd11b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; SimAnn::current</definition>
+        <argsstring>()</argsstring>
+        <name>current</name>
+        <qualifiedname>SimAnn::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="104" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="104" bodyend="104"/>
+        <references refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" compoundref="_sim_ann_8_h" startline="39">x</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a71ed23c796300b121eb7134944db6976" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SimAnn::dwell</definition>
+        <argsstring>(const int d=-1)</argsstring>
+        <name>dwell</name>
+        <qualifiedname>SimAnn::dwell</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>d</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="79" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="79" bodyend="80"/>
+        <references refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" compoundref="_sim_ann_8_h" startline="24">ddwell</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a139aedb9b6fed482e463d71485894ca1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::initial</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;xi)</argsstring>
+        <name>initial</name>
+        <qualifiedname>SimAnn::initial</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>xi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="103" column="8" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="103" bodyend="103"/>
+        <references refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" compoundref="_sim_ann_8_h" startline="39">x</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a47452478f0c753fc80a4f15bb3272cee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SimAnn::iterations</definition>
+        <argsstring>(const int m=-1)</argsstring>
+        <name>iterations</name>
+        <qualifiedname>SimAnn::iterations</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>m</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="76" column="7" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="76" bodyend="77"/>
+        <references refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" compoundref="_sim_ann_8_h" startline="31">maxit</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1accde6cb2f42366109a58055dff05787d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::jump</definition>
+        <argsstring>(const double j=-1.0)</argsstring>
+        <name>jump</name>
+        <qualifiedname>SimAnn::jump</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>j</declname>
+          <defval>-1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="91" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="91" bodyend="92"/>
+        <references refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" compoundref="_sim_ann_8_h" startline="32">c_jump</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1afa312929c01db4d0429bbbe33434db6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::learning_rate</definition>
+        <argsstring>(const double r=-1.0)</argsstring>
+        <name>learning_rate</name>
+        <qualifiedname>SimAnn::learning_rate</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+          <defval>-1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="85" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="85" bodyend="86"/>
+        <references refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" compoundref="_sim_ann_8_h" startline="28">rho</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a30ca1e887a35c7c59dfa222068748251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::melt</definition>
+        <argsstring>(const int iters=-1)</argsstring>
+        <name>melt</name>
+        <qualifiedname>SimAnn::melt</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>iters</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Look for the melting temprature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1ad0b259a0b490ab224fd3f3dc6c70c8ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; SimAnn::optimum</definition>
+        <argsstring>()</argsstring>
+        <name>optimum</name>
+        <qualifiedname>SimAnn::optimum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="105" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="105" bodyend="105"/>
+        <references refid="class_sim_ann_1ac29ebf9d3ec73d4151feb28bc4766a7f" compoundref="_sim_ann_8_h" startline="39">xbest</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::range</definition>
+        <argsstring>(const double r=-1.0)</argsstring>
+        <name>range</name>
+        <qualifiedname>SimAnn::range</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+          <defval>-1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="94" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="94" bodyend="101"/>
+        <references refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" compoundref="_sim_ann_8_h" startline="36">number_range</references>
+        <references refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" compoundref="_sim_ann_8_h" startline="25">rrange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::report_states</definition>
+        <argsstring>(std::ostream &amp;out)</argsstring>
+        <name>report_states</name>
+        <qualifiedname>SimAnn::report_states</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="113" column="8" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="113" bodyend="117"/>
+        <references refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" compoundref="_sim_ann_8_h" startline="33">fsave</references>
+        <references refid="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" compoundref="_sim_ann_8_h" startline="45">str</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::save_states</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>save_states</name>
+        <qualifiedname>SimAnn::save_states</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="107" column="8" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="107" bodyend="111"/>
+        <references refid="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" compoundref="_sim_ann_8_h" startline="43">fname</references>
+        <references refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" compoundref="_sim_ann_8_h" startline="33">fsave</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1aad654e40f98e7e0875c5b5df1ed46357" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::set_map</definition>
+        <argsstring>(FuncMap f)</argsstring>
+        <name>set_map</name>
+        <qualifiedname>SimAnn::set_map</qualifiedname>
+        <param>
+          <type><ref refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" kindref="member">FuncMap</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Set map function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="68" column="8" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="68" bodyend="68"/>
+        <references refid="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" compoundref="_sim_ann_8_h" startline="22">pmap</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a9aa8b63c2682c1ec0496eff05f8396c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimAnn::set_up</definition>
+        <argsstring>(Func1d f, const int seed=10)</argsstring>
+        <name>set_up</name>
+        <qualifiedname>SimAnn::set_up</qualifiedname>
+        <param>
+          <type><ref refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" kindref="member">Func1d</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>seed</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Set the objective function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SimAnn::SimAnn</definition>
+        <argsstring>()</argsstring>
+        <name>SimAnn</name>
+        <qualifiedname>SimAnn::SimAnn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="49" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="49" bodyend="55"/>
+        <references refid="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" compoundref="_sim_ann_8_h" startline="36">number_01</references>
+        <references refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" compoundref="_sim_ann_8_h" startline="36">number_range</references>
+        <references refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" compoundref="_sim_ann_8_h" startline="25">rrange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a2adc2ee894fd9d131453b73fa16bc0cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimAnn::SimAnn</definition>
+        <argsstring>(std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt; f, const int d=1)</argsstring>
+        <name>SimAnn</name>
+        <qualifiedname>SimAnn::SimAnn</qualifiedname>
+        <param>
+          <type>std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>d</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="57" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1ad2f0499488a5c74b86044f77c63f4c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimAnn::temperature</definition>
+        <argsstring>(const double t=-1.0)</argsstring>
+        <name>temperature</name>
+        <qualifiedname>SimAnn::temperature</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>t</declname>
+          <defval>-1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="88" column="10" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="88" bodyend="89"/>
+        <references refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" compoundref="_sim_ann_8_h" startline="26">t0</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sim_ann_1a44c6f2c16efe2ebcfd1018b4c85536cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SimAnn::~SimAnn</definition>
+        <argsstring>()</argsstring>
+        <name>~SimAnn</name>
+        <qualifiedname>SimAnn::~SimAnn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="59" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="59" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="15" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_sim_ann_1a702b2663bfc3609ab4335e46caf1e877" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>anneal</name></member>
+      <member refid="class_sim_ann_1a595d97ae542a87095840fe899cefa1f8" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>Boltzmann</name></member>
+      <member refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>c_jump</name></member>
+      <member refid="class_sim_ann_1a9906a615f365c3be71b9976f558cd11b" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>current</name></member>
+      <member refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>ddwell</name></member>
+      <member refid="class_sim_ann_1a5657470e78cf7c7126cd13e28f3cc6f0" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>dt</name></member>
+      <member refid="class_sim_ann_1a71ed23c796300b121eb7134944db6976" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>dwell</name></member>
+      <member refid="class_sim_ann_1a7e082d7470b2a2a53377c99ed147c242" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>dy</name></member>
+      <member refid="class_sim_ann_1ae20159c138105d13f5aa8f75688f7474" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>equilibrate</name></member>
+      <member refid="class_sim_ann_1a7ccbfabce4fa83789c86a46cde2ab97d" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>err</name></member>
+      <member refid="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>fname</name></member>
+      <member refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>fsave</name></member>
+      <member refid="class_sim_ann_1adc39a3f39d3473c3686b66fe1d8165c6" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>func</name></member>
+      <member refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>Func1d</name></member>
+      <member refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>FuncMap</name></member>
+      <member refid="class_sim_ann_1a7cab4f04fc3a8f295f2bd195fedaf929" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>gen</name></member>
+      <member refid="class_sim_ann_1a139aedb9b6fed482e463d71485894ca1" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>initial</name></member>
+      <member refid="class_sim_ann_1a47452478f0c753fc80a4f15bb3272cee" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>iterations</name></member>
+      <member refid="class_sim_ann_1accde6cb2f42366109a58055dff05787d" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>jump</name></member>
+      <member refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>K</name></member>
+      <member refid="class_sim_ann_1afa312929c01db4d0429bbbe33434db6d" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>learning_rate</name></member>
+      <member refid="class_sim_ann_1a7ec2e47c033b31641cd5df9f8af62549" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>log_state</name></member>
+      <member refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>maxit</name></member>
+      <member refid="class_sim_ann_1a30ca1e887a35c7c59dfa222068748251" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>melt</name></member>
+      <member refid="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>number_01</name></member>
+      <member refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>number_range</name></member>
+      <member refid="class_sim_ann_1ad0b259a0b490ab224fd3f3dc6c70c8ee" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>optimum</name></member>
+      <member refid="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>pmap</name></member>
+      <member refid="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>range</name></member>
+      <member refid="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>report_states</name></member>
+      <member refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>rho</name></member>
+      <member refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>rrange</name></member>
+      <member refid="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>save_states</name></member>
+      <member refid="class_sim_ann_1aad654e40f98e7e0875c5b5df1ed46357" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>set_map</name></member>
+      <member refid="class_sim_ann_1a9aa8b63c2682c1ec0496eff05f8396c5" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>set_up</name></member>
+      <member refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>SimAnn</name></member>
+      <member refid="class_sim_ann_1a2adc2ee894fd9d131453b73fa16bc0cd" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>SimAnn</name></member>
+      <member refid="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>str</name></member>
+      <member refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>t0</name></member>
+      <member refid="class_sim_ann_1ad2f0499488a5c74b86044f77c63f4c6a" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>temperature</name></member>
+      <member refid="class_sim_ann_1a0aa857452114450f48f0a16f26cd0301" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>tscale</name></member>
+      <member refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>x</name></member>
+      <member refid="class_sim_ann_1ac29ebf9d3ec73d4151feb28bc4766a7f" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>xbest</name></member>
+      <member refid="class_sim_ann_1acd655bd1ca3733fe4e041d9b1e7c4781" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>xnew</name></member>
+      <member refid="class_sim_ann_1aee5571003287381eb596e22b12f1513e" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>y</name></member>
+      <member refid="class_sim_ann_1ad14b958020294036f74cf84ae3b2e7c4" prot="private" virt="non-virtual"><scope>SimAnn</scope><name>ybest</name></member>
+      <member refid="class_sim_ann_1a44c6f2c16efe2ebcfd1018b4c85536cc" prot="public" virt="non-virtual"><scope>SimAnn</scope><name>~SimAnn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

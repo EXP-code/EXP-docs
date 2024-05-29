@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_cyclic_iterator" kind="class" language="C++" prot="public">
+    <compoundname>CyclicIterator</compoundname>
+    <includes refid="_circular_8_h" local="no">Circular.H</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename <ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_cyclic_iterator_1a53dbb2393d4aa6a36a3c37be1abf0d72" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using CyclicIterator&lt; T, Iterator &gt;::difference_type =  std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>CyclicIterator::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="126" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cyclic_iterator_1a915e4d17415d5729a42c8b33c2253920" prot="public" static="no">
+        <type>std::bidirectional_iterator_tag</type>
+        <definition>using CyclicIterator&lt; T, Iterator &gt;::iterator_category =  std::bidirectional_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>CyclicIterator::iterator_category</qualifiedname>
+        <briefdescription>
+<para>Add typedefs for std::iterator_traits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="124" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cyclic_iterator_1a56c990ef53c0037188c0c63e621ce064" prot="public" static="no">
+        <type>T *</type>
+        <definition>using CyclicIterator&lt; T, Iterator &gt;::pointer =  T*</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>CyclicIterator::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="127" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cyclic_iterator_1abd9e0277d2c7649df2f85440d2621f14" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using CyclicIterator&lt; T, Iterator &gt;::reference =  T&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>CyclicIterator::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="128" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cyclic_iterator_1ae369ce6761d18e2185a0afb442148064" prot="public" static="no">
+        <type>T</type>
+        <definition>using CyclicIterator&lt; T, Iterator &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>CyclicIterator::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="125" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="125" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cyclic_iterator_1ae7c36f9132643194593496ec2e456465" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator CyclicIterator&lt; T, Iterator &gt;::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <qualifiedname>CyclicIterator::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="117" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_cyclic_iterator_1a3c33c1aa0c006c38c616b11e94b40db7" compoundref="_circular_8_h" startline="162" endline="167">CyclicIterator&lt; T, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_cyclic_iterator_1a980526229cd5f4299c62969cac3f54f0" compoundref="_circular_8_h" startline="178" endline="183">CyclicIterator&lt; T, Iterator &gt;::operator--</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator CyclicIterator&lt; T, Iterator &gt;::cursor</definition>
+        <argsstring></argsstring>
+        <name>cursor</name>
+        <qualifiedname>CyclicIterator::cursor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="116" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_cyclic_iterator_1ae6c344f50a1c32ac6369949a7b7331b7" compoundref="_circular_8_h" startline="150" endline="153">CyclicIterator&lt; T, Iterator &gt;::operator*</referencedby>
+        <referencedby refid="class_cyclic_iterator_1a3c33c1aa0c006c38c616b11e94b40db7" compoundref="_circular_8_h" startline="162" endline="167">CyclicIterator&lt; T, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_cyclic_iterator_1a980526229cd5f4299c62969cac3f54f0" compoundref="_circular_8_h" startline="178" endline="183">CyclicIterator&lt; T, Iterator &gt;::operator--</referencedby>
+        <referencedby refid="class_cyclic_iterator_1adfafc479107c21a4d1b3253d065407a4" compoundref="_circular_8_h" startline="156" endline="159">CyclicIterator&lt; T, Iterator &gt;::operator-&gt;</referencedby>
+        <referencedby refid="class_cyclic_iterator_1af2121d68a2bfb7fed15bc4ec0475e7d8" compoundref="_circular_8_h" startline="138" endline="141">CyclicIterator&lt; T, Iterator &gt;::operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyclic_iterator_1a4ca3488adf3ac149f356bcb8b8209602" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator CyclicIterator&lt; T, Iterator &gt;::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <qualifiedname>CyclicIterator::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="118" column="14" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="118" bodyend="-1"/>
+        <referencedby refid="class_cyclic_iterator_1a3c33c1aa0c006c38c616b11e94b40db7" compoundref="_circular_8_h" startline="162" endline="167">CyclicIterator&lt; T, Iterator &gt;::operator++</referencedby>
+        <referencedby refid="class_cyclic_iterator_1a980526229cd5f4299c62969cac3f54f0" compoundref="_circular_8_h" startline="178" endline="183">CyclicIterator&lt; T, Iterator &gt;::operator--</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cyclic_iterator_1ae5cab8fc82d7966529c5a89cec7d04da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CyclicIterator&lt; T, Iterator &gt;::CyclicIterator</definition>
+        <argsstring>(const Iterator &amp;i, const Iterator &amp;j)</argsstring>
+        <name>CyclicIterator</name>
+        <qualifiedname>CyclicIterator::CyclicIterator</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Create using positions i through j. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="134" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="134" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1aaf23b5edf31d9d04d31ad91f83bf6eef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CyclicIterator&lt; T, Iterator &gt;::operator!=</definition>
+        <argsstring>(const CyclicIterator &amp;x) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>CyclicIterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Test for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="144" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1ae6c344f50a1c32ac6369949a7b7331b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T CyclicIterator&lt; T, Iterator &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>CyclicIterator::operator*</qualifiedname>
+        <briefdescription>
+<para>Return current data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="150" column="5" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="150" bodyend="153"/>
+        <references refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" compoundref="_circular_8_h" startline="116">CyclicIterator&lt; T, Iterator &gt;::cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1a3c33c1aa0c006c38c616b11e94b40db7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref> &amp;</type>
+        <definition>CyclicIterator &amp; CyclicIterator&lt; T, Iterator &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>CyclicIterator::operator++</qualifiedname>
+        <briefdescription>
+<para>Pre-increment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="162" column="18" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="162" bodyend="167"/>
+        <references refid="class_cyclic_iterator_1ae7c36f9132643194593496ec2e456465" compoundref="_circular_8_h" startline="117">CyclicIterator&lt; T, Iterator &gt;::begin</references>
+        <references refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" compoundref="_circular_8_h" startline="116">CyclicIterator&lt; T, Iterator &gt;::cursor</references>
+        <references refid="class_cyclic_iterator_1a4ca3488adf3ac149f356bcb8b8209602" compoundref="_circular_8_h" startline="118">CyclicIterator&lt; T, Iterator &gt;::end</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1ab953a354bc675ca18e49f5b9bd95b599" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref></type>
+        <definition>CyclicIterator CyclicIterator&lt; T, Iterator &gt;::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>CyclicIterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-increment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="170" column="18" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="170" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1a980526229cd5f4299c62969cac3f54f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref> &amp;</type>
+        <definition>CyclicIterator &amp; CyclicIterator&lt; T, Iterator &gt;::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <qualifiedname>CyclicIterator::operator--</qualifiedname>
+        <briefdescription>
+<para>Pre-decrement operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="178" column="18" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="178" bodyend="183"/>
+        <references refid="class_cyclic_iterator_1ae7c36f9132643194593496ec2e456465" compoundref="_circular_8_h" startline="117">CyclicIterator&lt; T, Iterator &gt;::begin</references>
+        <references refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" compoundref="_circular_8_h" startline="116">CyclicIterator&lt; T, Iterator &gt;::cursor</references>
+        <references refid="class_cyclic_iterator_1a4ca3488adf3ac149f356bcb8b8209602" compoundref="_circular_8_h" startline="118">CyclicIterator&lt; T, Iterator &gt;::end</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1af53d9b3a7ba0e191130bfffb8e484bbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref></type>
+        <definition>CyclicIterator CyclicIterator&lt; T, Iterator &gt;::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <qualifiedname>CyclicIterator::operator--</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-decrement operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="186" column="18" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="186" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1adfafc479107c21a4d1b3253d065407a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator CyclicIterator&lt; T, Iterator &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>CyclicIterator::operator-&gt;</qualifiedname>
+        <briefdescription>
+<para>Return current iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="156" column="12" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="156" bodyend="159"/>
+        <references refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" compoundref="_circular_8_h" startline="116">CyclicIterator&lt; T, Iterator &gt;::cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyclic_iterator_1af2121d68a2bfb7fed15bc4ec0475e7d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CyclicIterator&lt; T, Iterator &gt;::operator==</definition>
+        <argsstring>(const CyclicIterator &amp;x) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>CyclicIterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_cyclic_iterator" kindref="compound">CyclicIterator</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Test for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="138" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="138" bodyend="141"/>
+        <references refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" compoundref="_circular_8_h" startline="116">CyclicIterator&lt; T, Iterator &gt;::cursor</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CyclicIterator&lt; T, Iterator &gt;</label>
+        <link refid="class_cyclic_iterator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>begin</edgelabel>
+          <edgelabel>cursor</edgelabel>
+          <edgelabel>end</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Iterator&lt; T &gt;</label>
+        <link refid="struct_iterator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/Circular.H" line="114" column="1" bodyfile="/home/weinberg/Projects/EXP/include/Circular.H" bodystart="115" bodyend="192"/>
+    <listofallmembers>
+      <member refid="class_cyclic_iterator_1ae7c36f9132643194593496ec2e456465" prot="private" virt="non-virtual"><scope>CyclicIterator</scope><name>begin</name></member>
+      <member refid="class_cyclic_iterator_1aca44ee8d0d1e00ffceca047b937fa96a" prot="private" virt="non-virtual"><scope>CyclicIterator</scope><name>cursor</name></member>
+      <member refid="class_cyclic_iterator_1ae5cab8fc82d7966529c5a89cec7d04da" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>CyclicIterator</name></member>
+      <member refid="class_cyclic_iterator_1a53dbb2393d4aa6a36a3c37be1abf0d72" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>difference_type</name></member>
+      <member refid="class_cyclic_iterator_1a4ca3488adf3ac149f356bcb8b8209602" prot="private" virt="non-virtual"><scope>CyclicIterator</scope><name>end</name></member>
+      <member refid="class_cyclic_iterator_1a915e4d17415d5729a42c8b33c2253920" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>iterator_category</name></member>
+      <member refid="class_cyclic_iterator_1aaf23b5edf31d9d04d31ad91f83bf6eef" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator!=</name></member>
+      <member refid="class_cyclic_iterator_1ae6c344f50a1c32ac6369949a7b7331b7" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator*</name></member>
+      <member refid="class_cyclic_iterator_1a3c33c1aa0c006c38c616b11e94b40db7" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator++</name></member>
+      <member refid="class_cyclic_iterator_1ab953a354bc675ca18e49f5b9bd95b599" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator++</name></member>
+      <member refid="class_cyclic_iterator_1a980526229cd5f4299c62969cac3f54f0" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator--</name></member>
+      <member refid="class_cyclic_iterator_1af53d9b3a7ba0e191130bfffb8e484bbd" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator--</name></member>
+      <member refid="class_cyclic_iterator_1adfafc479107c21a4d1b3253d065407a4" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator-&gt;</name></member>
+      <member refid="class_cyclic_iterator_1af2121d68a2bfb7fed15bc4ec0475e7d8" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>operator==</name></member>
+      <member refid="class_cyclic_iterator_1a56c990ef53c0037188c0c63e621ce064" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>pointer</name></member>
+      <member refid="class_cyclic_iterator_1abd9e0277d2c7649df2f85440d2621f14" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>reference</name></member>
+      <member refid="class_cyclic_iterator_1ae369ce6761d18e2185a0afb442148064" prot="public" virt="non-virtual"><scope>CyclicIterator</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_swap_8_h" kind="file" language="C++">
+    <compoundname>Swap.H</compoundname>
+    <innerclass refid="class_swap" prot="public">Swap</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_Swap_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Swap_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="5" refid="class_swap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_swap" kindref="compound">Swap</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="13" refid="class_swap_1a6dc37c0d395d9b2fb1e64663ff915966" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_swap_1a6dc37c0d395d9b2fb1e64663ff915966" kindref="member">b</ref>[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)];</highlight></codeline>
+<codeline lineno="14" refid="class_swap_1a03f540ca067876830ba1578149a3df94" refkind="member"><highlight class="normal"><sp/><sp/>}<sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="class_swap_1aa2689005b6ec0a473f765ceb3f818d53" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_swap_1aa2689005b6ec0a473f765ceb3f818d53" kindref="member">Swap</ref>()<sp/>:<sp/><ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="19" refid="class_swap_1ae7935aea92931e1aaf43cc8d58cdb8fe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_swap_1ae7935aea92931e1aaf43cc8d58cdb8fe" kindref="member">Swap</ref>(T<sp/>i)<sp/>:<sp/><ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref>(0)<sp/>{<ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.n=i;}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_swap_1a4dc343c404ffa37a69c3657d8d35e45e" refkind="member"><highlight class="normal"><sp/><sp/>T&amp;<sp/><ref refid="class_swap_1a4dc343c404ffa37a69c3657d8d35e45e" kindref="member">in</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.n;}</highlight></codeline>
+<codeline lineno="22" refid="class_swap_1a00fc85a2685cb00fb2b1f54e5a212ab6" refkind="member"><highlight class="normal"><sp/><sp/>T&amp;<sp/><ref refid="class_swap_1a00fc85a2685cb00fb2b1f54e5a212ab6" kindref="member">rin</ref>()<sp/>{<ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref>=0;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.n;}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_swap_1a1e5b1c625ec09fded0ecbed0f3f1cee3" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="class_swap_1a1e5b1c625ec09fded0ecbed0f3f1cee3" kindref="member">out</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" kindref="member">n</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;<ref refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" kindref="member">n</ref>/2;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.b[j];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.b[j]<sp/>=<sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.b[<ref refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" kindref="member">n</ref>-1-j];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.b[<ref refid="class_swap_1ab0e6caeb0bcd672f45a7c76605cf26b4" kindref="member">n</ref>-1-j]<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_swap_1a8a9bd2ae6473c842d407f4900eae32a5" kindref="member">done</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_swap_1a03f540ca067876830ba1578149a3df94" kindref="member">u</ref>.n;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/Swap.H"/>
+  </compounddef>
+</doxygen>

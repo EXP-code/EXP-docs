@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_coef" kind="class" language="C++" prot="public">
+    <compoundname>OutCoef</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_coef_8_h" local="no">OutCoef.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_coef_1a61424a6820881114f27fc4739d7ae092" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutCoef::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutCoef::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="21" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_coef_1a0f3c9ffb790b9ed5d734fe0f0f321a20" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutCoef::native</definition>
+        <argsstring></argsstring>
+        <name>native</name>
+        <qualifiedname>OutCoef::native</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="24" column="8" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_coef_1a1cce1046b87c56c64e45e23ae01cffa7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutCoef::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <qualifiedname>OutCoef::prev</qualifiedname>
+        <initializer>= -std::numeric_limits&lt;double&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_coef_1ae5d416d4c5dacbb4e1ebb4d8f16b342f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+        <definition>Component* OutCoef::tcomp</definition>
+        <argsstring></argsstring>
+        <name>tcomp</name>
+        <qualifiedname>OutCoef::tcomp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="23" column="13" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_coef_1a756249356030a2b5667c50bb6c919536" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutCoef::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutCoef::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="29" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_coef_1a004865edcd8ef66cd83adff57b49c564" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutCoef::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutCoef::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="26" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_coef_1a104cb10e976d385b1d843a134f3383df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutCoef::OutCoef</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutCoef</name>
+        <qualifiedname>OutCoef::OutCoef</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="34" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_coef_1a1bc2ffd2ed33add9431a473b41eef9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutCoef::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutCoef::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Generate the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time step used to decide whether or not to dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should be true on final step to force phase space dump indepentently of whether or not the frequency criterion is met </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="43" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Dump coefficients at each interval</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the coefficient file</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the component to dump</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the frequency between file updates</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>native</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true uses old-style native coefficient format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutCoef</label>
+        <link refid="class_out_coef"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="7">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>OutCoef</label>
+        <link refid="class_out_coef"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>tcomp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="6">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutCoef.H" line="16" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutCoef.H" bodystart="17" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>conf</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>current_keys</name></member>
+      <member refid="class_out_coef_1a61424a6820881114f27fc4739d7ae092" prot="private" virt="non-virtual"><scope>OutCoef</scope><name>filename</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutCoef</scope><name>id</name></member>
+      <member refid="class_out_coef_1a004865edcd8ef66cd83adff57b49c564" prot="private" virt="virtual"><scope>OutCoef</scope><name>initialize</name></member>
+      <member refid="class_out_coef_1a0f3c9ffb790b9ed5d734fe0f0f321a20" prot="private" virt="non-virtual"><scope>OutCoef</scope><name>native</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_coef_1a104cb10e976d385b1d843a134f3383df" prot="public" virt="non-virtual"><scope>OutCoef</scope><name>OutCoef</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutCoef</scope><name>Output</name></member>
+      <member refid="class_out_coef_1a1cce1046b87c56c64e45e23ae01cffa7" prot="private" virt="non-virtual"><scope>OutCoef</scope><name>prev</name></member>
+      <member refid="class_out_coef_1a1bc2ffd2ed33add9431a473b41eef9b8" prot="public" virt="virtual"><scope>OutCoef</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>stopWatch</name></member>
+      <member refid="class_out_coef_1ae5d416d4c5dacbb4e1ebb4d8f16b342f" prot="private" virt="non-virtual"><scope>OutCoef</scope><name>tcomp</name></member>
+      <member refid="class_output_1a69f42df0c1eab6a81fb2346e59c66943" prot="protected" virt="non-virtual"><scope>OutCoef</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutCoef</scope><name>unmatched</name></member>
+      <member refid="class_out_coef_1a756249356030a2b5667c50bb6c919536" prot="private" virt="non-virtual"><scope>OutCoef</scope><name>valid_keys</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutCoef</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

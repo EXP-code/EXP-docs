@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_p_s_p_8_h" kind="file" language="C++">
+    <compoundname>PSP.H</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">list</includes>
+    <includes refid="_string_tok_8_h" local="no">StringTok.H</includes>
+    <includes refid="header_8_h" local="no">header.H</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>StringTok.H</label>
+        <link refid="_string_tok_8_h"/>
+      </node>
+      <node id="13">
+        <label>header.H</label>
+        <link refid="header_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H</label>
+        <link refid="_p_s_p_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>iomanip</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>list</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="16">
+        <label>mpi.h</label>
+      </node>
+      <node id="14">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_p_particle" prot="public">PParticle</innerclass>
+    <innerclass refid="class_p_s_p" prot="public">PSP</innerclass>
+    <innerclass refid="class_p_s_pout" prot="public">PSPout</innerclass>
+    <innerclass refid="class_p_s_pspl" prot="public">PSPspl</innerclass>
+    <innerclass refid="class_p_s_pstanza" prot="public">PSPstanza</innerclass>
+    <innerclass refid="class_s_particle" prot="public">SParticle</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_p_s_p_8_h_1a61255872620ec08f086ba45de5c8548f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_p_s_p" kindref="compound">PSP</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;PSP&gt; PSPptr</definition>
+        <argsstring></argsstring>
+        <name>PSPptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" line="379" column="25" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" bodystart="379" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_p_s_p_8_h_1a0c33155cd20fa52bb59dae9e9ecd789d" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string trimLeft</definition>
+        <argsstring>(const std::string)</argsstring>
+        <name>trimLeft</name>
+        <param>
+          <type>const std::string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" line="376" column="20" declfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" declline="376" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_s_p_8_h_1a5884ecf75ad5a47d0e0d6b4b417f44c9" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string trimRight</definition>
+        <argsstring>(const std::string)</argsstring>
+        <name>trimRight</name>
+        <param>
+          <type>const std::string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" line="377" column="20" declfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H" declline="377" declcolumn="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_PSP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_tok_8_h" kindref="compound">StringTok.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="header_8_h" kindref="compound">header.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="class_component_header" kindref="compound">ComponentHeader</ref><sp/><ref refid="class_p_s_pstanza_1a19838240850902d1b2eac2e352587240" kindref="member">comp</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_p_s_pstanza_1af7488c06bf74a6cd75d0f905913d667d" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_p_s_pstanza_1ab92c0c4588a902dd71d78f11e7a22e08" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_p_s_pstanza_1adf47f413f090c5298208e7f21dff2ae4" kindref="member">cparam</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_p_s_pstanza_1a8167a9b7b3f56f02180524ee1169e0fb" kindref="member">fparam</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza_1af528728ac1a848e07b470ca5673f5602" kindref="member">index_size</ref>,<sp/><ref refid="class_p_s_pstanza_1ada8afb7b71b2f10e33f176b216bad41b" kindref="member">r_size</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_p_s_pstanza_1ae3403c65d6a95090bd329e2ced9452e4" refkind="member"><highlight class="normal"><sp/><sp/>std::streampos<sp/><ref refid="class_p_s_pstanza_1ae3403c65d6a95090bd329e2ced9452e4" kindref="member">pos</ref>,<sp/><ref refid="class_p_s_pstanza_1ad6d5fd1c161337c6dbb027e495c82a4f" kindref="member">pspos</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="class_p_s_pstanza_1a6bb2d0af5e659e64e707acb7ece01e23" kindref="member">nparts</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_p_s_pstanza_1aa8033a91801d2bdafc599e19019cc54d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza_1aa8033a91801d2bdafc599e19019cc54d" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref>&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="33"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_p_s_pstanza_1af7488c06bf74a6cd75d0f905913d667d" kindref="member">name</ref>.compare(x.<ref refid="class_p_s_pstanza_1af7488c06bf74a6cd75d0f905913d667d" kindref="member">name</ref>)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>real&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_particle" kindref="compound">PParticle</ref><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>real<sp/><ref refid="class_p_particle_1a8b91e6a246ca00270720d5271a4cdb05" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>real<sp/><ref refid="class_p_particle_1a146e6561f9a12ae05e99bc5c9aec3593" kindref="member">pos</ref>[3];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>real<sp/><ref refid="class_p_particle_1a00635e03cd9331c8a771aafddb2b6b95" kindref="member">vel</ref>[3];</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>real<sp/><ref refid="class_p_particle_1a0779ab6c2e489b40c405def3b60496bb" kindref="member">phi</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_p_particle_1a9c982910921fa8838981bbb167095d8e" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><sp/><sp/><ref refid="class_p_particle_1a9c982910921fa8838981bbb167095d8e" kindref="member">iatr</ref>;</highlight></codeline>
+<codeline lineno="52" refid="class_p_particle_1ac28bd560eb3f5fe530c79faed34c96db" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;real&gt;<sp/><sp/><ref refid="class_p_particle_1ac28bd560eb3f5fe530c79faed34c96db" kindref="member">datr</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_particle_1a4ea8f20fdb8947ed69b23d1970ee9e91" kindref="member">indx</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_p_particle_1a29377bba1dc57d0c277c1ad1e5b811c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_particle_1a29377bba1dc57d0c277c1ad1e5b811c6" kindref="member">read</ref>(std::istream&amp;<sp/>in,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pcount,<sp/>std::list&lt;PSPstanza&gt;::iterator<sp/>spos)<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sequence<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spos-&gt;index_size)<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a4ea8f20fdb8947ed69b23d1970ee9e91" kindref="member">indx</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_particle_1a4ea8f20fdb8947ed69b23d1970ee9e91" kindref="member">indx</ref><sp/>=<sp/>pcount;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spos-&gt;comp.niatr)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_p_particle_1a35bde61886d1d4ac16bec65ba458bb4b" kindref="member">iatr</ref>.size()<sp/>!=<sp/>spos-&gt;comp.niatr)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_particle_1a35bde61886d1d4ac16bec65ba458bb4b" kindref="member">iatr</ref><sp/>=<sp/>std::vector&lt;int&gt;(spos-&gt;comp.niatr);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spos-&gt;comp.ndatr)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_p_particle_1abe2a4ab9eb66a505dc05eaf332bf9725" kindref="member">datr</ref>.size()<sp/>!=<sp/>spos-&gt;comp.ndatr)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_particle_1abe2a4ab9eb66a505dc05eaf332bf9725" kindref="member">datr</ref><sp/>=<sp/>std::vector&lt;real&gt;(spos-&gt;comp.ndatr);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>rest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a8b91e6a246ca00270720d5271a4cdb05" kindref="member">mass</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;3;<sp/>i++)<sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a146e6561f9a12ae05e99bc5c9aec3593" kindref="member">pos</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;3;<sp/>i++)<sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a00635e03cd9331c8a771aafddb2b6b95" kindref="member">vel</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a0779ab6c2e489b40c405def3b60496bb" kindref="member">phi</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;spos-&gt;comp.niatr;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1a35bde61886d1d4ac16bec65ba458bb4b" kindref="member">iatr</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;spos-&gt;comp.ndatr;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in.read((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;<ref refid="class_p_particle_1abe2a4ab9eb66a505dc05eaf332bf9725" kindref="member">datr</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_particle" kindref="compound">SParticle</ref></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;<sp/>PParticle&lt;float&gt;<sp/><sp/>&gt;<sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;<sp/>PParticle&lt;double&gt;<sp/>&gt;<sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_s_particle_1aca1ed0bda038aef357c0e2cc5b13e2f9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_s_particle_1aca1ed0bda038aef357c0e2cc5b13e2f9" kindref="member">SParticle</ref>()<sp/>:<sp/><ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_s_particle_1a8157fb0d9cf66912cb6701a2ff9633c9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a8157fb0d9cf66912cb6701a2ff9633c9" kindref="member">mass</ref>()</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;mass;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;mass;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_s_particle_1a78846a0b0c51b3cbaf042ae88d7177da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a78846a0b0c51b3cbaf042ae88d7177da" kindref="member">pos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;pos[i];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;pos[i];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_s_particle_1a41dfa34d6ec61e198033136a872c0c00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a41dfa34d6ec61e198033136a872c0c00" kindref="member">vel</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;vel[i];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;vel[i];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_s_particle_1a6a5f63d8da26a14c969db6e041b37bc0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6a5f63d8da26a14c969db6e041b37bc0" kindref="member">niatr</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;iatr.size();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;iatr.size();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_s_particle_1af2951ccfc489933053cdf4a2c7c1d240" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1af2951ccfc489933053cdf4a2c7c1d240" kindref="member">ndatr</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;datr.size();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;datr.size();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_s_particle_1ada7b18112aabcc34e13adece0f12fe80" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1ada7b18112aabcc34e13adece0f12fe80" kindref="member">iatr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;f-&gt;<ref refid="class_s_particle_1ada7b18112aabcc34e13adece0f12fe80" kindref="member">iatr</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;iatr[i];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>index&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;d-&gt;<ref refid="class_s_particle_1ada7b18112aabcc34e13adece0f12fe80" kindref="member">iatr</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;iatr[i];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>index&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_s_particle_1a4ab8645134e8d7ffe1690283764ff64d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a4ab8645134e8d7ffe1690283764ff64d" kindref="member">datr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;f-&gt;<ref refid="class_s_particle_1a4ab8645134e8d7ffe1690283764ff64d" kindref="member">datr</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;datr[i];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>index&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;d-&gt;<ref refid="class_s_particle_1a4ab8645134e8d7ffe1690283764ff64d" kindref="member">datr</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;datr[i];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>index&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="class_s_particle_1a850c9d55a0ac2e88ccb548731d6935c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a850c9d55a0ac2e88ccb548731d6935c3" kindref="member">phi</ref>()</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;phi;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;phi;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="class_s_particle_1a41095f11582d1dcc761c7fcab69c56b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a41095f11582d1dcc761c7fcab69c56b6" kindref="member">indx</ref>()</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;indx;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;indx;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Particle<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_s_particle_1a2ec8fb3cbd496e7c4352cb887e7efe04" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a2ec8fb3cbd496e7c4352cb887e7efe04" kindref="member">setSize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rsize)<sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>==<sp/>rsize)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>.get();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">))<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>.get();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>=<sp/>rsize;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref><sp/>=<sp/>std::shared_ptr&lt;<sp/>PParticle&lt;float&gt;<sp/><sp/>&gt;(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_particle" kindref="compound">PParticle&lt;float&gt;</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref><sp/>=<sp/>std::shared_ptr&lt;<sp/>PParticle&lt;double&gt;<sp/>&gt;(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_particle" kindref="compound">PParticle&lt;double&gt;</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_s_particle_1a1013b78907603a527ec111e5bd233521" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1a1013b78907603a527ec111e5bd233521" kindref="member">read</ref>(std::istream&amp;<sp/>in,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rsize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pcount,<sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;PSPstanza&gt;::iterator<sp/>spos)<sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a2ec8fb3cbd496e7c4352cb887e7efe04" kindref="member">setSize</ref>(rsize);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_s_particle_1a1e0841e9281e5ff1dd7d57265d4831ee" kindref="member">s</ref><sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">))<sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a6258a2072e60597466c2af5ad40f6b5e" kindref="member">f</ref>-&gt;read(in,<sp/>pcount,<sp/>spos);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_particle_1a6bd589ecef7985abfd77f7f5386a6513" kindref="member">d</ref>-&gt;read(in,<sp/>pcount,<sp/>spos);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="class_s_particle_1acaaab0fbe3e4e7827d3191e9f5b677b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_particle_1acaaab0fbe3e4e7827d3191e9f5b677b9" kindref="member">write</ref>(std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>real4,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>isiz);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_s_p" kindref="compound">PSP</ref></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a5de18018153d3ebc6878483423c39cc6" kindref="member">magic</ref><sp/>=<sp/>0xadbfabc0;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1aa420e0d35ceaa543236b116a3509cd24" kindref="member">mmask</ref><sp/>=<sp/>0xf;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a3db2dc47d3c7e19eee39f44f82bb69c4" kindref="member">nmask</ref><sp/>=<sp/>~mmask;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><ref refid="class_master_header" kindref="compound">MasterHeader</ref><sp/><ref refid="class_p_s_p_1a16e6c80a44c4e9902616f3f85a885c37" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1ac41847620427c5c925c3785406ee1219" kindref="member">VERBOSE</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="237" refid="class_p_s_p_1a0f0f7c13568ccab0cf2aaca433e38fda" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;PSPstanza&gt;<sp/><ref refid="class_p_s_p_1a0f0f7c13568ccab0cf2aaca433e38fda" kindref="member">stanzas</ref>;</highlight></codeline>
+<codeline lineno="238" refid="class_p_s_p_1a305ce18ca9c87c48bacf025fbc8749b4" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;PSPstanza&gt;::iterator<sp/><ref refid="class_p_s_p_1a305ce18ca9c87c48bacf025fbc8749b4" kindref="member">spos</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/>*<ref refid="class_p_s_p_1ac243122a19a28e859083d362a940cd9c" kindref="member">cur</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref><sp/><ref refid="class_p_s_p_1a68c3dbf899baec8255f4af26e534cee9" kindref="member">part</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1ae472fd355d5a72505917b8f1a878c738" kindref="member">pcount</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>std::ifstream<sp/><ref refid="class_p_s_p_1a9120b778d2f1f85237e4000531a398b7" kindref="member">in</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1acf16e5ddf7cec3471faa970e98c18525" kindref="member">mtot</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="class_p_s_p_1a3f18fa7ed15530d6dadb0e147113e387" kindref="member">pmin</ref>,<sp/><ref refid="class_p_s_p_1ac5c8a08a13b0f8d66e4dcfe63cc1d511" kindref="member">pmed</ref>,<sp/><ref refid="class_p_s_p_1a13ab03638eda2112ca35865c82b52934" kindref="member">pmax</ref>;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="class_p_s_p_1a07e18a1a45d705e9e82360dd8abd093b" kindref="member">vmin</ref>,<sp/><ref refid="class_p_s_p_1a912a4ecef2f5011e96c7f837ff18d6c2" kindref="member">vmed</ref>,<sp/><ref refid="class_p_s_p_1adefeff8d008510d290fe86861a15f966" kindref="member">vmax</ref>;</highlight></codeline>
+<codeline lineno="250" refid="class_p_s_p_1abe89d646d7a19b2cb144bbb7766696c8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1abe89d646d7a19b2cb144bbb7766696c8" kindref="member">ComputeStats</ref>();</highlight></codeline>
+<codeline lineno="251" refid="class_p_s_p_1af76c58f257d5dcf8461886c7fde94342" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1af76c58f257d5dcf8461886c7fde94342" kindref="member">write_binary</ref>(std::ostream&amp;<sp/>out,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;PSPstanza&gt;::iterator<sp/>its,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>real4);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="class_p_s_p_1a4414d3fc0c276655e781e9289ce74e71" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a4414d3fc0c276655e781e9289ce74e71" kindref="member">check_dirname</ref>();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_p_s_p_1a5cafa14a12e55cce6f446a3d52aa9ca3" kindref="member">new_dir</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="class_p_s_p_1a7efdf4f078e2773413d838bf2c99c188" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a7efdf4f078e2773413d838bf2c99c188" kindref="member">init</ref>()</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>&lt;in&gt;<sp/>to<sp/>throw<sp/>if<sp/>failbit<sp/>gets<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_p_s_p_1a9120b778d2f1f85237e4000531a398b7" kindref="member">in</ref>.exceptions(std::ifstream::failbit<sp/>|<sp/>std::ifstream::badbit);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_p_s_p_1a03a6fe03fcc607682fbaf29cc821d3c8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_s_p_1a03a6fe03fcc607682fbaf29cc821d3c8" kindref="member">PSP</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose)<sp/>:<sp/><ref refid="class_p_s_p_1ac41847620427c5c925c3785406ee1219" kindref="member">VERBOSE</ref>(verbose),<sp/><ref refid="class_p_s_p_1a5cafa14a12e55cce6f446a3d52aa9ca3" kindref="member">new_dir</ref>(</highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">)<sp/>{<sp/><ref refid="class_p_s_p_1a7efdf4f078e2773413d838bf2c99c188" kindref="member">init</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="class_p_s_p_1ac6d4743f819bdea0568b8d9df184c45e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_s_p_1ac6d4743f819bdea0568b8d9df184c45e" kindref="member">PSP</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose,<sp/>std::string<sp/><ref refid="class_p_s_p_1a5cafa14a12e55cce6f446a3d52aa9ca3" kindref="member">new_dir</ref>)<sp/>:<sp/><ref refid="class_p_s_p_1ac41847620427c5c925c3785406ee1219" kindref="member">VERBOSE</ref>(verbose),<sp/><ref refid="class_p_s_p_1a5cafa14a12e55cce6f446a3d52aa9ca3" kindref="member">new_dir</ref>(<ref refid="class_p_s_p_1a5cafa14a12e55cce6f446a3d52aa9ca3" kindref="member">new_dir</ref>)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="class_p_s_p_1a7efdf4f078e2773413d838bf2c99c188" kindref="member">init</ref>();<sp/><ref refid="class_p_s_p_1a4414d3fc0c276655e781e9289ce74e71" kindref="member">check_dirname</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="class_p_s_p_1a9af6f9e5c41c73ae19ad840d2ae97d25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a9af6f9e5c41c73ae19ad840d2ae97d25" kindref="member">~PSP</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_p_s_p_1a9120b778d2f1f85237e4000531a398b7" kindref="member">in</ref>.is_open())<sp/><ref refid="class_p_s_p_1a9120b778d2f1f85237e4000531a398b7" kindref="member">in</ref>.close();<sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="class_p_s_p_1a0fa94201613e3a29a3c881b5372b06a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a0fa94201613e3a29a3c881b5372b06a6" kindref="member">CurrentTime</ref>()<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a16e6c80a44c4e9902616f3f85a885c37" kindref="member">header</ref>.<ref refid="class_master_header_1a57c58e93be3ab14b4e3595078eb0a0be" kindref="member">time</ref>;}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="281" refid="class_p_s_p_1a6b3a0cb0a82c573c806361375ad75ab8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_p_s_p_1a6b3a0cb0a82c573c806361375ad75ab8" kindref="member">PrintSummary</ref><sp/><sp/><sp/><sp/><sp/>(std::ostream<sp/>&amp;out,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stats=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>timeonly=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="class_p_s_p_1a93484925bd1aee6e534ee7fdfa2e9311" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/>*<ref refid="class_p_s_p_1a93484925bd1aee6e534ee7fdfa2e9311" kindref="member">GetNamed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/>x;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>x.<ref refid="class_p_s_pstanza_1af7488c06bf74a6cd75d0f905913d667d" kindref="member">name</ref><sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>std::find(<ref refid="class_p_s_p_1a655b102c58695d176811f6b9e16fcd76" kindref="member">stanzas</ref>.begin(),<sp/><ref refid="class_p_s_p_1a655b102c58695d176811f6b9e16fcd76" kindref="member">stanzas</ref>.end(),<sp/>x);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/><ref refid="class_p_s_p_1a655b102c58695d176811f6b9e16fcd76" kindref="member">stanzas</ref>.end())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_p_s_p_1a7bad6b96c2370bc3bb7abf3cd37f7de4" kindref="member">spos</ref><sp/>=<sp/>it;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_p_s_p_1ac243122a19a28e859083d362a940cd9c" kindref="member">cur</ref><sp/><sp/>=<sp/>&amp;(*spos);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1ac243122a19a28e859083d362a940cd9c" kindref="member">cur</ref>;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="class_p_s_p_1a080aad64bc28ca28412c97263823a0ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/>*<ref refid="class_p_s_p_1a080aad64bc28ca28412c97263823a0ee" kindref="member">GetStanza</ref>();</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="class_p_s_p_1aaa3c4a5f503b26e2ed91e6fb8ffc38ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pstanza" kindref="compound">PSPstanza</ref><sp/>*<ref refid="class_p_s_p_1aaa3c4a5f503b26e2ed91e6fb8ffc38ac" kindref="member">NextStanza</ref>();</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="class_p_s_p_1a6bdb813865838e6b5118479b8a8dc863" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref><sp/>*<ref refid="class_p_s_p_1a6bdb813865838e6b5118479b8a8dc863" kindref="member">GetParticle</ref><sp/>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="class_p_s_p_1a1260d1db1a09a117be62692e34cf7bd8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref><sp/>*<ref refid="class_p_s_p_1a1260d1db1a09a117be62692e34cf7bd8" kindref="member">NextParticle</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"></codeline>
+<codeline lineno="310" refid="class_p_s_p_1a2aafae2e71f5d928a3a2c9075ebfd72f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_p_1a2aafae2e71f5d928a3a2c9075ebfd72f" kindref="member">begin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a6bdb813865838e6b5118479b8a8dc863" kindref="member">GetParticle</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="311" refid="class_p_s_p_1a75ffb3e202683386b7b9646afb349213" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_p_1a75ffb3e202683386b7b9646afb349213" kindref="member">end</ref><sp/><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="312" refid="class_p_s_p_1a5be729fe6610014a5300aed5bdd6c97e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_p_1a5be729fe6610014a5300aed5bdd6c97e" kindref="member">operator++</ref>()<sp/>{<sp/><ref refid="class_p_s_p_1a1260d1db1a09a117be62692e34cf7bd8" kindref="member">NextParticle</ref>();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_p_s_p_1a68c3dbf899baec8255f4af26e534cee9" kindref="member">part</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="313" refid="class_p_s_p_1a3becaa90556a364f94574e3f0cdbc8e3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a3becaa90556a364f94574e3f0cdbc8e3" kindref="member">operator==</ref>(<ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;other)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_p_s_p_1a68c3dbf899baec8255f4af26e534cee9" kindref="member">part</ref><sp/>==<sp/>other;<sp/>}</highlight></codeline>
+<codeline lineno="315" refid="class_p_s_p_1a5ea1bb15edde30f2976ad9887d6ed3d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a5ea1bb15edde30f2976ad9887d6ed3d1" kindref="member">operator!=</ref>(<ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;other)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_p_s_p_1a68c3dbf899baec8255f4af26e534cee9" kindref="member">part</ref><sp/>!=<sp/>other;<sp/>}</highlight></codeline>
+<codeline lineno="318"></codeline>
+<codeline lineno="320" refid="class_p_s_p_1a6faf9fda5ed3f97e1c1d497418692bb1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p_1a6faf9fda5ed3f97e1c1d497418692bb1" kindref="member">writePSP</ref>(std::ostream&amp;<sp/>out,<sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>real4);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="class_p_s_p_1ac771aabc04e43d59c60dbf69a1970c43" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;PSP&gt;<sp/><ref refid="class_p_s_p_1ac771aabc04e43d59c60dbf69a1970c43" kindref="member">getPSP</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>dir<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_s_pout" kindref="compound">PSPout</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p" kindref="compound">PSP</ref></highlight></codeline>
+<codeline lineno="334"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="336" refid="class_p_s_pout_1a3c5392cc3a22649edf09b14717cc4121" refkind="member"><highlight class="normal"><sp/><sp/>std::streampos<sp/><ref refid="class_p_s_pout_1a3c5392cc3a22649edf09b14717cc4121" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="339" refid="class_p_s_pout_1a0659d978c49eed7f1a8b1e0c37350ede" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_s_pout_1a0659d978c49eed7f1a8b1e0c37350ede" kindref="member">PSPout</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="class_p_s_pout_1a9e8a026b671cf663e5f2519534911ddd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pout_1a9e8a026b671cf663e5f2519534911ddd" kindref="member">~PSPout</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346" refid="class_p_s_pout_1a315c5defe2068ac25a9e634e2c0406f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_pout_1a315c5defe2068ac25a9e634e2c0406f1" kindref="member">GetParticle</ref><sp/>();</highlight></codeline>
+<codeline lineno="347" refid="class_p_s_pout_1ad4f298bce6c3c72e5963c5751c427916" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_pout_1ad4f298bce6c3c72e5963c5751c427916" kindref="member">NextParticle</ref>();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_s_pspl" kindref="compound">PSPspl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_p_s_p" kindref="compound">PSP</ref></highlight></codeline>
+<codeline lineno="355"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pspl_1af63e907442b509f9315712c86336cca7" kindref="member">N</ref>;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pspl_1a3194623b11b067e6b99e657a93528627" kindref="member">fcount</ref>;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;::iterator<sp/><ref refid="class_p_s_pspl_1af68138d2d7830403f6903d84b08c0dd8" kindref="member">fit</ref>;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="class_p_s_pspl_1a07a1791bfbacdf7917b49ab60d6f4e1e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pspl_1a07a1791bfbacdf7917b49ab60d6f4e1e" kindref="member">openNextBlob</ref>();</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="366" refid="class_p_s_pspl_1a4852efcb4eeeebfc2b975ea918c5d9aa" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_s_pspl_1a4852efcb4eeeebfc2b975ea918c5d9aa" kindref="member">PSPspl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>dir<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369" refid="class_p_s_pspl_1a0454a81ffbe61888c773ac4f55dfb80d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_p_s_pspl_1a0454a81ffbe61888c773ac4f55dfb80d" kindref="member">~PSPspl</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="class_p_s_pspl_1a5fba477a148cda6c52d37a9c020a7dbb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_pspl_1a5fba477a148cda6c52d37a9c020a7dbb" kindref="member">GetParticle</ref><sp/>();</highlight></codeline>
+<codeline lineno="372" refid="class_p_s_pspl_1a4f8bca666da7b2e5565964538ddaa886" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_s_particle" kindref="compound">SParticle</ref>*<sp/><ref refid="class_p_s_pspl_1a4f8bca666da7b2e5565964538ddaa886" kindref="member">NextParticle</ref>();</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376" refid="_p_s_p_8_h_1a0c33155cd20fa52bb59dae9e9ecd789d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_p_s_p_8_h_1a0c33155cd20fa52bb59dae9e9ecd789d" kindref="member">trimLeft</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string);</highlight></codeline>
+<codeline lineno="377" refid="_p_s_p_8_h_1a5884ecf75ad5a47d0e0d6b4b417f44c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_p_s_p_8_h_1a5884ecf75ad5a47d0e0d6b4b417f44c9" kindref="member">trimRight</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379" refid="_p_s_p_8_h_1a61255872620ec08f086ba45de5c8548f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;PSP&gt;<sp/><ref refid="_p_s_p_8_h_1a61255872620ec08f086ba45de5c8548f" kindref="member">PSPptr</ref>;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/PSP.H"/>
+  </compounddef>
+</doxygen>

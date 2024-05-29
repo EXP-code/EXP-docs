@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcxxopts_1_1_option_adder" kind="class" language="C++" prot="public">
+    <compoundname>cxxopts::OptionAdder</compoundname>
+    <includes refid="cxxopts_8_h" local="no">cxxopts.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcxxopts_1_1_option_adder_1ab159178d063eaa4836fe828036dc25a8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string cxxopts::OptionAdder::m_group</definition>
+        <argsstring></argsstring>
+        <name>m_group</name>
+        <qualifiedname>cxxopts::OptionAdder::m_group</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1901" column="17" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1901" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcxxopts_1_1_option_adder_1a84a1bb47fc5417299ceefbbdaf84c6cb" prot="private" static="no" mutable="no">
+        <type><ref refid="classcxxopts_1_1_options" kindref="compound">Options</ref> &amp;</type>
+        <definition>Options&amp; cxxopts::OptionAdder::m_options</definition>
+        <argsstring></argsstring>
+        <name>m_options</name>
+        <qualifiedname>cxxopts::OptionAdder::m_options</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1900" column="13" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1900" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcxxopts_1_1_option_adder_1a4feb747760c5fbaa807a4c8e1c335ac5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcxxopts_1_1_option_adder" kindref="compound">OptionAdder</ref> &amp;</type>
+        <definition>OptionAdder &amp; cxxopts::OptionAdder::operator()</definition>
+        <argsstring>(const std::string &amp;opts, const std::string &amp;desc, const std::shared_ptr&lt; const Value &gt; &amp;value=::cxxopts::value&lt; bool &gt;(), std::string arg_help=&quot;&quot;)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>cxxopts::OptionAdder::operator()</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>opts</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; const <ref refid="classcxxopts_1_1_value" kindref="compound">Value</ref> &gt; &amp;</type>
+          <declname>value</declname>
+          <defval><ref refid="namespacecxxopts_1a6b58e451713ebbf12866c1cd8e0a66ab" kindref="member">::cxxopts::value</ref>&lt; bool &gt;()</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>arg_help</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1890" column="5" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="2111" bodyend="2154"/>
+        <references refid="namespacecxxopts_1_1values_1_1parser__tool_1a87d93ecf1931bfdf64feb40a008fa909" compoundref="cxxopts_8_h" startline="774" endline="787">cxxopts::values::parser_tool::SplitSwitchDef</references>
+        <references refid="namespacecxxopts_1a6b58e451713ebbf12866c1cd8e0a66ab" compoundref="cxxopts_8_h" startline="1224" endline="1227">cxxopts::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classcxxopts_1_1_option_adder_1ac9da55d72245e55eed70486200a60728" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cxxopts::OptionAdder::OptionAdder</definition>
+        <argsstring>(Options &amp;options, std::string group)</argsstring>
+        <name>OptionAdder</name>
+        <qualifiedname>cxxopts::OptionAdder::OptionAdder</qualifiedname>
+        <param>
+          <type><ref refid="classcxxopts_1_1_options" kindref="compound">Options</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1884" column="5" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1884" bodyend="1887"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>cxxopts::OptionAdder</label>
+        <link refid="classcxxopts_1_1_option_adder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_options</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cxxopts::Options</label>
+        <link refid="classcxxopts_1_1_options"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1880" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1881" bodyend="1902"/>
+    <listofallmembers>
+      <member refid="classcxxopts_1_1_option_adder_1ab159178d063eaa4836fe828036dc25a8" prot="private" virt="non-virtual"><scope>cxxopts::OptionAdder</scope><name>m_group</name></member>
+      <member refid="classcxxopts_1_1_option_adder_1a84a1bb47fc5417299ceefbbdaf84c6cb" prot="private" virt="non-virtual"><scope>cxxopts::OptionAdder</scope><name>m_options</name></member>
+      <member refid="classcxxopts_1_1_option_adder_1a4feb747760c5fbaa807a4c8e1c335ac5" prot="public" virt="non-virtual"><scope>cxxopts::OptionAdder</scope><name>operator()</name></member>
+      <member refid="classcxxopts_1_1_option_adder_1ac9da55d72245e55eed70486200a60728" prot="public" virt="non-virtual"><scope>cxxopts::OptionAdder</scope><name>OptionAdder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

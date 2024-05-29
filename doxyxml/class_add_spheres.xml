@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_add_spheres" kind="class" language="C++" prot="public">
+    <compoundname>AddSpheres</compoundname>
+    <includes refid="_add_spheres_8_h" local="no">AddSpheres.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_add_spheres_1a3752c393a87e30bbd5bde2e9f9ce9148" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AddSpheres::bmass</definition>
+        <argsstring></argsstring>
+        <name>bmass</name>
+        <qualifiedname>AddSpheres::bmass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="14" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1ac853aac83611f1be0d6ae7c05693411c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AddSpheres::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>AddSpheres::d</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="12" column="17" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1ac0f917bb495a3d3488a0a0b6a84b58ab" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AddSpheres::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <qualifiedname>AddSpheres::m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="12" column="19" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1a03a4dee83a71f5d3bd7e4c8f41b42681" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_spherical_model_table" kindref="compound">SphericalModelTable</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SphericalModelTable&gt; AddSpheres::mod</definition>
+        <argsstring></argsstring>
+        <name>mod</name>
+        <qualifiedname>AddSpheres::mod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="13" column="19" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_add_spheres_1a8c643a0063ee1e86169ae4b6eda411a8" compoundref="_add_spheres_8_h" startline="26" endline="26">get_model</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1a6af8b68d4f46eb1b0076f9c1b9b146f0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AddSpheres::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <qualifiedname>AddSpheres::p</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="12" column="21" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1afdf7f1baef8869235d329d199751869b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AddSpheres::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>AddSpheres::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="12" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_add_spheres_1ae2e8657f7c5f96217577711160474281" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool AddSpheres::logarithmic</definition>
+        <argsstring></argsstring>
+        <name>logarithmic</name>
+        <qualifiedname>AddSpheres::logarithmic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="20" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1a6dece412a3047494f11d3fa009b7ccd2" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AddSpheres::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <qualifiedname>AddSpheres::number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="17" column="14" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1a621ade4cdab73c005a0d0525d1d60572" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double AddSpheres::Rmin</definition>
+        <argsstring></argsstring>
+        <name>Rmin</name>
+        <qualifiedname>AddSpheres::Rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="18" column="17" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_add_spheres_1ae8f1711667f56246e8d361f0be99a76a" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool AddSpheres::use_mpi</definition>
+        <argsstring></argsstring>
+        <name>use_mpi</name>
+        <qualifiedname>AddSpheres::use_mpi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="19" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_add_spheres_1a14936f882986f3637e99fc1e106a25ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AddSpheres::AddSpheres</definition>
+        <argsstring>(std::shared_ptr&lt; AxiSymModel &gt; halo, std::shared_ptr&lt; AxiSymModel &gt; bulge, double bmass)</argsstring>
+        <name>AddSpheres</name>
+        <qualifiedname>AddSpheres::AddSpheres</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+          <declname>halo</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+          <declname>bulge</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bmass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="22" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_add_spheres_1a8c643a0063ee1e86169ae4b6eda411a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_spherical_model_table" kindref="compound">SphericalModelTable</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SphericalModelTable &gt; AddSpheres::get_model</definition>
+        <argsstring>()</argsstring>
+        <name>get_model</name>
+        <qualifiedname>AddSpheres::get_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="26" column="19" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="26" bodyend="26"/>
+        <references refid="class_add_spheres_1a03a4dee83a71f5d3bd7e4c8f41b42681" compoundref="_add_spheres_8_h" startline="13">mod</references>
+      </memberdef>
+      <memberdef kind="function" id="class_add_spheres_1a1cdbd6f1b653867756e486a1a07d6616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AddSpheres::~AddSpheres</definition>
+        <argsstring>()</argsstring>
+        <name>~AddSpheres</name>
+        <qualifiedname>AddSpheres::~AddSpheres</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="24" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" line="9" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H" bodystart="10" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_add_spheres_1a14936f882986f3637e99fc1e106a25ae" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>AddSpheres</name></member>
+      <member refid="class_add_spheres_1a3752c393a87e30bbd5bde2e9f9ce9148" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>bmass</name></member>
+      <member refid="class_add_spheres_1ac853aac83611f1be0d6ae7c05693411c" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>d</name></member>
+      <member refid="class_add_spheres_1a8c643a0063ee1e86169ae4b6eda411a8" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>get_model</name></member>
+      <member refid="class_add_spheres_1ae2e8657f7c5f96217577711160474281" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>logarithmic</name></member>
+      <member refid="class_add_spheres_1ac0f917bb495a3d3488a0a0b6a84b58ab" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>m</name></member>
+      <member refid="class_add_spheres_1a03a4dee83a71f5d3bd7e4c8f41b42681" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>mod</name></member>
+      <member refid="class_add_spheres_1a6dece412a3047494f11d3fa009b7ccd2" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>number</name></member>
+      <member refid="class_add_spheres_1a6af8b68d4f46eb1b0076f9c1b9b146f0" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>p</name></member>
+      <member refid="class_add_spheres_1afdf7f1baef8869235d329d199751869b" prot="private" virt="non-virtual"><scope>AddSpheres</scope><name>r</name></member>
+      <member refid="class_add_spheres_1a621ade4cdab73c005a0d0525d1d60572" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>Rmin</name></member>
+      <member refid="class_add_spheres_1ae8f1711667f56246e8d361f0be99a76a" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>use_mpi</name></member>
+      <member refid="class_add_spheres_1a1cdbd6f1b653867756e486a1a07d6616" prot="public" virt="non-virtual"><scope>AddSpheres</scope><name>~AddSpheres</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

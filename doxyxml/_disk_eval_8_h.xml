@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_disk_eval_8_h" kind="file" language="C++">
+    <compoundname>DiskEval.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">tuple</includes>
+    <includes refid="numerical_8_h" local="no">numerical.H</includes>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <includes refid="_emp_cyl_s_l_8_h" local="no">EmpCylSL.H</includes>
+    <includes refid="_disk_models_8_h" local="no">DiskModels.H</includes>
+    <includes local="no">config_exp.h</includes>
+    <incdepgraph>
+      <node id="41">
+        <label>DiskModels.H</label>
+        <link refid="_disk_models_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Particle.H</label>
+        <link refid="include_2_particle_8_h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>coef.H</label>
+        <link refid="include_2coef_8_h"/>
+      </node>
+      <node id="15">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>numerical.H</label>
+        <link refid="numerical_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</label>
+        <link refid="_disk_eval_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="24">
+        <label>chrono</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="31">
+        <label>config_exp.h</label>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>cstring</label>
+      </node>
+      <node id="20">
+        <label>deque</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="18">
+        <label>limits</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="28">
+        <label>math.h</label>
+      </node>
+      <node id="17">
+        <label>memory</label>
+      </node>
+      <node id="29">
+        <label>mpi.h</label>
+      </node>
+      <node id="33">
+        <label>random</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>tuple</label>
+      </node>
+      <node id="26">
+        <label>unordered_map</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="38">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_disk_eval" prot="public">DiskEval</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_disk_eval_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dplgndr</definition>
+        <argsstring>(int l, int m, double x)</argsstring>
+        <name>dplgndr</name>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="29" column="8" declfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" declline="29" declcolumn="8"/>
+        <referencedby refid="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" compoundref="_disk_eval_8_h" startline="110" endline="121">DiskEval::Zlm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_disk_eval_8_h_1aa779218c2cd573c2cb55bb571cd42329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double plgndr</definition>
+        <argsstring>(int l, int m, double x)</argsstring>
+        <name>plgndr</name>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" line="28" column="9" declfile="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H" declline="28" declcolumn="9"/>
+        <referencedby refid="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" compoundref="_disk_eval_8_h" startline="99" endline="107">DiskEval::Ylm</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Do<sp/>multipole<sp/>evaluation<sp/>of<sp/>3-dimensional<sp/>axisymmetric<sp/>disk<sp/>density</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_DiskEval_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DiskEval_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>C++/STL<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MDW<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="numerical_8_h" kindref="compound">numerical.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gauss_q_8_h" kindref="compound">gaussQ.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_emp_cyl_s_l_8_h" kindref="compound">EmpCylSL.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_disk_models_8_h" kindref="compound">DiskModels.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="_disk_eval_8_h_1aa779218c2cd573c2cb55bb571cd42329" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="_disk_eval_8_h_1aa779218c2cd573c2cb55bb571cd42329" kindref="member">plgndr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="29" refid="_disk_eval_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_disk_eval_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" kindref="member">dplgndr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_disk_eval" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disk_eval" kindref="compound">DiskEval</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76" refid="class_disk_eval_1a3ffe9dfcbe9afcc38ce44d6844d2067d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_emp_cyl_s_l_1a686c18b7deb23a96b0608d96a7d13164" kindref="member">EmpCylSL::AxiDiskPtr</ref><sp/><ref refid="class_disk_eval_1a3ffe9dfcbe9afcc38ce44d6844d2067d" kindref="member">model</ref>;</highlight></codeline>
+<codeline lineno="77" refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a1f0cd262d36bc29dde3e42efc1f471d8" kindref="member">xmin</ref>,<sp/><ref refid="class_disk_eval_1a50f747dbf3e409c37c424ec15fe7b060" kindref="member">xmax</ref>,<sp/><ref refid="class_disk_eval_1aa7d9f20640072144f3ccbe2793127a8c" kindref="member">dx</ref>,<sp/><ref refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" kindref="member">ascl</ref>;</highlight></codeline>
+<codeline lineno="78" refid="class_disk_eval_1a07a14f99df80b07aca77ef70cb362a15" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_disk_eval_1a07a14f99df80b07aca77ef70cb362a15" kindref="member">lmax</ref>,<sp/><ref refid="class_disk_eval_1a17099b805a674d5327d11a93b8ee7487" kindref="member">numr</ref>;</highlight></codeline>
+<codeline lineno="79" refid="class_disk_eval_1a4d7b296868f95b0c7008cbde2779ba25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_disk_eval_1a4d7b296868f95b0c7008cbde2779ba25" kindref="member">logr</ref>,<sp/><ref refid="class_disk_eval_1a2371913d523ac9a51d9a66bdbf677566" kindref="member">xscl</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_disk_eval_1ad9c11dc30d6bbf9c7466e758e5365394" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_disk_eval_1ad9c11dc30d6bbf9c7466e758e5365394" kindref="member">cachefile</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;<sp/>std::vector&lt;double&gt;<sp/>&gt;<sp/>rho,<sp/>T1,<sp/>T2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_disk_eval_1a6478dc29d714013eb6ae122dd5d2f725" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;<sp/>std::vector&lt;double&gt;<sp/>&gt;<sp/>&gt;<sp/><ref refid="class_disk_eval_1a6478dc29d714013eb6ae122dd5d2f725" kindref="member">rho</ref>,<sp/><ref refid="class_disk_eval_1ad9a6d11cf445bc90b38854568c1d0e56" kindref="member">T1</ref>,<sp/><ref refid="class_disk_eval_1ab0ae8955161880282a16bf606ad9c363" kindref="member">T2</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>CAUTION:<sp/>this<sp/>will<sp/>fail<sp/>at<sp/>l&gt;150<sp/>owing<sp/>to<sp/>double<sp/>precision<sp/>issues<sp/>in<sp/>exp<sp/>call.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" kindref="member">Nlm</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sqrt(<sp/>(2.0*l+1.0)/(4.0*M_PI)<sp/>)<sp/>*<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exp(0.5*(lgamma(1.0+l-m)<sp/>-<sp/>lgamma(1.0+l+m)));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>CAUTION:<sp/>this<sp/>will<sp/>fail<sp/>at<sp/>l&gt;150<sp/>owing<sp/>to<sp/>double<sp/>precision<sp/>issues.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1afd9313b2e6bb8a709e56614072a31306" kindref="member">Ylm</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cosx)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M<sp/>=<sp/>abs(m);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>plm<sp/>=<sp/><ref refid="_disk_eval_8_h_1aa779218c2cd573c2cb55bb571cd42329" kindref="member">plgndr</ref>(l,<sp/>M,<sp/>cosx);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::isnan(plm)<sp/>or<sp/>std::isinf(plm))</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failure<sp/>in<sp/>pldndr<sp/>at<sp/>l=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>l</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>cosx=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cosx<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" kindref="member">Nlm</ref>(l,<sp/>M)<sp/>*<sp/>plm<sp/>*<sp/>pow(-1.0,<sp/>M);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a6c804ad0c72216520e6981f04b6f39d6" kindref="member">Zlm</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cosx)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(l==0<sp/>or<sp/>fabs(cosx)&gt;=1.0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M<sp/>=<sp/>abs(m);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dplm<sp/>=<sp/><ref refid="_disk_eval_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" kindref="member">dplgndr</ref>(l,<sp/>M,<sp/>cosx);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::isnan(dplm)<sp/>or<sp/>std::isinf(dplm))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failure<sp/>in<sp/>pldndr<sp/>at<sp/>l=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>l</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>cosx=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cosx<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="class_disk_eval_1ab55a4bdf8879821d2a6fd4e4b1e6761e" kindref="member">Nlm</ref>(l,<sp/>M)<sp/>*<sp/>dplm<sp/>*<sp/>pow(-1.0,<sp/>M)<sp/>*<sp/>sqrt(1.0<sp/>-<sp/>cosx*cosx);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_disk_eval_1af527e5bb033d5f040b59b43146555752" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1af527e5bb033d5f040b59b43146555752" kindref="member">x_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" kindref="member">ascl</ref><sp/>*<sp/>x/(1.0<sp/>-<sp/>x);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_disk_eval_1a65550808b09515ef148580f1fb1af8e5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a65550808b09515ef148580f1fb1af8e5" kindref="member">r_to_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r/(r<sp/>+<sp/><ref refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" kindref="member">ascl</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_disk_eval_1ae661096778110e8d4c90fdad7e8d0130" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1ae661096778110e8d4c90fdad7e8d0130" kindref="member">dr_to_dx</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" kindref="member">ascl</ref>/(1.0<sp/>-<sp/>x)/(1.0<sp/>-<sp/>x);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_disk_eval_1a0a0a51858a2446b97e37a077edb26ea8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a0a0a51858a2446b97e37a077edb26ea8" kindref="member">read_cache</ref>();</highlight></codeline>
+<codeline lineno="139" refid="class_disk_eval_1aea106478a15d4b33c66e65a4d7b272fe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1aea106478a15d4b33c66e65a4d7b272fe" kindref="member">write_cache</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_disk_eval_1a1c00adcc1cdda792a4a77dca8fe5e274" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a1c00adcc1cdda792a4a77dca8fe5e274" kindref="member">hmagic</ref><sp/>=<sp/>0x57ee1ed;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="class_disk_eval_1a975ea4ad5d850beb4eb93b82db93dc9f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_disk_eval_1a975ea4ad5d850beb4eb93b82db93dc9f" kindref="member">DiskEval</ref>(<ref refid="class_emp_cyl_s_l_1a686c18b7deb23a96b0608d96a7d13164" kindref="member">EmpCylSL::AxiDiskPtr</ref><sp/><ref refid="class_disk_eval_1a3ffe9dfcbe9afcc38ce44d6844d2067d" kindref="member">model</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmax,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a468e64722f6a660cfbee701d2d7deb4b" kindref="member">ascl</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a07a14f99df80b07aca77ef70cb362a15" kindref="member">lmax</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disk_eval_1a17099b805a674d5327d11a93b8ee7487" kindref="member">numr</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nint,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceprogress" kindref="compound">progress</ref>=</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mmax=1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nump=1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cache=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="class_disk_eval_1ab44b19c6418969bc1555ce63b74a1cea" refkind="member"><highlight class="normal"><sp/><sp/>std::tuple&lt;double,<sp/>double,<sp/>double,<sp/>double&gt;<sp/><ref refid="class_disk_eval_1ab44b19c6418969bc1555ce63b74a1cea" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi=0);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H"/>
+  </compounddef>
+</doxygen>

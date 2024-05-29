@@ -1,0 +1,747 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_barrier_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>BarrierWrapper</compoundname>
+    <includes refid="_barrier_wrapper_8_h" local="no">BarrierWrapper.H</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_barrier_wrapper_1a39928dc8d3ef7bc5aa6378fc6e28aa24" prot="private" static="no">
+        <type>std::pair&lt; <ref refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" kindref="member">CharPtr</ref>, <ref refid="_barrier_wrapper_8_h_1a6ec85faa38de1a08236705734b4e2b26" kindref="member">ReqPtr</ref> &gt;</type>
+        <definition>typedef std::pair&lt;CharPtr, ReqPtr&gt; BarrierWrapper::RecvElem</definition>
+        <argsstring></argsstring>
+        <name>RecvElem</name>
+        <qualifiedname>BarrierWrapper::RecvElem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="126" column="21" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="126" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_barrier_wrapper_1a4838ff865b8d8625c61d208a420f8212" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Info</definition>
+        <argsstring></argsstring>
+        <name>Info</name>
+        <qualifiedname>BarrierWrapper::Info</qualifiedname>
+        <param>
+          <type><ref refid="class_info" kindref="compound">Info</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="122" column="16" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="122" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_barrier_wrapper_1ae738138237618529147077d778dc9e55" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* BarrierWrapper::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>BarrierWrapper::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="131" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a3acf68552460aec4bec9be9e521db98a" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * BarrierWrapper::bufferT</definition>
+        <argsstring></argsstring>
+        <name>bufferT</name>
+        <qualifiedname>BarrierWrapper::bufferT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="131" column="15" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1aec4570a9b5a6579178f91c88d54b3d32" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::check_label</definition>
+        <argsstring></argsstring>
+        <name>check_label</name>
+        <qualifiedname>BarrierWrapper::check_label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="133" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1ab99ca69ccd7d7919c0348c78a0ec7712" prot="private" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm BarrierWrapper::comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <qualifiedname>BarrierWrapper::comm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="134" column="12" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1ad294be7c07634a25ec8938c62f996bad" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BarrierWrapper::commsize</definition>
+        <argsstring></argsstring>
+        <name>commsize</name>
+        <qualifiedname>BarrierWrapper::commsize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="132" column="7" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a8274f2be4307090574f2cc82cbefd383" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BarrierWrapper::localid</definition>
+        <argsstring></argsstring>
+        <name>localid</name>
+        <qualifiedname>BarrierWrapper::localid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="132" column="16" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a904916ba24181cd01a77a1dd577aa57b" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned BarrierWrapper::nrecv</definition>
+        <argsstring></argsstring>
+        <name>nrecv</name>
+        <qualifiedname>BarrierWrapper::nrecv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="129" column="12" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::onoff</definition>
+        <argsstring></argsstring>
+        <name>onoff</name>
+        <qualifiedname>BarrierWrapper::onoff</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="136" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="136" bodyend="-1"/>
+        <referencedby refid="class_barrier_wrapper_1ac2bd182822af8aa50a2342e5b9d0b431" compoundref="_barrier_wrapper_8_h" startline="192" endline="192">off</referencedby>
+        <referencedby refid="class_barrier_wrapper_1a3719970a072571082333d6c7559fadf8" compoundref="_barrier_wrapper_8_h" startline="191" endline="191">on</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a3199d76495e5a8ea46f50e6b34c05ca4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" kindref="member">BWPtr</ref> &gt;</type>
+        <definition>std::map&lt;std::string, BWPtr&gt; BarrierWrapper::pending</definition>
+        <argsstring></argsstring>
+        <name>pending</name>
+        <qualifiedname>BarrierWrapper::pending</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="142" column="12" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a4baea7ae1daa15c18c30c047db6697f5" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned BarrierWrapper::queued</definition>
+        <argsstring></argsstring>
+        <name>queued</name>
+        <qualifiedname>BarrierWrapper::queued</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="128" column="12" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a181cd2663c55bdcaa89d2ac1fed8f83e" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="class_barrier_wrapper_1a39928dc8d3ef7bc5aa6378fc6e28aa24" kindref="member">RecvElem</ref> &gt;</type>
+        <definition>std::list&lt;RecvElem&gt; BarrierWrapper::req</definition>
+        <argsstring></argsstring>
+        <name>req</name>
+        <qualifiedname>BarrierWrapper::req</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="127" column="13" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>Timer BarrierWrapper::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>BarrierWrapper::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="135" column="9" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="135" bodyend="-1"/>
+        <referencedby refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" compoundref="_barrier_wrapper_8_h" startline="197" endline="202">getTime</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::light</definition>
+        <argsstring></argsstring>
+        <name>light</name>
+        <qualifiedname>BarrierWrapper::light</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="140" column="15" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" compoundref="_barrier_wrapper_8_h" startline="185" endline="189">operator()</referencedby>
+        <referencedby refid="class_barrier_wrapper_1a5262ee0a294d53ee9f8d9bb650dfa79c" compoundref="_barrier_wrapper_8_h" startline="195" endline="195">setHeavyWeight</referencedby>
+        <referencedby refid="class_barrier_wrapper_1a542ca840a4c45fcac98ddd79107667db" compoundref="_barrier_wrapper_8_h" startline="194" endline="194">setLightWeight</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_barrier_wrapper_1a6d0ecdffb94a0c9034351547aa82031d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int BarrierWrapper::cbufsz</definition>
+        <argsstring></argsstring>
+        <name>cbufsz</name>
+        <qualifiedname>BarrierWrapper::cbufsz</qualifiedname>
+        <briefdescription>
+<para>Buffer size for checking working labels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="152" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a7a00fdc3b8b103d459210d8b98ec47b7" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::debugging</definition>
+        <argsstring></argsstring>
+        <name>debugging</name>
+        <qualifiedname>BarrierWrapper::debugging</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="170" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1ac43a8640a84bf5a397fc1d64b30904a4" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::extra_verbose</definition>
+        <argsstring></argsstring>
+        <name>extra_verbose</name>
+        <qualifiedname>BarrierWrapper::extra_verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="169" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a8760885b899a1e6d45910fd8346bd86a" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string BarrierWrapper::flOper</definition>
+        <argsstring></argsstring>
+        <name>flOper</name>
+        <qualifiedname>BarrierWrapper::flOper</qualifiedname>
+        <briefdescription>
+<para>The source file containing the call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="161" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1ab3165c03742125e8b5f8e4f99276120b" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::inOper</definition>
+        <argsstring></argsstring>
+        <name>inOper</name>
+        <qualifiedname>BarrierWrapper::inOper</qualifiedname>
+        <briefdescription>
+<para>Set to true while control is in the wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="155" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a388d24e4a3680dbbf871689d4cc7bf76" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string BarrierWrapper::lbOper</definition>
+        <argsstring></argsstring>
+        <name>lbOper</name>
+        <qualifiedname>BarrierWrapper::lbOper</qualifiedname>
+        <briefdescription>
+<para>The label supplied by the caller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="158" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a2102728f5f3b41c8a74f076c5324ad91" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int BarrierWrapper::lnOper</definition>
+        <argsstring></argsstring>
+        <name>lnOper</name>
+        <qualifiedname>BarrierWrapper::lnOper</qualifiedname>
+        <briefdescription>
+<para>The source file line number with the call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="164" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1a46ea8fa6e581cb577fdefbf9ebf3e2d5" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int BarrierWrapper::loop_delay</definition>
+        <argsstring></argsstring>
+        <name>loop_delay</name>
+        <qualifiedname>BarrierWrapper::loop_delay</qualifiedname>
+        <briefdescription>
+<para>Loop wait in microseconds for heavy operator mode (default: 100) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="174" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_wrapper_1acc2b0dc6b21c70708ed7a357cda5681d" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool BarrierWrapper::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>BarrierWrapper::verbose</qualifiedname>
+        <briefdescription>
+<para>Debugging output flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="168" column="17" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="168" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_barrier_wrapper_1a8f01ecc6b3b91f71988383388bc3c5b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::finalReport</definition>
+        <argsstring>(std::string &amp;)</argsstring>
+        <name>finalReport</name>
+        <qualifiedname>BarrierWrapper::finalReport</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="147" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::heavy_operator</definition>
+        <argsstring>(const string &amp;label, const char *file, const int line)</argsstring>
+        <name>heavy_operator</name>
+        <qualifiedname>BarrierWrapper::heavy_operator</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="139" column="8"/>
+        <referencedby refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" compoundref="_barrier_wrapper_8_h" startline="185" endline="189">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::light_operator</definition>
+        <argsstring>(const string &amp;label, const char *file, const int line)</argsstring>
+        <name>light_operator</name>
+        <qualifiedname>BarrierWrapper::light_operator</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="138" column="8"/>
+        <referencedby refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" compoundref="_barrier_wrapper_8_h" startline="185" endline="189">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a06f303b61733300ba4aacc8509a4c11d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::listReport</definition>
+        <argsstring>(const char *, std::map&lt; std::string, BWPtr &gt;::iterator)</argsstring>
+        <name>listReport</name>
+        <qualifiedname>BarrierWrapper::listReport</qualifiedname>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, <ref refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" kindref="member">BWPtr</ref> &gt;::iterator</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="146" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a9c9bd015bb64f099e37ffa510447c13c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::syncTest</definition>
+        <argsstring>(const std::string &amp;mesg, const std::string &amp;label)</argsstring>
+        <name>syncTest</name>
+        <qualifiedname>BarrierWrapper::syncTest</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mesg</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="145" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a37139ce56bfae8e003478e4b772e4e66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::updateMap</definition>
+        <argsstring>(InfoPtr p)</argsstring>
+        <name>updateMap</name>
+        <qualifiedname>BarrierWrapper::updateMap</qualifiedname>
+        <param>
+          <type><ref refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" kindref="member">InfoPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="144" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_barrier_wrapper_1acc66013759b9cc8e593725a1b8821359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BarrierWrapper::BarrierWrapper</definition>
+        <argsstring>(const BarrierWrapper &amp;inst)</argsstring>
+        <name>BarrierWrapper</name>
+        <qualifiedname>BarrierWrapper::BarrierWrapper</qualifiedname>
+        <param>
+          <type>const <ref refid="class_barrier_wrapper" kindref="compound">BarrierWrapper</ref> &amp;</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="180" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a27c637a2e5b2df1f7245dde9d2d3e47c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BarrierWrapper::BarrierWrapper</definition>
+        <argsstring>(MPI_Comm comm, bool label=false)</argsstring>
+        <name>BarrierWrapper</name>
+        <qualifiedname>BarrierWrapper::BarrierWrapper</qualifiedname>
+        <param>
+          <type>MPI_Comm</type>
+          <declname>comm</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>label</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="177" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a31717b8ca6f158fc839608b194450f4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; BarrierWrapper::getMissing</definition>
+        <argsstring>(BWPtr p)</argsstring>
+        <name>getMissing</name>
+        <qualifiedname>BarrierWrapper::getMissing</qualifiedname>
+        <param>
+          <type><ref refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" kindref="member">BWPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="204" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double BarrierWrapper::getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <qualifiedname>BarrierWrapper::getTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="197" column="10" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="197" bodyend="202"/>
+        <references refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">Timer::getTime</references>
+        <references refid="class_timer_1a9020542d73357a4eef512eefaf57524b" compoundref="_timer_8_h" startline="67" endline="72">Timer::reset</references>
+        <references refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" compoundref="_barrier_wrapper_8_h" startline="135">timer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1ac2bd182822af8aa50a2342e5b9d0b431" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::off</definition>
+        <argsstring>()</argsstring>
+        <name>off</name>
+        <qualifiedname>BarrierWrapper::off</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="192" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="192" bodyend="192"/>
+        <references refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" compoundref="_barrier_wrapper_8_h" startline="136">onoff</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a3719970a072571082333d6c7559fadf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::on</definition>
+        <argsstring>()</argsstring>
+        <name>on</name>
+        <qualifiedname>BarrierWrapper::on</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="191" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="191" bodyend="191"/>
+        <references refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" compoundref="_barrier_wrapper_8_h" startline="136">onoff</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::operator()</definition>
+        <argsstring>(const string &amp;label, const char *file, const int line)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>BarrierWrapper::operator()</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="185" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="185" bodyend="189"/>
+        <references refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" compoundref="model3d_8_h" startline="4">file</references>
+        <references refid="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179">heavy_operator</references>
+        <references refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" compoundref="_barrier_wrapper_8_h" startline="140">light</references>
+        <references refid="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0">light_operator</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a5262ee0a294d53ee9f8d9bb650dfa79c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::setHeavyWeight</definition>
+        <argsstring>()</argsstring>
+        <name>setHeavyWeight</name>
+        <qualifiedname>BarrierWrapper::setHeavyWeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="195" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="195" bodyend="195"/>
+        <references refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" compoundref="_barrier_wrapper_8_h" startline="140">light</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a542ca840a4c45fcac98ddd79107667db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierWrapper::setLightWeight</definition>
+        <argsstring>()</argsstring>
+        <name>setLightWeight</name>
+        <qualifiedname>BarrierWrapper::setLightWeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="194" column="8" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="194" bodyend="194"/>
+        <references refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" compoundref="_barrier_wrapper_8_h" startline="140">light</references>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_wrapper_1a83df985ee82ab6075540690db9dbd3bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BarrierWrapper::~BarrierWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>~BarrierWrapper</name>
+        <qualifiedname>BarrierWrapper::~BarrierWrapper</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="183" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BarrierWrapper</label>
+        <link refid="class_barrier_wrapper"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="120" column="1" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="121" bodyend="206"/>
+    <listofallmembers>
+      <member refid="class_barrier_wrapper_1a27c637a2e5b2df1f7245dde9d2d3e47c" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>BarrierWrapper</name></member>
+      <member refid="class_barrier_wrapper_1acc66013759b9cc8e593725a1b8821359" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>BarrierWrapper</name></member>
+      <member refid="class_barrier_wrapper_1ae738138237618529147077d778dc9e55" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>buffer</name></member>
+      <member refid="class_barrier_wrapper_1a3acf68552460aec4bec9be9e521db98a" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>bufferT</name></member>
+      <member refid="class_barrier_wrapper_1a6d0ecdffb94a0c9034351547aa82031d" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>cbufsz</name></member>
+      <member refid="class_barrier_wrapper_1aec4570a9b5a6579178f91c88d54b3d32" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>check_label</name></member>
+      <member refid="class_barrier_wrapper_1ab99ca69ccd7d7919c0348c78a0ec7712" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>comm</name></member>
+      <member refid="class_barrier_wrapper_1ad294be7c07634a25ec8938c62f996bad" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>commsize</name></member>
+      <member refid="class_barrier_wrapper_1a7a00fdc3b8b103d459210d8b98ec47b7" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>debugging</name></member>
+      <member refid="class_barrier_wrapper_1ac43a8640a84bf5a397fc1d64b30904a4" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>extra_verbose</name></member>
+      <member refid="class_barrier_wrapper_1a8f01ecc6b3b91f71988383388bc3c5b9" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>finalReport</name></member>
+      <member refid="class_barrier_wrapper_1a8760885b899a1e6d45910fd8346bd86a" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>flOper</name></member>
+      <member refid="class_barrier_wrapper_1a31717b8ca6f158fc839608b194450f4b" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>getMissing</name></member>
+      <member refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>getTime</name></member>
+      <member refid="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>heavy_operator</name></member>
+      <member refid="class_barrier_wrapper_1a4838ff865b8d8625c61d208a420f8212" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>Info</name></member>
+      <member refid="class_barrier_wrapper_1ab3165c03742125e8b5f8e4f99276120b" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>inOper</name></member>
+      <member refid="class_barrier_wrapper_1a388d24e4a3680dbbf871689d4cc7bf76" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>lbOper</name></member>
+      <member refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>light</name></member>
+      <member refid="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>light_operator</name></member>
+      <member refid="class_barrier_wrapper_1a06f303b61733300ba4aacc8509a4c11d" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>listReport</name></member>
+      <member refid="class_barrier_wrapper_1a2102728f5f3b41c8a74f076c5324ad91" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>lnOper</name></member>
+      <member refid="class_barrier_wrapper_1a8274f2be4307090574f2cc82cbefd383" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>localid</name></member>
+      <member refid="class_barrier_wrapper_1a46ea8fa6e581cb577fdefbf9ebf3e2d5" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>loop_delay</name></member>
+      <member refid="class_barrier_wrapper_1a904916ba24181cd01a77a1dd577aa57b" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>nrecv</name></member>
+      <member refid="class_barrier_wrapper_1ac2bd182822af8aa50a2342e5b9d0b431" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>off</name></member>
+      <member refid="class_barrier_wrapper_1a3719970a072571082333d6c7559fadf8" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>on</name></member>
+      <member refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>onoff</name></member>
+      <member refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>operator()</name></member>
+      <member refid="class_barrier_wrapper_1a3199d76495e5a8ea46f50e6b34c05ca4" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>pending</name></member>
+      <member refid="class_barrier_wrapper_1a4baea7ae1daa15c18c30c047db6697f5" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>queued</name></member>
+      <member refid="class_barrier_wrapper_1a39928dc8d3ef7bc5aa6378fc6e28aa24" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>RecvElem</name></member>
+      <member refid="class_barrier_wrapper_1a181cd2663c55bdcaa89d2ac1fed8f83e" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>req</name></member>
+      <member refid="class_barrier_wrapper_1a5262ee0a294d53ee9f8d9bb650dfa79c" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>setHeavyWeight</name></member>
+      <member refid="class_barrier_wrapper_1a542ca840a4c45fcac98ddd79107667db" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>setLightWeight</name></member>
+      <member refid="class_barrier_wrapper_1a9c9bd015bb64f099e37ffa510447c13c" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>syncTest</name></member>
+      <member refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>timer</name></member>
+      <member refid="class_barrier_wrapper_1a37139ce56bfae8e003478e4b772e4e66" prot="private" virt="non-virtual"><scope>BarrierWrapper</scope><name>updateMap</name></member>
+      <member refid="class_barrier_wrapper_1acc2b0dc6b21c70708ed7a357cda5681d" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>verbose</name></member>
+      <member refid="class_barrier_wrapper_1a83df985ee82ab6075540690db9dbd3bc" prot="public" virt="non-virtual"><scope>BarrierWrapper</scope><name>~BarrierWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

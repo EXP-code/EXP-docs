@@ -1,0 +1,1162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_emp_cyl2d" kind="class" language="C++" prot="public">
+    <compoundname>EmpCyl2d</compoundname>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <innerclass refid="class_emp_cyl2d_1_1_basis2d" prot="protected">EmpCyl2d::Basis2d</innerclass>
+    <innerclass refid="class_emp_cyl2d_1_1_mapping" prot="public">EmpCyl2d::Mapping</innerclass>
+    <innerclass refid="class_emp_cyl2d_1_1_model_cyl" prot="public">EmpCyl2d::ModelCyl</innerclass>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1ab0e5c03e30a56cdba86aa199b1af8cb7" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_emp_cyl2d_1_1_basis2d" kindref="compound">Basis2d</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Basis2d&gt; EmpCyl2d::basis</definition>
+        <argsstring></argsstring>
+        <name>basis</name>
+        <qualifiedname>EmpCyl2d::basis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="112" column="20" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::basis_test</definition>
+        <argsstring></argsstring>
+        <name>basis_test</name>
+        <qualifiedname>EmpCyl2d::basis_test</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="81" column="18" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1a76c54f44a8d14c3fe17562494a2dcc40" compoundref="_emp_cyl2d_8_h" startline="164" endline="164">basisTest</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EmpCyl2d::biorth</definition>
+        <argsstring></argsstring>
+        <name>biorth</name>
+        <qualifiedname>EmpCyl2d::biorth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="80" column="21" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a1e0b8bab39d8578da97fb09e052bf996" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EmpCyl2d::cache_name_2d</definition>
+        <argsstring></argsstring>
+        <name>cache_name_2d</name>
+        <qualifiedname>EmpCyl2d::cache_name_2d</qualifiedname>
+        <briefdescription>
+<para>The cache file name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="144" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1aeb2fbcb6010dc78fe3e3f186cde372a9" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::cmap</definition>
+        <argsstring></argsstring>
+        <name>cmap</name>
+        <qualifiedname>EmpCyl2d::cmap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="81" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::configured</definition>
+        <argsstring></argsstring>
+        <name>configured</name>
+        <qualifiedname>EmpCyl2d::configured</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="81" column="29" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1a09b9797b1650a7f37a714a14c242b937" compoundref="_emp_cyl2d_8_h" startline="207" endline="207">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1afe18203b85a4253cf06b2418328ca0dc" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; EmpCyl2d::dens_array</definition>
+        <argsstring></argsstring>
+        <name>dens_array</name>
+        <qualifiedname>EmpCyl2d::dens_array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="83" column="26" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_emp_cyl2d_1_1_model_cyl" kindref="compound">ModelCyl</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;ModelCyl&gt; EmpCyl2d::disk</definition>
+        <argsstring></argsstring>
+        <name>disk</name>
+        <qualifiedname>EmpCyl2d::disk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="111" column="19" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1a9d3d0c2a69d02bf30715212178cc1484" compoundref="_emp_cyl2d_8_h" startline="217" endline="220">background</referencedby>
+        <referencedby refid="class_emp_cyl2d_1a31b15fac3975ac0c771840c06736bb2d" compoundref="_emp_cyl2d_8_h" startline="211" endline="215">background</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1ab562ff93bc6447bc31d905edf3c9dde0" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; EmpCyl2d::dpot_array</definition>
+        <argsstring></argsstring>
+        <name>dpot_array</name>
+        <qualifiedname>EmpCyl2d::dpot_array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="83" column="37" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a45ae32ac42d9f74d2a0b27213fbaf52b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::dxi</definition>
+        <argsstring></argsstring>
+        <name>dxi</name>
+        <qualifiedname>EmpCyl2d::dxi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="78" column="20" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmpCyl2d::knots</definition>
+        <argsstring></argsstring>
+        <name>knots</name>
+        <qualifiedname>EmpCyl2d::knots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="79" column="25" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a9e0a423a2001bbe311d61fd84687551a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::logr</definition>
+        <argsstring></argsstring>
+        <name>logr</name>
+        <qualifiedname>EmpCyl2d::logr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="81" column="13" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref></type>
+        <definition>Mapping EmpCyl2d::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>EmpCyl2d::map</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="122" column="11" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1a44acdc5f9a2dddff075be3a63f0fa0f0" compoundref="_emp_cyl2d_8_h" startline="224" endline="224">getMapping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmpCyl2d::mmax</definition>
+        <argsstring></argsstring>
+        <name>mmax</name>
+        <qualifiedname>EmpCyl2d::mmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="79" column="7" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1aff08124c9b5ae900ef2873a36c5e8e1f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EmpCyl2d::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>EmpCyl2d::model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="80" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a4420b46de42622236236210640bd5156" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmpCyl2d::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>EmpCyl2d::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="79" column="31" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmpCyl2d::nmaxfid</definition>
+        <argsstring></argsstring>
+        <name>nmaxfid</name>
+        <qualifiedname>EmpCyl2d::nmaxfid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="79" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1af573bb26ae59ac054b667c76041e07b4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EmpCyl2d::numr</definition>
+        <argsstring></argsstring>
+        <name>numr</name>
+        <qualifiedname>EmpCyl2d::numr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="79" column="20" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a01bb476da94c7d55ab449a78f23382f6" prot="protected" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node EmpCyl2d::Params</definition>
+        <argsstring></argsstring>
+        <name>Params</name>
+        <qualifiedname>EmpCyl2d::Params</qualifiedname>
+        <briefdescription>
+<para>Contains parameter database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="75" column="14" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a0f5bfc9472480f146893e2ded214006c" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; EmpCyl2d::potl_array</definition>
+        <argsstring></argsstring>
+        <name>potl_array</name>
+        <qualifiedname>EmpCyl2d::potl_array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="83" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>EmpCyl2d::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="77" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1ac9ddd679d2071b64edcaf54d43b8b5bd" compoundref="_emp_cyl2d_8_h" startline="204" endline="204">getRmax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>EmpCyl2d::rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1a748053549fc20ebecf3b6417cfc5630d" compoundref="_emp_cyl2d_8_h" startline="201" endline="201">getRmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1aba1d590dc62ef3feb07e63ff2a5a2c1d" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; EmpCyl2d::rot_matrix</definition>
+        <argsstring></argsstring>
+        <name>rot_matrix</name>
+        <qualifiedname>EmpCyl2d::rot_matrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="84" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a10793f785f2a8b413ff7e69845e99ac7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>EmpCyl2d::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="77" column="20" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a5c0e2f279eeaba97716625052e537a15" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EmpCyl2d::xgrid</definition>
+        <argsstring></argsstring>
+        <name>xgrid</name>
+        <qualifiedname>EmpCyl2d::xgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="85" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a22ffab7ffb4aeae38564e87d82874470" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::xmax</definition>
+        <argsstring></argsstring>
+        <name>xmax</name>
+        <qualifiedname>EmpCyl2d::xmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="78" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a4425ff692c823bf4327f96f4433f0269" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::xmin</definition>
+        <argsstring></argsstring>
+        <name>xmin</name>
+        <qualifiedname>EmpCyl2d::xmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="78" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1a7eabba734e4255f726d27b18e57f6fbd" prot="protected" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string EmpCyl2d::default_cache_name</definition>
+        <argsstring></argsstring>
+        <name>default_cache_name</name>
+        <qualifiedname>EmpCyl2d::default_cache_name</qualifiedname>
+        <briefdescription>
+<para>Default cache name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="141" column="28" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a88cfb80d74560dcf00c0f861c6eb0e0b" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int EmpCyl2d::hmagic</definition>
+        <argsstring></argsstring>
+        <name>hmagic</name>
+        <qualifiedname>EmpCyl2d::hmagic</qualifiedname>
+        <initializer>= 0xc0a57a1</initializer>
+        <briefdescription>
+<para><ref refid="class_basis" kindref="compound">Basis</ref> magic number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="132" column="36" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1a8c9c878a19ea4aab1ecb3357efdc5d0e" prot="protected" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string EmpCyl2d::Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <qualifiedname>EmpCyl2d::Version</qualifiedname>
+        <initializer>= &quot;1.0&quot;</initializer>
+        <briefdescription>
+<para><ref refid="class_cache" kindref="compound">Cache</ref> versioning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="129" column="35" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1ac2d64888010aae79a0b505e46551bbe4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::checkMN</definition>
+        <argsstring>(int &amp;M, int &amp;N, const std::string &amp;member)</argsstring>
+        <name>checkMN</name>
+        <qualifiedname>EmpCyl2d::checkMN</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>member</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="137" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1aefdd4dab54583e2f99e121b088de2e02" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::create_tables</definition>
+        <argsstring>()</argsstring>
+        <name>create_tables</name>
+        <qualifiedname>EmpCyl2d::create_tables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="124" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1add20591d92d3e8deb4c4693510fb4668" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_emp_cyl2d_1_1_model_cyl" kindref="compound">ModelCyl</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; ModelCyl &gt; EmpCyl2d::createModel</definition>
+        <argsstring>()</argsstring>
+        <name>createModel</name>
+        <qualifiedname>EmpCyl2d::createModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="114" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a233d8da77204244b57df3d0338e09281" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; int, int, double, double &gt;</type>
+        <definition>std::tuple&lt; int, int, double, double &gt; EmpCyl2d::linear_interp</definition>
+        <argsstring>(double r)</argsstring>
+        <name>linear_interp</name>
+        <qualifiedname>EmpCyl2d::linear_interp</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Interpolation helpers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="136" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1ad6006930a078d5b2d262f5de7e80aa7e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::ReadH5Cache</definition>
+        <argsstring>()</argsstring>
+        <name>ReadH5Cache</name>
+        <qualifiedname>EmpCyl2d::ReadH5Cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="125" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a514e73e00f42cb61189cae8857069274" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::WriteH5Cache</definition>
+        <argsstring>()</argsstring>
+        <name>WriteH5Cache</name>
+        <qualifiedname>EmpCyl2d::WriteH5Cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="126" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1a9d3d0c2a69d02bf30715212178cc1484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; double, double, double &gt;</type>
+        <definition>std::tuple&lt; double, double, double &gt; EmpCyl2d::background</definition>
+        <argsstring>(double r)</argsstring>
+        <name>background</name>
+        <qualifiedname>EmpCyl2d::background</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="217" column="14" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="217" bodyend="220"/>
+        <references refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" compoundref="_emp_cyl2d_8_h" startline="111">disk</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a31b15fac3975ac0c771840c06736bb2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::background</definition>
+        <argsstring>(double r, double &amp;p, double &amp;dr)</argsstring>
+        <name>background</name>
+        <qualifiedname>EmpCyl2d::background</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dr</declname>
+        </param>
+        <briefdescription>
+<para>Background evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="211" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="211" bodyend="215"/>
+        <references refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" compoundref="_emp_cyl2d_8_h" startline="111">disk</references>
+        <referencedby refid="class_biorth_cyl_1afdc6e4a1329c6ac69ac279572a820f0d" compoundref="_biorth_cyl_8_h" startline="205" endline="209">BiorthCyl::background</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a76c54f44a8d14c3fe17562494a2dcc40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::basisTest</definition>
+        <argsstring>(bool which)</argsstring>
+        <name>basisTest</name>
+        <qualifiedname>EmpCyl2d::basisTest</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>which</declname>
+        </param>
+        <briefdescription>
+<para>Use underlying basis for testing? Default: false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="164" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="164" bodyend="164"/>
+        <references refid="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" compoundref="_emp_cyl2d_8_h" startline="81">basis_test</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1aeae06b336f4325934f1d1956bd234d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::checkCoefs</definition>
+        <argsstring>()</argsstring>
+        <name>checkCoefs</name>
+        <qualifiedname>EmpCyl2d::checkCoefs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check the coefficients of the EOF basis against the zeroth-order model </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="198" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1af9581cde255fa3fc6d9168b2d2381b22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::EmpCyl2d</definition>
+        <argsstring>()</argsstring>
+        <name>EmpCyl2d</name>
+        <qualifiedname>EmpCyl2d::EmpCyl2d</qualifiedname>
+        <briefdescription>
+<para>Null constructor (for copy construct) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="149" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1ab642280e8a6d18a4d71c51700425c8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::EmpCyl2d</definition>
+        <argsstring>(int mmax, int nmaxfid, int nmax, int knots, int numr, double rmin, double rmax, double scale, bool cmap, bool logr, const YAML::Node &amp;P, const std::string biorth, const std::string cache=&quot;&quot;)</argsstring>
+        <name>EmpCyl2d</name>
+        <qualifiedname>EmpCyl2d::EmpCyl2d</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>mmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmaxfid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>knots</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cmap</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>logr</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>biorth</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>cache</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="152" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a48ac0eda97ae5025f35eceeafe2335a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::EmpCyl2d</definition>
+        <argsstring>(int mmax, int nmaxfid, int nmax, int knots, int numr, double rmin, double rmax, double scale, bool cmap, bool logr, std::shared_ptr&lt; ModelCyl &gt; disk, const std::string biorth, const std::string cache=&quot;&quot;)</argsstring>
+        <name>EmpCyl2d</name>
+        <qualifiedname>EmpCyl2d::EmpCyl2d</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>mmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmaxfid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>knots</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cmap</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>logr</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_emp_cyl2d_1_1_model_cyl" kindref="compound">ModelCyl</ref> &gt;</type>
+          <declname>disk</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>biorth</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>cache</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor with user-supplied target model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="158" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a917dfe4aece2571715a3dd216943203e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::get_dens</definition>
+        <argsstring>(double r, int M, int N)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>EmpCyl2d::get_dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Linear interpolate on grid to get density value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="170" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a49efdfc87d6db745996f0e5082a93914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::get_dens</definition>
+        <argsstring>(Eigen::MatrixXd &amp;mat, double r)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>EmpCyl2d::get_dens</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="178" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a8ebcf2237094e2912d4f21e486eac9e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::get_dpot</definition>
+        <argsstring>(double r, int M, int N)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>EmpCyl2d::get_dpot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Linear interpolate on grid to get potential gradient (-force) value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="173" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1add9a31b0b9becabff604695cc688932c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::get_force</definition>
+        <argsstring>(Eigen::MatrixXd &amp;mat, double r)</argsstring>
+        <name>get_force</name>
+        <qualifiedname>EmpCyl2d::get_force</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="179" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a324215c0a67e42db53e6c8d61f04d7c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::get_pot</definition>
+        <argsstring>(Eigen::MatrixXd &amp;mat, double r)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>EmpCyl2d::get_pot</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Matrix evaluation members. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="177" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a7f828a74ed264276c3214679a77763b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::get_potl</definition>
+        <argsstring>(double r, int M, int N)</argsstring>
+        <name>get_potl</name>
+        <qualifiedname>EmpCyl2d::get_potl</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Linear interpolate on grid to get potential value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="167" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a44acdc5f9a2dddff075be3a63f0fa0f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_emp_cyl2d_1_1_mapping" kindref="compound">Mapping</ref></type>
+        <definition>Mapping EmpCyl2d::getMapping</definition>
+        <argsstring>()</argsstring>
+        <name>getMapping</name>
+        <qualifiedname>EmpCyl2d::getMapping</qualifiedname>
+        <briefdescription>
+<para>Get coordinate mapping object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="224" column="11" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="224" bodyend="224"/>
+        <references refid="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" compoundref="_emp_cyl2d_8_h" startline="122">map</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1ac9ddd679d2071b64edcaf54d43b8b5bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::getRmax</definition>
+        <argsstring>()</argsstring>
+        <name>getRmax</name>
+        <qualifiedname>EmpCyl2d::getRmax</qualifiedname>
+        <briefdescription>
+<para>Access the maximum radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="204" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="204" bodyend="204"/>
+        <references refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" compoundref="_emp_cyl2d_8_h" startline="77">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a748053549fc20ebecf3b6417cfc5630d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::getRmin</definition>
+        <argsstring>()</argsstring>
+        <name>getRmin</name>
+        <qualifiedname>EmpCyl2d::getRmin</qualifiedname>
+        <briefdescription>
+<para>Access the minimum radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="201" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="201" bodyend="201"/>
+        <references refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" compoundref="_emp_cyl2d_8_h" startline="77">rmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a09b9797b1650a7f37a714a14c242b937" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>EmpCyl2d::operator()</qualifiedname>
+        <briefdescription>
+<para>Check for configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="207" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="207" bodyend="207"/>
+        <references refid="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" compoundref="_emp_cyl2d_8_h" startline="81">configured</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a43e01112e8e552742158f64337b1e2af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt; Eigen::MatrixXd &gt; EmpCyl2d::orthoCheck</definition>
+        <argsstring>()</argsstring>
+        <name>orthoCheck</name>
+        <qualifiedname>EmpCyl2d::orthoCheck</qualifiedname>
+        <briefdescription>
+<para>Return an array of inner-product matrices for the EOF basis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="194" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1af3394365c2151065cc8b165288017a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::orthoCheck</definition>
+        <argsstring>(int M, const std::string &amp;file)</argsstring>
+        <name>orthoCheck</name>
+        <qualifiedname>EmpCyl2d::orthoCheck</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the inner-product matrix for the EOF basis for a particular azimuthal M value to a file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="191" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a9d5a136698db5daa5472d7c596600dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::writeBasis</definition>
+        <argsstring>(int M, const std::string &amp;file)</argsstring>
+        <name>writeBasis</name>
+        <qualifiedname>EmpCyl2d::writeBasis</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Write the basis for a partcular azimuthal M value to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="183" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1a0d16955d370bd0d662433c46a191f5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::writeTrans</definition>
+        <argsstring>(int M, const std::string &amp;file)</argsstring>
+        <name>writeTrans</name>
+        <qualifiedname>EmpCyl2d::writeTrans</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the eigenvector rotation matrix for a partcular azimuthal M value to a file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="187" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class that implements most of the members for an Exp force routine </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EmpCyl2d</label>
+        <link refid="class_emp_cyl2d"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EmpCyl2d::Mapping</label>
+        <link refid="class_emp_cyl2d_1_1_mapping"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="26" column="1" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="27" bodyend="225"/>
+    <listofallmembers>
+      <member refid="class_emp_cyl2d_1a31b15fac3975ac0c771840c06736bb2d" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>background</name></member>
+      <member refid="class_emp_cyl2d_1a9d3d0c2a69d02bf30715212178cc1484" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>background</name></member>
+      <member refid="class_emp_cyl2d_1ab0e5c03e30a56cdba86aa199b1af8cb7" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>basis</name></member>
+      <member refid="class_emp_cyl2d_1a799dfcc0ca132249ec29aebccb411bc4" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>basis_test</name></member>
+      <member refid="class_emp_cyl2d_1a76c54f44a8d14c3fe17562494a2dcc40" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>basisTest</name></member>
+      <member refid="class_emp_cyl2d_1a722d7398a7cd2d4ff9ed78663c6ec9c9" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>biorth</name></member>
+      <member refid="class_emp_cyl2d_1a1e0b8bab39d8578da97fb09e052bf996" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>cache_name_2d</name></member>
+      <member refid="class_emp_cyl2d_1aeae06b336f4325934f1d1956bd234d00" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>checkCoefs</name></member>
+      <member refid="class_emp_cyl2d_1ac2d64888010aae79a0b505e46551bbe4" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>checkMN</name></member>
+      <member refid="class_emp_cyl2d_1aeb2fbcb6010dc78fe3e3f186cde372a9" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>cmap</name></member>
+      <member refid="class_emp_cyl2d_1a894d179901c70002f3ea3287c0007f08" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>configured</name></member>
+      <member refid="class_emp_cyl2d_1aefdd4dab54583e2f99e121b088de2e02" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>create_tables</name></member>
+      <member refid="class_emp_cyl2d_1add20591d92d3e8deb4c4693510fb4668" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>createModel</name></member>
+      <member refid="class_emp_cyl2d_1a7eabba734e4255f726d27b18e57f6fbd" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>default_cache_name</name></member>
+      <member refid="class_emp_cyl2d_1afe18203b85a4253cf06b2418328ca0dc" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>dens_array</name></member>
+      <member refid="class_emp_cyl2d_1aa4435e8994dcdaf805e416ae12038557" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>disk</name></member>
+      <member refid="class_emp_cyl2d_1ab562ff93bc6447bc31d905edf3c9dde0" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>dpot_array</name></member>
+      <member refid="class_emp_cyl2d_1a45ae32ac42d9f74d2a0b27213fbaf52b" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>dxi</name></member>
+      <member refid="class_emp_cyl2d_1af9581cde255fa3fc6d9168b2d2381b22" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>EmpCyl2d</name></member>
+      <member refid="class_emp_cyl2d_1ab642280e8a6d18a4d71c51700425c8df" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>EmpCyl2d</name></member>
+      <member refid="class_emp_cyl2d_1a48ac0eda97ae5025f35eceeafe2335a5" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>EmpCyl2d</name></member>
+      <member refid="class_emp_cyl2d_1a917dfe4aece2571715a3dd216943203e" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_dens</name></member>
+      <member refid="class_emp_cyl2d_1a49efdfc87d6db745996f0e5082a93914" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_dens</name></member>
+      <member refid="class_emp_cyl2d_1a8ebcf2237094e2912d4f21e486eac9e1" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_dpot</name></member>
+      <member refid="class_emp_cyl2d_1add9a31b0b9becabff604695cc688932c" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_force</name></member>
+      <member refid="class_emp_cyl2d_1a324215c0a67e42db53e6c8d61f04d7c2" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_pot</name></member>
+      <member refid="class_emp_cyl2d_1a7f828a74ed264276c3214679a77763b4" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>get_potl</name></member>
+      <member refid="class_emp_cyl2d_1a44acdc5f9a2dddff075be3a63f0fa0f0" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>getMapping</name></member>
+      <member refid="class_emp_cyl2d_1ac9ddd679d2071b64edcaf54d43b8b5bd" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>getRmax</name></member>
+      <member refid="class_emp_cyl2d_1a748053549fc20ebecf3b6417cfc5630d" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>getRmin</name></member>
+      <member refid="class_emp_cyl2d_1a88cfb80d74560dcf00c0f861c6eb0e0b" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>hmagic</name></member>
+      <member refid="class_emp_cyl2d_1a395b4ae2370f18b042e5fa8f6459fdd2" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>knots</name></member>
+      <member refid="class_emp_cyl2d_1a233d8da77204244b57df3d0338e09281" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>linear_interp</name></member>
+      <member refid="class_emp_cyl2d_1a9e0a423a2001bbe311d61fd84687551a" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>logr</name></member>
+      <member refid="class_emp_cyl2d_1a32de18cb6d3f0366104a564c62d02ed4" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>map</name></member>
+      <member refid="class_emp_cyl2d_1a2cd4e321747f715a884068126067e94c" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>mmax</name></member>
+      <member refid="class_emp_cyl2d_1aff08124c9b5ae900ef2873a36c5e8e1f" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>model</name></member>
+      <member refid="class_emp_cyl2d_1a4420b46de42622236236210640bd5156" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>nmax</name></member>
+      <member refid="class_emp_cyl2d_1ac1bc05ce378bca56ceb77e7fbbee68de" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>nmaxfid</name></member>
+      <member refid="class_emp_cyl2d_1af573bb26ae59ac054b667c76041e07b4" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>numr</name></member>
+      <member refid="class_emp_cyl2d_1a09b9797b1650a7f37a714a14c242b937" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>operator()</name></member>
+      <member refid="class_emp_cyl2d_1af3394365c2151065cc8b165288017a96" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>orthoCheck</name></member>
+      <member refid="class_emp_cyl2d_1a43e01112e8e552742158f64337b1e2af" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>orthoCheck</name></member>
+      <member refid="class_emp_cyl2d_1a01bb476da94c7d55ab449a78f23382f6" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>Params</name></member>
+      <member refid="class_emp_cyl2d_1a0f5bfc9472480f146893e2ded214006c" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>potl_array</name></member>
+      <member refid="class_emp_cyl2d_1ad6006930a078d5b2d262f5de7e80aa7e" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>ReadH5Cache</name></member>
+      <member refid="class_emp_cyl2d_1a90732371052f084e699ffc4d64b2be04" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>rmax</name></member>
+      <member refid="class_emp_cyl2d_1a7827001d015ae29f5aa92848ead53f5f" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>rmin</name></member>
+      <member refid="class_emp_cyl2d_1aba1d590dc62ef3feb07e63ff2a5a2c1d" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>rot_matrix</name></member>
+      <member refid="class_emp_cyl2d_1a10793f785f2a8b413ff7e69845e99ac7" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>scale</name></member>
+      <member refid="class_emp_cyl2d_1a8c9c878a19ea4aab1ecb3357efdc5d0e" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>Version</name></member>
+      <member refid="class_emp_cyl2d_1a9d5a136698db5daa5472d7c596600dee" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>writeBasis</name></member>
+      <member refid="class_emp_cyl2d_1a514e73e00f42cb61189cae8857069274" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>WriteH5Cache</name></member>
+      <member refid="class_emp_cyl2d_1a0d16955d370bd0d662433c46a191f5b6" prot="public" virt="non-virtual"><scope>EmpCyl2d</scope><name>writeTrans</name></member>
+      <member refid="class_emp_cyl2d_1a5c0e2f279eeaba97716625052e537a15" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>xgrid</name></member>
+      <member refid="class_emp_cyl2d_1a22ffab7ffb4aeae38564e87d82874470" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>xmax</name></member>
+      <member refid="class_emp_cyl2d_1a4425ff692c823bf4327f96f4433f0269" prot="protected" virt="non-virtual"><scope>EmpCyl2d</scope><name>xmin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

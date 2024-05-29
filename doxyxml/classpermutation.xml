@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classpermutation" kind="class" language="C++" prot="public">
+    <compoundname>permutation</compoundname>
+    <includes refid="permutation_8_h" local="no">permutation.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpermutation_1a44dc1dbc08633d19ab1e8eef0825b38f" prot="private" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 permutation::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>permutation::g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="45" column="16" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classpermutation_1aff5c189cdce245b00d11ecd9cd1e186d" compoundref="permutation_8_h" startline="48" endline="64">seed19937</referencedby>
+        <referencedby refid="classpermutation_1a4d9c363b55084a0c60d0a3f2056dd171" compoundref="permutation_8_h" startline="34" endline="38">shuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classpermutation_1a72414b581a3bef4c01631129e26a9d0f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; permutation::perm</definition>
+        <argsstring></argsstring>
+        <name>perm</name>
+        <qualifiedname>permutation::perm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="44" column="15" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classpermutation_1adbea72eabd3083c77ba494cc15900ad6" compoundref="permutation_8_h" startline="41" endline="41">operator[]</referencedby>
+        <referencedby refid="classpermutation_1abc5c92591820f37ba377b06f622f6cad" compoundref="permutation_8_h" startline="27" endline="31">permutation</referencedby>
+        <referencedby refid="classpermutation_1a4d9c363b55084a0c60d0a3f2056dd171" compoundref="permutation_8_h" startline="34" endline="38">shuffle</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpermutation_1adbea72eabd3083c77ba494cc15900ad6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t permutation::operator[]</definition>
+        <argsstring>(size_t n) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>permutation::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>The permutation operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="41" column="10" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="41" bodyend="41"/>
+        <references refid="classpermutation_1a72414b581a3bef4c01631129e26a9d0f" compoundref="permutation_8_h" startline="44">perm</references>
+      </memberdef>
+      <memberdef kind="function" id="classpermutation_1abc5c92591820f37ba377b06f622f6cad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>permutation::permutation</definition>
+        <argsstring>(unsigned n, bool full=false)</argsstring>
+        <name>permutation</name>
+        <qualifiedname>permutation::permutation</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>full</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize and generate the identity permutation</para>
+<para><simplesect kind="par"><title>Parameters:</title><para></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the vecctor rank</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>full</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true will seed every value in the mt19937 state. This will produce better randomness at higher startup cost. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="27" column="3" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="27" bodyend="31"/>
+        <references refid="classpermutation_1a72414b581a3bef4c01631129e26a9d0f" compoundref="permutation_8_h" startline="44">perm</references>
+        <references refid="classpermutation_1aff5c189cdce245b00d11ecd9cd1e186d" compoundref="permutation_8_h" startline="48" endline="64">seed19937</references>
+      </memberdef>
+      <memberdef kind="function" id="classpermutation_1a4d9c363b55084a0c60d0a3f2056dd171" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void permutation::shuffle</definition>
+        <argsstring>()</argsstring>
+        <name>shuffle</name>
+        <qualifiedname>permutation::shuffle</qualifiedname>
+        <briefdescription>
+<para>Create and share the random permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="34" column="8" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="34" bodyend="38"/>
+        <references refid="classpermutation_1a44dc1dbc08633d19ab1e8eef0825b38f" compoundref="permutation_8_h" startline="45">g</references>
+        <references refid="localmpi_8_h_1a20705b4372a9940d34a164bae541be1f" compoundref="localmpi_8_h" startline="17">myid</references>
+        <references refid="localmpi_8_h_1a31bfe068640b411bea3df0d69177ded5">numprocs</references>
+        <references refid="classpermutation_1a72414b581a3bef4c01631129e26a9d0f" compoundref="permutation_8_h" startline="44">perm</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpermutation_1aff5c189cdce245b00d11ecd9cd1e186d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void permutation::seed19937</definition>
+        <argsstring>()</argsstring>
+        <name>seed19937</name>
+        <qualifiedname>permutation::seed19937</qualifiedname>
+        <briefdescription>
+<para>Seed the Mersenne Twister from the random device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="48" column="8" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="48" bodyend="64"/>
+        <references refid="classpermutation_1a44dc1dbc08633d19ab1e8eef0825b38f" compoundref="permutation_8_h" startline="45">g</references>
+        <referencedby refid="classpermutation_1abc5c92591820f37ba377b06f622f6cad" compoundref="permutation_8_h" startline="27" endline="31">permutation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Make a permutation index. Share will MPI nodes if MPI is active.</para>
+<para>This implementation should fall back politely to single processor use. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/permutation.H" line="13" column="1" bodyfile="/home/weinberg/Projects/EXP/include/permutation.H" bodystart="14" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classpermutation_1a44dc1dbc08633d19ab1e8eef0825b38f" prot="private" virt="non-virtual"><scope>permutation</scope><name>g</name></member>
+      <member refid="classpermutation_1adbea72eabd3083c77ba494cc15900ad6" prot="public" virt="non-virtual"><scope>permutation</scope><name>operator[]</name></member>
+      <member refid="classpermutation_1a72414b581a3bef4c01631129e26a9d0f" prot="private" virt="non-virtual"><scope>permutation</scope><name>perm</name></member>
+      <member refid="classpermutation_1abc5c92591820f37ba377b06f622f6cad" prot="public" virt="non-virtual"><scope>permutation</scope><name>permutation</name></member>
+      <member refid="classpermutation_1aff5c189cdce245b00d11ecd9cd1e186d" prot="private" virt="non-virtual"><scope>permutation</scope><name>seed19937</name></member>
+      <member refid="classpermutation_1a4d9c363b55084a0c60d0a3f2056dd171" prot="public" virt="non-virtual"><scope>permutation</scope><name>shuffle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

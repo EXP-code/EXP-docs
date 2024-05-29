@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_b_s_sphere" kind="class" language="C++" prot="public">
+    <compoundname>BSSphere</compoundname>
+    <basecompoundref refid="class_axi_sym_biorth" prot="public" virt="non-virtual">AxiSymBiorth</basecompoundref>
+    <includes refid="biorth_8_h" local="no">biorth.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_s_sphere_1a081e0c0dc7ba0c6ce3a90d1622865b8f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; BSSphere::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <qualifiedname>BSSphere::a</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="242" column="15" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a4d4023f0b09f76b2128eee30c9adab0b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSSphere::lmax</definition>
+        <argsstring></argsstring>
+        <name>lmax</name>
+        <qualifiedname>BSSphere::lmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="240" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a9bc4b2deaf6374c33a94f424840c393e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSSphere::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>BSSphere::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="239" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1ae624f10745fff2b369772e014b0534fd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BSSphere::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>BSSphere::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="238" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="238" bodyend="-1"/>
+        <referencedby refid="class_b_s_sphere_1ae93400d3088e00815b34976e83fb1393" compoundref="biorth_8_h" startline="278" endline="278">rb_max</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a05b62809be5322921c33adbbdde61e6d" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd BSSphere::t_dr</definition>
+        <argsstring></argsstring>
+        <name>t_dr</name>
+        <qualifiedname>BSSphere::t_dr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="244" column="19" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a791fb84538b1eb679d3642fbf3cf60aa" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BSSphere::t_f</definition>
+        <argsstring></argsstring>
+        <name>t_f</name>
+        <qualifiedname>BSSphere::t_f</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="243" column="19" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a03375a5fb624a34f287da4bf5a3660ec" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BSSphere::t_g</definition>
+        <argsstring></argsstring>
+        <name>t_g</name>
+        <qualifiedname>BSSphere::t_g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="243" column="27" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a98f6c94e9fd65eb1fd92b3920601472d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSSphere::t_n</definition>
+        <argsstring></argsstring>
+        <name>t_n</name>
+        <qualifiedname>BSSphere::t_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="245" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_s_sphere_1a6f28b6caab3c3d5995441946d2542720" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd BSSphere::t_y</definition>
+        <argsstring></argsstring>
+        <name>t_y</name>
+        <qualifiedname>BSSphere::t_y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="243" column="23" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="243" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_b_s_sphere_1a1612e959166c176c157a150f85aaa5e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BSSphere::setup_potl_table</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_potl_table</name>
+        <qualifiedname>BSSphere::setup_potl_table</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="247" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_s_sphere_1a1f87227799e16c876be5438f666f1516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BSSphere::BSSphere</definition>
+        <argsstring>(double RMAX=1.0, int NMAX=10, int LMAX=10)</argsstring>
+        <name>BSSphere</name>
+        <qualifiedname>BSSphere::BSSphere</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>RMAX</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>NMAX</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>LMAX</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="251" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a12e2482b698749baac5e6e38a102b0a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::d_r_to_rb</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>d_r_to_rb</name>
+        <qualifiedname>BSSphere::d_r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaaf67379cdeb608b5f9c07509bb22631">d_r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="275" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="275" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1af208912e2b5129238361122d26ba570f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BSSphere::dens</definition>
+        <argsstring>(const int nn, const int l, const double r, Eigen::VectorXd &amp;t)</argsstring>
+        <name>dens</name>
+        <qualifiedname>BSSphere::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6222c8a860d4e41a3d81b74d790442c8">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="261" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a9f75d80acfcf6adcfb4409dfea289d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::dens</definition>
+        <argsstring>(const int nn, const int l, const double rb)</argsstring>
+        <name>dens</name>
+        <qualifiedname>BSSphere::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6cb90b729dbfb31340bf8930049df4cd">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="257" column="10"/>
+        <referencedby refid="class_b_s_sphere_1a63934682767d3047ec59909b743fcdb9" compoundref="biorth_8_h" startline="267" endline="268">densR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a63934682767d3047ec59909b743fcdb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double BSSphere::densR</definition>
+        <argsstring>(const int nn, const int l, const double r)</argsstring>
+        <name>densR</name>
+        <qualifiedname>BSSphere::densR</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="267" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="267" bodyend="268"/>
+        <references refid="class_b_s_sphere_1a9f75d80acfcf6adcfb4409dfea289d44">dens</references>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a85f774b0d688b3fbeb61651138f6553e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::krnl</definition>
+        <argsstring>(const int nn, const int l)</argsstring>
+        <name>krnl</name>
+        <qualifiedname>BSSphere::krnl</qualifiedname>
+        <reimplements refid="class_biorth_1a582200336065fac43a3282ee0671cffb">krnl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="258" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="258" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a56266207d6f674517e9453fa7cc09943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::norm</definition>
+        <argsstring>(const int nn, const int l)</argsstring>
+        <name>norm</name>
+        <qualifiedname>BSSphere::norm</qualifiedname>
+        <reimplements refid="class_biorth_1a4997a44fb308362868547f4eb0f23c5a">norm</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="259" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="259" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a5bc613ac2c95ca1f6004a4adb316782b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BSSphere::potl</definition>
+        <argsstring>(const int nn, const int l, const double r, Eigen::VectorXd &amp;t)</argsstring>
+        <name>potl</name>
+        <qualifiedname>BSSphere::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a2216fefb9a71a8dcdd378da8c3d82fbb">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="260" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a74e4f6e7bb5a702c339b7ed08b1b147f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::potl</definition>
+        <argsstring>(const int nn, const int l, const double rb)</argsstring>
+        <name>potl</name>
+        <qualifiedname>BSSphere::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaec9137305d7c2eed46ca59c5ea777b1">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="256" column="10"/>
+        <referencedby refid="class_b_s_sphere_1afc6b63870d35546e85b9a234689d14f2" compoundref="biorth_8_h" startline="265" endline="266">potlR</referencedby>
+        <referencedby refid="class_b_s_sphere_1a6b207a89cd7816edad8d5b4e89917ae5" compoundref="biorth_8_h" startline="269" endline="271">potlRZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1afc6b63870d35546e85b9a234689d14f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::potlR</definition>
+        <argsstring>(const int nn, const int l, const double r)</argsstring>
+        <name>potlR</name>
+        <qualifiedname>BSSphere::potlR</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a63c2bf04065efbbdcb005377836e0894">potlR</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="265" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="265" bodyend="266"/>
+        <references refid="class_b_s_sphere_1a74e4f6e7bb5a702c339b7ed08b1b147f">potl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a6b207a89cd7816edad8d5b4e89917ae5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::potlRZ</definition>
+        <argsstring>(const int nn, const int l, const double r, const double z)</argsstring>
+        <name>potlRZ</name>
+        <qualifiedname>BSSphere::potlRZ</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1afa024ea053a13ae6094ed1ee65653eac">potlRZ</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="269" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="269" bodyend="271"/>
+        <references refid="class_b_s_sphere_1a74e4f6e7bb5a702c339b7ed08b1b147f">potl</references>
+        <references refid="class_b_s_sphere_1a81281856517002989aae97dd6b9dea1c" compoundref="biorth_8_h" startline="274" endline="274">r_to_rb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a81281856517002989aae97dd6b9dea1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::r_to_rb</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>r_to_rb</name>
+        <qualifiedname>BSSphere::r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a5fea78e59e755b9d3e05965b223f10aa">r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="274" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="274" bodyend="274"/>
+        <referencedby refid="class_b_s_sphere_1a6b207a89cd7816edad8d5b4e89917ae5" compoundref="biorth_8_h" startline="269" endline="271">potlRZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1ae93400d3088e00815b34976e83fb1393" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::rb_max</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_max</name>
+        <qualifiedname>BSSphere::rb_max</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a8a0737fc879f5950452fd0a0b895a57b">rb_max</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="278" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="278" bodyend="278"/>
+        <references refid="class_b_s_sphere_1ae624f10745fff2b369772e014b0534fd" compoundref="biorth_8_h" startline="238">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1ab54f1a8062883e7dd6f0e117a43eeb59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::rb_min</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_min</name>
+        <qualifiedname>BSSphere::rb_min</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a732c3f77a9d9968f5a06ba7d57c69832">rb_min</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="277" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="277" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a16b38cfe134475522d1d6ab0515852e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double BSSphere::rb_to_r</definition>
+        <argsstring>(double const r)</argsstring>
+        <name>rb_to_r</name>
+        <qualifiedname>BSSphere::rb_to_r</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a3815fa706249dff779ff597d8ab37c71">rb_to_r</reimplements>
+        <param>
+          <type>double const</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="273" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="273" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_s_sphere_1a16e51a01df7049734c511adba3d65db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual BSSphere::~BSSphere</definition>
+        <argsstring>()</argsstring>
+        <name>~BSSphere</name>
+        <qualifiedname>BSSphere::~BSSphere</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="252" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BSSphere</label>
+        <link refid="class_b_s_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BSSphere</label>
+        <link refid="class_b_s_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="234" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="235" bodyend="280"/>
+    <listofallmembers>
+      <member refid="class_b_s_sphere_1a081e0c0dc7ba0c6ce3a90d1622865b8f" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>a</name></member>
+      <member refid="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a2e936fa39b497ab4f2316f7b6bd2f226" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>BiorthID</name></member>
+      <member refid="class_biorth_1a3331c0ec9dabbed562c32c3d59c7b1bb" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>bomb</name></member>
+      <member refid="class_b_s_sphere_1a1f87227799e16c876be5438f666f1516" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>BSSphere</name></member>
+      <member refid="class_b_s_sphere_1a12e2482b698749baac5e6e38a102b0a6" prot="public" virt="virtual"><scope>BSSphere</scope><name>d_r_to_rb</name></member>
+      <member refid="class_b_s_sphere_1a9f75d80acfcf6adcfb4409dfea289d44" prot="public" virt="virtual"><scope>BSSphere</scope><name>dens</name></member>
+      <member refid="class_b_s_sphere_1af208912e2b5129238361122d26ba570f" prot="public" virt="virtual"><scope>BSSphere</scope><name>dens</name></member>
+      <member refid="class_b_s_sphere_1a63934682767d3047ec59909b743fcdb9" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>densR</name></member>
+      <member refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" prot="protected" virt="non-virtual"><scope>BSSphere</scope><name>dof</name></member>
+      <member refid="class_axi_sym_biorth_1a87004c3a9f3587d69b8e131389d53046" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>get_dens</name></member>
+      <member refid="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>get_dof</name></member>
+      <member refid="class_axi_sym_biorth_1a1220954284feb464502dd18a8a74440b" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>get_potl</name></member>
+      <member refid="class_biorth_1a732367609f458cf4128bb37f2641c30b" prot="public" virt="non-virtual"><scope>BSSphere</scope><name>id</name></member>
+      <member refid="class_b_s_sphere_1a85f774b0d688b3fbeb61651138f6553e" prot="public" virt="virtual"><scope>BSSphere</scope><name>krnl</name></member>
+      <member refid="class_b_s_sphere_1a4d4023f0b09f76b2128eee30c9adab0b" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>lmax</name></member>
+      <member refid="class_b_s_sphere_1a9bc4b2deaf6374c33a94f424840c393e" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>nmax</name></member>
+      <member refid="class_b_s_sphere_1a56266207d6f674517e9453fa7cc09943" prot="public" virt="virtual"><scope>BSSphere</scope><name>norm</name></member>
+      <member refid="class_b_s_sphere_1a74e4f6e7bb5a702c339b7ed08b1b147f" prot="public" virt="virtual"><scope>BSSphere</scope><name>potl</name></member>
+      <member refid="class_b_s_sphere_1a5bc613ac2c95ca1f6004a4adb316782b" prot="public" virt="virtual"><scope>BSSphere</scope><name>potl</name></member>
+      <member refid="class_b_s_sphere_1afc6b63870d35546e85b9a234689d14f2" prot="public" virt="virtual"><scope>BSSphere</scope><name>potlR</name></member>
+      <member refid="class_b_s_sphere_1a6b207a89cd7816edad8d5b4e89917ae5" prot="public" virt="virtual"><scope>BSSphere</scope><name>potlRZ</name></member>
+      <member refid="class_b_s_sphere_1a81281856517002989aae97dd6b9dea1c" prot="public" virt="virtual"><scope>BSSphere</scope><name>r_to_rb</name></member>
+      <member refid="class_b_s_sphere_1ae93400d3088e00815b34976e83fb1393" prot="public" virt="virtual"><scope>BSSphere</scope><name>rb_max</name></member>
+      <member refid="class_b_s_sphere_1ab54f1a8062883e7dd6f0e117a43eeb59" prot="public" virt="virtual"><scope>BSSphere</scope><name>rb_min</name></member>
+      <member refid="class_b_s_sphere_1a16b38cfe134475522d1d6ab0515852e7" prot="public" virt="virtual"><scope>BSSphere</scope><name>rb_to_r</name></member>
+      <member refid="class_b_s_sphere_1ae624f10745fff2b369772e014b0534fd" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>rmax</name></member>
+      <member refid="class_b_s_sphere_1a1612e959166c176c157a150f85aaa5e1" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>setup_potl_table</name></member>
+      <member refid="class_b_s_sphere_1a05b62809be5322921c33adbbdde61e6d" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>t_dr</name></member>
+      <member refid="class_b_s_sphere_1a791fb84538b1eb679d3642fbf3cf60aa" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>t_f</name></member>
+      <member refid="class_b_s_sphere_1a03375a5fb624a34f287da4bf5a3660ec" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>t_g</name></member>
+      <member refid="class_b_s_sphere_1a98f6c94e9fd65eb1fd92b3920601472d" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>t_n</name></member>
+      <member refid="class_b_s_sphere_1a6f28b6caab3c3d5995441946d2542720" prot="private" virt="non-virtual"><scope>BSSphere</scope><name>t_y</name></member>
+      <member refid="class_axi_sym_biorth_1adcf402d63d58581bfb671cc97b213222" prot="public" virt="virtual"><scope>BSSphere</scope><name>~AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a83c4824d7003048794102f54152cfdbc" prot="public" virt="virtual"><scope>BSSphere</scope><name>~Biorth</name></member>
+      <member refid="class_b_s_sphere_1a16e51a01df7049734c511adba3d65db4" prot="public" virt="virtual"><scope>BSSphere</scope><name>~BSSphere</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

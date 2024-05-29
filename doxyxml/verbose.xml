@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="verbose" kind="page">
+    <compoundname>verbose</compoundname>
+    <title>Diagnostic output for various VERBOSE values</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem>
+<para>VERBOSE=0 <itemizedlist>
+<listitem>
+<para>No output </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=1 (default value) <itemizedlist>
+<listitem>
+<para><ref refid="class_output" kindref="compound">Output</ref> timestep diagnostics for each component (<computeroutput>multistep.cc</computeroutput>) </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=2 </para>
+</listitem>
+<listitem>
+<para>VERBOSE=4 <itemizedlist>
+<listitem>
+<para>multistep output timestep diagnostics for each component (<computeroutput>multistep.cc</computeroutput>) </para>
+</listitem>
+<listitem>
+<para>use cputime counters for timing each part of the force computation and time step advance (<computeroutput>ComponentContainer.cc</computeroutput>) </para>
+</listitem>
+<listitem>
+<para>use cputime counters for each part of the step (<computeroutput>step.cc</computeroutput>) </para>
+</listitem>
+<listitem>
+<para>log each center and axis computation (<computeroutput>Cylinder.cc</computeroutput>) </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=5 <itemizedlist>
+<listitem>
+<para>output the multistep level totals for each component (<computeroutput>step.cc</computeroutput>) </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=6 <itemizedlist>
+<listitem>
+<para>thread timing in force routines </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=7 <itemizedlist>
+<listitem>
+<para>log force calls that are off the basis grid to stdout (<computeroutput>Cylinder.cc</computeroutput>) </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>VERBOSE=11 <itemizedlist>
+<listitem>
+<para>write out multistep control structure (no one really needs this level of detail unless one is debugging (<computeroutput>multistep.cc</computeroutput>) </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="verbose.doc"/>
+  </compounddef>
+</doxygen>

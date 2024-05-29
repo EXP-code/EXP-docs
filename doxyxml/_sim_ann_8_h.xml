@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_sim_ann_8_h" kind="file" language="C++">
+    <compoundname>SimAnn.H</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">random</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/SimAnn.H</label>
+        <link refid="_sim_ann_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>iomanip</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>limits</label>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_sim_ann" prot="public">SimAnn</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_sim_ann_8_h_1a40ec7c65c727ec0eaa2a372a165bc159" prot="public" static="no">
+        <name>SIM_ANN_HPP_</name>
+        <initializer>1.4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SimAnn.H" line="2" column="9" bodyfile="/home/weinberg/Projects/EXP/include/SimAnn.H" bodystart="2" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SIM_ANN_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_sim_ann_8_h_1a40ec7c65c727ec0eaa2a372a165bc159" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIM_ANN_HPP_<sp/>1.4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_USE_MATH_DEFINES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_sim_ann" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sim_ann" kindref="compound">SimAnn</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::function&lt;double(std::vector&lt;double&gt;&amp;)&gt;<sp/><ref refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" kindref="member">Func1d</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::function&lt;std::vector&lt;double&gt;(std::vector&lt;double&gt;&amp;)&gt;<sp/><ref refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" kindref="member">FuncMap</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_sim_ann_1adc39a3f39d3473c3686b66fe1d8165c6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" kindref="member">Func1d</ref><sp/><ref refid="class_sim_ann_1adc39a3f39d3473c3686b66fe1d8165c6" kindref="member">func</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Objective<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" kindref="member">FuncMap</ref><sp/><ref refid="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" kindref="member">pmap</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameter<sp/>mapping<sp/>for<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" kindref="member">ddwell</ref>;</highlight></codeline>
+<codeline lineno="25" refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref>;</highlight></codeline>
+<codeline lineno="26" refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" kindref="member">t0</ref>;</highlight></codeline>
+<codeline lineno="27" refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" kindref="member">K</ref>;</highlight></codeline>
+<codeline lineno="28" refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" kindref="member">rho</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_sim_ann_1a5657470e78cf7c7126cd13e28f3cc6f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a5657470e78cf7c7126cd13e28f3cc6f0" kindref="member">dt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>increment<sp/>to<sp/>use<sp/>when<sp/>melting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_sim_ann_1a0aa857452114450f48f0a16f26cd0301" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a0aa857452114450f48f0a16f26cd0301" kindref="member">tscale</ref><sp/>;</highlight></codeline>
+<codeline lineno="31" refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" kindref="member">maxit</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" kindref="member">c_jump</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>phase<sp/>transition<sp/>step<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" kindref="member">fsave</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_sim_ann_1a7cab4f04fc3a8f295f2bd195fedaf929" refkind="member"><highlight class="normal"><sp/><sp/>std::mt19937<sp/><ref refid="class_sim_ann_1a7cab4f04fc3a8f295f2bd195fedaf929" kindref="member">gen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Random<sp/>number<sp/>generator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" refkind="member"><highlight class="normal"><sp/><sp/>std::uniform_real_distribution&lt;double&gt;<sp/><ref refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" kindref="member">number_range</ref>,<sp/><ref refid="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" kindref="member">number_01</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_sim_ann_1a7ccbfabce4fa83789c86a46cde2ab97d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a7ccbfabce4fa83789c86a46cde2ab97d" kindref="member">err</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" kindref="member">x</ref>,<sp/><ref refid="class_sim_ann_1acd655bd1ca3733fe4e041d9b1e7c4781" kindref="member">xnew</ref>,<sp/><ref refid="class_sim_ann_1ac29ebf9d3ec73d4151feb28bc4766a7f" kindref="member">xbest</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_sim_ann_1a7e082d7470b2a2a53377c99ed147c242" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aee5571003287381eb596e22b12f1513e" kindref="member">y</ref>,<sp/><ref refid="class_sim_ann_1a7e082d7470b2a2a53377c99ed147c242" kindref="member">dy</ref>,<sp/><ref refid="class_sim_ann_1ad14b958020294036f74cf84ae3b2e7c4" kindref="member">ybest</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_sim_ann_1ae20159c138105d13f5aa8f75688f7474" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1ae20159c138105d13f5aa8f75688f7474" kindref="member">equilibrate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="43" refid="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" kindref="member">fname</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_sim_ann_1a7ec2e47c033b31641cd5df9f8af62549" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a7ec2e47c033b31641cd5df9f8af62549" kindref="member">log_state</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45" refid="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" refkind="member"><highlight class="normal"><sp/><sp/>std::ostream<sp/>*<ref refid="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" kindref="member">str</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sim_ann_1a14da64e73384efcf88fc174d8055ff2f" kindref="member">SimAnn</ref>()<sp/>:<sp/><ref refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" kindref="member">ddwell</ref>(20),<sp/><ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref>(M_PI_2),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" kindref="member">t0</ref>(0.0),<sp/><ref refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" kindref="member">K</ref>(1.0),<sp/><ref refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" kindref="member">rho</ref>(0.5),<sp/><ref refid="class_sim_ann_1a5657470e78cf7c7126cd13e28f3cc6f0" kindref="member">dt</ref>(0.1),<sp/><ref refid="class_sim_ann_1a0aa857452114450f48f0a16f26cd0301" kindref="member">tscale</ref>(0.1),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" kindref="member">maxit</ref>(400),<sp/><ref refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" kindref="member">c_jump</ref>(100.0),<sp/><ref refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" kindref="member">fsave</ref>(0)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" kindref="member">number_range</ref><sp/>=<sp/>std::uniform_real_distribution&lt;double&gt;(-<ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref>,<sp/><ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a70989c6b034a46286f86494fcdef3648" kindref="member">number_01</ref><sp/><sp/><sp/><sp/>=<sp/>std::uniform_real_distribution&lt;double&gt;(0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_sim_ann_1a2adc2ee894fd9d131453b73fa16bc0cd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sim_ann_1a2adc2ee894fd9d131453b73fa16bc0cd" kindref="member">SimAnn</ref>(std::function&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(std::vector&lt;double&gt;&amp;)&gt;<sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_sim_ann_1a44c6f2c16efe2ebcfd1018b4c85536cc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sim_ann_1a44c6f2c16efe2ebcfd1018b4c85536cc" kindref="member">~SimAnn</ref>()<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nothing<sp/>so<sp/>far</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="class_sim_ann_1a9aa8b63c2682c1ec0496eff05f8396c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a9aa8b63c2682c1ec0496eff05f8396c5" kindref="member">set_up</ref>(<ref refid="class_sim_ann_1a0ec2e143852051e083e5dd88c8930b51" kindref="member">Func1d</ref><sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed=10);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_sim_ann_1aad654e40f98e7e0875c5b5df1ed46357" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aad654e40f98e7e0875c5b5df1ed46357" kindref="member">set_map</ref>(<ref refid="class_sim_ann_1a5aad0531bbe37d5ebbf2d7120171fa9b" kindref="member">FuncMap</ref><sp/>f)<sp/>{<sp/><ref refid="class_sim_ann_1a640320fe7f3e4b31a1de797c7b9a1cb3" kindref="member">pmap</ref><sp/>=<sp/>f;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_sim_ann_1a30ca1e887a35c7c59dfa222068748251" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a30ca1e887a35c7c59dfa222068748251" kindref="member">melt</ref><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iters<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_sim_ann_1a702b2663bfc3609ab4335e46caf1e877" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a702b2663bfc3609ab4335e46caf1e877" kindref="member">anneal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iters<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="class_sim_ann_1a47452478f0c753fc80a4f15bb3272cee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a47452478f0c753fc80a4f15bb3272cee" kindref="member">iterations</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>-1)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m<sp/>&gt;<sp/>0<sp/>)<sp/><ref refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" kindref="member">maxit</ref><sp/>=<sp/>m;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aa9be6bd45c38317c5b38c6f533a49183" kindref="member">maxit</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_sim_ann_1a71ed23c796300b121eb7134944db6976" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a71ed23c796300b121eb7134944db6976" kindref="member">dwell</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>-1)<sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>d<sp/>&gt;<sp/>0<sp/>)<sp/><ref refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" kindref="member">ddwell</ref><sp/>=<sp/>d;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1af98bd436f34dad13b09ba2465364684a" kindref="member">ddwell</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_sim_ann_1a595d97ae542a87095840fe899cefa1f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a595d97ae542a87095840fe899cefa1f8" kindref="member">Boltzmann</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>&gt;<sp/>0.0<sp/>)<sp/><ref refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" kindref="member">K</ref><sp/>=<sp/>k;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a1305088e71e10a4e9d1a0aa3c19cced8" kindref="member">K</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_sim_ann_1afa312929c01db4d0429bbbe33434db6d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1afa312929c01db4d0429bbbe33434db6d" kindref="member">learning_rate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>r<sp/>&gt;<sp/>0.0<sp/>)<sp/><ref refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" kindref="member">rho</ref><sp/>=<sp/>r;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1ab7edcaf8339803496f5419efbedaa04c" kindref="member">rho</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_sim_ann_1ad2f0499488a5c74b86044f77c63f4c6a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1ad2f0499488a5c74b86044f77c63f4c6a" kindref="member">temperature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>t<sp/>&gt;<sp/>0.0<sp/>)<sp/><ref refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" kindref="member">t0</ref><sp/>=<sp/>t;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a0512b42c3bedd54d710fc53a6064c508" kindref="member">t0</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_sim_ann_1accde6cb2f42366109a58055dff05787d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1accde6cb2f42366109a58055dff05787d" kindref="member">jump</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>&gt;<sp/>0.0<sp/>)<sp/><ref refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" kindref="member">c_jump</ref><sp/>=<sp/>j;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aab0d1f99c00d08ce70852d9fa32dfa26" kindref="member">c_jump</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1aaee3d64a961fa3df6b1ba789230226a4" kindref="member">range</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>r<sp/>&gt;<sp/>0.0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a9e119ba1bc59dde2d091377ff5b3306b" kindref="member">number_range</ref><sp/>=<sp/>std::uniform_real_distribution&lt;double&gt;(-r,r);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a94f3d5d96e42bc4e7fda280fd1465a20" kindref="member">rrange</ref>;<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_sim_ann_1a139aedb9b6fed482e463d71485894ca1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a139aedb9b6fed482e463d71485894ca1" kindref="member">initial</ref><sp/>(std::vector&lt;double&gt;&amp;<sp/>xi)<sp/>{<sp/><ref refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" kindref="member">x</ref><sp/>=<sp/>xi;<sp/>}</highlight></codeline>
+<codeline lineno="104" refid="class_sim_ann_1a9906a615f365c3be71b9976f558cd11b" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_sim_ann_1a9906a615f365c3be71b9976f558cd11b" kindref="member">current</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1abcc4ed0c8c1dbf93a0dc32a6cfe84db7" kindref="member">x</ref>;<sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105" refid="class_sim_ann_1ad0b259a0b490ab224fd3f3dc6c70c8ee" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_sim_ann_1ad0b259a0b490ab224fd3f3dc6c70c8ee" kindref="member">optimum</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1ac29ebf9d3ec73d4151feb28bc4766a7f" kindref="member">xbest</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a0a68232d4388433ac5bba2ea6642a4a1" kindref="member">save_states</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" kindref="member">fsave</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1adae892c6f4789d5d5c1b754f3bb46565" kindref="member">fname</ref><sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sim_ann_1a3e983bc3434505678807d1ccc8352ed1" kindref="member">report_states</ref>(std::ostream&amp;<sp/>out)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1af970a852f6f416cb2b1befe036afea07" kindref="member">fsave</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sim_ann_1a98c8ad464ec63e41c7772882bcf6044c" kindref="member">str</ref><sp/><sp/><sp/>=<sp/>&amp;out;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/SimAnn.H"/>
+  </compounddef>
+</doxygen>

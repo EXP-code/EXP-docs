@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_l_grid_slab_1_1_coord_map" kind="class" language="C++" prot="private" abstract="yes">
+    <compoundname>SLGridSlab::CoordMap</compoundname>
+    <derivedcompoundref refid="class_s_l_grid_slab_1_1_linear_map" prot="public" virt="non-virtual">SLGridSlab::LinearMap</derivedcompoundref>
+    <derivedcompoundref refid="class_s_l_grid_slab_1_1_sech_map" prot="public" virt="non-virtual">SLGridSlab::SechMap</derivedcompoundref>
+    <derivedcompoundref refid="class_s_l_grid_slab_1_1_tanh_map" prot="public" virt="non-virtual">SLGridSlab::TanhMap</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SLGridSlab::CoordMap::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <qualifiedname>SLGridSlab::CoordMap::H</qualifiedname>
+        <briefdescription>
+<para>Scale parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="302" column="12" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="302" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_l_grid_slab_1_1_coord_map_1aa5bf84ec8451a510fe23993ef4f4d3cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SLGridSlab::CoordMap::CoordMap</definition>
+        <argsstring>(double H)</argsstring>
+        <name>CoordMap</name>
+        <qualifiedname>SLGridSlab::CoordMap::CoordMap</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>H</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="306" column="5" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="306" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1_1_coord_map_1a455b7aef1988fe5d769ce5e17b2874e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SLGridSlab::CoordMap::d_xi_to_z</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>d_xi_to_z</name>
+        <qualifiedname>SLGridSlab::CoordMap::d_xi_to_z</qualifiedname>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_tanh_map_1aacf536df13b2443871e40c9d2a89a304">d_xi_to_z</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_sech_map_1aef4157e125111c391081d8d474362867">d_xi_to_z</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_linear_map_1aca3585409228dd04e0568d6f1658dc8d">d_xi_to_z</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Jacobian of the transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="315" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1_1_coord_map_1aad4b4aa9d11c2007616a12138797805c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SLGridSlab::CoordMap::xi_to_z</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>xi_to_z</name>
+        <qualifiedname>SLGridSlab::CoordMap::xi_to_z</qualifiedname>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_tanh_map_1a8537819ce0983fa7e9fcb84084d082de">xi_to_z</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_sech_map_1a77cc9f55ade022a7c3796dde30ae6641">xi_to_z</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_linear_map_1a56cabd4b1f622fe1771fc4764af005e3">xi_to_z</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Convert from mapped coordinate back to vertical. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="312" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_l_grid_slab_1_1_coord_map_1a1e32fa3531c060d8b1940e57a00c3fda" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SLGridSlab::CoordMap::z_to_xi</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>z_to_xi</name>
+        <qualifiedname>SLGridSlab::CoordMap::z_to_xi</qualifiedname>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_tanh_map_1ae4a5220ba00756f5278a077f80833df2">z_to_xi</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_sech_map_1a2db5175dfdf7207d5b2efe61eaff22cf">z_to_xi</reimplementedby>
+        <reimplementedby refid="class_s_l_grid_slab_1_1_linear_map_1a6984158bb10b3ee56eb60797b73ae7d6">z_to_xi</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Convert from vertical to mapped coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="309" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_l_grid_slab_1_1_coord_map_1a4b74c95d6748b73f6f18f76f28f58c5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="class_s_l_grid_slab_1_1_coord_map" kindref="compound">CoordMap</ref> &gt;</type>
+        <definition>static std::unique_ptr&lt; CoordMap &gt; SLGridSlab::CoordMap::factory</definition>
+        <argsstring>(CoordMapTypes type, double H)</argsstring>
+        <name>factory</name>
+        <qualifiedname>SLGridSlab::CoordMap::factory</qualifiedname>
+        <param>
+          <type><ref refid="class_s_l_grid_slab_1a9d273e2a64cf2a07a0b930a95088f3a3" kindref="member">CoordMapTypes</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>H</declname>
+        </param>
+        <briefdescription>
+<para>Coordinate map factory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="318" column="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The base class for all coordinate maps. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SLGridSlab::CoordMap</label>
+        <link refid="class_s_l_grid_slab_1_1_coord_map"/>
+      </node>
+      <node id="2">
+        <label>SLGridSlab::LinearMap</label>
+        <link refid="class_s_l_grid_slab_1_1_linear_map"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SLGridSlab::SechMap</label>
+        <link refid="class_s_l_grid_slab_1_1_sech_map"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SLGridSlab::TanhMap</label>
+        <link refid="class_s_l_grid_slab_1_1_tanh_map"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="298" column="3" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="299" bodyend="320"/>
+    <listofallmembers>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1aa5bf84ec8451a510fe23993ef4f4d3cc" prot="public" virt="non-virtual"><scope>SLGridSlab::CoordMap</scope><name>CoordMap</name></member>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1a455b7aef1988fe5d769ce5e17b2874e8" prot="public" virt="pure-virtual"><scope>SLGridSlab::CoordMap</scope><name>d_xi_to_z</name></member>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1a4b74c95d6748b73f6f18f76f28f58c5f" prot="public" virt="non-virtual"><scope>SLGridSlab::CoordMap</scope><name>factory</name></member>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1a2bbbacd83cdc01d8dbc46faa51721ee4" prot="protected" virt="non-virtual"><scope>SLGridSlab::CoordMap</scope><name>H</name></member>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1aad4b4aa9d11c2007616a12138797805c" prot="public" virt="pure-virtual"><scope>SLGridSlab::CoordMap</scope><name>xi_to_z</name></member>
+      <member refid="class_s_l_grid_slab_1_1_coord_map_1a1e32fa3531c060d8b1940e57a00c3fda" prot="public" virt="pure-virtual"><scope>SLGridSlab::CoordMap</scope><name>z_to_xi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

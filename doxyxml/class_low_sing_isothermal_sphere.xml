@@ -1,0 +1,805 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_low_sing_isothermal_sphere" kind="class" language="C++" prot="public">
+    <compoundname>LowSingIsothermalSphere</compoundname>
+    <basecompoundref refid="class_axi_sym_model" prot="public" virt="non-virtual">AxiSymModel</basecompoundref>
+    <includes refid="isothermal_8_h" local="no">isothermal.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1ade36ef051d539d8b99a726bb69cbf32d" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>LowSingIsothermalSphere::d</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="195" column="21" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="195" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a7bcd266bea840a5438c388ef56c212c1" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::d2</definition>
+        <argsstring></argsstring>
+        <name>d2</name>
+        <qualifiedname>LowSingIsothermalSphere::d2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="196" column="19" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="196" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a0a37ae779bd4afb91041ed724f2049b3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::F</definition>
+        <argsstring></argsstring>
+        <name>F</name>
+        <qualifiedname>LowSingIsothermalSphere::F</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="192" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" compoundref="isothermal_8_h" startline="282" endline="285">d2fde2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" compoundref="isothermal_8_h" startline="273" endline="276">dfde</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" compoundref="isothermal_8_h" startline="268" endline="271">distf</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a8b8b5ab900e6b8b772363e5b541ad9af" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::Fconst</definition>
+        <argsstring></argsstring>
+        <name>Fconst</name>
+        <qualifiedname>LowSingIsothermalSphere::Fconst</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="192" column="12" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" compoundref="isothermal_8_h" startline="268" endline="271">distf</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <qualifiedname>LowSingIsothermalSphere::m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="195" column="23" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="195" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::m2</definition>
+        <argsstring></argsstring>
+        <name>m2</name>
+        <qualifiedname>LowSingIsothermalSphere::m2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="196" column="22" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="196" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LowSingIsothermalSphere::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <qualifiedname>LowSingIsothermalSphere::num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="194" column="7" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="194" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" compoundref="isothermal_8_h" startline="282" endline="285">d2fde2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" compoundref="isothermal_8_h" startline="273" endline="276">dfde</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" compoundref="isothermal_8_h" startline="268" endline="271">distf</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <qualifiedname>LowSingIsothermalSphere::p</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="195" column="25" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="195" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" compoundref="isothermal_8_h" startline="282" endline="285">d2fde2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" compoundref="isothermal_8_h" startline="273" endline="276">dfde</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" compoundref="isothermal_8_h" startline="268" endline="271">distf</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1ab6bfbd1f4707749f1521de2edf8db8bc" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::p2</definition>
+        <argsstring></argsstring>
+        <name>p2</name>
+        <qualifiedname>LowSingIsothermalSphere::p2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="196" column="25" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="196" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::ret1</definition>
+        <argsstring></argsstring>
+        <name>ret1</name>
+        <qualifiedname>LowSingIsothermalSphere::ret1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="198" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="198" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a309daac810b8996c2e937a8e40d4ac50" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::ret2</definition>
+        <argsstring></argsstring>
+        <name>ret2</name>
+        <qualifiedname>LowSingIsothermalSphere::ret2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="198" column="15" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="198" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>LowSingIsothermalSphere::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="191" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="191" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ad6e9b8b2ee733f25bf759d57da386dfe" compoundref="isothermal_8_h" startline="266" endline="266">get_max_radius</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>LowSingIsothermalSphere::rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="190" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="190" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1adb2287d0df5a238e324d9697d846648a" compoundref="isothermal_8_h" startline="265" endline="265">get_min_radius</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1ad96a878a58905857df5ae30f54155b16" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::sigma</definition>
+        <argsstring></argsstring>
+        <name>sigma</name>
+        <qualifiedname>LowSingIsothermalSphere::sigma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="192" column="19" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" compoundref="isothermal_8_h" startline="282" endline="285">d2fde2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" compoundref="isothermal_8_h" startline="273" endline="276">dfde</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" compoundref="isothermal_8_h" startline="268" endline="271">distf</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd LowSingIsothermalSphere::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <qualifiedname>LowSingIsothermalSphere::u</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="195" column="19" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="195" bodyend="-1"/>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">get_pot_dpot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::d2fde2</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>LowSingIsothermalSphere::d2fde2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="282" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="282" bodyend="285"/>
+        <references refid="class_low_sing_isothermal_sphere_1a0a37ae779bd4afb91041ed724f2049b3" compoundref="isothermal_8_h" startline="192">F</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" compoundref="isothermal_8_h" startline="195">p</references>
+        <references refid="class_low_sing_isothermal_sphere_1ad96a878a58905857df5ae30f54155b16" compoundref="isothermal_8_h" startline="192">sigma</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::dfde</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfde</name>
+        <qualifiedname>LowSingIsothermalSphere::dfde</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="273" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="273" bodyend="276"/>
+        <references refid="class_low_sing_isothermal_sphere_1a0a37ae779bd4afb91041ed724f2049b3" compoundref="isothermal_8_h" startline="192">F</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" compoundref="isothermal_8_h" startline="195">p</references>
+        <references refid="class_low_sing_isothermal_sphere_1ad96a878a58905857df5ae30f54155b16" compoundref="isothermal_8_h" startline="192">sigma</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a556cd0c2804409b83bf4e442430557e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::dfdl</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>LowSingIsothermalSphere::dfdl</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="278" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="278" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::distf</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>distf</name>
+        <qualifiedname>LowSingIsothermalSphere::distf</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="268" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="268" bodyend="271"/>
+        <references refid="class_low_sing_isothermal_sphere_1a0a37ae779bd4afb91041ed724f2049b3" compoundref="isothermal_8_h" startline="192">F</references>
+        <references refid="class_low_sing_isothermal_sphere_1a8b8b5ab900e6b8b772363e5b541ad9af" compoundref="isothermal_8_h" startline="192">Fconst</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" compoundref="isothermal_8_h" startline="195">p</references>
+        <references refid="class_low_sing_isothermal_sphere_1ad96a878a58905857df5ae30f54155b16" compoundref="isothermal_8_h" startline="192">sigma</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_density</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>LowSingIsothermalSphere::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="215" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="215" bodyend="221"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1ade36ef051d539d8b99a726bb69cbf32d" compoundref="isothermal_8_h" startline="195">d</references>
+        <references refid="class_low_sing_isothermal_sphere_1a7bcd266bea840a5438c388ef56c212c1" compoundref="isothermal_8_h" startline="196">d2</references>
+        <references refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" compoundref="isothermal_8_h" startline="198">ret1</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_dpot</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>LowSingIsothermalSphere::get_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845">get_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="231" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="231" bodyend="237"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" compoundref="isothermal_8_h" startline="195">m</references>
+        <references refid="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" compoundref="isothermal_8_h" startline="196">m2</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" compoundref="isothermal_8_h" startline="198">ret1</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_dpot2</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>LowSingIsothermalSphere::get_dpot2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae">get_dpot2</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="239" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="239" bodyend="246"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1ade36ef051d539d8b99a726bb69cbf32d" compoundref="isothermal_8_h" startline="195">d</references>
+        <references refid="class_low_sing_isothermal_sphere_1a7bcd266bea840a5438c388ef56c212c1" compoundref="isothermal_8_h" startline="196">d2</references>
+        <references refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" compoundref="isothermal_8_h" startline="195">m</references>
+        <references refid="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" compoundref="isothermal_8_h" startline="196">m2</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" compoundref="isothermal_8_h" startline="198">ret1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a309daac810b8996c2e937a8e40d4ac50" compoundref="isothermal_8_h" startline="198">ret2</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_mass</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>LowSingIsothermalSphere::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="207" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="207" bodyend="213"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" compoundref="isothermal_8_h" startline="195">m</references>
+        <references refid="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" compoundref="isothermal_8_h" startline="196">m2</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" compoundref="isothermal_8_h" startline="198">ret1</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1ad6e9b8b2ee733f25bf759d57da386dfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_max_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>LowSingIsothermalSphere::get_max_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c">get_max_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="266" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="266" bodyend="266"/>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1adb2287d0df5a238e324d9697d846648a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_min_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>LowSingIsothermalSphere::get_min_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9">get_min_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="265" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="265" bodyend="265"/>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double LowSingIsothermalSphere::get_pot</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>LowSingIsothermalSphere::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="223" column="10" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="223" bodyend="229"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" compoundref="isothermal_8_h" startline="195">m</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" compoundref="isothermal_8_h" startline="195">p</references>
+        <references refid="class_low_sing_isothermal_sphere_1ab6bfbd1f4707749f1521de2edf8db8bc" compoundref="isothermal_8_h" startline="196">p2</references>
+        <references refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" compoundref="isothermal_8_h" startline="198">ret1</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void LowSingIsothermalSphere::get_pot_dpot</definition>
+        <argsstring>(const double R, double &amp;ur, double &amp;dur)</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>LowSingIsothermalSphere::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632">get_pot_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ur</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="248" column="8" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="248" bodyend="261"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" compoundref="isothermal_8_h" startline="195">m</references>
+        <references refid="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" compoundref="isothermal_8_h" startline="196">m2</references>
+        <references refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" compoundref="isothermal_8_h" startline="194">num</references>
+        <references refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" compoundref="isothermal_8_h" startline="195">p</references>
+        <references refid="class_low_sing_isothermal_sphere_1ab6bfbd1f4707749f1521de2edf8db8bc" compoundref="isothermal_8_h" startline="196">p2</references>
+        <references refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" compoundref="isothermal_8_h" startline="191">rmax</references>
+        <references refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" compoundref="isothermal_8_h" startline="190">rmin</references>
+        <references refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5">Splint1</references>
+        <references refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" compoundref="isothermal_8_h" startline="195">u</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_sing_isothermal_sphere_1aa6cdc3d24427b03a73bb12c7744dd1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LowSingIsothermalSphere::LowSingIsothermalSphere</definition>
+        <argsstring>(double RMIN=1.0e-3, double RMAX=20.0, int NUM=2000, int dN=20)</argsstring>
+        <name>LowSingIsothermalSphere</name>
+        <qualifiedname>LowSingIsothermalSphere::LowSingIsothermalSphere</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>RMIN</declname>
+          <defval>1.0e-3</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RMAX</declname>
+          <defval>20.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>NUM</declname>
+          <defval>2000</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dN</declname>
+          <defval>20</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="202" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>LowSingIsothermalSphere</label>
+        <link refid="class_low_sing_isothermal_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="1">
+        <label>LowSingIsothermalSphere</label>
+        <link refid="class_low_sing_isothermal_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="6">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="5">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/isothermal.H" line="187" column="1" bodyfile="/home/weinberg/Projects/EXP/include/isothermal.H" bodystart="188" bodyend="288"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>bomb</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ade36ef051d539d8b99a726bb69cbf32d" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>d</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a7bcd266bea840a5438c388ef56c212c1" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>d2</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>dEgrid</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>dfde</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a556cd0c2804409b83bf4e442430557e5" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>dist_defined</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>dof</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Emin_grid</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a0a37ae779bd4afb91041ed724f2049b3" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>F</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a8b8b5ab900e6b8b772363e5b541ad9af" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Fconst</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>gen_velocity</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>LowSingIsothermalSphere</scope><name>get_density</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_dpot</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_dpot2</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>LowSingIsothermalSphere</scope><name>get_mass</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ad6e9b8b2ee733f25bf759d57da386dfe" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_max_radius</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1adb2287d0df5a238e324d9697d846648a" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_min_radius</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>LowSingIsothermalSphere</scope><name>get_pot</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>get_pot_dpot</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Kgrid</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1aa6cdc3d24427b03a73bb12c7744dd1d2" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>LowSingIsothermalSphere</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a91e77aab1cc304abeed0d2c56cbf6403" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>m</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ae7d9269e8b0187bbfdde1a90e49a15aa" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>m2</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>ModelID</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a3470b8b6b8616c5e6171b5f33c39134f" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>num</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>numr</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1aa09b6c0967939d854c94585c4e687eba" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>p</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ab6bfbd1f4707749f1521de2edf8db8bc" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>p2</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1aca59b33049f9961f24b9ee6cb0a6727b" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>ret1</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a309daac810b8996c2e937a8e40d4ac50" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>ret2</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Rgrid</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ac7344706557d0ff962c02a78cec53f31" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>rmax</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a5f2be78e2fb95e31d77074949303522d" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>rmin</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>set_itmax</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1ad96a878a58905857df5ae30f54155b16" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>sigma</name></member>
+      <member refid="class_low_sing_isothermal_sphere_1a9c0d4b52e2496c073104df683290757f" prot="private" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>u</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>Unit</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>LowSingIsothermalSphere</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>LowSingIsothermalSphere</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

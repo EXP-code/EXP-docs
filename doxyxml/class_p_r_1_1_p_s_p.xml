@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_r_1_1_p_s_p" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PR::PSP</compoundname>
+    <basecompoundref refid="class_p_r_1_1_particle_reader" prot="public" virt="non-virtual">PR::ParticleReader</basecompoundref>
+    <derivedcompoundref refid="class_p_r_1_1_p_s_pout" prot="public" virt="non-virtual">PR::PSPout</derivedcompoundref>
+    <derivedcompoundref refid="class_p_r_1_1_p_s_pspl" prot="public" virt="non-virtual">PR::PSPspl</derivedcompoundref>
+    <includes refid="_particle_reader_8_h" local="no">ParticleReader.H</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a12424e52bab67a14df6596a84a1dfbf0" prot="protected" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long PR::PSP::magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <qualifiedname>PR::PSP::magic</qualifiedname>
+        <initializer>= 0xadbfabc0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="330" column="32" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1aa1a016605ba6d8ac681dc57c95b856ea" prot="protected" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long PR::PSP::mmask</definition>
+        <argsstring></argsstring>
+        <name>mmask</name>
+        <qualifiedname>PR::PSP::mmask</qualifiedname>
+        <initializer>= 0xf</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="331" column="32" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1ae03de96b330fbc496203a944c9d8155d" prot="protected" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long PR::PSP::nmask</definition>
+        <argsstring></argsstring>
+        <name>nmask</name>
+        <qualifiedname>PR::PSP::nmask</qualifiedname>
+        <initializer>= ~<ref refid="class_p_r_1_1_p_s_p_1aa1a016605ba6d8ac681dc57c95b856ea" kindref="member">mmask</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="332" column="32" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="332" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1aa97fe74ea485da5231a34720f33f3126" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> *</type>
+        <definition>PSPstanza* PR::PSP::cur</definition>
+        <argsstring></argsstring>
+        <name>cur</name>
+        <qualifiedname>PR::PSP::cur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="340" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="340" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_p_s_p_1a30508c9bcea21d4c88f3bb097935c13d" compoundref="_particle_reader_8_h" startline="407" endline="407">CurrentNumber</referencedby>
+        <referencedby refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" compoundref="_particle_reader_8_h" startline="380" endline="389">GetNamed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1ab040502b6884fdd165b4e34176c2d41e" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_p_r_1_1_p_particle" kindref="compound">PParticle</ref>&lt; double &gt;</type>
+        <definition>PParticle&lt;double&gt; PR::PSP::dpart</definition>
+        <argsstring></argsstring>
+        <name>dpart</name>
+        <qualifiedname>PR::PSP::dpart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="343" column="16" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1afe9d8e39d4211db9161dcc9aac41aff2" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_p_r_1_1_p_particle" kindref="compound">PParticle</ref>&lt; float &gt;</type>
+        <definition>PParticle&lt;float&gt; PR::PSP::fpart</definition>
+        <argsstring></argsstring>
+        <name>fpart</name>
+        <qualifiedname>PR::PSP::fpart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="342" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a04d41b889b796fb902bd73956c504935" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_master_header" kindref="compound">MasterHeader</ref></type>
+        <definition>MasterHeader PR::PSP::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <qualifiedname>PR::PSP::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="334" column="18" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="334" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_p_s_p_1adceed7e0b520c1e2b97875428fad369c" compoundref="_particle_reader_8_h" startline="374" endline="374">CurrentTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a5e8e396a696710d0897774f06d65d817" prot="protected" static="no" mutable="no">
+        <type>std::ifstream</type>
+        <definition>std::ifstream PR::PSP::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <qualifiedname>PR::PSP::in</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="347" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="347" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_p_s_p_1abe920a1152f5c03fb3505e5cf51041df" compoundref="_particle_reader_8_h" startline="358" endline="363">init</referencedby>
+        <referencedby refid="class_p_r_1_1_p_s_p_1aabf80c9f67ccfd25beb1abe1d6354825" compoundref="_particle_reader_8_h" startline="371" endline="371">~PSP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1aee7068c55f7839c92f0de0be5cd92c7d" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PR::PSP::mtot</definition>
+        <argsstring></argsstring>
+        <name>mtot</name>
+        <qualifiedname>PR::PSP::mtot</qualifiedname>
+        <briefdescription>
+<para>Temporaries for stanza statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="350" column="11" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a3d9f66a7c77203d1caa22bf738d60b5e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::PSP::pcount</definition>
+        <argsstring></argsstring>
+        <name>pcount</name>
+        <qualifiedname>PR::PSP::pcount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="345" column="9" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1abe6860a6f676e6a33d0c40d50e7c8350" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::pmax</definition>
+        <argsstring></argsstring>
+        <name>pmax</name>
+        <qualifiedname>PR::PSP::pmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="351" column="27" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a6fdce0cb920f7dfdea11359bf3f886af" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::pmed</definition>
+        <argsstring></argsstring>
+        <name>pmed</name>
+        <qualifiedname>PR::PSP::pmed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="351" column="22" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1aa1481a5cdbf370f85a807129eca9430d" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::pmin</definition>
+        <argsstring></argsstring>
+        <name>pmin</name>
+        <qualifiedname>PR::PSP::pmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="351" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a8e6869ea4615051c89d7fab466df84f7" prot="protected" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> &gt;::iterator</type>
+        <definition>std::list&lt;PSPstanza&gt;::iterator PR::PSP::spos</definition>
+        <argsstring></argsstring>
+        <name>spos</name>
+        <qualifiedname>PR::PSP::spos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="339" column="26" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="339" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" compoundref="_particle_reader_8_h" startline="380" endline="389">GetNamed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a504414a3e5b8de80429d5ebd66fd3b4e" prot="protected" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> &gt;</type>
+        <definition>std::list&lt;PSPstanza&gt; PR::PSP::stanzas</definition>
+        <argsstring></argsstring>
+        <name>stanzas</name>
+        <qualifiedname>PR::PSP::stanzas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="338" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="338" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" compoundref="_particle_reader_8_h" startline="380" endline="389">GetNamed</referencedby>
+        <referencedby refid="class_p_r_1_1_p_s_p_1aad3b887d40b88207ea894fc0024c4884" compoundref="_particle_reader_8_h" startline="391" endline="396">GetTypes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a3018193d989bfd8e85197323bff9d915" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PR::PSP::VERBOSE</definition>
+        <argsstring></argsstring>
+        <name>VERBOSE</name>
+        <qualifiedname>PR::PSP::VERBOSE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="336" column="10" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a423891dd160ef3e7f653ebc770111009" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::vmax</definition>
+        <argsstring></argsstring>
+        <name>vmax</name>
+        <qualifiedname>PR::PSP::vmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="352" column="27" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1a0fae17f0db9e902d6bcd988c58655ab2" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::vmed</definition>
+        <argsstring></argsstring>
+        <name>vmed</name>
+        <qualifiedname>PR::PSP::vmed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="352" column="22" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_p_1ad84fbdde4036eda1dbbc48e52a3acd6b" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PR::PSP::vmin</definition>
+        <argsstring></argsstring>
+        <name>vmin</name>
+        <qualifiedname>PR::PSP::vmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="352" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="352" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a88ca1aef25d9b850adf02f2c767837bb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::PSP::ComputeStats</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeStats</name>
+        <qualifiedname>PR::PSP::ComputeStats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="353" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1abe920a1152f5c03fb3505e5cf51041df" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::PSP::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>PR::PSP::init</qualifiedname>
+        <briefdescription>
+<para>Stream init. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="358" column="10" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="358" bodyend="363"/>
+        <references refid="class_p_r_1_1_p_s_p_1a5e8e396a696710d0897774f06d65d817" compoundref="_particle_reader_8_h" startline="347">in</references>
+        <referencedby refid="class_p_r_1_1_p_s_p_1a8e16d6172c04d65dcc3caac13e619bb7" compoundref="_particle_reader_8_h" startline="368" endline="368">PSP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1ab8025923eeff5ec56ce3512b95c66317" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::PSP::write_binary</definition>
+        <argsstring>(std::ostream &amp;out, list&lt; PSPstanza &gt;::iterator its, bool real4)</argsstring>
+        <name>write_binary</name>
+        <qualifiedname>PR::PSP::write_binary</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>list&lt; <ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> &gt;::iterator</type>
+          <declname>its</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>real4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="354" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a30508c9bcea21d4c88f3bb097935c13d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::PSP::CurrentNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentNumber</name>
+        <qualifiedname>PR::PSP::CurrentNumber</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1ad07059133f265c81866db1aad2026cdf">CurrentNumber</reimplements>
+        <briefdescription>
+<para>Number of particles in current type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="407" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="407" bodyend="407"/>
+        <references refid="class_p_r_1_1_p_s_pstanza_1a5c41938956df85748e6be52e2ec21b8d" compoundref="_particle_reader_8_h" startline="233">PR::PSPstanza::comp</references>
+        <references refid="class_p_r_1_1_p_s_p_1aa97fe74ea485da5231a34720f33f3126" compoundref="_particle_reader_8_h" startline="340">cur</references>
+        <references refid="class_component_header_1adbc701a318d16c3801ae8e3bbc9abc8d" compoundref="header_8_h" startline="43">ComponentHeader::nbod</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1adceed7e0b520c1e2b97875428fad369c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PR::PSP::CurrentTime</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentTime</name>
+        <qualifiedname>PR::PSP::CurrentTime</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a10927485f5e04ee75096e70b52dca6a9">CurrentTime</reimplements>
+        <briefdescription>
+<para>Get snapshot time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="374" column="12" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="374" bodyend="374"/>
+        <references refid="class_p_r_1_1_p_s_p_1a04d41b889b796fb902bd73956c504935" compoundref="_particle_reader_8_h" startline="334">header</references>
+        <references refid="class_master_header_1a57c58e93be3ab14b4e3595078eb0a0be" compoundref="header_8_h" startline="17">MasterHeader::time</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a5c7372c606bfa1860e47f80abb50dc41" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::PSP::firstParticle</definition>
+        <argsstring>()=0</argsstring>
+        <name>firstParticle</name>
+        <qualifiedname>PR::PSP::firstParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a8b50438acca8230e8eb45a91781b9152">firstParticle</reimplements>
+        <reimplementedby refid="class_p_r_1_1_p_s_pout_1a8bfaa7b449c0a698fd6839330d89503e">firstParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pspl_1ad7a167749de40943fc65d3a17cf75cf7">firstParticle</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_particle" kindref="compound">Particle</ref> access. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="420" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> *</type>
+        <definition>virtual PSPstanza * PR::PSP::GetNamed</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetNamed</name>
+        <qualifiedname>PR::PSP::GetNamed</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set stanza to name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="380" column="23" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="380" bodyend="389"/>
+        <references refid="class_p_r_1_1_p_s_p_1aa97fe74ea485da5231a34720f33f3126" compoundref="_particle_reader_8_h" startline="340">cur</references>
+        <references refid="class_p_r_1_1_p_s_pstanza_1adcf57e7c7e3259c89e16925e1240d240" compoundref="_particle_reader_8_h" startline="234">PR::PSPstanza::name</references>
+        <references refid="class_p_r_1_1_p_s_p_1a8e6869ea4615051c89d7fab466df84f7" compoundref="_particle_reader_8_h" startline="339">spos</references>
+        <references refid="class_p_r_1_1_p_s_p_1a504414a3e5b8de80429d5ebd66fd3b4e" compoundref="_particle_reader_8_h" startline="338">stanzas</references>
+        <referencedby refid="class_p_r_1_1_p_s_p_1a3c5ed37a3c7a2311f368f287a36cbfcc" compoundref="_particle_reader_8_h" startline="399" endline="404">SelectType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1aac293b9ac96890e4d94a62efbfd39fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> *</type>
+        <definition>virtual PSPstanza * PR::PSP::GetStanza</definition>
+        <argsstring>()</argsstring>
+        <name>GetStanza</name>
+        <qualifiedname>PR::PSP::GetStanza</qualifiedname>
+        <briefdescription>
+<para>Reset to beginning of stanza list and return null if no stanzas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="410" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1aad3b887d40b88207ea894fc0024c4884" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; PR::PSP::GetTypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetTypes</name>
+        <qualifiedname>PR::PSP::GetTypes</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1aaa7bdf2a176d8446e6229fd03256ab58">GetTypes</reimplements>
+        <briefdescription>
+<para>Return list of particle types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="391" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="391" bodyend="396"/>
+        <references refid="class_p_r_1_1_p_s_p_1a504414a3e5b8de80429d5ebd66fd3b4e" compoundref="_particle_reader_8_h" startline="338">stanzas</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1aa1049c277a7602af55f565d299cc3042" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::PSP::nextParticle</definition>
+        <argsstring>()=0</argsstring>
+        <name>nextParticle</name>
+        <qualifiedname>PR::PSP::nextParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a5768007e1583c7c59031fd611c699768">nextParticle</reimplements>
+        <reimplementedby refid="class_p_r_1_1_p_s_pout_1addda79bc2ff8cad57564329ecc24e347">nextParticle</reimplementedby>
+        <reimplementedby refid="class_p_r_1_1_p_s_pspl_1a2e0e812854ced4ea81424e553605e6fc">nextParticle</reimplementedby>
+        <briefdescription>
+<para>Get the next particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="421" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a73724dc649c5f4814cdd955c36e901e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_p_r_1_1_p_s_pstanza" kindref="compound">PSPstanza</ref> *</type>
+        <definition>virtual PSPstanza * PR::PSP::NextStanza</definition>
+        <argsstring>()</argsstring>
+        <name>NextStanza</name>
+        <qualifiedname>PR::PSP::NextStanza</qualifiedname>
+        <briefdescription>
+<para>Get next stanza in list and return null at end;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="413" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a3db00a81bbfad079f5d903a150ab695c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::PSP::PrintSummary</definition>
+        <argsstring>(ostream &amp;out, bool stats=false, bool timeonly=false)</argsstring>
+        <name>PrintSummary</name>
+        <qualifiedname>PR::PSP::PrintSummary</qualifiedname>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stats</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>timeonly</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Print summary phase-space info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="377" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a8e16d6172c04d65dcc3caac13e619bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PR::PSP::PSP</definition>
+        <argsstring>(bool verbose)</argsstring>
+        <name>PSP</name>
+        <qualifiedname>PR::PSP::PSP</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="368" column="5" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="368" bodyend="368"/>
+        <references refid="class_p_r_1_1_p_s_p_1abe920a1152f5c03fb3505e5cf51041df" compoundref="_particle_reader_8_h" startline="358" endline="363">init</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1a3c5ed37a3c7a2311f368f287a36cbfcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PR::PSP::SelectType</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>SelectType</name>
+        <qualifiedname>PR::PSP::SelectType</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a63c8f579270234489399e7e920ee59bd">SelectType</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set to type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="399" column="18" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="399" bodyend="404"/>
+        <references refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" compoundref="_particle_reader_8_h" startline="380" endline="389">GetNamed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1aa87bdd1965311624af398338f3d9c928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::PSP::writePSP</definition>
+        <argsstring>(std::ostream &amp;out, bool real4)</argsstring>
+        <name>writePSP</name>
+        <qualifiedname>PR::PSP::writePSP</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>real4</declname>
+        </param>
+        <briefdescription>
+<para>Write a new <ref refid="class_p_r_1_1_p_s_p" kindref="compound">PSP</ref> file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="416" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_p_1aabf80c9f67ccfd25beb1abe1d6354825" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual PR::PSP::~PSP</definition>
+        <argsstring>()</argsstring>
+        <name>~PSP</name>
+        <qualifiedname>PR::PSP::~PSP</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="371" column="13" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="371" bodyend="371"/>
+        <references refid="class_p_r_1_1_p_s_p_1a5e8e396a696710d0897774f06d65d817" compoundref="_particle_reader_8_h" startline="347">in</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PR::PSP</label>
+        <link refid="class_p_r_1_1_p_s_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PR::PSPout</label>
+        <link refid="class_p_r_1_1_p_s_pout"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PR::PSPspl</label>
+        <link refid="class_p_r_1_1_p_s_pspl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>ComponentHeader</label>
+        <link refid="class_component_header"/>
+      </node>
+      <node id="3">
+        <label>MasterHeader</label>
+        <link refid="class_master_header"/>
+      </node>
+      <node id="8">
+        <label>PR::PParticle&lt; double &gt;</label>
+        <link refid="class_p_r_1_1_p_particle"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PR::PParticle&lt; float &gt;</label>
+        <link refid="class_p_r_1_1_p_particle"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PR::PSP</label>
+        <link refid="class_p_r_1_1_p_s_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cur</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>fpart</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>dpart</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PR::PSPstanza</label>
+        <link refid="class_p_r_1_1_p_s_pstanza"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="7">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="325" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="326" bodyend="423"/>
+    <listofallmembers>
+      <member refid="class_p_r_1_1_p_s_p_1a88ca1aef25d9b850adf02f2c767837bb" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>ComputeStats</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>createReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa97fe74ea485da5231a34720f33f3126" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>cur</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a30508c9bcea21d4c88f3bb097935c13d" prot="public" virt="virtual"><scope>PR::PSP</scope><name>CurrentNumber</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1adceed7e0b520c1e2b97875428fad369c" prot="public" virt="virtual"><scope>PR::PSP</scope><name>CurrentTime</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ab040502b6884fdd165b4e34176c2d41e" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>dpart</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a5c7372c606bfa1860e47f80abb50dc41" prot="public" virt="pure-virtual"><scope>PR::PSP</scope><name>firstParticle</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1afe9d8e39d4211db9161dcc9aac41aff2" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>fpart</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" prot="public" virt="virtual"><scope>PR::PSP</scope><name>GetNamed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aac293b9ac96890e4d94a62efbfd39fc4" prot="public" virt="virtual"><scope>PR::PSP</scope><name>GetStanza</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aad3b887d40b88207ea894fc0024c4884" prot="public" virt="virtual"><scope>PR::PSP</scope><name>GetTypes</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a04d41b889b796fb902bd73956c504935" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>header</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a5e8e396a696710d0897774f06d65d817" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>in</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1abe920a1152f5c03fb3505e5cf51041df" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>init</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a12424e52bab67a14df6596a84a1dfbf0" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>magic</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa1a016605ba6d8ac681dc57c95b856ea" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>mmask</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aee7068c55f7839c92f0de0be5cd92c7d" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>mtot</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>myid</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa1049c277a7602af55f565d299cc3042" prot="public" virt="pure-virtual"><scope>PR::PSP</scope><name>nextParticle</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a73724dc649c5f4814cdd955c36e901e0" prot="public" virt="virtual"><scope>PR::PSP</scope><name>NextStanza</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ae03de96b330fbc496203a944c9d8155d" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>nmask</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>numprocs</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>parseFileList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>parseStringList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>ParticleReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3d9f66a7c77203d1caa22bf738d60b5e" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>pcount</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1abe6860a6f676e6a33d0c40d50e7c8350" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>pmax</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a6fdce0cb920f7dfdea11359bf3f886af" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>pmed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa1481a5cdbf370f85a807129eca9430d" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>pmin</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3db00a81bbfad079f5d903a150ab695c" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" virt="virtual" ambiguityscope="PR::ParticleReader::"><scope>PR::PSP</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a8e16d6172c04d65dcc3caac13e619bb7" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>PSP</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>readerTypes</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3c5ed37a3c7a2311f368f287a36cbfcc" prot="public" virt="virtual"><scope>PR::PSP</scope><name>SelectType</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a8e6869ea4615051c89d7fab466df84f7" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>spos</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a504414a3e5b8de80429d5ebd66fd3b4e" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>stanzas</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>use_mpi</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3018193d989bfd8e85197323bff9d915" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>VERBOSE</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a423891dd160ef3e7f653ebc770111009" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>vmax</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a0fae17f0db9e902d6bcd988c58655ab2" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>vmed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ad84fbdde4036eda1dbbc48e52a3acd6b" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>vmin</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ab8025923eeff5ec56ce3512b95c66317" prot="protected" virt="non-virtual"><scope>PR::PSP</scope><name>write_binary</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa87bdd1965311624af398338f3d9c928" prot="public" virt="non-virtual"><scope>PR::PSP</scope><name>writePSP</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" virt="virtual"><scope>PR::PSP</scope><name>~ParticleReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aabf80c9f67ccfd25beb1abe1d6354825" prot="public" virt="virtual"><scope>PR::PSP</scope><name>~PSP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

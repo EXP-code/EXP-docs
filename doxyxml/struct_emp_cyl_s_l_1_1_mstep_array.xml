@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_emp_cyl_s_l_1_1_mstep_array" kind="struct" language="C++" prot="protected">
+    <compoundname>EmpCylSL::MstepArray</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; VectorD2ptr &gt;</basecompoundref>
+    <includes refid="_emp_cyl_s_l_8_h" local="no">EmpCylSL.H</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_emp_cyl_s_l_1_1_mstep_array_1a537bfa96caf1c4c33cdd0dd27ccd47dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_emp_cyl_s_l_1aef3ae77896a94fd792bfda35b6b4bfe5" kindref="member">VectorD2</ref> &amp;</type>
+        <definition>VectorD2 &amp; EmpCylSL::MstepArray::operator()</definition>
+        <argsstring>(int M)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>EmpCylSL::MstepArray::operator()</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCylSL.H" line="149" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCylSL.H" bodystart="149" bodyend="149"/>
+        <references refid="class_emp_cyl_s_l_1a7c0ba4293a82547d2551f2b8e84c0261" compoundref="_emp_cyl_s_l_8_h" startline="67">EmpCylSL::M</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Some syntactic sugar for array of shared pointers: define an operator to the object of the shared pointer. That is, for:</para>
+<para><ref refid="struct_emp_cyl_s_l_1_1_mstep_array" kindref="compound">MstepArray</ref> step(N);</para>
+<para>One can use:</para>
+<para>step(n)[j][k] = ...</para>
+<para>instead of</para>
+<para>(*step[n])[j][k] = ...</para>
+<para>to access elements. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EmpCylSL::MstepArray</label>
+        <link refid="struct_emp_cyl_s_l_1_1_mstep_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; VectorD2ptr &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EmpCylSL::MstepArray</label>
+        <link refid="struct_emp_cyl_s_l_1_1_mstep_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; VectorD2ptr &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCylSL.H" line="147" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCylSL.H" bodystart="148" bodyend="150"/>
+    <listofallmembers>
+      <member refid="struct_emp_cyl_s_l_1_1_mstep_array_1a537bfa96caf1c4c33cdd0dd27ccd47dc" prot="public" virt="non-virtual"><scope>EmpCylSL::MstepArray</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

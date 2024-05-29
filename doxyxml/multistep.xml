@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="multistep" kind="page">
+    <compoundname>multistep</compoundname>
+    <title>Multiple time stepping</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="2">Overview</heading>
+</para>
+<para>EXP uses binary time step tree to increase dynamical througput for simulations with large dynamic range in characteristic orbital times. Time steps for each particle are chosen to be the minimum of 4 standard criteria (see tscrit below) and one criteria that may be applied by user-defined modules (see <ref refid="modules" kindref="compound">User loadable modules</ref>).</para>
+<para><heading level="2">Time step criteria</heading>
+</para>
+<para><orderedlist>
+<listitem>
+<para>The characteristic drift time scale: <formula id="4">$|r_{scale}/|\mathbf{v}|$</formula>, where <formula id="5">$r_{scale}$</formula> represents an internal or preset length scale. This is only used when provided by an external user routine or in the <ref refid="class_particle" kindref="compound">Particle</ref> structure.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>The force time scale: <formula id="6">$|\mathbf{v}|/|\mathbf{a}|$</formula> where <formula id="7">$\mathbf{a}$</formula> is the accelration.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>The work time scale: <formula id="8">$\Psi/|\mathbf{v}\cdot\mathbf{a}|$</formula> where <formula id="9">$\Psi$</formula> is the gravitational potential chosen to be 0 at large distances from the center of the particle distribution.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>The escape time scale: <formula id="10">$\sqrt{\Psi/\mathbf{a}\cdot\mathbf{a}}$</formula>.</para>
+<para></para>
+</listitem>
+</orderedlist>
+</para>
+<para>Each of these are tuned by the prefactors <formula id="94">$\epsilon_D, \epsilon_V,
+\epsilon_A, \epsilon_P$</formula> which are the following global variables in the configuration file: <computeroutput> dynfracD, dynfracD, dynfracD, dynfracD</computeroutput>. These values must be calibrated for a specific problem at hand, but values of order 0.01 would be typical. A particular criterion can be ignored by choosing a large value for the corresponding <formula id="12">$\epsilon$</formula>.</para>
+<para><heading level="2">Expansion bases</heading>
+</para>
+<para>The contribution to the expansion coefficients for all particles on a particular level are stored separately for the current and previous step. Thus, each level maintains a full set of coefficients corresponding to the contribution of particles at that level. We call this the &lt;it&gt;coefficient tableau&lt;/it&gt;. When computing the total coefficients at particular multistep level, the offset of the velocity update at the half step allows the coefficient contribution at the lower inactive levels to be linearly interpolated. The error in the contribution from the interpolation is the same order as that for leap frog itself.</para>
+<para>The particle time step is computed after each substep. If a particle has changed levels, its previous contribution is substracted from its former level and its updated contribution is added to its new level.</para>
+<para><heading level="2">Basic algorithm</heading>
+</para>
+<para><orderedlist>
+<listitem>
+<para>The global variable #multistep sets the number of time step levels. Each successive level has time step <formula id="13">$t_0/2^l$</formula> where <formula id="14">$l$</formula> is the level counter and <formula id="15">$t_0$</formula> is dtime. Therfore the smallest stepping interval is <formula id="16">$t_0/2^{multistep}$</formula>.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>All bodies start on highest level <formula id="17">$l=$</formula>#multistep (smallest time step) to start on the first step. After the first step, new levels are computed and the multistep coefficient tableau is updated.</para>
+<para></para>
+</listitem>
+<listitem>
+<para>At each substep, particle time steps are recomputed. Particles that change levels are flagged. At the end of the step, a particle update tableau is computed on each node and sum reduced over all nodes.</para>
+<para></para>
+</listitem>
+</orderedlist>
+</para>
+<para><heading level="2">External time step variable</heading>
+</para>
+<para>The <ref refid="class_particle" kindref="compound">Particle</ref> structure has two time step specific variables <computeroutput>dtreq</computeroutput>, the user-specified time step, and <computeroutput>scale</computeroutput>, the intrinsic scale for the particle. If these values are less then zero, the user-requested time step criterion or the characteristic drift time scale, respectively, are ignored. These values are set to -1 by default (ignored). </para>
+    </detaileddescription>
+    <location file="multistep.doc"/>
+  </compounddef>
+</doxygen>

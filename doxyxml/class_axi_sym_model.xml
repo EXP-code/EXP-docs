@@ -1,0 +1,1660 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_axi_sym_model" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AxiSymModel</compoundname>
+    <basecompoundref refid="class_mass_model" prot="public" virt="non-virtual">MassModel</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; AxiSymModel &gt;</basecompoundref>
+    <derivedcompoundref refid="class_cyl_disk" prot="public" virt="non-virtual">CylDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_disk_with_halo" prot="public" virt="non-virtual">DiskWithHalo</derivedcompoundref>
+    <derivedcompoundref refid="class_embedded_disk_model" prot="public" virt="non-virtual">EmbeddedDiskModel</derivedcompoundref>
+    <derivedcompoundref refid="class_exponential_disk" prot="public" virt="non-virtual">ExponentialDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_generalized_polytrope" prot="public" virt="non-virtual">GeneralizedPolytrope</derivedcompoundref>
+    <derivedcompoundref refid="class_hernquist_sphere" prot="public" virt="non-virtual">HernquistSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_hunter_disk" prot="public" virt="non-virtual">HunterDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_hunter_disk_x" prot="public" virt="non-virtual">HunterDiskX</derivedcompoundref>
+    <derivedcompoundref refid="class_isothermal_sphere" prot="public" virt="non-virtual">IsothermalSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_kalnajs_disk" prot="public" virt="non-virtual">KalnajsDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_low_sing_isothermal_sphere" prot="public" virt="non-virtual">LowSingIsothermalSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_mestel_disk" prot="public" virt="non-virtual">MestelDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_plummer_sphere" prot="public" virt="non-virtual">PlummerSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_sing_isothermal_sphere" prot="public" virt="non-virtual">SingIsothermalSphere</derivedcompoundref>
+    <derivedcompoundref refid="class_spherical_model_multi" prot="public" virt="non-virtual">SphericalModelMulti</derivedcompoundref>
+    <derivedcompoundref refid="class_spherical_model_table" prot="public" virt="non-virtual">SphericalModelTable</derivedcompoundref>
+    <derivedcompoundref refid="class_toomre_disk" prot="public" virt="non-virtual">ToomreDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_zang_disk" prot="public" virt="non-virtual">ZangDisk</derivedcompoundref>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <innerclass refid="class_axi_sym_model_1_1_w_rgrid" prot="protected">AxiSymModel::WRgrid</innerclass>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" static="no">
+        <type>vector&lt; <ref refid="class_axi_sym_model_1_1_w_rgrid" kindref="compound">WRgrid</ref> &gt;</type>
+        <definition>typedef vector&lt;WRgrid&gt; AxiSymModel::wrvector</definition>
+        <argsstring></argsstring>
+        <name>wrvector</name>
+        <qualifiedname>AxiSymModel::wrvector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="146" column="18" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="146" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::dEgrid</definition>
+        <argsstring></argsstring>
+        <name>dEgrid</name>
+        <qualifiedname>AxiSymModel::dEgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="135" column="30" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::dKgrid</definition>
+        <argsstring></argsstring>
+        <name>dKgrid</name>
+        <qualifiedname>AxiSymModel::dKgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="135" column="37" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; AxiSymModel::Egrid</definition>
+        <argsstring></argsstring>
+        <name>Egrid</name>
+        <qualifiedname>AxiSymModel::Egrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="136" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; AxiSymModel::EgridMass</definition>
+        <argsstring></argsstring>
+        <name>EgridMass</name>
+        <qualifiedname>AxiSymModel::EgridMass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="136" column="22" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::Emax_grid</definition>
+        <argsstring></argsstring>
+        <name>Emax_grid</name>
+        <qualifiedname>AxiSymModel::Emax_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="135" column="20" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::Emin_grid</definition>
+        <argsstring></argsstring>
+        <name>Emin_grid</name>
+        <qualifiedname>AxiSymModel::Emin_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="135" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" static="no" mutable="no">
+        <type>std::normal_distribution</type>
+        <definition>std::normal_distribution AxiSymModel::Gauss</definition>
+        <argsstring></argsstring>
+        <name>Gauss</name>
+        <qualifiedname>AxiSymModel::Gauss</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="119" column="4" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_ecut</definition>
+        <argsstring></argsstring>
+        <name>gen_ecut</name>
+        <qualifiedname>AxiSymModel::gen_ecut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="126" column="20" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="126" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" compoundref="massmodel_8_h" startline="168" endline="174">AxiSymModel</referencedby>
+        <referencedby refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" compoundref="massmodel_8_h" startline="212" endline="212">set_Ecut</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxiSymModel::gen_firstime</definition>
+        <argsstring></argsstring>
+        <name>gen_firstime</name>
+        <qualifiedname>AxiSymModel::gen_firstime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="121" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" compoundref="massmodel_8_h" startline="168" endline="174">AxiSymModel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxiSymModel::gen_firstime_E</definition>
+        <argsstring></argsstring>
+        <name>gen_firstime_E</name>
+        <qualifiedname>AxiSymModel::gen_firstime_E</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="122" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" compoundref="massmodel_8_h" startline="168" endline="174">AxiSymModel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxiSymModel::gen_firstime_jeans</definition>
+        <argsstring></argsstring>
+        <name>gen_firstime_jeans</name>
+        <qualifiedname>AxiSymModel::gen_firstime_jeans</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="123" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" compoundref="massmodel_8_h" startline="168" endline="174">AxiSymModel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_fmax</definition>
+        <argsstring></argsstring>
+        <name>gen_fmax</name>
+        <qualifiedname>AxiSymModel::gen_fmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="124" column="37" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_fomax</definition>
+        <argsstring></argsstring>
+        <name>gen_fomax</name>
+        <qualifiedname>AxiSymModel::gen_fomax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="126" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_mass</definition>
+        <argsstring></argsstring>
+        <name>gen_mass</name>
+        <qualifiedname>AxiSymModel::gen_mass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="124" column="28" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_spherical_orbit" kindref="compound">SphericalOrbit</ref></type>
+        <definition>SphericalOrbit AxiSymModel::gen_orb</definition>
+        <argsstring></argsstring>
+        <name>gen_orb</name>
+        <qualifiedname>AxiSymModel::gen_orb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="125" column="18" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_rloc</definition>
+        <argsstring></argsstring>
+        <name>gen_rloc</name>
+        <qualifiedname>AxiSymModel::gen_rloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="124" column="19" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; AxiSymModel::Jmax</definition>
+        <argsstring></argsstring>
+        <name>Jmax</name>
+        <qualifiedname>AxiSymModel::Jmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="137" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; AxiSymModel::Kgrid</definition>
+        <argsstring></argsstring>
+        <name>Kgrid</name>
+        <qualifiedname>AxiSymModel::Kgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="136" column="16" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" kindref="member">wrvector</ref> &gt;</type>
+        <definition>vector&lt;wrvector&gt; AxiSymModel::Rgrid</definition>
+        <argsstring></argsstring>
+        <name>Rgrid</name>
+        <qualifiedname>AxiSymModel::Rgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="147" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" static="no" mutable="no">
+        <type>std::uniform_real_distribution</type>
+        <definition>std::uniform_real_distribution AxiSymModel::Unit</definition>
+        <argsstring></argsstring>
+        <name>Unit</name>
+        <qualifiedname>AxiSymModel::Unit</qualifiedname>
+        <briefdescription>
+<para>Stuff for gen_point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="118" column="4" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="118" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::gen_E</definition>
+        <argsstring></argsstring>
+        <name>gen_E</name>
+        <qualifiedname>AxiSymModel::gen_E</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="155" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool AxiSymModel::gen_EJ</definition>
+        <argsstring></argsstring>
+        <name>gen_EJ</name>
+        <qualifiedname>AxiSymModel::gen_EJ</qualifiedname>
+        <briefdescription>
+<para>Stuff for gen_point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="152" column="15" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::gen_itmax</definition>
+        <argsstring></argsstring>
+        <name>gen_itmax</name>
+        <qualifiedname>AxiSymModel::gen_itmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="157" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" compoundref="massmodel_8_h" startline="180" endline="180">set_itmax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::gen_K</definition>
+        <argsstring></argsstring>
+        <name>gen_K</name>
+        <qualifiedname>AxiSymModel::gen_K</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="156" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_kmin</definition>
+        <argsstring></argsstring>
+        <name>gen_kmin</name>
+        <qualifiedname>AxiSymModel::gen_kmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="160" column="17" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::gen_logr</definition>
+        <argsstring></argsstring>
+        <name>gen_logr</name>
+        <qualifiedname>AxiSymModel::gen_logr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="158" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::gen_N</definition>
+        <argsstring></argsstring>
+        <name>gen_N</name>
+        <qualifiedname>AxiSymModel::gen_N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="154" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_rmin</definition>
+        <argsstring></argsstring>
+        <name>gen_rmin</name>
+        <qualifiedname>AxiSymModel::gen_rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="159" column="17" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_tolE</definition>
+        <argsstring></argsstring>
+        <name>gen_tolE</name>
+        <qualifiedname>AxiSymModel::gen_tolE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="161" column="17" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double AxiSymModel::gen_tolK</definition>
+        <argsstring></argsstring>
+        <name>gen_tolK</name>
+        <qualifiedname>AxiSymModel::gen_tolK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="161" column="26" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::numj</definition>
+        <argsstring></argsstring>
+        <name>numj</name>
+        <qualifiedname>AxiSymModel::numj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="153" column="19" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int AxiSymModel::numr</definition>
+        <argsstring></argsstring>
+        <name>numr</name>
+        <qualifiedname>AxiSymModel::numr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="153" column="14" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="153" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxiSymModel::dist_defined</definition>
+        <argsstring></argsstring>
+        <name>dist_defined</name>
+        <qualifiedname>AxiSymModel::dist_defined</qualifiedname>
+        <briefdescription>
+<para>The distribution is defined and computed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="165" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="165" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" compoundref="_cyl_disk_8_h" startline="32" endline="41">CylDisk::CylDisk</referencedby>
+        <referencedby refid="class_disk_with_halo_1acd9e6c29b53f51e98397c52978c66241" compoundref="_disk_with_halo_8_h" startline="33" endline="40">DiskWithHalo::DiskWithHalo</referencedby>
+        <referencedby refid="class_disk_with_halo_1af7007bf28863d9a11dab396ba123c1d5" compoundref="_disk_with_halo_8_h" startline="23" endline="30">DiskWithHalo::DiskWithHalo</referencedby>
+        <referencedby refid="class_exponential_disk_1a50278d030aef597c0ca802e5135a6a13" compoundref="exponential_8_h" startline="22" endline="33">ExponentialDisk::ExponentialDisk</referencedby>
+        <referencedby refid="class_hernquist_sphere_1a984f3ad39bf053316522666c3318af89" compoundref="hernquist__model_8_h" startline="18" endline="25">HernquistSphere::HernquistSphere</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere::PlummerSphere</referencedby>
+        <referencedby refid="class_sing_isothermal_sphere_1a4cbfc656503d58dfc1ac24682b7fc8bb" compoundref="isothermal_8_h" startline="19" endline="27">SingIsothermalSphere::SingIsothermalSphere</referencedby>
+        <referencedby refid="class_toomre_disk_1aafe82b153aff0cfe826eb4f36629f4c5" compoundref="toomre_8_h" startline="24" endline="29">ToomreDisk::ToomreDisk</referencedby>
+        <referencedby refid="class_zang_disk_1a9863b21a361941c03421696e7918ea52" compoundref="zang_8_h" startline="31" endline="42">ZangDisk::ZangDisk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_point_2d</definition>
+        <argsstring>(double r, int &amp;ierr)</argsstring>
+        <name>gen_point_2d</name>
+        <qualifiedname>AxiSymModel::gen_point_2d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="130" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_point_2d</definition>
+        <argsstring>(int &amp;ierr)</argsstring>
+        <name>gen_point_2d</name>
+        <qualifiedname>AxiSymModel::gen_point_2d</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="129" column="19"/>
+        <referencedby refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" compoundref="massmodel_8_h" startline="239" endline="248">gen_point</referencedby>
+        <referencedby refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" compoundref="massmodel_8_h" startline="215" endline="224">gen_point</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_point_3d</definition>
+        <argsstring>(double Emin, double Emax, double Kmin, double Kmax, int &amp;ierr)</argsstring>
+        <name>gen_point_3d</name>
+        <qualifiedname>AxiSymModel::gen_point_3d</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Emin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Emax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Kmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Kmax</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="132" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_point_3d</definition>
+        <argsstring>(int &amp;ierr)</argsstring>
+        <name>gen_point_3d</name>
+        <qualifiedname>AxiSymModel::gen_point_3d</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="131" column="19"/>
+        <referencedby refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" compoundref="massmodel_8_h" startline="251" endline="260">gen_point</referencedby>
+        <referencedby refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" compoundref="massmodel_8_h" startline="215" endline="224">gen_point</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxiSymModel::gen_point_jeans_3d</definition>
+        <argsstring>(int &amp;ierr)</argsstring>
+        <name>gen_point_jeans_3d</name>
+        <qualifiedname>AxiSymModel::gen_point_jeans_3d</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="133" column="19"/>
+        <referencedby refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" compoundref="massmodel_8_h" startline="227" endline="236">gen_point_jeans</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AxiSymModel::AxiSymModel</definition>
+        <argsstring>(void)</argsstring>
+        <name>AxiSymModel</name>
+        <qualifiedname>AxiSymModel::AxiSymModel</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="168" column="3" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="168" bodyend="174"/>
+        <references refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" compoundref="massmodel_8_h" startline="126">gen_ecut</references>
+        <references refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" compoundref="massmodel_8_h" startline="121">gen_firstime</references>
+        <references refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" compoundref="massmodel_8_h" startline="122">gen_firstime_E</references>
+        <references refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" compoundref="massmodel_8_h" startline="123">gen_firstime_jeans</references>
+        <references refid="class_mass_model_1acf360c000464aca6299bc47894672d70" compoundref="massmodel_8_h" startline="81">MassModel::ModelID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::d2fde2</definition>
+        <argsstring>(double, double)=0</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>AxiSymModel::d2fde2</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1aa78c1fcb29ac9a51cabdbdc6c42d6887">d2fde2</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a148092ddae0d7b616a747861e09cb453">d2fde2</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1afab9f5efb35adb4e61e5b3758e90a2ac">d2fde2</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a673cc41f41f7bc72593c5419eb5e8987">d2fde2</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a9da09b7ec81260b9ad7f885af1973541">d2fde2</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ac5fc878db779c0051232ace9d88d987c">d2fde2</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1adc9e5be518e3585264380e6f22df735e">d2fde2</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1affdda80cc52d7003310844594cb4a376">d2fde2</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1a21d0318df2a17a316a1ed47e5d0a3a85">d2fde2</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1ae4147a269a409ebc897970fd781d1f69">d2fde2</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a43ef2fc096b70da850b7ab4cf15efcea">d2fde2</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a48f214779527bce69ec8d1d3a50846e7">d2fde2</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1a0cd32b3001517e2173f1d14e9f011ae3">d2fde2</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1a5fe0190b190d5026952fef9731e45208">d2fde2</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43">d2fde2</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a16e321a4cdfdad113c0fc816ac19383d">d2fde2</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a15a3323070792f35642eb36bd4490b2d">d2fde2</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1a0da36c44b6817549006433de12916474">d2fde2</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a99b80f19dfa533b08c3c57d6c3d834fd">d2fde2</reimplementedby>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="208" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::dfde</definition>
+        <argsstring>(double, double)=0</argsstring>
+        <name>dfde</name>
+        <qualifiedname>AxiSymModel::dfde</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1ae6bb65bad474e5969737a48409a3dd39">dfde</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1aff48aa7eb441b764bec859a26e579624">dfde</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1aa0d27f1e5dc455ddcf49e10202a853f1">dfde</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1ae5befb0384c024c55cfbe426854d5fda">dfde</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a5662076c9a428d0d20c324288ac83cce">dfde</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1a97ff5d13d58649df3b94c25a6843e091">dfde</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1abcf99debec7ff8651cfba1628611e933">dfde</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a93a717a75f264777a890d018fd18b28a">dfde</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1a4605aeab2bff2803242acba3607c9e38">dfde</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a526648e3e521b7e20c849ee946e1c9bc">dfde</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a5ba1c043933eec9a59ac6424462331e8">dfde</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a78318dcbf890e273fed5ae48881f2422">dfde</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1ac5915664d0690e8d2a487540ce06501a">dfde</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1ad985eb7201634305edce026a81424095">dfde</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d">dfde</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1ace07884f6db690401c212d56769c9c18">dfde</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a4861ccfe9095adf5f3027136791b2f1e">dfde</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1af0e30c235213217773f8d8267642b9e9">dfde</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a7dc15ec4c77e2364412dcaf54003da54">dfde</reimplementedby>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="206" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::dfdl</definition>
+        <argsstring>(double, double)=0</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>AxiSymModel::dfdl</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1a53953c3c52c784e06dabda45316797c2">dfdl</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a89223dc9021ffb20c3109296a7f7ca53">dfdl</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a6005707847dfe35ca2b6e423a7f40c97">dfdl</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a84dc8c74bcfa02317ebe9ff29bbe45dd">dfdl</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a88978d54c210b1f392f18cc8e1ecc3f9">dfdl</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ad3c76b7ac6cdfb0823fe81f30c5f1d96">dfdl</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a8ec1b9225e5ee21cde358474621cb008">dfdl</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a556cd0c2804409b83bf4e442430557e5">dfdl</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1ae0b53dce888384877071a3eb958c2916">dfdl</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1ab602c8ab25b558773b02c597f9e893ea">dfdl</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a7f0dfb206b06a2c00a78aed4ccd2b590">dfdl</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1abadc19b8b3e98840277f26aa1855daf4">dfdl</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1ad743a23293683bff020b2c47facf30b2">dfdl</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1a1debf27dd5007ea752970e8965eac9ff">dfdl</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a803e60961f740a9cf5acf605de13ef98">dfdl</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1af10b8224ec33787b20677c7565a02332">dfdl</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a0529f2413ec4eff191d2a2b9f7093bc4">dfdl</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1aa154476667df93960f11db39c913c5da">dfdl</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a41bbb6d6bc1fb19553e1ed43e67dbd37">dfdl</reimplementedby>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="207" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::distf</definition>
+        <argsstring>(double, double)=0</argsstring>
+        <name>distf</name>
+        <qualifiedname>AxiSymModel::distf</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1af8a33f88f2d312a4d25b82f894cc30b6">distf</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a526a23d94d1f7b67b02401c38ae00765">distf</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a8b0132401b94171ffaf309792ac7b989">distf</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a615ce48a7e56365fa147b8c942ef29cb">distf</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a1ffee46f3d1881b501d7a15f51abd2db">distf</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1afd94754da7dbf1db3441fd7961d89193">distf</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1ae0764c0fdda5b13b0a467339f6f189a8">distf</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a4082a586708bfbefb556cd02bee440a9">distf</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1aa0726247bdb0054255539dac7bbd356a">distf</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a5938bf509e455e6a650532281381ef74">distf</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a7e795967d6e0ea7ae5d1bfb587de3781">distf</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1ac81c1cc85381bef76d21ad391363fcd7">distf</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1a169af93ecbedfdd0b42e79463055adf9">distf</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1a24836328a2a4a9357f5ef3c7fc326d72">distf</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906">distf</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1ab269638253edb9e487a4e9eb3fdea6ac">distf</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1aa02e1cde2307d39a49f01005f95800c5">distf</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1ae9ef54bc692ed877ea1a6521eca9cf2e">distf</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a47949ec45a68566a57d65c737dfbe6df">distf</reimplementedby>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="205" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>virtual Eigen::VectorXd AxiSymModel::gen_point</definition>
+        <argsstring>(double Emin, double Emax, double Kmin, double Kmax, int &amp;ierr)</argsstring>
+        <name>gen_point</name>
+        <qualifiedname>AxiSymModel::gen_point</qualifiedname>
+        <reimplementedby refid="class_spherical_model_multi_1a9f3e6273a43842ea067baedf7732264c">gen_point</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>Emin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Emax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Kmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Kmax</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+<para>Generate a phase-space point at a particular energy and angular momentum. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="251" column="27" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="251" bodyend="260"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" compoundref="massmodel_8_h" startline="97" endline="97">MassModel::dof</references>
+        <references refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44">gen_point_3d</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>virtual Eigen::VectorXd AxiSymModel::gen_point</definition>
+        <argsstring>(double r, int &amp;ierr)</argsstring>
+        <name>gen_point</name>
+        <qualifiedname>AxiSymModel::gen_point</qualifiedname>
+        <reimplementedby refid="class_spherical_model_multi_1a4e551c031311012093e09b099ecf84c0">gen_point</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+<para>Generate a phase-space point at a particular radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="239" column="27" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="239" bodyend="248"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" compoundref="massmodel_8_h" startline="97" endline="97">MassModel::dof</references>
+        <references refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0">gen_point_2d</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>virtual Eigen::VectorXd AxiSymModel::gen_point</definition>
+        <argsstring>(int &amp;ierr)</argsstring>
+        <name>gen_point</name>
+        <qualifiedname>AxiSymModel::gen_point</qualifiedname>
+        <reimplementedby refid="class_spherical_model_multi_1a07ef73cc9896c942f12558184ef946d3">gen_point</reimplementedby>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+<para>Generate a phase-space point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="215" column="27" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="215" bodyend="224"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" compoundref="massmodel_8_h" startline="97" endline="97">MassModel::dof</references>
+        <references refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0">gen_point_2d</references>
+        <references refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44">gen_point_3d</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Eigen::VectorXd</type>
+        <definition>virtual Eigen::VectorXd AxiSymModel::gen_point_jeans</definition>
+        <argsstring>(int &amp;ierr)</argsstring>
+        <name>gen_point_jeans</name>
+        <qualifiedname>AxiSymModel::gen_point_jeans</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+<para>Generate a phase-space point using Jeans&apos; equations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="227" column="27" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="227" bodyend="236"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+        <references refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" compoundref="massmodel_8_h" startline="97" endline="97">MassModel::dof</references>
+        <references refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a">gen_point_jeans_3d</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AxiSymModel::gen_velocity</definition>
+        <argsstring>(double *pos, double *vel, int &amp;ierr)</argsstring>
+        <name>gen_velocity</name>
+        <qualifiedname>AxiSymModel::gen_velocity</qualifiedname>
+        <param>
+          <type>double *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>vel</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ierr</declname>
+        </param>
+        <briefdescription>
+<para>Generate a the velocity variate from a position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="263" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double AxiSymModel::get_density</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>AxiSymModel::get_density</qualifiedname>
+        <reimplements refid="class_mass_model_1a5faf20e029b7a79d2cd7e159b7c81636">get_density</reimplements>
+        <reimplementedby refid="class_disk_with_halo_1aecec1f9251a06ff76e8ecc4437daf49d">get_density</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a5c763b865ff6b4caeb10eac78e753195">get_density</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a2e8fbb9f875f6f5a02349ef4af6589db">get_density</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a7b6112e6579a55f85ac0fa259e31a74f">get_density</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The density at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="194" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="194" bodyend="195"/>
+        <references refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_density</definition>
+        <argsstring>(const double)=0</argsstring>
+        <name>get_density</name>
+        <qualifiedname>AxiSymModel::get_density</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1acdc1edb0d7993b793c1dd57d9bd3a189">get_density</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a85bbadfba50fe5f4e81b00e5eb68b5fe">get_density</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a42a9fa1f93af1ced9f80fa63c1f7bd15">get_density</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1aa1a308ffa3d1b2b35a1e58d813df87df">get_density</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1aac752fdaa2a4b6cb237e978abb78f6fa">get_density</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1afe793102d4ff196d7d891bd208716bf2">get_density</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249">get_density</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1af9e308c45eddcd955bab20c75acdf9e1">get_density</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a9a468fdf81143ee84f88305d2cd509c1">get_density</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1a29c3230f2e6e415237a6a87831ad9d6a">get_density</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1a1b18fe2e00fd489f8e08dfe958e612cb">get_density</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e">get_density</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a996ec7e47da7a906e5c1e0c4e2e78b03">get_density</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a5c21ded7c8685dfce4a2d70fa23a4550">get_density</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100">get_density</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a90dc033f414be9f3c41ee0c0fad633bc">get_density</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a125f13afc28f30693e35c13dcbfde7fe">get_density</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a3ffbd7a622f73cfe9b67ffae80cfed7f">get_density</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a33ef4146cea85ef88bb6ff81b1410384">get_density</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="185" column="18"/>
+        <referencedby refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" compoundref="massmodel_8_h" startline="194" endline="195">get_density</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1acc81caff799658620cd3075a2104d845" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_dpot</definition>
+        <argsstring>(const double)=0</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>AxiSymModel::get_dpot</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1af4049b4d62c5b47622aedec3ca2fed48">get_dpot</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a926ec2665ba371cb35b5f43df81c1d90">get_dpot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1af99a03a59ba0b83966f467808ad2a27a">get_dpot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a467fdd0a08dc1ed3ffba21f6122f2dbf">get_dpot</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1a1b9b82602ad234333438ea63c5444df1">get_dpot</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a1ea525b10190a8f6123ef4364eac8561">get_dpot</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247">get_dpot</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1aede267d36a3f29d96c109e14b40baf5e">get_dpot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1aa4e9bded3e82e3b4627f675b6b9b5964">get_dpot</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1a2d99e916b5c7db8c3cf653de463d643b">get_dpot</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791">get_dpot</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a7bb3656f2d98532b4d5e21d6deafa29c">get_dpot</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1acde671d69e89cd829f4bd824c22e2a0f">get_dpot</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2">get_dpot</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a298f24fcd27cf5f837c18e52eafdc106">get_dpot</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1aaa1f8ae202009ce7ae1431b172960b46">get_dpot</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a2d94fa2b784f522685eac97b24814511">get_dpot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a3a595da2880039eba8ceff3ec3f110b0">get_dpot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="187" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_dpot2</definition>
+        <argsstring>(const double)=0</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>AxiSymModel::get_dpot2</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1a81c1a4ba41b67dc7742d5f62c8ac65cf">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1abb190a388e0df34ac058c739c8dde702">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a25b4689e9ac2cdef2c021ee18e0bafdb">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a848f4b3a021e57904669e5b7492957bd">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1a210a5ddff4461cf1d3243a02a6478ed3">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1af871c1dc6091736c1138b04868dbc8e3">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1ac247a5c2512d480d32dc9edce8e67dcc">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a8566c412db568e823ce4ef3cafaa3125">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1a71dfc91bc5793d2d0d6d528a307d2243">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a1236638ac1c70ce8035eeac2765e5570">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1ad1bdf4b87f33317d47f642738fa58966">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a83af39a3f1f0eaaae16e9d6a54e57de3">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1ae5a4a781841c445d7945f01e4e5b6135">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a6f1261707e304ed949152834f9d0546d">get_dpot2</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a6ef6735b075e4b78e421e90af9b82b79">get_dpot2</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="188" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double AxiSymModel::get_mass</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>AxiSymModel::get_mass</qualifiedname>
+        <reimplements refid="class_mass_model_1a657bee82481d328f8b1d52f95a6f0616">get_mass</reimplements>
+        <reimplementedby refid="class_disk_with_halo_1a8195eae7e7e1b287521ea9485d308b97">get_mass</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1af5bbd571cbf33b33a467787f0573dd86">get_mass</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a61db5a62762d085aaba14e2c6e49eac7">get_mass</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a551f086df0f5490988e4c24dfee68814">get_mass</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the mass inside of position (x, y, z) (this is ambiguous in general and will depend on the model) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="191" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="191" bodyend="192"/>
+        <references refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_mass</definition>
+        <argsstring>(const double)=0</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>AxiSymModel::get_mass</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1aab1bb2d22f8c4b8d5c2fb20b51989373">get_mass</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1ad71a1eef352f07e5da69e0ad33d3869a">get_mass</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a54d5a3014d036e20d5379483e86fd316">get_mass</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1ab9bcba1db3f28823bb333e2072a9322a">get_mass</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ab63b9164597005000c18be9c66c9e20f">get_mass</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a78ea7eadfc4c1a01d0165dc967cc0a17">get_mass</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb">get_mass</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1ad16a172ee5c0052f3f235dcac7d55182">get_mass</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a65ebc1eb5f35627454a0b6c4984f03b8">get_mass</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1aa7b4889464c31555a3827e54edd1ae0d">get_mass</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a">get_mass</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1abd9e9fd57a718ebd226cad28ef8ec16f">get_mass</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a229046b198a9ffd95baefc88e9388eb9">get_mass</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf">get_mass</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a145b49523bfd5c4884a25a42002007a7">get_mass</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a77454bcd6978e4b86684ed7d4b7732d7">get_mass</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1ad924cd677753a5086cb9a732141b6890">get_mass</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1ab1ab4823de33209caba74cf2aa12c0d9">get_mass</reimplementedby>
+        <reimplementedby refid="class_tapered_mestel_disk_1a64fdc1f995e140df8bb8d7172cb5bc95">get_mass</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="184" column="18"/>
+        <referencedby refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" compoundref="massmodel_8_h" startline="191" endline="192">get_mass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_max_radius</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>AxiSymModel::get_max_radius</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1a5215563cdffb2e8eb89c655ff1d6975b">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a6f820fed7dfb1835337fbb0edeccd2ed">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a97a291bb7c67e70f74abc79ae841ead8">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a3c62bdf7240114cd0b33299b8e6252c4">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a6a6b44b92d9dd564aea8862b1cd090cd">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ab3da3798edc39fb2786810bff3c2666f">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a5fa33dbd4ec458aae917cb522ca57ffd">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1ad6e9b8b2ee733f25bf759d57da386dfe">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1ad479c3dde29768e0455756a8dbc75af8">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1ad0b95260439369297ff2477923a26f02">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1aec09ce7a1f0e60f3ff5f7d98788043d4">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1aeca64ad986d43f323c40f28d22d3f819">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1adcdeacbdad30170e0852e71e638f6dd1">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a6f639e731e0523a4e7c1f49645f6d557">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1">get_max_radius</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a62e38f166a9a04cee6f4a7361114a444">get_max_radius</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="204" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_min_radius</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>AxiSymModel::get_min_radius</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1a2db4b79f560ce385e19079e903209ebc">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1ae36b9c46f56a8dbe4c1928549cb21bb0">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1ae6d8d9df1927efa05224264452ca0f84">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a2a2476206cb5f4e62a3ca2db46837a6b">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1aca107ed811b6cdd7176822c3f4cf8589">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1a5ed96a9928fd68210572d8f9c1158077">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1ab1fa18d2066d809e3ca45eee0fb94485">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1adb2287d0df5a238e324d9697d846648a">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1a854b5373887ca6372f5aab5c3a7a2271">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a8f2ea37fe3204aa4b0007550d16502c8">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a933d3a41d014192bd4743fb9baacded8">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1aec9c6dae332ab2114dee54b0fe7c58fc">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1ae3eaab23ae085a5c3241b002b17855b5">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1a3400c0f943bbe199daf4513cea71c7e8">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c">get_min_radius</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1ad319d4ea72ea88dfcd0c3b0e1e37f07d">get_min_radius</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="203" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double AxiSymModel::get_pot</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>AxiSymModel::get_pot</qualifiedname>
+        <reimplements refid="class_mass_model_1ad41f6d36e5774e490c7d82ca12f49c78">get_pot</reimplements>
+        <reimplementedby refid="class_disk_with_halo_1a46fe75fd3333984c70d90f9e4b7fc6d9">get_pot</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a4cd777af4aeb22c21232eeb6bdae8ceb">get_pot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a8070023a8858287d4cb5e50a66d64043">get_pot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1a6461fc2527edb5dff8274536be27b94d">get_pot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The potential at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="197" column="10" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="197" bodyend="198"/>
+        <references refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double AxiSymModel::get_pot</definition>
+        <argsstring>(const double)=0</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>AxiSymModel::get_pot</qualifiedname>
+        <reimplementedby refid="class_exponential_disk_1ab44c3a14a2887e077acd3c57abece743">get_pot</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a6aed89baa36f399e4ae381857032ee02">get_pot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a275d6e4c24f2f60a4dc8e245f53602fe">get_pot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a20cf6b997e9438188699be9da03c52fd">get_pot</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ab47f2182f44a6283f80c5e5edda7bf79">get_pot</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a177d24c8a32acf07112b565ad250c3b3">get_pot</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4">get_pot</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1ac1869a314564a3955b736bb0ab9fd1cf">get_pot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_multi_1aa65434e5ba8b9e7891271304c2d473f2">get_pot</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1aeee315217f39af166b224991cb007d6b">get_pot</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8">get_pot</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1af6ef847ee8ab0d15bff484312666b1d9">get_pot</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1a287c37a90ab8b8c4f4ee7972274e624e">get_pot</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0">get_pot</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75">get_pot</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a243e9d11aff03024e8f635ef5807af2c">get_pot</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1adcae86dad89afdc7dc8fd5b47ee61341">get_pot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a0f56dc4e85e41f26fd1e5451043efb98">get_pot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="186" column="18"/>
+        <referencedby refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" compoundref="massmodel_8_h" startline="197" endline="198">get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AxiSymModel::get_pot_dpot</definition>
+        <argsstring>(const double, double &amp;, double &amp;)=0</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>AxiSymModel::get_pot_dpot</qualifiedname>
+        <reimplementedby refid="class_spherical_model_multi_1ad230198fa39bc386d2511d4710554b02">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_exponential_disk_1a28418ece1514b658f0130e1ec593881d">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_hernquist_sphere_1a57fe33d175c333d8f7df0b9689d25234">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_1a289f52f9c77980fafde8fa76ebe9528b">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_hunter_disk_x_1a2571c30fd730a7748689338765f540de">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_sing_isothermal_sphere_1ad03dc3e35204f79725d280b625b1f1ad">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_isothermal_sphere_1a0a79504dca46958d47c045e4b01339c0">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_kalnajs_disk_1abb79244cac4ef4634d1985fbdff9d101">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_mestel_disk_1aef5c4ba2c866fc0a0a8aebff3644418d">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_toomre_disk_1ac1b77abe27a20857942c732aeb4477ca">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_zang_disk_1af2038b4bef8b0b974a9a670b619ba0a7">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_disk_with_halo_1a522ab0472483200d97e5d9c18f437116">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_generalized_polytrope_1a840a6bc68bdcd6d06d9c841d01717b08">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_embedded_disk_model_1a1d6c6b5414d1b9dcf4ec0f0da0195975">get_pot_dpot</reimplementedby>
+        <reimplementedby refid="class_spherical_model_table_1a17b838069ef3e835ab12c3382b303a44">get_pot_dpot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="189" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxiSymModel::set_Ecut</definition>
+        <argsstring>(double cut)</argsstring>
+        <name>set_Ecut</name>
+        <qualifiedname>AxiSymModel::set_Ecut</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>cut</declname>
+        </param>
+        <briefdescription>
+<para>Set cutoff on multimass realization grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="212" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="212" bodyend="212"/>
+        <references refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" compoundref="massmodel_8_h" startline="126">gen_ecut</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxiSymModel::set_itmax</definition>
+        <argsstring>(int s)</argsstring>
+        <name>set_itmax</name>
+        <qualifiedname>AxiSymModel::set_itmax</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Maximum number of iterations for obtaining a valid variate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="180" column="8" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="180" bodyend="180"/>
+        <references refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" compoundref="massmodel_8_h" startline="157">gen_itmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AxiSymModel::~AxiSymModel</definition>
+        <argsstring>()</argsstring>
+        <name>~AxiSymModel</name>
+        <qualifiedname>AxiSymModel::~AxiSymModel</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="177" column="11" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="177" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A specification of a <ref refid="class_mass_model" kindref="compound">MassModel</ref> to the axisymmetric case. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CylDisk</label>
+        <link refid="class_cyl_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DiskWithHalo</label>
+        <link refid="class_disk_with_halo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EmbeddedDiskModel</label>
+        <link refid="class_embedded_disk_model"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ExponentialDisk</label>
+        <link refid="class_exponential_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GeneralizedPolytrope</label>
+        <link refid="class_generalized_polytrope"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>HernquistSphere</label>
+        <link refid="class_hernquist_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>HunterDisk</label>
+        <link refid="class_hunter_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>HunterDiskX</label>
+        <link refid="class_hunter_disk_x"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>IsothermalSphere</label>
+        <link refid="class_isothermal_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>KalnajsDisk</label>
+        <link refid="class_kalnajs_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>KingSphere</label>
+        <link refid="class_king_sphere"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>LowSingIsothermalSphere</label>
+        <link refid="class_low_sing_isothermal_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="15">
+        <label>MestelDisk</label>
+        <link refid="class_mestel_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>PlummerSphere</label>
+        <link refid="class_plummer_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SingIsothermalSphere</label>
+        <link refid="class_sing_isothermal_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>SphericalModelMulti</label>
+        <link refid="class_spherical_model_multi"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>SphericalModelTable</label>
+        <link refid="class_spherical_model_table"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>TaperedMestelDisk</label>
+        <link refid="class_tapered_mestel_disk"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ToomreDisk</label>
+        <link refid="class_toomre_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ZangDisk</label>
+        <link refid="class_zang_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="1">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="2">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="5">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="4">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/massmodel.H" line="111" column="1" bodyfile="/home/weinberg/Projects/EXP/include/massmodel.H" bodystart="113" bodyend="265"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>bomb</name></member>
+      <member refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>dEgrid</name></member>
+      <member refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>dfde</name></member>
+      <member refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>dist_defined</name></member>
+      <member refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>dof</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Emin_grid</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>gen_velocity</name></member>
+      <member refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_dpot</name></member>
+      <member refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_dpot2</name></member>
+      <member refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_max_radius</name></member>
+      <member refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_min_radius</name></member>
+      <member refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632" prot="public" virt="pure-virtual"><scope>AxiSymModel</scope><name>get_pot_dpot</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Kgrid</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>ModelID</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>numr</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Rgrid</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>AxiSymModel</scope><name>set_itmax</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>Unit</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>AxiSymModel</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>AxiSymModel</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

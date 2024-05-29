@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_ptype" kind="class" language="C++" prot="public">
+    <compoundname>SPtype</compoundname>
+    <includes refid="_s_particle_8_h" local="no">SParticle.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_ptype_1a2a56999de715223792df1a74f51e3106" prot="private" static="no" mutable="no">
+        <type>MPI_Datatype</type>
+        <definition>MPI_Datatype SPtype::Particletype</definition>
+        <argsstring></argsstring>
+        <name>Particletype</name>
+        <qualifiedname>SPtype::Particletype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" line="53" column="16" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_s_ptype_1a3076c21cada33efc791cb217566cd76b" compoundref="_s_particle_8_h" startline="59" endline="59">operator()</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_ptype_1a3076c21cada33efc791cb217566cd76b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MPI_Datatype</type>
+        <definition>MPI_Datatype SPtype::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>SPtype::operator()</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" line="59" column="16" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" bodystart="59" bodyend="59"/>
+        <references refid="class_s_ptype_1a2a56999de715223792df1a74f51e3106" compoundref="_s_particle_8_h" startline="53">Particletype</references>
+      </memberdef>
+      <memberdef kind="function" id="class_s_ptype_1a8d88980e8ecab033f89318d5b1ca7a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SPtype::SPtype</definition>
+        <argsstring>()</argsstring>
+        <name>SPtype</name>
+        <qualifiedname>SPtype::SPtype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" line="56" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_ptype_1a3b4572be2a61cdad2e0b08a04924eb38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SPtype::~SPtype</definition>
+        <argsstring>()</argsstring>
+        <name>~SPtype</name>
+        <qualifiedname>SPtype::~SPtype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" line="57" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Create an MPI particle type <ref refid="class_s_particle" kindref="compound">SParticle</ref>. The class creates and registers the particle type. It is freed when the instance goes out of scope and/or is destroyed. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" line="50" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/SParticle.H" bodystart="51" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_s_ptype_1a3076c21cada33efc791cb217566cd76b" prot="public" virt="non-virtual"><scope>SPtype</scope><name>operator()</name></member>
+      <member refid="class_s_ptype_1a2a56999de715223792df1a74f51e3106" prot="private" virt="non-virtual"><scope>SPtype</scope><name>Particletype</name></member>
+      <member refid="class_s_ptype_1a8d88980e8ecab033f89318d5b1ca7a87" prot="public" virt="non-virtual"><scope>SPtype</scope><name>SPtype</name></member>
+      <member refid="class_s_ptype_1a3b4572be2a61cdad2e0b08a04924eb38" prot="public" virt="non-virtual"><scope>SPtype</scope><name>~SPtype</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

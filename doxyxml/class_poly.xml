@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_poly" kind="class" language="C++" prot="public">
+    <compoundname>Poly</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Eigen::VectorXd</basecompoundref>
+    <includes refid="poly_8_h" local="no">poly.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_poly_1a20d36d5470f8ee069b547dbe2f98ba4d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Poly::order</definition>
+        <argsstring></argsstring>
+        <name>order</name>
+        <qualifiedname>Poly::order</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="15" column="7" bodyfile="/home/weinberg/Projects/EXP/include/poly.H" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_poly_1ac6d1975152b5060a30b666cbc5572218" compoundref="poly_8_h" startline="36" endline="36">getorder</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_poly_1ac92157cc1d9266b044c50ebcb31cfa16" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poly::reduce_order</definition>
+        <argsstring>(void)</argsstring>
+        <name>reduce_order</name>
+        <qualifiedname>Poly::reduce_order</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="16" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_poly_1aec529e2b59d8b37f9737ecea5bf35bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Poly::deriv</definition>
+        <argsstring>(double z)</argsstring>
+        <name>deriv</name>
+        <qualifiedname>Poly::deriv</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a74886f241e211f5af127c087efc99d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Poly::eval</definition>
+        <argsstring>(double z)</argsstring>
+        <name>eval</name>
+        <qualifiedname>Poly::eval</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1ac6d1975152b5060a30b666cbc5572218" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Poly::getorder</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getorder</name>
+        <qualifiedname>Poly::getorder</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="36" column="7" bodyfile="/home/weinberg/Projects/EXP/include/poly.H" bodystart="36" bodyend="36"/>
+        <references refid="class_poly_1a20d36d5470f8ee069b547dbe2f98ba4d" compoundref="poly_8_h" startline="15">order</references>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a258f68882745060dc9be6ba7381fc8ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        <definition>Poly &amp; Poly::operator%=</definition>
+        <argsstring>(Poly &amp;)</argsstring>
+        <name>operator%=</name>
+        <qualifiedname>Poly::operator%=</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="54" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a41e2354b071745f8d51038e6bd7a7839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        <definition>Poly &amp; Poly::operator&amp;=</definition>
+        <argsstring>(Poly &amp;)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>Poly::operator&amp;=</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a258f36320c18281ddb1f9fbee475b0c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly Poly::operator+</definition>
+        <argsstring>()</argsstring>
+        <name>operator+</name>
+        <qualifiedname>Poly::operator+</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="40" column="8" bodyfile="/home/weinberg/Projects/EXP/include/poly.H" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a2bdee5f33df9d09d9f01fe9ce0990e5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        <definition>Poly &amp; Poly::operator+=</definition>
+        <argsstring>(Poly &amp;)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>Poly::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="45" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1ac3524d7bdfb545d09223c77c4d24c601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly Poly::operator-</definition>
+        <argsstring>()</argsstring>
+        <name>operator-</name>
+        <qualifiedname>Poly::operator-</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="41" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a7ed831ab0f17f3b706467ab979207e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        <definition>Poly &amp; Poly::operator-=</definition>
+        <argsstring>(Poly &amp;)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>Poly::operator-=</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="48" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1ae84bf46b28bbc9c117881ae731c69c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        <definition>Poly &amp; Poly::operator=</definition>
+        <argsstring>(Poly &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Poly::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="35" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1aeeddb5ac09f86b0336d37a7dd804684a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::Poly</definition>
+        <argsstring>(const Eigen::VectorXd &amp;)</argsstring>
+        <name>Poly</name>
+        <qualifiedname>Poly::Poly</qualifiedname>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="25" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a21eaebe124e306ff9463514a06e8344a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::Poly</definition>
+        <argsstring>(const Poly &amp;)</argsstring>
+        <name>Poly</name>
+        <qualifiedname>Poly::Poly</qualifiedname>
+        <param>
+          <type>const <ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="26" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a7a346680adff050d4876f9e979cb6f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::Poly</definition>
+        <argsstring>(int)</argsstring>
+        <name>Poly</name>
+        <qualifiedname>Poly::Poly</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="23" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1aaa10c350b28b8d591ae1f6b1767facc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::Poly</definition>
+        <argsstring>(int, double *)</argsstring>
+        <name>Poly</name>
+        <qualifiedname>Poly::Poly</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>double *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="24" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1ac5bc73ac5ba545903bd49037d46f8e46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::Poly</definition>
+        <argsstring>(void)</argsstring>
+        <name>Poly</name>
+        <qualifiedname>Poly::Poly</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="22" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1ad9c1826d2cdc6c74f511fbd70441d56a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poly::print</definition>
+        <argsstring>(ostream &amp;)</argsstring>
+        <name>print</name>
+        <qualifiedname>Poly::print</qualifiedname>
+        <param>
+          <type>ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="64" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poly_1a015f72021d46e817978f5e604baca627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poly::~Poly</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Poly</name>
+        <qualifiedname>Poly::~Poly</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="31" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_poly_1a6f2e3c9680db13a30326dd08b79d665d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly operator%</definition>
+        <argsstring>(Poly &amp;, Poly &amp;)</argsstring>
+        <name>operator%</name>
+        <qualifiedname>Poly::operator%</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="55" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_poly_1a3bb71767b263b312d5350908dcecf040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly operator&amp;</definition>
+        <argsstring>(Poly &amp;, Poly &amp;)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>Poly::operator&amp;</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="52" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_poly_1aa332a0937e1ce00bf8a5fa959a4b75e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly operator+</definition>
+        <argsstring>(Poly &amp;, Poly &amp;)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>Poly::operator+</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="46" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_poly_1a47bc94dfbe428a268419eb58acce2575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poly" kindref="compound">Poly</ref></type>
+        <definition>Poly operator-</definition>
+        <argsstring>(Poly &amp;, Poly &amp;)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>Poly::operator-</qualifiedname>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="class_poly" kindref="compound">Poly</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/poly.H" line="49" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Eigen::VectorXd</label>
+      </node>
+      <node id="1">
+        <label>Poly</label>
+        <link refid="class_poly"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Eigen::VectorXd</label>
+      </node>
+      <node id="1">
+        <label>Poly</label>
+        <link refid="class_poly"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/poly.H" line="10" column="1" bodyfile="/home/weinberg/Projects/EXP/include/poly.H" bodystart="11" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_poly_1aec529e2b59d8b37f9737ecea5bf35bc2" prot="public" virt="non-virtual"><scope>Poly</scope><name>deriv</name></member>
+      <member refid="class_poly_1a74886f241e211f5af127c087efc99d7f" prot="public" virt="non-virtual"><scope>Poly</scope><name>eval</name></member>
+      <member refid="class_poly_1ac6d1975152b5060a30b666cbc5572218" prot="public" virt="non-virtual"><scope>Poly</scope><name>getorder</name></member>
+      <member refid="class_poly_1a6f2e3c9680db13a30326dd08b79d665d" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator%</name></member>
+      <member refid="class_poly_1a258f68882745060dc9be6ba7381fc8ac" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator%=</name></member>
+      <member refid="class_poly_1a3bb71767b263b312d5350908dcecf040" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator&amp;</name></member>
+      <member refid="class_poly_1a41e2354b071745f8d51038e6bd7a7839" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator&amp;=</name></member>
+      <member refid="class_poly_1a258f36320c18281ddb1f9fbee475b0c4" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator+</name></member>
+      <member refid="class_poly_1aa332a0937e1ce00bf8a5fa959a4b75e1" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator+</name></member>
+      <member refid="class_poly_1a2bdee5f33df9d09d9f01fe9ce0990e5c" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator+=</name></member>
+      <member refid="class_poly_1ac3524d7bdfb545d09223c77c4d24c601" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator-</name></member>
+      <member refid="class_poly_1a47bc94dfbe428a268419eb58acce2575" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator-</name></member>
+      <member refid="class_poly_1a7ed831ab0f17f3b706467ab979207e10" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator-=</name></member>
+      <member refid="class_poly_1ae84bf46b28bbc9c117881ae731c69c9a" prot="public" virt="non-virtual"><scope>Poly</scope><name>operator=</name></member>
+      <member refid="class_poly_1a20d36d5470f8ee069b547dbe2f98ba4d" prot="private" virt="non-virtual"><scope>Poly</scope><name>order</name></member>
+      <member refid="class_poly_1ac5bc73ac5ba545903bd49037d46f8e46" prot="public" virt="non-virtual"><scope>Poly</scope><name>Poly</name></member>
+      <member refid="class_poly_1a7a346680adff050d4876f9e979cb6f69" prot="public" virt="non-virtual"><scope>Poly</scope><name>Poly</name></member>
+      <member refid="class_poly_1aaa10c350b28b8d591ae1f6b1767facc5" prot="public" virt="non-virtual"><scope>Poly</scope><name>Poly</name></member>
+      <member refid="class_poly_1aeeddb5ac09f86b0336d37a7dd804684a" prot="public" virt="non-virtual"><scope>Poly</scope><name>Poly</name></member>
+      <member refid="class_poly_1a21eaebe124e306ff9463514a06e8344a" prot="public" virt="non-virtual"><scope>Poly</scope><name>Poly</name></member>
+      <member refid="class_poly_1ad9c1826d2cdc6c74f511fbd70441d56a" prot="public" virt="non-virtual"><scope>Poly</scope><name>print</name></member>
+      <member refid="class_poly_1ac92157cc1d9266b044c50ebcb31cfa16" prot="private" virt="non-virtual"><scope>Poly</scope><name>reduce_order</name></member>
+      <member refid="class_poly_1a015f72021d46e817978f5e604baca627" prot="public" virt="non-virtual"><scope>Poly</scope><name>~Poly</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
