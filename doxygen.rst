@@ -20,9 +20,17 @@ compiling EXP using the ``BUILD_DOCS`` feature (:ref:`installing EXP
 ``source_dir/doc/html``.  Please see the `Doxygen web site
 <https://www.doxygen.nl>` to learn more.
 
+A brief summary of the automatically-generated documentation is
+provide in the links below.
 
-Doxygen-generated manual
-------------------------
+All classes, members, and utilities
+===================================
+
+* :ref:`genindex`
+     
+Code reference with inheritance diagrams
+========================================
 
 .. doxygenindex::
    :allow-dot-graphs:
+

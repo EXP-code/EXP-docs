@@ -137,7 +137,7 @@
     </briefdescription>
     <detaileddescription>
 <para>Computes the potential, acceleration and density using basis expansion solutions fitting to peak potential and COM. This implements a <ref refid="class_two_center" kindref="compound">TwoCenter</ref> class by providing a mixture function.</para>
-<para>The mixture function is:  <formula id="110">\[
+<para>The mixture function is:  <formula id="94">\[
 f({\bf r}) = \hbox{erf}\left(C\left[{|{\bf r} - {\bf r}_{peak}|\over
 |{\bf r}_{COM} - {\bf r}_{peak}|}\right]^\alpha\right)
 \]</formula> On evaluation, the acceleration from the grid centered on <formula id="75">${\bf r}_{COM}$</formula> is multiplied by <formula id="76">$f({\bf r})$</formula> and the the acceleration from the grid centered on <formula id="77">${\bf r}_{peak}$</formula> is multiplied by <formula id="78">$1-f({\bf r})$</formula></para>
