@@ -1,0 +1,996 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interp_8_h" kind="file" language="C++">
+    <compoundname>interp.H</compoundname>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">deque</includes>
+    <includes refid="_monot_cubic_interpolator_8_h" local="no">MonotCubicInterpolator.H</includes>
+    <includedby refid="_emp_cyl_s_l_8_h" local="no">/home/weinberg/Projects/EXP/include/EmpCylSL.H</includedby>
+    <includedby refid="isothermal_8_h" local="no">/home/weinberg/Projects/EXP/include/isothermal.H</includedby>
+    <includedby refid="massmodel_8_h" local="no">/home/weinberg/Projects/EXP/include/massmodel.H</includedby>
+    <includedby refid="_out_vel_8_h" local="no">/home/weinberg/Projects/EXP/src/OutVel.H</includedby>
+    <includedby refid="_shells_8_h" local="yes">/home/weinberg/Projects/EXP/src/Shells.H</includedby>
+    <includedby refid="_cyl_disk_8_h" local="yes">/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H</includedby>
+    <includedby refid="_ellip_force_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H</includedby>
+    <includedby refid="_ellipsoid_force_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/EllipsoidForce.H</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="4">
+        <label>deque</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCube.H</label>
+        <link refid="_biorth_cube_8_h"/>
+      </node>
+      <node id="16">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCyl.H</label>
+        <link refid="_biorth_cyl_8_h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/include/DiskModels.H</label>
+        <link refid="_disk_models_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/weinberg/Projects/EXP/include/DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/EmpCylSL.H</label>
+        <link refid="_emp_cyl_s_l_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/weinberg/Projects/EXP/include/GenPoly.H</label>
+        <link refid="_gen_poly_8_h"/>
+      </node>
+      <node id="24">
+        <label>/home/weinberg/Projects/EXP/include/HunterX.H</label>
+        <link refid="_hunter_x_8_h"/>
+      </node>
+      <node id="22">
+        <label>/home/weinberg/Projects/EXP/include/QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/weinberg/Projects/EXP/include/SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/weinberg/Projects/EXP/include/exponential.H</label>
+        <link refid="exponential_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/weinberg/Projects/EXP/include/hernquist_model.H</label>
+        <link refid="hernquist__model_8_h"/>
+      </node>
+      <node id="33">
+        <label>/home/weinberg/Projects/EXP/include/hunter.H</label>
+        <link refid="hunter_8_h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/weinberg/Projects/EXP/include/isothermal.H</label>
+        <link refid="isothermal_8_h"/>
+      </node>
+      <node id="34">
+        <label>/home/weinberg/Projects/EXP/include/king.H</label>
+        <link refid="king_8_h"/>
+      </node>
+      <node id="14">
+        <label>/home/weinberg/Projects/EXP/include/massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>/home/weinberg/Projects/EXP/include/mestel.H</label>
+        <link refid="mestel_8_h"/>
+      </node>
+      <node id="36">
+        <label>/home/weinberg/Projects/EXP/include/plummer.H</label>
+        <link refid="plummer_8_h"/>
+      </node>
+      <node id="26">
+        <label>/home/weinberg/Projects/EXP/include/sphereSL.H</label>
+        <link refid="sphere_s_l_8_h"/>
+      </node>
+      <node id="37">
+        <label>/home/weinberg/Projects/EXP/include/toomre.H</label>
+        <link refid="toomre_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>/home/weinberg/Projects/EXP/src/Direct.H</label>
+        <link refid="_direct_8_h"/>
+      </node>
+      <node id="9">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="17">
+        <label>/home/weinberg/Projects/EXP/src/FlatDisk.H</label>
+        <link refid="_flat_disk_8_h"/>
+      </node>
+      <node id="10">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="45">
+        <label>/home/weinberg/Projects/EXP/src/OutVel.H</label>
+        <link refid="_out_vel_8_h"/>
+      </node>
+      <node id="18">
+        <label>/home/weinberg/Projects/EXP/src/PolarBasis.H</label>
+        <link refid="_polar_basis_8_h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/weinberg/Projects/EXP/src/Shells.H</label>
+        <link refid="_shells_8_h"/>
+      </node>
+      <node id="27">
+        <label>/home/weinberg/Projects/EXP/src/SlabSL.H</label>
+        <link refid="_slab_s_l_8_h"/>
+      </node>
+      <node id="28">
+        <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
+        <link refid="_sphere_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>/home/weinberg/Projects/EXP/src/externalShock.H</label>
+        <link refid="external_shock_8_h"/>
+      </node>
+      <node id="29">
+        <label>/home/weinberg/Projects/EXP/utils/Analysis/SphSL.H</label>
+        <link refid="_sph_s_l_8_h"/>
+      </node>
+      <node id="41">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/AddDisk.H</label>
+        <link refid="_add_disk_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/AddSpheres.H</label>
+        <link refid="_add_spheres_8_h"/>
+      </node>
+      <node id="11">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H</label>
+        <link refid="_cyl_disk_8_h"/>
+      </node>
+      <node id="19">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2d.H</label>
+        <link refid="_disk2d_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/Disk2dHalo.H</label>
+        <link refid="_disk2d_halo_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</label>
+        <link refid="_disk_eval_8_h"/>
+      </node>
+      <node id="12">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/DiskHalo.H</label>
+        <link refid="_disk_halo_8_h"/>
+      </node>
+      <node id="46">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/EllipForce.H</label>
+        <link refid="_ellip_force_8_h"/>
+      </node>
+      <node id="47">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/EllipsoidForce.H</label>
+        <link refid="_ellipsoid_force_8_h"/>
+      </node>
+      <node id="30">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/SphericalSL.H</label>
+        <link refid="_spherical_s_l_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H</label>
+        <link refid="massmodel1d_8_h"/>
+      </node>
+      <node id="44">
+        <label>/home/weinberg/Projects/EXP/utils/PhaseSpace/MakeModel.H</label>
+        <link refid="_make_model_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cheby1d" prot="public">Cheby1d</innerclass>
+    <innerclass refid="class_interp1d" prot="public">Interp1d</innerclass>
+    <innerclass refid="class_linear1d" prot="public">Linear1d</innerclass>
+    <innerclass refid="class_spline1d" prot="public">Spline1d</innerclass>
+    <innerclass refid="class_spline2d" prot="public">Spline2d</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class V</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double drv2</definition>
+        <argsstring>(double x, const V &amp;xtab, const V &amp;ftab, int even=0)</argsstring>
+        <name>drv2</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>xtab</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>ftab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>even</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="31" column="8" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="31" declcolumn="8"/>
+        <referencedby refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" compoundref="_cyl_disk_8_h" startline="68" endline="73">CylDisk::get_dpot</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">CylDisk::get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class V</type>
+          </param>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double odd2</definition>
+        <argsstring>(double x, const V &amp;xtab, const V &amp;ftab, int even=0)</argsstring>
+        <name>odd2</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>xtab</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>ftab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>even</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="28" column="8" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="28" declcolumn="8"/>
+        <referencedby refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" compoundref="_cyl_disk_8_h" startline="53" endline="58">CylDisk::get_density</referencedby>
+        <referencedby refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" compoundref="_cyl_disk_8_h" startline="46" endline="51">CylDisk::get_mass</referencedby>
+        <referencedby refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" compoundref="_cyl_disk_8_h" startline="60" endline="65">CylDisk::get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a938c7fc54525266b5939c41adda075c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spline</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y, double yp1, double ypn, Eigen::VectorXd &amp;y2)</argsstring>
+        <name>Spline</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yp1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ypn</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="8" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Splint1</definition>
+        <argsstring>(const Eigen::VectorXd &amp;xa, const Eigen::VectorXd &amp;ya, const Eigen::VectorXd &amp;y2a, double x, double &amp;y, int even=0)</argsstring>
+        <name>Splint1</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>xa</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>ya</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y2a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>even</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="10" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="10" declcolumn="6"/>
+        <referencedby refid="class_isothermal_sphere_1afe793102d4ff196d7d891bd208716bf2" compoundref="isothermal_8_h" startline="124" endline="128">IsothermalSphere::get_density</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac94bde3f7edb32ee62a1d285f7bba249" compoundref="isothermal_8_h" startline="215" endline="221">LowSingIsothermalSphere::get_density</referencedby>
+        <referencedby refid="class_isothermal_sphere_1a1ea525b10190a8f6123ef4364eac8561" compoundref="isothermal_8_h" startline="136" endline="141">IsothermalSphere::get_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1ac05e510eecb71c632b823c60f7a2f247" compoundref="isothermal_8_h" startline="231" endline="237">LowSingIsothermalSphere::get_dpot</referencedby>
+        <referencedby refid="class_isothermal_sphere_1af871c1dc6091736c1138b04868dbc8e3" compoundref="isothermal_8_h" startline="143" endline="149">IsothermalSphere::get_dpot2</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a6a44dfbfa2ad5937b6cfe5a068b68fc8" compoundref="isothermal_8_h" startline="239" endline="246">LowSingIsothermalSphere::get_dpot2</referencedby>
+        <referencedby refid="class_isothermal_sphere_1a78ea7eadfc4c1a01d0165dc967cc0a17" compoundref="isothermal_8_h" startline="118" endline="122">IsothermalSphere::get_mass</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1aff60f7adc80bced5775c6d240c5635fb" compoundref="isothermal_8_h" startline="207" endline="213">LowSingIsothermalSphere::get_mass</referencedby>
+        <referencedby refid="class_isothermal_sphere_1a177d24c8a32acf07112b565ad250c3b3" compoundref="isothermal_8_h" startline="130" endline="134">IsothermalSphere::get_pot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a581e5085c4464562c63ee2193a050fe4" compoundref="isothermal_8_h" startline="223" endline="229">LowSingIsothermalSphere::get_pot</referencedby>
+        <referencedby refid="class_isothermal_sphere_1a0a79504dca46958d47c045e4b01339c0" compoundref="isothermal_8_h" startline="151" endline="160">IsothermalSphere::get_pot_dpot</referencedby>
+        <referencedby refid="class_low_sing_isothermal_sphere_1a044e953df452522efe8975ef73b7cbdc" compoundref="isothermal_8_h" startline="248" endline="261">LowSingIsothermalSphere::get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1ace3a2dffc3cdb3293c1c1fe492a6b862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Splint2</definition>
+        <argsstring>(const Eigen::VectorXd &amp;xa, const Eigen::VectorXd &amp;ya, const Eigen::VectorXd &amp;y2a, double x, double &amp;y, double &amp;dy, int even=0)</argsstring>
+        <name>Splint2</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>xa</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>ya</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y2a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>even</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="13" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a439d7e7d21de0c0413419406a11bc403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Splint3</definition>
+        <argsstring>(const Eigen::VectorXd &amp;xa, const Eigen::VectorXd &amp;ya, const Eigen::VectorXd &amp;y2a, double x, double &amp;y, double &amp;dy, double &amp;dyy, int even=0)</argsstring>
+        <name>Splint3</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>xa</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>ya</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y2a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dyy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>even</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="16" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="16" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1af5a16968f9dfb320a87c922db52f98cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Splsum</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y)</argsstring>
+        <name>Splsum</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="19" column="8" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="19" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a64f7840146f29b386763be3498786770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Splsum</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y, Eigen::VectorXd &amp;z)</argsstring>
+        <name>Splsum</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="20" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a5c506f65dd116f282eeb56da0f50e2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Trapsum</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y)</argsstring>
+        <name>Trapsum</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="22" column="8" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="22" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1a96a41d7c0f3fb83401687b95cfcd6280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trapsum</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y, Eigen::VectorXd &amp;z)</argsstring>
+        <name>Trapsum</name>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="23" column="6" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class V</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Vlocate</definition>
+        <argsstring>(double x, const V &amp;xtab)</argsstring>
+        <name>Vlocate</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>xtab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="34" column="5" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="34" declcolumn="5"/>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">CylDisk::get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">CylDisk::get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interp_8_h_1adcc3b181410da127da013c55346dc9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class V</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Vlocate_with_guard</definition>
+        <argsstring>(double value, const V &amp;vec)</argsstring>
+        <name>Vlocate_with_guard</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="37" column="5" declfile="/home/weinberg/Projects/EXP/include/interp.H" declline="37" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_interp_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_interp_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="interp_8_h_1a938c7fc54525266b5939c41adda075c8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a938c7fc54525266b5939c41adda075c8" kindref="member">Spline</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yp1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ypn,<sp/>Eigen::VectorXd<sp/>&amp;y2);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a03897bf7c41f3d4d06a460ad71230bb5" kindref="member">Splint1</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;xa,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;ya,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y2a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>even=0);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="interp_8_h_1ace3a2dffc3cdb3293c1c1fe492a6b862" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1ace3a2dffc3cdb3293c1c1fe492a6b862" kindref="member">Splint2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;xa,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;ya,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y2a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>even=0);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="interp_8_h_1a439d7e7d21de0c0413419406a11bc403" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a439d7e7d21de0c0413419406a11bc403" kindref="member">Splint3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;xa,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;ya,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y2a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dyy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>even=0);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="interp_8_h_1af5a16968f9dfb320a87c922db52f98cb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1af5a16968f9dfb320a87c922db52f98cb" kindref="member">Splsum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>y);</highlight></codeline>
+<codeline lineno="20" refid="interp_8_h_1a64f7840146f29b386763be3498786770" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1af5a16968f9dfb320a87c922db52f98cb" kindref="member">Splsum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>y,<sp/>Eigen::VectorXd&amp;<sp/>z);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="interp_8_h_1a5c506f65dd116f282eeb56da0f50e2e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a5c506f65dd116f282eeb56da0f50e2e0" kindref="member">Trapsum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>y);</highlight></codeline>
+<codeline lineno="23" refid="interp_8_h_1a96a41d7c0f3fb83401687b95cfcd6280" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a5c506f65dd116f282eeb56da0f50e2e0" kindref="member">Trapsum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/>y,<sp/>Eigen::VectorXd&amp;<sp/>z);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>will<sp/>work<sp/>for<sp/>both<sp/>STL<sp/>deque<sp/>and<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="28" refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c" kindref="member">odd2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>xtab,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>ftab,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>even=0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="31" refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d" kindref="member">drv2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>xtab,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>ftab,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>even=0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="34" refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614" kindref="member">Vlocate</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>xtab);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="37" refid="interp_8_h_1adcc3b181410da127da013c55346dc9f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interp_8_h_1adcc3b181410da127da013c55346dc9f8" kindref="member">Vlocate_with_guard</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>vec);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_interp1d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_interp1d" kindref="compound">Interp1d</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_interp1d_1a21ea97560f42d16715c1d9c6efb2d092" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_interp1d_1a21ea97560f42d16715c1d9c6efb2d092" kindref="member">~Interp1d</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_interp1d_1acb91fcf561ac596869ce571c30cf5583" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_interp1d_1acb91fcf561ac596869ce571c30cf5583" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_interp1d_1a47936fb17ab09ba1a5adae98615703f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_interp1d_1a47936fb17ab09ba1a5adae98615703f7" kindref="member">deriv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_interp1d_1ad7d8aaee41f1df6e533bfbb3089e8b67" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_interp1d_1ad7d8aaee41f1df6e533bfbb3089e8b67" kindref="member">xlo</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55" refid="class_interp1d_1a7acc2957f6163115ad925d21d9ab2783" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_interp1d_1a7acc2957f6163115ad925d21d9ab2783" kindref="member">xhi</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_spline1d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spline1d" kindref="compound">Spline1d</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_interp1d" kindref="compound">Interp1d</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_spline1d_1a9893d02b2d855294177889021d619a88" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="64" refid="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" kindref="member">y</ref>,<sp/><ref refid="class_spline1d_1a32a0f86bc7488946aba1db1c330d46ac" kindref="member">y2</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_spline1d_1a5bf05ae73e84bf848b8e3e65dfd9dcec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline1d_1a5bf05ae73e84bf848b8e3e65dfd9dcec" kindref="member">Spline1d</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_spline1d_1aff78d6b8bfb8e3b1abf2c0de48a652a6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline1d_1aff78d6b8bfb8e3b1abf2c0de48a652a6" kindref="member">Spline1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" kindref="member">y</ref>,<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d1=-1.0e30,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d2=-1.0e30);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_spline1d_1af59e1503b1dd03e2695664557e23e252" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline1d_1af59e1503b1dd03e2695664557e23e252" kindref="member">Spline1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>&amp;<ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>&amp;<ref refid="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" kindref="member">y</ref>,<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d1=-1.0e30,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d2=-1.0e30);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_spline1d_1aa87545d1a3cc7a3b7b22f9239ca3f778" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline1d" kindref="compound">Spline1d</ref><sp/>&amp;<ref refid="class_spline1d_1aa87545d1a3cc7a3b7b22f9239ca3f778" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_spline1d" kindref="compound">Spline1d</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_spline1d_1a4af2948c59689f542ccfe1536efaf6a9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline1d_1a4af2948c59689f542ccfe1536efaf6a9" kindref="member">~Spline1d</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_spline1d_1acae16b27f9faccaa82f6b17701980e24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1acae16b27f9faccaa82f6b17701980e24" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_spline1d_1a0c75f5c5600c7acb11ccfed1bc23a584" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1a0c75f5c5600c7acb11ccfed1bc23a584" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>val,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline1d_1a27aa98f94472783eef5a68a005a79b16" kindref="member">deriv</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_spline1d_1a27aa98f94472783eef5a68a005a79b16" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1a27aa98f94472783eef5a68a005a79b16" kindref="member">deriv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_spline1d_1a604862983923c498185d9177d2b40d99" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1a604862983923c498185d9177d2b40d99" kindref="member">xlo</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>(0);<sp/>}</highlight></codeline>
+<codeline lineno="97" refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" kindref="member">xhi</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>(<ref refid="class_spline1d_1a9893d02b2d855294177889021d619a88" kindref="member">x</ref>.size()-1);<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_cheby1d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cheby1d" kindref="compound">Cheby1d</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_interp1d" kindref="compound">Interp1d</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_cheby1d_1a80b6049b4f4d04a825abd72bf8c997da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a80b6049b4f4d04a825abd72bf8c997da" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="107" refid="class_cheby1d_1afae81d1111b8ea7f5aae3b0cab0d54fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1afae81d1111b8ea7f5aae3b0cab0d54fc" kindref="member">a</ref>,<sp/><ref refid="class_cheby1d_1a1ec4dfe58859cca50bed5e0110ecc52b" kindref="member">b</ref>,<sp/><ref refid="class_cheby1d_1a5703f69ccf31d75a9773464995c17a95" kindref="member">xmin</ref>=0,<sp/><ref refid="class_cheby1d_1a261332af6bffe70aae0b3a329df27dc6" kindref="member">xmax</ref>=0;</highlight></codeline>
+<codeline lineno="108" refid="class_cheby1d_1a9663c4e8f89d4244cb41989537418994" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_cheby1d_1a9663c4e8f89d4244cb41989537418994" kindref="member">c</ref>;</highlight></codeline>
+<codeline lineno="109" refid="class_cheby1d_1a514dc54ba153f13915b05133caf59e46" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_cheby1d_1a514dc54ba153f13915b05133caf59e46" kindref="member">c1</ref>;</highlight></codeline>
+<codeline lineno="110" refid="class_cheby1d_1a3c045c6480b6f8015ed564916b1dd950" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_cheby1d_1a3c045c6480b6f8015ed564916b1dd950" kindref="member">c2</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="class_cheby1d_1a163a791fe35cc105578445849b49797c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_cheby1d_1a163a791fe35cc105578445849b49797c" kindref="member">chder</ref>(std::vector&lt;double&gt;&amp;<sp/>cin,<sp/>std::vector&lt;double&gt;&amp;<sp/>cder);</highlight></codeline>
+<codeline lineno="113" refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/>std::vector&lt;double&gt;&amp;<sp/>cin);</highlight></codeline>
+<codeline lineno="114" refid="class_cheby1d_1a2f0a0422210a51fdf4e7c5b569f0cb41" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a2f0a0422210a51fdf4e7c5b569f0cb41" kindref="member">chebint</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_cheby1d_1ad81f17b107f472e4e952cdec18dcfe50" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1ad81f17b107f472e4e952cdec18dcfe50" kindref="member">Cheby1d</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_cheby1d_1a036ca1cd1f34d8183d341ada7ddb9a3e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1a036ca1cd1f34d8183d341ada7ddb9a3e" kindref="member">Cheby1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>B,<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_cheby1d_1a1a0b5dda27ddf77714119736625c72e2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1a1a0b5dda27ddf77714119736625c72e2" kindref="member">Cheby1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>B,<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>&amp;x,<sp/>std::vector&lt;double&gt;<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_cheby1d_1a05043bfe26497eb5d5652320ccfcbb8f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1a05043bfe26497eb5d5652320ccfcbb8f" kindref="member">Cheby1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_cheby1d_1aabc443ecc751575c7245d889a4c37158" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1aabc443ecc751575c7245d889a4c37158" kindref="member">Cheby1d</ref>(std::vector&lt;double&gt;<sp/>&amp;x,<sp/>std::vector&lt;double&gt;<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_cheby1d_1a2e0a5b752a0e4c82bc15e333e2dcdc27" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d" kindref="compound">Cheby1d</ref><sp/>&amp;<ref refid="class_cheby1d_1a2e0a5b752a0e4c82bc15e333e2dcdc27" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d" kindref="compound">Cheby1d</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_cheby1d_1a0026d239ef7cef9a8997172a41c25b9e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_cheby1d_1a0026d239ef7cef9a8997172a41c25b9e" kindref="member">~Cheby1d</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_cheby1d_1a692c77d49493eecf92a184452f032c40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a692c77d49493eecf92a184452f032c40" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(x,<sp/><ref refid="class_cheby1d_1a9663c4e8f89d4244cb41989537418994" kindref="member">c</ref>);<sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>data!&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c" kindref="member">deriv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(x,<sp/><ref refid="class_cheby1d_1a514dc54ba153f13915b05133caf59e46" kindref="member">c1</ref>);<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>data!&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="class_cheby1d_1ac7ab09acf3695f9947df7d9611b97c7b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1ac7ab09acf3695f9947df7d9611b97c7b" kindref="member">integral</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a2f0a0422210a51fdf4e7c5b569f0cb41" kindref="member">chebint</ref>(x);<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>data!&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>New<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_cheby1d_1a6bbb5d3a7ed5e2ddef89e8a406563584" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a6bbb5d3a7ed5e2ddef89e8a406563584" kindref="member">new_limits</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>B);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_cheby1d_1a8b43853e8403c36cbfd980c835f165e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a8b43853e8403c36cbfd980c835f165e9" kindref="member">new_func</ref>(std::function&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)&gt;<sp/>func,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>B,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="class_cheby1d_1ac6bbe27c91f9deddfe63221024f9c0a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1ac6bbe27c91f9deddfe63221024f9c0a7" kindref="member">new_data</ref>(std::vector&lt;double&gt;<sp/>&amp;X,<sp/>std::vector&lt;double&gt;<sp/>&amp;Y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_cheby1d_1ad64011d2a0b792c8cca856cdee1310ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1ad64011d2a0b792c8cca856cdee1310ff" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>val,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c" kindref="member">deriv</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(x,<sp/><ref refid="class_cheby1d_1a9663c4e8f89d4244cb41989537418994" kindref="member">c</ref>);<sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c" kindref="member">deriv</ref><sp/>=<sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(x,<sp/><ref refid="class_cheby1d_1a514dc54ba153f13915b05133caf59e46" kindref="member">c1</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/><ref refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c" kindref="member">deriv</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>data!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="class_cheby1d_1a910817e73b71e20d4858d6f021e9c2f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a910817e73b71e20d4858d6f021e9c2f7" kindref="member">deriv2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_cheby1d_1ac2e6bc237a725d743b97c4e5dc1798c2" kindref="member">defined</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a0e4faf44856088e07a94667aec3566d6" kindref="member">chebev</ref>(x,<sp/><ref refid="class_cheby1d_1a514dc54ba153f13915b05133caf59e46" kindref="member">c1</ref>);<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>data!&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1aca27473704d1d17a93771ef7455f5a62" kindref="member">bomb</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="class_cheby1d_1a530d67f97de247ae4d1580a816c738d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a530d67f97de247ae4d1580a816c738d1" kindref="member">xlo</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a5703f69ccf31d75a9773464995c17a95" kindref="member">xmin</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="188" refid="class_cheby1d_1a20fc7c34e98a3b7fcf5f04e1683c2829" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a20fc7c34e98a3b7fcf5f04e1683c2829" kindref="member">xhi</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_cheby1d_1a261332af6bffe70aae0b3a329df27dc6" kindref="member">xmax</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="class_linear1d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_linear1d" kindref="compound">Linear1d</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_interp1d" kindref="compound">Interp1d</ref></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="198" refid="class_linear1d_1a45704758ee2fc4e1f9f3d08773122c3b" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_linear1d_1a45704758ee2fc4e1f9f3d08773122c3b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="class_linear1d_1a8f4612cd47eb448ad86cd0ae7da8f993" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_linear1d_1a8f4612cd47eb448ad86cd0ae7da8f993" kindref="member">Linear1d</ref>();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="class_linear1d_1a6a0ea756a03a7efc21579b02581c5ca4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_linear1d_1a6a0ea756a03a7efc21579b02581c5ca4" kindref="member">Linear1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_linear1d_1a45704758ee2fc4e1f9f3d08773122c3b" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="class_linear1d_1a8cc2f73893fd3429088038472c980088" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_linear1d_1a8cc2f73893fd3429088038472c980088" kindref="member">Linear1d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>&amp;<ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>&amp;<ref refid="class_linear1d_1a45704758ee2fc4e1f9f3d08773122c3b" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="class_linear1d_1acc99126c92ed5cb76e4c582bb9afb126" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_linear1d" kindref="compound">Linear1d</ref><sp/>&amp;<ref refid="class_linear1d_1acc99126c92ed5cb76e4c582bb9afb126" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_linear1d" kindref="compound">Linear1d</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="class_linear1d_1a9e975abf68566a3f7d2e997523e83ca5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_linear1d_1a9e975abf68566a3f7d2e997523e83ca5" kindref="member">~Linear1d</ref>();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="class_linear1d_1a59080ed1d410b65d44fdba854be86daf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a59080ed1d410b65d44fdba854be86daf" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="class_linear1d_1a7cca991f83a09a3183d721703a32ca7f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a7cca991f83a09a3183d721703a32ca7f" kindref="member">deriv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_linear1d_1a871aea7a921331a671183d361cd3b2e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a871aea7a921331a671183d361cd3b2e0" kindref="member">xlo</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>(0);<sp/>}</highlight></codeline>
+<codeline lineno="226" refid="class_linear1d_1a784960cd9590a7a394a69fd5b9bd3ad3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a784960cd9590a7a394a69fd5b9bd3ad3" kindref="member">xhi</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>(<ref refid="class_linear1d_1a7cd1d60114eda9389f3226b860f2075c" kindref="member">x</ref>.size()-1);<sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="class_spline2d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spline2d" kindref="compound">Spline2d</ref></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="class_spline2d_1ae5df0a5125042539f8cc8fc47c3b16b1" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_spline2d_1ae5df0a5125042539f8cc8fc47c3b16b1" kindref="member">x</ref>,<sp/><ref refid="class_spline2d_1ab8835dc9776d6b70f81c01586d0977e3" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="237" refid="class_spline2d_1a9c4fda88d69dde6ffa08cdf90ede1559" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_spline2d_1a9c4fda88d69dde6ffa08cdf90ede1559" kindref="member">xval</ref>,<sp/><ref refid="class_spline2d_1a730b3dbc228062600ce8e93620469b12" kindref="member">xval2</ref>;</highlight></codeline>
+<codeline lineno="238" refid="class_spline2d_1a48b7922ccc4d083973623e9b2e61f52a" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_spline2d_1a48b7922ccc4d083973623e9b2e61f52a" kindref="member">mat</ref>,<sp/><ref refid="class_spline2d_1a4e1b8149d5e60971f0b768e181ba895e" kindref="member">mat2d</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="241" refid="class_spline2d_1af3fdd6acc906f15c5c4fa97a8ef2151c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline2d_1af3fdd6acc906f15c5c4fa97a8ef2151c" kindref="member">DERIV</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="class_spline2d_1a94381849277938c84639add7d46982f3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline2d_1a94381849277938c84639add7d46982f3" kindref="member">Spline2d</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="class_spline2d_1ad71fc44e362470889d2bf06907637b0e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline2d_1ad71fc44e362470889d2bf06907637b0e" kindref="member">Spline2d</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_spline2d_1ae5df0a5125042539f8cc8fc47c3b16b1" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd<sp/>&amp;<ref refid="class_spline2d_1ab8835dc9776d6b70f81c01586d0977e3" kindref="member">y</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::MatrixXd<sp/>&amp;<ref refid="class_spline2d_1a48b7922ccc4d083973623e9b2e61f52a" kindref="member">mat</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="class_spline2d_1af17579c6e93108587c38e4052c391826" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_spline2d" kindref="compound">Spline2d</ref><sp/>&amp;<ref refid="class_spline2d_1af17579c6e93108587c38e4052c391826" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_spline2d" kindref="compound">Spline2d</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="class_spline2d_1aec060180e210ed4693bfea1ef60ca1fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_spline2d_1aec060180e210ed4693bfea1ef60ca1fc" kindref="member">eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline2d_1ae5df0a5125042539f8cc8fc47c3b16b1" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="class_spline2d_1ab8835dc9776d6b70f81c01586d0977e3" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_monot_cubic_interpolator_8_h" kindref="compound">MonotCubicInterpolator.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/interp.H"/>
+  </compounddef>
+</doxygen>

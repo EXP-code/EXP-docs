@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_plummer_sphere" kind="class" language="C++" prot="public">
+    <compoundname>PlummerSphere</compoundname>
+    <basecompoundref refid="class_axi_sym_model" prot="public" virt="non-virtual">AxiSymModel</basecompoundref>
+    <includes refid="plummer_8_h" local="no">plummer.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::dfac</definition>
+        <argsstring></argsstring>
+        <name>dfac</name>
+        <qualifiedname>PlummerSphere::dfac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="16" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" compoundref="plummer_8_h" startline="41" endline="43">get_density</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::ffac</definition>
+        <argsstring></argsstring>
+        <name>ffac</name>
+        <qualifiedname>PlummerSphere::ffac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="17" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43" compoundref="plummer_8_h" startline="79" endline="81">d2fde2</referencedby>
+        <referencedby refid="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d" compoundref="plummer_8_h" startline="71" endline="73">dfde</referencedby>
+        <referencedby refid="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906" compoundref="plummer_8_h" startline="67" endline="69">distf</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <qualifiedname>PlummerSphere::mass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="14" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" compoundref="plummer_8_h" startline="49" endline="51">get_dpot</referencedby>
+        <referencedby refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" compoundref="plummer_8_h" startline="53" endline="55">get_dpot2</referencedby>
+        <referencedby refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" compoundref="plummer_8_h" startline="36" endline="39">get_mass</referencedby>
+        <referencedby refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" compoundref="plummer_8_h" startline="45" endline="47">get_pot</referencedby>
+        <referencedby refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" compoundref="plummer_8_h" startline="57" endline="60">get_pot_dpot</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>PlummerSphere::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="12" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1" compoundref="plummer_8_h" startline="65" endline="65">get_max_radius</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>PlummerSphere::rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="11" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c" compoundref="plummer_8_h" startline="64" endline="64">get_min_radius</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PlummerSphere::rscl</definition>
+        <argsstring></argsstring>
+        <name>rscl</name>
+        <qualifiedname>PlummerSphere::rscl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="13" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" compoundref="plummer_8_h" startline="41" endline="43">get_density</referencedby>
+        <referencedby refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" compoundref="plummer_8_h" startline="49" endline="51">get_dpot</referencedby>
+        <referencedby refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" compoundref="plummer_8_h" startline="53" endline="55">get_dpot2</referencedby>
+        <referencedby refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" compoundref="plummer_8_h" startline="36" endline="39">get_mass</referencedby>
+        <referencedby refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" compoundref="plummer_8_h" startline="45" endline="47">get_pot</referencedby>
+        <referencedby refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" compoundref="plummer_8_h" startline="57" endline="60">get_pot_dpot</referencedby>
+        <referencedby refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" compoundref="plummer_8_h" startline="21" endline="32">PlummerSphere</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::d2fde2</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>PlummerSphere::d2fde2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="79" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="79" bodyend="81"/>
+        <references refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" compoundref="plummer_8_h" startline="17">ffac</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::dfde</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfde</name>
+        <qualifiedname>PlummerSphere::dfde</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="71" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="71" bodyend="73"/>
+        <references refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" compoundref="plummer_8_h" startline="17">ffac</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a803e60961f740a9cf5acf605de13ef98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::dfdl</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>PlummerSphere::dfdl</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="75" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::distf</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>distf</name>
+        <qualifiedname>PlummerSphere::distf</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="67" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="67" bodyend="69"/>
+        <references refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" compoundref="plummer_8_h" startline="17">ffac</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_density</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>PlummerSphere::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="41" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="41" bodyend="43"/>
+        <references refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" compoundref="plummer_8_h" startline="16">dfac</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_dpot</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>PlummerSphere::get_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845">get_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="49" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="49" bodyend="51"/>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_dpot2</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>PlummerSphere::get_dpot2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae">get_dpot2</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="53" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="53" bodyend="55"/>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_mass</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>PlummerSphere::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="36" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="36" bodyend="39"/>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_max_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>PlummerSphere::get_max_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c">get_max_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="65" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="65" bodyend="65"/>
+        <references refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" compoundref="plummer_8_h" startline="12">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_min_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>PlummerSphere::get_min_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9">get_min_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="64" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="64" bodyend="64"/>
+        <references refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" compoundref="plummer_8_h" startline="11">rmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PlummerSphere::get_pot</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>PlummerSphere::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="45" column="10" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="45" bodyend="47"/>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void PlummerSphere::get_pot_dpot</definition>
+        <argsstring>(const double r, double &amp;ur, double &amp;dur)</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>PlummerSphere::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632">get_pot_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ur</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="57" column="8" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="57" bodyend="60"/>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PlummerSphere::PlummerSphere</definition>
+        <argsstring>(double RSCL=1.0, double RMIN=1.0e-6, double RMAX=1.0e6, double MASS=1.0)</argsstring>
+        <name>PlummerSphere</name>
+        <qualifiedname>PlummerSphere::PlummerSphere</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>RSCL</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RMIN</declname>
+          <defval>1.0e-6</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RMAX</declname>
+          <defval>1.0e6</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>MASS</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="21" column="3" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="21" bodyend="32"/>
+        <references refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" compoundref="plummer_8_h" startline="16">dfac</references>
+        <references refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" compoundref="massmodel_8_h" startline="79">MassModel::dim</references>
+        <references refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" compoundref="massmodel_8_h" startline="165">AxiSymModel::dist_defined</references>
+        <references refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" compoundref="plummer_8_h" startline="17">ffac</references>
+        <references refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" compoundref="plummer_8_h" startline="14">mass</references>
+        <references refid="class_mass_model_1acf360c000464aca6299bc47894672d70" compoundref="massmodel_8_h" startline="81">MassModel::ModelID</references>
+        <references refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" compoundref="plummer_8_h" startline="12">rmax</references>
+        <references refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" compoundref="plummer_8_h" startline="11">rmin</references>
+        <references refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" compoundref="plummer_8_h" startline="13">rscl</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="1">
+        <label>PlummerSphere</label>
+        <link refid="class_plummer_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="1">
+        <label>PlummerSphere</label>
+        <link refid="class_plummer_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="5">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/plummer.H" line="7" column="1" bodyfile="/home/weinberg/Projects/EXP/include/plummer.H" bodystart="8" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>bomb</name></member>
+      <member refid="class_plummer_sphere_1ab95198d90d07b124d3e42689bc861f43" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>dEgrid</name></member>
+      <member refid="class_plummer_sphere_1a9b12f5b54d3eb5cb0b043de2f9e50c59" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>dfac</name></member>
+      <member refid="class_plummer_sphere_1a5cce356c16602d5a7565829746eb4b3d" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>dfde</name></member>
+      <member refid="class_plummer_sphere_1a803e60961f740a9cf5acf605de13ef98" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>dist_defined</name></member>
+      <member refid="class_plummer_sphere_1a046542e5c6831717f9b5bcd1cb850906" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>dof</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Emin_grid</name></member>
+      <member refid="class_plummer_sphere_1aeb86e917c5befaf750bfe1456abc5a06" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>ffac</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>gen_velocity</name></member>
+      <member refid="class_plummer_sphere_1a1adbb81a75a56d8775991c72a06c7b8e" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>PlummerSphere</scope><name>get_density</name></member>
+      <member refid="class_plummer_sphere_1a2284b215f5c25868c28e6dee159d9791" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_dpot</name></member>
+      <member refid="class_plummer_sphere_1a603d8d644951e5868f76a0e4cdac8faf" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_dpot2</name></member>
+      <member refid="class_plummer_sphere_1ad7aede352bfadd171d221cf16062f16a" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>PlummerSphere</scope><name>get_mass</name></member>
+      <member refid="class_plummer_sphere_1aab24fa7d3d850ff0916bf8bcc5723dd1" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_max_radius</name></member>
+      <member refid="class_plummer_sphere_1ade00f87203a81b6d3299638491ad470c" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_min_radius</name></member>
+      <member refid="class_plummer_sphere_1ab521401ab6440b28433f149867563de8" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>PlummerSphere</scope><name>get_pot</name></member>
+      <member refid="class_plummer_sphere_1afb71240a34ad55b8d419a36ab5a881b8" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>get_pot_dpot</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Kgrid</name></member>
+      <member refid="class_plummer_sphere_1a66c8824f973b22749ab2aee621206564" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>mass</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>ModelID</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>numr</name></member>
+      <member refid="class_plummer_sphere_1a86bcc229834769dcc528c4e8a104ab41" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>PlummerSphere</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Rgrid</name></member>
+      <member refid="class_plummer_sphere_1ac439a9772d9462d5165aade1d5dc2876" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>rmax</name></member>
+      <member refid="class_plummer_sphere_1a2ed8bffa65a69ebf759c447bf2e1a890" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>rmin</name></member>
+      <member refid="class_plummer_sphere_1a05a2671858379c86776a2fc510b650bc" prot="private" virt="non-virtual"><scope>PlummerSphere</scope><name>rscl</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>PlummerSphere</scope><name>set_itmax</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>Unit</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>PlummerSphere</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>PlummerSphere</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

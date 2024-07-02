@@ -1,0 +1,1747 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="expand_8_h" kind="file" language="C++">
+    <compoundname>expand.H</compoundname>
+    <includes local="no">config_exp.h</includes>
+    <includes local="no">mpi.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes refid="_component_container_8_h" local="no">ComponentContainer.H</includes>
+    <includes refid="_external_force_8_h" local="no">ExternalForce.H</includes>
+    <includes refid="_output_8_h" local="no">Output.H</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes refid="global_8_h" local="no">global.H</includes>
+    <includes refid="_e_x_p_exception_8_h" local="no">EXPException.H</includes>
+    <includedby refid="_cyl_e_x_p_8_h" local="no">/home/weinberg/Projects/EXP/src/CylEXP.H</includedby>
+    <includedby refid="_shells_8_h" local="yes">/home/weinberg/Projects/EXP/src/Shells.H</includedby>
+    <incdepgraph>
+      <node id="31">
+        <label>BarrierWrapper.H</label>
+        <link refid="_barrier_wrapper_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>CenterFile.H</label>
+        <link refid="_center_file_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Circular.H</label>
+        <link refid="_circular_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>EXPException.H</label>
+        <link refid="_e_x_p_exception_8_h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Species.H</label>
+        <link refid="_species_8_h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>StringTok.H</label>
+        <link refid="_string_tok_8_h"/>
+      </node>
+      <node id="33">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>YamlCheck.H</label>
+        <link refid="_yaml_check_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>euler.H</label>
+        <link refid="euler_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>header.H</label>
+        <link refid="header_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Component.H</label>
+        <link refid="_component_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ComponentContainer.H</label>
+        <link refid="_component_container_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>ExternalForce.H</label>
+        <link refid="_external_force_8_h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Orient.H</label>
+        <link refid="_orient_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Output.H</label>
+        <link refid="_output_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>ParticleFerry.H</label>
+        <link refid="_particle_ferry_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>PotAccel.H</label>
+        <link refid="_pot_accel_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>chkTimer.H</label>
+        <link refid="chk_timer_8_h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>coef.H</label>
+        <link refid="src_2coef_8_h"/>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/expand.H</label>
+        <link refid="expand_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>global.H</label>
+        <link refid="global_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="41">
+        <label>Particle.H</label>
+      </node>
+      <node id="39">
+        <label>algorithm</label>
+      </node>
+      <node id="45">
+        <label>array</label>
+      </node>
+      <node id="34">
+        <label>chrono</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>config_exp.h</label>
+      </node>
+      <node id="6">
+        <label>cstdlib</label>
+      </node>
+      <node id="8">
+        <label>cstring</label>
+      </node>
+      <node id="38">
+        <label>deque</label>
+      </node>
+      <node id="10">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>limits</label>
+      </node>
+      <node id="18">
+        <label>list</label>
+      </node>
+      <node id="32">
+        <label>map</label>
+      </node>
+      <node id="27">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>mpi.h</label>
+      </node>
+      <node id="4">
+        <label>pthread.h</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>set</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>time.h</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/src/Shells.H</label>
+        <link refid="_shells_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/expand.H</label>
+        <link refid="expand_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="expand_8_h_1ab67f49e412705befeaa20562f6bace06" prot="public" static="no">
+        <name>BSD_SOURCE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect2 id="expand_8_h_1autotoc_md0">
+<title>Description:</title>
+<para>This routine is an NBODY code whose force calculation is based on a biorthogonal phase-space expansion; for now, the expansion set is based on the eigenfunctions of the spherical Laplacian: <verbatim>       Y_{lm} * j_n
+         ^       ^
+         |       |
+         |       spherical Bessel functions
+         | spherical harmonics
+</verbatim></para>
+</sect2>
+<sect2 id="expand_8_h_1autotoc_md1">
+<title>Call sequence:</title>
+<para>exp [-f parameter file] [ [keyword=value] [keyword=value] ... ]</para>
+</sect2>
+<sect2 id="expand_8_h_1autotoc_md2">
+<title>Parameters:</title>
+<para>The parameter file may be used instead of the keyword/value pairs. The available keywords are:</para>
+<para>KEYWORD EXPLANATION DEFAULT <hruler/>
+ lmax = maximum harmonic order 4 nmax = maxinum radial order 10 nlog = interval between log output 10 nlist = interval between p-s output 50 nsteps = total number of steps to run 500 fixacc = add off set to acceleration to conserve momentum 1 (1=yes 0=no) selfgrav = turn-on self-gravity 1 outbods = output phase space 1 outengy = output per particle energies 0 diag = diagnostic output 0 dtime = time step 0.1 rmax = maximum radial extent (computed from input) logfile = logfile name LOG.FILE infile = input parameter file IN.FILE outname = output file prefix OUT parmfile = parameter file name PARMS.FILE</para>
+<para>$Id$ </para>
+</sect2>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="56" column="9" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="expand_8_h_1ad935f1ff1a50822e317bdb321ce991ad" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>A</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>(A&gt;B ? A : B)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="103" column="9" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="expand_8_h_1adcd021ac91d43a62b2cdecf9a5b971a7" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>A</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>(A&lt;B ? A : B)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="106" column="9" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="106" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="expand_8_h_1aa1cc8718b17bb81c90c7075d1fa97424" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double DSMALL</definition>
+        <argsstring></argsstring>
+        <name>DSMALL</name>
+        <initializer>= 1.0e-16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="130" column="21" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="expand_8_h_1a3729a2d83d6e49a2a5580fb26119da2f" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mdtDim</definition>
+        <argsstring></argsstring>
+        <name>mdtDim</name>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="131" column="21" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="131" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="expand_8_h_1a2be7261d2c5b321388a3a465fcc6c5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adjust_multistep_level</definition>
+        <argsstring>()</argsstring>
+        <name>adjust_multistep_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="97" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="97" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a34788a4951c943da34b3edc632e133d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double atof</definition>
+        <argsstring>(string &amp;s)</argsstring>
+        <name>atof</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="156" column="15" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="156" bodyend="156"/>
+        <references refid="expand_8_h_1a34788a4951c943da34b3edc632e133d9" compoundref="expand_8_h" startline="156" endline="156">atof</references>
+        <referencedby refid="expand_8_h_1a34788a4951c943da34b3edc632e133d9" compoundref="expand_8_h" startline="156" endline="156">atof</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int atoi</definition>
+        <argsstring>(string &amp;s)</argsstring>
+        <name>atoi</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="157" column="12" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="157" bodyend="157"/>
+        <references refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" compoundref="expand_8_h" startline="157" endline="157">atoi</references>
+        <referencedby refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" compoundref="expand_8_h" startline="157" endline="157">atoi</referencedby>
+        <referencedby refid="expand_8_h_1a0d19215d158f5323e78e73113ac9e4fe" compoundref="expand_8_h" startline="158" endline="158">atol</referencedby>
+        <referencedby refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" compoundref="_pot_accel_8_h" startline="230" endline="230">PotAccel::atol</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a0d19215d158f5323e78e73113ac9e4fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool atol</definition>
+        <argsstring>(string &amp;s)</argsstring>
+        <name>atol</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="158" column="13" bodyfile="/home/weinberg/Projects/EXP/src/expand.H" bodystart="158" bodyend="158"/>
+        <references refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" compoundref="expand_8_h" startline="157" endline="157">atoi</references>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a5f739c0390c4e3af9be40c62f5fd75ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void begin_run</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin_run</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="89" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="89" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a149f7f86106e48afbdc7d180578cf348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_tipsy</definition>
+        <argsstring>(void)</argsstring>
+        <name>create_tipsy</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="116" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="116" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1af88a260cf1ae1622666e784e70780c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double densi</definition>
+        <argsstring>(double rr, int l, int n)</argsstring>
+        <name>densi</name>
+        <param>
+          <type>double</type>
+          <declname>rr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="112" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ac71f6f2a8ff6951d6edb09d4c53b535a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dgammln</definition>
+        <argsstring>()</argsstring>
+        <name>dgammln</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="120" column="19" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="120" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a7e1b26ed04ad446033a4b441924dabdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void do_output_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>do_output_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="179" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="179" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dplgndr</definition>
+        <argsstring>(int l, int m, double x)</argsstring>
+        <name>dplgndr</name>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="123" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="123" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ae11bac7b5e54518b79a87df99af6367c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exp_mpi_error_handler</definition>
+        <argsstring>(MPI_Comm *communicator, int *error_code,...)</argsstring>
+        <name>exp_mpi_error_handler</name>
+        <param>
+          <type>MPI_Comm *</type>
+          <declname>communicator</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>error_code</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="199" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="199" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ad912a662af91c94aab43271eb3d1ba92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double factrl</definition>
+        <argsstring>(int n)</argsstring>
+        <name>factrl</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="124" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="124" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1acae75336d7f93ec43e8151678f65a72e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double get_dens</definition>
+        <argsstring>(double r, int l, double *coef)</argsstring>
+        <name>get_dens</name>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="111" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="111" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1af5ca8ebfd0d974c3a97ad02022938150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_potacc</definition>
+        <argsstring>(double r, int l, double *coef, double *p, double *dp)</argsstring>
+        <name>get_potacc</name>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>coef</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="114" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="114" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1aed8de3eb31c43b0b3865babd3e756a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_ultra</definition>
+        <argsstring>(int nmax, double l, double x, Eigen::VectorXd &amp;p)</argsstring>
+        <name>get_ultra</name>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="152" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="152" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a2f871c29ec4b193ae67ce86b4d7d2168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void incr_com_position</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>incr_com_position</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="92" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="92" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a7644124a5b1882ed9bba4ca676a33004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void incr_com_velocity</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>incr_com_velocity</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="93" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="93" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a2921b9196d1c435d169f621f3ce0a8f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void incr_position</definition>
+        <argsstring>(double dt, int mlevel=0)</argsstring>
+        <name>incr_position</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mlevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="90" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a387e0113da253aa40ae926bf57ab1182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void incr_velocity</definition>
+        <argsstring>(double dt, int mlevel=0)</argsstring>
+        <name>incr_velocity</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mlevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="91" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="91" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a17631e8bd17ac8860b587c7c7f46109c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_velocity</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_velocity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="88" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="88" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initialize_cuda</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize_cuda</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="98" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="98" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1af3a8b4c3c90489cea7f78c3b96c03319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initialize_multistep</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_multistep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="95" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1af2f4ae87f03750cb9cca117d0cfcf2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void locate</definition>
+        <argsstring>()</argsstring>
+        <name>locate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="121" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="121" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a25ff187cc18b5614106e1f5e1dc157a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void make_grid</definition>
+        <argsstring>(double rmin, double rmax, int lmax, int nmax)</argsstring>
+        <name>make_grid</name>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="113" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="113" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1abcc0f1f6c53b0ee8679b49e2ca87ddf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_gdb_print_trace</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>mpi_gdb_print_trace</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="215" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="215" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a46e54dba3247f02231f3283d103f49ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_gdb_wait_trace</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>mpi_gdb_wait_trace</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="217" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="217" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ae07814c54e259e76d65cb4f0056ce23c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_print_trace</definition>
+        <argsstring>(const string &amp;routine, const string &amp;msg, const char *file, int line)</argsstring>
+        <name>mpi_print_trace</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>routine</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="212" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="212" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a697a074751116782d2234456c298a51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MPL_read_timer</definition>
+        <argsstring>(int reset)</argsstring>
+        <name>MPL_read_timer</name>
+        <param>
+          <type>int</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="146" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="146" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a8a7a85aa71187c1a18018773c214c252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPL_reset_timer</definition>
+        <argsstring>(void)</argsstring>
+        <name>MPL_reset_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="143" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="143" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a7790a8b3c8bfb9297703585692b75cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPL_start_timer</definition>
+        <argsstring>(void)</argsstring>
+        <name>MPL_start_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="144" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="144" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ac754e013c15f2bc331f9ea74c94d0317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPL_stop_timer</definition>
+        <argsstring>(void)</argsstring>
+        <name>MPL_stop_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="145" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="145" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a5fc71ed0c35b7440efe60f7f763771a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parallel_distribute_coefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>parallel_distribute_coefficients</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="141" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="141" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a59027eeb222cd59aa1b95600f46af2c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parallel_gather_coefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>parallel_gather_coefficients</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="140" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="140" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1afafcb9b8728162991baeec65e7cf5ab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double plgndr</definition>
+        <argsstring>(int, int, double)</argsstring>
+        <name>plgndr</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="122" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="122" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ad23f325ac4be31338f7aee5cb07e159b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double potli</definition>
+        <argsstring>(double rr, int l, int n)</argsstring>
+        <name>potli</name>
+        <param>
+          <type>double</type>
+          <declname>rr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="112" column="18" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="112" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a5f7d0e4bf7d60319f281c36ed109216e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_trace</definition>
+        <argsstring>(std::ostream &amp;out, const char *file, int line)</argsstring>
+        <name>print_trace</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="209" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="209" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1aa97d9b29e1ba1546fc2a5db8d6d01787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void recompute_processor_rates</definition>
+        <argsstring>(void)</argsstring>
+        <name>recompute_processor_rates</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="142" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="142" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a5ab9de9467ece151f426400763d57547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void redistribute_particles</definition>
+        <argsstring>(void)</argsstring>
+        <name>redistribute_particles</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="138" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="138" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a916518b78a91c9ed7cf106f81ce46961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_fpu_gdb_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>set_fpu_gdb_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="197" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="197" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a8e6601c6deaf409bc963ba962eed414a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_fpu_invalid_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>set_fpu_invalid_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="193" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="193" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1abbd5182c07d128216d8ebc2bcc04aa6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_fpu_trace_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>set_fpu_trace_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="195" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="195" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a641917a78e19e88a42271a8cffeda925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_global_com</definition>
+        <argsstring>(void)</argsstring>
+        <name>set_global_com</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="115" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="115" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a819df5e45f63ad305a9e95b28dd9a20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup_distribution</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_distribution</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="137" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="137" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a70eb70d04b5d62461301cc4ca8e86926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void signal_handler_dump</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>signal_handler_dump</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="203" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="203" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ad76934ce385c40e93212f9326b40309f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void signal_handler_stop</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>signal_handler_stop</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="201" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="201" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a754e02fb4307a07f2717562067e9a711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sync_eval_multistep</definition>
+        <argsstring>()</argsstring>
+        <name>sync_eval_multistep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="96" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="96" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1aeb20c799c8af9379f57d8e537c027a77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_mpi</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_mpi</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="139" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="139" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1ae167d6d12c65f490523c0f9a97109f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string trimComment</definition>
+        <argsstring>(const string)</argsstring>
+        <name>trimComment</name>
+        <param>
+          <type>const string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="155" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="155" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a2713d01555ac0139d34974be62cc15cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string trimLeft</definition>
+        <argsstring>(const string)</argsstring>
+        <name>trimLeft</name>
+        <param>
+          <type>const string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="154" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="154" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a55432c0ec4732f941644f0bec753bb6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string trimRight</definition>
+        <argsstring>(const string)</argsstring>
+        <name>trimRight</name>
+        <param>
+          <type>const string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="153" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="153" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a97e218c730e4eec80a6196f7efb84ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void write_parm</definition>
+        <argsstring>(void)</argsstring>
+        <name>write_parm</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="94" column="6" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="expand_8_h_1a6e0f498dcf0bee81ec1da49b80fcd0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double zbrent</definition>
+        <argsstring>()</argsstring>
+        <name>zbrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/expand.H" line="119" column="8" declfile="/home/weinberg/Projects/EXP/src/expand.H" declline="119" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_expand_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_expand_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="expand_8_h_1ab67f49e412705befeaa20562f6bace06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSD_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_DMALLOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dmalloc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Turn<sp/>on<sp/>sequence<sp/>checking<sp/>on<sp/>debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEQCHECK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="expand_8_h_1a17631e8bd17ac8860b587c7c7f46109c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a17631e8bd17ac8860b587c7c7f46109c" kindref="member">init_velocity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89" refid="expand_8_h_1a5f739c0390c4e3af9be40c62f5fd75ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a5f739c0390c4e3af9be40c62f5fd75ed" kindref="member">begin_run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90" refid="expand_8_h_1a2921b9196d1c435d169f621f3ce0a8f1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a2921b9196d1c435d169f621f3ce0a8f1" kindref="member">incr_position</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlevel=0);</highlight></codeline>
+<codeline lineno="91" refid="expand_8_h_1a387e0113da253aa40ae926bf57ab1182" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a387e0113da253aa40ae926bf57ab1182" kindref="member">incr_velocity</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlevel=0);</highlight></codeline>
+<codeline lineno="92" refid="expand_8_h_1a2f871c29ec4b193ae67ce86b4d7d2168" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a2f871c29ec4b193ae67ce86b4d7d2168" kindref="member">incr_com_position</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="93" refid="expand_8_h_1a7644124a5b1882ed9bba4ca676a33004" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a7644124a5b1882ed9bba4ca676a33004" kindref="member">incr_com_velocity</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="94" refid="expand_8_h_1a97e218c730e4eec80a6196f7efb84ac8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a97e218c730e4eec80a6196f7efb84ac8" kindref="member">write_parm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95" refid="expand_8_h_1af3a8b4c3c90489cea7f78c3b96c03319" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1af3a8b4c3c90489cea7f78c3b96c03319" kindref="member">initialize_multistep</ref>();</highlight></codeline>
+<codeline lineno="96" refid="expand_8_h_1a754e02fb4307a07f2717562067e9a711" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a754e02fb4307a07f2717562067e9a711" kindref="member">sync_eval_multistep</ref>();</highlight></codeline>
+<codeline lineno="97" refid="expand_8_h_1a2be7261d2c5b321388a3a465fcc6c5f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a2be7261d2c5b321388a3a465fcc6c5f3" kindref="member">adjust_multistep_level</ref>();</highlight></codeline>
+<codeline lineno="98" refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" kindref="member">initialize_cuda</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="expand_8_h_1ad935f1ff1a50822e317bdb321ce991ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(A,B)<sp/>(A&gt;B<sp/>?<sp/>A<sp/>:<sp/>B)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="expand_8_h_1adcd021ac91d43a62b2cdecf9a5b971a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(A,B)<sp/>(A&lt;B<sp/>?<sp/>A<sp/>:<sp/>B)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//*****Stuff<sp/>for<sp/>expand.c*****</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="expand_8_h_1acae75336d7f93ec43e8151678f65a72e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1acae75336d7f93ec43e8151678f65a72e" kindref="member">get_dens</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*coef);</highlight></codeline>
+<codeline lineno="112" refid="expand_8_h_1af88a260cf1ae1622666e784e70780c70" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1af88a260cf1ae1622666e784e70780c70" kindref="member">densi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n),<ref refid="expand_8_h_1ad23f325ac4be31338f7aee5cb07e159b" kindref="member">potli</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="113" refid="expand_8_h_1a25ff187cc18b5614106e1f5e1dc157a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a25ff187cc18b5614106e1f5e1dc157a0" kindref="member">make_grid</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmax);</highlight></codeline>
+<codeline lineno="114" refid="expand_8_h_1af5ca8ebfd0d974c3a97ad02022938150" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1af5ca8ebfd0d974c3a97ad02022938150" kindref="member">get_potacc</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*coef,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*dp);</highlight></codeline>
+<codeline lineno="115" refid="expand_8_h_1a641917a78e19e88a42271a8cffeda925" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a641917a78e19e88a42271a8cffeda925" kindref="member">set_global_com</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116" refid="expand_8_h_1a149f7f86106e48afbdc7d180578cf348" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a149f7f86106e48afbdc7d180578cf348" kindref="member">create_tipsy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//******Mathematical<sp/>utilities******</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="expand_8_h_1a6e0f498dcf0bee81ec1da49b80fcd0ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a6e0f498dcf0bee81ec1da49b80fcd0ed" kindref="member">zbrent</ref>();</highlight></codeline>
+<codeline lineno="120" refid="expand_8_h_1ac71f6f2a8ff6951d6edb09d4c53b535a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ac71f6f2a8ff6951d6edb09d4c53b535a" kindref="member">dgammln</ref>();</highlight></codeline>
+<codeline lineno="121" refid="expand_8_h_1af2f4ae87f03750cb9cca117d0cfcf2fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1af2f4ae87f03750cb9cca117d0cfcf2fb" kindref="member">locate</ref>();</highlight></codeline>
+<codeline lineno="122" refid="expand_8_h_1afafcb9b8728162991baeec65e7cf5ab9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1afafcb9b8728162991baeec65e7cf5ab9" kindref="member">plgndr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123" refid="expand_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a8ed48869a8e12ee6a57c5387755e58fa" kindref="member">dplgndr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="124" refid="expand_8_h_1ad912a662af91c94aab43271eb3d1ba92" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ad912a662af91c94aab43271eb3d1ba92" kindref="member">factrl</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="expand_8_h_1aa1cc8718b17bb81c90c7075d1fa97424" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aa1cc8718b17bb81c90c7075d1fa97424" kindref="member">DSMALL</ref><sp/>=<sp/>1.0e-16;</highlight></codeline>
+<codeline lineno="131" refid="expand_8_h_1a3729a2d83d6e49a2a5580fb26119da2f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="expand_8_h_1a3729a2d83d6e49a2a5580fb26119da2f" kindref="member">mdtDim</ref><sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Parallel<sp/>prototypes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="expand_8_h_1a819df5e45f63ad305a9e95b28dd9a20a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a819df5e45f63ad305a9e95b28dd9a20a" kindref="member">setup_distribution</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138" refid="expand_8_h_1a5ab9de9467ece151f426400763d57547" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a5ab9de9467ece151f426400763d57547" kindref="member">redistribute_particles</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139" refid="expand_8_h_1aeb20c799c8af9379f57d8e537c027a77" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aeb20c799c8af9379f57d8e537c027a77" kindref="member">test_mpi</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140" refid="expand_8_h_1a59027eeb222cd59aa1b95600f46af2c2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a59027eeb222cd59aa1b95600f46af2c2" kindref="member">parallel_gather_coefficients</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141" refid="expand_8_h_1a5fc71ed0c35b7440efe60f7f763771a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a5fc71ed0c35b7440efe60f7f763771a1" kindref="member">parallel_distribute_coefficients</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142" refid="expand_8_h_1aa97d9b29e1ba1546fc2a5db8d6d01787" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aa97d9b29e1ba1546fc2a5db8d6d01787" kindref="member">recompute_processor_rates</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143" refid="expand_8_h_1a8a7a85aa71187c1a18018773c214c252" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a8a7a85aa71187c1a18018773c214c252" kindref="member">MPL_reset_timer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144" refid="expand_8_h_1a7790a8b3c8bfb9297703585692b75cd3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a7790a8b3c8bfb9297703585692b75cd3" kindref="member">MPL_start_timer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145" refid="expand_8_h_1ac754e013c15f2bc331f9ea74c94d0317" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ac754e013c15f2bc331f9ea74c94d0317" kindref="member">MPL_stop_timer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146" refid="expand_8_h_1a697a074751116782d2234456c298a51b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a697a074751116782d2234456c298a51b" kindref="member">MPL_read_timer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reset);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="expand_8_h_1aed8de3eb31c43b0b3865babd3e756a90" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aed8de3eb31c43b0b3865babd3e756a90" kindref="member">get_ultra</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmax,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/>Eigen::VectorXd&amp;<sp/>p);</highlight></codeline>
+<codeline lineno="153" refid="expand_8_h_1a55432c0ec4732f941644f0bec753bb6d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a55432c0ec4732f941644f0bec753bb6d" kindref="member">trimRight</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154" refid="expand_8_h_1a2713d01555ac0139d34974be62cc15cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a2713d01555ac0139d34974be62cc15cf" kindref="member">trimLeft</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155" refid="expand_8_h_1ae167d6d12c65f490523c0f9a97109f42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae167d6d12c65f490523c0f9a97109f42" kindref="member">trimComment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156" refid="expand_8_h_1a34788a4951c943da34b3edc632e133d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a34788a4951c943da34b3edc632e133d9" kindref="member">atof</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>s)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a34788a4951c943da34b3edc632e133d9" kindref="member">atof</ref>(s.c_str());}</highlight></codeline>
+<codeline lineno="157" refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" kindref="member">atoi</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>s)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" kindref="member">atoi</ref>(s.c_str());}</highlight></codeline>
+<codeline lineno="158" refid="expand_8_h_1a0d19215d158f5323e78e73113ac9e4fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a0d19215d158f5323e78e73113ac9e4fe" kindref="member">atol</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>s)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" kindref="member">atoi</ref>(s.c_str())<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Component<sp/>structures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_component_container_8_h" kindref="compound">ComponentContainer.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/>External<sp/>forces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_external_force_8_h" kindref="compound">ExternalForce.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Output<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_output_8_h" kindref="compound">Output.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="expand_8_h_1a7e1b26ed04ad446033a4b441924dabdb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a7e1b26ed04ad446033a4b441924dabdb" kindref="member">do_output_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Parameter<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_component_container_8_h" kindref="compound">ComponentContainer.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="global_8_h" kindref="compound">global.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Handlers<sp/>defined<sp/>in<sp/>signal.cc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="expand_8_h_1a8e6601c6deaf409bc963ba962eed414a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a8e6601c6deaf409bc963ba962eed414a" kindref="member">set_fpu_invalid_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="expand_8_h_1abbd5182c07d128216d8ebc2bcc04aa6d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1abbd5182c07d128216d8ebc2bcc04aa6d" kindref="member">set_fpu_trace_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="expand_8_h_1a916518b78a91c9ed7cf106f81ce46961" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a916518b78a91c9ed7cf106f81ce46961" kindref="member">set_fpu_gdb_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="expand_8_h_1ae11bac7b5e54518b79a87df99af6367c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae11bac7b5e54518b79a87df99af6367c" kindref="member">exp_mpi_error_handler</ref>(MPI_Comm<sp/>*communicator,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*error_code,<sp/>...);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="expand_8_h_1ad76934ce385c40e93212f9326b40309f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ad76934ce385c40e93212f9326b40309f" kindref="member">signal_handler_stop</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="expand_8_h_1a70eb70d04b5d62461301cc4ca8e86926" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a70eb70d04b5d62461301cc4ca8e86926" kindref="member">signal_handler_dump</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Handlers<sp/>defined<sp/>in<sp/>exputil/stack.cc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="expand_8_h_1a5f7d0e4bf7d60319f281c36ed109216e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a5f7d0e4bf7d60319f281c36ed109216e" kindref="member">print_trace</ref>(std::ostream&amp;<sp/>out,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="expand_8_h_1ae07814c54e259e76d65cb4f0056ce23c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1ae07814c54e259e76d65cb4f0056ce23c" kindref="member">mpi_print_trace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>routine,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>msg,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="expand_8_h_1abcc0f1f6c53b0ee8679b49e2ca87ddf5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1abcc0f1f6c53b0ee8679b49e2ca87ddf5" kindref="member">mpi_gdb_print_trace</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="expand_8_h_1a46e54dba3247f02231f3283d103f49ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1a46e54dba3247f02231f3283d103f49ba" kindref="member">mpi_gdb_wait_trace</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Exception<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">//===========================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_e_x_p_exception_8_h" kindref="compound">EXPException.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/expand.H"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecxxopts" kind="namespace" language="C++">
+    <compoundname>cxxopts</compoundname>
+    <innerclass refid="classcxxopts_1_1argument__incorrect__type" prot="public">cxxopts::argument_incorrect_type</innerclass>
+    <innerclass refid="structcxxopts_1_1_help_group_details" prot="public">cxxopts::HelpGroupDetails</innerclass>
+    <innerclass refid="structcxxopts_1_1_help_option_details" prot="public">cxxopts::HelpOptionDetails</innerclass>
+    <innerclass refid="classcxxopts_1_1invalid__option__format__error" prot="public">cxxopts::invalid_option_format_error</innerclass>
+    <innerclass refid="classcxxopts_1_1_key_value" prot="public">cxxopts::KeyValue</innerclass>
+    <innerclass refid="classcxxopts_1_1missing__argument__exception" prot="public">cxxopts::missing_argument_exception</innerclass>
+    <innerclass refid="structcxxopts_1_1_option" prot="public">cxxopts::Option</innerclass>
+    <innerclass refid="classcxxopts_1_1option__exists__error" prot="public">cxxopts::option_exists_error</innerclass>
+    <innerclass refid="classcxxopts_1_1option__has__no__value__exception" prot="public">cxxopts::option_has_no_value_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__not__exists__exception" prot="public">cxxopts::option_not_exists_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__not__has__argument__exception" prot="public">cxxopts::option_not_has_argument_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__not__present__exception" prot="public">cxxopts::option_not_present_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__required__exception" prot="public">cxxopts::option_required_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__requires__argument__exception" prot="public">cxxopts::option_requires_argument_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1option__syntax__exception" prot="public">cxxopts::option_syntax_exception</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_adder" prot="public">cxxopts::OptionAdder</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_details" prot="public">cxxopts::OptionDetails</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_exception" prot="public">cxxopts::OptionException</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_parse_exception" prot="public">cxxopts::OptionParseException</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_parser" prot="public">cxxopts::OptionParser</innerclass>
+    <innerclass refid="classcxxopts_1_1_options" prot="public">cxxopts::Options</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_spec_exception" prot="public">cxxopts::OptionSpecException</innerclass>
+    <innerclass refid="classcxxopts_1_1_option_value" prot="public">cxxopts::OptionValue</innerclass>
+    <innerclass refid="classcxxopts_1_1_parse_result" prot="public">cxxopts::ParseResult</innerclass>
+    <innerclass refid="classcxxopts_1_1_value" prot="public">cxxopts::Value</innerclass>
+    <innernamespace refid="namespacecxxopts_1_1values">cxxopts::values</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecxxopts_1a6cb0a4c694ab5bb7096323b810b797f3" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, size_t &gt;</type>
+        <definition>using cxxopts::NameHashMap = typedef std::unordered_map&lt;std::string, size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>NameHashMap</name>
+        <qualifiedname>cxxopts::NameHashMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1465" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecxxopts_1acbe4e799af04e9f666aabb38aed191e9" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, std::shared_ptr&lt; <ref refid="classcxxopts_1_1_option_details" kindref="compound">OptionDetails</ref> &gt; &gt;</type>
+        <definition>using cxxopts::OptionMap = typedef std::unordered_map&lt;std::string, std::shared_ptr&lt;OptionDetails&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>OptionMap</name>
+        <qualifiedname>cxxopts::OptionMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1661" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecxxopts_1a53a2c0afe2f23b85f2e880e3844f6232" prot="public" static="no">
+        <type>std::unordered_map&lt; size_t, <ref refid="classcxxopts_1_1_option_value" kindref="compound">OptionValue</ref> &gt;</type>
+        <definition>using cxxopts::ParsedHashMap = typedef std::unordered_map&lt;size_t, OptionValue&gt;</definition>
+        <argsstring></argsstring>
+        <name>ParsedHashMap</name>
+        <qualifiedname>cxxopts::ParsedHashMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1464" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecxxopts_1a9e9e1130cb7950a3af5c8e474f36107d" prot="public" static="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>using cxxopts::PositionalList = typedef std::vector&lt;std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>PositionalList</name>
+        <qualifiedname>cxxopts::PositionalList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1662" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecxxopts_1a89e13b1a05701bb8a4b6401fdbb1eb71" prot="public" static="no">
+        <type>PositionalList::const_iterator</type>
+        <definition>using cxxopts::PositionalListIterator = typedef PositionalList::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>PositionalListIterator</name>
+        <qualifiedname>cxxopts::PositionalListIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1663" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" prot="public" static="no">
+        <type>std::string</type>
+        <definition>using cxxopts::String = typedef std::string</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <qualifiedname>cxxopts::String</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="260" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="260" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecxxopts_1ae722cb9457c284596136a40555eef19e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t cxxopts::major</definition>
+        <argsstring></argsstring>
+        <name>major</name>
+        <qualifiedname>cxxopts::major</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="85" column="13" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecxxopts_1aecaf1c73662b522ae01a195dede9ed38" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t cxxopts::minor</definition>
+        <argsstring></argsstring>
+        <name>minor</name>
+        <qualifiedname>cxxopts::minor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="85" column="19" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecxxopts_1a6d7d82764847cde60d24c9077234adef" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t cxxopts::patch</definition>
+        <argsstring></argsstring>
+        <name>patch</name>
+        <qualifiedname>cxxopts::patch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="85" column="25" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecxxopts_1ac84689ecff5a9b45c67a8acea377baee" prot="public" static="yes" mutable="no">
+        <type>constexpr struct cxxopts</type>
+        <definition>constexpr struct cxxopts cxxopts::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>cxxopts::version</qualifiedname>
+        <initializer>= {
+    <ref refid="cxxopts_8_h_1a00d4ee40bcf31ae271e78a9c52632bc7" kindref="member">CXXOPTS__VERSION_MAJOR</ref>,
+    <ref refid="cxxopts_8_h_1aa67ae10831707133de2518234e695084" kindref="member">CXXOPTS__VERSION_MINOR</ref>,
+    <ref refid="cxxopts_8_h_1ab3de1a4b00ea1ddee4799e6382992e79" kindref="member">CXXOPTS__VERSION_PATCH</ref>
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="90" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecxxopts_1a3ffde9e4565bba175bd56c06c0f99162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cxxopts::empty</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>empty</name>
+        <qualifiedname>cxxopts::empty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="306" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="306" bodyend="309"/>
+        <referencedby refid="classcxxopts_1_1_options_1ab09329dad31b464891556a4cd2659d04" compoundref="cxxopts_8_h" startline="2627" endline="2645">cxxopts::Options::generate_group_help</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1aea4319f3c17c89dc3c067d68d0fb915d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+        <definition>String &amp; cxxopts::stringAppend</definition>
+        <argsstring>(String &amp;s, const String &amp;a)</argsstring>
+        <name>stringAppend</name>
+        <qualifiedname>cxxopts::stringAppend</qualifiedname>
+        <param>
+          <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="278" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1af1a4ae4022414cbbc08d505174914185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+        <definition>String &amp; cxxopts::stringAppend</definition>
+        <argsstring>(String &amp;s, Iterator begin, Iterator end)</argsstring>
+        <name>stringAppend</name>
+        <qualifiedname>cxxopts::stringAppend</qualifiedname>
+        <param>
+          <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_iterator" kindref="compound">Iterator</ref></type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="292" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a703def90aa29effc5b58a0a5658b263b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+        <definition>String &amp; cxxopts::stringAppend</definition>
+        <argsstring>(String &amp;s, size_t n, char c)</argsstring>
+        <name>stringAppend</name>
+        <qualifiedname>cxxopts::stringAppend</qualifiedname>
+        <param>
+          <type><ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="285" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a6e40a21a193047cd4575ac90411ca295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t cxxopts::stringLength</definition>
+        <argsstring>(const String &amp;s)</argsstring>
+        <name>stringLength</name>
+        <qualifiedname>cxxopts::stringLength</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacecxxopts_1a0ae1a379f800ffc427fa06539fb72b2f" kindref="member">String</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="271" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="271" bodyend="274"/>
+        <referencedby refid="classcxxopts_1_1_options_1a7a9611069d511f815c71a1f4aca302eb" compoundref="cxxopts_8_h" startline="2550" endline="2622">cxxopts::Options::help_one_group</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a466f47408560fa08e43bf48ec2366b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void cxxopts::throw_or_mimic</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>throw_or_mimic</name>
+        <qualifiedname>cxxopts::throw_or_mimic</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="542" column="8" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="542" bodyend="558"/>
+        <references refid="classcxxopts_1_1_option_exception_1a9b53b66ca94838f8d1d696fad2576f3e" compoundref="cxxopts_8_h" startline="392" endline="395">cxxopts::OptionException::what</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1ac8ee50fdeb30245d157343a3bade9ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T cxxopts::toLocalString</definition>
+        <argsstring>(T &amp;&amp;t)</argsstring>
+        <name>toLocalString</name>
+        <qualifiedname>cxxopts::toLocalString</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="264" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="264" bodyend="267"/>
+        <referencedby refid="classcxxopts_1_1_options_1af6a920c65d1a22140278b8f2637f8930" compoundref="cxxopts_8_h" startline="2494" endline="2530">cxxopts::Options::add_option</referencedby>
+        <referencedby refid="classcxxopts_1_1_options_1a7392b09071f42ed45dea85738af965b4" compoundref="cxxopts_8_h" startline="2668" endline="2689">cxxopts::Options::help</referencedby>
+        <referencedby refid="classcxxopts_1_1_options_1a7a9611069d511f815c71a1f4aca302eb" compoundref="cxxopts_8_h" startline="2550" endline="2622">cxxopts::Options::help_one_group</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a21f7a08caacc41cc3475f4bc7f9a1a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string cxxopts::toUTF8String</definition>
+        <argsstring>(T &amp;&amp;t)</argsstring>
+        <name>toUTF8String</name>
+        <qualifiedname>cxxopts::toUTF8String</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="299" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="299" bodyend="302"/>
+        <referencedby refid="classcxxopts_1_1_options_1a7392b09071f42ed45dea85738af965b4" compoundref="cxxopts_8_h" startline="2668" endline="2689">cxxopts::Options::help</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a6b58e451713ebbf12866c1cd8e0a66ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classcxxopts_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Value &gt; cxxopts::value</definition>
+        <argsstring>()</argsstring>
+        <name>value</name>
+        <qualifiedname>cxxopts::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1224" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1224" bodyend="1227"/>
+        <referencedby refid="classcxxopts_1_1_options_1af6a920c65d1a22140278b8f2637f8930" compoundref="cxxopts_8_h" startline="2494" endline="2530">cxxopts::Options::add_option</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1_1detail_1aa76e231a637c53e45ca09e7e87e7ea27" compoundref="cxxopts_8_h" startline="853" endline="856">cxxopts::values::detail::check_signed_range</referencedby>
+        <referencedby refid="classcxxopts_1_1_option_parser_1a0c093ba32746de7c3b08715eab961aff" compoundref="cxxopts_8_h" startline="2193" endline="2224">cxxopts::OptionParser::checked_parse_arg</referencedby>
+        <referencedby refid="classcxxopts_1_1values_1_1abstract__value_1a3bc6dc59f9bec5811bda3ca86a5ba22e" compoundref="cxxopts_8_h" startline="1111" endline="1116">cxxopts::values::abstract_value&lt; T &gt;::default_value</referencedby>
+        <referencedby refid="classcxxopts_1_1values_1_1abstract__value_1aac9bc16b6695a1b1aca9d87ed2c3261a" compoundref="cxxopts_8_h" startline="1119" endline="1124">cxxopts::values::abstract_value&lt; T &gt;::implicit_value</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1a2e205dc91741b7dde43b825da60c9f4c" compoundref="cxxopts_8_h" startline="878" endline="931">cxxopts::values::integer_parser</referencedby>
+        <referencedby refid="classcxxopts_1_1_option_adder_1a4feb747760c5fbaa807a4c8e1c335ac5" compoundref="cxxopts_8_h" startline="2111" endline="2154">cxxopts::OptionAdder::operator()</referencedby>
+        <referencedby refid="classcxxopts_1_1_option_parser_1a4218816ce33c211b54acb9e71603ea0b" compoundref="cxxopts_8_h" startline="2296" endline="2463">cxxopts::OptionParser::parse</referencedby>
+        <referencedby refid="classcxxopts_1_1_option_parser_1a07db7b6bb2095df7b75b50ed2311ffe5" compoundref="cxxopts_8_h" startline="2177" endline="2188">cxxopts::OptionParser::parse_option</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1aaa73e425c1d63db7975dbebd86c2f947" compoundref="cxxopts_8_h" startline="953" endline="968">cxxopts::values::parse_value</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1a1643e21992e1d5ad5f2012f01f6f6f0a" compoundref="cxxopts_8_h" startline="972" endline="975">cxxopts::values::parse_value</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1a9cc26abde531fd7df6ff0ff07cc6d413" compoundref="cxxopts_8_h" startline="990" endline="1005">cxxopts::values::parse_value</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1a9782d53713f30ced7138719bd966db2b" compoundref="cxxopts_8_h" startline="946" endline="949">cxxopts::values::parse_value</referencedby>
+        <referencedby refid="namespacecxxopts_1_1values_1a56fb16f3a09e011db85757491c52691e" compoundref="cxxopts_8_h" startline="934" endline="941">cxxopts::values::stringstream_parser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacecxxopts_1a9a3c999d4e9bd55dec5daa5daef79c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classcxxopts_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Value &gt; cxxopts::value</definition>
+        <argsstring>(T &amp;t)</argsstring>
+        <name>value</name>
+        <qualifiedname>cxxopts::value</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="1231" column="3" bodyfile="/home/weinberg/Projects/EXP/include/cxxopts.H" bodystart="1231" bodyend="1234"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/cxxopts.H" line="82" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_tipsy_reader_1_1_tipsy_native" kind="class" language="C++" prot="public">
+    <compoundname>TipsyReader::TipsyNative</compoundname>
+    <basecompoundref refid="class_tipsy_reader_1_1_tipsy_file" prot="public" virt="non-virtual">TipsyReader::TipsyFile</basecompoundref>
+    <includes refid="tipsy_8_h" local="no">tipsy.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" prot="private" static="no" mutable="no">
+        <type>std::ifstream</type>
+        <definition>std::ifstream TipsyReader::TipsyNative::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <qualifiedname>TipsyReader::TipsyNative::input</qualifiedname>
+        <briefdescription>
+<para>The input file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="242" column="19" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="242" bodyend="-1"/>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ac1381566d264de799efce94a533ae3e2" compoundref="tipsy_8_h" startline="245" endline="254">native_header</referencedby>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1a07e65f7d2700db13e08d54d6c44e268a" compoundref="tipsy_8_h" startline="256" endline="272">native_init</referencedby>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ad3739c9bd257cb62cad6784202129f51" compoundref="tipsy_8_h" startline="312" endline="323">read_dark</referencedby>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1aec4f36487917406de9f211144528c736" compoundref="tipsy_8_h" startline="299" endline="310">read_gas</referencedby>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1aea58f6fa793355dc00bfb917c9e04b9c" compoundref="tipsy_8_h" startline="325" endline="336">read_star</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_tipsy_reader_1_1_tipsy_native_1ada0da9ae5328d12db8eec09f81963bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class PR::Tipsy</definition>
+        <argsstring></argsstring>
+        <name>PR::Tipsy</name>
+        <qualifiedname>TipsyReader::TipsyNative::Tipsy</qualifiedname>
+        <param>
+          <type><ref refid="class_p_r_1_1_tipsy" kindref="compound">PR::Tipsy</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="338" column="18" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="338" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1ac1381566d264de799efce94a533ae3e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TipsyReader::TipsyNative::native_header</definition>
+        <argsstring>()</argsstring>
+        <name>native_header</name>
+        <qualifiedname>TipsyReader::TipsyNative::native_header</qualifiedname>
+        <briefdescription>
+<para>Read the header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="245" column="9" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="245" bodyend="254"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" compoundref="tipsy_8_h" startline="242">input</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1a07e65f7d2700db13e08d54d6c44e268a" compoundref="tipsy_8_h" startline="256" endline="272">native_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1a07e65f7d2700db13e08d54d6c44e268a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TipsyReader::TipsyNative::native_init</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>native_init</name>
+        <qualifiedname>TipsyReader::TipsyNative::native_init</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="256" column="9" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="256" bodyend="272"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" compoundref="tipsy_8_h" startline="242">input</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1ac1381566d264de799efce94a533ae3e2" compoundref="tipsy_8_h" startline="245" endline="254">native_header</references>
+        <references refid="struct_tipsy_reader_1_1_header_1abfbcb8f5b10f524234005185c3605777" compoundref="tipsy_8_h" startline="85">TipsyReader::Header::nbodies</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ae68caa5e1aad55b73eab48dc750fcce3" compoundref="tipsy_8_h" startline="342" endline="349">TipsyNative</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TipsyReader::TipsyNative::native_read</definition>
+        <argsstring>()</argsstring>
+        <name>native_read</name>
+        <qualifiedname>TipsyReader::TipsyNative::native_read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="274" column="9" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="274" bodyend="297"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a1aea7f2b1c040ac5cdfaa32f43398a65" compoundref="tipsy_8_h" startline="107">TipsyReader::TipsyFile::dark_particles</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a8057038a6547c7db63be874670427e83" compoundref="tipsy_8_h" startline="106">TipsyReader::TipsyFile::gas_particles</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a9f2e10581ac89a477290bcec9dd5358d" compoundref="tipsy_8_h" startline="88">TipsyReader::Header::ndark</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a07d0d31be0256e96afdbed8a7f622476" compoundref="tipsy_8_h" startline="87">TipsyReader::Header::nsph</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a1a2dbd64e45844a7b922ead0e91e7d43" compoundref="tipsy_8_h" startline="89">TipsyReader::Header::nstar</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1ad3739c9bd257cb62cad6784202129f51" compoundref="tipsy_8_h" startline="312" endline="323">read_dark</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1aec4f36487917406de9f211144528c736" compoundref="tipsy_8_h" startline="299" endline="310">read_gas</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1aea58f6fa793355dc00bfb917c9e04b9c" compoundref="tipsy_8_h" startline="325" endline="336">read_star</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1ab8af3d92a2f7fee5d45bf4359ee9a87a" compoundref="tipsy_8_h" startline="108">TipsyReader::TipsyFile::star_particles</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1a75878e9595784597d0658b0e4c78f666" compoundref="tipsy_8_h" startline="351" endline="351">readParticles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1ad3739c9bd257cb62cad6784202129f51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void TipsyReader::TipsyNative::read_dark</definition>
+        <argsstring>()</argsstring>
+        <name>read_dark</name>
+        <qualifiedname>TipsyReader::TipsyNative::read_dark</qualifiedname>
+        <reimplements refid="class_tipsy_reader_1_1_tipsy_file_1aa13ce8c1367ba218f7dc8d71e1b77a4a">read_dark</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="312" column="10" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="312" bodyend="323"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a1aea7f2b1c040ac5cdfaa32f43398a65" compoundref="tipsy_8_h" startline="107">TipsyReader::TipsyFile::dark_particles</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" compoundref="tipsy_8_h" startline="242">input</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a9f2e10581ac89a477290bcec9dd5358d" compoundref="tipsy_8_h" startline="88">TipsyReader::Header::ndark</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" compoundref="tipsy_8_h" startline="274" endline="297">native_read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1aec4f36487917406de9f211144528c736" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void TipsyReader::TipsyNative::read_gas</definition>
+        <argsstring>()</argsstring>
+        <name>read_gas</name>
+        <qualifiedname>TipsyReader::TipsyNative::read_gas</qualifiedname>
+        <reimplements refid="class_tipsy_reader_1_1_tipsy_file_1a03e8e544f96fc28acdf04fd7e9712c9d">read_gas</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="299" column="10" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="299" bodyend="310"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a8057038a6547c7db63be874670427e83" compoundref="tipsy_8_h" startline="106">TipsyReader::TipsyFile::gas_particles</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" compoundref="tipsy_8_h" startline="242">input</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a07d0d31be0256e96afdbed8a7f622476" compoundref="tipsy_8_h" startline="87">TipsyReader::Header::nsph</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" compoundref="tipsy_8_h" startline="274" endline="297">native_read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1aea58f6fa793355dc00bfb917c9e04b9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void TipsyReader::TipsyNative::read_star</definition>
+        <argsstring>()</argsstring>
+        <name>read_star</name>
+        <qualifiedname>TipsyReader::TipsyNative::read_star</qualifiedname>
+        <reimplements refid="class_tipsy_reader_1_1_tipsy_file_1a1e698ce973c2cfc6388bd9a945378867">read_star</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="325" column="10" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="325" bodyend="336"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" compoundref="tipsy_8_h" startline="109">TipsyReader::TipsyFile::header</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" compoundref="tipsy_8_h" startline="242">input</references>
+        <references refid="struct_tipsy_reader_1_1_header_1a1a2dbd64e45844a7b922ead0e91e7d43" compoundref="tipsy_8_h" startline="89">TipsyReader::Header::nstar</references>
+        <references refid="class_tipsy_reader_1_1_tipsy_file_1ab8af3d92a2f7fee5d45bf4359ee9a87a" compoundref="tipsy_8_h" startline="108">TipsyReader::TipsyFile::star_particles</references>
+        <referencedby refid="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" compoundref="tipsy_8_h" startline="274" endline="297">native_read</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1a75878e9595784597d0658b0e4c78f666" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int TipsyReader::TipsyNative::readParticles</definition>
+        <argsstring>()</argsstring>
+        <name>readParticles</name>
+        <qualifiedname>TipsyReader::TipsyNative::readParticles</qualifiedname>
+        <reimplements refid="class_tipsy_reader_1_1_tipsy_file_1aaab1f889ebbe3d4ac3e9fed796ec9067">readParticles</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="351" column="9" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="351" bodyend="351"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" compoundref="tipsy_8_h" startline="274" endline="297">native_read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1ae68caa5e1aad55b73eab48dc750fcce3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TipsyReader::TipsyNative::TipsyNative</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>TipsyNative</name>
+        <qualifiedname>TipsyReader::TipsyNative::TipsyNative</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="342" column="5" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="342" bodyend="349"/>
+        <references refid="class_tipsy_reader_1_1_tipsy_native_1a07e65f7d2700db13e08d54d6c44e268a" compoundref="tipsy_8_h" startline="256" endline="272">native_init</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tipsy_reader_1_1_tipsy_native_1a7fb3ef9a64bdc60556f46c79c188cf74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TipsyReader::TipsyNative::~TipsyNative</definition>
+        <argsstring>()</argsstring>
+        <name>~TipsyNative</name>
+        <qualifiedname>TipsyReader::TipsyNative::~TipsyNative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="353" column="5" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="353" bodyend="356"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>TipsyReader::TipsyFile</label>
+        <link refid="class_tipsy_reader_1_1_tipsy_file"/>
+      </node>
+      <node id="1">
+        <label>TipsyReader::TipsyNative</label>
+        <link refid="class_tipsy_reader_1_1_tipsy_native"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>TipsyReader::Header</label>
+        <link refid="struct_tipsy_reader_1_1_header"/>
+      </node>
+      <node id="2">
+        <label>TipsyReader::TipsyFile</label>
+        <link refid="class_tipsy_reader_1_1_tipsy_file"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TipsyReader::TipsyNative</label>
+        <link refid="class_tipsy_reader_1_1_tipsy_native"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/tipsy.H" line="237" column="3" bodyfile="/home/weinberg/Projects/EXP/include/tipsy.H" bodystart="238" bodyend="358"/>
+    <listofallmembers>
+      <member refid="class_tipsy_reader_1_1_tipsy_file_1a1aea7f2b1c040ac5cdfaa32f43398a65" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>dark_particles</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_file_1a8057038a6547c7db63be874670427e83" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>gas_particles</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_file_1a323dc064bb3bba38cada63fc6ec043b0" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>header</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1a25a6f484a2a47171c7fc1d793b4b1c81" prot="private" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>input</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1ac1381566d264de799efce94a533ae3e2" prot="private" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>native_header</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1a07e65f7d2700db13e08d54d6c44e268a" prot="private" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>native_init</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1ab8688a140fee2a3d8c0b94481c500f57" prot="private" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>native_read</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1ada0da9ae5328d12db8eec09f81963bc0" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>PR::Tipsy</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1ad3739c9bd257cb62cad6784202129f51" prot="private" virt="virtual"><scope>TipsyReader::TipsyNative</scope><name>read_dark</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1aec4f36487917406de9f211144528c736" prot="private" virt="virtual"><scope>TipsyReader::TipsyNative</scope><name>read_gas</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1aea58f6fa793355dc00bfb917c9e04b9c" prot="private" virt="virtual"><scope>TipsyReader::TipsyNative</scope><name>read_star</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1a75878e9595784597d0658b0e4c78f666" prot="public" virt="virtual"><scope>TipsyReader::TipsyNative</scope><name>readParticles</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_file_1ab8af3d92a2f7fee5d45bf4359ee9a87a" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>star_particles</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1ae68caa5e1aad55b73eab48dc750fcce3" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>TipsyNative</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_file_1afb2e0bc5648d17954ffd7ced4768b69b" prot="public" virt="virtual"><scope>TipsyReader::TipsyNative</scope><name>~TipsyFile</name></member>
+      <member refid="class_tipsy_reader_1_1_tipsy_native_1a7fb3ef9a64bdc60556f46c79c188cf74" prot="public" virt="non-virtual"><scope>TipsyReader::TipsyNative</scope><name>~TipsyNative</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

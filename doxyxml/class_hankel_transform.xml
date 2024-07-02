@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_hankel_transform" kind="class" language="C++" prot="public">
+    <compoundname>HankelTransform</compoundname>
+    <includes refid="_hankel_8_h" local="no">Hankel.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hankel_transform_1ab359a91eb57d5fd670f9aa5fb14d4ce0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HankelTransform::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>HankelTransform::h</qualifiedname>
+        <briefdescription>
+<para>the h scaling value for the Ogata mapping </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1a69aad2b661c8e674140f00a522a6caf4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HankelTransform::mapped</definition>
+        <argsstring></argsstring>
+        <name>mapped</name>
+        <qualifiedname>HankelTransform::mapped</qualifiedname>
+        <briefdescription>
+<para>True for mapping transformation algorithm (default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="41" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_hankel_transform_1ab965fa2aa4e438a7a4317f1aa5a86de2" compoundref="_hankel_8_h" startline="77" endline="77">setLinear</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1a722245e6eebfdaa769aecfe6450256fe" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HankelTransform::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <qualifiedname>HankelTransform::N</qualifiedname>
+        <briefdescription>
+<para>N is number of function calls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="28" column="7" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1aa6243f1eb581786e4478ef01f95b53f3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HankelTransform::nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <qualifiedname>HankelTransform::nu</qualifiedname>
+        <briefdescription>
+<para>nu is <ref refid="class_bessel" kindref="compound">Bessel</ref> function order </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="25" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1a427005971616b06084fff1a1698a37a1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; HankelTransform::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>HankelTransform::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ogata weights; <ref refid="class_bessel" kindref="compound">Bessel</ref> functions of the second kind divided by the first kind for nu+1 evaluated at the zeros </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="38" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1a59f329ce5beef5e7ae53a2f52b3e50a6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; HankelTransform::xi</definition>
+        <argsstring></argsstring>
+        <name>xi</name>
+        <qualifiedname>HankelTransform::xi</qualifiedname>
+        <briefdescription>
+<para>Zeros divided by 2*pi for Ogata. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="34" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hankel_transform_1af7d9913fea57760feed87d34677a4eb2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; HankelTransform::zeros</definition>
+        <argsstring></argsstring>
+        <name>zeros</name>
+        <qualifiedname>HankelTransform::zeros</qualifiedname>
+        <briefdescription>
+<para>Will contain the zeros of the <ref refid="class_bessel" kindref="compound">Bessel</ref> function of order nu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="31" column="15" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hankel_transform_1a688a4e0f00374019e4125cc28ec80f1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::fk_trans</definition>
+        <argsstring>(double x, std::function&lt; double(double) &gt; f, double q)</argsstring>
+        <name>fk_trans</name>
+        <qualifiedname>HankelTransform::fk_trans</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::function&lt; double(double) &gt;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>Variable change. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="52" column="10" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1aaceb9807809a2f6da791dc9c2d1c8f4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::get_psi</definition>
+        <argsstring>(double t)</argsstring>
+        <name>get_psi</name>
+        <qualifiedname>HankelTransform::get_psi</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Ogata mapping formula. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1adee592ec7efbe2e3a76382b7ffd9ce70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::get_psip</definition>
+        <argsstring>(double t)</argsstring>
+        <name>get_psip</name>
+        <qualifiedname>HankelTransform::get_psip</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Derivative of the Ogata mapping formula. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1a8d4b9b4e591eae36ba122056f71223d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::ogata_linear</definition>
+        <argsstring>(std::function&lt; double(double) &gt; f, double q, double h)</argsstring>
+        <name>ogata_linear</name>
+        <qualifiedname>HankelTransform::ogata_linear</qualifiedname>
+        <param>
+          <type>std::function&lt; double(double) &gt;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>The unmapped algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1a6961f6f7be9c45d8170064fc54b1192e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::ogata_transformed</definition>
+        <argsstring>(std::function&lt; double(double) &gt; f, double q, double h)</argsstring>
+        <name>ogata_transformed</name>
+        <qualifiedname>HankelTransform::ogata_transformed</qualifiedname>
+        <param>
+          <type>std::function&lt; double(double) &gt;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>The mapping transformation algorithm (default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="44" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hankel_transform_1a36af720baefccd320de3e3d131b386da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HankelTransform::HankelTransform</definition>
+        <argsstring>()</argsstring>
+        <name>HankelTransform</name>
+        <qualifiedname>HankelTransform::HankelTransform</qualifiedname>
+        <briefdescription>
+<para>Null constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="65" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1a2a498c9425c3d83f95f8dfcdc8e9d766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HankelTransform::HankelTransform</definition>
+        <argsstring>(double h, double nu, int N=20)</argsstring>
+        <name>HankelTransform</name>
+        <qualifiedname>HankelTransform::HankelTransform</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+          <defval>20</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="68" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1acdaeb5f4ad367307755aa02932bb7da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HankelTransform::operator()</definition>
+        <argsstring>(std::function&lt; double(double) &gt; f, double q)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>HankelTransform::operator()</qualifiedname>
+        <param>
+          <type>std::function&lt; double(double) &gt;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>Perform the transform F(q)=int(f(x)*Jn(x*q)) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1ab965fa2aa4e438a7a4317f1aa5a86de2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HankelTransform::setLinear</definition>
+        <argsstring>()</argsstring>
+        <name>setLinear</name>
+        <qualifiedname>HankelTransform::setLinear</qualifiedname>
+        <briefdescription>
+<para>Set to unmapped Ogata formula. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="77" column="8" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="77" bodyend="77"/>
+        <references refid="class_hankel_transform_1a69aad2b661c8e674140f00a522a6caf4" compoundref="_hankel_8_h" startline="41">mapped</references>
+      </memberdef>
+      <memberdef kind="function" id="class_hankel_transform_1a7f7fa97e8cd6f923e92fe72a2d290512" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HankelTransform::~HankelTransform</definition>
+        <argsstring>()</argsstring>
+        <name>~HankelTransform</name>
+        <qualifiedname>HankelTransform::~HankelTransform</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="71" column="3" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="71" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Hankel transform based on the Ogata quadrature formulae from:</para>
+<para>Ogata, H, 2005, &quot;A Numerical Integration Formula Based on the
+Bessel Functions&quot;, Publ. Res. Inst. Math. Sci. 41 (4) (2005) 949–970. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/Hankel.H" line="18" column="1" bodyfile="/home/weinberg/Projects/EXP/include/Hankel.H" bodystart="19" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_hankel_transform_1a688a4e0f00374019e4125cc28ec80f1e" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>fk_trans</name></member>
+      <member refid="class_hankel_transform_1aaceb9807809a2f6da791dc9c2d1c8f4b" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>get_psi</name></member>
+      <member refid="class_hankel_transform_1adee592ec7efbe2e3a76382b7ffd9ce70" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>get_psip</name></member>
+      <member refid="class_hankel_transform_1ab359a91eb57d5fd670f9aa5fb14d4ce0" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>h</name></member>
+      <member refid="class_hankel_transform_1a36af720baefccd320de3e3d131b386da" prot="public" virt="non-virtual"><scope>HankelTransform</scope><name>HankelTransform</name></member>
+      <member refid="class_hankel_transform_1a2a498c9425c3d83f95f8dfcdc8e9d766" prot="public" virt="non-virtual"><scope>HankelTransform</scope><name>HankelTransform</name></member>
+      <member refid="class_hankel_transform_1a69aad2b661c8e674140f00a522a6caf4" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>mapped</name></member>
+      <member refid="class_hankel_transform_1a722245e6eebfdaa769aecfe6450256fe" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>N</name></member>
+      <member refid="class_hankel_transform_1aa6243f1eb581786e4478ef01f95b53f3" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>nu</name></member>
+      <member refid="class_hankel_transform_1a8d4b9b4e591eae36ba122056f71223d5" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>ogata_linear</name></member>
+      <member refid="class_hankel_transform_1a6961f6f7be9c45d8170064fc54b1192e" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>ogata_transformed</name></member>
+      <member refid="class_hankel_transform_1acdaeb5f4ad367307755aa02932bb7da4" prot="public" virt="non-virtual"><scope>HankelTransform</scope><name>operator()</name></member>
+      <member refid="class_hankel_transform_1ab965fa2aa4e438a7a4317f1aa5a86de2" prot="public" virt="non-virtual"><scope>HankelTransform</scope><name>setLinear</name></member>
+      <member refid="class_hankel_transform_1a427005971616b06084fff1a1698a37a1" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>w</name></member>
+      <member refid="class_hankel_transform_1a59f329ce5beef5e7ae53a2f52b3e50a6" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>xi</name></member>
+      <member refid="class_hankel_transform_1af7d9913fea57760feed87d34677a4eb2" prot="private" virt="non-virtual"><scope>HankelTransform</scope><name>zeros</name></member>
+      <member refid="class_hankel_transform_1a7f7fa97e8cd6f923e92fe72a2d290512" prot="public" virt="non-virtual"><scope>HankelTransform</scope><name>~HankelTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

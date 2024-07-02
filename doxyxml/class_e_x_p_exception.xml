@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_e_x_p_exception" kind="class" language="C++" prot="public">
+    <compoundname>EXPException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <derivedcompoundref refid="class_bad_index_exception" prot="public" virt="non-virtual">BadIndexException</derivedcompoundref>
+    <derivedcompoundref refid="class_file_create_error" prot="public" virt="non-virtual">FileCreateError</derivedcompoundref>
+    <derivedcompoundref refid="class_file_open_error" prot="public" virt="non-virtual">FileOpenError</derivedcompoundref>
+    <derivedcompoundref refid="class_generic_error" prot="public" virt="non-virtual">GenericError</derivedcompoundref>
+    <derivedcompoundref refid="class_internal_error" prot="public" virt="non-virtual">InternalError</derivedcompoundref>
+    <derivedcompoundref refid="class_yaml_config_error" prot="public" virt="non-virtual">YamlConfigError</derivedcompoundref>
+    <includes refid="_e_x_p_exception_8_h" local="no">EXPException.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EXPException::deadlock</definition>
+        <argsstring></argsstring>
+        <name>deadlock</name>
+        <qualifiedname>EXPException::deadlock</qualifiedname>
+        <briefdescription>
+<para>Possible deadlock? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="101" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a47936a221431359a96c20ab5363d9f1c" compoundref="_e_x_p_exception_8_h" startline="75" endline="75">getDeadlock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EXPException::errorcode</definition>
+        <argsstring></argsstring>
+        <name>errorcode</name>
+        <qualifiedname>EXPException::errorcode</qualifiedname>
+        <briefdescription>
+<para>Return code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="104" column="7" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="104" bodyend="-1"/>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a2428b09c9f0c5dddf9fbefbcbbbcb6fd" compoundref="_e_x_p_exception_8_h" startline="72" endline="72">getErrorcode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EXPException::errormessage</definition>
+        <argsstring></argsstring>
+        <name>errormessage</name>
+        <qualifiedname>EXPException::errormessage</qualifiedname>
+        <briefdescription>
+<para>Error message describing the error in more detail. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="95" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_bad_index_exception_1ade06db40b165a1977c58926df9718799" compoundref="_e_x_p_exception_8_h" startline="171" endline="182">BadIndexException::BadIndexException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_file_create_error_1ae117ad5553d6873129b252e2dbbad325" compoundref="_e_x_p_exception_8_h" startline="203" endline="212">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_create_error_1aba98e6689378c909891beae845560ecb" compoundref="_e_x_p_exception_8_h" startline="191" endline="200">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_open_error_1a0607ea472b0ab159e178c086a19037e3" compoundref="_e_x_p_exception_8_h" startline="233" endline="242">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_file_open_error_1af38477ce6a614e444385c4c6fbdb3cce" compoundref="_e_x_p_exception_8_h" startline="221" endline="230">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_generic_error_1a642e05b0950ff31edb4b6389e2cec337" compoundref="_e_x_p_exception_8_h" startline="120" endline="130">GenericError::GenericError</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</referencedby>
+        <referencedby refid="class_internal_error_1a371d8f1ac6e04de446c3d909915cd242" compoundref="_e_x_p_exception_8_h" startline="152" endline="162">InternalError::InternalError</referencedby>
+        <referencedby refid="class_internal_error_1a9ea443f990a04185c7ce331a15d22ebb" compoundref="_e_x_p_exception_8_h" startline="141" endline="149">InternalError::InternalError</referencedby>
+        <referencedby refid="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" compoundref="_e_x_p_exception_8_h" startline="250" endline="265">YamlConfigError::YamlConfigError</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EXPException::exceptionname</definition>
+        <argsstring></argsstring>
+        <name>exceptionname</name>
+        <qualifiedname>EXPException::exceptionname</qualifiedname>
+        <briefdescription>
+<para>Friendly name of the exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="92" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_bad_index_exception_1ade06db40b165a1977c58926df9718799" compoundref="_e_x_p_exception_8_h" startline="171" endline="182">BadIndexException::BadIndexException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_file_create_error_1ae117ad5553d6873129b252e2dbbad325" compoundref="_e_x_p_exception_8_h" startline="203" endline="212">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_create_error_1aba98e6689378c909891beae845560ecb" compoundref="_e_x_p_exception_8_h" startline="191" endline="200">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_open_error_1a0607ea472b0ab159e178c086a19037e3" compoundref="_e_x_p_exception_8_h" startline="233" endline="242">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_file_open_error_1af38477ce6a614e444385c4c6fbdb3cce" compoundref="_e_x_p_exception_8_h" startline="221" endline="230">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_generic_error_1a642e05b0950ff31edb4b6389e2cec337" compoundref="_e_x_p_exception_8_h" startline="120" endline="130">GenericError::GenericError</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</referencedby>
+        <referencedby refid="class_internal_error_1a371d8f1ac6e04de446c3d909915cd242" compoundref="_e_x_p_exception_8_h" startline="152" endline="162">InternalError::InternalError</referencedby>
+        <referencedby refid="class_internal_error_1a9ea443f990a04185c7ce331a15d22ebb" compoundref="_e_x_p_exception_8_h" startline="141" endline="149">InternalError::InternalError</referencedby>
+        <referencedby refid="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" compoundref="_e_x_p_exception_8_h" startline="250" endline="265">YamlConfigError::YamlConfigError</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EXPException::msg_</definition>
+        <argsstring></argsstring>
+        <name>msg_</name>
+        <qualifiedname>EXPException::msg_</qualifiedname>
+        <briefdescription>
+<para>Message buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="98" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_bad_index_exception_1ade06db40b165a1977c58926df9718799" compoundref="_e_x_p_exception_8_h" startline="171" endline="182">BadIndexException::BadIndexException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_file_create_error_1ae117ad5553d6873129b252e2dbbad325" compoundref="_e_x_p_exception_8_h" startline="203" endline="212">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_create_error_1aba98e6689378c909891beae845560ecb" compoundref="_e_x_p_exception_8_h" startline="191" endline="200">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_open_error_1a0607ea472b0ab159e178c086a19037e3" compoundref="_e_x_p_exception_8_h" startline="233" endline="242">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_file_open_error_1af38477ce6a614e444385c4c6fbdb3cce" compoundref="_e_x_p_exception_8_h" startline="221" endline="230">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_generic_error_1a642e05b0950ff31edb4b6389e2cec337" compoundref="_e_x_p_exception_8_h" startline="120" endline="130">GenericError::GenericError</referencedby>
+        <referencedby refid="class_internal_error_1a371d8f1ac6e04de446c3d909915cd242" compoundref="_e_x_p_exception_8_h" startline="152" endline="162">InternalError::InternalError</referencedby>
+        <referencedby refid="class_internal_error_1a9ea443f990a04185c7ce331a15d22ebb" compoundref="_e_x_p_exception_8_h" startline="141" endline="149">InternalError::InternalError</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a70b8b589dba043be10dc65482e56769a" compoundref="_e_x_p_exception_8_h" startline="66" endline="69">what</referencedby>
+        <referencedby refid="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" compoundref="_e_x_p_exception_8_h" startline="250" endline="265">YamlConfigError::YamlConfigError</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EXPException::sourcefilename</definition>
+        <argsstring></argsstring>
+        <name>sourcefilename</name>
+        <qualifiedname>EXPException::sourcefilename</qualifiedname>
+        <briefdescription>
+<para>Source file where throw occured. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="108" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EXPException::sourcelinenumber</definition>
+        <argsstring></argsstring>
+        <name>sourcelinenumber</name>
+        <qualifiedname>EXPException::sourcelinenumber</qualifiedname>
+        <briefdescription>
+<para>Line number of throw. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="111" column="7" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EXPException::EXPException</definition>
+        <argsstring>(const std::string exceptionname, const std::string message, const std::string sourcefilename, int sourcelinenumber, int errorcode=-1, bool deadlock=false)</argsstring>
+        <name>EXPException</name>
+        <qualifiedname>EXPException::EXPException</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>exceptionname</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>sourcefilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sourcelinenumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errorcode</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deadlock</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for base <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exceptionname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Human-readable identifier for the error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error details for the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourcefilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File where the thrower resides </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourcelinenumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number in the source for the thrower </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error code to report at top-level catch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deadlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception may break MPI synchronization </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="24" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="24" bodyend="36"/>
+        <references refid="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" compoundref="_e_x_p_exception_8_h" startline="101">deadlock</references>
+        <references refid="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" compoundref="_e_x_p_exception_8_h" startline="104">errorcode</references>
+        <references refid="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" compoundref="_e_x_p_exception_8_h" startline="95">errormessage</references>
+        <references refid="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" compoundref="_e_x_p_exception_8_h" startline="92">exceptionname</references>
+        <references refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</references>
+        <references refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" compoundref="_e_x_p_exception_8_h" startline="98">msg_</references>
+        <references refid="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" compoundref="_e_x_p_exception_8_h" startline="108">sourcefilename</references>
+        <references refid="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" compoundref="_e_x_p_exception_8_h" startline="111">sourcelinenumber</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_x_p_exception_1a47936a221431359a96c20ab5363d9f1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EXPException::getDeadlock</definition>
+        <argsstring>()</argsstring>
+        <name>getDeadlock</name>
+        <qualifiedname>EXPException::getDeadlock</qualifiedname>
+        <briefdescription>
+<para>Get deadlock status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="75" column="8" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="75" bodyend="75"/>
+        <references refid="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" compoundref="_e_x_p_exception_8_h" startline="101">deadlock</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_x_p_exception_1a2428b09c9f0c5dddf9fbefbcbbbcb6fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int EXPException::getErrorcode</definition>
+        <argsstring>()</argsstring>
+        <name>getErrorcode</name>
+        <qualifiedname>EXPException::getErrorcode</qualifiedname>
+        <briefdescription>
+<para>Get errorcode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="72" column="7" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="72" bodyend="72"/>
+        <references refid="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" compoundref="_e_x_p_exception_8_h" startline="104">errorcode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EXPException::getErrorMessage</definition>
+        <argsstring>()</argsstring>
+        <name>getErrorMessage</name>
+        <qualifiedname>EXPException::getErrorMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an error message suitable for printing to the user. Also called by derived classes to assemble the error message for std::exception::what() </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="46" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="46" bodyend="56"/>
+        <references refid="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" compoundref="_e_x_p_exception_8_h" startline="95">errormessage</references>
+        <references refid="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" compoundref="_e_x_p_exception_8_h" startline="92">exceptionname</references>
+        <references refid="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" compoundref="_e_x_p_exception_8_h" startline="108">sourcefilename</references>
+        <references refid="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" compoundref="_e_x_p_exception_8_h" startline="111">sourcelinenumber</references>
+        <referencedby refid="class_bad_index_exception_1ade06db40b165a1977c58926df9718799" compoundref="_e_x_p_exception_8_h" startline="171" endline="182">BadIndexException::BadIndexException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" compoundref="_e_x_p_exception_8_h" startline="24" endline="36">EXPException</referencedby>
+        <referencedby refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" compoundref="_e_x_p_exception_8_h" startline="80" endline="89">EXPException</referencedby>
+        <referencedby refid="class_file_create_error_1ae117ad5553d6873129b252e2dbbad325" compoundref="_e_x_p_exception_8_h" startline="203" endline="212">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_create_error_1aba98e6689378c909891beae845560ecb" compoundref="_e_x_p_exception_8_h" startline="191" endline="200">FileCreateError::FileCreateError</referencedby>
+        <referencedby refid="class_file_open_error_1a0607ea472b0ab159e178c086a19037e3" compoundref="_e_x_p_exception_8_h" startline="233" endline="242">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_file_open_error_1af38477ce6a614e444385c4c6fbdb3cce" compoundref="_e_x_p_exception_8_h" startline="221" endline="230">FileOpenError::FileOpenError</referencedby>
+        <referencedby refid="class_generic_error_1a642e05b0950ff31edb4b6389e2cec337" compoundref="_e_x_p_exception_8_h" startline="120" endline="130">GenericError::GenericError</referencedby>
+        <referencedby refid="class_internal_error_1a371d8f1ac6e04de446c3d909915cd242" compoundref="_e_x_p_exception_8_h" startline="152" endline="162">InternalError::InternalError</referencedby>
+        <referencedby refid="class_internal_error_1a9ea443f990a04185c7ce331a15d22ebb" compoundref="_e_x_p_exception_8_h" startline="141" endline="149">InternalError::InternalError</referencedby>
+        <referencedby refid="class_yaml_config_error_1a6e0047ddac6bf920e374409c68c39658" compoundref="_e_x_p_exception_8_h" startline="250" endline="265">YamlConfigError::YamlConfigError</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_x_p_exception_1a70b8b589dba043be10dc65482e56769a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char * EXPException::what</definition>
+        <argsstring>() const</argsstring>
+        <name>what</name>
+        <qualifiedname>EXPException::what</qualifiedname>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>std::exception member returns a pointer to the error message</para>
+<para><simplesect kind="return"><para>A pointer to a const char*.</para>
+</simplesect>
+The std::string &quot;buffer&quot; used for assembling and passing the message to std::exception will be deleted when the exception is deleted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="66" column="22" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="66" bodyend="69"/>
+        <references refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" compoundref="_e_x_p_exception_8_h" startline="98">msg_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_x_p_exception_1aba9356b726727d39e19c88ca2be5e846" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual EXPException::~EXPException</definition>
+        <argsstring>()</argsstring>
+        <name>~EXPException</name>
+        <qualifiedname>EXPException::~EXPException</qualifiedname>
+        <briefdescription>
+<para>Destructor for base. Virtual to permit derived classes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="39" column="11" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="39" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EXPException::EXPException</definition>
+        <argsstring>(const std::string sourcefile, int linenumber, int errorcode=-1, bool deadlock=false)</argsstring>
+        <name>EXPException</name>
+        <qualifiedname>EXPException::EXPException</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>sourcefile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linenumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errorcode</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deadlock</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Protected so it is only called by properly implemented classes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="80" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="80" bodyend="89"/>
+        <references refid="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" compoundref="_e_x_p_exception_8_h" startline="101">deadlock</references>
+        <references refid="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" compoundref="_e_x_p_exception_8_h" startline="104">errorcode</references>
+        <references refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" compoundref="_e_x_p_exception_8_h" startline="46" endline="56">getErrorMessage</references>
+        <references refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" compoundref="_e_x_p_exception_8_h" startline="98">msg_</references>
+        <references refid="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" compoundref="_e_x_p_exception_8_h" startline="108">sourcefilename</references>
+        <references refid="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" compoundref="_e_x_p_exception_8_h" startline="111">sourcelinenumber</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines an error handler base class <ref refid="class_e_x_p_exception" kindref="compound">EXPException</ref> to handle exceptions </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BadIndexException</label>
+        <link refid="class_bad_index_exception"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EXPException</label>
+        <link refid="class_e_x_p_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FileCreateError</label>
+        <link refid="class_file_create_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FileOpenError</label>
+        <link refid="class_file_open_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GenericError</label>
+        <link refid="class_generic_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>InternalError</label>
+        <link refid="class_internal_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>YamlConfigError</label>
+        <link refid="class_yaml_config_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EXPException</label>
+        <link refid="class_e_x_p_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EXPException.H" line="13" column="1" bodyfile="/home/weinberg/Projects/EXP/include/EXPException.H" bodystart="14" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_e_x_p_exception_1a7eb7ca3947f083c8c90af7cb175a5c1f" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>deadlock</name></member>
+      <member refid="class_e_x_p_exception_1af449369cc9861ab054ff93091f7b336d" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>errorcode</name></member>
+      <member refid="class_e_x_p_exception_1a455a82586fea6cb6dde689248f935ebe" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>errormessage</name></member>
+      <member refid="class_e_x_p_exception_1abedf6793a2b2179109e2bdd078bb7932" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>exceptionname</name></member>
+      <member refid="class_e_x_p_exception_1a05ed8d4532303db80cf357b9da1e8a38" prot="public" virt="non-virtual"><scope>EXPException</scope><name>EXPException</name></member>
+      <member refid="class_e_x_p_exception_1aa2df34e676cdd1aeae016eb1fdc62489" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>EXPException</name></member>
+      <member refid="class_e_x_p_exception_1a47936a221431359a96c20ab5363d9f1c" prot="public" virt="non-virtual"><scope>EXPException</scope><name>getDeadlock</name></member>
+      <member refid="class_e_x_p_exception_1a2428b09c9f0c5dddf9fbefbcbbbcb6fd" prot="public" virt="non-virtual"><scope>EXPException</scope><name>getErrorcode</name></member>
+      <member refid="class_e_x_p_exception_1a2dddb79cfcbc69b6c8d17a1a4d266254" prot="public" virt="non-virtual"><scope>EXPException</scope><name>getErrorMessage</name></member>
+      <member refid="class_e_x_p_exception_1a324b5544f08b63b6848784fbfc45d200" prot="protected" virt="non-virtual"><scope>EXPException</scope><name>msg_</name></member>
+      <member refid="class_e_x_p_exception_1a1b71a61474e5879a5d9cf580cd9136ea" prot="private" virt="non-virtual"><scope>EXPException</scope><name>sourcefilename</name></member>
+      <member refid="class_e_x_p_exception_1a9d83f01ff76b34bf89d65910c8c43643" prot="private" virt="non-virtual"><scope>EXPException</scope><name>sourcelinenumber</name></member>
+      <member refid="class_e_x_p_exception_1a70b8b589dba043be10dc65482e56769a" prot="public" virt="virtual"><scope>EXPException</scope><name>what</name></member>
+      <member refid="class_e_x_p_exception_1aba9356b726727d39e19c88ca2be5e846" prot="public" virt="virtual"><scope>EXPException</scope><name>~EXPException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

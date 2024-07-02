@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_sphere_8_h" kind="file" language="C++">
+    <compoundname>Sphere.H</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">map</includes>
+    <includes refid="_s_l_grid_m_p2_8_h" local="no">SLGridMP2.H</includes>
+    <includes refid="_spherical_basis_8_h" local="no">SphericalBasis.H</includes>
+    <includedby refid="_two_center_8_h" local="no">/home/weinberg/Projects/EXP/src/TwoCenter.H</includedby>
+    <incdepgraph>
+      <node id="26">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SLGridMP2.H</label>
+        <link refid="_s_l_grid_m_p2_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>StringTok.H</label>
+        <link refid="_string_tok_8_h"/>
+      </node>
+      <node id="39">
+        <label>YamlCheck.H</label>
+        <link refid="_yaml_check_8_h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>sltableMP2.H</label>
+        <link refid="sltable_m_p2_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>AxisymmetricBasis.H</label>
+        <link refid="_axisymmetric_basis_8_h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Basis.H</label>
+        <link refid="_basis_8_h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>NVTX.H</label>
+        <link refid="_n_v_t_x_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>PotAccel.H</label>
+        <link refid="_pot_accel_8_h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
+        <link refid="_sphere_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>SphericalBasis.H</label>
+        <link refid="_spherical_basis_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>CoefContainer.H</label>
+      </node>
+      <node id="40">
+        <label>Coefficients.H</label>
+      </node>
+      <node id="16">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="37">
+        <label>Particle.H</label>
+      </node>
+      <node id="35">
+        <label>chrono</label>
+      </node>
+      <node id="12">
+        <label>config_exp.h</label>
+      </node>
+      <node id="24">
+        <label>cstdlib</label>
+      </node>
+      <node id="18">
+        <label>deque</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="21">
+        <label>functional</label>
+      </node>
+      <node id="11">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="36">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>mpi.h</label>
+      </node>
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="31">
+        <label>set</label>
+      </node>
+      <node id="23">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="28">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
+        <link refid="_sphere_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sphere" prot="public">Sphere</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_sphere_8_h_1ae7aad8a2e9c295a94ae01ec5ec2f35b8" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_s_l_grid_sph" kindref="compound">SLGridSph</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;SLGridSph&gt; SLGridSphPtr</definition>
+        <argsstring></argsstring>
+        <name>SLGridSphPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Sphere.H" line="10" column="25" bodyfile="/home/weinberg/Projects/EXP/src/Sphere.H" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_Sphere_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Sphere_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_s_l_grid_m_p2_8_h" kindref="compound">SLGridMP2.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_spherical_basis_8_h" kindref="compound">SphericalBasis.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_sphere_8_h_1ae7aad8a2e9c295a94ae01ec5ec2f35b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;SLGridSph&gt;<sp/><ref refid="_sphere_8_h_1ae7aad8a2e9c295a94ae01ec5ec2f35b8" kindref="member">SLGridSphPtr</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaUtil.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_sphere" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sphere" kindref="compound">Sphere</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_spherical_basis" kindref="compound">SphericalBasis</ref><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_sphere_8_h_1ae7aad8a2e9c295a94ae01ec5ec2f35b8" kindref="member">SLGridSphPtr</ref><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_sphere_1aba7d59251bc70b4b2f45271025f285ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1aba7d59251bc70b4b2f45271025f285ff" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_sphere_1a8c6a7bce9e2621c37ae76e1f863fa80c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a8c6a7bce9e2621c37ae76e1f863fa80c" kindref="member">get_dpotl</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/>Eigen::MatrixXd&amp;<sp/>p,<sp/>Eigen::MatrixXd&amp;<sp/>dp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_sphere_1a652173e111f6605982c6adbc65f32293" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a652173e111f6605982c6adbc65f32293" kindref="member">get_potl</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/>Eigen::MatrixXd&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_sphere_1aa6bfd72abb2e011e94585977ea2b3350" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1aa6bfd72abb2e011e94585977ea2b3350" kindref="member">mapIntrp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;double,<sp/>double&gt;<sp/>&amp;data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="61" refid="class_sphere_1a440de5d82772eccff93c7b86d3598a7b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a440de5d82772eccff93c7b86d3598a7b" kindref="member">mapDeriv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;double,<sp/>double&gt;<sp/>&amp;data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_sphere_1a08f150878ea2e0a03f1417eb07e90c8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a08f150878ea2e0a03f1417eb07e90c8d" kindref="member">make_model</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_sphere_1a89f73c9ad44a2eb0522626631034e052" kindref="member">plummer</ref>)<sp/><ref refid="class_sphere_1ab444f846661c7e7113ca1cf21f0cc4ce" kindref="member">make_model_plummer</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sphere_1a21810f9c6a9dd31ec9b119e6bccfc453" kindref="member">make_model_bin</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_sphere_1a21810f9c6a9dd31ec9b119e6bccfc453" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a21810f9c6a9dd31ec9b119e6bccfc453" kindref="member">make_model_bin</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_sphere_1ab444f846661c7e7113ca1cf21f0cc4ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1ab444f846661c7e7113ca1cf21f0cc4ce" kindref="member">make_model_plummer</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="expand_8_h_1aabd39b8eecb8cb426592ccefd1e5e5b6" kindref="member">initialize_cuda</ref>()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;initialize_cuda(cuInterpArray,<sp/>tex);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>cudaMappingConstants<sp/>getCudaMappingConstants()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;getCudaMappingConstants();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_sphere_1ac5738f6eed896da5c7c53d463decdf00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1ac5738f6eed896da5c7c53d463decdf00" kindref="member">get_dens</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/>Eigen::MatrixXd&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_sphere_1a2c795a70918899c354bb33176957103f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a2c795a70918899c354bb33176957103f" kindref="member">get_potl_dens</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" kindref="member">nmax</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::MatrixXd&amp;<sp/>p,<sp/>Eigen::MatrixXd&amp;<sp/>d,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_sphere_1aec235175b0942662e52ce083070fc820" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1aec235175b0942662e52ce083070fc820" kindref="member">rsphSL</ref>;</highlight></codeline>
+<codeline lineno="91" refid="class_sphere_1a15fbbf33f59128fbfb1d33b2545714d4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a15fbbf33f59128fbfb1d33b2545714d4" kindref="member">rmap</ref>;</highlight></codeline>
+<codeline lineno="92" refid="class_sphere_1abb1ec3fb8249f1baad4ac0a371140865" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a598ccc4dc3fe0818aedba36666be68d8" kindref="member">tnext</ref>,<sp/><ref refid="class_sphere_1abb1ec3fb8249f1baad4ac0a371140865" kindref="member">dtime</ref>;</highlight></codeline>
+<codeline lineno="93" refid="class_sphere_1adb0b2bc43a2ee2dc14c2da9ee8fd5aa2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1adb0b2bc43a2ee2dc14c2da9ee8fd5aa2" kindref="member">numr</ref>;</highlight></codeline>
+<codeline lineno="94" refid="class_sphere_1a04f2b8606239e7b2a49a22efc4978a1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1a04f2b8606239e7b2a49a22efc4978a1a" kindref="member">nums</ref>;</highlight></codeline>
+<codeline lineno="95" refid="class_sphere_1a2a4d4939bbd407cf72138097de9f15df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1a2a4d4939bbd407cf72138097de9f15df" kindref="member">noff</ref>;</highlight></codeline>
+<codeline lineno="96" refid="class_sphere_1a624cdbd8af6d8239e0d51c551cdaa2c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1a624cdbd8af6d8239e0d51c551cdaa2c3" kindref="member">cmap</ref>;</highlight></codeline>
+<codeline lineno="97" refid="class_sphere_1aff508dfdf616fedad98c3c1afceb7a5f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sphere_1aff508dfdf616fedad98c3c1afceb7a5f" kindref="member">diverge</ref>;</highlight></codeline>
+<codeline lineno="98" refid="class_sphere_1a368d1dbf2eb3b9cc269cfb2a6aa12fa4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a368d1dbf2eb3b9cc269cfb2a6aa12fa4" kindref="member">dfac</ref>;</highlight></codeline>
+<codeline lineno="99" refid="class_sphere_1a5fe02164759ca90df854c1fced09444d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5fe02164759ca90df854c1fced09444d" kindref="member">model_file</ref>;</highlight></codeline>
+<codeline lineno="100" refid="class_sphere_1a4be924f21c7dc76a1ebc008da7ab3035" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a4be924f21c7dc76a1ebc008da7ab3035" kindref="member">cache_file</ref>;</highlight></codeline>
+<codeline lineno="101" refid="class_sphere_1a28294bdd15c2bc06642281e4d2113983" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sphere_1a28294bdd15c2bc06642281e4d2113983" kindref="member">recompute</ref>;</highlight></codeline>
+<codeline lineno="102" refid="class_sphere_1a89f73c9ad44a2eb0522626631034e052" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sphere_1a89f73c9ad44a2eb0522626631034e052" kindref="member">plummer</ref>;</highlight></codeline>
+<codeline lineno="103" refid="class_sphere_1ac3492a52339889ef2ce0357bdbc5ecc9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sphere_1ac3492a52339889ef2ce0357bdbc5ecc9" kindref="member">logr</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_sphere_1a69e5f2cb1fe98554c8ed7b1b9ed28f79" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="class_sphere_1a69e5f2cb1fe98554c8ed7b1b9ed28f79" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_sphere_1a60b2648f82fede09d60f0bc36bc4cd96" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a60b2648f82fede09d60f0bc36bc4cd96" kindref="member">r_to_xi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;r_to_xi(r);<sp/>}</highlight></codeline>
+<codeline lineno="111" refid="class_sphere_1a6699301c6969c5499ddf669f7f4fbffc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a6699301c6969c5499ddf669f7f4fbffc" kindref="member">xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;xi_to_r(x);<sp/>}</highlight></codeline>
+<codeline lineno="112" refid="class_sphere_1a5f0f6e819b476dfa29d1dad5b267a14a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5f0f6e819b476dfa29d1dad5b267a14a" kindref="member">d_r_to_xi</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0/<ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;d_xi_to_r(<ref refid="class_sphere_1a60b2648f82fede09d60f0bc36bc4cd96" kindref="member">r_to_xi</ref>(r));<sp/>}</highlight></codeline>
+<codeline lineno="113" refid="class_sphere_1a2c3b6d03a4ba8aa60b2eff871ead655b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a2c3b6d03a4ba8aa60b2eff871ead655b" kindref="member">d_xi_to_r</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a5ed1ee6094cdc1a966ee425b9df9db81" kindref="member">ortho</ref>-&gt;d_xi_to_r(x);<sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Global<sp/>parameters</highlight></codeline>
+<codeline lineno="133" refid="class_sphere_1aa23162c4c21959d46257a150931e2f56" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sphere_1aa23162c4c21959d46257a150931e2f56" kindref="member">Sphere</ref>(<ref refid="class_component" kindref="compound">Component</ref>*<sp/>c0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" kindref="member">conf</ref>,<sp/><ref refid="class_mixture_basis" kindref="compound">MixtureBasis</ref>*<sp/>m=0);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_sphere_1acde2697064cbc2c64ea34aed1b3efac7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1acde2697064cbc2c64ea34aed1b3efac7" kindref="member">~Sphere</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_sphere_1a6d9c19cd5b655fb7e47fdbb680fe3e25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sphere_1a6d9c19cd5b655fb7e47fdbb680fe3e25" kindref="member">determine_coefficients</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_sphere_1a28294bdd15c2bc06642281e4d2113983" kindref="member">recompute</ref><sp/>and<sp/><ref refid="global_8_h_1aee2e12c455ac1712da2b8c5a7eadb147" kindref="member">tnow</ref><sp/>&gt;=<sp/><ref refid="class_sphere_1a598ccc4dc3fe0818aedba36666be68d8" kindref="member">tnext</ref>)<sp/><ref refid="class_sphere_1a08f150878ea2e0a03f1417eb07e90c8d" kindref="member">make_model</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_spherical_basis_1a91e8b02d7a7482ba2dd12cbae311533c" kindref="member">SphericalBasis::determine_coefficients</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/Sphere.H"/>
+  </compounddef>
+</doxygen>

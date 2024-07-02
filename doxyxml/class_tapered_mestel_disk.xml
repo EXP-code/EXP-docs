@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_tapered_mestel_disk" kind="class" language="C++" prot="public">
+    <compoundname>TaperedMestelDisk</compoundname>
+    <basecompoundref refid="class_mestel_disk" prot="public" virt="non-virtual">MestelDisk</basecompoundref>
+    <includes refid="mestel_8_h" local="no">mestel.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1acc9d4272ee19107fe3da3c489ad84607" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_linear1d" kindref="compound">Linear1d</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Linear1d&gt; TaperedMestelDisk::interp</definition>
+        <argsstring></argsstring>
+        <name>interp</name>
+        <qualifiedname>TaperedMestelDisk::interp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="64" column="19" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1a2c1bb44b22a237753bd5b37299ca4f57" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::mu</definition>
+        <argsstring></argsstring>
+        <name>mu</name>
+        <qualifiedname>TaperedMestelDisk::mu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="68" column="13" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1a12e8d3ac4edfffd8547d8df45e75b748" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <qualifiedname>TaperedMestelDisk::nu</qualifiedname>
+        <briefdescription>
+<para>Taper exponents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="68" column="10" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1a50e455e8deab1728807a27bbf3c78d8c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Ri</definition>
+        <argsstring></argsstring>
+        <name>Ri</name>
+        <qualifiedname>TaperedMestelDisk::Ri</qualifiedname>
+        <briefdescription>
+<para>Inner taper radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="71" column="10" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1aef7d4b85b9257ad671900cce0532d074" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Ro</definition>
+        <argsstring></argsstring>
+        <name>Ro</name>
+        <qualifiedname>TaperedMestelDisk::Ro</qualifiedname>
+        <briefdescription>
+<para>Outer taper radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="74" column="10" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1a82d24f7d3dae19f3326ad5a18ee5dd71" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Tifac</definition>
+        <argsstring></argsstring>
+        <name>Tifac</name>
+        <qualifiedname>TaperedMestelDisk::Tifac</qualifiedname>
+        <briefdescription>
+<para>Taper factors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tapered_mestel_disk_1a0e85593d37bc0e37f6ae01d1624ce362" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Tofac</definition>
+        <argsstring></argsstring>
+        <name>Tofac</name>
+        <qualifiedname>TaperedMestelDisk::Tofac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="77" column="16" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_tapered_mestel_disk_1aba2518f9b3002f0decf3dbbbf4fb62e6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::dTinner</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>dTinner</name>
+        <qualifiedname>TaperedMestelDisk::dTinner</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Deriv of inner taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1abce114224a11c438fa0b8103bc470afb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::dTouter</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>dTouter</name>
+        <qualifiedname>TaperedMestelDisk::dTouter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Deriv of outer taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="89" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a8e1e2e7489cef0d36b9d035836f879e7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Tinner</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>Tinner</name>
+        <qualifiedname>TaperedMestelDisk::Tinner</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Inner taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1af683b7a53bfa11899bf6a3953e9e906f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::Touter</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>Touter</name>
+        <qualifiedname>TaperedMestelDisk::Touter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Outer taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="83" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a5fe0190b190d5026952fef9731e45208" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::d2fde2</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>TaperedMestelDisk::d2fde2</qualifiedname>
+        <reimplements refid="class_mestel_disk_1a0cd32b3001517e2173f1d14e9f011ae3">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1ad985eb7201634305edce026a81424095" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::dfde</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfde</name>
+        <qualifiedname>TaperedMestelDisk::dfde</qualifiedname>
+        <reimplements refid="class_mestel_disk_1ac5915664d0690e8d2a487540ce06501a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a1debf27dd5007ea752970e8965eac9ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::dfdl</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>TaperedMestelDisk::dfdl</qualifiedname>
+        <reimplements refid="class_mestel_disk_1ad743a23293683bff020b2c47facf30b2">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a24836328a2a4a9357f5ef3c7fc326d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::distf</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>distf</name>
+        <qualifiedname>TaperedMestelDisk::distf</qualifiedname>
+        <reimplements refid="class_mestel_disk_1a169af93ecbedfdd0b42e79463055adf9">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded DF member functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="107" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a1b18fe2e00fd489f8e08dfe958e612cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::get_density</definition>
+        <argsstring>(const double R)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>TaperedMestelDisk::get_density</qualifiedname>
+        <reimplements refid="class_mestel_disk_1a29c3230f2e6e415237a6a87831ad9d6a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded density function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="99" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a64fdc1f995e140df8bb8d7172cb5bc95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TaperedMestelDisk::get_mass</definition>
+        <argsstring>(double R)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>TaperedMestelDisk::get_mass</qualifiedname>
+        <reimplements refid="class_mestel_disk_1aa7b4889464c31555a3827e54edd1ae0d">get_mass</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded cumulative mass function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tapered_mestel_disk_1a950793aa7900fb01a7ade5cd65544b47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaperedMestelDisk::TaperedMestelDisk</definition>
+        <argsstring>(double nu, double mu, double Ri, double Ro, double VROT=1.0, double RMIN=1.0e-6, double RMAX=1.0e6)</argsstring>
+        <name>TaperedMestelDisk</name>
+        <qualifiedname>TaperedMestelDisk::TaperedMestelDisk</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>nu</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ri</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ro</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>VROT</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RMIN</declname>
+          <defval>1.0e-6</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RMAX</declname>
+          <defval>1.0e6</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="94" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Doubly tapered Mestel Disk. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="2">
+        <label>MestelDisk</label>
+        <link refid="class_mestel_disk"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TaperedMestelDisk</label>
+        <link refid="class_tapered_mestel_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="3">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="4">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="2">
+        <label>MestelDisk</label>
+        <link refid="class_mestel_disk"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="6">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TaperedMestelDisk</label>
+        <link refid="class_tapered_mestel_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/mestel.H" line="60" column="1" bodyfile="/home/weinberg/Projects/EXP/include/mestel.H" bodystart="61" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>bomb</name></member>
+      <member refid="class_tapered_mestel_disk_1a5fe0190b190d5026952fef9731e45208" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dEgrid</name></member>
+      <member refid="class_tapered_mestel_disk_1ad985eb7201634305edce026a81424095" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>dfde</name></member>
+      <member refid="class_tapered_mestel_disk_1a1debf27dd5007ea752970e8965eac9ff" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dist_defined</name></member>
+      <member refid="class_tapered_mestel_disk_1a24836328a2a4a9357f5ef3c7fc326d72" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dof</name></member>
+      <member refid="class_tapered_mestel_disk_1aba2518f9b3002f0decf3dbbbf4fb62e6" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dTinner</name></member>
+      <member refid="class_tapered_mestel_disk_1abce114224a11c438fa0b8103bc470afb" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>dTouter</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Emin_grid</name></member>
+      <member refid="class_mestel_disk_1a87a747c435e0e1740f1d17c32b770742" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>F</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>gen_velocity</name></member>
+      <member refid="class_tapered_mestel_disk_1a1b18fe2e00fd489f8e08dfe958e612cb" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>TaperedMestelDisk</scope><name>get_density</name></member>
+      <member refid="class_mestel_disk_1a2d99e916b5c7db8c3cf653de463d643b" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_dpot</name></member>
+      <member refid="class_mestel_disk_1a71dfc91bc5793d2d0d6d528a307d2243" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_dpot2</name></member>
+      <member refid="class_tapered_mestel_disk_1a64fdc1f995e140df8bb8d7172cb5bc95" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>TaperedMestelDisk</scope><name>get_mass</name></member>
+      <member refid="class_mestel_disk_1adcdeacbdad30170e0852e71e638f6dd1" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_max_radius</name></member>
+      <member refid="class_mestel_disk_1ae3eaab23ae085a5c3241b002b17855b5" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_min_radius</name></member>
+      <member refid="class_mestel_disk_1aeee315217f39af166b224991cb007d6b" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>TaperedMestelDisk</scope><name>get_pot</name></member>
+      <member refid="class_mestel_disk_1aef5c4ba2c866fc0a0a8aebff3644418d" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>get_pot_dpot</name></member>
+      <member refid="class_tapered_mestel_disk_1acc9d4272ee19107fe3da3c489ad84607" prot="private" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>interp</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Kgrid</name></member>
+      <member refid="class_mestel_disk_1a490ef57d0a14dd806d23a55ada6df9b7" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>MestelDisk</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>ModelID</name></member>
+      <member refid="class_tapered_mestel_disk_1a2c1bb44b22a237753bd5b37299ca4f57" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>mu</name></member>
+      <member refid="class_tapered_mestel_disk_1a12e8d3ac4edfffd8547d8df45e75b748" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>nu</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>numr</name></member>
+      <member refid="class_mestel_disk_1aae9a2d283afdf8b77548a429d7f69321" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>q</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Rgrid</name></member>
+      <member refid="class_tapered_mestel_disk_1a50e455e8deab1728807a27bbf3c78d8c" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Ri</name></member>
+      <member refid="class_mestel_disk_1ac82917594139682c44266bbf37eb813e" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>rmax</name></member>
+      <member refid="class_mestel_disk_1abd6a8c75bc6c7f591f9874a1ef75a80f" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>rmin</name></member>
+      <member refid="class_tapered_mestel_disk_1aef7d4b85b9257ad671900cce0532d074" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Ro</name></member>
+      <member refid="class_mestel_disk_1add1c9d6d45f3b25ba64b411b8545b5b5" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>rot</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>set_itmax</name></member>
+      <member refid="class_mestel_disk_1aa3d39ee36955b124edfa768f79a5f2d2" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>setup_df</name></member>
+      <member refid="class_mestel_disk_1a437bbc35d16ea2c4516e62c2d421c874" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>sig2</name></member>
+      <member refid="class_tapered_mestel_disk_1a950793aa7900fb01a7ade5cd65544b47" prot="public" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>TaperedMestelDisk</name></member>
+      <member refid="class_tapered_mestel_disk_1a82d24f7d3dae19f3326ad5a18ee5dd71" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Tifac</name></member>
+      <member refid="class_tapered_mestel_disk_1a8e1e2e7489cef0d36b9d035836f879e7" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Tinner</name></member>
+      <member refid="class_tapered_mestel_disk_1a0e85593d37bc0e37f6ae01d1624ce362" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Tofac</name></member>
+      <member refid="class_tapered_mestel_disk_1af683b7a53bfa11899bf6a3953e9e906f" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Touter</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>Unit</name></member>
+      <member refid="class_mestel_disk_1a9c840743e6af99359305d3490b54fec0" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>vrot</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>TaperedMestelDisk</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>TaperedMestelDisk</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

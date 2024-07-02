@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_barrier_wrapper_8_h" kind="file" language="C++">
+    <compoundname>BarrierWrapper.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">list</includes>
+    <includes local="no">map</includes>
+    <includes local="no">set</includes>
+    <includes local="no">memory</includes>
+    <includes refid="_timer_8_h" local="no">Timer.H</includes>
+    <includes local="no">mpi.h</includes>
+    <includedby refid="global_8_h" local="no">/home/weinberg/Projects/EXP/src/global.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/BarrierWrapper.H</label>
+        <link refid="_barrier_wrapper_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>chrono</label>
+      </node>
+      <node id="11">
+        <label>cstdlib</label>
+      </node>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>list</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>mpi.h</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/BarrierWrapper.H</label>
+        <link refid="_barrier_wrapper_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/src/Component.H</label>
+        <link refid="_component_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/ComponentContainer.H</label>
+        <link refid="_component_container_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="17">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/ExternalCollection.H</label>
+        <link refid="_external_collection_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/weinberg/Projects/EXP/src/ExternalForce.H</label>
+        <link refid="_external_force_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/weinberg/Projects/EXP/src/HaloBulge.H</label>
+        <link refid="_halo_bulge_8_h"/>
+      </node>
+      <node id="20">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="26">
+        <label>/home/weinberg/Projects/EXP/src/OutAscii.H</label>
+        <link refid="_out_ascii_8_h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/weinberg/Projects/EXP/src/OutCalbr.H</label>
+        <link refid="_out_calbr_8_h"/>
+      </node>
+      <node id="28">
+        <label>/home/weinberg/Projects/EXP/src/OutFrac.H</label>
+        <link refid="_out_frac_8_h"/>
+      </node>
+      <node id="29">
+        <label>/home/weinberg/Projects/EXP/src/OutVel.H</label>
+        <link refid="_out_vel_8_h"/>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/PeriodicBC.H</label>
+        <link refid="_periodic_b_c_8_h"/>
+      </node>
+      <node id="24">
+        <label>/home/weinberg/Projects/EXP/src/ScatterMFP.H</label>
+        <link refid="_scatter_m_f_p_8_h"/>
+      </node>
+      <node id="21">
+        <label>/home/weinberg/Projects/EXP/src/Shells.H</label>
+        <link refid="_shells_8_h"/>
+      </node>
+      <node id="18">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/weinberg/Projects/EXP/src/expand.H</label>
+        <link refid="expand_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/src/global.H</label>
+        <link refid="global_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/src/user/UserBar.H</label>
+        <link refid="_user_bar_8_h"/>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/src/user/UserDisk.H</label>
+        <link refid="_user_disk_8_h"/>
+      </node>
+      <node id="9">
+        <label>/home/weinberg/Projects/EXP/src/user/UserHalo.H</label>
+        <link refid="_user_halo_8_h"/>
+      </node>
+      <node id="10">
+        <label>/home/weinberg/Projects/EXP/src/user/UserLogPot.H</label>
+        <link refid="_user_log_pot_8_h"/>
+      </node>
+      <node id="11">
+        <label>/home/weinberg/Projects/EXP/src/user/UserMNdisk.H</label>
+        <link refid="_user_m_ndisk_8_h"/>
+      </node>
+      <node id="12">
+        <label>/home/weinberg/Projects/EXP/src/user/UserMW.H</label>
+        <link refid="_user_m_w_8_h"/>
+      </node>
+      <node id="13">
+        <label>/home/weinberg/Projects/EXP/src/user/UserTest.H</label>
+        <link refid="_user_test_8_h"/>
+      </node>
+      <node id="25">
+        <label>/home/weinberg/Projects/EXP/src/user/UserTestCuda.H</label>
+        <link refid="_user_test_cuda_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_barrier_wrapper" prot="public">BarrierWrapper</innerclass>
+    <innerclass refid="class_b_w_data" prot="public">BWData</innerclass>
+    <innerclass refid="class_info" prot="public">Info</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_b_w_data" kindref="compound">BWData</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;BWData&gt; BWPtr</definition>
+        <argsstring></argsstring>
+        <name>BWPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="118" column="25" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" prot="public" static="no">
+        <type>std::shared_ptr&lt; char &gt;</type>
+        <definition>typedef std::shared_ptr&lt;char&gt; CharPtr</definition>
+        <argsstring></argsstring>
+        <name>CharPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="22" column="25" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_info" kindref="compound">Info</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Info&gt; InfoPtr</definition>
+        <argsstring></argsstring>
+        <name>InfoPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="78" column="25" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_barrier_wrapper_8_h_1a6ec85faa38de1a08236705734b4e2b26" prot="public" static="no">
+        <type>std::shared_ptr&lt; MPI_Request &gt;</type>
+        <definition>typedef std::shared_ptr&lt;MPI_Request&gt; ReqPtr</definition>
+        <argsstring></argsstring>
+        <name>ReqPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" line="23" column="25" bodyfile="/home/weinberg/Projects/EXP/include/BarrierWrapper.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BarrierWrapper_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BarrierWrapper_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_timer_8_h" kindref="compound">Timer.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;char&gt;<sp/><ref refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" kindref="member">CharPtr</ref>;</highlight></codeline>
+<codeline lineno="23" refid="_barrier_wrapper_8_h_1a6ec85faa38de1a08236705734b4e2b26" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;MPI_Request&gt;<sp/><ref refid="_barrier_wrapper_8_h_1a6ec85faa38de1a08236705734b4e2b26" kindref="member">ReqPtr</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_info" kindref="compound">Info</ref><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_info_1a922d16ed2424941f901d2b3d8cb9b283" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;ReqPtr&gt;<sp/><ref refid="class_info_1a922d16ed2424941f901d2b3d8cb9b283" kindref="member">req</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_info_1a8d42af920c76114214bfb64ef2d79de0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" kindref="member">CharPtr</ref><sp/><ref refid="class_info_1a8d42af920c76114214bfb64ef2d79de0" kindref="member">blob</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_info_1aed610960fd53086b4980108c4e55afde" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_info_1aed610960fd53086b4980108c4e55afde" kindref="member">pack</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_info_1a0101cb4e81e7be204cd1b014c240b81e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_info_1a0101cb4e81e7be204cd1b014c240b81e" kindref="member">charsz</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_info_1a7694b537bb903cb465713894055b0d40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_info_1a7694b537bb903cb465713894055b0d40" kindref="member">bufsz</ref><sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_info_1a1424990335e09ca579fc999ac70bfd69" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_info_1a1424990335e09ca579fc999ac70bfd69" kindref="member">tag</ref><sp/>=<sp/>232395;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_info_1a29d7ba6e619944bb1f526f1dec716296" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_info_1a29d7ba6e619944bb1f526f1dec716296" kindref="member">own</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_info_1adc9a2e7d96d6e60c0bc2168b40f10393" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="class_info_1adc9a2e7d96d6e60c0bc2168b40f10393" kindref="member">ctm</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_info_1ac93c661ae1e603848b08a17d8b3a8425" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_info_1ac93c661ae1e603848b08a17d8b3a8425" kindref="member">siz</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_info_1a0865142009d602af1879c5da53b9e06d" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_info_1a0865142009d602af1879c5da53b9e06d" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_info_1ac8c0c94aaf9a9a216fa3c2656b09f075" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" kindref="member">CharPtr</ref><sp/><ref refid="class_info_1ac8c0c94aaf9a9a216fa3c2656b09f075" kindref="member">c</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_info_1a89823cdd427a9dfdf3d2e43d938222bd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_info_1a89823cdd427a9dfdf3d2e43d938222bd" kindref="member">Info</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_info_1a070c079c7c2c7a737ed94a030510f695" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_info_1a070c079c7c2c7a737ed94a030510f695" kindref="member">Info</ref>(<ref refid="_barrier_wrapper_8_h_1ae26886b3fffa4f2f48b62705e6f3af3c" kindref="member">CharPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_info_1a7908d9cd4126d049c605fb578338b49d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_info_1a7908d9cd4126d049c605fb578338b49d" kindref="member">Info</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_info_1a29d7ba6e619944bb1f526f1dec716296" kindref="member">own</ref>,<sp/>time_t<sp/><ref refid="class_info_1adc9a2e7d96d6e60c0bc2168b40f10393" kindref="member">ctm</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_info_1a0865142009d602af1879c5da53b9e06d" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_info_1ac60d7e4961259f8ff1a0be85ae7c4f6b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_info_1ac60d7e4961259f8ff1a0be85ae7c4f6b" kindref="member">sendInfo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="localmpi_8_h_1a20705b4372a9940d34a164bae541be1f" kindref="member">myid</ref>,<sp/>MPI_Comm<sp/>comm,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>commsize);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Info&gt;<sp/><ref refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" kindref="member">InfoPtr</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_b_w_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_w_data" kindref="compound">BWData</ref><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85" refid="class_b_w_data_1a5639d584c1f974831723d5e6126b1845" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a5639d584c1f974831723d5e6126b1845" kindref="member">dt1</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_b_w_data_1a02e9ed51c8f35b62f99b2bc8a33e2cf6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a02e9ed51c8f35b62f99b2bc8a33e2cf6" kindref="member">dt2</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_b_w_data_1a4c5751ae28df283fd7d89ec6cd122df7" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="class_b_w_data_1a4de1e9aea8379ae7cd9795a23c806a70" kindref="member">first</ref>,<sp/><ref refid="class_b_w_data_1a4c5751ae28df283fd7d89ec6cd122df7" kindref="member">expire</ref>;</highlight></codeline>
+<codeline lineno="94"></codeline>
+<codeline lineno="96" refid="class_b_w_data_1a1fa44f386c8eb0288e45dc619b39d09d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;bool&gt;<sp/><ref refid="class_b_w_data_1a1fa44f386c8eb0288e45dc619b39d09d" kindref="member">nd</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_b_w_data_1a3627f9db7360d51e67e687b7d10f2f55" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a3627f9db7360d51e67e687b7d10f2f55" kindref="member">nexpiry</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_b_w_data_1a4675367000a64ca76df032e289646686" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a4675367000a64ca76df032e289646686" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="class_b_w_data_1a6d1c06f8df7a13f9533f7f0e0c21bd14" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;InfoPtr&gt;<sp/><ref refid="class_b_w_data_1a6d1c06f8df7a13f9533f7f0e0c21bd14" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_b_w_data_1a1b6cb9dd1ad85f70641ce6b44f932c05" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_b_w_data_1a1b6cb9dd1ad85f70641ce6b44f932c05" kindref="member">BWData</ref>(<ref refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" kindref="member">InfoPtr</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>commsize);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_b_w_data_1a6a719e9d4692633b72b918466e8cfc22" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a6a719e9d4692633b72b918466e8cfc22" kindref="member">Add</ref>(<ref refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" kindref="member">InfoPtr</ref>&amp;<sp/>p);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_b_w_data_1a54dc7e71b841e5e48628b72fa60475fe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_b_w_data_1a54dc7e71b841e5e48628b72fa60475fe" kindref="member">Owner</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;BWData&gt;<sp/><ref refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" kindref="member">BWPtr</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_barrier_wrapper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_barrier_wrapper" kindref="compound">BarrierWrapper</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122" refid="class_barrier_wrapper_1a4838ff865b8d8625c61d208a420f8212" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_info" kindref="compound">Info</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_barrier_wrapper_1a39928dc8d3ef7bc5aa6378fc6e28aa24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;CharPtr,<sp/>ReqPtr&gt;<sp/><ref refid="class_barrier_wrapper_1a39928dc8d3ef7bc5aa6378fc6e28aa24" kindref="member">RecvElem</ref>;</highlight></codeline>
+<codeline lineno="127" refid="class_barrier_wrapper_1a181cd2663c55bdcaa89d2ac1fed8f83e" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;RecvElem&gt;<sp/><ref refid="class_barrier_wrapper_1a181cd2663c55bdcaa89d2ac1fed8f83e" kindref="member">req</ref>;</highlight></codeline>
+<codeline lineno="128" refid="class_barrier_wrapper_1a4baea7ae1daa15c18c30c047db6697f5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a4baea7ae1daa15c18c30c047db6697f5" kindref="member">queued</ref>;</highlight></codeline>
+<codeline lineno="129" refid="class_barrier_wrapper_1a904916ba24181cd01a77a1dd577aa57b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a904916ba24181cd01a77a1dd577aa57b" kindref="member">nrecv</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_barrier_wrapper_1ae738138237618529147077d778dc9e55" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_barrier_wrapper_1ae738138237618529147077d778dc9e55" kindref="member">buffer</ref>,<sp/>*<ref refid="class_barrier_wrapper_1a3acf68552460aec4bec9be9e521db98a" kindref="member">bufferT</ref>;</highlight></codeline>
+<codeline lineno="132" refid="class_barrier_wrapper_1ad294be7c07634a25ec8938c62f996bad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1ad294be7c07634a25ec8938c62f996bad" kindref="member">commsize</ref>,<sp/><ref refid="class_barrier_wrapper_1a8274f2be4307090574f2cc82cbefd383" kindref="member">localid</ref>;</highlight></codeline>
+<codeline lineno="133" refid="class_barrier_wrapper_1aec4570a9b5a6579178f91c88d54b3d32" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1aec4570a9b5a6579178f91c88d54b3d32" kindref="member">check_label</ref>;</highlight></codeline>
+<codeline lineno="134" refid="class_barrier_wrapper_1ab99ca69ccd7d7919c0348c78a0ec7712" refkind="member"><highlight class="normal"><sp/><sp/>MPI_Comm<sp/><ref refid="class_barrier_wrapper_1ab99ca69ccd7d7919c0348c78a0ec7712" kindref="member">comm</ref>;</highlight></codeline>
+<codeline lineno="135" refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/><ref refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="136" refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" kindref="member">onoff</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0" kindref="member">light_operator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="139" refid="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179" kindref="member">heavy_operator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="140" refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" kindref="member">light</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_barrier_wrapper_1a3199d76495e5a8ea46f50e6b34c05ca4" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>BWPtr&gt;<sp/><ref refid="class_barrier_wrapper_1a3199d76495e5a8ea46f50e6b34c05ca4" kindref="member">pending</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_barrier_wrapper_1a37139ce56bfae8e003478e4b772e4e66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a37139ce56bfae8e003478e4b772e4e66" kindref="member">updateMap</ref>(<ref refid="_barrier_wrapper_8_h_1a389903bdb1259585e65a834df5ef9dfc" kindref="member">InfoPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="145" refid="class_barrier_wrapper_1a9c9bd015bb64f099e37ffa510447c13c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a9c9bd015bb64f099e37ffa510447c13c" kindref="member">syncTest</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>mesg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="146" refid="class_barrier_wrapper_1a06f303b61733300ba4aacc8509a4c11d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a06f303b61733300ba4aacc8509a4c11d" kindref="member">listReport</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/>std::map&lt;std::string,<sp/>BWPtr&gt;::iterator);</highlight></codeline>
+<codeline lineno="147" refid="class_barrier_wrapper_1a8f01ecc6b3b91f71988383388bc3c5b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a8f01ecc6b3b91f71988383388bc3c5b9" kindref="member">finalReport</ref>(std::string&amp;);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_barrier_wrapper_1a6d0ecdffb94a0c9034351547aa82031d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a6d0ecdffb94a0c9034351547aa82031d" kindref="member">cbufsz</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_barrier_wrapper_1ab3165c03742125e8b5f8e4f99276120b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1ab3165c03742125e8b5f8e4f99276120b" kindref="member">inOper</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="class_barrier_wrapper_1a388d24e4a3680dbbf871689d4cc7bf76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a388d24e4a3680dbbf871689d4cc7bf76" kindref="member">lbOper</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="class_barrier_wrapper_1a8760885b899a1e6d45910fd8346bd86a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a8760885b899a1e6d45910fd8346bd86a" kindref="member">flOper</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="class_barrier_wrapper_1a2102728f5f3b41c8a74f076c5324ad91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a2102728f5f3b41c8a74f076c5324ad91" kindref="member">lnOper</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_barrier_wrapper_1acc2b0dc6b21c70708ed7a357cda5681d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1acc2b0dc6b21c70708ed7a357cda5681d" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="169" refid="class_barrier_wrapper_1ac43a8640a84bf5a397fc1d64b30904a4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1ac43a8640a84bf5a397fc1d64b30904a4" kindref="member">extra_verbose</ref>;</highlight></codeline>
+<codeline lineno="170" refid="class_barrier_wrapper_1a7a00fdc3b8b103d459210d8b98ec47b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a7a00fdc3b8b103d459210d8b98ec47b7" kindref="member">debugging</ref>;</highlight></codeline>
+<codeline lineno="172"></codeline>
+<codeline lineno="174" refid="class_barrier_wrapper_1a46ea8fa6e581cb577fdefbf9ebf3e2d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a46ea8fa6e581cb577fdefbf9ebf3e2d5" kindref="member">loop_delay</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_barrier_wrapper_1a27c637a2e5b2df1f7245dde9d2d3e47c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_barrier_wrapper_1a27c637a2e5b2df1f7245dde9d2d3e47c" kindref="member">BarrierWrapper</ref>(MPI_Comm<sp/><ref refid="class_barrier_wrapper_1ab99ca69ccd7d7919c0348c78a0ec7712" kindref="member">comm</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>label=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="class_barrier_wrapper_1acc66013759b9cc8e593725a1b8821359" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_barrier_wrapper_1acc66013759b9cc8e593725a1b8821359" kindref="member">BarrierWrapper</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper" kindref="compound">BarrierWrapper</ref>&amp;<sp/>inst);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_barrier_wrapper_1a83df985ee82ab6075540690db9dbd3bc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_barrier_wrapper_1a83df985ee82ab6075540690db9dbd3bc" kindref="member">~BarrierWrapper</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a0af37b8ad635de7861f6639cf94af687" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" kindref="member">light</ref>)<sp/><ref refid="class_barrier_wrapper_1a77884c06ab7fd62675c3cfd6120c10d0" kindref="member">light_operator</ref>(label,<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/>line);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a502821e5fc06a438a54b8782a5dda179" kindref="member">heavy_operator</ref>(label,<sp/><ref refid="model3d_8_h_1ab6fca3418c4b6179d83a8991a8b2f63cab4e367fba14b5eae38519a2823aca793" kindref="member">file</ref>,<sp/>line);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_barrier_wrapper_1a3719970a072571082333d6c7559fadf8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a3719970a072571082333d6c7559fadf8" kindref="member">on</ref>()<sp/><sp/>{<sp/><ref refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" kindref="member">onoff</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/>}</highlight></codeline>
+<codeline lineno="192" refid="class_barrier_wrapper_1ac2bd182822af8aa50a2342e5b9d0b431" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1ac2bd182822af8aa50a2342e5b9d0b431" kindref="member">off</ref>()<sp/>{<sp/><ref refid="class_barrier_wrapper_1aae1c8330ae2dd9755d090d53b98c6965" kindref="member">onoff</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="class_barrier_wrapper_1a542ca840a4c45fcac98ddd79107667db" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a542ca840a4c45fcac98ddd79107667db" kindref="member">setLightWeight</ref>()<sp/>{<sp/><ref refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" kindref="member">light</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/>}</highlight></codeline>
+<codeline lineno="195" refid="class_barrier_wrapper_1a5262ee0a294d53ee9f8d9bb650dfa79c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a5262ee0a294d53ee9f8d9bb650dfa79c" kindref="member">setHeavyWeight</ref>()<sp/>{<sp/><ref refid="class_barrier_wrapper_1a3fc02666f88ab13bbaf9eb0b8453caca" kindref="member">light</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper_1a15980e3d63719a3cc5ec31318fca85ba" kindref="member">getTime</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>ret<sp/>=<sp/>timer.getTime().getRealTime()*1.0e-6;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" kindref="member">timer</ref>.<ref refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" kindref="member">getTime</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_barrier_wrapper_1a976b752d9985eeaca2aecff08d3e525e" kindref="member">timer</ref>.<ref refid="class_timer_1a9020542d73357a4eef512eefaf57524b" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="class_barrier_wrapper_1a31717b8ca6f158fc839608b194450f4b" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="class_barrier_wrapper_1a31717b8ca6f158fc839608b194450f4b" kindref="member">getMissing</ref>(<ref refid="_barrier_wrapper_8_h_1a593762cb19f616c1beb5486d07dbe458" kindref="member">BWPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_BarrierWrapper_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/BarrierWrapper.H"/>
+  </compounddef>
+</doxygen>

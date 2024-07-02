@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_emp_cyl2d_1_1_model_cyl" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EmpCyl2d::ModelCyl</compoundname>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EmpCyl2d::ModelCyl::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="35" column="17" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" compoundref="_emp_cyl2d_8_h" startline="44" endline="44">ID</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1a590bae8af6992903978f94d799bdd012" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void EmpCyl2d::ModelCyl::parse</definition>
+        <argsstring>(const YAML::Node &amp;)=0</argsstring>
+        <name>parse</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::parse</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="36" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double EmpCyl2d::ModelCyl::dens</definition>
+        <argsstring>(double r)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="42" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double EmpCyl2d::ModelCyl::dpot</definition>
+        <argsstring>(double r)=0</argsstring>
+        <name>dpot</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::dpot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="41" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string EmpCyl2d::ModelCyl::ID</definition>
+        <argsstring>()</argsstring>
+        <name>ID</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="44" column="25" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="44" bodyend="44"/>
+        <references refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" compoundref="_emp_cyl2d_8_h" startline="35">id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double EmpCyl2d::ModelCyl::pot</definition>
+        <argsstring>(double r)=0</argsstring>
+        <name>pot</name>
+        <qualifiedname>EmpCyl2d::ModelCyl::pot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="40" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A two-dimensional disk model for computing the EOF. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="31" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="32" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a" prot="public" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>dens</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" prot="public" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>dpot</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" prot="protected" virt="non-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>id</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" prot="public" virt="virtual"><scope>EmpCyl2d::ModelCyl</scope><name>ID</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a590bae8af6992903978f94d799bdd012" prot="protected" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>parse</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda" prot="public" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>pot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

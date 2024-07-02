@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_slab_model" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SlabModel</compoundname>
+    <includes refid="_s_l_grid_m_p2_8_h" local="no">SLGridMP2.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_slab_model_1af46aec018ca87986e34255969501b979" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SlabModel::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>SlabModel::id</qualifiedname>
+        <briefdescription>
+<para>For cache identification. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="227" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="227" bodyend="-1"/>
+        <referencedby refid="class_slab_model_1a5da645e2820ccc913eb6c0de81a6ad13" compoundref="_s_l_grid_m_p2_8_h" startline="244" endline="244">ID</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_slab_model_1a67a16e8d5d31282974d0c3a9071c0054" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_slab_model" kindref="compound">SlabModel</ref> &gt;</type>
+        <definition>static std::shared_ptr&lt; SlabModel &gt; SlabModel::createModel</definition>
+        <argsstring>(const std::string type)</argsstring>
+        <name>createModel</name>
+        <qualifiedname>SlabModel::createModel</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Factory constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="232" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_slab_model_1acf84752a8838c0b2f1c02e2b395e45c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SlabModel::dens</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>SlabModel::dens</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Return the surface density. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="241" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slab_model_1a25670aa6c64fdaf1e5b1d818398837e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SlabModel::dpot</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>dpot</name>
+        <qualifiedname>SlabModel::dpot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Return the derivative of the potential. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="238" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slab_model_1a5da645e2820ccc913eb6c0de81a6ad13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SlabModel::ID</definition>
+        <argsstring>() const</argsstring>
+        <name>ID</name>
+        <qualifiedname>SlabModel::ID</qualifiedname>
+        <briefdescription>
+<para>Get model ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="244" column="15" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="244" bodyend="244"/>
+        <references refid="class_slab_model_1af46aec018ca87986e34255969501b979" compoundref="_s_l_grid_m_p2_8_h" startline="227">id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_slab_model_1a674b8108920991da09a93432c15c6fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SlabModel::pot</definition>
+        <argsstring>(double z)=0</argsstring>
+        <name>pot</name>
+        <qualifiedname>SlabModel::pot</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Return the potential. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="235" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Target density models for slabs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/SLGridMP2.H" line="223" column="1" bodyfile="/home/weinberg/Projects/EXP/include/SLGridMP2.H" bodystart="224" bodyend="245"/>
+    <listofallmembers>
+      <member refid="class_slab_model_1a67a16e8d5d31282974d0c3a9071c0054" prot="public" virt="non-virtual"><scope>SlabModel</scope><name>createModel</name></member>
+      <member refid="class_slab_model_1acf84752a8838c0b2f1c02e2b395e45c3" prot="public" virt="pure-virtual"><scope>SlabModel</scope><name>dens</name></member>
+      <member refid="class_slab_model_1a25670aa6c64fdaf1e5b1d818398837e6" prot="public" virt="pure-virtual"><scope>SlabModel</scope><name>dpot</name></member>
+      <member refid="class_slab_model_1af46aec018ca87986e34255969501b979" prot="protected" virt="non-virtual"><scope>SlabModel</scope><name>id</name></member>
+      <member refid="class_slab_model_1a5da645e2820ccc913eb6c0de81a6ad13" prot="public" virt="non-virtual"><scope>SlabModel</scope><name>ID</name></member>
+      <member refid="class_slab_model_1a674b8108920991da09a93432c15c6fbf" prot="public" virt="pure-virtual"><scope>SlabModel</scope><name>pot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

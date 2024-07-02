@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_one_d_model_table" kind="class" language="C++" prot="public">
+    <compoundname>OneDModelTable</compoundname>
+    <basecompoundref refid="class_one_d_model" prot="public" virt="non-virtual">OneDModel</basecompoundref>
+    <derivedcompoundref refid="class_low_iso" prot="public" virt="non-virtual">LowIso</derivedcompoundref>
+    <derivedcompoundref refid="class_sech2_halo" prot="public" virt="non-virtual">Sech2Halo</derivedcompoundref>
+    <includes refid="massmodel1d_8_h" local="no">massmodel1d.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_one_d_model_table_1a4ce783800c36e42ba666ebb27fcb1b57" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_spline1d" kindref="compound">Spline1d</ref></type>
+        <definition>Spline1d OneDModelTable::dens</definition>
+        <argsstring></argsstring>
+        <name>dens</name>
+        <qualifiedname>OneDModelTable::dens</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="52" column="17" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a6eef5bec584f19ecde4df300e07ca775" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OneDModelTable::even</definition>
+        <argsstring></argsstring>
+        <name>even</name>
+        <qualifiedname>OneDModelTable::even</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="54" column="7" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a63ffc21df240a99ac5ddddc3e78cfca5" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OneDModelTable::half_height</definition>
+        <argsstring></argsstring>
+        <name>half_height</name>
+        <qualifiedname>OneDModelTable::half_height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="57" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_one_d_model_table_1a1d12f76deb8659f22c400cb7538d94e9" compoundref="massmodel1d_8_h" startline="82" endline="82">get_scale_height</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a96eb98b80968b9be90bde6edce829481" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_spline1d" kindref="compound">Spline1d</ref></type>
+        <definition>Spline1d OneDModelTable::mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <qualifiedname>OneDModelTable::mass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="52" column="12" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_one_d_model_table_1a13f27de596abd616ee395c5a27323346" compoundref="massmodel1d_8_h" startline="85" endline="85">get_max_radius</referencedby>
+        <referencedby refid="class_one_d_model_table_1a4860f3919c37e90be0328cd512544c70" compoundref="massmodel1d_8_h" startline="84" endline="84">get_min_radius</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a13af397adcd543794a09f4ab31447bf9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OneDModelTable::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <qualifiedname>OneDModelTable::num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="55" column="7" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_one_d_model_table_1aa2adead86bdb5ab0c186c9528d0c6984" compoundref="massmodel1d_8_h" startline="86" endline="86">grid_size</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a307377282a0fa0c0d8a06c979bda5cbc" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OneDModelTable::numdf</definition>
+        <argsstring></argsstring>
+        <name>numdf</name>
+        <qualifiedname>OneDModelTable::numdf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="56" column="7" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a222b7209329a36dabb3461c99d79ec00" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; OneDModelTable::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <qualifiedname>OneDModelTable::params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="58" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_one_d_model_table_1a8ec67a864d750aef79d0219070ca800e" compoundref="massmodel1d_8_h" startline="80" endline="80">get_num_param</referencedby>
+        <referencedby refid="class_one_d_model_table_1a7387b5e9a4566c79c3ef947e998347d7" compoundref="massmodel1d_8_h" startline="81" endline="81">get_param</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_d_model_table_1a148490588ccd45c4de1cf35755430125" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_spline1d" kindref="compound">Spline1d</ref></type>
+        <definition>Spline1d OneDModelTable::pot</definition>
+        <argsstring></argsstring>
+        <name>pot</name>
+        <qualifiedname>OneDModelTable::pot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="52" column="22" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_one_d_model_table_1ad53cdc9450e1a669b16a97447efd15fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_density</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>OneDModelTable::get_density</qualifiedname>
+        <reimplements refid="class_one_d_model_1a36bf5a5421bcb001b7cbb098b333a22f">get_density</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="72" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a664d695909c5fa222ea6ce4f88d9fe00" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_dpot</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>OneDModelTable::get_dpot</qualifiedname>
+        <reimplements refid="class_one_d_model_1ad6d9a4440bf0bac22ed75a635602e686">get_dpot</reimplements>
+        <reimplementedby refid="class_sech2_halo_1a5a3779ee0a6c041d226a016029bba335">get_dpot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="74" column="10"/>
+        <referencedby refid="class_sech2_halo_1a5a3779ee0a6c041d226a016029bba335" compoundref="massmodel1d_8_h" startline="394" endline="397">Sech2Halo::get_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a4e077b93f5bae985d3f2d2d222bd8766" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_dpot2</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>OneDModelTable::get_dpot2</qualifiedname>
+        <reimplements refid="class_one_d_model_1ae49154b0d0be811cf708c722e56fcbad">get_dpot2</reimplements>
+        <reimplementedby refid="class_sech2_halo_1a071987eef52f3833829579039487bc58">get_dpot2</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="75" column="10"/>
+        <referencedby refid="class_sech2_halo_1a071987eef52f3833829579039487bc58" compoundref="massmodel1d_8_h" startline="399" endline="403">Sech2Halo::get_dpot2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1add70877c6dedaaafcc44854e41647761" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_mass</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>OneDModelTable::get_mass</qualifiedname>
+        <reimplements refid="class_one_d_model_1aa4b6d3af73f6b25cf2f778c1968b0d18">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a13f27de596abd616ee395c5a27323346" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_max_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>OneDModelTable::get_max_radius</qualifiedname>
+        <reimplements refid="class_one_d_model_1a7cd00ddac7b6b98b99038aeba357cdd9">get_max_radius</reimplements>
+        <reimplementedby refid="class_sech2_halo_1a38a8bcbc87313c16a9e42a1245e6ee58">get_max_radius</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="85" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="85" bodyend="85"/>
+        <references refid="class_one_d_model_table_1a96eb98b80968b9be90bde6edce829481" compoundref="massmodel1d_8_h" startline="52">mass</references>
+        <references refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" compoundref="interp_8_h" startline="97" endline="97">Spline1d::xhi</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a4860f3919c37e90be0328cd512544c70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_min_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>OneDModelTable::get_min_radius</qualifiedname>
+        <reimplements refid="class_one_d_model_1a66315da9c08d18cb68024af19eeec439">get_min_radius</reimplements>
+        <reimplementedby refid="class_sech2_halo_1ab2e0e44472cd552e609dd83c649c1337">get_min_radius</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="84" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="84" bodyend="84"/>
+        <references refid="class_one_d_model_table_1a96eb98b80968b9be90bde6edce829481" compoundref="massmodel1d_8_h" startline="52">mass</references>
+        <references refid="class_spline1d_1a604862983923c498185d9177d2b40d99" compoundref="interp_8_h" startline="96" endline="96">Spline1d::xlo</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a8ec67a864d750aef79d0219070ca800e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int</type>
+        <definition>const int OneDModelTable::get_num_param</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_num_param</name>
+        <qualifiedname>OneDModelTable::get_num_param</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="80" column="13" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="80" bodyend="80"/>
+        <references refid="class_one_d_model_table_1a222b7209329a36dabb3461c99d79ec00" compoundref="massmodel1d_8_h" startline="58">params</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a7387b5e9a4566c79c3ef947e998347d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double OneDModelTable::get_param</definition>
+        <argsstring>(int i)</argsstring>
+        <name>get_param</name>
+        <qualifiedname>OneDModelTable::get_param</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="81" column="16" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="81" bodyend="81"/>
+        <references refid="class_one_d_model_table_1a222b7209329a36dabb3461c99d79ec00" compoundref="massmodel1d_8_h" startline="58">params</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1ad56038569382682b210d23f6e1164086" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_pot</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>OneDModelTable::get_pot</qualifiedname>
+        <reimplements refid="class_one_d_model_1aa5f03b329b6c2150a2f7251ebaa405ce">get_pot</reimplements>
+        <reimplementedby refid="class_sech2_halo_1abdbec9d1f9d9d715bbe14fd8ea29f44f">get_pot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="73" column="10"/>
+        <referencedby refid="class_sech2_halo_1abdbec9d1f9d9d715bbe14fd8ea29f44f" compoundref="massmodel1d_8_h" startline="389" endline="392">Sech2Halo::get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1abf38f04aee03835550e1c1d76721c336" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>tuple&lt; double, double &gt;</type>
+        <definition>tuple&lt; double, double &gt; OneDModelTable::get_pot_dpot</definition>
+        <argsstring>(const double)</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>OneDModelTable::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_one_d_model_1ab370c05a2d27583c06585420fa3bc06b">get_pot_dpot</reimplements>
+        <reimplementedby refid="class_sech2_halo_1ac0d7b6ac339e81210d37f546a68f4e8a">get_pot_dpot</reimplementedby>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="76" column="9"/>
+        <referencedby refid="class_sech2_halo_1ac0d7b6ac339e81210d37f546a68f4e8a" compoundref="massmodel1d_8_h" startline="405" endline="411">Sech2Halo::get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a1d12f76deb8659f22c400cb7538d94e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double OneDModelTable::get_scale_height</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_scale_height</name>
+        <qualifiedname>OneDModelTable::get_scale_height</qualifiedname>
+        <reimplements refid="class_one_d_model_1a731e02ea35b5ca65e7ee5422aaaff9dc">get_scale_height</reimplements>
+        <reimplementedby refid="class_sech2_halo_1aebc66367268c82524b43f0dd7ec6cc2e">get_scale_height</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="82" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="82" bodyend="82"/>
+        <references refid="class_one_d_model_table_1a63ffc21df240a99ac5ddddc3e78cfca5" compoundref="massmodel1d_8_h" startline="57">half_height</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1aa2adead86bdb5ab0c186c9528d0c6984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int OneDModelTable::grid_size</definition>
+        <argsstring>(void)</argsstring>
+        <name>grid_size</name>
+        <qualifiedname>OneDModelTable::grid_size</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="86" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="86" bodyend="86"/>
+        <references refid="class_one_d_model_table_1a13af397adcd543794a09f4ab31447bf9" compoundref="massmodel1d_8_h" startline="55">num</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a92597f0ed86bcf669a7b834551293e90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OneDModelTable::OneDModelTable</definition>
+        <argsstring>()</argsstring>
+        <name>OneDModelTable</name>
+        <qualifiedname>OneDModelTable::OneDModelTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="62" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a75247475b6c835339ea5f019f491168d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OneDModelTable::OneDModelTable</definition>
+        <argsstring>(int num, double *r, double *d, double *m, double *p, string ID=&quot;&quot;)</argsstring>
+        <name>OneDModelTable</name>
+        <qualifiedname>OneDModelTable::OneDModelTable</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ID</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="66" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_model_table_1a5e281d5772863d714fa51c4d3cf5006b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OneDModelTable::OneDModelTable</definition>
+        <argsstring>(string filename, int PARM=0)</argsstring>
+        <name>OneDModelTable</name>
+        <qualifiedname>OneDModelTable::OneDModelTable</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>PARM</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="64" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>LowIso</label>
+        <link refid="class_low_iso"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="2">
+        <label>OneDModel</label>
+        <link refid="class_one_d_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>OneDModelTable</label>
+        <link refid="class_one_d_model_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Sech2Halo</label>
+        <link refid="class_sech2_halo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>Interp1d</label>
+        <link refid="class_interp1d"/>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="2">
+        <label>OneDModel</label>
+        <link refid="class_one_d_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>OneDModelTable</label>
+        <link refid="class_one_d_model_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dens</edgelabel>
+          <edgelabel>mass</edgelabel>
+          <edgelabel>pot</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Spline1d</label>
+        <link refid="class_spline1d"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" line="48" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/massmodel1d.H" bodystart="49" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>bomb</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>defined</name></member>
+      <member refid="class_one_d_model_table_1a4ce783800c36e42ba666ebb27fcb1b57" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>dens</name></member>
+      <member refid="class_one_d_model_1a28f2ac357aa2545471aa90d1615a4d63" prot="public" virt="pure-virtual"><scope>OneDModelTable</scope><name>dfde</name></member>
+      <member refid="class_one_d_model_1a824c504cfe32d8a85435f34baaf59126" prot="public" virt="pure-virtual"><scope>OneDModelTable</scope><name>dfdv</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>dim</name></member>
+      <member refid="class_one_d_model_1ab91f597e08f2074d21fe5aaff6cb9840" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>dist_defined</name></member>
+      <member refid="class_one_d_model_1a90447f8d07909613a601cba30103c997" prot="public" virt="pure-virtual"><scope>OneDModelTable</scope><name>distf</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>dof</name></member>
+      <member refid="class_one_d_model_table_1a6eef5bec584f19ecde4df300e07ca775" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>even</name></member>
+      <member refid="class_one_d_model_table_1ad53cdc9450e1a669b16a97447efd15fb" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_density</name></member>
+      <member refid="class_one_d_model_1aa72ae0534d1742dc620ef51c1b7bb87c" prot="public" virt="virtual" ambiguityscope="OneDModel::"><scope>OneDModelTable</scope><name>get_density</name></member>
+      <member refid="class_one_d_model_table_1a664d695909c5fa222ea6ce4f88d9fe00" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_dpot</name></member>
+      <member refid="class_one_d_model_table_1a4e077b93f5bae985d3f2d2d222bd8766" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_dpot2</name></member>
+      <member refid="class_one_d_model_table_1add70877c6dedaaafcc44854e41647761" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_mass</name></member>
+      <member refid="class_one_d_model_1a7d460c77bbe4df3c606646fc1f85b3cc" prot="public" virt="virtual" ambiguityscope="OneDModel::"><scope>OneDModelTable</scope><name>get_mass</name></member>
+      <member refid="class_one_d_model_table_1a13f27de596abd616ee395c5a27323346" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_max_radius</name></member>
+      <member refid="class_one_d_model_table_1a4860f3919c37e90be0328cd512544c70" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_min_radius</name></member>
+      <member refid="class_one_d_model_table_1a8ec67a864d750aef79d0219070ca800e" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>get_num_param</name></member>
+      <member refid="class_one_d_model_table_1a7387b5e9a4566c79c3ef947e998347d7" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>get_param</name></member>
+      <member refid="class_one_d_model_table_1ad56038569382682b210d23f6e1164086" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_pot</name></member>
+      <member refid="class_one_d_model_1adb23181ed139049e72215399fd35903d" prot="public" virt="virtual" ambiguityscope="OneDModel::"><scope>OneDModelTable</scope><name>get_pot</name></member>
+      <member refid="class_one_d_model_table_1abf38f04aee03835550e1c1d76721c336" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_pot_dpot</name></member>
+      <member refid="class_one_d_model_table_1a1d12f76deb8659f22c400cb7538d94e9" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>get_scale_height</name></member>
+      <member refid="class_one_d_model_table_1aa2adead86bdb5ab0c186c9528d0c6984" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>grid_size</name></member>
+      <member refid="class_one_d_model_table_1a63ffc21df240a99ac5ddddc3e78cfca5" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>half_height</name></member>
+      <member refid="class_one_d_model_table_1a96eb98b80968b9be90bde6edce829481" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>mass</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>ModelID</name></member>
+      <member refid="class_one_d_model_table_1a13af397adcd543794a09f4ab31447bf9" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>num</name></member>
+      <member refid="class_one_d_model_table_1a307377282a0fa0c0d8a06c979bda5cbc" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>numdf</name></member>
+      <member refid="class_one_d_model_table_1a92597f0ed86bcf669a7b834551293e90" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>OneDModelTable</name></member>
+      <member refid="class_one_d_model_table_1a5e281d5772863d714fa51c4d3cf5006b" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>OneDModelTable</name></member>
+      <member refid="class_one_d_model_table_1a75247475b6c835339ea5f019f491168d" prot="public" virt="non-virtual"><scope>OneDModelTable</scope><name>OneDModelTable</name></member>
+      <member refid="class_one_d_model_table_1a222b7209329a36dabb3461c99d79ec00" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>params</name></member>
+      <member refid="class_one_d_model_table_1a148490588ccd45c4de1cf35755430125" prot="protected" virt="non-virtual"><scope>OneDModelTable</scope><name>pot</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>OneDModelTable</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

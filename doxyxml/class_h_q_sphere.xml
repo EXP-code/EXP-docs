@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_h_q_sphere" kind="class" language="C++" prot="public">
+    <compoundname>HQSphere</compoundname>
+    <basecompoundref refid="class_axi_sym_biorth" prot="public" virt="non-virtual">AxiSymBiorth</basecompoundref>
+    <includes refid="biorth_8_h" local="no">biorth.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_q_sphere_1ad3773cae92abbcc207624eff7ded462c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HQSphere::rbmax</definition>
+        <argsstring></argsstring>
+        <name>rbmax</name>
+        <qualifiedname>HQSphere::rbmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="199" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="199" bodyend="-1"/>
+        <referencedby refid="class_h_q_sphere_1a0b37f25b7ccf91842521b36322ac8c30" compoundref="biorth_8_h" startline="229" endline="229">rb_max</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_q_sphere_1a194e1e87c7d017e8a567acf91f8f8e54" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HQSphere::rbmin</definition>
+        <argsstring></argsstring>
+        <name>rbmin</name>
+        <qualifiedname>HQSphere::rbmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="198" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="198" bodyend="-1"/>
+        <referencedby refid="class_h_q_sphere_1a1471a710645006971ffb8b05f05c3d69" compoundref="biorth_8_h" startline="228" endline="228">rb_min</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_q_sphere_1a73ee63f0e7429ffbb2bfa4784bcb1d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::d_r_to_rb</definition>
+        <argsstring>(double const)</argsstring>
+        <name>d_r_to_rb</name>
+        <qualifiedname>HQSphere::d_r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaaf67379cdeb608b5f9c07509bb22631">d_r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="226" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a752eb9da99ccd28691475dc11613a122" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HQSphere::dens</definition>
+        <argsstring>(const int nn, const int l, const double r, Eigen::VectorXd &amp;a)</argsstring>
+        <name>dens</name>
+        <qualifiedname>HQSphere::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6222c8a860d4e41a3d81b74d790442c8">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="212" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a396c43ce8324193aa47a5873e025cfd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::dens</definition>
+        <argsstring>(const int nn, const int l, const double rb)</argsstring>
+        <name>dens</name>
+        <qualifiedname>HQSphere::dens</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a6cb90b729dbfb31340bf8930049df4cd">dens</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="208" column="10"/>
+        <referencedby refid="class_h_q_sphere_1a3a79cabc64d4f36000dc8c6101bae927" compoundref="biorth_8_h" startline="218" endline="219">densR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a3a79cabc64d4f36000dc8c6101bae927" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double HQSphere::densR</definition>
+        <argsstring>(const int nn, const int l, const double r)</argsstring>
+        <name>densR</name>
+        <qualifiedname>HQSphere::densR</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="218" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="218" bodyend="219"/>
+        <references refid="class_h_q_sphere_1a396c43ce8324193aa47a5873e025cfd1">dens</references>
+        <references refid="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe">r_to_rb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1ae8b3c95585716adf85e48205b82160f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HQSphere::HQSphere</definition>
+        <argsstring>(void)</argsstring>
+        <name>HQSphere</name>
+        <qualifiedname>HQSphere::HQSphere</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="203" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a6095bf4dfc2cd4cac26831c4fda4cf8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::krnl</definition>
+        <argsstring>(const int nn, const int l)</argsstring>
+        <name>krnl</name>
+        <qualifiedname>HQSphere::krnl</qualifiedname>
+        <reimplements refid="class_biorth_1a582200336065fac43a3282ee0671cffb">krnl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="209" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1aac6bf4b01e942cb058726094832eeb03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::norm</definition>
+        <argsstring>(const int nn, const int l)</argsstring>
+        <name>norm</name>
+        <qualifiedname>HQSphere::norm</qualifiedname>
+        <reimplements refid="class_biorth_1a4997a44fb308362868547f4eb0f23c5a">norm</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="210" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a600350ad6e621b31394b9b6292b1ccc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HQSphere::potl</definition>
+        <argsstring>(const int nn, const int l, const double r, Eigen::VectorXd &amp;a)</argsstring>
+        <name>potl</name>
+        <qualifiedname>HQSphere::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a2216fefb9a71a8dcdd378da8c3d82fbb">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="211" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a473272545f1cba15a45d79ece84cbae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::potl</definition>
+        <argsstring>(const int nn, const int l, const double rb)</argsstring>
+        <name>potl</name>
+        <qualifiedname>HQSphere::potl</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1aaec9137305d7c2eed46ca59c5ea777b1">potl</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="207" column="10"/>
+        <referencedby refid="class_h_q_sphere_1a12c53c076d3aacdcf393c40aecef57a7" compoundref="biorth_8_h" startline="216" endline="217">potlR</referencedby>
+        <referencedby refid="class_h_q_sphere_1a90ea3c5f29a8f5fd97105ec4c05ca5a4" compoundref="biorth_8_h" startline="220" endline="222">potlRZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a12c53c076d3aacdcf393c40aecef57a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::potlR</definition>
+        <argsstring>(const int nn, const int l, const double r)</argsstring>
+        <name>potlR</name>
+        <qualifiedname>HQSphere::potlR</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a63c2bf04065efbbdcb005377836e0894">potlR</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="216" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="216" bodyend="217"/>
+        <references refid="class_h_q_sphere_1a473272545f1cba15a45d79ece84cbae2">potl</references>
+        <references refid="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe">r_to_rb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a90ea3c5f29a8f5fd97105ec4c05ca5a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::potlRZ</definition>
+        <argsstring>(const int nn, const int l, const double r, const double z)</argsstring>
+        <name>potlRZ</name>
+        <qualifiedname>HQSphere::potlRZ</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1afa024ea053a13ae6094ed1ee65653eac">potlRZ</reimplements>
+        <param>
+          <type>const int</type>
+          <declname>nn</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="220" column="17" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="220" bodyend="222"/>
+        <references refid="class_h_q_sphere_1a473272545f1cba15a45d79ece84cbae2">potl</references>
+        <references refid="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe">r_to_rb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::r_to_rb</definition>
+        <argsstring>(double const)</argsstring>
+        <name>r_to_rb</name>
+        <qualifiedname>HQSphere::r_to_rb</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a5fea78e59e755b9d3e05965b223f10aa">r_to_rb</reimplements>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="225" column="10"/>
+        <referencedby refid="class_h_q_sphere_1a3a79cabc64d4f36000dc8c6101bae927" compoundref="biorth_8_h" startline="218" endline="219">densR</referencedby>
+        <referencedby refid="class_h_q_sphere_1a12c53c076d3aacdcf393c40aecef57a7" compoundref="biorth_8_h" startline="216" endline="217">potlR</referencedby>
+        <referencedby refid="class_h_q_sphere_1a90ea3c5f29a8f5fd97105ec4c05ca5a4" compoundref="biorth_8_h" startline="220" endline="222">potlRZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a0b37f25b7ccf91842521b36322ac8c30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::rb_max</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_max</name>
+        <qualifiedname>HQSphere::rb_max</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a8a0737fc879f5950452fd0a0b895a57b">rb_max</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="229" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="229" bodyend="229"/>
+        <references refid="class_h_q_sphere_1ad3773cae92abbcc207624eff7ded462c" compoundref="biorth_8_h" startline="199">rbmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a1471a710645006971ffb8b05f05c3d69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::rb_min</definition>
+        <argsstring>(void)</argsstring>
+        <name>rb_min</name>
+        <qualifiedname>HQSphere::rb_min</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a732c3f77a9d9968f5a06ba7d57c69832">rb_min</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="228" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="228" bodyend="228"/>
+        <references refid="class_h_q_sphere_1a194e1e87c7d017e8a567acf91f8f8e54" compoundref="biorth_8_h" startline="198">rbmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a8c4a12167858d921738b4e3c70a342b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double HQSphere::rb_to_r</definition>
+        <argsstring>(double const)</argsstring>
+        <name>rb_to_r</name>
+        <qualifiedname>HQSphere::rb_to_r</qualifiedname>
+        <reimplements refid="class_axi_sym_biorth_1a3815fa706249dff779ff597d8ab37c71">rb_to_r</reimplements>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="224" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_q_sphere_1a4952c199c4dc8964fcf6d8fa96e89268" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual HQSphere::~HQSphere</definition>
+        <argsstring>()</argsstring>
+        <name>~HQSphere</name>
+        <qualifiedname>HQSphere::~HQSphere</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="204" column="11" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="204" bodyend="204"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>HQSphere</label>
+        <link refid="class_h_q_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AxiSymBiorth</label>
+        <link refid="class_axi_sym_biorth"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>HQSphere</label>
+        <link refid="class_h_q_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth.H" line="194" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth.H" bodystart="195" bodyend="231"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_biorth_1a5ab6aaba58d2c9115a111a5383158518" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a2e936fa39b497ab4f2316f7b6bd2f226" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>BiorthID</name></member>
+      <member refid="class_biorth_1a3331c0ec9dabbed562c32c3d59c7b1bb" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>bomb</name></member>
+      <member refid="class_h_q_sphere_1a73ee63f0e7429ffbb2bfa4784bcb1d2a" prot="public" virt="virtual"><scope>HQSphere</scope><name>d_r_to_rb</name></member>
+      <member refid="class_h_q_sphere_1a396c43ce8324193aa47a5873e025cfd1" prot="public" virt="virtual"><scope>HQSphere</scope><name>dens</name></member>
+      <member refid="class_h_q_sphere_1a752eb9da99ccd28691475dc11613a122" prot="public" virt="virtual"><scope>HQSphere</scope><name>dens</name></member>
+      <member refid="class_h_q_sphere_1a3a79cabc64d4f36000dc8c6101bae927" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>densR</name></member>
+      <member refid="class_axi_sym_biorth_1a9d37a4dad785da836b339264b6176fc2" prot="protected" virt="non-virtual"><scope>HQSphere</scope><name>dof</name></member>
+      <member refid="class_axi_sym_biorth_1a87004c3a9f3587d69b8e131389d53046" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>get_dens</name></member>
+      <member refid="class_axi_sym_biorth_1a9e4634e741f090bd7a2c088750d894e4" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>get_dof</name></member>
+      <member refid="class_axi_sym_biorth_1a1220954284feb464502dd18a8a74440b" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>get_potl</name></member>
+      <member refid="class_h_q_sphere_1ae8b3c95585716adf85e48205b82160f5" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>HQSphere</name></member>
+      <member refid="class_biorth_1a732367609f458cf4128bb37f2641c30b" prot="public" virt="non-virtual"><scope>HQSphere</scope><name>id</name></member>
+      <member refid="class_h_q_sphere_1a6095bf4dfc2cd4cac26831c4fda4cf8f" prot="public" virt="virtual"><scope>HQSphere</scope><name>krnl</name></member>
+      <member refid="class_h_q_sphere_1aac6bf4b01e942cb058726094832eeb03" prot="public" virt="virtual"><scope>HQSphere</scope><name>norm</name></member>
+      <member refid="class_h_q_sphere_1a473272545f1cba15a45d79ece84cbae2" prot="public" virt="virtual"><scope>HQSphere</scope><name>potl</name></member>
+      <member refid="class_h_q_sphere_1a600350ad6e621b31394b9b6292b1ccc0" prot="public" virt="virtual"><scope>HQSphere</scope><name>potl</name></member>
+      <member refid="class_h_q_sphere_1a12c53c076d3aacdcf393c40aecef57a7" prot="public" virt="virtual"><scope>HQSphere</scope><name>potlR</name></member>
+      <member refid="class_h_q_sphere_1a90ea3c5f29a8f5fd97105ec4c05ca5a4" prot="public" virt="virtual"><scope>HQSphere</scope><name>potlRZ</name></member>
+      <member refid="class_h_q_sphere_1a5339ea70096852fe29b59e905a5696fe" prot="public" virt="virtual"><scope>HQSphere</scope><name>r_to_rb</name></member>
+      <member refid="class_h_q_sphere_1a0b37f25b7ccf91842521b36322ac8c30" prot="public" virt="virtual"><scope>HQSphere</scope><name>rb_max</name></member>
+      <member refid="class_h_q_sphere_1a1471a710645006971ffb8b05f05c3d69" prot="public" virt="virtual"><scope>HQSphere</scope><name>rb_min</name></member>
+      <member refid="class_h_q_sphere_1a8c4a12167858d921738b4e3c70a342b9" prot="public" virt="virtual"><scope>HQSphere</scope><name>rb_to_r</name></member>
+      <member refid="class_h_q_sphere_1ad3773cae92abbcc207624eff7ded462c" prot="private" virt="non-virtual"><scope>HQSphere</scope><name>rbmax</name></member>
+      <member refid="class_h_q_sphere_1a194e1e87c7d017e8a567acf91f8f8e54" prot="private" virt="non-virtual"><scope>HQSphere</scope><name>rbmin</name></member>
+      <member refid="class_axi_sym_biorth_1adcf402d63d58581bfb671cc97b213222" prot="public" virt="virtual"><scope>HQSphere</scope><name>~AxiSymBiorth</name></member>
+      <member refid="class_biorth_1a83c4824d7003048794102f54152cfdbc" prot="public" virt="virtual"><scope>HQSphere</scope><name>~Biorth</name></member>
+      <member refid="class_h_q_sphere_1a4952c199c4dc8964fcf6d8fa96e89268" prot="public" virt="virtual"><scope>HQSphere</scope><name>~HQSphere</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

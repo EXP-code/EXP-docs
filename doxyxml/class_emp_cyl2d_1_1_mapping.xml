@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_emp_cyl2d_1_1_mapping" kind="class" language="C++" prot="public">
+    <compoundname>EmpCyl2d::Mapping</compoundname>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::Mapping::cmap</definition>
+        <argsstring></argsstring>
+        <name>cmap</name>
+        <qualifiedname>EmpCyl2d::Mapping::cmap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="51" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::Mapping::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>EmpCyl2d::Mapping::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="52" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_mapping_1af91fd35ce4a5c4b043f4cb586540812c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::Mapping::d_xi_to_r</definition>
+        <argsstring>(double xi)</argsstring>
+        <name>d_xi_to_r</name>
+        <qualifiedname>EmpCyl2d::Mapping::d_xi_to_r</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>xi</declname>
+        </param>
+        <briefdescription>
+<para>Jacobian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="69" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_mapping_1aac468b17199576b0c5f5eac575385257" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::Mapping::Mapping</definition>
+        <argsstring>()</argsstring>
+        <name>Mapping</name>
+        <qualifiedname>EmpCyl2d::Mapping::Mapping</qualifiedname>
+        <briefdescription>
+<para>Null constructor (for copy construct) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="57" column="5" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_mapping_1ad9f5d2a3de2c851b773fd32361611db2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::Mapping::Mapping</definition>
+        <argsstring>(double scale, bool cmap)</argsstring>
+        <name>Mapping</name>
+        <qualifiedname>EmpCyl2d::Mapping::Mapping</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cmap</declname>
+        </param>
+        <briefdescription>
+<para>Main constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="60" column="5" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_mapping_1ab4a35a4ba916b538bffbf8aaa7abb27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::Mapping::r_to_xi</definition>
+        <argsstring>(double r)</argsstring>
+        <name>r_to_xi</name>
+        <qualifiedname>EmpCyl2d::Mapping::r_to_xi</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>From semi-infinite radius to [-1, 1]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="63" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_mapping_1a10ade36ddb79b97616bc077766b14697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::Mapping::xi_to_r</definition>
+        <argsstring>(double xi)</argsstring>
+        <name>xi_to_r</name>
+        <qualifiedname>EmpCyl2d::Mapping::xi_to_r</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>xi</declname>
+        </param>
+        <briefdescription>
+<para>From [-1, 1] to semi-infinite radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="66" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Map the radius. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="48" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="49" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_emp_cyl2d_1_1_mapping_1a2597e3e8afa5aeeb4b0ebee4268e4945" prot="protected" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>cmap</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1af91fd35ce4a5c4b043f4cb586540812c" prot="public" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>d_xi_to_r</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1aac468b17199576b0c5f5eac575385257" prot="public" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>Mapping</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1ad9f5d2a3de2c851b773fd32361611db2" prot="public" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>Mapping</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1ab4a35a4ba916b538bffbf8aaa7abb27f" prot="public" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>r_to_xi</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1a9f414d9679869558d3a78f1d44c19d20" prot="protected" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>scale</name></member>
+      <member refid="class_emp_cyl2d_1_1_mapping_1a10ade36ddb79b97616bc077766b14697" prot="public" virt="non-virtual"><scope>EmpCyl2d::Mapping</scope><name>xi_to_r</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

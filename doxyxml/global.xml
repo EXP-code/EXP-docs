@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="global" kind="page">
+    <compoundname>global</compoundname>
+    <title>Global variables</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>These variables are specified in the leading (unnamed stanza) of the input file, see <ref refid="config" kindref="compound">Configuration files</ref> for details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbodmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum number of bodies per process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nsteps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum number of steps to execute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nthrds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of threads per process (e.g. one per processor) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbalance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of steps between load balancing (use 0 for none) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dbthresh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the load balancing threshold (larger difference initiates balancing) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tnow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the timestep </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PFbufsz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the particle ferry buffer size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NICE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the process priority </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>VERBOSE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the output logging level </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multistep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of time step levels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxlev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum level for expansion interpolation (default: 100) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ctrlev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum level for center determination (default: 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dynfracV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the time step velocity coefficient (default: 0.01) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dynfracA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the time step accelration coefficient (default: 0.03) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>use_cwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uses Node 0&apos;s home dir for the working dir on all nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posnsync</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>synchronizes multistep positions at each substep (default: true) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eqmotion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>toggles phase space advance (e.g. for use with externally supplied mapping). On by default. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_cov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>resets total center of velocity to zero if true </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>restart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>global set on restart (to used by initializers and user modules) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>homedir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the home directory for configuration files, etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ldlibdir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the directory containing loadable modules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the input file for restart </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parmfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the parameter dump file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ratefile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the initial processor rate file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outdir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the directory for output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>runtag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a suffix or prefix used for labeling report files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="global.doc"/>
+  </compounddef>
+</doxygen>

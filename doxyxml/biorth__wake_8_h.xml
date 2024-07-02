@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="biorth__wake_8_h" kind="file" language="C++">
+    <compoundname>biorth_wake.H</compoundname>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes local="no">complex</includes>
+    <includes refid="biorth_8_h" local="no">biorth.H</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>biorth.H</label>
+        <link refid="biorth_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/biorth_wake.H</label>
+        <link refid="biorth__wake_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="3">
+        <label>complex</label>
+      </node>
+      <node id="7">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_biorth_wake" prot="public">BiorthWake</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>may<sp/>look<sp/>like<sp/>C<sp/>code,<sp/>but<sp/>it<sp/>is<sp/>really<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Wake<sp/>generation<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_biorth_wake_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_biorth_wake_h<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="biorth_8_h" kindref="compound">biorth.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_biorth_wake" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_biorth_wake" kindref="compound">BiorthWake</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_biorth_wake_1a3d122ae4cd8d8465387df760aa8f1dd7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_axi_sym_biorth" kindref="compound">AxiSymBiorth</ref><sp/>*<ref refid="class_biorth_wake_1a3d122ae4cd8d8465387df760aa8f1dd7" kindref="member">bio</ref>;</highlight></codeline>
+<codeline lineno="18" refid="class_biorth_wake_1aec6b021a838a46b213837a34c49fe8f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1aec6b021a838a46b213837a34c49fe8f0" kindref="member">lmax</ref>,<sp/><ref refid="class_biorth_wake_1a29ebef81ff3db1e400d26c0f8d97b3e7" kindref="member">nmax</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_biorth_wake_1aecc0e08f2416a67c723ae0c652df3863" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_biorth_wake_1aecc0e08f2416a67c723ae0c652df3863" kindref="member">norm_grid</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stored<sp/>as<sp/>the<sp/>sqr<sp/>root<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normalization<sp/>for<sp/>efficiency<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wake<sp/>reconstruction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_biorth_wake_1a3c45bdfd6d5703fe31a50bc9cb29d11c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a3c45bdfd6d5703fe31a50bc9cb29d11c" kindref="member">coefs_defined</ref>;</highlight></codeline>
+<codeline lineno="25" refid="class_biorth_wake_1aced7d6005f42aaf2f485c6d00d4a039e" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_biorth_wake_1aced7d6005f42aaf2f485c6d00d4a039e" kindref="member">factorial</ref>;</highlight></codeline>
+<codeline lineno="26" refid="class_biorth_wake_1aace083657da48c081b9ac18f8079a3de" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_biorth_wake_1aace083657da48c081b9ac18f8079a3de" kindref="member">expcoef</ref>;</highlight></codeline>
+<codeline lineno="27" refid="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" kindref="member">rscl</ref>;</highlight></codeline>
+<codeline lineno="28" refid="class_biorth_wake_1a1b4e13bcd12d9150089c2254874eaece" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a1b4e13bcd12d9150089c2254874eaece" kindref="member">used</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_biorth_wake_1a2d4d92d6847b2bbfe14fb2fbb0bcd6b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a2d4d92d6847b2bbfe14fb2fbb0bcd6b0" kindref="member">accumulate_2d</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mass);</highlight></codeline>
+<codeline lineno="31" refid="class_biorth_wake_1af8ececf0c02944c32180bd6a6d5dd222" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1af8ececf0c02944c32180bd6a6d5dd222" kindref="member">accumulate_3d</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mass);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_biorth_wake_1a87be94370d011ecd85bed933703ecd1f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a87be94370d011ecd85bed933703ecd1f" kindref="member">reconstruct_2d</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens,<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L1=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L2=10000);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_biorth_wake_1a34de97783782ae415d3006463dd6bf49" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a34de97783782ae415d3006463dd6bf49" kindref="member">reconstruct_3d</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>costh,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L1=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L2=10000);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_biorth_wake_1a8698d99f8318a8bad2138a3e342462ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a8698d99f8318a8bad2138a3e342462ae" kindref="member">bomb</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Orientation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_biorth_wake_1aa010d45b49ace3cca6d3778993596cbb" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_wake_1aa010d45b49ace3cca6d3778993596cbb" kindref="member">I</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_biorth_wake_1aad2d849bd09404af716e29fef07b4122" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXcd<sp/><ref refid="class_biorth_wake_1aad2d849bd09404af716e29fef07b4122" kindref="member">ylm</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_biorth_wake_1adeb9b2447bdf61c6d571409e19d94e8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1adeb9b2447bdf61c6d571409e19d94e8d" kindref="member">init_orientation</ref>;</highlight></codeline>
+<codeline lineno="50" refid="class_biorth_wake_1a9dcaf70ce76acceba188a9d4cea64ab7" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_biorth_wake_1a33604e947e18c8667959bb409f172669" kindref="member">param</ref>,<sp/><ref refid="class_biorth_wake_1aaa25ed3e8333ab6f0a3954fb3a81ed1a" kindref="member">psum</ref>,<sp/><ref refid="class_biorth_wake_1aaa4fe067c7fb6656cf1458b1939b98b5" kindref="member">ptry</ref>,<sp/><ref refid="class_biorth_wake_1a9dcaf70ce76acceba188a9d4cea64ab7" kindref="member">amby</ref>;</highlight></codeline>
+<codeline lineno="51" refid="class_biorth_wake_1a918a339d53b3129001f1e9ef55cec03f" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/><ref refid="class_biorth_wake_1a918a339d53b3129001f1e9ef55cec03f" kindref="member">ambp</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_biorth_wake_1a761aabc81cf82cbd06c203e67b0ab55b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a761aabc81cf82cbd06c203e67b0ab55b" kindref="member">iter</ref>,<sp/><ref refid="class_biorth_wake_1ac91d3df81b1752f899e0924c292d98b6" kindref="member">ll</ref>,<sp/><ref refid="class_biorth_wake_1a13d4e382bae25d228ccfd7240a7bcdb9" kindref="member">mm</ref>;</highlight></codeline>
+<codeline lineno="54" refid="class_biorth_wake_1a79ab99d2abf834967c34a0e16c4dbd67" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a79ab99d2abf834967c34a0e16c4dbd67" kindref="member">tol</ref>;</highlight></codeline>
+<codeline lineno="55" refid="class_biorth_wake_1a8ec22ea36595c50f4e85973b9e0936b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a8ec22ea36595c50f4e85973b9e0936b9" kindref="member">iterDef</ref>;</highlight></codeline>
+<codeline lineno="56" refid="class_biorth_wake_1a5abedd0c94ab4d8187e85949f114c129" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a5abedd0c94ab4d8187e85949f114c129" kindref="member">tolDef</ref>;</highlight></codeline>
+<codeline lineno="57" refid="class_biorth_wake_1a6532bf593c12958d7a4b50dd50e963b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a6532bf593c12958d7a4b50dd50e963b0" kindref="member">ndim</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" kindref="member">nfunk</ref>;</highlight></codeline>
+<codeline lineno="60" refid="class_biorth_wake_1ac14c747f7eaf2d519442452d695b1fca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1ac14c747f7eaf2d519442452d695b1fca" kindref="member">modulo_param</ref>(std::vector&lt;double&gt;&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="61" refid="class_biorth_wake_1a1ce0e032fa1d45bfdbcce3fe8a7e79fa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a1ce0e032fa1d45bfdbcce3fe8a7e79fa" kindref="member">orientation_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62" refid="class_biorth_wake_1a1d7317ae9d7d411e574d44d15a0b54bb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a1d7317ae9d7d411e574d44d15a0b54bb" kindref="member">amoeba_energy</ref>(std::vector&lt;double&gt;&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="63" refid="class_biorth_wake_1af0802d0387df6ed380b8468314117809" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1af0802d0387df6ed380b8468314117809" kindref="member">get_transform</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>phi,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>theta,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>psi,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>cost);</highlight></codeline>
+<codeline lineno="64" refid="class_biorth_wake_1a2537c6bb228af55b38f8fc6c629826bd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a2537c6bb228af55b38f8fc6c629826bd" kindref="member">amoeba</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65" refid="class_biorth_wake_1a9abfe7e8c9bb0b38386afbf032ac3953" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a9abfe7e8c9bb0b38386afbf032ac3953" kindref="member">amotry</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ihi,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fac);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Debugging<sp/>routines<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_biorth_wake_1aef928f5838a6b280af71e9e35402495e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1aef928f5838a6b280af71e9e35402495e" kindref="member">test_transform</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68" refid="class_biorth_wake_1a7779142bb94939f2dd22775efae362fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a7779142bb94939f2dd22775efae362fd" kindref="member">check_orientation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69" refid="class_biorth_wake_1a00e2faa814f3dd3532e5435be310ba7f" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_wake_1a00e2faa814f3dd3532e5435be310ba7f" kindref="member">test_fct</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_biorth_wake_1a1936e7cdf4462a5b6d4e87d25fbb8dd2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_biorth_wake_1a1936e7cdf4462a5b6d4e87d25fbb8dd2" kindref="member">BiorthWake</ref>(<ref refid="class_axi_sym_biorth" kindref="compound">AxiSymBiorth</ref><sp/>*BIO,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LMAX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NMAX);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_biorth_wake_1a7513c664ff8f046c35faa17690935671" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_biorth_wake_1a7513c664ff8f046c35faa17690935671" kindref="member">~BiorthWake</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_biorth_wake_1a11f4732dd628b2a39980e443894fe7be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a11f4732dd628b2a39980e443894fe7be" kindref="member">set_scale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scl)<sp/>{<sp/><ref refid="class_biorth_wake_1a16df2058df3d107c59b731ef91cb474b" kindref="member">rscl</ref><sp/>=<sp/>scl;<sp/>}</highlight></codeline>
+<codeline lineno="81" refid="class_biorth_wake_1a64a0b3883833ee60dd5ad6e273c80dd2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a64a0b3883833ee60dd5ad6e273c80dd2" kindref="member">reset_coefs</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_biorth_wake_1a827b4044524ba2cf003e095c3a816dc0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a827b4044524ba2cf003e095c3a816dc0" kindref="member">accumulate</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mass);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_biorth_wake_1a33ea42ffb26ee85d13242a4b4c792cb2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a33ea42ffb26ee85d13242a4b4c792cb2" kindref="member">reconstruct</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>costh,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>dens,<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>potl,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L1=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L2=10000);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_biorth_wake_1a32d6e7c92f91510e003a922eea897a90" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a32d6e7c92f91510e003a922eea897a90" kindref="member">orientation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::VectorXd&amp;<sp/>phi,<sp/>Eigen::VectorXd&amp;<sp/>theta,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::VectorXd&amp;<sp/>psi,<sp/>Eigen::VectorXd&amp;<sp/>cost);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="class_biorth_wake_1a52a8d9073ffeaf19633bad02a9553b08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a52a8d9073ffeaf19633bad02a9553b08" kindref="member">get_amoeba_iterations</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1a9fa535d4091e22ecaf923fdd8aa0c8b4" kindref="member">nfunk</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_biorth_wake_1ae2790829691ba08e94b9d0ad138af8b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_wake_1ae2790829691ba08e94b9d0ad138af8b4" kindref="member">energy</ref>(std::vector&lt;double&gt;&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/biorth_wake.H"/>
+  </compounddef>
+</doxygen>

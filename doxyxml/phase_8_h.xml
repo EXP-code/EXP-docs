@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="phase_8_h" kind="file" language="C++">
+    <compoundname>phase.H</compoundname>
+    <includes local="no">ostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes refid="numerical_8_h" local="no">numerical.H</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>numerical.H</label>
+        <link refid="numerical_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/phase.H</label>
+        <link refid="phase_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_ensemble" prot="public">Ensemble</innerclass>
+    <innerclass refid="class_frame___rotation" prot="public">Frame_Rotation</innerclass>
+    <innerclass refid="class_phase" prot="public">Phase</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="phase_8_h_1a32b97e03bb111cd5775ac6919dc8db32" prot="public" static="no">
+        <type>Eigen::Vector3d(*</type>
+        <definition>typedef Eigen::Vector3d(* force_func_ptr) (double, Eigen::Vector3d &amp;, Eigen::Vector3d &amp;)</definition>
+        <argsstring>)(double, Eigen::Vector3d &amp;, Eigen::Vector3d &amp;)</argsstring>
+        <name>force_func_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="13" column="9" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase_8_h_1a836f1515043416409e8e3c93004e4eee" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* freezing_function) (Phase &amp;)</definition>
+        <argsstring>)(Phase &amp;)</argsstring>
+        <name>freezing_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="162" column="9" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase_8_h_1aee87d18ed4086c87efe06d6d4c106d30" prot="public" static="no">
+        <type>double(*</type>
+        <definition>typedef double(* pot_func_ptr) (double, Eigen::Vector3d &amp;)</definition>
+        <argsstring>)(double, Eigen::Vector3d &amp;)</argsstring>
+        <name>pot_func_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="14" column="9" bodyfile="/home/weinberg/Projects/EXP/include/phase.H" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="phase_8_h_1af915d907d2645c8177ca72add6eaf382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double epicyclic_kappa</definition>
+        <argsstring>(double)</argsstring>
+        <name>epicyclic_kappa</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="137" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="137" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1a81b58cc2788dff5c1255bec126c42381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void forward_interp</definition>
+        <argsstring>(double, double, double, double, double, double, double, double &amp;, double &amp;)</argsstring>
+        <name>forward_interp</name>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="230" column="6" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="230" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1a456f1226446218a175a6762c82951359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double inverse_interp_zero</definition>
+        <argsstring>(double, double, double, double, double, double)</argsstring>
+        <name>inverse_interp_zero</name>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="227" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="227" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1aed9e4578035030ee3f253ac13ae80dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Newton</definition>
+        <argsstring>(double, Eigen::VectorXd &amp;, Eigen::VectorXd &amp;)</argsstring>
+        <name>Newton</name>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="134" column="6" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1a0c9d268d5ed44daa11f4fb509da934d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Oort_A</definition>
+        <argsstring>(double)</argsstring>
+        <name>Oort_A</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="138" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="138" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1a3377e87f757fd0a9b2eedfa000b28db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Oort_B</definition>
+        <argsstring>(double)</argsstring>
+        <name>Oort_B</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="139" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="139" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1aa7e32e3c67df0b9093a055eccd20062a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double v_circ</definition>
+        <argsstring>(double)</argsstring>
+        <name>v_circ</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="135" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="135" declcolumn="8"/>
+        <referencedby refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" compoundref="phase_8_h" startline="151" endline="157">Frame_Rotation::set_corotation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1a7a47c6bd8133e3b423cca596337e31de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double vertical_kappa</definition>
+        <argsstring>(double)</argsstring>
+        <name>vertical_kappa</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="136" column="8" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="136" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="phase_8_h_1aa1b475fba2aeb3e51b4282041ae4c9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::Matrix3d</type>
+        <definition>Eigen::Matrix3d z_Rotation</definition>
+        <argsstring>(double)</argsstring>
+        <name>z_Rotation</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/phase.H" line="161" column="17" declfile="/home/weinberg/Projects/EXP/include/phase.H" declline="161" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_phase_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_phase_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="numerical_8_h" kindref="compound">numerical.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ensemble" kindref="compound">Ensemble</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="phase_8_h_1a32b97e03bb111cd5775ac6919dc8db32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Eigen::Vector3d<sp/>(*<ref refid="phase_8_h_1a32b97e03bb111cd5775ac6919dc8db32" kindref="member">force_func_ptr</ref>)(double,<sp/>Eigen::Vector3d<sp/>&amp;,<sp/>Eigen::Vector3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="14" refid="phase_8_h_1aee87d18ed4086c87efe06d6d4c106d30" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>double<sp/>(*<ref refid="phase_8_h_1aee87d18ed4086c87efe06d6d4c106d30" kindref="member">pot_func_ptr</ref>)(double,<sp/>Eigen::Vector3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_phase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_phase" kindref="compound">Phase</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" kindref="member">x</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>position<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>velocity<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" kindref="member">m</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_phase_1a4cf8c6b0fd4c4da034b72c6bfca09873" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a4cf8c6b0fd4c4da034b72c6bfca09873" kindref="member">t</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>current<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_phase_1aa938fa8bd40206ea7795cc41c6d54d17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aa938fa8bd40206ea7795cc41c6d54d17" kindref="member">work</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>total<sp/>work<sp/>done<sp/>so<sp/>far</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="class_phase_1ae98afcd94db7dd25d71b0808d8e26613" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ae98afcd94db7dd25d71b0808d8e26613" kindref="member">vscale</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>typical<sp/>length<sp/>scale</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_phase_1ab4b3499d2846520ef75259d6d4846edf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ab4b3499d2846520ef75259d6d4846edf" kindref="member">xscale</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>typical<sp/>speed<sp/>scale</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_phase_1a500b19be357810e4e3adb3ad41190096" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a500b19be357810e4e3adb3ad41190096" kindref="member">tolerance</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>desired<sp/>integration<sp/>accuracy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_phase_1a926be8ac19258cb78822e3fda918f21d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a926be8ac19258cb78822e3fda918f21d" kindref="member">potential_defined</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>a<sp/>potential<sp/>been<sp/>set?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_phase_1ae184c430909c73551c499fab2a8b4d79" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="numerical_8_h_1a0aefe47f5a0d9a3f079c32493f0f7c78" kindref="member">ode_integrator</ref><sp/><ref refid="class_phase_1ae184c430909c73551c499fab2a8b4d79" kindref="member">integrator</ref>;<sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>integrator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_phase_1ab102729d85ee2f379e4da0676fbb626a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="numerical_8_h_1aad116aeeb2c95bb00b91cb98b31b4d33" kindref="member">symp_integrator</ref><sp/><ref refid="class_phase_1ab102729d85ee2f379e4da0676fbb626a" kindref="member">mapping</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>sympletic<sp/>integrator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_phase_1afcedcd1b4b0a0c85b30697cabb3c4d57" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_phase_1afcedcd1b4b0a0c85b30697cabb3c4d57" kindref="member">integrator_name</ref>[8];<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>ODE<sp/>integrator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_phase_1aef5ce55ff9c5d82dee4c2a055b3f0670" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aef5ce55ff9c5d82dee4c2a055b3f0670" kindref="member">symp_integrator_name</ref>[8];<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>SYMP<sp/>integrator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="class_phase_1a84da663feab796cdcc0278a0329a0d1d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase_1a84da663feab796cdcc0278a0329a0d1d" kindref="member">Phase</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37" refid="class_phase_1aefcecb5376db4ef5ce73300c8478582d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase_1aefcecb5376db4ef5ce73300c8478582d" kindref="member">Phase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>specification<sp/>of<sp/>model</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="class_phase_1ab0b36fc44cd733750c8d6455f8c04e97" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ab0b36fc44cd733750c8d6455f8c04e97" kindref="member">Register_Potential</ref>(<ref refid="phase_8_h_1aee87d18ed4086c87efe06d6d4c106d30" kindref="member">pot_func_ptr</ref><sp/>p,<sp/><ref refid="phase_8_h_1a32b97e03bb111cd5775ac6919dc8db32" kindref="member">force_func_ptr</ref><sp/>f)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>{<ref refid="class_phase_1a926be8ac19258cb78822e3fda918f21d" kindref="member">potential_defined</ref>=1;<sp/><ref refid="class_phase_1a1148cce2c69ce12e8dcfc2cb50104df4" kindref="member">Potential</ref><sp/>=<sp/>p;<sp/><ref refid="class_phase_1a564d630d00bd8e7cde321367220631cc" kindref="member">Force</ref><sp/>=<sp/>f;}</highlight></codeline>
+<codeline lineno="44" refid="class_phase_1ac7ea03f533004115aaa1378f01281546" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Eigen::Vector3d<sp/><ref refid="class_phase_1ac7ea03f533004115aaa1378f01281546" kindref="member">Default_Force</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>Eigen::Vector3d<sp/>&amp;,<sp/>Eigen::Vector3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="45" refid="class_phase_1ab52c7dee040dc8dc926f6ee8c5ba9157" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ab52c7dee040dc8dc926f6ee8c5ba9157" kindref="member">Default_Potential</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>Eigen::Vector3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="46" refid="class_phase_1a1148cce2c69ce12e8dcfc2cb50104df4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1aee87d18ed4086c87efe06d6d4c106d30" kindref="member">pot_func_ptr</ref><sp/><ref refid="class_phase_1a1148cce2c69ce12e8dcfc2cb50104df4" kindref="member">Potential</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_phase_1a564d630d00bd8e7cde321367220631cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a32b97e03bb111cd5775ac6919dc8db32" kindref="member">force_func_ptr</ref><sp/><ref refid="class_phase_1a564d630d00bd8e7cde321367220631cc" kindref="member">Force</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>assignment<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="class_phase_1a81998232b54d3abeae6299f07bcbcd21" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;<ref refid="class_phase_1a81998232b54d3abeae6299f07bcbcd21" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>to<sp/>protected<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_phase_1a8cf55f19efd4ee57a0b3d9c4bd9169e1" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/>&amp;<ref refid="class_phase_1a8cf55f19efd4ee57a0b3d9c4bd9169e1" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" kindref="member">x</ref>;}</highlight></codeline>
+<codeline lineno="60" refid="class_phase_1ad095adbdadb0888249219fa44cf12c3c" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/>&amp;<ref refid="class_phase_1ad095adbdadb0888249219fa44cf12c3c" kindref="member">Velocity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>;}</highlight></codeline>
+<codeline lineno="61" refid="class_phase_1af716281647b0672847e2ef2df0c0bab5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_phase_1af716281647b0672847e2ef2df0c0bab5" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" kindref="member">x</ref>[i];}</highlight></codeline>
+<codeline lineno="62" refid="class_phase_1a5be0779b144b07c28ee02ea5fd0ceed5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_phase_1a5be0779b144b07c28ee02ea5fd0ceed5" kindref="member">Velocity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>[i];}</highlight></codeline>
+<codeline lineno="63" refid="class_phase_1ae7992e406c97fe68c2edc0eee75e1d2c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_phase_1ae7992e406c97fe68c2edc0eee75e1d2c" kindref="member">Time</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a4cf8c6b0fd4c4da034b72c6bfca09873" kindref="member">t</ref>;}</highlight></codeline>
+<codeline lineno="64" refid="class_phase_1a7e1ff70b7e8972f8cb41773bcf124455" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_phase_1a7e1ff70b7e8972f8cb41773bcf124455" kindref="member">Work</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aa938fa8bd40206ea7795cc41c6d54d17" kindref="member">work</ref>;}</highlight></codeline>
+<codeline lineno="65" refid="class_phase_1a672b70541196acc2b516bdd4b8b347aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_phase_1a672b70541196acc2b516bdd4b8b347aa" kindref="member">Mass</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" kindref="member">m</ref>;}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>and<sp/>get<sp/>the<sp/>scale<sp/>dimensions<sp/>and<sp/>tolerance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_phase_1a4b8e3b462a682a09e22bb4eaa259eef1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a4b8e3b462a682a09e22bb4eaa259eef1" kindref="member">set_Tolerance</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tol)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<ref refid="class_phase_1a500b19be357810e4e3adb3ad41190096" kindref="member">tolerance</ref><sp/>=<sp/>tol;}</highlight></codeline>
+<codeline lineno="72" refid="class_phase_1a7f7d12fb13b6f8b1e88a15b8874069cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a7f7d12fb13b6f8b1e88a15b8874069cc" kindref="member">set_Xscale</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xx)<sp/><sp/><sp/><sp/>{<ref refid="class_phase_1ab4b3499d2846520ef75259d6d4846edf" kindref="member">xscale</ref><sp/>=<sp/>xx;}</highlight></codeline>
+<codeline lineno="73" refid="class_phase_1a3efe728998b33c7fd32b329d8988e7c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a3efe728998b33c7fd32b329d8988e7c6" kindref="member">set_Vscale</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vv)<sp/><sp/><sp/><sp/>{<ref refid="class_phase_1ae98afcd94db7dd25d71b0808d8e26613" kindref="member">vscale</ref><sp/>=<sp/>vv;}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_phase_1a25f2fa8f6916442b4ecb3b1471204930" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a25f2fa8f6916442b4ecb3b1471204930" kindref="member">get_Tolerance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a500b19be357810e4e3adb3ad41190096" kindref="member">tolerance</ref>;}</highlight></codeline>
+<codeline lineno="76" refid="class_phase_1a2a9f6648a8164f135407d02a3afcd426" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a2a9f6648a8164f135407d02a3afcd426" kindref="member">get_Xscale</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ab4b3499d2846520ef75259d6d4846edf" kindref="member">xscale</ref>;}</highlight></codeline>
+<codeline lineno="77" refid="class_phase_1a140a214d9f1889b16ed3c35489b56027" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a140a214d9f1889b16ed3c35489b56027" kindref="member">get_Vscale</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ae98afcd94db7dd25d71b0808d8e26613" kindref="member">vscale</ref>;}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>or<sp/>retreive<sp/>the<sp/>ode<sp/>integrator<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="class_phase_1a550ac46cfb9e852291e7c38e31408d6f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a550ac46cfb9e852291e7c38e31408d6f" kindref="member">set_Integrator</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="83" refid="class_phase_1ade73c13e38f16d1ecb0a7602f2693fc8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_phase_1ade73c13e38f16d1ecb0a7602f2693fc8" kindref="member">get_Integrator</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>a<sp/>phase-space<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="class_phase_1ab4cce86cfcc19eebe77b983a4eecc519" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ab4cce86cfcc19eebe77b983a4eecc519" kindref="member">print</ref>(std::ostream&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rotate<sp/>frame<sp/>or<sp/>point<sp/>about<sp/>z<sp/>axis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="class_phase_1a8d946f613f5a3753339126d4b74eac28" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1a8d946f613f5a3753339126d4b74eac28" kindref="member">rotate_frame</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96" refid="class_phase_1ac3240a659f385464f43ae9b941e76730" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1ac3240a659f385464f43ae9b941e76730" kindref="member">rotate_view</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>various<sp/>functions<sp/>of<sp/>the<sp/>coordinates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="class_phase_1ae99c2318c8f3d79c4e1ee9713d89447c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1ae99c2318c8f3d79c4e1ee9713d89447c" kindref="member">Speed</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sqrt(<ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>.dot(<ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>));}</highlight></codeline>
+<codeline lineno="103" refid="class_phase_1a552eb8b28201a3d4e02708db36757660" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a552eb8b28201a3d4e02708db36757660" kindref="member">Energy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.5*<ref refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" kindref="member">m</ref>*<ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>.dot(<ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>)<sp/>+<sp/><ref refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" kindref="member">m</ref>*(*Potential)(<ref refid="class_phase_1a4cf8c6b0fd4c4da034b72c6bfca09873" kindref="member">t</ref>,<sp/><ref refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" kindref="member">x</ref>);}</highlight></codeline>
+<codeline lineno="104" refid="class_phase_1a4e02e24b93436561d9a2e32cd680902a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a4e02e24b93436561d9a2e32cd680902a" kindref="member">Jacobi</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105" refid="class_phase_1a07e1a60b0f1437cfc1c542a855e2ae78" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a07e1a60b0f1437cfc1c542a855e2ae78" kindref="member">Accuracy</ref>(<ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="106" refid="class_phase_1a61987fd75352d46b441519267337067b" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_phase_1a61987fd75352d46b441519267337067b" kindref="member">Angular_Momentum</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aad2f2a73f6db7e2f17c75333060aa169" kindref="member">m</ref>*<ref refid="class_phase_1ac2eafa4f03d8c16a4aca44f74b4a967d" kindref="member">x</ref>.cross(<ref refid="class_phase_1a745744b59a090275d5876ff3fd0216f6" kindref="member">v</ref>);}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>numerical<sp/>integration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="class_phase_1a3b7cb7864e592a0871a4e03f7141befd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1a3b7cb7864e592a0871a4e03f7141befd" kindref="member">integrate_to</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113" refid="class_phase_1a7de31f53ec58e38d5fd60318be0d7421" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1a7de31f53ec58e38d5fd60318be0d7421" kindref="member">advance</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;);</highlight></codeline>
+<codeline lineno="114" refid="class_phase_1ab4d5d4c4dda4fc0a1b91805f17ae55a8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1ab4d5d4c4dda4fc0a1b91805f17ae55a8" kindref="member">x_return_map</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>symplectic<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="class_phase_1a616e8cbbf85642f5177dca30388850e9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1a616e8cbbf85642f5177dca30388850e9" kindref="member">integrate_to_symplectic</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119" refid="class_phase_1abe6c67462c9d1a6545bf5d4bb506ff75" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1abe6c67462c9d1a6545bf5d4bb506ff75" kindref="member">advance_symplectic</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>predictor-corrector<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="class_phase_1aeebf4ad023f48e5a2266ab55a7bcd88a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1aeebf4ad023f48e5a2266ab55a7bcd88a" kindref="member">set_PC</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124" refid="class_phase_1a77c5847003665f35e7fc374daa1b387c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/><ref refid="class_phase_1a77c5847003665f35e7fc374daa1b387c" kindref="member">PC_advance</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="class_phase_1a2689e2206334cae3c0607140059401cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a2689e2206334cae3c0607140059401cf" kindref="member">binread</ref>(std::istream&amp;<sp/>fp);</highlight></codeline>
+<codeline lineno="128" refid="class_phase_1a4f40db300f955ada3d5323de08fa153f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_phase_1a4f40db300f955ada3d5323de08fa153f" kindref="member">binwrite</ref>(std::ostream&amp;<sp/>fp);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="class_phase_1a1e124ae038533aedea048a8ccf3c4356" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ensemble" kindref="compound">Ensemble</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="phase_8_h_1aed9e4578035030ee3f253ac13ae80dee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1aed9e4578035030ee3f253ac13ae80dee" kindref="member">Newton</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>Eigen::VectorXd&amp;,<sp/>Eigen::VectorXd&amp;);</highlight></codeline>
+<codeline lineno="135" refid="phase_8_h_1aa7e32e3c67df0b9093a055eccd20062a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1aa7e32e3c67df0b9093a055eccd20062a" kindref="member">v_circ</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136" refid="phase_8_h_1a7a47c6bd8133e3b423cca596337e31de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a7a47c6bd8133e3b423cca596337e31de" kindref="member">vertical_kappa</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137" refid="phase_8_h_1af915d907d2645c8177ca72add6eaf382" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1af915d907d2645c8177ca72add6eaf382" kindref="member">epicyclic_kappa</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138" refid="phase_8_h_1a0c9d268d5ed44daa11f4fb509da934d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a0c9d268d5ed44daa11f4fb509da934d5" kindref="member">Oort_A</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139" refid="phase_8_h_1a3377e87f757fd0a9b2eedfa000b28db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a3377e87f757fd0a9b2eedfa000b28db0" kindref="member">Oort_B</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_frame___rotation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_frame___rotation" kindref="compound">Frame_Rotation</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="144" refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>,<sp/><ref refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" kindref="member">omegasq</ref>,<sp/><ref refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" kindref="member">omega2</ref>;</highlight></codeline>
+<codeline lineno="145" refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_frame___rotation_1ab047ecbd0f224aa40c9adc368506ff97" kindref="member">set_omega</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>w)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref><sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" kindref="member">omegasq</ref><sp/>=<sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>*<ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" kindref="member">omega2</ref><sp/>=<sp/>2.0*<ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151" refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_frame___rotation_1ade2f22db7a7fbf631603272e4504ef8c" kindref="member">set_corotation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rc)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>&lt;=<sp/>0.0)<sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>=0.0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref><sp/>=<sp/><ref refid="phase_8_h_1aa7e32e3c67df0b9093a055eccd20062a" kindref="member">v_circ</ref>(rc)/rc;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_frame___rotation_1abe18c148f6ccf93c3cb445c9dddf52c3" kindref="member">omegasq</ref><sp/>=<sp/><ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>*<ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_frame___rotation_1ad087ca1d64a29ae4dc07f2a8e66c864c" kindref="member">omega2</ref><sp/>=<sp/>2.0*<ref refid="class_frame___rotation_1a7d3f9bf7e5db9743c40e3f96f6683af5" kindref="member">omega</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="phase_8_h_1aa1b475fba2aeb3e51b4282041ae4c9d4" refkind="member"><highlight class="normal">Eigen::Matrix3d<sp/><ref refid="phase_8_h_1aa1b475fba2aeb3e51b4282041ae4c9d4" kindref="member">z_Rotation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162" refid="phase_8_h_1a836f1515043416409e8e3c93004e4eee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="phase_8_h_1a836f1515043416409e8e3c93004e4eee" kindref="member">freezing_function</ref>)(<ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="class_ensemble" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ensemble" kindref="compound">Ensemble</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="169" refid="class_ensemble_1ab2cff107122af54c3bf077e24a5ac439" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ab2cff107122af54c3bf077e24a5ac439" kindref="member">Nstars</ref>;</highlight></codeline>
+<codeline lineno="170" refid="class_ensemble_1a054a3885c940a85bf84b4882b912f6bf" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Phase&gt;<sp/><ref refid="class_ensemble_1a054a3885c940a85bf84b4882b912f6bf" kindref="member">stars</ref>;</highlight></codeline>
+<codeline lineno="171" refid="class_ensemble_1afdf4c0b679bcecb8c8894011d7a24965" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1afdf4c0b679bcecb8c8894011d7a24965" kindref="member">t</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="174" refid="class_ensemble_1a1957b82d2fcd78c08c369eade9530255" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble_1a1957b82d2fcd78c08c369eade9530255" kindref="member">Ensemble</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175" refid="class_ensemble_1a339195fc6dbe31b54df790990823f4d2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble_1a339195fc6dbe31b54df790990823f4d2" kindref="member">~Ensemble</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176" refid="class_ensemble_1a320caae5a5759056837075b1f736a421" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble_1a320caae5a5759056837075b1f736a421" kindref="member">Ensemble</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177" refid="class_ensemble_1ae76f6d115e9880911938254aeac9cff6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble_1ae76f6d115e9880911938254aeac9cff6" kindref="member">Ensemble</ref>(<ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="179" refid="class_ensemble_1a7d7d941c51c32eb0345d2dfaf36de511" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a7d7d941c51c32eb0345d2dfaf36de511" kindref="member">setsize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180" refid="class_ensemble_1a7b35b9e0c486a19438c17a186ea5be76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a7b35b9e0c486a19438c17a186ea5be76" kindref="member">get_Nstars</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ab2cff107122af54c3bf077e24a5ac439" kindref="member">Nstars</ref>;}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="182" refid="class_ensemble_1a4074fa53fc6c39a1f958f22e738173be" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/>&amp;<ref refid="class_ensemble_1a4074fa53fc6c39a1f958f22e738173be" kindref="member">operator=</ref>(<ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_ensemble_1aae6b5951ff84512dc3b67ebe85a6a883" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_phase" kindref="compound">Phase</ref><sp/>&amp;<ref refid="class_ensemble_1aae6b5951ff84512dc3b67ebe85a6a883" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="class_ensemble_1a95860c73399ec6d4a6b33efea072b29e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/><ref refid="class_ensemble_1a95860c73399ec6d4a6b33efea072b29e" kindref="member">integrate_to</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187" refid="class_ensemble_1a838672e440bf016213430f49feed0ff6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/><ref refid="class_ensemble_1a838672e440bf016213430f49feed0ff6" kindref="member">Step_Positions</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188" refid="class_ensemble_1a3cbbffe613998ad52fad41798b9820ec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/><ref refid="class_ensemble_1a3cbbffe613998ad52fad41798b9820ec" kindref="member">Step_Velocities</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>Eigen::Vector3d<sp/>*);</highlight></codeline>
+<codeline lineno="189" refid="class_ensemble_1ae11f204e360af638d73366e0aef72fa6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_ensemble" kindref="compound">Ensemble</ref><sp/><ref refid="class_ensemble_1ae11f204e360af638d73366e0aef72fa6" kindref="member">integrate_to</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/><ref refid="phase_8_h_1a836f1515043416409e8e3c93004e4eee" kindref="member">freezing_function</ref>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="class_ensemble_1a4d49e2d8da60ffeb553c702425fabeb2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a4d49e2d8da60ffeb553c702425fabeb2" kindref="member">write_log</ref>(std::ostream&amp;);</highlight></codeline>
+<codeline lineno="192" refid="class_ensemble_1a1b8e95fec3446b2e7bd9daa64d7233aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a1b8e95fec3446b2e7bd9daa64d7233aa" kindref="member">write_snapshot</ref>(std::ostream&amp;);</highlight></codeline>
+<codeline lineno="193" refid="class_ensemble_1a4d97a9b6a73158f323d548389babb9e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a4d97a9b6a73158f323d548389babb9e0" kindref="member">read_snapshot</ref>(std::istream&amp;);</highlight></codeline>
+<codeline lineno="194" refid="class_ensemble_1ac18ace89c8c26b0859272045af88a051" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ac18ace89c8c26b0859272045af88a051" kindref="member">read_tidesfile</ref>(std::istream&amp;);</highlight></codeline>
+<codeline lineno="195" refid="class_ensemble_1a450e2ae54b53ce47cec5b04aecb66c8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a450e2ae54b53ce47cec5b04aecb66c8d" kindref="member">write_orbits</ref>(std::ostream&amp;);</highlight></codeline>
+<codeline lineno="196" refid="class_ensemble_1a98057a4e4a14492bdaa912f6acc1b3e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a98057a4e4a14492bdaa912f6acc1b3e1" kindref="member">read_orbits</ref>(std::istream&amp;);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="class_ensemble_1a0bbf0fce13054f1e03d08ee6dfb7e1ec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a0bbf0fce13054f1e03d08ee6dfb7e1ec" kindref="member">settime</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199" refid="class_ensemble_1a824f8c894e315dcea8b318e08cad4558" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a824f8c894e315dcea8b318e08cad4558" kindref="member">set_masses</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200" refid="class_ensemble_1a7b0a5e6c266f6f0be91e297ddd7e81af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a7b0a5e6c266f6f0be91e297ddd7e81af" kindref="member">scale_masses</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201" refid="class_ensemble_1a9ce7efbdd930a759910a48c0fbd67424" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a9ce7efbdd930a759910a48c0fbd67424" kindref="member">scale_positions</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202" refid="class_ensemble_1a403728f120c5482a4a6b75c567a26c4c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a403728f120c5482a4a6b75c567a26c4c" kindref="member">scale_speeds</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203" refid="class_ensemble_1af7862feeb5f7297a10867641047a5cb6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1af7862feeb5f7297a10867641047a5cb6" kindref="member">rotate_frame</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204" refid="class_ensemble_1a43e1ae21cb2b9da5ea5fdce2f93e991c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a43e1ae21cb2b9da5ea5fdce2f93e991c" kindref="member">rotate_view</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="206" refid="class_ensemble_1ac041507ec5f4cbdbcd9cee78725c1f28" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ac041507ec5f4cbdbcd9cee78725c1f28" kindref="member">translate</ref>(Eigen::Vector3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="208" refid="class_ensemble_1a4bb5b98c80803aceca0200c72d60bc75" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a4bb5b98c80803aceca0200c72d60bc75" kindref="member">total_Energy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209" refid="class_ensemble_1a79d3035f340091883d5dc9468c497af5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a79d3035f340091883d5dc9468c497af5" kindref="member">total_Kinetic</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210" refid="class_ensemble_1ad7b0de55539173b72a20baabe7ba7f7f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ad7b0de55539173b72a20baabe7ba7f7f" kindref="member">total_Potential</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="211" refid="class_ensemble_1ae39d07aa5db5fe9ccffa1ad490191d6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1ae39d07aa5db5fe9ccffa1ad490191d6c" kindref="member">Virial</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212" refid="class_ensemble_1afe721b57b1a0546fe0a9a0346270e84e" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_ensemble_1afe721b57b1a0546fe0a9a0346270e84e" kindref="member">CM_Position</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213" refid="class_ensemble_1a55a3a41f14ff5ccd7be9159faf7329f1" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_ensemble_1a55a3a41f14ff5ccd7be9159faf7329f1" kindref="member">CM_Velocity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214" refid="class_ensemble_1a720f0f403273edac165123ef25bc6e47" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_ensemble_1a720f0f403273edac165123ef25bc6e47" kindref="member">total_Angular_Momentum</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="216" refid="class_ensemble_1ab62200ac32b470fa921f76507871468b" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Matrix3d<sp/><ref refid="class_ensemble_1ab62200ac32b470fa921f76507871468b" kindref="member">Moment_Tensor</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217" refid="class_ensemble_1af69e6bbb969bf14b21b2bd7dc74a4413" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Matrix3d<sp/><ref refid="class_ensemble_1af69e6bbb969bf14b21b2bd7dc74a4413" kindref="member">Inertia_Tensor</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218" refid="class_ensemble_1aa290aad546624c70636a8de07b2f2313" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_ensemble_1aa290aad546624c70636a8de07b2f2313" kindref="member">Principal_Axes</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>Eigen::Matrix3d<sp/>&amp;);</highlight></codeline>
+<codeline lineno="219" refid="class_ensemble_1a670dad60618ab026dd30e02071062459" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/><ref refid="class_ensemble_1a670dad60618ab026dd30e02071062459" kindref="member">Solid_Body_Frequency</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="221" refid="class_ensemble_1a6ad9ad6b98edb565aa537b72eb7086d9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1a6ad9ad6b98edb565aa537b72eb7086d9" kindref="member">binread</ref>(std::istream&amp;<sp/>fp);</highlight></codeline>
+<codeline lineno="222" refid="class_ensemble_1aefb15975bc6530c6ef33e305626fbd38" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ensemble_1aefb15975bc6530c6ef33e305626fbd38" kindref="member">binwrite</ref>(std::ostream&amp;<sp/>fp);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="phase_8_h_1a456f1226446218a175a6762c82951359" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a456f1226446218a175a6762c82951359" kindref="member">inverse_interp_zero</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="phase_8_h_1a81b58cc2788dff5c1255bec126c42381" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="phase_8_h_1a81b58cc2788dff5c1255bec126c42381" kindref="member">forward_interp</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/phase.H"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_p_s_p" kind="class" language="C++" prot="public">
+    <compoundname>OutPSP</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_p_s_p_8_h" local="no">OutPSP.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_p_s_p_1ae732876ec8c372422f1a9a865b9bf7f5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutPSP::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutPSP::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="36" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_p_s_p_1a7623f50b5dce1695c15d13b97080715f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutPSP::nagg</definition>
+        <argsstring></argsstring>
+        <name>nagg</name>
+        <qualifiedname>OutPSP::nagg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="36" column="24" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_p_s_p_1ab630faa53634e487a7554a10f9dd5065" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OutPSP::nbeg</definition>
+        <argsstring></argsstring>
+        <name>nbeg</name>
+        <qualifiedname>OutPSP::nbeg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="38" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_p_s_p_1af599b8cdbc1e2e0d5514a2538ac8c7c6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutPSP::real4</definition>
+        <argsstring></argsstring>
+        <name>real4</name>
+        <qualifiedname>OutPSP::real4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="37" column="8" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_p_s_p_1ad5a859f3f5833888e55784a0216dafb5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OutPSP::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>OutPSP::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="37" column="14" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_p_s_p_1aa7ff49a20ebc792784aa69537fa1513a" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutPSP::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutPSP::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="43" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_p_s_p_1a2a76759c8f60f7c4ba2e0711a9dab111" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutPSP::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutPSP::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="40" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_p_s_p_1a8931c6703abd5de24af8bbb6be3e30e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutPSP::OutPSP</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutPSP</name>
+        <qualifiedname>OutPSP::OutPSP</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="48" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_p_s_p_1a5cef52ca7dd67f85120d8c8b6fc24836" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutPSP::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutPSP::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Provided by derived class to generate some output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time step used to decide whether or not to dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current multistep level to decide whether or not to dump multisteps </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should be true on final step to force phase space dump indepentently of whether or not the frequency criterion is met </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="58" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Write phase-space dumps at regular intervals using MPI-IO</para>
+<para>Each dump is written into a new file label as <computeroutput>filename.n</computeroutput> where is begins at <computeroutput>nbeg</computeroutput> and incremented by 1 after each file is written. This implementation bunches particles into memory and uses a collective MPI_File write to push the bunch to disk at the appropriate offset. The MPI-IO implementation does not maintain the particle sequence so indexing=1 needs to be added as a <ref refid="class_component" kindref="compound">Component</ref> option if the particle index is needed for post processing. This version is much faster than <ref refid="class_out_p_s_n" kindref="compound">OutPSN</ref> and <ref refid="class_out_c_h_k_p_t" kindref="compound">OutCHKPT</ref> which uses MPI gather to the root node before writing. This is the newest version for <ref refid="class_p_s_p" kindref="compound">PSP</ref> output and has not be extensively tested as of 10/2018.</para>
+<para>Sending the root process a SIGHUP will cause the first of <ref refid="class_out_p_s" kindref="compound">OutPS</ref>, <ref refid="class_out_p_s_p" kindref="compound">OutPSP</ref>, <ref refid="class_out_p_s_n" kindref="compound">OutPSN</ref>, <ref refid="class_out_p_s_q" kindref="compound">OutPSQ</ref>, <ref refid="class_out_c_h_k_p_t" kindref="compound">OutCHKPT</ref>, or <ref refid="class_out_c_h_k_p_t_q" kindref="compound">OutCHKPTQ</ref> in the output list to execute. This may not always be possible to signal for batch scheduled jobs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of the output file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of steps between dumps </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbeg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is suffix of the first phase space dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>real4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates floats for real PS quantities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nagg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of MPI-IO aggregators </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutPSP</label>
+        <link refid="class_out_p_s_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OutPSP</label>
+        <link refid="class_out_p_s_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutPSP.H" line="31" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutPSP.H" bodystart="32" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>conf</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>current_keys</name></member>
+      <member refid="class_out_p_s_p_1ae732876ec8c372422f1a9a865b9bf7f5" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>filename</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutPSP</scope><name>id</name></member>
+      <member refid="class_out_p_s_p_1a2a76759c8f60f7c4ba2e0711a9dab111" prot="private" virt="virtual"><scope>OutPSP</scope><name>initialize</name></member>
+      <member refid="class_out_p_s_p_1a7623f50b5dce1695c15d13b97080715f" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>nagg</name></member>
+      <member refid="class_out_p_s_p_1ab630faa53634e487a7554a10f9dd5065" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>nbeg</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_p_s_p_1a8931c6703abd5de24af8bbb6be3e30e9" prot="public" virt="non-virtual"><scope>OutPSP</scope><name>OutPSP</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutPSP</scope><name>Output</name></member>
+      <member refid="class_out_p_s_p_1af599b8cdbc1e2e0d5514a2538ac8c7c6" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>real4</name></member>
+      <member refid="class_out_p_s_p_1a5cef52ca7dd67f85120d8c8b6fc24836" prot="public" virt="virtual"><scope>OutPSP</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutPSP</scope><name>stopWatch</name></member>
+      <member refid="class_out_p_s_p_1ad5a859f3f5833888e55784a0216dafb5" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutPSP</scope><name>unmatched</name></member>
+      <member refid="class_out_p_s_p_1aa7ff49a20ebc792784aa69537fa1513a" prot="private" virt="non-virtual"><scope>OutPSP</scope><name>valid_keys</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutPSP</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

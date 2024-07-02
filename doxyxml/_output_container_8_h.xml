@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_output_container_8_h" kind="file" language="C++">
+    <compoundname>OutputContainer.H</compoundname>
+    <includes local="no">thread</includes>
+    <includes local="no">list</includes>
+    <includes refid="_output_8_h" local="no">Output.H</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>StringTok.H</label>
+        <link refid="_string_tok_8_h"/>
+      </node>
+      <node id="10">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Output.H</label>
+        <link refid="_output_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutputContainer.H</label>
+        <link refid="_output_container_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>chrono</label>
+      </node>
+      <node id="12">
+        <label>cstdlib</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>thread</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_output_container" prot="public">OutputContainer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OutputContainer_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OutputContainer_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_output_8_h" kindref="compound">Output.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_output_container" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_output_container" kindref="compound">OutputContainer</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_output_container_1a6850768e2b7c57dd21fbf62df989ed20" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_output_container_1a6850768e2b7c57dd21fbf62df989ed20" kindref="member">last</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_output_container_1ad26a7a1ba88d39be7ba86bd3a813ceaf" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;std::shared_ptr&lt;std::thread&gt;&gt;<sp/><ref refid="class_output_container_1ad26a7a1ba88d39be7ba86bd3a813ceaf" kindref="member">cproc</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_output_container_1a741157a417b221c0ed447dcd02af8dd1" refkind="member"><highlight class="normal"><sp/><sp/>std::list&lt;Output*&gt;<sp/><ref refid="class_output_container_1a741157a417b221c0ed447dcd02af8dd1" kindref="member">out</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_output_container_1a59b4e0d99e98a1eff3ce1e3179d92f49" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_output_container_1a59b4e0d99e98a1eff3ce1e3179d92f49" kindref="member">OutputContainer</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_output_container_1a68138fe9f917c969925b0fe241bdfdc0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_output_container_1a68138fe9f917c969925b0fe241bdfdc0" kindref="member">~OutputContainer</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_output_container_1a380c6e441bd692d2719ebf24fd3d9f27" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_output_container_1a380c6e441bd692d2719ebf24fd3d9f27" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_output_container_1a94fa08421f236a7fb9a72ea863b4c9a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_output_container_1a94fa08421f236a7fb9a72ea863b4c9a1" kindref="member">Run</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nstep,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" kindref="member">mstep</ref>=std::numeric_limits&lt;int&gt;::max(),<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_output_container_1a6850768e2b7c57dd21fbf62df989ed20" kindref="member">last</ref>=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/OutputContainer.H"/>
+  </compounddef>
+</doxygen>

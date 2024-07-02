@@ -1,0 +1,1608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_pot_accel" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PotAccel</compoundname>
+    <derivedcompoundref refid="class_basis" prot="public" virt="non-virtual">Basis</derivedcompoundref>
+    <derivedcompoundref refid="class_cube" prot="public" virt="non-virtual">Cube</derivedcompoundref>
+    <derivedcompoundref refid="class_direct" prot="public" virt="non-virtual">Direct</derivedcompoundref>
+    <derivedcompoundref refid="class_external_force" prot="public" virt="non-virtual">ExternalForce</derivedcompoundref>
+    <derivedcompoundref refid="class_no_force" prot="public" virt="non-virtual">NoForce</derivedcompoundref>
+    <derivedcompoundref refid="class_shells" prot="public" virt="non-virtual">Shells</derivedcompoundref>
+    <derivedcompoundref refid="class_slab_s_l" prot="public" virt="non-virtual">SlabSL</derivedcompoundref>
+    <derivedcompoundref refid="class_two_center" prot="public" virt="non-virtual">TwoCenter</derivedcompoundref>
+    <includes refid="_pot_accel_8_h" local="no">PotAccel.H</includes>
+    <innerclass refid="struct_pot_accel_1_1_n_data" prot="public">PotAccel::NData</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Geometry</name>
+        <qualifiedname>PotAccel::Geometry</qualifiedname>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public">
+          <name>sphere</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public">
+          <name>cylinder</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public">
+          <name>cube</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public">
+          <name>slab</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public">
+          <name>table</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public">
+          <name>other</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible geometries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="109" column="3" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" static="no">
+        <type>std::vector&lt; std::time_t &gt;</type>
+        <definition>typedef std::vector&lt;std::time_t&gt; PotAccel::TList</definition>
+        <argsstring></argsstring>
+        <name>TList</name>
+        <qualifiedname>PotAccel::TList</qualifiedname>
+        <briefdescription>
+<para>For timing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="35" column="23" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" static="no" mutable="no">
+        <type>pthread_t *</type>
+        <definition>pthread_t* PotAccel::t</definition>
+        <argsstring></argsstring>
+        <name>t</name>
+        <qualifiedname>PotAccel::t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="41" column="13" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" static="no" mutable="no">
+        <type><ref refid="structthrd__pass___pot_accel" kindref="compound">thrd_pass_PotAccel</ref> *</type>
+        <definition>thrd_pass_PotAccel* PotAccel::td</definition>
+        <argsstring></argsstring>
+        <name>td</name>
+        <qualifiedname>PotAccel::td</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="40" column="22" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+        <definition>Component* PotAccel::cC</definition>
+        <argsstring></argsstring>
+        <name>cC</name>
+        <qualifiedname>PotAccel::cC</qualifiedname>
+        <briefdescription>
+<para>Current component pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="59" column="13" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_polar_basis_1a6e26e359a05e6860626196e156475b6b" compoundref="_polar_basis_8_h" startline="513" endline="514">PolarBasis::determine_coefficients</referencedby>
+        <referencedby refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" compoundref="_pot_accel_8_h" startline="136" endline="137">determine_coefficients</referencedby>
+        <referencedby refid="class_spherical_basis_1a8ff7907cd7af5f79b63f11282c277cb2" compoundref="_spherical_basis_8_h" startline="362" endline="363">SphericalBasis::determine_coefficients</referencedby>
+        <referencedby refid="class_cube_1_1exe_timer_1a6a72d798de758a187cdc1efe342cf444" compoundref="_cube_8_h" startline="124" endline="145">Cube::exeTimer::~exeTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotAccel::coef_dump</definition>
+        <argsstring></argsstring>
+        <name>coef_dump</name>
+        <qualifiedname>PotAccel::coef_dump</qualifiedname>
+        <briefdescription>
+<para>Coefficient dump flag (true if a useful dump_coefs member is defined) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="71" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" compoundref="_pot_accel_8_h" startline="178" endline="178">HaveCoefDump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+        <definition>Component* PotAccel::component</definition>
+        <argsstring></argsstring>
+        <name>component</name>
+        <qualifiedname>PotAccel::component</qualifiedname>
+        <briefdescription>
+<para>&quot;Back&quot; pointer to component that instantiated this force </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="56" column="13" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
+        <referencedby refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" compoundref="_pot_accel_8_h" startline="154" endline="154">RegisterComponent</referencedby>
+        <referencedby refid="class_two_center_1a7ce7e41b10ddda4a7fc67b72d901f0e7" compoundref="_two_center_8_h" startline="130" endline="134">TwoCenter::RegisterComponent</referencedby>
+        <referencedby refid="class_cube_1_1exe_timer_1a6a72d798de758a187cdc1efe342cf444" compoundref="_cube_8_h" startline="124" endline="145">Cube::exeTimer::~exeTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" static="no" mutable="no">
+        <type>const YAML::Node &amp;</type>
+        <definition>const YAML::Node&amp; PotAccel::conf</definition>
+        <argsstring></argsstring>
+        <name>conf</name>
+        <qualifiedname>PotAccel::conf</qualifiedname>
+        <briefdescription>
+<para>Contains parameter database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="46" column="20" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotAccel::cuda_aware</definition>
+        <argsstring></argsstring>
+        <name>cuda_aware</name>
+        <qualifiedname>PotAccel::cuda_aware</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cuda implementation is available for this source method. Otherwise, particle structures will be copied between the GPU and CPU at significant expanse </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="91" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" compoundref="_pot_accel_8_h" startline="233" endline="233">cudaAware</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; PotAccel::current_keys</definition>
+        <argsstring></argsstring>
+        <name>current_keys</name>
+        <qualifiedname>PotAccel::current_keys</qualifiedname>
+        <briefdescription>
+<para>Current YAML keys to check configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="94" column="12" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="94" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" compoundref="_pot_accel_8_h" startline="236" endline="236">unmatched</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned PotAccel::mlevel</definition>
+        <argsstring></argsstring>
+        <name>mlevel</name>
+        <qualifiedname>PotAccel::mlevel</qualifiedname>
+        <briefdescription>
+<para>Current level for multistepping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="80" column="12" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" compoundref="_pot_accel_8_h" startline="204" endline="204">set_multistep_level</referencedby>
+        <referencedby refid="class_two_center_1afc027c542932d0fb5c23365730c7a225" compoundref="_two_center_8_h" startline="138" endline="143">TwoCenter::set_multistep_level</referencedby>
+        <referencedby refid="class_cube_1_1exe_timer_1a6a72d798de758a187cdc1efe342cf444" compoundref="_cube_8_h" startline="124" endline="145">Cube::exeTimer::~exeTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotAccel::nbodies</definition>
+        <argsstring></argsstring>
+        <name>nbodies</name>
+        <qualifiedname>PotAccel::nbodies</qualifiedname>
+        <briefdescription>
+<para>Number of bodies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call to return <computeroutput>value</computeroutput> for requested parameter <computeroutput>name</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="53" column="7" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotAccel::play_back</definition>
+        <argsstring></argsstring>
+        <name>play_back</name>
+        <qualifiedname>PotAccel::play_back</qualifiedname>
+        <briefdescription>
+<para>Coefficient play back flag (true cached coefficients in use) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="74" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_cylinder_1a8fe6465fcda2c9d81b9986fb30db316a" compoundref="_cylinder_8_h" startline="158" endline="166">Cylinder::compute_multistep_coefficients</referencedby>
+        <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
+        <referencedby refid="class_cylinder_1a77f0370f73afe1d8a759858128dc6df9" compoundref="_cylinder_8_h" startline="439" endline="445">Cylinder::multistep_update_finish</referencedby>
+        <referencedby refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" compoundref="_pot_accel_8_h" startline="219" endline="219">NoCoefs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotAccel::play_cnew</definition>
+        <argsstring></argsstring>
+        <name>play_cnew</name>
+        <qualifiedname>PotAccel::play_cnew</qualifiedname>
+        <briefdescription>
+<para>Compute new coefficients during play back (false by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="77" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_cylinder_1a8fe6465fcda2c9d81b9986fb30db316a" compoundref="_cylinder_8_h" startline="158" endline="166">Cylinder::compute_multistep_coefficients</referencedby>
+        <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
+        <referencedby refid="class_cylinder_1a77f0370f73afe1d8a759858128dc6df9" compoundref="_cylinder_8_h" startline="439" endline="445">Cylinder::multistep_update_finish</referencedby>
+        <referencedby refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" compoundref="_pot_accel_8_h" startline="219" endline="219">NoCoefs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PotAccel::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>PotAccel::scale</qualifiedname>
+        <briefdescription>
+<para>Length scaling (not used for all methods) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="86" column="10" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" compoundref="_pot_accel_8_h" startline="216" endline="216">getScale</referencedby>
+        <referencedby refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" compoundref="_pot_accel_8_h" startline="213" endline="213">setScale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" kindref="member">TList</ref></type>
+        <definition>TList PotAccel::timer_list</definition>
+        <argsstring></argsstring>
+        <name>timer_list</name>
+        <qualifiedname>PotAccel::timer_list</qualifiedname>
+        <briefdescription>
+<para>For thread timing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="83" column="9" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotAccel::use_external</definition>
+        <argsstring></argsstring>
+        <name>use_external</name>
+        <qualifiedname>PotAccel::use_external</qualifiedname>
+        <briefdescription>
+<para>Set flag to add to external potential field. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="68" column="7" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" compoundref="_pot_accel_8_h" startline="175" endline="175">ClearExternal</referencedby>
+        <referencedby refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" compoundref="_pot_accel_8_h" startline="172" endline="172">SetExternal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotAccel::used</definition>
+        <argsstring></argsstring>
+        <name>used</name>
+        <qualifiedname>PotAccel::used</qualifiedname>
+        <briefdescription>
+<para>Number of particles used on last coefficient evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="65" column="7" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_axisymmetric_basis_1a93d8a3c0e104139477fec734a6baf8e6" compoundref="_axisymmetric_basis_8_h" startline="188" endline="188">AxisymmetricBasis::multistep_reset</referencedby>
+        <referencedby refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" compoundref="_pot_accel_8_h" startline="169" endline="169">Used</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotAccel::compute</definition>
+        <argsstring></argsstring>
+        <name>compute</name>
+        <qualifiedname>PotAccel::compute</qualifiedname>
+        <briefdescription>
+<para>Flag to indicate that PCA variance matrix should be recomputed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="151" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotAccel::dof</definition>
+        <argsstring></argsstring>
+        <name>dof</name>
+        <qualifiedname>PotAccel::dof</qualifiedname>
+        <briefdescription>
+<para>Dimension of the force vector (degrees of freedom) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="118" column="7" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" static="no" mutable="no">
+        <type><ref refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" kindref="member">Geometry</ref></type>
+        <definition>Geometry PotAccel::geometry</definition>
+        <argsstring></argsstring>
+        <name>geometry</name>
+        <qualifiedname>PotAccel::geometry</qualifiedname>
+        <briefdescription>
+<para>sphere, cylinder, cube, slab, other </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="115" column="12" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PotAccel::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>PotAccel::id</qualifiedname>
+        <briefdescription>
+<para>Id string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="106" column="10" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; PotAccel::use</definition>
+        <argsstring></argsstring>
+        <name>use</name>
+        <qualifiedname>PotAccel::use</qualifiedname>
+        <briefdescription>
+<para>Thread particle counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="157" column="15" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="157" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" static="yes" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t PotAccel::cc_lock</definition>
+        <argsstring></argsstring>
+        <name>cc_lock</name>
+        <qualifiedname>PotAccel::cc_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutex used to be used in the threading implementations to lock PCA variance matrix for updating </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="148" column="26" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" static="yes" mutable="no">
+        <type>std::map&lt; <ref refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" kindref="member">Geometry</ref>, std::string &gt;</type>
+        <definition>std::map&lt;Geometry, std::string&gt; PotAccel::geoname</definition>
+        <argsstring></argsstring>
+        <name>geoname</name>
+        <qualifiedname>PotAccel::geoname</qualifiedname>
+        <briefdescription>
+<para>Map from enum to string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="112" column="19" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="112" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::initialize</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>initialize</name>
+        <qualifiedname>PotAccel::initialize</qualifiedname>
+        <reimplementedby refid="class_bessel_1abab1334fcaeedd6ad07b0afda79741d6">initialize</reimplementedby>
+        <reimplementedby refid="class_direct_1a66f20fdb5ab63196b115638fe2eda75f">initialize</reimplementedby>
+        <reimplementedby refid="class_e_jcom_1abf361e399dffa6ce2ef7e05e2c5b147a">initialize</reimplementedby>
+        <reimplementedby refid="classexternal_shock_1a08235c84f7be0ae6ae1b2114f7681bf5">initialize</reimplementedby>
+        <reimplementedby refid="classgenerate_relaxation_1afb68c5a34f91c3d953ab3e7a6735d992">initialize</reimplementedby>
+        <reimplementedby refid="class_halo_bulge_1a72cf46c868ed8686458d7f8e05e99909">initialize</reimplementedby>
+        <reimplementedby refid="class_no_force_1a361db5a4e98f0fdd9d6948f1e6f92a3a">initialize</reimplementedby>
+        <reimplementedby refid="class_periodic_b_c_1a37ded5a3254e4cbf951e74c61501b57a">initialize</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1a5b49aa8ebe308a9f089b52478ee4db11">initialize</reimplementedby>
+        <reimplementedby refid="class_scatter_m_f_p_1ab9115824b19f1ab884e21a091b55ceea">initialize</reimplementedby>
+        <reimplementedby refid="class_shells_1a87e58339a8d7e7145e97aaeac4ac8f30">initialize</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a33f78daf1c5dcf5ac4d327662963b1a5">initialize</reimplementedby>
+        <reimplementedby refid="classtidal_field_1a5dbcac9de363aea682f1dd910be51c02">initialize</reimplementedby>
+        <reimplementedby refid="class_user_bar_1a3520b720df0b885118d1737c1a17b0f5">initialize</reimplementedby>
+        <reimplementedby refid="class_user_disk_1ad5993d440681f1ed11a0fa613eb6ff86">initialize</reimplementedby>
+        <reimplementedby refid="class_user_halo_1aeca44db704f6e0da1632ed20dabca7c0">initialize</reimplementedby>
+        <reimplementedby refid="class_user_log_pot_1a7eb2ba90f9c56932abcf9970895c694b">initialize</reimplementedby>
+        <reimplementedby refid="class_user_m_ndisk_1aa6c0f735394c00044c7ac62f4396287f">initialize</reimplementedby>
+        <reimplementedby refid="class_user_m_w_1a40939e74cec9a7afbf18620cd3142c16">initialize</reimplementedby>
+        <reimplementedby refid="class_user_test_1a6cf68b085da1e0be852e2a464e7fc2eb">initialize</reimplementedby>
+        <reimplementedby refid="class_user_test_cuda_1a77bf45d3c5d2f758c6c810be5900a61c">initialize</reimplementedby>
+        <reimplementedby refid="class_c_brock_1aae55f8c8c93c8f72fc62a2f997957126">initialize</reimplementedby>
+        <reimplementedby refid="class_c_brock_disk_1ad1adc8bc5d5d86f5960b4172847f7935">initialize</reimplementedby>
+        <reimplementedby refid="class_cube_1a4889dfcc0b07a325577d3a632ab167d3">initialize</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a0da47f0873d61edd6c7733115de9f143">initialize</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a0da47f0873d61edd6c7733115de9f143">initialize</reimplementedby>
+        <reimplementedby refid="class_flat_disk_1a99ce7aa447bc828ce26a69cf18136556">initialize</reimplementedby>
+        <reimplementedby refid="class_hernquist_1ad1f47f7a2150b79229624d103a81655f">initialize</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1adcfe2a7cda812280a978793ccd8997e8">initialize</reimplementedby>
+        <reimplementedby refid="class_sphere_1aba7d59251bc70b4b2f45271025f285ff">initialize</reimplementedby>
+        <reimplementedby refid="class_two_center_1acd8e8d4c102a148dfca2d0e57355aa9f">initialize</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used by derived class to initialize any storage and parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="62" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PotAccel::atol</definition>
+        <argsstring>(string &amp;val)</argsstring>
+        <name>atol</name>
+        <qualifiedname>PotAccel::atol</qualifiedname>
+        <param>
+          <type>string &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>For parameter parsing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="230" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="230" bodyend="230"/>
+        <references refid="expand_8_h_1ae3e23f0c0cd22fcc076fea458d657d42" compoundref="expand_8_h" startline="157" endline="157">atoi</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::ClearExternal</definition>
+        <argsstring>()</argsstring>
+        <name>ClearExternal</name>
+        <qualifiedname>PotAccel::ClearExternal</qualifiedname>
+        <briefdescription>
+<para>Clear external flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="175" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="175" bodyend="175"/>
+        <references refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" compoundref="_pot_accel_8_h" startline="68">use_external</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PotAccel::cudaAware</definition>
+        <argsstring>()</argsstring>
+        <name>cudaAware</name>
+        <qualifiedname>PotAccel::cudaAware</qualifiedname>
+        <briefdescription>
+<para>Cuda aware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="233" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="233" bodyend="233"/>
+        <references refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" compoundref="_pot_accel_8_h" startline="91">cuda_aware</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void * PotAccel::determine_acceleration_and_potential_thread</definition>
+        <argsstring>(void *arg)=0</argsstring>
+        <name>determine_acceleration_and_potential_thread</name>
+        <qualifiedname>PotAccel::determine_acceleration_and_potential_thread</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a18d9afa579242f0788b6f1741f5627b7">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_cube_1aa2a95971c28f6143b7521bd0d2087662">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a7833c07ea8eeb02353c696114de18fbc">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a7833c07ea8eeb02353c696114de18fbc">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_direct_1ac0bf295169b2fcaa70216056d71ac390">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="classexternal_shock_1a7b36ac63aab2b4f57d462c69e7ddcc5f">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="classgenerate_relaxation_1a66c5fc35b449efddbfbb4bf5714e37af">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_halo_bulge_1a074e71a1b6a7aa2ea671eaa6e3b695f6">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_no_force_1a8946b23a0b1a612ca83e61f64cdf71d4">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_periodic_b_c_1abe1ad73f43444f2fdc99b50901ff47ec">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1acaba49129ac6aeeb0d44e1ff25eb4e22">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_scatter_m_f_p_1a20878d4447a6676b5a0000786084a1b8">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_shells_1a75fe62e9cd2ee5ebc339d39ef453c6df">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1ac45b33a96db109994ba0fe35547a3269">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a45f237bae8eb688588b95f8a0522b10d">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="classtidal_field_1a0611f1ed21d4c7ae731957a1ca204c0c">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_two_center_1afab216f509fdd00edf7093864b7a602c">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_bar_1a5a9192b82fcfd7a47b31c54fc8c73743">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_disk_1a67f79bc4033b8bdeea46726e1a446eeb">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_halo_1aebfb1fc004e1edca783070360bbbf89d">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_log_pot_1aaf3f6c95cc70aafac9e48c80699cc345">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_m_ndisk_1ab6ddfc877fa2f0c71e30b64c3adf2e55">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_m_w_1a4f99cd18a43e8cd2c7abc43ff82c6300">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_test_1ac78cfdc94f72ce10ced2a99ea1f1e957">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_user_test_cuda_1aa7e4af758db34fc79cc84145b798b03b">determine_acceleration_and_potential_thread</reimplementedby>
+        <reimplementedby refid="class_external_force_1ae23fdc9cb99c6c1f8884b518659bfc5a">determine_acceleration_and_potential_thread</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the force computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="144" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::determine_coefficients</definition>
+        <argsstring>(Component *c)</argsstring>
+        <name>determine_coefficients</name>
+        <qualifiedname>PotAccel::determine_coefficients</qualifiedname>
+        <reimplementedby refid="class_polar_basis_1a6e26e359a05e6860626196e156475b6b">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a8ff7907cd7af5f79b63f11282c277cb2">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_two_center_1a0a597e62e05bd437540412fdd1dd0ba5">determine_coefficients</reimplementedby>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="136" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="136" bodyend="137"/>
+        <references refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" compoundref="_pot_accel_8_h" startline="59">cC</references>
+        <references refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8">determine_coefficients</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::determine_coefficients</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>determine_coefficients</name>
+        <qualifiedname>PotAccel::determine_coefficients</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a86d2dd823c864264001c0f504e8340ad">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a31fffadf7f868525edeb6b561357f8bd">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a31fffadf7f868525edeb6b561357f8bd">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_cube_1a6da6df3f255795b3e3765bc72af8ea76">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_direct_1aff7244ba4519153b201bfaaf74cc6973">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_external_force_1a289f6465cc44b742f7b202c9827ea0d9">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_no_force_1a3b0fb5d0abb1146c7a4aa34e3332ff38">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1ad124f3ba09e1b792053c736294f6ddb7">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_shells_1af5724672fe479a862c5e1ef3aad281c5">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1ade2ef48d95981861d5dba8eb8fe1b392">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_sphere_1a6d9c19cd5b655fb7e47fdbb680fe3e25">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a91e8b02d7a7482ba2dd12cbae311533c">determine_coefficients</reimplementedby>
+        <reimplementedby refid="class_two_center_1a92e47a350f1483a891a69d9972d5af59">determine_coefficients</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by get_acceleration_and_potential to request that the expansion be performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="135" column="16"/>
+        <referencedby refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" compoundref="_pot_accel_8_h" startline="136" endline="137">determine_coefficients</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void * PotAccel::determine_coefficients_thread</definition>
+        <argsstring>(void *arg)=0</argsstring>
+        <name>determine_coefficients_thread</name>
+        <qualifiedname>PotAccel::determine_coefficients_thread</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a3c44852b0a6193b22fbdb998be59a1f0">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_cube_1a3defa1a8f6b8fe67fa353632c0c9635a">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a2362b4060aa3fb06b5b8de448ae61f81">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a2362b4060aa3fb06b5b8de448ae61f81">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_direct_1ab8d8ea2dd7d81a3762f885044be15492">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_external_force_1ad7749fd6dc7d2a6090342719d517e029">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_no_force_1ae88d57ef6a9f9823a714648c94570ecd">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1a45f4b62afcdfcfcefdfefdbcab34e754">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_shells_1a27b560308b474556d413e4bdcb559708">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1a86e9fff4171b9d29f9550ce73727f1c0">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a7ad9fad36d8b7074c7b47d0126ca26ef">determine_coefficients_thread</reimplementedby>
+        <reimplementedby refid="class_two_center_1ad08f6706e74ee6a1ce58e549bd0e9afd">determine_coefficients_thread</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the expansion computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="141" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::dump_coefs</definition>
+        <argsstring>(ostream &amp;out)</argsstring>
+        <name>dump_coefs</name>
+        <qualifiedname>PotAccel::dump_coefs</qualifiedname>
+        <reimplementedby refid="class_polar_basis_1a4326226fbd3814c1b159c9a8d1714dc9">dump_coefs</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a518203f6db28e171c7dccd04611994b5">dump_coefs</reimplementedby>
+        <reimplementedby refid="class_c_brock_disk_1ad990d027c2795f3d31887620e945b258">dump_coefs</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a15c516b5506bd769ee4cca1f5c838e2a">dump_coefs</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a15c516b5506bd769ee4cca1f5c838e2a">dump_coefs</reimplementedby>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Dump current coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="181" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::dump_coefs_h5</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>dump_coefs_h5</name>
+        <qualifiedname>PotAccel::dump_coefs_h5</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a12712231bfccca298f3fa89126e127b3">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_cube_1ad41166930efa0c9005e1190ea95c98e0">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a0e2194b76e3515007c157ddf7f1dbe72">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a0e2194b76e3515007c157ddf7f1dbe72">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1aa99664ea268f363763f3577416ae367c">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1aa35f069d1743fa627eea28b53e78f514">dump_coefs_h5</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1aababccfd0ab296c683963963caead0be">dump_coefs_h5</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="182" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="182" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::exp_thread_fork</definition>
+        <argsstring>(bool coef)</argsstring>
+        <name>exp_thread_fork</name>
+        <qualifiedname>PotAccel::exp_thread_fork</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Make some threads. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="160" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1ab78f20762031db204f636fc8e74ea986" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::get_acceleration_and_potential</definition>
+        <argsstring>(Component *c)=0</argsstring>
+        <name>get_acceleration_and_potential</name>
+        <qualifiedname>PotAccel::get_acceleration_and_potential</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1ab4ad38ef4a371e9adf418164a09b0684">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_cube_1a8477225cbb41bff514d27192542d7155">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a7eedc780551196e17ce0949acf5c951c">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a7eedc780551196e17ce0949acf5c951c">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_direct_1a18383ced262f3ce760b51b9e8f08838d">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_no_force_1adeb25b620863fd865c249c4f3f4f87ee">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_shells_1ac28ac4176d1d367723599c113d19f8f2">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1a0424b21e20c21a17fd2180fc0b5eeba1">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_two_center_1ac08ca04cfea84f1c816c7a1645389c6b">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_scatter_m_f_p_1acdb78f570e82b0efa8740df0a98912b7">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1af3ccc880f0cc299abc8c603c7e9778e9">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a05f775f3bae56543829492fae9a0b75f">get_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_external_force_1a0d4186a622ace64c9881fd231cf165c6">get_acceleration_and_potential</reimplementedby>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>The main force evaluation routine to be called by clients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="130" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double PotAccel::getScale</definition>
+        <argsstring>()</argsstring>
+        <name>getScale</name>
+        <qualifiedname>PotAccel::getScale</qualifiedname>
+        <briefdescription>
+<para>Get current length scale. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="216" column="18" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="216" bodyend="216"/>
+        <references refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" compoundref="_pot_accel_8_h" startline="86">scale</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PotAccel::HaveCoefDump</definition>
+        <argsstring>()</argsstring>
+        <name>HaveCoefDump</name>
+        <qualifiedname>PotAccel::HaveCoefDump</qualifiedname>
+        <briefdescription>
+<para>Dump coefficients for this force? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="178" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="178" bodyend="178"/>
+        <references refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" compoundref="_pot_accel_8_h" startline="71">coef_dump</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::kill_mutex</definition>
+        <argsstring>(pthread_mutex_t *m, const char *caller, const char *name)</argsstring>
+        <name>kill_mutex</name>
+        <qualifiedname>PotAccel::kill_mutex</qualifiedname>
+        <param>
+          <type>pthread_mutex_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Kill a mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="166" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::make_mutex</definition>
+        <argsstring>(pthread_mutex_t *m, const char *caller, const char *name)</argsstring>
+        <name>make_mutex</name>
+        <qualifiedname>PotAccel::make_mutex</qualifiedname>
+        <param>
+          <type>pthread_mutex_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Make a mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="163" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::multistep_debug</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_debug</name>
+        <qualifiedname>PotAccel::multistep_debug</qualifiedname>
+        <reimplementedby refid="class_cylinder_1ad8f35bcf5fa4a3b686c63b23a1b497b4">multistep_debug</reimplementedby>
+        <reimplementedby refid="class_cylinder_1ad8f35bcf5fa4a3b686c63b23a1b497b4">multistep_debug</reimplementedby>
+        <reimplementedby refid="class_two_center_1ac29938dc6a1d4c9af4f9166b9b04d249">multistep_debug</reimplementedby>
+        <briefdescription>
+<para>Print debug info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="210" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="210" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1aaada1d8e8970e63332269b0d00aed97f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::multistep_reset</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_reset</name>
+        <qualifiedname>PotAccel::multistep_reset</qualifiedname>
+        <reimplementedby refid="class_axisymmetric_basis_1a93d8a3c0e104139477fec734a6baf8e6">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a4ccd3920ba81aabc5051840b7c0d5875">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a4ccd3920ba81aabc5051840b7c0d5875">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1a176f79dfddda7dae31a595259abf797b">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1aef978544ce5d90a116759fd3a87a8634">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_two_center_1ac3c9e0ae37c6e7aaab40e7cac2475a26">multistep_reset</reimplementedby>
+        <briefdescription>
+<para>Reset data for multistep. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="207" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="207" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::multistep_update</definition>
+        <argsstring>(int cur, int next, Component *c, int i, int id)</argsstring>
+        <name>multistep_update</name>
+        <qualifiedname>PotAccel::multistep_update</qualifiedname>
+        <reimplementedby refid="class_cube_1a03b09ee07d08268915b8b451b92da758">multistep_update</reimplementedby>
+        <reimplementedby refid="class_cylinder_1afbf22ebc466872639f53e2dcd4847975">multistep_update</reimplementedby>
+        <reimplementedby refid="class_cylinder_1afbf22ebc466872639f53e2dcd4847975">multistep_update</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1abd587da712635ad6b559671f10fa5b32">multistep_update</reimplementedby>
+        <reimplementedby refid="class_shells_1acc353d16b061c858f6181eaa9df11246">multistep_update</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1a4a725652fef931de51889699f6f942db">multistep_update</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a92c55df02156ac2f3633bfa950eb795b">multistep_update</reimplementedby>
+        <reimplementedby refid="class_two_center_1a9840bdb9f5c27ce8f2d7d57013dd0b0a">multistep_update</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>cur</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of level shifts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="193" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::multistep_update_begin</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_update_begin</name>
+        <qualifiedname>PotAccel::multistep_update_begin</qualifiedname>
+        <reimplementedby refid="class_cube_1a53955c4fa1ad731cc63b614db11b51ec">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1ad8614d1a76923db9331a1080fdc7cf2b">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_shells_1a1ed597326ac936b3a5fe15a1f5b9f506">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1a200cb31ebcaa0d7573aece5765d5a0bb">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1af2393d23ec465c58280cc952a92c6fa8">multistep_update_begin</reimplementedby>
+        <reimplementedby refid="class_two_center_1a5d42adc520d7f5a7353ddd893990b5cd">multistep_update_begin</reimplementedby>
+        <briefdescription>
+<para>Execute to begin level shifts for particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the multi time step force algorithm when moving particle <computeroutput>i</computeroutput> from level <computeroutput>cur</computeroutput> to level <computeroutput>next</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="190" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="190" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::multistep_update_finish</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_update_finish</name>
+        <qualifiedname>PotAccel::multistep_update_finish</qualifiedname>
+        <reimplementedby refid="class_cube_1ae914dcb2011835bb35b556b614c1aa8c">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a77f0370f73afe1d8a759858128dc6df9">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a77f0370f73afe1d8a759858128dc6df9">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1aea28de3f69eb403dab0bd5049e71d04e">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_shells_1a302dcfe0ce8eed66d351079619b5879a">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_slab_s_l_1a7cffd18e053e3cdf8cfc459430019238">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a50f766814b5eb9fd2d3922da477c16e5">multistep_update_finish</reimplementedby>
+        <reimplementedby refid="class_two_center_1ae6080a5f19f8c92a75579a2d90776bd7">multistep_update_finish</reimplementedby>
+        <briefdescription>
+<para>Execute to finish level shifts for particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="196" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="196" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PotAccel::NoCoefs</definition>
+        <argsstring>()</argsstring>
+        <name>NoCoefs</name>
+        <qualifiedname>PotAccel::NoCoefs</qualifiedname>
+        <briefdescription>
+<para>Check whether coeffcients are not available. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="219" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="219" bodyend="219"/>
+        <references refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" compoundref="_pot_accel_8_h" startline="74">play_back</references>
+        <references refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" compoundref="_pot_accel_8_h" startline="77">play_cnew</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PotAccel::PotAccel</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;conf)</argsstring>
+        <name>PotAccel</name>
+        <qualifiedname>PotAccel::PotAccel</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the instantiating caller (a <ref refid="class_component" kindref="compound">Component</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is parsed and info is made available to derived classes on request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="124" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::print_timings</definition>
+        <argsstring>(const string &amp;, TList &amp;tlist)</argsstring>
+        <name>print_timings</name>
+        <qualifiedname>PotAccel::print_timings</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" kindref="member">TList</ref> &amp;</type>
+          <declname>tlist</declname>
+        </param>
+        <briefdescription>
+<para>For timing the fraction spent in threaded force methods. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="223" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::print_timings</definition>
+        <argsstring>(const string &amp;label)</argsstring>
+        <name>print_timings</name>
+        <qualifiedname>PotAccel::print_timings</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="224" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::RegisterComponent</definition>
+        <argsstring>(Component *c)</argsstring>
+        <name>RegisterComponent</name>
+        <qualifiedname>PotAccel::RegisterComponent</qualifiedname>
+        <reimplementedby refid="class_two_center_1a7ce7e41b10ddda4a7fc67b72d901f0e7">RegisterComponent</reimplementedby>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>For access to parent component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="154" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="154" bodyend="154"/>
+        <references refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" compoundref="_pot_accel_8_h" startline="56">component</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::set_multistep_level</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>set_multistep_level</name>
+        <qualifiedname>PotAccel::set_multistep_level</qualifiedname>
+        <reimplementedby refid="class_two_center_1afc027c542932d0fb5c23365730c7a225">set_multistep_level</reimplementedby>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Set the level for evaluating acceleration at level n. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="204" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="204" bodyend="204"/>
+        <references refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" compoundref="_pot_accel_8_h" startline="80">mlevel</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::SetExternal</definition>
+        <argsstring>()</argsstring>
+        <name>SetExternal</name>
+        <qualifiedname>PotAccel::SetExternal</qualifiedname>
+        <briefdescription>
+<para>Set external flag for current force call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="172" column="8" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="172" bodyend="172"/>
+        <references refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" compoundref="_pot_accel_8_h" startline="68">use_external</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PotAccel::setScale</definition>
+        <argsstring>(double s)</argsstring>
+        <name>setScale</name>
+        <qualifiedname>PotAccel::setScale</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set new length scale (default: 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="213" column="16" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="213" bodyend="213"/>
+        <references refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" compoundref="_pot_accel_8_h" startline="86">scale</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::thread_timing_beg</definition>
+        <argsstring>(int id)</argsstring>
+        <name>thread_timing_beg</name>
+        <qualifiedname>PotAccel::thread_timing_beg</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="225" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotAccel::thread_timing_end</definition>
+        <argsstring>(int id)</argsstring>
+        <name>thread_timing_end</name>
+        <qualifiedname>PotAccel::thread_timing_end</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="226" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; PotAccel::unmatched</definition>
+        <argsstring>()</argsstring>
+        <name>unmatched</name>
+        <qualifiedname>PotAccel::unmatched</qualifiedname>
+        <briefdescription>
+<para>Get unaccounted keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="236" column="12" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="236" bodyend="236"/>
+        <references refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" compoundref="_pot_accel_8_h" startline="94">current_keys</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int PotAccel::Used</definition>
+        <argsstring>()</argsstring>
+        <name>Used</name>
+        <qualifiedname>PotAccel::Used</qualifiedname>
+        <briefdescription>
+<para>Return umber of particles used on last coefficient evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="169" column="7" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="169" bodyend="169"/>
+        <references refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" compoundref="_pot_accel_8_h" startline="65">used</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual PotAccel::~PotAccel</definition>
+        <argsstring>()</argsstring>
+        <name>~PotAccel</name>
+        <qualifiedname>PotAccel::~PotAccel</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="127" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines the basic components of the Force class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides the threading members. Derived classes must provide the per thread members for evaluating coeffients (if any) and acceleration. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bessel</label>
+        <link refid="class_bessel"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CBrock</label>
+        <link refid="class_c_brock"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CBrockDisk</label>
+        <link refid="class_c_brock_disk"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Cube</label>
+        <link refid="class_cube"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Cylinder</label>
+        <link refid="class_cylinder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Direct</label>
+        <link refid="class_direct"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>EJcom</label>
+        <link refid="class_e_jcom"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ExternalForce</label>
+        <link refid="class_external_force"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FlatDisk</label>
+        <link refid="class_flat_disk"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>HaloBulge</label>
+        <link refid="class_halo_bulge"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Hernquist</label>
+        <link refid="class_hernquist"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>NoForce</label>
+        <link refid="class_no_force"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>PeriodicBC</label>
+        <link refid="class_periodic_b_c"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PolarBasis</label>
+        <link refid="class_polar_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+      <node id="18">
+        <label>ScatterMFP</label>
+        <link refid="class_scatter_m_f_p"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Shells</label>
+        <link refid="class_shells"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>SlabSL</label>
+        <link refid="class_slab_s_l"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Sphere</label>
+        <link refid="class_sphere"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SphericalBasis</label>
+        <link refid="class_spherical_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>TwoCenter</label>
+        <link refid="class_two_center"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>UserBar</label>
+        <link refid="class_user_bar"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>UserDisk</label>
+        <link refid="class_user_disk"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>UserHalo</label>
+        <link refid="class_user_halo"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>UserLogPot</label>
+        <link refid="class_user_log_pot"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>UserMNdisk</label>
+        <link refid="class_user_m_ndisk"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>UserMW</label>
+        <link refid="class_user_m_w"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>UserTest</label>
+        <link refid="class_user_test"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>UserTestCuda</label>
+        <link refid="class_user_test_cuda"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>externalShock</label>
+        <link refid="classexternal_shock"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>generateRelaxation</label>
+        <link refid="classgenerate_relaxation"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>tidalField</label>
+        <link refid="classtidal_field"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="4">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="2">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="30" column="1" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="31" bodyend="238"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>atol</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>cC</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>cc_lock</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>ClearExternal</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>coef_dump</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>compute</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>conf</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>cudaAware</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>current_keys</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>cylinder</name></member>
+      <member refid="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3" prot="public" virt="pure-virtual"><scope>PotAccel</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8" prot="public" virt="pure-virtual"><scope>PotAccel</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" virt="virtual"><scope>PotAccel</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49" prot="public" virt="pure-virtual"><scope>PotAccel</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>dof</name></member>
+      <member refid="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf" prot="public" virt="virtual"><scope>PotAccel</scope><name>dump_coefs</name></member>
+      <member refid="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c" prot="public" virt="virtual"><scope>PotAccel</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>exp_thread_fork</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>geoname</name></member>
+      <member refid="class_pot_accel_1ab78f20762031db204f636fc8e74ea986" prot="public" virt="pure-virtual"><scope>PotAccel</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>PotAccel</scope><name>getScale</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>HaveCoefDump</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>id</name></member>
+      <member refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d" prot="protected" virt="pure-virtual"><scope>PotAccel</scope><name>initialize</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>kill_mutex</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>make_mutex</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>mlevel</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>PotAccel</scope><name>multistep_debug</name></member>
+      <member refid="class_pot_accel_1aaada1d8e8970e63332269b0d00aed97f" prot="public" virt="virtual"><scope>PotAccel</scope><name>multistep_reset</name></member>
+      <member refid="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a" prot="public" virt="virtual"><scope>PotAccel</scope><name>multistep_update</name></member>
+      <member refid="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381" prot="public" virt="virtual"><scope>PotAccel</scope><name>multistep_update_begin</name></member>
+      <member refid="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e" prot="public" virt="virtual"><scope>PotAccel</scope><name>multistep_update_finish</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>nbodies</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>NoCoefs</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>other</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>play_cnew</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>PotAccel</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>PotAccel</scope><name>RegisterComponent</name></member>
+      <member refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>scale</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>PotAccel</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>PotAccel</scope><name>setScale</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>slab</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>sphere</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>PotAccel</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>PotAccel</scope><name>td</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>timer_list</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>TList</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>unmatched</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>use</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>PotAccel</scope><name>Used</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>PotAccel</scope><name>used</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>PotAccel</scope><name>~PotAccel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

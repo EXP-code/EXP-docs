@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_grid2_d" kind="class" language="C++" prot="public">
+    <compoundname>Grid2D</compoundname>
+    <includes refid="_grid2_d_8_h" local="no">Grid2D.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Grid2D::dens</definition>
+        <argsstring></argsstring>
+        <name>dens</name>
+        <qualifiedname>Grid2D::dens</qualifiedname>
+        <briefdescription>
+<para>Data store (flattened into a single vector) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="27" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" compoundref="_grid2_d_8_h" startline="41" endline="47">addPoint</referencedby>
+        <referencedby refid="class_grid2_d_1a659da1bccd65da697b45f6b660197a13" compoundref="_grid2_d_8_h" startline="31" endline="35">Grid2D</referencedby>
+        <referencedby refid="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" compoundref="_grid2_d_8_h" startline="50" endline="104">operator()</referencedby>
+        <referencedby refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</referencedby>
+        <referencedby refid="class_grid2_d_1a87db0c90847f58f98959ec17bdd1f184" compoundref="_grid2_d_8_h" startline="110" endline="115">sync</referencedby>
+        <referencedby refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" compoundref="_grid2_d_8_h" startline="118" endline="127">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Grid2D::dr</definition>
+        <argsstring></argsstring>
+        <name>dr</name>
+        <qualifiedname>Grid2D::dr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="22" column="14" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" compoundref="_grid2_d_8_h" startline="41" endline="47">addPoint</referencedby>
+        <referencedby refid="class_grid2_d_1a659da1bccd65da697b45f6b660197a13" compoundref="_grid2_d_8_h" startline="31" endline="35">Grid2D</referencedby>
+        <referencedby refid="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" compoundref="_grid2_d_8_h" startline="50" endline="104">operator()</referencedby>
+        <referencedby refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</referencedby>
+        <referencedby refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" compoundref="_grid2_d_8_h" startline="118" endline="127">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Grid2D::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <qualifiedname>Grid2D::N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="23" column="7" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" compoundref="_grid2_d_8_h" startline="41" endline="47">addPoint</referencedby>
+        <referencedby refid="class_grid2_d_1a659da1bccd65da697b45f6b660197a13" compoundref="_grid2_d_8_h" startline="31" endline="35">Grid2D</referencedby>
+        <referencedby refid="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" compoundref="_grid2_d_8_h" startline="50" endline="104">operator()</referencedby>
+        <referencedby refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</referencedby>
+        <referencedby refid="class_grid2_d_1a87db0c90847f58f98959ec17bdd1f184" compoundref="_grid2_d_8_h" startline="110" endline="115">sync</referencedby>
+        <referencedby refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" compoundref="_grid2_d_8_h" startline="118" endline="127">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Grid2D::R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <qualifiedname>Grid2D::R</qualifiedname>
+        <briefdescription>
+<para>Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" compoundref="_grid2_d_8_h" startline="41" endline="47">addPoint</referencedby>
+        <referencedby refid="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" compoundref="_grid2_d_8_h" startline="50" endline="104">operator()</referencedby>
+        <referencedby refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</referencedby>
+        <referencedby refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" compoundref="_grid2_d_8_h" startline="118" endline="127">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid2_d_1ac770165b4575f148b975a83d098cbaec" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Grid2D::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <qualifiedname>Grid2D::T</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="22" column="12" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</referencedby>
+        <referencedby refid="class_grid2_d_1a67d943d657ab5f6ed9897704eafce4ee" compoundref="_grid2_d_8_h" startline="107" endline="107">Time</referencedby>
+        <referencedby refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" compoundref="_grid2_d_8_h" startline="118" endline="127">write</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid2D::addPoint</definition>
+        <argsstring>(double mass, double x, double y)</argsstring>
+        <name>addPoint</name>
+        <qualifiedname>Grid2D::addPoint</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Add. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="41" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="41" bodyend="47"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" compoundref="_grid2_d_8_h" startline="22">dr</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+        <references refid="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" compoundref="_grid2_d_8_h" startline="22">R</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1a659da1bccd65da697b45f6b660197a13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Grid2D::Grid2D</definition>
+        <argsstring>(double Rmax, int num, double t)</argsstring>
+        <name>Grid2D</name>
+        <qualifiedname>Grid2D::Grid2D</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Rmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="31" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="31" bodyend="35"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" compoundref="_grid2_d_8_h" startline="22">dr</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1a35d5cb14b2ffd5037fc030f5d83e13c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Grid2D::Grid2D</definition>
+        <argsstring>(std::istream &amp;in)</argsstring>
+        <name>Grid2D</name>
+        <qualifiedname>Grid2D::Grid2D</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>Constructor from istream (restore from cache file) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="38" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="38" bodyend="38"/>
+        <references refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" compoundref="_grid2_d_8_h" startline="130" endline="139">read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid2D::operator()</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Grid2D::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get density. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="50" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="50" bodyend="104"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" compoundref="_grid2_d_8_h" startline="22">dr</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+        <references refid="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" compoundref="_grid2_d_8_h" startline="22">R</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid2D::read</definition>
+        <argsstring>(std::istream &amp;in)</argsstring>
+        <name>read</name>
+        <qualifiedname>Grid2D::read</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>Read from file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="130" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="130" bodyend="139"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" compoundref="_grid2_d_8_h" startline="22">dr</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+        <references refid="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" compoundref="_grid2_d_8_h" startline="22">R</references>
+        <references refid="class_grid2_d_1ac770165b4575f148b975a83d098cbaec" compoundref="_grid2_d_8_h" startline="22">T</references>
+        <referencedby refid="class_grid2_d_1a35d5cb14b2ffd5037fc030f5d83e13c2" compoundref="_grid2_d_8_h" startline="38" endline="38">Grid2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1a87db0c90847f58f98959ec17bdd1f184" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid2D::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <qualifiedname>Grid2D::sync</qualifiedname>
+        <briefdescription>
+<para>Synchonize arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="110" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="110" bodyend="115"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1a67d943d657ab5f6ed9897704eafce4ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid2D::Time</definition>
+        <argsstring>()</argsstring>
+        <name>Time</name>
+        <qualifiedname>Grid2D::Time</qualifiedname>
+        <briefdescription>
+<para>Get time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="107" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="107" bodyend="107"/>
+        <references refid="class_grid2_d_1ac770165b4575f148b975a83d098cbaec" compoundref="_grid2_d_8_h" startline="22">T</references>
+      </memberdef>
+      <memberdef kind="function" id="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid2D::write</definition>
+        <argsstring>(std::ostream &amp;out)</argsstring>
+        <name>write</name>
+        <qualifiedname>Grid2D::write</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Write to file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="118" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="118" bodyend="127"/>
+        <references refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" compoundref="_grid2_d_8_h" startline="27">dens</references>
+        <references refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" compoundref="_grid2_d_8_h" startline="22">dr</references>
+        <references refid="localmpi_8_h_1a20705b4372a9940d34a164bae541be1f" compoundref="localmpi_8_h" startline="17">myid</references>
+        <references refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" compoundref="_grid2_d_8_h" startline="23">N</references>
+        <references refid="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" compoundref="_grid2_d_8_h" startline="22">R</references>
+        <references refid="class_grid2_d_1ac770165b4575f148b975a83d098cbaec" compoundref="_grid2_d_8_h" startline="22">T</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Create, store, and restore a two-dimensional binned grid </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" line="16" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/PhaseSpace/Grid2D.H" bodystart="17" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_grid2_d_1aed116c892588ab434fc298e03f06dbe2" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>addPoint</name></member>
+      <member refid="class_grid2_d_1a0d78e0fa8d6e82bdefdab3d96051a5f0" prot="private" virt="non-virtual"><scope>Grid2D</scope><name>dens</name></member>
+      <member refid="class_grid2_d_1a6a207f6a41a1aa3c7688e9ee910f28eb" prot="private" virt="non-virtual"><scope>Grid2D</scope><name>dr</name></member>
+      <member refid="class_grid2_d_1a659da1bccd65da697b45f6b660197a13" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>Grid2D</name></member>
+      <member refid="class_grid2_d_1a35d5cb14b2ffd5037fc030f5d83e13c2" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>Grid2D</name></member>
+      <member refid="class_grid2_d_1a41fa077e79f40ef5cc8bbc91ac93c705" prot="private" virt="non-virtual"><scope>Grid2D</scope><name>N</name></member>
+      <member refid="class_grid2_d_1abad8a36ba11951796e836c60c99b8c31" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>operator()</name></member>
+      <member refid="class_grid2_d_1a34926969759afd9accfb616ca4ef173a" prot="private" virt="non-virtual"><scope>Grid2D</scope><name>R</name></member>
+      <member refid="class_grid2_d_1ae4501b9e24f8c7caaca5721ac410f326" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>read</name></member>
+      <member refid="class_grid2_d_1a87db0c90847f58f98959ec17bdd1f184" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>sync</name></member>
+      <member refid="class_grid2_d_1ac770165b4575f148b975a83d098cbaec" prot="private" virt="non-virtual"><scope>Grid2D</scope><name>T</name></member>
+      <member refid="class_grid2_d_1a67d943d657ab5f6ed9897704eafce4ee" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>Time</name></member>
+      <member refid="class_grid2_d_1a7247cf15129bd6d34e1b6c95ac265af0" prot="public" virt="non-virtual"><scope>Grid2D</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="utilities" kind="page">
+    <compoundname>utilities</compoundname>
+    <title>Phase-space file utilities</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The binary output format, <computeroutput>psp</computeroutput> is a generalized hierarchical self-describing format designed to keep most of the information about all components in a phase space that the code can be restarted from the dump file.</para>
+<para>The following three utilities manipulate the phase-space files:</para>
+<para><simplesect kind="par"><title>pspinfo OUT</title><para></para>
+</simplesect>
+Lists all of the dumps in a <computeroutput>psp</computeroutput> file (here name OUT) and their attributes.</para>
+<para><simplesect kind="par"><title>pspstat OUT</title><para></para>
+</simplesect>
+Prints summary statistics (number of bodies, center of mass, center of velocity angular momentum, KE, PE, mass, etc.) for the <ref refid="class_p_s_p" kindref="compound">PSP</ref> dump</para>
+<para><simplesect kind="par"><title>psp2tipsy [-t TIME] OUT</title><para></para>
+</simplesect>
+Converts dump in file OUT at TIME to a tipsy format. Data is written to stdout. The tipsy components (dark, star, gas) are determined from the first word in the name field of each component.</para>
+<para><simplesect kind="par"><title>pspsplit [-t TIME] OUT</title><para></para>
+</simplesect>
+Split out the dump at TIME from OUT. Data is written to stdout. Useful for restarting from a particular time point.</para>
+<para><simplesect kind="par"><title>psp2ascii [-t TIME] OUT</title><para></para>
+</simplesect>
+Converts dump in file OUT at TIME to ascii files, one for each component. The format is the same for ascii initial conditions.</para>
+<para><simplesect kind="par"><title>psp2ta [-t TIME] OUT</title><para></para>
+</simplesect>
+Write an array of a particular <ref refid="class_p_s_p" kindref="compound">PSP</ref> double or integer attribute in particle order, primarily for use with Tipsy.</para>
+<para><simplesect kind="par"><title>psp2histo [-t TIME] OUT</title><para></para>
+</simplesect>
+Make a histogram of position, velocity, or a articular <ref refid="class_p_s_p" kindref="compound">PSP</ref> array attribute.</para>
+<para><simplesect kind="par"><title>psp2histoE [-t TIME] OUT</title><para></para>
+</simplesect>
+Make a histogram of electron distribution properties (for use with DSMC) </para>
+    </detaileddescription>
+    <location file="utilities.doc"/>
+  </compounddef>
+</doxygen>

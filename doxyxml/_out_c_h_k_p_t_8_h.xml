@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_out_c_h_k_p_t_8_h" kind="file" language="C++">
+    <compoundname>OutCHKPT.H</compoundname>
+    <includes refid="_out_c_h_k_p_t_8_h" local="no">OutCHKPT.H</includes>
+    <includedby refid="_out_c_h_k_p_t_8_h" local="no">/home/weinberg/Projects/EXP/src/OutCHKPT.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutCHKPT.H</label>
+        <link refid="_out_c_h_k_p_t_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutCHKPT.H</label>
+        <link refid="_out_c_h_k_p_t_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_out_c_h_k_p_t" prot="public">OutCHKPT</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OutCHKPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OutCHKPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_out_c_h_k_p_t_8_h" kindref="compound">OutCHKPT.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_out_c_h_k_p_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_out_c_h_k_p_t" kindref="compound">OutCHKPT</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_output" kindref="compound">Output</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_out_c_h_k_p_t_1ab8f0c868be3c6d3a756da440364b7cbc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_out_c_h_k_p_t_1ab8f0c868be3c6d3a756da440364b7cbc" kindref="member">filename</ref>,<sp/><ref refid="class_out_c_h_k_p_t_1ac558cbd1533c1d8f041dc812e62b4475" kindref="member">nagg</ref>;</highlight></codeline>
+<codeline lineno="28" refid="class_out_c_h_k_p_t_1a681f23c5c00a8b9504f9171a4dc62ff5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_out_c_h_k_p_t_1a4c59f11d51d3c0fe67a7b1c3abcde9fb" kindref="member">timer</ref>,<sp/><ref refid="class_out_c_h_k_p_t_1a681f23c5c00a8b9504f9171a4dc62ff5" kindref="member">mpio</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_out_c_h_k_p_t_1aa6eb4b8a25a08e746160c3f888a07de3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_c_h_k_p_t_1aa6eb4b8a25a08e746160c3f888a07de3" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_out_c_h_k_p_t_1a97110c37dda49518829e6e0ef346ebd3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="class_out_c_h_k_p_t_1a97110c37dda49518829e6e0ef346ebd3" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_out_c_h_k_p_t_1ab6d2039d671cba8faef45a13784cdf18" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_out_c_h_k_p_t_1ab6d2039d671cba8faef45a13784cdf18" kindref="member">OutCHKPT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" kindref="member">conf</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_out_c_h_k_p_t_1a918198b8462ca963530e8477ab32790a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_c_h_k_p_t_1a918198b8462ca963530e8477ab32790a" kindref="member">Run</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nstep,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" kindref="member">mstep</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>last);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/OutCHKPT.H"/>
+  </compounddef>
+</doxygen>

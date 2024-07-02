@@ -1,0 +1,1487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_axisymmetric_basis" kind="class" language="C++" prot="public">
+    <compoundname>AxisymmetricBasis</compoundname>
+    <basecompoundref refid="class_basis" prot="public" virt="non-virtual">Basis</basecompoundref>
+    <derivedcompoundref refid="class_c_brock_disk" prot="public" virt="non-virtual">CBrockDisk</derivedcompoundref>
+    <derivedcompoundref refid="class_polar_basis" prot="public" virt="non-virtual">PolarBasis</derivedcompoundref>
+    <derivedcompoundref refid="class_spherical_basis" prot="public" virt="non-virtual">SphericalBasis</derivedcompoundref>
+    <includes refid="_axisymmetric_basis_8_h" local="no">AxisymmetricBasis.H</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TKType</name>
+        <qualifiedname>AxisymmetricBasis::TKType</qualifiedname>
+        <enumvalue id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a355c2a93725cd932da5408330dec2a6b" prot="public">
+          <name>Hall</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Tapered signal-to-noise power defined by Hall <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a27bdb8b3a4040b794e7418581fda2615" prot="public">
+          <name>VarianceCut</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Cut all coefficients below some S/N level <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a1dbf0ed28469f49a393a25a7b67753c3" prot="public">
+          <name>CumulativeCut</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Cut coefficients below some cumulative fraction </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a7381bdf9e2231e55827cf72d86f7f415" prot="public">
+          <name>VarianceWeighted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Weight coefficients be S/N for S/N&lt;1 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a85300903a059bd6e3a193bd92112a16f" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Compute the S/N but do not modify coefficients <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum listing the possible selection algorithms for coefficient selection </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="166" column="3" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="166" bodyend="172"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" prot="protected" static="no">
+        <type>std::shared_ptr&lt; Eigen::MatrixXd &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Eigen::MatrixXd&gt; AxisymmetricBasis::MatrixP</definition>
+        <argsstring></argsstring>
+        <name>MatrixP</name>
+        <qualifiedname>AxisymmetricBasis::MatrixP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="93" column="27" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" prot="protected" static="no">
+        <type>std::shared_ptr&lt; Eigen::VectorXd &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Eigen::VectorXd&gt; AxisymmetricBasis::VectorP</definition>
+        <argsstring></argsstring>
+        <name>VectorP</name>
+        <qualifiedname>AxisymmetricBasis::VectorP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Expansion coefficients (summed over all nodes)</para>
+<para>The vector entries store coefficients for a multistep expansion. Move pointers rather than objects for efficiency. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="92" column="27" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad3b6c5272fa2aae68be0177ebb3f2edd" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned AxisymmetricBasis::defSampT</definition>
+        <argsstring></argsstring>
+        <name>defSampT</name>
+        <qualifiedname>AxisymmetricBasis::defSampT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="127" column="43" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1afae69589bd4f7341ab42b8c48c22b707" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt;</type>
+        <definition>std::vector&lt;VectorP&gt; AxisymmetricBasis::expcoef</definition>
+        <argsstring></argsstring>
+        <name>expcoef</name>
+        <qualifiedname>AxisymmetricBasis::expcoef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="95" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_axisymmetric_basis_1a81196ff99fb4254c4e37866ca3d2c7de" compoundref="_axisymmetric_basis_8_h" startline="194" endline="194">getCoefs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad68406307042d772a285f40728a70cf6" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt;</type>
+        <definition>std::vector&lt;VectorP&gt; AxisymmetricBasis::expcoef1</definition>
+        <argsstring></argsstring>
+        <name>expcoef1</name>
+        <qualifiedname>AxisymmetricBasis::expcoef1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="95" column="23" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad60eac81d3f5d960af091345128485a8" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;VectorP&gt; &gt; AxisymmetricBasis::expcoefL</definition>
+        <argsstring></argsstring>
+        <name>expcoefL</name>
+        <qualifiedname>AxisymmetricBasis::expcoefL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="115" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1acc9740eafab3aa6d3b935bb310c568bd" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" kindref="member">MatrixP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;MatrixP&gt; &gt; AxisymmetricBasis::expcoefM</definition>
+        <argsstring></argsstring>
+        <name>expcoefM</name>
+        <qualifiedname>AxisymmetricBasis::expcoefM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="121" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a11d3819929833b80de31120b99912e96" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" kindref="member">MatrixP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;MatrixP&gt; &gt; AxisymmetricBasis::expcoefM1</definition>
+        <argsstring></argsstring>
+        <name>expcoefM1</name>
+        <qualifiedname>AxisymmetricBasis::expcoefM1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="121" column="24" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1abe415ce8067b52c57aeb4beccbd85d7f" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;VectorP&gt; &gt; AxisymmetricBasis::expcoefN</definition>
+        <argsstring></argsstring>
+        <name>expcoefN</name>
+        <qualifiedname>AxisymmetricBasis::expcoefN</qualifiedname>
+        <briefdescription>
+<para>Interpolation arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="114" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad344d65e16dfdea9aed2e478185bc8e7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt;</type>
+        <definition>std::vector&lt;VectorP&gt; AxisymmetricBasis::expcoefP</definition>
+        <argsstring></argsstring>
+        <name>expcoefP</name>
+        <qualifiedname>AxisymmetricBasis::expcoefP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="95" column="32" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1acd8494e7bb875fc2c8677ca92a0c6f01" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;VectorP&gt; &gt; AxisymmetricBasis::expcoefT</definition>
+        <argsstring></argsstring>
+        <name>expcoefT</name>
+        <qualifiedname>AxisymmetricBasis::expcoefT</qualifiedname>
+        <briefdescription>
+<para>Covariance arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="120" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a699990cc53ec82eb867cf9c85cb57f70" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;VectorP&gt; &gt; AxisymmetricBasis::expcoefT1</definition>
+        <argsstring></argsstring>
+        <name>expcoefT1</name>
+        <qualifiedname>AxisymmetricBasis::expcoefT1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="120" column="24" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1af0b7e5ba06a1acf652e61b9b4ecadfec" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::hexp</definition>
+        <argsstring></argsstring>
+        <name>hexp</name>
+        <qualifiedname>AxisymmetricBasis::hexp</qualifiedname>
+        <briefdescription>
+<para>Hall smoothing exponent (default: 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="79" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1abed8db010c45ad27e769043c68ab3101" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::Lmax</definition>
+        <argsstring></argsstring>
+        <name>Lmax</name>
+        <qualifiedname>AxisymmetricBasis::Lmax</qualifiedname>
+        <briefdescription>
+<para>Maximum angular harmonic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="51" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_axisymmetric_basis_1a392660898c9be95471072adb3f0faa25" compoundref="_axisymmetric_basis_8_h" startline="198" endline="198">getLmax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a0c051b9729ad5af02ed9ca626b56d999" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AxisymmetricBasis::massT</definition>
+        <argsstring></argsstring>
+        <name>massT</name>
+        <qualifiedname>AxisymmetricBasis::massT</qualifiedname>
+        <briefdescription>
+<para>Mass and counts for subsample covariance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="126" column="29" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a695b88eea00afd8f04b80c7f08be1b82" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; AxisymmetricBasis::massT1</definition>
+        <argsstring></argsstring>
+        <name>massT1</name>
+        <qualifiedname>AxisymmetricBasis::massT1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="126" column="35" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a2307130cf92a81e6cfb6f69fb2279585" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::Mmax</definition>
+        <argsstring></argsstring>
+        <name>Mmax</name>
+        <qualifiedname>AxisymmetricBasis::Mmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="51" column="12" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_axisymmetric_basis_1ab09be7b0782949e27379ea930eb10171" compoundref="_axisymmetric_basis_8_h" startline="199" endline="199">getMmax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a066a011ea1511b649a093b17a01bee1e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::muse</definition>
+        <argsstring></argsstring>
+        <name>muse</name>
+        <qualifiedname>AxisymmetricBasis::muse</qualifiedname>
+        <briefdescription>
+<para>Accumulated mass for variance computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="141" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>AxisymmetricBasis::nmax</qualifiedname>
+        <briefdescription>
+<para>Maximum radial basis index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="54" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_axisymmetric_basis_1a3026462dfa88e923d7673f3d56dc4de4" compoundref="_axisymmetric_basis_8_h" startline="203" endline="203">getNmax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a5cffa9ce5ca3b98aeca288e4c5e11c73" prot="protected" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd AxisymmetricBasis::normM</definition>
+        <argsstring></argsstring>
+        <name>normM</name>
+        <qualifiedname>AxisymmetricBasis::normM</qualifiedname>
+        <briefdescription>
+<para>Normalization for covariance matrix based on the biorthogonal basis norm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="135" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1afa81d9394890b9ebc0a7989651b021d9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::npca</definition>
+        <argsstring></argsstring>
+        <name>npca</name>
+        <qualifiedname>AxisymmetricBasis::npca</qualifiedname>
+        <briefdescription>
+<para>Frequency of PCA computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="73" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a68be4e14ebd23388b75d8df12af76667" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::npca0</definition>
+        <argsstring></argsstring>
+        <name>npca0</name>
+        <qualifiedname>AxisymmetricBasis::npca0</qualifiedname>
+        <briefdescription>
+<para>First step for PCA computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="76" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1aea08169a329b6608c42fdeeb1db91183" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxisymmetricBasis::pcadiag</definition>
+        <argsstring></argsstring>
+        <name>pcadiag</name>
+        <qualifiedname>AxisymmetricBasis::pcadiag</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_output" kindref="compound">Output</ref> PCA diagnostics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="61" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1af2a1f4efbdc887b29a6d49b770c1f060" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxisymmetricBasis::pcaeof</definition>
+        <argsstring></argsstring>
+        <name>pcaeof</name>
+        <qualifiedname>AxisymmetricBasis::pcaeof</qualifiedname>
+        <briefdescription>
+<para>Compute eof decomposition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="67" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a8da7266925e30ee0056cf97e84d4809e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxisymmetricBasis::pcavar</definition>
+        <argsstring></argsstring>
+        <name>pcavar</name>
+        <qualifiedname>AxisymmetricBasis::pcavar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use principal component bootstrap analysis of variance to select coefficients </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="58" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad53aa251aa38d7645a4d3eece99dc9d5" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxisymmetricBasis::pcavtk</definition>
+        <argsstring></argsstring>
+        <name>pcavtk</name>
+        <qualifiedname>AxisymmetricBasis::pcavtk</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_output" kindref="compound">Output</ref> PCA diagnostics in vtk format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="64" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a9e5bccb2a796e19083511f4e637cffda" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned AxisymmetricBasis::sampT</definition>
+        <argsstring></argsstring>
+        <name>sampT</name>
+        <qualifiedname>AxisymmetricBasis::sampT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="127" column="37" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ac4fce6a4930030f49b46844753ce3052" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::snr</definition>
+        <argsstring></argsstring>
+        <name>snr</name>
+        <qualifiedname>AxisymmetricBasis::snr</qualifiedname>
+        <briefdescription>
+<para>Signal-to-noise scaling parameter (default: 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="82" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a2dd973d8ace9db32c65938425d159af9" prot="protected" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd AxisymmetricBasis::sqnorm</definition>
+        <argsstring></argsstring>
+        <name>sqnorm</name>
+        <qualifiedname>AxisymmetricBasis::sqnorm</qualifiedname>
+        <briefdescription>
+<para>Sqr root of the normalization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="138" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a592dd952d0301e3c55da82f78eb3cfe8" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AxisymmetricBasis::subsamp</definition>
+        <argsstring></argsstring>
+        <name>subsamp</name>
+        <qualifiedname>AxisymmetricBasis::subsamp</qualifiedname>
+        <briefdescription>
+<para>Partitioned variance computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="157" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a8acdd32795c612cdcefee5da62cc5b3a" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" kindref="member">MatrixP</ref> &gt;</type>
+        <definition>std::vector&lt;MatrixP&gt; AxisymmetricBasis::tvar</definition>
+        <argsstring></argsstring>
+        <name>tvar</name>
+        <qualifiedname>AxisymmetricBasis::tvar</qualifiedname>
+        <briefdescription>
+<para>Test for eof trim. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="131" column="28" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ab0d1d51da0dc7f33cf3091bab41866d1" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned AxisymmetricBasis::vtkfreq</definition>
+        <argsstring></argsstring>
+        <name>vtkfreq</name>
+        <qualifiedname>AxisymmetricBasis::vtkfreq</qualifiedname>
+        <briefdescription>
+<para>VTK diagnostic frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="70" column="12" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a5304e2888496122ca48c947ef926a441" prot="protected" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; AxisymmetricBasis::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>AxisymmetricBasis::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="160" column="25" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="160" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; AxisymmetricBasis::b_Hall</definition>
+        <argsstring></argsstring>
+        <name>b_Hall</name>
+        <qualifiedname>AxisymmetricBasis::b_Hall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="214" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a7bd4492f833f728f99891d38b7493631" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd AxisymmetricBasis::covar</definition>
+        <argsstring></argsstring>
+        <name>covar</name>
+        <qualifiedname>AxisymmetricBasis::covar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="220" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a739cec07895fdd02850006d6a52639a8" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxisymmetricBasis::cuml</definition>
+        <argsstring></argsstring>
+        <name>cuml</name>
+        <qualifiedname>AxisymmetricBasis::cuml</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="217" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a45362e008f1389402494647b75931e1e" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxisymmetricBasis::eval</definition>
+        <argsstring></argsstring>
+        <name>eval</name>
+        <qualifiedname>AxisymmetricBasis::eval</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="216" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ae30dc4a6d54a9b90dbe31e2b03821382" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; AxisymmetricBasis::evec</definition>
+        <argsstring></argsstring>
+        <name>evec</name>
+        <qualifiedname>AxisymmetricBasis::evec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="218" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ae6dd8f205982c2e3ef87f6f467976018" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::fac02</definition>
+        <argsstring></argsstring>
+        <name>fac02</name>
+        <qualifiedname>AxisymmetricBasis::fac02</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="208" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1abe6cac911f0415ee15378c104bd3fd16" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxisymmetricBasis::inv</definition>
+        <argsstring></argsstring>
+        <name>inv</name>
+        <qualifiedname>AxisymmetricBasis::inv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="215" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a77c3332bf7286f04c94af7d068c7b2c4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::L0</definition>
+        <argsstring></argsstring>
+        <name>L0</name>
+        <qualifiedname>AxisymmetricBasis::L0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="207" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a570f3d24187073d3354933ace93a6bd6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::Ldim</definition>
+        <argsstring></argsstring>
+        <name>Ldim</name>
+        <qualifiedname>AxisymmetricBasis::Ldim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="207" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a5116daa842c0f604c2a312db8e0ce97e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; AxisymmetricBasis::s_Hall</definition>
+        <argsstring></argsstring>
+        <name>s_Hall</name>
+        <qualifiedname>AxisymmetricBasis::s_Hall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="213" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a52873b88250c954ccca613fab178c5ee" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd AxisymmetricBasis::smth</definition>
+        <argsstring></argsstring>
+        <name>smth</name>
+        <qualifiedname>AxisymmetricBasis::smth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="211" column="19" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a196db3f26a946c2dcbaabcbe31883b4a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; AxisymmetricBasis::Tevec</definition>
+        <argsstring></argsstring>
+        <name>Tevec</name>
+        <qualifiedname>AxisymmetricBasis::Tevec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="219" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a3e85225ea1c3c408fe2bcf23ad09b555" prot="private" static="no" mutable="no">
+        <type><ref refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" kindref="member">TKType</ref></type>
+        <definition>TKType AxisymmetricBasis::tk_type</definition>
+        <argsstring></argsstring>
+        <name>tk_type</name>
+        <qualifiedname>AxisymmetricBasis::tk_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="209" column="10" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a3a98442a6149253a6881c33cf6792e38" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::tkcum</definition>
+        <argsstring></argsstring>
+        <name>tkcum</name>
+        <qualifiedname>AxisymmetricBasis::tkcum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="208" column="25" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1ad4dabce5bd04809a4644cb36705312f9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AxisymmetricBasis::tksmooth</definition>
+        <argsstring></argsstring>
+        <name>tksmooth</name>
+        <qualifiedname>AxisymmetricBasis::tksmooth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="208" column="16" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_axisymmetric_basis_1a3708ccfcde62cc3e88dbde5994d08f26" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; AxisymmetricBasis::weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>AxisymmetricBasis::weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="212" column="15" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="212" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_axisymmetric_basis_1a0ba9093da208645ba67931e04a61f4c7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AxisymmetricBasis::parallel_distribute_coefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>parallel_distribute_coefficients</name>
+        <qualifiedname>AxisymmetricBasis::parallel_distribute_coefficients</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MPI routines to distribution the expansion coefficients (<computeroutput>expcoef</computeroutput>) from all nodes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="145" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a1aba7be747336c8e6a67613a3109e285" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AxisymmetricBasis::parallel_gather_coef2</definition>
+        <argsstring>(void)</argsstring>
+        <name>parallel_gather_coef2</name>
+        <qualifiedname>AxisymmetricBasis::parallel_gather_coef2</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MPI routines to sum the expansion coefficients variance moments (<computeroutput>cc</computeroutput>) from all nodes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="154" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a01ab8064885a073b48ad562790b89f86" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AxisymmetricBasis::parallel_gather_coefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>parallel_gather_coefficients</name>
+        <qualifiedname>AxisymmetricBasis::parallel_gather_coefficients</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MPI routines to sum the expansion coefficients (<computeroutput>expcoef</computeroutput>) from all nodes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="150" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a8298f44c8cc6e6401b471c4a50c52662" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxisymmetricBasis::swap_coefs</definition>
+        <argsstring>(std::vector&lt; VectorP &gt; &amp;from, std::vector&lt; VectorP &gt; &amp;to)</argsstring>
+        <name>swap_coefs</name>
+        <qualifiedname>AxisymmetricBasis::swap_coefs</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &amp;</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref> &gt; &amp;</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_swap" kindref="compound">Swap</ref> coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="98" column="8" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="98" bodyend="110"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AxisymmetricBasis::AxisymmetricBasis</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;line)</argsstring>
+        <name>AxisymmetricBasis</name>
+        <qualifiedname>AxisymmetricBasis::AxisymmetricBasis</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="175" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a81196ff99fb4254c4e37866ca3d2c7de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" kindref="member">VectorP</ref></type>
+        <definition>VectorP AxisymmetricBasis::getCoefs</definition>
+        <argsstring>(int l) const</argsstring>
+        <name>getCoefs</name>
+        <qualifiedname>AxisymmetricBasis::getCoefs</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Access coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="194" column="11" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="194" bodyend="194"/>
+        <references refid="class_axisymmetric_basis_1afae69589bd4f7341ab42b8c48c22b707" compoundref="_axisymmetric_basis_8_h" startline="95">expcoef</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a392660898c9be95471072adb3f0faa25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::getLmax</definition>
+        <argsstring>()</argsstring>
+        <name>getLmax</name>
+        <qualifiedname>AxisymmetricBasis::getLmax</qualifiedname>
+        <briefdescription>
+<para>Get angular order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="198" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="198" bodyend="198"/>
+        <references refid="class_axisymmetric_basis_1abed8db010c45ad27e769043c68ab3101" compoundref="_axisymmetric_basis_8_h" startline="51">Lmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1ab09be7b0782949e27379ea930eb10171" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::getMmax</definition>
+        <argsstring>()</argsstring>
+        <name>getMmax</name>
+        <qualifiedname>AxisymmetricBasis::getMmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="199" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="199" bodyend="199"/>
+        <references refid="class_axisymmetric_basis_1a2307130cf92a81e6cfb6f69fb2279585" compoundref="_axisymmetric_basis_8_h" startline="51">Mmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a3026462dfa88e923d7673f3d56dc4de4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AxisymmetricBasis::getNmax</definition>
+        <argsstring>()</argsstring>
+        <name>getNmax</name>
+        <qualifiedname>AxisymmetricBasis::getNmax</qualifiedname>
+        <briefdescription>
+<para>Get radial order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="203" column="7" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="203" bodyend="203"/>
+        <references refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" compoundref="_axisymmetric_basis_8_h" startline="54">nmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a93d8a3c0e104139477fec734a6baf8e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AxisymmetricBasis::multistep_reset</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_reset</name>
+        <qualifiedname>AxisymmetricBasis::multistep_reset</qualifiedname>
+        <reimplements refid="class_pot_accel_1aaada1d8e8970e63332269b0d00aed97f">multistep_reset</reimplements>
+        <reimplementedby refid="class_polar_basis_1a176f79dfddda7dae31a595259abf797b">multistep_reset</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1aef978544ce5d90a116759fd3a87a8634">multistep_reset</reimplementedby>
+        <briefdescription>
+<para>Reset used particle counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="188" column="16" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="188" bodyend="188"/>
+        <references refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" compoundref="_pot_accel_8_h" startline="65">PotAccel::used</references>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a408a19fff1093c88f6a9bcf9ad2601d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxisymmetricBasis::pca_hall</definition>
+        <argsstring>(bool compute)</argsstring>
+        <name>pca_hall</name>
+        <qualifiedname>AxisymmetricBasis::pca_hall</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>compute</declname>
+        </param>
+        <briefdescription>
+<para>Compute component noise suppression using PCA analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="182" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1ae0353b5d1b82b19517ede95a862d7484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxisymmetricBasis::pca_hall_2d</definition>
+        <argsstring>(bool compute)</argsstring>
+        <name>pca_hall_2d</name>
+        <qualifiedname>AxisymmetricBasis::pca_hall_2d</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>compute</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="183" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1ab971c10417b2e844c9251d6a667103d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AxisymmetricBasis::pca_hall_3d</definition>
+        <argsstring>(bool compute)</argsstring>
+        <name>pca_hall_3d</name>
+        <qualifiedname>AxisymmetricBasis::pca_hall_3d</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>compute</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="184" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a6af1bcb2359adc5091625d457a953efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" kindref="member">TKType</ref></type>
+        <definition>TKType AxisymmetricBasis::setTK</definition>
+        <argsstring>(const std::string &amp;tk)</argsstring>
+        <name>setTK</name>
+        <qualifiedname>AxisymmetricBasis::setTK</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tk</declname>
+        </param>
+        <briefdescription>
+<para>Set tk_type from string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_axisymmetric_basis_1a98dbe87cedd6dc28d03bba5aba133dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual AxisymmetricBasis::~AxisymmetricBasis</definition>
+        <argsstring>()</argsstring>
+        <name>~AxisymmetricBasis</name>
+        <qualifiedname>AxisymmetricBasis::~AxisymmetricBasis</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="178" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines a basis-based potential and acceleration class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Configurable parameters are:</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Lmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum spherical harmonic order</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Mmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum cylindrical harmonic order</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the dimensionality of the basis</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>npca</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the frequency for pca analyses</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>npca0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of steps to skip before the first pca analysis</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcavar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean turns on pca analyses</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcaeof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean turns on emperical function recomputation</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcadiag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean turns on diagnostic pca output</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcavtk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean prints out visualizable representations of pca info</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hexp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the Hall smoothing exponent</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samplesz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of subsamples for pca variance analysis (default: 1). Value 0 means use sqrt number of particles</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vtkfreq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the frequency for printing pca variance analysis info</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tksmooth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the S/N for Hall truncation for VarianceCut method</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tkcum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the cumulative fraction eigenvalue power for truncation for CmululativeCut method</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tk_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the smoothing type, one of: Hall, VarianceCut, CumulativeCut, VarianceWeighted</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subsamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true sets partition variance computation (default: false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bessel</label>
+        <link refid="class_bessel"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CBrock</label>
+        <link refid="class_c_brock"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CBrockDisk</label>
+        <link refid="class_c_brock_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FlatDisk</label>
+        <link refid="class_flat_disk"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Hernquist</label>
+        <link refid="class_hernquist"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PolarBasis</label>
+        <link refid="class_polar_basis"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+      <node id="11">
+        <label>Sphere</label>
+        <link refid="class_sphere"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SphericalBasis</label>
+        <link refid="class_spherical_basis"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="6">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="4">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" line="45" column="1" bodyfile="/home/weinberg/Projects/EXP/src/AxisymmetricBasis.H" bodystart="46" bodyend="222"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>atol</name></member>
+      <member refid="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>AxisymmetricBasis</name></member>
+      <member refid="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>b_Hall</name></member>
+      <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Basis</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cC</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cc_lock</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>ClearExternal</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>coef_dump</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>compute</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>conf</name></member>
+      <member refid="class_axisymmetric_basis_1a7bd4492f833f728f99891d38b7493631" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>covar</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cudaAware</name></member>
+      <member refid="class_axisymmetric_basis_1a739cec07895fdd02850006d6a52639a8" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cuml</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a1dbf0ed28469f49a393a25a7b67753c3" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>CumulativeCut</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>current_keys</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>cylinder</name></member>
+      <member refid="class_axisymmetric_basis_1ad3b6c5272fa2aae68be0177ebb3f2edd" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>defSampT</name></member>
+      <member refid="class_basis_1abb4dbfbe9c234f44b1719a4d89dc3951" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_acceleration_and_potential</name></member>
+      <member refid="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_basis_1a8d4bece8ddfe81223177e63d76779284" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_fields_at_point</name></member>
+      <member refid="class_basis_1a3bcc5e3250f82d0ce476b096eabf342a" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_fields_at_point_cyl</name></member>
+      <member refid="class_basis_1a34f7d4340bcd0c5452f430cebf5c3665" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>determine_fields_at_point_sph</name></member>
+      <member refid="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>dlegendre_R</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>dof</name></member>
+      <member refid="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>dump_coefs</name></member>
+      <member refid="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_axisymmetric_basis_1a45362e008f1389402494647b75931e1e" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>eval</name></member>
+      <member refid="class_axisymmetric_basis_1ae30dc4a6d54a9b90dbe31e2b03821382" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>evec</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>exp_thread_fork</name></member>
+      <member refid="class_axisymmetric_basis_1afae69589bd4f7341ab42b8c48c22b707" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoef</name></member>
+      <member refid="class_axisymmetric_basis_1ad68406307042d772a285f40728a70cf6" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoef1</name></member>
+      <member refid="class_axisymmetric_basis_1ad60eac81d3f5d960af091345128485a8" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefL</name></member>
+      <member refid="class_axisymmetric_basis_1acc9740eafab3aa6d3b935bb310c568bd" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefM</name></member>
+      <member refid="class_axisymmetric_basis_1a11d3819929833b80de31120b99912e96" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefM1</name></member>
+      <member refid="class_axisymmetric_basis_1abe415ce8067b52c57aeb4beccbd85d7f" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefN</name></member>
+      <member refid="class_axisymmetric_basis_1ad344d65e16dfdea9aed2e478185bc8e7" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefP</name></member>
+      <member refid="class_axisymmetric_basis_1acd8494e7bb875fc2c8677ca92a0c6f01" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefT</name></member>
+      <member refid="class_axisymmetric_basis_1a699990cc53ec82eb867cf9c85cb57f70" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>expcoefT1</name></member>
+      <member refid="class_axisymmetric_basis_1ae6dd8f205982c2e3ef87f6f467976018" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>fac02</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>geoname</name></member>
+      <member refid="class_pot_accel_1ab78f20762031db204f636fc8e74ea986" prot="public" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_axisymmetric_basis_1a81196ff99fb4254c4e37866ca3d2c7de" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>getCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1a392660898c9be95471072adb3f0faa25" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>getLmax</name></member>
+      <member refid="class_axisymmetric_basis_1ab09be7b0782949e27379ea930eb10171" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>getMmax</name></member>
+      <member refid="class_axisymmetric_basis_1a3026462dfa88e923d7673f3d56dc4de4" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>getNmax</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>getScale</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a355c2a93725cd932da5408330dec2a6b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Hall</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>HaveCoefDump</name></member>
+      <member refid="class_axisymmetric_basis_1af0b7e5ba06a1acf652e61b9b4ecadfec" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>hexp</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>id</name></member>
+      <member refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d" prot="protected" virt="pure-virtual"><scope>AxisymmetricBasis</scope><name>initialize</name></member>
+      <member refid="class_axisymmetric_basis_1abe6cac911f0415ee15378c104bd3fd16" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>inv</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>kill_mutex</name></member>
+      <member refid="class_axisymmetric_basis_1a77c3332bf7286f04c94af7d068c7b2c4" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>L0</name></member>
+      <member refid="class_axisymmetric_basis_1a570f3d24187073d3354933ace93a6bd6" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Ldim</name></member>
+      <member refid="class_basis_1a80975218d67cc019d69fefb7a207d344" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>legendre_R</name></member>
+      <member refid="class_axisymmetric_basis_1abed8db010c45ad27e769043c68ab3101" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Lmax</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>make_mutex</name></member>
+      <member refid="class_axisymmetric_basis_1a0c051b9729ad5af02ed9ca626b56d999" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>massT</name></member>
+      <member refid="class_axisymmetric_basis_1a695b88eea00afd8f04b80c7f08be1b82" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>massT1</name></member>
+      <member refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>MatrixP</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>mlevel</name></member>
+      <member refid="class_axisymmetric_basis_1a2307130cf92a81e6cfb6f69fb2279585" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Mmax</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>multistep_debug</name></member>
+      <member refid="class_axisymmetric_basis_1a93d8a3c0e104139477fec734a6baf8e6" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>multistep_reset</name></member>
+      <member refid="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>multistep_update</name></member>
+      <member refid="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>multistep_update_begin</name></member>
+      <member refid="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>multistep_update_finish</name></member>
+      <member refid="class_axisymmetric_basis_1a066a011ea1511b649a093b17a01bee1e" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>muse</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>nbodies</name></member>
+      <member refid="class_axisymmetric_basis_1acee029d0e3afc656f5fb5d8f063a97d9" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>nmax</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>NoCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a85300903a059bd6e3a193bd92112a16f" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>None</name></member>
+      <member refid="class_axisymmetric_basis_1a5cffa9ce5ca3b98aeca288e4c5e11c73" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>normM</name></member>
+      <member refid="class_axisymmetric_basis_1afa81d9394890b9ebc0a7989651b021d9" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>npca</name></member>
+      <member refid="class_axisymmetric_basis_1a68be4e14ebd23388b75d8df12af76667" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>npca0</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>other</name></member>
+      <member refid="class_axisymmetric_basis_1a0ba9093da208645ba67931e04a61f4c7" prot="protected" virt="virtual"><scope>AxisymmetricBasis</scope><name>parallel_distribute_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a1aba7be747336c8e6a67613a3109e285" prot="protected" virt="virtual"><scope>AxisymmetricBasis</scope><name>parallel_gather_coef2</name></member>
+      <member refid="class_axisymmetric_basis_1a01ab8064885a073b48ad562790b89f86" prot="protected" virt="virtual"><scope>AxisymmetricBasis</scope><name>parallel_gather_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a408a19fff1093c88f6a9bcf9ad2601d4" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pca_hall</name></member>
+      <member refid="class_axisymmetric_basis_1ae0353b5d1b82b19517ede95a862d7484" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pca_hall_2d</name></member>
+      <member refid="class_axisymmetric_basis_1ab971c10417b2e844c9251d6a667103d4" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pca_hall_3d</name></member>
+      <member refid="class_axisymmetric_basis_1aea08169a329b6608c42fdeeb1db91183" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pcadiag</name></member>
+      <member refid="class_axisymmetric_basis_1af2a1f4efbdc887b29a6d49b770c1f060" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pcaeof</name></member>
+      <member refid="class_axisymmetric_basis_1a8da7266925e30ee0056cf97e84d4809e" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pcavar</name></member>
+      <member refid="class_axisymmetric_basis_1ad53aa251aa38d7645a4d3eece99dc9d5" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>pcavtk</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>play_cnew</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>PotAccel</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>RegisterComponent</name></member>
+      <member refid="class_axisymmetric_basis_1a5116daa842c0f604c2a312db8e0ce97e" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>s_Hall</name></member>
+      <member refid="class_axisymmetric_basis_1a9e5bccb2a796e19083511f4e637cffda" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>sampT</name></member>
+      <member refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>scale</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>setScale</name></member>
+      <member refid="class_axisymmetric_basis_1a6af1bcb2359adc5091625d457a953efa" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>setTK</name></member>
+      <member refid="class_basis_1a0779c0b0f74361d7861bbc19a194b63c" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>sinecosine_R</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>slab</name></member>
+      <member refid="class_axisymmetric_basis_1a52873b88250c954ccca613fab178c5ee" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>smth</name></member>
+      <member refid="class_axisymmetric_basis_1ac4fce6a4930030f49b46844753ce3052" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>snr</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>sphere</name></member>
+      <member refid="class_axisymmetric_basis_1a2dd973d8ace9db32c65938425d159af9" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>sqnorm</name></member>
+      <member refid="class_axisymmetric_basis_1a592dd952d0301e3c55da82f78eb3cfe8" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>subsamp</name></member>
+      <member refid="class_axisymmetric_basis_1a8298f44c8cc6e6401b471c4a50c52662" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>swap_coefs</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>td</name></member>
+      <member refid="class_axisymmetric_basis_1a196db3f26a946c2dcbaabcbe31883b4a" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Tevec</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>timer_list</name></member>
+      <member refid="class_axisymmetric_basis_1a3e85225ea1c3c408fe2bcf23ad09b555" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>tk_type</name></member>
+      <member refid="class_axisymmetric_basis_1a3a98442a6149253a6881c33cf6792e38" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>tkcum</name></member>
+      <member refid="class_axisymmetric_basis_1ad4dabce5bd04809a4644cb36705312f9" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>tksmooth</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>TKType</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>TList</name></member>
+      <member refid="class_axisymmetric_basis_1a8acdd32795c612cdcefee5da62cc5b3a" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>tvar</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>unmatched</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>use</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>Used</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>used</name></member>
+      <member refid="class_axisymmetric_basis_1a5304e2888496122ca48c947ef926a441" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>valid_keys</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a27bdb8b3a4040b794e7418581fda2615" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>VarianceCut</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a7381bdf9e2231e55827cf72d86f7f415" prot="public" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>VarianceWeighted</name></member>
+      <member refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>VectorP</name></member>
+      <member refid="class_axisymmetric_basis_1ab0d1d51da0dc7f33cf3091bab41866d1" prot="protected" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>vtkfreq</name></member>
+      <member refid="class_axisymmetric_basis_1a3708ccfcde62cc3e88dbde5994d08f26" prot="private" virt="non-virtual"><scope>AxisymmetricBasis</scope><name>weight</name></member>
+      <member refid="class_axisymmetric_basis_1a98dbe87cedd6dc28d03bba5aba133dd4" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>~AxisymmetricBasis</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>AxisymmetricBasis</scope><name>~PotAccel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

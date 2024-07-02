@@ -1,0 +1,1868 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="global_8_h" kind="file" language="C++">
+    <compoundname>global.H</compoundname>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">mpi.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">random</includes>
+    <includes local="no">list</includes>
+    <includes refid="src_2coef_8_h" local="no">coef.H</includes>
+    <includes refid="chk_timer_8_h" local="no">chkTimer.H</includes>
+    <includes refid="_barrier_wrapper_8_h" local="no">BarrierWrapper.H</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes refid="localmpi_8_h" local="no">localmpi.H</includes>
+    <includes refid="libvars_8_h" local="no">libvars.H</includes>
+    <includes refid="_species_8_h" local="yes">Species.H</includes>
+    <includedby refid="_component_8_h" local="no">/home/weinberg/Projects/EXP/src/Component.H</includedby>
+    <includedby refid="_cyl_e_x_p_8_h" local="no">/home/weinberg/Projects/EXP/src/CylEXP.H</includedby>
+    <includedby refid="expand_8_h" local="no">/home/weinberg/Projects/EXP/src/expand.H</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>BarrierWrapper.H</label>
+        <link refid="_barrier_wrapper_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Species.H</label>
+        <link refid="_species_8_h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Timer.H</label>
+        <link refid="_timer_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libvars.H</label>
+        <link refid="libvars_8_h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>chkTimer.H</label>
+        <link refid="chk_timer_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>coef.H</label>
+        <link refid="src_2coef_8_h"/>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/global.H</label>
+        <link refid="global_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>chrono</label>
+      </node>
+      <node id="12">
+        <label>cmath</label>
+      </node>
+      <node id="20">
+        <label>cstdlib</label>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>list</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>mpi.h</label>
+      </node>
+      <node id="2">
+        <label>pthread.h</label>
+      </node>
+      <node id="7">
+        <label>random</label>
+      </node>
+      <node id="18">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="22">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/src/Component.H</label>
+        <link refid="_component_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/src/ComponentContainer.H</label>
+        <link refid="_component_container_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/weinberg/Projects/EXP/src/CylEXP.H</label>
+        <link refid="_cyl_e_x_p_8_h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
+        <link refid="_cyl_two_d_8_h"/>
+      </node>
+      <node id="16">
+        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
+        <link refid="_cylinder_8_h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
+        <link refid="_e_jcom_8_h"/>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/ExternalCollection.H</label>
+        <link refid="_external_collection_8_h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/weinberg/Projects/EXP/src/ExternalForce.H</label>
+        <link refid="_external_force_8_h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/weinberg/Projects/EXP/src/HaloBulge.H</label>
+        <link refid="_halo_bulge_8_h"/>
+      </node>
+      <node id="19">
+        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
+        <link refid="_mixture_basis_8_h"/>
+      </node>
+      <node id="25">
+        <label>/home/weinberg/Projects/EXP/src/OutAscii.H</label>
+        <link refid="_out_ascii_8_h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/weinberg/Projects/EXP/src/OutCalbr.H</label>
+        <link refid="_out_calbr_8_h"/>
+      </node>
+      <node id="27">
+        <label>/home/weinberg/Projects/EXP/src/OutFrac.H</label>
+        <link refid="_out_frac_8_h"/>
+      </node>
+      <node id="28">
+        <label>/home/weinberg/Projects/EXP/src/OutVel.H</label>
+        <link refid="_out_vel_8_h"/>
+      </node>
+      <node id="5">
+        <label>/home/weinberg/Projects/EXP/src/PeriodicBC.H</label>
+        <link refid="_periodic_b_c_8_h"/>
+      </node>
+      <node id="23">
+        <label>/home/weinberg/Projects/EXP/src/ScatterMFP.H</label>
+        <link refid="_scatter_m_f_p_8_h"/>
+      </node>
+      <node id="20">
+        <label>/home/weinberg/Projects/EXP/src/Shells.H</label>
+        <link refid="_shells_8_h"/>
+      </node>
+      <node id="17">
+        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
+        <link refid="_two_center_8_h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/weinberg/Projects/EXP/src/expand.H</label>
+        <link refid="expand_8_h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/global.H</label>
+        <link refid="global_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/weinberg/Projects/EXP/src/user/UserBar.H</label>
+        <link refid="_user_bar_8_h"/>
+      </node>
+      <node id="7">
+        <label>/home/weinberg/Projects/EXP/src/user/UserDisk.H</label>
+        <link refid="_user_disk_8_h"/>
+      </node>
+      <node id="8">
+        <label>/home/weinberg/Projects/EXP/src/user/UserHalo.H</label>
+        <link refid="_user_halo_8_h"/>
+      </node>
+      <node id="9">
+        <label>/home/weinberg/Projects/EXP/src/user/UserLogPot.H</label>
+        <link refid="_user_log_pot_8_h"/>
+      </node>
+      <node id="10">
+        <label>/home/weinberg/Projects/EXP/src/user/UserMNdisk.H</label>
+        <link refid="_user_m_ndisk_8_h"/>
+      </node>
+      <node id="11">
+        <label>/home/weinberg/Projects/EXP/src/user/UserMW.H</label>
+        <link refid="_user_m_w_8_h"/>
+      </node>
+      <node id="12">
+        <label>/home/weinberg/Projects/EXP/src/user/UserTest.H</label>
+        <link refid="_user_test_8_h"/>
+      </node>
+      <node id="24">
+        <label>/home/weinberg/Projects/EXP/src/user/UserTestCuda.H</label>
+        <link refid="_user_test_cuda_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structthrd__pass__posvel" prot="public">thrd_pass_posvel</innerclass>
+    <sectiondef kind="user-defined">
+      <header>Coefficient header on each output dump</header>
+      <memberdef kind="variable" id="global_8_h_1abdcc1508a5de0342b0f458ab91e5a17c" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="class_barrier_wrapper" kindref="compound">BarrierWrapper</ref> *</type>
+        <definition>BarrierWrapper* barrier</definition>
+        <argsstring></argsstring>
+        <name>barrier</name>
+        <briefdescription>
+<para>Barrier instance for debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="299" column="23" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="299" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a358c440f6f0837bfb64a8f88ba103a26" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_check</definition>
+        <argsstring></argsstring>
+        <name>barrier_check</name>
+        <briefdescription>
+<para>Turn on Barrier check debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="302" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="302" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a9b47b634fe1f19fcf64c207c3f6a75c7" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_debug</definition>
+        <argsstring></argsstring>
+        <name>barrier_debug</name>
+        <briefdescription>
+<para>Turn on Barrier check debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="305" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="305" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ab9391df1adf96c212739de35979dd988" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_extra</definition>
+        <argsstring></argsstring>
+        <name>barrier_extra</name>
+        <briefdescription>
+<para>Turn on Barrier extra debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="308" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="308" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a146fecec3cba63b7082b9affd48390ed" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_label</definition>
+        <argsstring></argsstring>
+        <name>barrier_label</name>
+        <briefdescription>
+<para>Barrier label checking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="311" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="311" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a0dd5a41f849ed3ae82fcdb2376fc70fb" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_light</definition>
+        <argsstring></argsstring>
+        <name>barrier_light</name>
+        <briefdescription>
+<para>Barrier label light weight method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="314" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="314" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ad312e23f29dd821ea4f290afa5689950" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool barrier_quiet</definition>
+        <argsstring></argsstring>
+        <name>barrier_quiet</name>
+        <briefdescription>
+<para>Do not report good barrier condtion if true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="317" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="317" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1acba9660dd6a22551d7bf96ae16fdfb29" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="class_checkpoint_timer" kindref="compound">CheckpointTimer</ref></type>
+        <definition>CheckpointTimer chktimer</definition>
+        <argsstring></argsstring>
+        <name>chktimer</name>
+        <briefdescription>
+<para>Checkpoint timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="289" column="24" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="289" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a969804c7cbc6238ce258cf2b5b44a59d" prot="public" static="no" extern="yes" mutable="no">
+        <type>struct <ref refid="struct_cyl_coef_header" kindref="compound">CylCoefHeader</ref></type>
+        <definition>struct CylCoefHeader coefheadercyl</definition>
+        <argsstring></argsstring>
+        <name>coefheadercyl</name>
+        <briefdescription>
+<para>Cylindrical header type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="255" column="27" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="255" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a058880ce947a8186f5395d65775c8951" prot="public" static="no" extern="yes" mutable="no">
+        <type>struct <ref refid="struct_sph_coef_header" kindref="compound">SphCoefHeader</ref></type>
+        <definition>struct SphCoefHeader coefheadersph</definition>
+        <argsstring></argsstring>
+        <name>coefheadersph</name>
+        <briefdescription>
+<para>Spherical header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="257" column="27" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="257" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae1a3198745d4fefb926a291369103d3f" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="class_component_container" kindref="compound">ComponentContainer</ref> *</type>
+        <definition>ComponentContainer* comp</definition>
+        <argsstring></argsstring>
+        <name>comp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="265" column="27" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="265" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae5fcffdfa527121d2b3f80644536edbd" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool cuda_prof</definition>
+        <argsstring></argsstring>
+        <name>cuda_prof</name>
+        <briefdescription>
+<para>For toggling CUDA profiling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="343" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="343" declcolumn="13"/>
+        <referencedby refid="class_cylinder_1a8fe6465fcda2c9d81b9986fb30db316a" compoundref="_cylinder_8_h" startline="158" endline="166">Cylinder::compute_multistep_coefficients</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae3fbd2f6eb3ab1b55e94fc277ab00328" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool debug_wait</definition>
+        <argsstring></argsstring>
+        <name>debug_wait</name>
+        <briefdescription>
+<para>Endless loop for setting gdb breakpoints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="325" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="325" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aaee6a7367d890c38c86d2cdcc2ad9cbf" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="class_external_collection" kindref="compound">ExternalCollection</ref> *</type>
+        <definition>ExternalCollection* external</definition>
+        <argsstring></argsstring>
+        <name>external</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="271" column="27" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="271" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a5476753eace29f10635dd0997326caef" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string lastPS</definition>
+        <argsstring></argsstring>
+        <name>lastPS</name>
+        <briefdescription>
+<para>Last PS file name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="286" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="286" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a79830924a920190593f9a1d81206b42d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string lastPSQ</definition>
+        <argsstring></argsstring>
+        <name>lastPSQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="286" column="22" bodyfile="/home/weinberg/Projects/EXP/src/global.H" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a62585d06a8e49b36c2d2d76c090ac20a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string lastPSR</definition>
+        <argsstring></argsstring>
+        <name>lastPSR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="286" column="30" bodyfile="/home/weinberg/Projects/EXP/src/global.H" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a208eb1eecdfa4ea82b24ca6715636463" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool leapfrog_cuda</definition>
+        <argsstring></argsstring>
+        <name>leapfrog_cuda</name>
+        <briefdescription>
+<para>Can we leave phase space on GPUs or do we need to copy back to host? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="332" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="332" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ab92be6ba951b6af1ccda46e3b228ea83" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool main_wait</definition>
+        <argsstring></argsstring>
+        <name>main_wait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="326" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="326" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aabdbaacaa617bdc02e17d0496697c5a4" prot="public" static="no" extern="yes" mutable="no">
+        <type>MPI_Datatype</type>
+        <definition>MPI_Datatype MPI_EXP_KEYTYPE</definition>
+        <argsstring></argsstring>
+        <name>MPI_EXP_KEYTYPE</name>
+        <briefdescription>
+<para>MPI datatype for pHOT key. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="296" column="21" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="296" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aa4b58afce7110c34964275a183c39e62" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="class_output_container" kindref="compound">OutputContainer</ref> *</type>
+        <definition>OutputContainer* output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+<para>One output routine container per simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="277" column="24" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="277" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a735b1ce7a340373ac87191026132d105" prot="public" static="no" extern="yes" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node parse</definition>
+        <argsstring></argsstring>
+        <name>parse</name>
+        <briefdescription>
+<para>Parameter database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="280" column="19" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="280" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ad8f58d79bc8e3e3dec8f778ab8a4b3aa" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int random_seed</definition>
+        <argsstring></argsstring>
+        <name>random_seed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mersenne random number generator provided by Boost.Random. This could be changed to another if needed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="336" column="23" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="336" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1af43954febeb3c195d2d7ada7dfff9025" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string restart_cmd</definition>
+        <argsstring></argsstring>
+        <name>restart_cmd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Restart command on successful completion but early termination according to the checkpoint timer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="293" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="293" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a2d5327a407d0af61e6e0a06221fc5a7b" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int rlimit_val</definition>
+        <argsstring></argsstring>
+        <name>rlimit_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default memory limit value in GB. If value is set to zero, use the system default. If value is less than zero, attempt to set memory to unlimited. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="322" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="322" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a01143f6725f562bed4255476fa737925" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double runtime</definition>
+        <argsstring></argsstring>
+        <name>runtime</name>
+        <briefdescription>
+<para>Total alloted runtime (runtime &lt; 0 turns off timer) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="283" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="283" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a0ad8ed6e0196a9477f123c6bf569233b" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool use_cuda</definition>
+        <argsstring></argsstring>
+        <name>use_cuda</name>
+        <briefdescription>
+<para>Set to false to suppress cuda computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="329" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="329" declcolumn="13"/>
+        <referencedby refid="class_component_1a118ca15a00fb10267b9e784a1912ab15" compoundref="_component_8_h" startline="587" endline="594">Component::fix_positions</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="global_8_h_1ae580ea2f336fc5dfa122b75b9d5f1c29" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool all_couples</definition>
+        <argsstring></argsstring>
+        <name>all_couples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Toggle interactions &quot;on&quot; or &quot;off&quot; by default. If interactions are &quot;on&quot; (the default), interactions listed in the &apos;<ref refid="class_interaction" kindref="compound">Interaction</ref>&apos; list be turned &quot;off&quot;. Alternatively, if interactions are &quot;off&quot;, interactions listed in the &apos;<ref refid="class_interaction" kindref="compound">Interaction</ref>&apos; list be turned &quot;on&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="211" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="211" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a4f8a4521153076507ac4490da7e093cc" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int centerlevl</definition>
+        <argsstring></argsstring>
+        <name>centerlevl</name>
+        <briefdescription>
+<para>Lowest level for centering recomputation (default: multistep/2) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="92" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="92" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a5f001e30df729da416e5613f6cd34e11" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dbthresh</definition>
+        <argsstring></argsstring>
+        <name>dbthresh</name>
+        <briefdescription>
+<para>Load balancing threshold (larger difference initiates balancing) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="62" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="62" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1acaef8389951cfcbcf7500d471a54f7a8" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; vector&lt; int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt;int&gt; &gt; dstepL</definition>
+        <argsstring></argsstring>
+        <name>dstepL</name>
+        <briefdescription>
+<para>Multistep interpolation array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="178" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="178" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a17b9b357dd1608d1fbe2b0a6fcc39ee3" prot="public" static="no" mutable="no">
+        <type>vector&lt; vector&lt; int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt;int&gt; &gt; dstepN</definition>
+        <argsstring></argsstring>
+        <name>dstepN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="178" column="22" bodyfile="/home/weinberg/Projects/EXP/src/global.H" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a5e6c31accfa71cb3fb5da8c8e9d10e87" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dtime</definition>
+        <argsstring></argsstring>
+        <name>dtime</name>
+        <briefdescription>
+<para><ref refid="class_time" kindref="compound">Time</ref> step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="68" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="68" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a32cdb52c36acd3cc3456caa6eb6355ad" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dump_signal</definition>
+        <argsstring></argsstring>
+        <name>dump_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_phase" kindref="compound">Phase</ref> space dump on next step</para>
+<para>This flag is set by signalling the root process with SIGHUP </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="218" column="22" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="218" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a02481c44bf59a34959d709f59fd28c9e" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int dump_signal0</definition>
+        <argsstring></argsstring>
+        <name>dump_signal0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="236" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="236" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a18046dad7a711e4021136a4c96ef1eca" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dynfracA</definition>
+        <argsstring></argsstring>
+        <name>dynfracA</name>
+        <briefdescription>
+<para>Acceleration coefficient (default: 0.03) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="107" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="107" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a111728e7957ddacf32df3bd8cb3acb97" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dynfracD</definition>
+        <argsstring></argsstring>
+        <name>dynfracD</name>
+        <briefdescription>
+<para>Drift coefficient (default: 1000.0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="101" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="101" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1afe75031f2a48e3dce3ea922cf0a7a412" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dynfracP</definition>
+        <argsstring></argsstring>
+        <name>dynfracP</name>
+        <briefdescription>
+<para>Escape time scale coefficient (default: 0.05) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="110" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="110" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1abe14eee39bfe3d0f6816840f19bdb5dc" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dynfracS</definition>
+        <argsstring></argsstring>
+        <name>dynfracS</name>
+        <briefdescription>
+<para>Fraction of dynamical time for determining multistep level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Scale coefficient (default: 1.00) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="98" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="98" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1afaeaa4a0dd8ed52c7ee8640f42073cae" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double dynfracV</definition>
+        <argsstring></argsstring>
+        <name>dynfracV</name>
+        <briefdescription>
+<para>Velocity coefficient (default: 0.01) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="104" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="104" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a6d460144c27c7703b1202dccaff9c0de" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool eqmotion</definition>
+        <argsstring></argsstring>
+        <name>eqmotion</name>
+        <briefdescription>
+<para>Toggle phase space advance (e.g. for use with externally supplied mapping). On by default. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="86" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="86" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a8217d0d60fdb19ff037224321429c872" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool fpe_trace</definition>
+        <argsstring></argsstring>
+        <name>fpe_trace</name>
+        <briefdescription>
+<para>Install error handler for fpe backtrace. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="38" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="38" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a87145d6ab87445537842a2d3bb99357b" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool fpe_trap</definition>
+        <argsstring></argsstring>
+        <name>fpe_trap</name>
+        <briefdescription>
+<para>Install error handler for fpe debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="35" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="35" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a4bcd988dbdaf6028c80bc6f57c3fa06f" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool fpe_wait</definition>
+        <argsstring></argsstring>
+        <name>fpe_wait</name>
+        <briefdescription>
+<para>Install error handler for fpe wait. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="44" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="44" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a9a09953212dcc3e0c3b341960f9d0e17" prot="public" static="no" extern="yes" mutable="no">
+        <type>double *</type>
+        <definition>double* gcom</definition>
+        <argsstring></argsstring>
+        <name>gcom</name>
+        <briefdescription>
+<para>Global center of mass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="145" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="145" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a0f127c0490f3cef6e2eaea4d99bc92e8" prot="public" static="no" extern="yes" mutable="no">
+        <type>double *</type>
+        <definition>double* gcov</definition>
+        <argsstring></argsstring>
+        <name>gcov</name>
+        <briefdescription>
+<para>Global center of velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="148" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="148" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a426439c4c681b8da85d4d6e747fb7bfc" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool gdb_trace</definition>
+        <argsstring></argsstring>
+        <name>gdb_trace</name>
+        <briefdescription>
+<para>Use gdb or native trace handling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="41" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="41" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aba5bccc916110ee269f48b22edecc2f5" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool global_cov</definition>
+        <argsstring></argsstring>
+        <name>global_cov</name>
+        <briefdescription>
+<para>Resets total center of velocity to zero if true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="151" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="151" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a870fd00202ed0c34721c7245d2c467a8" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string homedir</definition>
+        <argsstring></argsstring>
+        <name>homedir</name>
+        <briefdescription>
+<para>Home directory for configuration files, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="71" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="71" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a41bc2d24fbdcce1a20df5fd464670d3b" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool ignore_info</definition>
+        <argsstring></argsstring>
+        <name>ignore_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suppress parsing of info fields on restart; use config specified parameters instead </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="205" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="205" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a80ad6cb1cfc2b83a8d053d41f5f27d39" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string infile</definition>
+        <argsstring></argsstring>
+        <name>infile</name>
+        <briefdescription>
+<para>Input file (for restart) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="77" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="77" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a5939eefbb1104655674eb1f4d89776b7" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool initializing</definition>
+        <argsstring></argsstring>
+        <name>initializing</name>
+        <briefdescription>
+<para>True when initializing before first time step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="154" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="154" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a4988f08f2acb7a37c1b1a9c4e493b5ce" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int is_init</definition>
+        <argsstring></argsstring>
+        <name>is_init</name>
+        <briefdescription>
+<para>Used to flag separate behavior on inintialization (unused) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="241" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="241" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a296b91cdaa16f5796e15c07fd3a177cf" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string ldlibdir</definition>
+        <argsstring></argsstring>
+        <name>ldlibdir</name>
+        <briefdescription>
+<para>Directory to look for loadable modules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="74" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="74" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae8810a756499d57b7bd72c21e77ac0c0" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt; vector&lt;bool&gt; &gt; mactive</definition>
+        <argsstring></argsstring>
+        <name>mactive</name>
+        <briefdescription>
+<para>Multistep level flag: levels currently synchronized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="181" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="181" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a39fdaf6a894c8175a85b4c1025ce5b7d" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double max_mindt</definition>
+        <argsstring></argsstring>
+        <name>max_mindt</name>
+        <briefdescription>
+<para>Maximum fraction of particles that request a smaller than minimum timestep. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="139" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="139" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a36f3515c1de63a585ba000988c4e9e5e" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned maxlev</definition>
+        <argsstring></argsstring>
+        <name>maxlev</name>
+        <briefdescription>
+<para>Multistep sublevel info used for nbody. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="163" column="17" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="163" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ace19188521d679179f62686801a17451" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int mdrft</definition>
+        <argsstring></argsstring>
+        <name>mdrft</name>
+        <briefdescription>
+<para>Current point in multistepping for drift step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="160" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="160" declcolumn="12"/>
+        <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae68076dadfc8e0ee051559218f8a16aa" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; mfirst</definition>
+        <argsstring></argsstring>
+        <name>mfirst</name>
+        <briefdescription>
+<para>Lowest synchronized level at a step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="175" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="175" declcolumn="15"/>
+        <referencedby refid="class_cylinder_1a8fe6465fcda2c9d81b9986fb30db316a" compoundref="_cylinder_8_h" startline="158" endline="166">Cylinder::compute_multistep_coefficients</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aa19adbd0588fd09013373278e283ff4a" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; mintvl</definition>
+        <argsstring></argsstring>
+        <name>mintvl</name>
+        <briefdescription>
+<para>Multistep time step spacing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="172" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="172" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aed81e434ac70ad715ebc7559c1e1e2cd" prot="public" static="no" extern="yes" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm MPI_COMM_WORKER</definition>
+        <argsstring></argsstring>
+        <name>MPI_COMM_WORKER</name>
+        <briefdescription>
+<para>Internally defined worker communicator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="244" column="17" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="244" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a35d8907068919380de34d0135d74bee5" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool mpi_wait</definition>
+        <argsstring></argsstring>
+        <name>mpi_wait</name>
+        <briefdescription>
+<para>Install error handler for MPI debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="32" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="32" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int mstep</definition>
+        <argsstring></argsstring>
+        <name>mstep</name>
+        <briefdescription>
+<para>Current point in multistepping for velocity step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="166" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="166" declcolumn="12"/>
+        <referencedby refid="class_cylinder_1a8fe6465fcda2c9d81b9986fb30db316a" compoundref="_cylinder_8_h" startline="158" endline="166">Cylinder::compute_multistep_coefficients</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a9d38ce195bc9586a796e874856b439e2" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Mstep</definition>
+        <argsstring></argsstring>
+        <name>Mstep</name>
+        <briefdescription>
+<para>Maximum number of multistep steps. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="169" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="169" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1af91f8a0b7884c44b57e098c735affded" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double mtot</definition>
+        <argsstring></argsstring>
+        <name>mtot</name>
+        <briefdescription>
+<para>Total mass in simulation (used by <ref refid="class_orient" kindref="compound">Orient</ref> and log diagnostics) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="142" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="142" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aa942c9c85282e2ef97e4ad7e8bfa29bd" prot="public" static="no" extern="yes" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; int &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::vector&lt;int&gt; &gt; nameMap</definition>
+        <argsstring></argsstring>
+        <name>nameMap</name>
+        <briefdescription>
+<para>List of host names and ranks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="247" column="17" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="247" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a01da99b04f54c47634bc4254db18b4a8" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int nbalance</definition>
+        <argsstring></argsstring>
+        <name>nbalance</name>
+        <briefdescription>
+<para>Number of steps between load balancing (use 0 for none) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="59" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="59" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a2b1961f77f0a9b587bb053b9c2d0b04b" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int ngpus</definition>
+        <argsstring></argsstring>
+        <name>ngpus</name>
+        <briefdescription>
+<para>Number of gpu devices per node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="53" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="53" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a5ed0b0aefe1978a97e067c55b70a214f" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int NICE</definition>
+        <argsstring></argsstring>
+        <name>NICE</name>
+        <briefdescription>
+<para>Process priority set to NICE value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="124" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="124" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ad3107242422650d1716f98acaa3c16ae" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int nreport</definition>
+        <argsstring></argsstring>
+        <name>nreport</name>
+        <briefdescription>
+<para>Number of steps between particle number reports (use 0 for none) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="56" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="56" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aa2414080b021dbb9b56eeaeedec0ffa2" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int nsteps</definition>
+        <argsstring></argsstring>
+        <name>nsteps</name>
+        <briefdescription>
+<para>Maximum number of steps to execute. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="50" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="50" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a49d4ae0e359da5d25a267486acdbd008" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string parmfile</definition>
+        <argsstring></argsstring>
+        <name>parmfile</name>
+        <briefdescription>
+<para>Parameter dump file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="80" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="80" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a1545b24fd58381f1043ed453da966811" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned PFbufsz</definition>
+        <argsstring></argsstring>
+        <name>PFbufsz</name>
+        <briefdescription>
+<para><ref refid="class_particle" kindref="compound">Particle</ref> ferry buffer size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="65" column="17" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="65" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a4ed092beb16afee59d5d3027ff7815e3" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; <ref refid="structthrd__pass__posvel" kindref="compound">thrd_pass_posvel</ref> &gt;</type>
+        <definition>vector&lt;thrd_pass_posvel&gt; posvel_data</definition>
+        <argsstring></argsstring>
+        <name>posvel_data</name>
+        <briefdescription>
+<para>Multithreding data structures for incr_position and incr_velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="198" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="198" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a8edc685f083ec1e94f0f795d0b1cf6f6" prot="public" static="no" extern="yes" mutable="no">
+        <type>vector&lt; pthread_t &gt;</type>
+        <definition>vector&lt;pthread_t&gt; posvel_thrd</definition>
+        <argsstring></argsstring>
+        <name>posvel_thrd</name>
+        <briefdescription>
+<para>Threads for incr_position and incr_velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="201" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="201" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1af76758837c4e9dbe2ab89cf956b9216c" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int psdump</definition>
+        <argsstring></argsstring>
+        <name>psdump</name>
+        <briefdescription>
+<para>Last phase space dump step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="136" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="136" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ad602774976cac4e518347eac0af7f11c" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char quit_signal</definition>
+        <argsstring></argsstring>
+        <name>quit_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quit now</para>
+<para>This flag is set by checkpoint itmer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="232" column="22" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="232" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a0a96b2ff22a7fe64e2d86d3a6a2c58ba" prot="public" static="no" extern="yes" mutable="no">
+        <type>string</type>
+        <definition>string ratefile</definition>
+        <argsstring></argsstring>
+        <name>ratefile</name>
+        <briefdescription>
+<para>Initial processor rate file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="83" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="83" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a8649fdfafe4f3ed5fa96bb5261379247" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool restart</definition>
+        <argsstring></argsstring>
+        <name>restart</name>
+        <briefdescription>
+<para>Global set on restart (to used by initializers and user modules) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="118" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="118" declcolumn="13"/>
+        <referencedby refid="classprogress_1_1progress__display_1a0c5dbbd210b906fea6360f7f4f29a07a" compoundref="_progress_8_h" startline="39" endline="45">progress::progress_display::progress_display</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae5313c20328e4217d4bee1aa959006f8" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned shiftlevl</definition>
+        <argsstring></argsstring>
+        <name>shiftlevl</name>
+        <briefdescription>
+<para>Constrain level changes per step (default: 0 means no constraint) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="89" column="17" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="89" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ab8db74cb92c09c21783b488d231fb464" prot="public" static="no" extern="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; siblingList</definition>
+        <argsstring></argsstring>
+        <name>siblingList</name>
+        <briefdescription>
+<para>List of sibling ranks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="250" column="20" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="250" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a37a81d21ee23bb0b038d33c2739fd1c5" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool step_timing</definition>
+        <argsstring></argsstring>
+        <name>step_timing</name>
+        <briefdescription>
+<para>Step timing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="130" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="130" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ae3e742d9bd58bdcb877de6e799dc2a11" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char stop_signal</definition>
+        <argsstring></argsstring>
+        <name>stop_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop on next step</para>
+<para>This flag is set by signalling the root process with SIGTERM </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="225" column="22" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="225" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a9966c2c13588eb5028797f9a4b7acf5f" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int stop_signal0</definition>
+        <argsstring></argsstring>
+        <name>stop_signal0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation variables for handlers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="235" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="235" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a75043af440748a82fcf73bb6948b476e" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int this_step</definition>
+        <argsstring></argsstring>
+        <name>this_step</name>
+        <briefdescription>
+<para>Current Nbody step id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="157" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="157" declcolumn="12"/>
+        <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aee2e12c455ac1712da2b8c5a7eadb147" prot="public" static="no" extern="yes" mutable="no">
+        <type>double</type>
+        <definition>double tnow</definition>
+        <argsstring></argsstring>
+        <name>tnow</name>
+        <briefdescription>
+<para>Times for each phase-space time slice (for Leap-Frog) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="133" column="15" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="133" declcolumn="15"/>
+        <referencedby refid="class_sphere_1a6d9c19cd5b655fb7e47fdbb680fe3e25" compoundref="_sphere_8_h" startline="139" endline="143">Sphere::determine_coefficients</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1aa913e196a71ec4dc2e0df3e5f6a68bb4" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool traceback</definition>
+        <argsstring></argsstring>
+        <name>traceback</name>
+        <briefdescription>
+<para>Enable traceback on exceptions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="47" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="47" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1a11647d1a8a725b7d9b36745e9f996daa" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool use_cwd</definition>
+        <argsstring></argsstring>
+        <name>use_cwd</name>
+        <briefdescription>
+<para>Use Node 0&apos;s home dir for the working dir on all nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="121" column="13" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="121" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8_h_1ab848ce91ba14d3dc5c87d0b42f3a1c0d" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int VERBOSE</definition>
+        <argsstring></argsstring>
+        <name>VERBOSE</name>
+        <briefdescription>
+<para><ref refid="class_output" kindref="compound">Output</ref> logging level. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/global.H" line="127" column="12" declfile="/home/weinberg/Projects/EXP/src/global.H" declline="127" declcolumn="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Global variables. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These variables can be changed/specified in the [global] stanza of the inputfile </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_global_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_global_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="src_2coef_8_h" kindref="compound">coef.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="chk_timer_8_h" kindref="compound">chkTimer.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_barrier_wrapper_8_h" kindref="compound">BarrierWrapper.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="localmpi_8_h" kindref="compound">localmpi.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a35d8907068919380de34d0135d74bee5" kindref="member">mpi_wait</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a87145d6ab87445537842a2d3bb99357b" kindref="member">fpe_trap</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a8217d0d60fdb19ff037224321429c872" kindref="member">fpe_trace</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a426439c4c681b8da85d4d6e747fb7bfc" kindref="member">gdb_trace</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a4bcd988dbdaf6028c80bc6f57c3fa06f" kindref="member">fpe_wait</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1aa913e196a71ec4dc2e0df3e5f6a68bb4" kindref="member">traceback</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1aa2414080b021dbb9b56eeaeedec0ffa2" kindref="member">nsteps</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a2b1961f77f0a9b587bb053b9c2d0b04b" kindref="member">ngpus</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ad3107242422650d1716f98acaa3c16ae" kindref="member">nreport</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a01da99b04f54c47634bc4254db18b4a8" kindref="member">nbalance</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a5f001e30df729da416e5613f6cd34e11" kindref="member">dbthresh</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a1545b24fd58381f1043ed453da966811" kindref="member">PFbufsz</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a5e6c31accfa71cb3fb5da8c8e9d10e87" kindref="member">dtime</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a870fd00202ed0c34721c7245d2c467a8" kindref="member">homedir</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a296b91cdaa16f5796e15c07fd3a177cf" kindref="member">ldlibdir</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a80ad6cb1cfc2b83a8d053d41f5f27d39" kindref="member">infile</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a49d4ae0e359da5d25a267486acdbd008" kindref="member">parmfile</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a0a96b2ff22a7fe64e2d86d3a6a2c58ba" kindref="member">ratefile</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a6d460144c27c7703b1202dccaff9c0de" kindref="member">eqmotion</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ae5313c20328e4217d4bee1aa959006f8" kindref="member">shiftlevl</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a4f8a4521153076507ac4490da7e093cc" kindref="member">centerlevl</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"></codeline>
+<codeline lineno="96"></codeline>
+<codeline lineno="98"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1abe14eee39bfe3d0f6816840f19bdb5dc" kindref="member">dynfracS</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a111728e7957ddacf32df3bd8cb3acb97" kindref="member">dynfracD</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1afaeaa4a0dd8ed52c7ee8640f42073cae" kindref="member">dynfracV</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a18046dad7a711e4021136a4c96ef1eca" kindref="member">dynfracA</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1afe75031f2a48e3dce3ea922cf0a7a412" kindref="member">dynfracP</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Internal<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a8649fdfafe4f3ed5fa96bb5261379247" kindref="member">restart</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a11647d1a8a725b7d9b36745e9f996daa" kindref="member">use_cwd</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a5ed0b0aefe1978a97e067c55b70a214f" kindref="member">NICE</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ab848ce91ba14d3dc5c87d0b42f3a1c0d" kindref="member">VERBOSE</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a37a81d21ee23bb0b038d33c2739fd1c5" kindref="member">step_timing</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1aee2e12c455ac1712da2b8c5a7eadb147" kindref="member">tnow</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1af76758837c4e9dbe2ab89cf956b9216c" kindref="member">psdump</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a39fdaf6a894c8175a85b4c1025ce5b7d" kindref="member">max_mindt</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1af91f8a0b7884c44b57e098c735affded" kindref="member">mtot</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="global_8_h_1a9a09953212dcc3e0c3b341960f9d0e17" kindref="member">gcom</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="global_8_h_1a0f127c0490f3cef6e2eaea4d99bc92e8" kindref="member">gcov</ref>;<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1aba5bccc916110ee269f48b22edecc2f5" kindref="member">global_cov</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a5939eefbb1104655674eb1f4d89776b7" kindref="member">initializing</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a75043af440748a82fcf73bb6948b476e" kindref="member">this_step</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ace19188521d679179f62686801a17451" kindref="member">mdrft</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a36f3515c1de63a585ba000988c4e9e5e" kindref="member">maxlev</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" kindref="member">mstep</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a9d38ce195bc9586a796e874856b439e2" kindref="member">Mstep</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;int&gt;<sp/><ref refid="global_8_h_1aa19adbd0588fd09013373278e283ff4a" kindref="member">mintvl</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;int&gt;<sp/><ref refid="global_8_h_1ae68076dadfc8e0ee051559218f8a16aa" kindref="member">mfirst</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="global_8_h_1a17b9b357dd1608d1fbe2b0a6fcc39ee3" refkind="member"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;int&gt;<sp/>&gt;<sp/><ref refid="global_8_h_1acaef8389951cfcbcf7500d471a54f7a8" kindref="member">dstepL</ref>,<sp/><ref refid="global_8_h_1a17b9b357dd1608d1fbe2b0a6fcc39ee3" kindref="member">dstepN</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;bool&gt;<sp/>&gt;<sp/><ref refid="global_8_h_1ae8810a756499d57b7bd72c21e77ac0c0" kindref="member">mactive</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="structthrd__pass__posvel" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structthrd__pass__posvel" kindref="compound">thrd_pass_posvel</ref><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187" refid="structthrd__pass__posvel_1a68df87648fa189497db1136090925eca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structthrd__pass__posvel_1a68df87648fa189497db1136090925eca" kindref="member">dt</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="structthrd__pass__posvel_1a5e79046aca11e013713e0f9b94f2bb82" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structthrd__pass__posvel_1a5e79046aca11e013713e0f9b94f2bb82" kindref="member">mlevel</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="structthrd__pass__posvel_1a5fef752c3b812831522b33e73133c81e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structthrd__pass__posvel_1a5fef752c3b812831522b33e73133c81e" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;thrd_pass_posvel&gt;<sp/><ref refid="global_8_h_1a4ed092beb16afee59d5d3027ff7815e3" kindref="member">posvel_data</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;pthread_t&gt;<sp/><ref refid="global_8_h_1a8edc685f083ec1e94f0f795d0b1cf6f6" kindref="member">posvel_thrd</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a41bc2d24fbdcce1a20df5fd464670d3b" kindref="member">ignore_info</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ae580ea2f336fc5dfa122b75b9d5f1c29" kindref="member">all_couples</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a32cdb52c36acd3cc3456caa6eb6355ad" kindref="member">dump_signal</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ae3e742d9bd58bdcb877de6e799dc2a11" kindref="member">stop_signal</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ad602774976cac4e518347eac0af7f11c" kindref="member">quit_signal</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a9966c2c13588eb5028797f9a4b7acf5f" kindref="member">stop_signal0</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a02481c44bf59a34959d709f59fd28c9e" kindref="member">dump_signal0</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MPI<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a4988f08f2acb7a37c1b1a9c4e493b5ce" kindref="member">is_init</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>MPI_Comm<sp/><ref refid="global_8_h_1aed81e434ac70ad715ebc7559c1e1e2cd" kindref="member">MPI_COMM_WORKER</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::vector&lt;int&gt;<sp/>&gt;<sp/><ref refid="global_8_h_1aa942c9c85282e2ef97e4ad7e8bfa29bd" kindref="member">nameMap</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="global_8_h_1ab8db74cb92c09c21783b488d231fb464" kindref="member">siblingList</ref>;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cyl_coef_header" kindref="compound">CylCoefHeader</ref><sp/><sp/><ref refid="global_8_h_1a969804c7cbc6238ce258cf2b5b44a59d" kindref="member">coefheadercyl</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_sph_coef_header" kindref="compound">SphCoefHeader</ref><sp/><sp/><ref refid="global_8_h_1a058880ce947a8186f5395d65775c8951" kindref="member">coefheadersph</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Particle<sp/>components</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_component_container" kindref="compound">ComponentContainer</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_component_container" kindref="compound">ComponentContainer</ref><sp/>*<ref refid="global_8_h_1ae1a3198745d4fefb926a291369103d3f" kindref="member">comp</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment">//<sp/>External<sp/>forces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_external_collection" kindref="compound">ExternalCollection</ref>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_external_collection" kindref="compound">ExternalCollection</ref><sp/>*<ref refid="global_8_h_1aaee6a7367d890c38c86d2cdcc2ad9cbf" kindref="member">external</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Output<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_output_container" kindref="compound">OutputContainer</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_output_container" kindref="compound">OutputContainer</ref><sp/>*<ref refid="global_8_h_1aa4b58afce7110c34964275a183c39e62" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>YAML::Node<sp/><ref refid="global_8_h_1a735b1ce7a340373ac87191026132d105" kindref="member">parse</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a01143f6725f562bed4255476fa737925" kindref="member">runtime</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="global_8_h_1a79830924a920190593f9a1d81206b42d" refkind="member"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a5476753eace29f10635dd0997326caef" kindref="member">lastPS</ref>,<sp/><ref refid="global_8_h_1a79830924a920190593f9a1d81206b42d" kindref="member">lastPSQ</ref>,<sp/><ref refid="global_8_h_1a62585d06a8e49b36c2d2d76c090ac20a" kindref="member">lastPSR</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_checkpoint_timer" kindref="compound">CheckpointTimer</ref><sp/><ref refid="global_8_h_1acba9660dd6a22551d7bf96ae16fdfb29" kindref="member">chktimer</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1af43954febeb3c195d2d7ada7dfff9025" kindref="member">restart_cmd</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>MPI_Datatype<sp/><ref refid="global_8_h_1aabdbaacaa617bdc02e17d0496697c5a4" kindref="member">MPI_EXP_KEYTYPE</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_barrier_wrapper" kindref="compound">BarrierWrapper</ref><sp/>*<ref refid="global_8_h_1abdcc1508a5de0342b0f458ab91e5a17c" kindref="member">barrier</ref>;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a358c440f6f0837bfb64a8f88ba103a26" kindref="member">barrier_check</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a9b47b634fe1f19fcf64c207c3f6a75c7" kindref="member">barrier_debug</ref>;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ab9391df1adf96c212739de35979dd988" kindref="member">barrier_extra</ref>;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a146fecec3cba63b7082b9affd48390ed" kindref="member">barrier_label</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a0dd5a41f849ed3ae82fcdb2376fc70fb" kindref="member">barrier_light</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ad312e23f29dd821ea4f290afa5689950" kindref="member">barrier_quiet</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="global_8_h_1a2d5327a407d0af61e6e0a06221fc5a7b" kindref="member">rlimit_val</ref>;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ae3fbd2f6eb3ab1b55e94fc277ab00328" kindref="member">debug_wait</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ab92be6ba951b6af1ccda46e3b228ea83" kindref="member">main_wait</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a0ad8ed6e0196a9477f123c6bf569233b" kindref="member">use_cuda</ref>;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a208eb1eecdfa4ea82b24ca6715636463" kindref="member">leapfrog_cuda</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="global_8_h_1ad8f58d79bc8e3e3dec8f778ab8a4b3aa" kindref="member">random_seed</ref>;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libvars_8_h" kindref="compound">libvars.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">__EXP__;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1ae5fcffdfa527121d2b3f80644536edbd" kindref="member">cuda_prof</ref>;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_species_8_h" kindref="compound">Species.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaUtil.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>thrust::device_vector&lt;int&gt;<sp/>cuDstepL,<sp/>cuDstepN;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cudaGlobalDevice;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/global.H"/>
+  </compounddef>
+</doxygen>

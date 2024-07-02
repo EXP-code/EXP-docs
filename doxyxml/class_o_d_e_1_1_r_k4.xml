@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_o_d_e_1_1_r_k4" kind="class" language="C++" prot="public">
+    <compoundname>ODE::RK4</compoundname>
+    <includes refid="_r_k4_8_h" local="no">RK4.H</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_o_d_e_1_1_r_k4_1a4c1831b513c79dae9f41a864fe8969bc" prot="public" static="no">
+        <type>std::function&lt; <ref refid="class_o_d_e_1_1_r_k4_1a6016923ee8d342724c3466727b073abb" kindref="member">Vref</ref>(double, <ref refid="class_o_d_e_1_1_r_k4_1a6016923ee8d342724c3466727b073abb" kindref="member">Vref</ref>)&gt;</type>
+        <definition>using ODE::RK4::Force =  std::function&lt;Vref(double, Vref)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Force</name>
+        <qualifiedname>ODE::RK4::Force</qualifiedname>
+        <briefdescription>
+<para>Functoid defintion for the force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="18" column="5" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_o_d_e_1_1_r_k4_1a6016923ee8d342724c3466727b073abb" prot="public" static="no">
+        <type>Eigen::Ref&lt; Eigen::VectorXd &gt;</type>
+        <definition>using ODE::RK4::Vref =  Eigen::Ref&lt;Eigen::VectorXd&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vref</name>
+        <qualifiedname>ODE::RK4::Vref</qualifiedname>
+        <briefdescription>
+<para>Reference to an Eigen vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="15" column="5" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_o_d_e_1_1_r_k4_1ab403e249875c2b981df7b5eb64aa267e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_o_d_e_1_1_r_k4_1a4c1831b513c79dae9f41a864fe8969bc" kindref="member">Force</ref></type>
+        <definition>Force ODE::RK4::force</definition>
+        <argsstring></argsstring>
+        <name>force</name>
+        <qualifiedname>ODE::RK4::force</qualifiedname>
+        <briefdescription>
+<para>Force instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="23" column="11" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_o_d_e_1_1_r_k4_1afa6cdfcab3f9a6d0f2dc5dc135b4098e" compoundref="_r_k4_8_h" startline="31" endline="41">step</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_o_d_e_1_1_r_k4_1a6e06cf1b52091e460786791cf415e944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ODE::RK4::RK4</definition>
+        <argsstring>(Force force)</argsstring>
+        <name>RK4</name>
+        <qualifiedname>ODE::RK4::RK4</qualifiedname>
+        <param>
+          <type><ref refid="class_o_d_e_1_1_r_k4_1a4c1831b513c79dae9f41a864fe8969bc" kindref="member">Force</ref></type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Constructor defining the force function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="28" column="5" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_o_d_e_1_1_r_k4_1afa6cdfcab3f9a6d0f2dc5dc135b4098e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ODE::RK4::step</definition>
+        <argsstring>(Vref x, double t, double dt)</argsstring>
+        <name>step</name>
+        <qualifiedname>ODE::RK4::step</qualifiedname>
+        <param>
+          <type><ref refid="class_o_d_e_1_1_r_k4_1a6016923ee8d342724c3466727b073abb" kindref="member">Vref</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Take a single <ref refid="class_o_d_e_1_1_r_k4" kindref="compound">RK4</ref> step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="31" column="12" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="31" bodyend="41"/>
+        <references refid="class_o_d_e_1_1_r_k4_1ab403e249875c2b981df7b5eb64aa267e" compoundref="_r_k4_8_h" startline="23">force</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_o_d_e_1_1_r_k4" kindref="compound">RK4</ref> takes one 4th-order Runge-Kutta step. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/RK4.H" line="9" column="3" bodyfile="/home/weinberg/Projects/EXP/include/RK4.H" bodystart="10" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_o_d_e_1_1_r_k4_1a4c1831b513c79dae9f41a864fe8969bc" prot="public" virt="non-virtual"><scope>ODE::RK4</scope><name>Force</name></member>
+      <member refid="class_o_d_e_1_1_r_k4_1ab403e249875c2b981df7b5eb64aa267e" prot="private" virt="non-virtual"><scope>ODE::RK4</scope><name>force</name></member>
+      <member refid="class_o_d_e_1_1_r_k4_1a6e06cf1b52091e460786791cf415e944" prot="public" virt="non-virtual"><scope>ODE::RK4</scope><name>RK4</name></member>
+      <member refid="class_o_d_e_1_1_r_k4_1afa6cdfcab3f9a6d0f2dc5dc135b4098e" prot="public" virt="non-virtual"><scope>ODE::RK4</scope><name>step</name></member>
+      <member refid="class_o_d_e_1_1_r_k4_1a6016923ee8d342724c3466727b073abb" prot="public" virt="non-virtual"><scope>ODE::RK4</scope><name>Vref</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

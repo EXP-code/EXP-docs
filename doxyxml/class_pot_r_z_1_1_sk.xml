@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_pot_r_z_1_1_sk" kind="class" language="C++" prot="protected">
+    <compoundname>PotRZ::Sk</compoundname>
+    <includes refid="_pot_r_z_8_h" local="no">PotRZ.H</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_pot_r_z_1_1_sk_1a87eef3d6d03e29318c04d6d3301d6bbb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotRZ::Sk::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <qualifiedname>PotRZ::Sk::N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="22" column="9" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_pot_r_z_1_1_sk_1afde061a179f038a2394ff2135f523d91" compoundref="_pot_r_z_8_h" startline="39" endline="45">operator()</referencedby>
+        <referencedby refid="class_pot_r_z_1_1_sk_1a1a01e40c1096829cbd337c6d89a14267" compoundref="_pot_r_z_8_h" startline="32" endline="35">Sk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pot_r_z_1_1_sk_1ace4a27a09732f4554a56a450b3e77275" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_d_h_t" kindref="compound">QDHT</ref></type>
+        <definition>QDHT PotRZ::Sk::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <qualifiedname>PotRZ::Sk::v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="23" column="10" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_pot_r_z_1_1_sk_1afde061a179f038a2394ff2135f523d91" compoundref="_pot_r_z_8_h" startline="39" endline="45">operator()</referencedby>
+        <referencedby refid="class_pot_r_z_1_1_sk_1a1a01e40c1096829cbd337c6d89a14267" compoundref="_pot_r_z_8_h" startline="32" endline="35">Sk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pot_r_z_1_1_sk_1afde061a179f038a2394ff2135f523d91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; Eigen::VectorXd, Eigen::VectorXd &gt;</type>
+        <definition>std::tuple&lt; Eigen::VectorXd, Eigen::VectorXd &gt; PotRZ::Sk::operator()</definition>
+        <argsstring>(std::function&lt; double(double)&gt; dens)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>PotRZ::Sk::operator()</qualifiedname>
+        <param>
+          <type>std::function&lt; double(double)&gt;</type>
+          <declname>dens</declname>
+        </param>
+        <briefdescription>
+<para>Perform the transform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="39" column="5" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="39" bodyend="45"/>
+        <references refid="class_q_d_h_t_1a544bb6c7f92c9b89b14e77893a384a3b" compoundref="_q_d_h_t_8_h" startline="78" endline="78">QDHT::getK</references>
+        <references refid="class_q_d_h_t_1a3698a331a45c81e36acc1b23e8e51861" compoundref="_q_d_h_t_8_h" startline="75" endline="75">QDHT::getR</references>
+        <references refid="class_pot_r_z_1_1_sk_1a87eef3d6d03e29318c04d6d3301d6bbb" compoundref="_pot_r_z_8_h" startline="22">N</references>
+        <references refid="class_pot_r_z_1_1_sk_1ace4a27a09732f4554a56a450b3e77275" compoundref="_pot_r_z_8_h" startline="23">v</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_r_z_1_1_sk_1a9b29e6af601361c3725faa652a6069e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PotRZ::Sk::Sk</definition>
+        <argsstring>()</argsstring>
+        <name>Sk</name>
+        <qualifiedname>PotRZ::Sk::Sk</qualifiedname>
+        <briefdescription>
+<para>Null constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="28" column="5" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pot_r_z_1_1_sk_1a1a01e40c1096829cbd337c6d89a14267" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PotRZ::Sk::Sk</definition>
+        <argsstring>(double R, int N, int M)</argsstring>
+        <name>Sk</name>
+        <qualifiedname>PotRZ::Sk::Sk</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor with R=cutoff, N=number of knots, M=harmonic order, and a=parameter vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="32" column="5" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="32" bodyend="35"/>
+        <references refid="class_pot_r_z_1a62ad3a85a26b28fb94567f4e04895aee" compoundref="_pot_r_z_8_h" startline="53">PotRZ::M</references>
+        <references refid="class_pot_r_z_1_1_sk_1a87eef3d6d03e29318c04d6d3301d6bbb" compoundref="_pot_r_z_8_h" startline="22">N</references>
+        <references refid="class_pot_r_z_1_1_sk_1ace4a27a09732f4554a56a450b3e77275" compoundref="_pot_r_z_8_h" startline="23">v</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Compute the Hankel transform of the target density. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PotRZ::Sk</label>
+        <link refid="class_pot_r_z_1_1_sk"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDHT</label>
+        <link refid="class_q_d_h_t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/PotRZ.H" line="18" column="3" bodyfile="/home/weinberg/Projects/EXP/include/PotRZ.H" bodystart="19" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_pot_r_z_1_1_sk_1a87eef3d6d03e29318c04d6d3301d6bbb" prot="protected" virt="non-virtual"><scope>PotRZ::Sk</scope><name>N</name></member>
+      <member refid="class_pot_r_z_1_1_sk_1afde061a179f038a2394ff2135f523d91" prot="public" virt="non-virtual"><scope>PotRZ::Sk</scope><name>operator()</name></member>
+      <member refid="class_pot_r_z_1_1_sk_1a9b29e6af601361c3725faa652a6069e0" prot="public" virt="non-virtual"><scope>PotRZ::Sk</scope><name>Sk</name></member>
+      <member refid="class_pot_r_z_1_1_sk_1a1a01e40c1096829cbd337c6d89a14267" prot="public" virt="non-virtual"><scope>PotRZ::Sk</scope><name>Sk</name></member>
+      <member refid="class_pot_r_z_1_1_sk_1ace4a27a09732f4554a56a450b3e77275" prot="protected" virt="non-virtual"><scope>PotRZ::Sk</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

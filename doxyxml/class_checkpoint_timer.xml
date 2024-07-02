@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_checkpoint_timer" kind="class" language="C++" prot="public">
+    <compoundname>CheckpointTimer</compoundname>
+    <includes refid="chk_timer_8_h" local="no">chkTimer.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_checkpoint_timer_1a3c4bd3a62951f7c9b67f3e053971ef21" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>CheckpointTimer::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="29" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1afc444c3c26a6feca68eff5ab196d6e5f" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::final</definition>
+        <argsstring></argsstring>
+        <name>final</name>
+        <qualifiedname>CheckpointTimer::final</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="18" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1ac2e1f6ff125f2518bd3009ff53f8c9f5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CheckpointTimer::firstime</definition>
+        <argsstring></argsstring>
+        <name>firstime</name>
+        <qualifiedname>CheckpointTimer::firstime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="43" column="8" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1a58ce29c92dde59ea4ae1e98b2317a942" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::initial</definition>
+        <argsstring></argsstring>
+        <name>initial</name>
+        <qualifiedname>CheckpointTimer::initial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="10" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1a2a3cca057286c97f19422b479ada3e89" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::last</definition>
+        <argsstring></argsstring>
+        <name>last</name>
+        <qualifiedname>CheckpointTimer::last</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="24" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1aaa0538d7eef846b6f14272b6ae142dfd" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::last_diag</definition>
+        <argsstring></argsstring>
+        <name>last_diag</name>
+        <qualifiedname>CheckpointTimer::last_diag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="37" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1aa926ca99081c647d7c322a513ba7de84" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CheckpointTimer::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <qualifiedname>CheckpointTimer::mean</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="42" column="10" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1aa16af43e0a33230254c29ae85b684d05" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CheckpointTimer::nsteps</definition>
+        <argsstring></argsstring>
+        <name>nsteps</name>
+        <qualifiedname>CheckpointTimer::nsteps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="41" column="12" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1a54f064c5c4ab8fd97903541304e2b123" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::start_time</definition>
+        <argsstring></argsstring>
+        <name>start_time</name>
+        <qualifiedname>CheckpointTimer::start_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="40" column="47" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1ac71ff57adaf031073bc502b01829768e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CheckpointTimer::var</definition>
+        <argsstring></argsstring>
+        <name>var</name>
+        <qualifiedname>CheckpointTimer::var</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="42" column="15" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_checkpoint_timer_1a8c84d425bdb5d8bc7335ac1837b2237a" prot="public" static="yes" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::delta</definition>
+        <argsstring></argsstring>
+        <name>delta</name>
+        <qualifiedname>CheckpointTimer::delta</qualifiedname>
+        <briefdescription>
+<para>Safety time interval [Default: 10 minute warning]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="54" column="17" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checkpoint_timer_1a1d024346c080894f6e9a67f574d0d9dd" prot="public" static="yes" mutable="no">
+        <type>time_t</type>
+        <definition>time_t CheckpointTimer::diag</definition>
+        <argsstring></argsstring>
+        <name>diag</name>
+        <qualifiedname>CheckpointTimer::diag</qualifiedname>
+        <briefdescription>
+<para>Diagnostic output interval [Default: 2 hours]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="57" column="17" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_checkpoint_timer_1a379699e30dce1f0f00cbe7eaf5d32e7c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string CheckpointTimer::exec</definition>
+        <argsstring>(string &amp;cmd)</argsstring>
+        <name>exec</name>
+        <qualifiedname>CheckpointTimer::exec</qualifiedname>
+        <param>
+          <type>string &amp;</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>Execute a command and pipe the results to string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checkpoint_timer_1a437a8c78ffee49e869515880ec168d43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double CheckpointTimer::time_remaining</definition>
+        <argsstring>()</argsstring>
+        <name>time_remaining</name>
+        <qualifiedname>CheckpointTimer::time_remaining</qualifiedname>
+        <briefdescription>
+<para>Get the remaining execution time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="49" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_checkpoint_timer_1a0db0cad1676b37b951f2090ed81e1b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CheckpointTimer::CheckpointTimer</definition>
+        <argsstring>()</argsstring>
+        <name>CheckpointTimer</name>
+        <qualifiedname>CheckpointTimer::CheckpointTimer</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="60" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checkpoint_timer_1ae499ed7b77e007cf5dafbcc4c38f4db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckpointTimer::done</definition>
+        <argsstring>()</argsstring>
+        <name>done</name>
+        <qualifiedname>CheckpointTimer::done</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_time" kindref="compound">Time</ref> to quit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="66" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checkpoint_timer_1a0ea7a8d2dae19263a12f84f2b4c63ec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckpointTimer::mark</definition>
+        <argsstring>()</argsstring>
+        <name>mark</name>
+        <qualifiedname>CheckpointTimer::mark</qualifiedname>
+        <briefdescription>
+<para>Mark the current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="63" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class keeps track of time between time steps and calls for a checkpoint and signals an exit if there will not be time to reach the next checkpoint </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/src/chkTimer.H" line="36" column="1" bodyfile="/home/weinberg/Projects/EXP/src/chkTimer.H" bodystart="37" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_checkpoint_timer_1a0db0cad1676b37b951f2090ed81e1b98" prot="public" virt="non-virtual"><scope>CheckpointTimer</scope><name>CheckpointTimer</name></member>
+      <member refid="class_checkpoint_timer_1a3c4bd3a62951f7c9b67f3e053971ef21" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>current</name></member>
+      <member refid="class_checkpoint_timer_1a8c84d425bdb5d8bc7335ac1837b2237a" prot="public" virt="non-virtual"><scope>CheckpointTimer</scope><name>delta</name></member>
+      <member refid="class_checkpoint_timer_1a1d024346c080894f6e9a67f574d0d9dd" prot="public" virt="non-virtual"><scope>CheckpointTimer</scope><name>diag</name></member>
+      <member refid="class_checkpoint_timer_1ae499ed7b77e007cf5dafbcc4c38f4db0" prot="public" virt="non-virtual"><scope>CheckpointTimer</scope><name>done</name></member>
+      <member refid="class_checkpoint_timer_1a379699e30dce1f0f00cbe7eaf5d32e7c" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>exec</name></member>
+      <member refid="class_checkpoint_timer_1afc444c3c26a6feca68eff5ab196d6e5f" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>final</name></member>
+      <member refid="class_checkpoint_timer_1ac2e1f6ff125f2518bd3009ff53f8c9f5" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>firstime</name></member>
+      <member refid="class_checkpoint_timer_1a58ce29c92dde59ea4ae1e98b2317a942" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>initial</name></member>
+      <member refid="class_checkpoint_timer_1a2a3cca057286c97f19422b479ada3e89" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>last</name></member>
+      <member refid="class_checkpoint_timer_1aaa0538d7eef846b6f14272b6ae142dfd" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>last_diag</name></member>
+      <member refid="class_checkpoint_timer_1a0ea7a8d2dae19263a12f84f2b4c63ec1" prot="public" virt="non-virtual"><scope>CheckpointTimer</scope><name>mark</name></member>
+      <member refid="class_checkpoint_timer_1aa926ca99081c647d7c322a513ba7de84" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>mean</name></member>
+      <member refid="class_checkpoint_timer_1aa16af43e0a33230254c29ae85b684d05" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>nsteps</name></member>
+      <member refid="class_checkpoint_timer_1a54f064c5c4ab8fd97903541304e2b123" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>start_time</name></member>
+      <member refid="class_checkpoint_timer_1a437a8c78ffee49e869515880ec168d43" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>time_remaining</name></member>
+      <member refid="class_checkpoint_timer_1ac71ff57adaf031073bc502b01829768e" prot="private" virt="non-virtual"><scope>CheckpointTimer</scope><name>var</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

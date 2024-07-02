@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="bodies" kind="page">
+    <compoundname>bodies</compoundname>
+    <title>Phase space file format</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="3">Phase-space file utilities</heading>
+</para>
+<para>The following three utilities manipulate the phase-space files: integer values: <orderedlist>
+<listitem>
+<para>Number of bodies: <computeroutput>nbodies</computeroutput> </para>
+</listitem>
+<listitem>
+<para>Number of integer attributes: <computeroutput>niattrib</computeroutput> </para>
+</listitem>
+<listitem>
+<para>Number of real (double) attributes: <computeroutput>ndattrib</computeroutput> </para>
+</listitem>
+</orderedlist>
+This header is followed by <computeroutput>nbodies</computeroutput> rows each containing <computeroutput>7+niattrib+ndattrib</computeroutput> values as follows: <itemizedlist>
+<listitem>
+<para>Mass (one real value) </para>
+</listitem>
+<listitem>
+<para>Position (three real values) </para>
+</listitem>
+<listitem>
+<para>Velocity (three real values) </para>
+</listitem>
+<listitem>
+<para>Gravitational potential (one real value) </para>
+</listitem>
+<listitem>
+<para>Integer attributes (<computeroutput>niattrib</computeroutput>) values </para>
+</listitem>
+<listitem>
+<para>Real attributes (<computeroutput>ndattrib</computeroutput>) values </para>
+</listitem>
+</itemizedlist>
+</para>
+<para><heading level="3">Binary file format</heading>
+</para>
+<para><linebreak/>
+ The binary phase space structure consists of a master header followed by &quot;stanzas&quot;. Each stanza is has a header followed by the phase space. The master header is: <preformatted>
+struct <ref refid="class_master_header" kindref="compound">MasterHeader</ref> {
+  double time;
+  int ntot;
+  int ncomp;
+};
+</preformatted> The parameters are: <itemizedlist>
+<listitem>
+<para><computeroutput>time</computeroutput> - the current time </para>
+</listitem>
+<listitem>
+<para><computeroutput>ntot</computeroutput> - total number of bodies in all components </para>
+</listitem>
+<listitem>
+<para><computeroutput>ncomp</computeroutput> - number of components </para>
+</listitem>
+</itemizedlist>
+Each stanza begins with a header: <preformatted>
+struct <ref refid="class_component_header" kindref="compound">ComponentHeader</ref> {
+  int nbod;
+  int niatr;
+  int ndatr;
+  int ninfochar;
+  char info[ninfochar];
+};
+</preformatted> which decribes the number of bodies in the component (<computeroutput>nbod</computeroutput>), the number of integer attributes (<computeroutput>niatr</computeroutput>), the number of double components (<computeroutput>ndatr</computeroutput>), number of characters reserved for the info string (<computeroutput>ninfochar</computeroutput>) and the info string (<computeroutput>ninfochar</computeroutput>). </para>
+    </detaileddescription>
+    <location file="bodies.doc"/>
+  </compounddef>
+</doxygen>

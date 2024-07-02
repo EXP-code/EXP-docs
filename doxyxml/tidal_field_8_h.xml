@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="tidal_field_8_h" kind="file" language="C++">
+    <compoundname>tidalField.H</compoundname>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/tidalField.H</label>
+        <link refid="tidal_field_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classtidal_field" prot="public">tidalField</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_tidalField_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_tidalField_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classtidal_field" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtidal_field" kindref="compound">tidalField</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_external_force" kindref="compound">ExternalForce</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="classtidal_field_1a5dbcac9de363aea682f1dd910be51c02" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtidal_field_1a5dbcac9de363aea682f1dd910be51c02" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="22" refid="classtidal_field_1adf3d4a7a4b92b82838c9822f4f52ef19" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtidal_field_1adf3d4a7a4b92b82838c9822f4f52ef19" kindref="member">hills_omega</ref>,<sp/><ref refid="classtidal_field_1a890474264063549c7093a7da03a218ac" kindref="member">hills_p</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classtidal_field_1a0611f1ed21d4c7ae731957a1ca204c0c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classtidal_field_1a0611f1ed21d4c7ae731957a1ca204c0c" kindref="member">determine_acceleration_and_potential_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classtidal_field_1a9616a013c9640bf1ae68c5831d0bf358" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="classtidal_field_1a9616a013c9640bf1ae68c5831d0bf358" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classtidal_field_1acef78f19075d1f0a30d542aca9889c1d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classtidal_field_1acef78f19075d1f0a30d542aca9889c1d" kindref="member">tidalField</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/>config);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classtidal_field_1ab816612a12c9fbd164d2f46e6f507a21" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtidal_field_1ab816612a12c9fbd164d2f46e6f507a21" kindref="member">~tidalField</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/tidalField.H"/>
+  </compounddef>
+</doxygen>

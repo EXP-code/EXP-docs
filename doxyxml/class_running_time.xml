@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_running_time" kind="class" language="C++" prot="public">
+    <compoundname>RunningTime</compoundname>
+    <includes refid="_running_time_8_h" local="no">RunningTime.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_running_time_1a7b0471613579810bf32524816adb905f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RunningTime::accum</definition>
+        <argsstring></argsstring>
+        <name>accum</name>
+        <qualifiedname>RunningTime::accum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="17" column="29" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</referencedby>
+        <referencedby refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" compoundref="_running_time_8_h" startline="42" endline="46">lap</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1ab4002e0e14edcde405bab776fc3907cd" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; double &gt;</type>
+        <definition>std::deque&lt;double&gt; RunningTime::boxcar</definition>
+        <argsstring></argsstring>
+        <name>boxcar</name>
+        <qualifiedname>RunningTime::boxcar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="14" column="14" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1adca343f0d332bcd88ffd56b950ed0917" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RunningTime::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>RunningTime::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="17" column="10" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1a57183c3af8368bdd3477a4c93b10e3da" compoundref="_running_time_8_h" startline="75" endline="75">getTavg</referencedby>
+        <referencedby refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1a21693cc51fd4ac190f8f017c77fba525" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RunningTime::last</definition>
+        <argsstring></argsstring>
+        <name>last</name>
+        <qualifiedname>RunningTime::last</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="17" column="24" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1a2832fc11e8ef83d776b27493cbae8d28" compoundref="_running_time_8_h" startline="77" endline="77">getLast</referencedby>
+        <referencedby refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" compoundref="_running_time_8_h" startline="42" endline="46">lap</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1a93ef2110fe6f477d74b02a6c55f63ac2" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned RunningTime::nkeep</definition>
+        <argsstring></argsstring>
+        <name>nkeep</name>
+        <qualifiedname>RunningTime::nkeep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="20" column="12" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1a352c38b45a087db968d1c801f54475bb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>Timer RunningTime::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>RunningTime::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="22" column="9" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" compoundref="_running_time_8_h" startline="42" endline="46">lap</referencedby>
+        <referencedby refid="class_running_time_1a417626fc2c1c07dcc1465e55fcfcef16" compoundref="_running_time_8_h" startline="62" endline="65">Start</referencedby>
+        <referencedby refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" compoundref="_running_time_8_h" startline="67" endline="73">Stop</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_running_time_1a1c5af29d924a06dc2d2e5903d60a0bb5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RunningTime::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>RunningTime::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="17" column="18" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</referencedby>
+        <referencedby refid="class_running_time_1af0d758609efb2ad4a0f3db56977039fb" compoundref="_running_time_8_h" startline="76" endline="76">getTime</referencedby>
+        <referencedby refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_running_time_1ad926a130c429caa4173c98b3da248bf4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunningTime::append</definition>
+        <argsstring>()</argsstring>
+        <name>append</name>
+        <qualifiedname>RunningTime::append</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="25" column="8" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="25" bodyend="39"/>
+        <references refid="class_running_time_1a7b0471613579810bf32524816adb905f" compoundref="_running_time_8_h" startline="17">accum</references>
+        <references refid="class_running_time_1ab4002e0e14edcde405bab776fc3907cd" compoundref="_running_time_8_h" startline="14">boxcar</references>
+        <references refid="class_running_time_1adca343f0d332bcd88ffd56b950ed0917" compoundref="_running_time_8_h" startline="17">current</references>
+        <references refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">Timer::getTime</references>
+        <references refid="class_running_time_1a21693cc51fd4ac190f8f017c77fba525" compoundref="_running_time_8_h" startline="17">last</references>
+        <references refid="class_running_time_1a93ef2110fe6f477d74b02a6c55f63ac2" compoundref="_running_time_8_h" startline="20">nkeep</references>
+        <references refid="class_running_time_1a352c38b45a087db968d1c801f54475bb" compoundref="_running_time_8_h" startline="22">timer</references>
+        <references refid="class_running_time_1a1c5af29d924a06dc2d2e5903d60a0bb5" compoundref="_running_time_8_h" startline="17">value</references>
+        <referencedby refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" compoundref="_running_time_8_h" startline="67" endline="73">Stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunningTime::initialize</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>RunningTime::initialize</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="49" column="8" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="49" bodyend="55"/>
+        <references refid="class_running_time_1a7b0471613579810bf32524816adb905f" compoundref="_running_time_8_h" startline="17">accum</references>
+        <references refid="class_running_time_1adca343f0d332bcd88ffd56b950ed0917" compoundref="_running_time_8_h" startline="17">current</references>
+        <references refid="class_running_time_1a93ef2110fe6f477d74b02a6c55f63ac2" compoundref="_running_time_8_h" startline="20">nkeep</references>
+        <references refid="class_running_time_1a1c5af29d924a06dc2d2e5903d60a0bb5" compoundref="_running_time_8_h" startline="17">value</references>
+        <referencedby refid="class_running_time_1adc98e9bc045319d6203e8a7743bfe84f" compoundref="_running_time_8_h" startline="59" endline="59">RunningTime</referencedby>
+        <referencedby refid="class_running_time_1ac96297502565dbf57c2c18be51f86f57" compoundref="_running_time_8_h" startline="60" endline="60">RunningTime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunningTime::lap</definition>
+        <argsstring>()</argsstring>
+        <name>lap</name>
+        <qualifiedname>RunningTime::lap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="42" column="8" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="42" bodyend="46"/>
+        <references refid="class_running_time_1a7b0471613579810bf32524816adb905f" compoundref="_running_time_8_h" startline="17">accum</references>
+        <references refid="class_timer_1a490604efc23a4ff9bef8d1f9f418ecb2" compoundref="_timer_8_h" startline="75" endline="84">Timer::getTime</references>
+        <references refid="class_running_time_1a21693cc51fd4ac190f8f017c77fba525" compoundref="_running_time_8_h" startline="17">last</references>
+        <references refid="class_running_time_1a352c38b45a087db968d1c801f54475bb" compoundref="_running_time_8_h" startline="22">timer</references>
+        <referencedby refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" compoundref="_running_time_8_h" startline="67" endline="73">Stop</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_running_time_1a2832fc11e8ef83d776b27493cbae8d28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RunningTime::getLast</definition>
+        <argsstring>()</argsstring>
+        <name>getLast</name>
+        <qualifiedname>RunningTime::getLast</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="77" bodyend="77"/>
+        <references refid="class_running_time_1a21693cc51fd4ac190f8f017c77fba525" compoundref="_running_time_8_h" startline="17">last</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1a57183c3af8368bdd3477a4c93b10e3da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RunningTime::getTavg</definition>
+        <argsstring>()</argsstring>
+        <name>getTavg</name>
+        <qualifiedname>RunningTime::getTavg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="75" column="10" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="75" bodyend="75"/>
+        <references refid="class_running_time_1adca343f0d332bcd88ffd56b950ed0917" compoundref="_running_time_8_h" startline="17">current</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1af0d758609efb2ad4a0f3db56977039fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RunningTime::getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <qualifiedname>RunningTime::getTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="76" column="10" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="76" bodyend="76"/>
+        <references refid="class_running_time_1a1c5af29d924a06dc2d2e5903d60a0bb5" compoundref="_running_time_8_h" startline="17">value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1adc98e9bc045319d6203e8a7743bfe84f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RunningTime::RunningTime</definition>
+        <argsstring>()</argsstring>
+        <name>RunningTime</name>
+        <qualifiedname>RunningTime::RunningTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="59" column="3" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="59" bodyend="59"/>
+        <references refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1ac96297502565dbf57c2c18be51f86f57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RunningTime::RunningTime</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>RunningTime</name>
+        <qualifiedname>RunningTime::RunningTime</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="60" column="3" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="60" bodyend="60"/>
+        <references refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" compoundref="_running_time_8_h" startline="49" endline="55">initialize</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1a417626fc2c1c07dcc1465e55fcfcef16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunningTime::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>RunningTime::Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="62" column="8" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="62" bodyend="65"/>
+        <references refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" compoundref="_timer_8_h" startline="45" endline="50">Timer::start</references>
+        <references refid="class_running_time_1a352c38b45a087db968d1c801f54475bb" compoundref="_running_time_8_h" startline="22">timer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunningTime::Stop</definition>
+        <argsstring>(bool final=true)</argsstring>
+        <name>Stop</name>
+        <qualifiedname>RunningTime::Stop</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>final</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="67" column="8" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="67" bodyend="73"/>
+        <references refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" compoundref="_running_time_8_h" startline="25" endline="39">append</references>
+        <references refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" compoundref="_running_time_8_h" startline="42" endline="46">lap</references>
+        <references refid="class_timer_1a9020542d73357a4eef512eefaf57524b" compoundref="_timer_8_h" startline="67" endline="72">Timer::reset</references>
+        <references refid="class_timer_1a988f79aa183d9d5473c13106f5babe48" compoundref="_timer_8_h" startline="54" endline="63">Timer::stop</references>
+        <references refid="class_running_time_1a352c38b45a087db968d1c801f54475bb" compoundref="_running_time_8_h" startline="22">timer</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>RunningTime</label>
+        <link refid="class_running_time"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/RunningTime.H" line="10" column="1" bodyfile="/home/weinberg/Projects/EXP/include/RunningTime.H" bodystart="11" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_running_time_1a7b0471613579810bf32524816adb905f" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>accum</name></member>
+      <member refid="class_running_time_1ad926a130c429caa4173c98b3da248bf4" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>append</name></member>
+      <member refid="class_running_time_1ab4002e0e14edcde405bab776fc3907cd" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>boxcar</name></member>
+      <member refid="class_running_time_1adca343f0d332bcd88ffd56b950ed0917" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>current</name></member>
+      <member refid="class_running_time_1a2832fc11e8ef83d776b27493cbae8d28" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>getLast</name></member>
+      <member refid="class_running_time_1a57183c3af8368bdd3477a4c93b10e3da" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>getTavg</name></member>
+      <member refid="class_running_time_1af0d758609efb2ad4a0f3db56977039fb" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>getTime</name></member>
+      <member refid="class_running_time_1a8fbbe6f82f71ce2a927bab08dfbc10d5" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>initialize</name></member>
+      <member refid="class_running_time_1aed2021e81dfd9464cb34471edca03ef8" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>lap</name></member>
+      <member refid="class_running_time_1a21693cc51fd4ac190f8f017c77fba525" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>last</name></member>
+      <member refid="class_running_time_1a93ef2110fe6f477d74b02a6c55f63ac2" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>nkeep</name></member>
+      <member refid="class_running_time_1adc98e9bc045319d6203e8a7743bfe84f" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>RunningTime</name></member>
+      <member refid="class_running_time_1ac96297502565dbf57c2c18be51f86f57" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>RunningTime</name></member>
+      <member refid="class_running_time_1a417626fc2c1c07dcc1465e55fcfcef16" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>Start</name></member>
+      <member refid="class_running_time_1a732dc3beb8518f5723c18c2f7ee1cc35" prot="public" virt="non-virtual"><scope>RunningTime</scope><name>Stop</name></member>
+      <member refid="class_running_time_1a352c38b45a087db968d1c801f54475bb" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>timer</name></member>
+      <member refid="class_running_time_1a1c5af29d924a06dc2d2e5903d60a0bb5" prot="private" virt="non-virtual"><scope>RunningTime</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_r_1_1_p_s_pout" kind="class" language="C++" prot="public">
+    <compoundname>PR::PSPout</compoundname>
+    <basecompoundref refid="class_p_r_1_1_p_s_p" prot="public" virt="non-virtual">PR::PSP</basecompoundref>
+    <includes refid="_particle_reader_8_h" local="no">ParticleReader.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_p_s_pout_1ac2a29bde3ef885cb479142b7a0e1d25a" prot="private" static="no" mutable="no">
+        <type>streampos</type>
+        <definition>streampos PR::PSPout::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>PR::PSPout::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="432" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="432" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_r_1_1_p_s_pout_1a8bfaa7b449c0a698fd6839330d89503e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::PSPout::firstParticle</definition>
+        <argsstring>()</argsstring>
+        <name>firstParticle</name>
+        <qualifiedname>PR::PSPout::firstParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_p_s_p_1a5c7372c606bfa1860e47f80abb50dc41">firstParticle</reimplements>
+        <briefdescription>
+<para><ref refid="class_particle" kindref="compound">Particle</ref> access. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="444" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_pout_1addda79bc2ff8cad57564329ecc24e347" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::PSPout::nextParticle</definition>
+        <argsstring>()</argsstring>
+        <name>nextParticle</name>
+        <qualifiedname>PR::PSPout::nextParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_p_s_p_1aa1049c277a7602af55f565d299cc3042">nextParticle</reimplements>
+        <briefdescription>
+<para>Get the next particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="445" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_pout_1a4448dec760b8cd2dfa763a1d20624f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PR::PSPout::PSPout</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;file, bool verbose=false)</argsstring>
+        <name>PSPout</name>
+        <qualifiedname>PR::PSPout::PSPout</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="437" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_p_s_pout_1a7b18e8184d94cf8ae31a5210ba1a1d78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual PR::PSPout::~PSPout</definition>
+        <argsstring>()</argsstring>
+        <name>~PSPout</name>
+        <qualifiedname>PR::PSPout::~PSPout</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="440" column="13" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="440" bodyend="440"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to access a full <ref refid="class_p_r_1_1_p_s_p" kindref="compound">PSP</ref> file (OUT) </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PR::PSP</label>
+        <link refid="class_p_r_1_1_p_s_p"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PR::PSPout</label>
+        <link refid="class_p_r_1_1_p_s_pout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>ComponentHeader</label>
+        <link refid="class_component_header"/>
+      </node>
+      <node id="4">
+        <label>MasterHeader</label>
+        <link refid="class_master_header"/>
+      </node>
+      <node id="9">
+        <label>PR::PParticle&lt; double &gt;</label>
+        <link refid="class_p_r_1_1_p_particle"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PR::PParticle&lt; float &gt;</label>
+        <link refid="class_p_r_1_1_p_particle"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PR::PSP</label>
+        <link refid="class_p_r_1_1_p_s_p"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>cur</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>fpart</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>dpart</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PR::PSPout</label>
+        <link refid="class_p_r_1_1_p_s_pout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PR::PSPstanza</label>
+        <link refid="class_p_r_1_1_p_s_pstanza"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="8">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="429" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="430" bodyend="447"/>
+    <listofallmembers>
+      <member refid="class_p_r_1_1_p_s_p_1a88ca1aef25d9b850adf02f2c767837bb" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>ComputeStats</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>createReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa97fe74ea485da5231a34720f33f3126" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>cur</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a30508c9bcea21d4c88f3bb097935c13d" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>CurrentNumber</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1adceed7e0b520c1e2b97875428fad369c" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>CurrentTime</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ab040502b6884fdd165b4e34176c2d41e" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>dpart</name></member>
+      <member refid="class_p_r_1_1_p_s_pout_1a8bfaa7b449c0a698fd6839330d89503e" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>firstParticle</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1afe9d8e39d4211db9161dcc9aac41aff2" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>fpart</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1afb271968385451704400b13eb9ed66b0" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>GetNamed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aac293b9ac96890e4d94a62efbfd39fc4" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>GetStanza</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aad3b887d40b88207ea894fc0024c4884" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>GetTypes</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a04d41b889b796fb902bd73956c504935" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>header</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a5e8e396a696710d0897774f06d65d817" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>in</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1abe920a1152f5c03fb3505e5cf51041df" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>init</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a12424e52bab67a14df6596a84a1dfbf0" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>magic</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa1a016605ba6d8ac681dc57c95b856ea" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>mmask</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aee7068c55f7839c92f0de0be5cd92c7d" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>mtot</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>myid</name></member>
+      <member refid="class_p_r_1_1_p_s_pout_1addda79bc2ff8cad57564329ecc24e347" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>nextParticle</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a73724dc649c5f4814cdd955c36e901e0" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>NextStanza</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ae03de96b330fbc496203a944c9d8155d" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>nmask</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>numprocs</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>parseFileList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>parseStringList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>ParticleReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3d9f66a7c77203d1caa22bf738d60b5e" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>pcount</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1abe6860a6f676e6a33d0c40d50e7c8350" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>pmax</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a6fdce0cb920f7dfdea11359bf3f886af" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>pmed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa1481a5cdbf370f85a807129eca9430d" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>pmin</name></member>
+      <member refid="class_p_r_1_1_p_s_pout_1ac2a29bde3ef885cb479142b7a0e1d25a" prot="private" virt="non-virtual"><scope>PR::PSPout</scope><name>pos</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3db00a81bbfad079f5d903a150ab695c" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" virt="virtual" ambiguityscope="PR::ParticleReader::"><scope>PR::PSPout</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a8e16d6172c04d65dcc3caac13e619bb7" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>PSP</name></member>
+      <member refid="class_p_r_1_1_p_s_pout_1a4448dec760b8cd2dfa763a1d20624f36" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>PSPout</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>readerTypes</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3c5ed37a3c7a2311f368f287a36cbfcc" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>SelectType</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a8e6869ea4615051c89d7fab466df84f7" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>spos</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a504414a3e5b8de80429d5ebd66fd3b4e" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>stanzas</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>use_mpi</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a3018193d989bfd8e85197323bff9d915" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>VERBOSE</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a423891dd160ef3e7f653ebc770111009" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>vmax</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1a0fae17f0db9e902d6bcd988c58655ab2" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>vmed</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ad84fbdde4036eda1dbbc48e52a3acd6b" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>vmin</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1ab8025923eeff5ec56ce3512b95c66317" prot="protected" virt="non-virtual"><scope>PR::PSPout</scope><name>write_binary</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aa87bdd1965311624af398338f3d9c928" prot="public" virt="non-virtual"><scope>PR::PSPout</scope><name>writePSP</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>~ParticleReader</name></member>
+      <member refid="class_p_r_1_1_p_s_p_1aabf80c9f67ccfd25beb1abe1d6354825" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>~PSP</name></member>
+      <member refid="class_p_r_1_1_p_s_pout_1a7b18e8184d94cf8ae31a5210ba1a1d78" prot="public" virt="virtual"><scope>PR::PSPout</scope><name>~PSPout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

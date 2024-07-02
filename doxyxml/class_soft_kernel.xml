@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_soft_kernel" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SoftKernel</compoundname>
+    <derivedcompoundref refid="class_plummer_soft" prot="public" virt="non-virtual">PlummerSoft</derivedcompoundref>
+    <derivedcompoundref refid="class_spline_soft" prot="public" virt="non-virtual">SplineSoft</derivedcompoundref>
+    <includes refid="_grav_kernel_8_h" local="no">GravKernel.H</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_soft_kernel_1af804c372222bc2622cc472c88ac59b61" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SoftKernel::tol</definition>
+        <argsstring></argsstring>
+        <name>tol</name>
+        <qualifiedname>SoftKernel::tol</qualifiedname>
+        <initializer>= 1.0e-8</initializer>
+        <briefdescription>
+<para>Separations smaller than this value are considered to be the same particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/GravKernel.H" line="11" column="16" bodyfile="/home/weinberg/Projects/EXP/src/GravKernel.H" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_soft_kernel_1afc1f982ae91e01ee09aff7d2d8e5a5c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>virtual std::pair&lt; double, double &gt; SoftKernel::operator()</definition>
+        <argsstring>(double r, double eps)=0</argsstring>
+        <name>operator()</name>
+        <qualifiedname>SoftKernel::operator()</qualifiedname>
+        <reimplementedby refid="class_plummer_soft_1a32d77200041892a69f1224c98b242be7">operator()</reimplementedby>
+        <reimplementedby refid="class_spline_soft_1a9689cbc5a2af8fecb3e847673bc3040a">operator()</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This operator returns the fractional mass and gravitational potential inside of radius<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>for softening</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/GravKernel.H" line="15" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Abstract class for smoothing kernel. Derive all new kernels from this class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PlummerSoft</label>
+        <link refid="class_plummer_soft"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SoftKernel</label>
+        <link refid="class_soft_kernel"/>
+      </node>
+      <node id="3">
+        <label>SplineSoft</label>
+        <link refid="class_spline_soft"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/src/GravKernel.H" line="7" column="1" bodyfile="/home/weinberg/Projects/EXP/src/GravKernel.H" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_soft_kernel_1afc1f982ae91e01ee09aff7d2d8e5a5c1" prot="public" virt="pure-virtual"><scope>SoftKernel</scope><name>operator()</name></member>
+      <member refid="class_soft_kernel_1af804c372222bc2622cc472c88ac59b61" prot="public" virt="non-virtual"><scope>SoftKernel</scope><name>tol</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

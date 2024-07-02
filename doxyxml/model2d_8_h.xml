@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="model2d_8_h" kind="file" language="C++">
+    <compoundname>model2d.H</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Models2d</name>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4baaac18216416353f222c8e9952fa354db" prot="public">
+          <name>mestel</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba76d6b02dfc2c1793366935cee73c587d" prot="public">
+          <name>toomre</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba03761004bc1d07c87a487488f682b672" prot="public">
+          <name>expon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba7bd1f052ce292c188f34a60dd7a1a8ec" prot="public">
+          <name>kalnajs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4bade106ff7a0c91f9ee415a160c52fabb0" prot="public">
+          <name>hunter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4baa63611931b616751e35d4ec69fac8c4e" prot="public">
+          <name>hunterx</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/model2d.H" line="4" column="1" bodyfile="/home/weinberg/Projects/EXP/include/model2d.H" bodystart="4" bodyend="4"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="model2d_8_h_1a170ae1dc16d0f06d1593aa7e252e8837" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string Model2dNames[]</definition>
+        <argsstring>[]</argsstring>
+        <name>Model2dNames</name>
+        <initializer>= {&quot;Mestel&quot;, &quot;Toomre&quot;, &quot;Exponential&quot;, &quot;Kalnajs&quot;,
+				&quot;Hunter&quot;, &quot;HunterX&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/model2d.H" line="5" column="15" bodyfile="/home/weinberg/Projects/EXP/include/model2d.H" bodystart="5" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_Models2d_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Models2d_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba03761004bc1d07c87a487488f682b672" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4b" kindref="member">Models2d</ref><sp/>{<ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4baaac18216416353f222c8e9952fa354db" kindref="member">mestel</ref>,<sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba76d6b02dfc2c1793366935cee73c587d" kindref="member">toomre</ref>,<sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba03761004bc1d07c87a487488f682b672" kindref="member">expon</ref>,<sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4ba7bd1f052ce292c188f34a60dd7a1a8ec" kindref="member">kalnajs</ref>,<sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4bade106ff7a0c91f9ee415a160c52fabb0" kindref="member">hunter</ref>,<sp/><ref refid="model2d_8_h_1a8356a03e858589d994cc5e9d2a415b4baa63611931b616751e35d4ec69fac8c4e" kindref="member">hunterx</ref>};</highlight></codeline>
+<codeline lineno="5" refid="model2d_8_h_1a170ae1dc16d0f06d1593aa7e252e8837" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="model2d_8_h_1a170ae1dc16d0f06d1593aa7e252e8837" kindref="member">Model2dNames</ref>[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;Mestel&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Toomre&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Exponential&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kalnajs&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Hunter&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HunterX&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/model2d.H"/>
+  </compounddef>
+</doxygen>

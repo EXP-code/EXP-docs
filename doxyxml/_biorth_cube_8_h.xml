@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_biorth_cube_8_h" kind="file" language="C++">
+    <compoundname>BiorthCube.H</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes local="no">mpi.h</includes>
+    <includes refid="localmpi_8_h" local="no">localmpi.H</includes>
+    <includes local="no">config_exp.h</includes>
+    <includes refid="massmodel_8_h" local="no">massmodel.H</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes local="no">highfive/H5File.hpp</includes>
+    <includes local="no">highfive/H5DataSet.hpp</includes>
+    <includes local="no">highfive/H5DataSpace.hpp</includes>
+    <includes local="no">highfive/H5Attribute.hpp</includes>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/BiorthCube.H</label>
+        <link refid="_biorth_cube_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DiskWithHalo.H</label>
+        <link refid="_disk_with_halo_8_h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>EmpCyl2d.H</label>
+        <link refid="_emp_cyl2d_8_h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>MonotCubicInterpolator.H</label>
+        <link refid="_monot_cubic_interpolator_8_h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>QPDistF.H</label>
+        <link refid="_q_p_dist_f_8_h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gaussQ.H</label>
+        <link refid="gauss_q_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>interp.H</label>
+        <link refid="interp_8_h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>localmpi.H</label>
+        <link refid="localmpi_8_h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>massmodel.H</label>
+        <link refid="massmodel_8_h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>orbit.H</label>
+        <link refid="orbit_8_h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="35">
+        <label>Eigen/Eigenvalues</label>
+      </node>
+      <node id="32">
+        <label>algorithm</label>
+      </node>
+      <node id="33">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>config_exp.h</label>
+      </node>
+      <node id="23">
+        <label>cstdlib</label>
+      </node>
+      <node id="16">
+        <label>deque</label>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="20">
+        <label>functional</label>
+      </node>
+      <node id="30">
+        <label>highfive/H5Attribute.hpp</label>
+      </node>
+      <node id="28">
+        <label>highfive/H5DataSet.hpp</label>
+      </node>
+      <node id="29">
+        <label>highfive/H5DataSpace.hpp</label>
+      </node>
+      <node id="27">
+        <label>highfive/H5File.hpp</label>
+      </node>
+      <node id="37">
+        <label>highfive/eigen.hpp</label>
+      </node>
+      <node id="36">
+        <label>highfive/highfive.hpp</label>
+      </node>
+      <node id="9">
+        <label>iomanip</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="13">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>mpi.h</label>
+      </node>
+      <node id="14">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="34">
+        <label>tuple</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="26">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_biorth_cube" prot="public">BiorthCube</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_BiorthCube_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BiorthCube_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="localmpi_8_h" kindref="compound">localmpi.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EXP<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="massmodel_8_h" kindref="compound">massmodel.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;yaml-cpp/yaml.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaUtil.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaMappingConstants.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>reading<sp/>and<sp/>writing<sp/>cache<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/H5File.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/H5DataSet.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/H5DataSpace.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;highfive/H5Attribute.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaParticle.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudaMappingConstants.cuH&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_emp_cyl2d_8_h" kindref="compound">EmpCyl2d.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_biorth_cube" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_biorth_cube" kindref="compound">BiorthCube</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_biorth_cube_1acd4e1cabf750b18970d5c50aa5defcaf" refkind="member"><highlight class="normal"><sp/><sp/>YAML::Node<sp/><ref refid="class_biorth_cube_1acd4e1cabf750b18970d5c50aa5defcaf" kindref="member">conf</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_biorth_cube_1a3658240f83a2aaf0226f4ec600e332f4" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_biorth_cube_1aad695296bfbfaccff6108fece786b756" kindref="member">geometry</ref>,<sp/><ref refid="class_biorth_cube_1a3658240f83a2aaf0226f4ec600e332f4" kindref="member">forceID</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_biorth_cube_1a0bea64d4b0761c2422973f3a96e73925" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3i<sp/><ref refid="class_biorth_cube_1af0c19291bcb3acb96b1599ce478b92f7" kindref="member">nmin</ref>,<sp/><ref refid="class_biorth_cube_1a0bea64d4b0761c2422973f3a96e73925" kindref="member">nmax</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="class_biorth_cube_1a07ff54b4f2e2c78544ba952ab1a6f0a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a07ff54b4f2e2c78544ba952ab1a6f0a1" kindref="member">knots</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_biorth_cube_1add0c259622a277a9647d37caf48d0886" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1add0c259622a277a9647d37caf48d0886" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_biorth_cube_1a3665301c5caa23d01b575bfd2bc2efd2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a3665301c5caa23d01b575bfd2bc2efd2" kindref="member">dfac</ref><sp/>=<sp/>2.0*M_PI;</highlight></codeline>
+<codeline lineno="55" refid="class_biorth_cube_1a040d3d6a5b1f935b72bb40ff3e56bf4e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_cube_1a040d3d6a5b1f935b72bb40ff3e56bf4e" kindref="member">kfac</ref>{0.0,<sp/><ref refid="class_biorth_cube_1a3665301c5caa23d01b575bfd2bc2efd2" kindref="member">dfac</ref>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_biorth_cube_1a068cf3cab9677dae5e9017496e008c18" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_biorth_cube_1a068cf3cab9677dae5e9017496e008c18" kindref="member">coefType</ref><sp/>=<sp/>Eigen::Tensor&lt;std::complex&lt;double&gt;,<sp/>3&gt;;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_biorth_cube_1aa591d0c9bcdb8a7327bbad9b94809945" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1aa591d0c9bcdb8a7327bbad9b94809945" kindref="member">mpi</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_biorth_cube_1a6c46abed8126eb133f6af269f0532a3b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_biorth_cube_1a6c46abed8126eb133f6af269f0532a3b" kindref="member">BiorthCube</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_biorth_cube_1acd4e1cabf750b18970d5c50aa5defcaf" kindref="member">conf</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_biorth_cube_1a5626e1a8872fdae3515207c17949ab6e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a5626e1a8872fdae3515207c17949ab6e" kindref="member">~BiorthCube</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_biorth_cube_1a485ee9a9592263401e41973a390fa0b4" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_cube_1a485ee9a9592263401e41973a390fa0b4" kindref="member">pot</ref>(Eigen::Vector3d<sp/>x,<sp/>Eigen::Vector3i<sp/>n);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_biorth_cube_1a2266a8e7e3af1f1b573079d5d3bb67f0" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_cube_1a2266a8e7e3af1f1b573079d5d3bb67f0" kindref="member">dens</ref>(Eigen::Vector3d<sp/>x,<sp/>Eigen::Vector3i<sp/>n);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_biorth_cube_1aba90ca6c14cfe914f7f928fe26942924" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3cd<sp/><ref refid="class_biorth_cube_1aba90ca6c14cfe914f7f928fe26942924" kindref="member">force</ref>(Eigen::Vector3d<sp/>x,<sp/>Eigen::Vector3i<sp/>n);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_biorth_cube_1a9112d07edabc3d5fe2fd9aed9907bf59" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_cube_1a9112d07edabc3d5fe2fd9aed9907bf59" kindref="member">get_pot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a068cf3cab9677dae5e9017496e008c18" kindref="member">coefType</ref>&amp;<sp/>c,<sp/>Eigen::Vector3d<sp/>x);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_biorth_cube_1a45152e8a43f0a3832c57cbae1b0d6803" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_biorth_cube_1a45152e8a43f0a3832c57cbae1b0d6803" kindref="member">get_dens</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a068cf3cab9677dae5e9017496e008c18" kindref="member">coefType</ref>&amp;<sp/>c,<sp/>Eigen::Vector3d<sp/>x);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_biorth_cube_1a164c49351a8f572c581aac3a8d33c212" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::Vector3cd<sp/><ref refid="class_biorth_cube_1a164c49351a8f572c581aac3a8d33c212" kindref="member">get_force</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_biorth_cube_1a068cf3cab9677dae5e9017496e008c18" kindref="member">coefType</ref>&amp;<sp/>c,<sp/>Eigen::Vector3d<sp/>x);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_biorth_cube_1a83f2f3c93e5d6fa2b75edca1b1e43739" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXcd<sp/><ref refid="class_biorth_cube_1a83f2f3c93e5d6fa2b75edca1b1e43739" kindref="member">orthoCheck</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/BiorthCube.H"/>
+  </compounddef>
+</doxygen>

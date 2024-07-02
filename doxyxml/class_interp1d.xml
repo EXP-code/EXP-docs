@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_interp1d" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Interp1d</compoundname>
+    <derivedcompoundref refid="class_cheby1d" prot="public" virt="non-virtual">Cheby1d</derivedcompoundref>
+    <derivedcompoundref refid="class_linear1d" prot="public" virt="non-virtual">Linear1d</derivedcompoundref>
+    <derivedcompoundref refid="class_spline1d" prot="public" virt="non-virtual">Spline1d</derivedcompoundref>
+    <includes refid="interp_8_h" local="no">interp.H</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_interp1d_1a47936fb17ab09ba1a5adae98615703f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double Interp1d::deriv</definition>
+        <argsstring>(const double &amp;x)=0</argsstring>
+        <name>deriv</name>
+        <qualifiedname>Interp1d::deriv</qualifiedname>
+        <reimplementedby refid="class_spline1d_1a27aa98f94472783eef5a68a005a79b16">deriv</reimplementedby>
+        <reimplementedby refid="class_cheby1d_1a956231cd4074dca9c157764135ba036c">deriv</reimplementedby>
+        <reimplementedby refid="class_linear1d_1a7cca991f83a09a3183d721703a32ca7f">deriv</reimplementedby>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate first derivative. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interp1d_1acb91fcf561ac596869ce571c30cf5583" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double Interp1d::eval</definition>
+        <argsstring>(const double &amp;x)=0</argsstring>
+        <name>eval</name>
+        <qualifiedname>Interp1d::eval</qualifiedname>
+        <reimplementedby refid="class_spline1d_1acae16b27f9faccaa82f6b17701980e24">eval</reimplementedby>
+        <reimplementedby refid="class_cheby1d_1a692c77d49493eecf92a184452f032c40">eval</reimplementedby>
+        <reimplementedby refid="class_linear1d_1a59080ed1d410b65d44fdba854be86daf">eval</reimplementedby>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the interpolant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="47" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interp1d_1a7acc2957f6163115ad925d21d9ab2783" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double Interp1d::xhi</definition>
+        <argsstring>()=0</argsstring>
+        <name>xhi</name>
+        <qualifiedname>Interp1d::xhi</qualifiedname>
+        <reimplementedby refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72">xhi</reimplementedby>
+        <reimplementedby refid="class_cheby1d_1a20fc7c34e98a3b7fcf5f04e1683c2829">xhi</reimplementedby>
+        <reimplementedby refid="class_linear1d_1a784960cd9590a7a394a69fd5b9bd3ad3">xhi</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="55" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interp1d_1ad7d8aaee41f1df6e533bfbb3089e8b67" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double Interp1d::xlo</definition>
+        <argsstring>()=0</argsstring>
+        <name>xlo</name>
+        <qualifiedname>Interp1d::xlo</qualifiedname>
+        <reimplementedby refid="class_spline1d_1a604862983923c498185d9177d2b40d99">xlo</reimplementedby>
+        <reimplementedby refid="class_cheby1d_1a530d67f97de247ae4d1580a816c738d1">xlo</reimplementedby>
+        <reimplementedby refid="class_linear1d_1a871aea7a921331a671183d361cd3b2e0">xlo</reimplementedby>
+        <briefdescription>
+<para>Data limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="54" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interp1d_1a21ea97560f42d16715c1d9c6efb2d092" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>virtual Interp1d::~Interp1d</definition>
+        <argsstring>()=0</argsstring>
+        <name>~Interp1d</name>
+        <qualifiedname>Interp1d::~Interp1d</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="44" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Cheby1d</label>
+        <link refid="class_cheby1d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Interp1d</label>
+        <link refid="class_interp1d"/>
+      </node>
+      <node id="3">
+        <label>Linear1d</label>
+        <link refid="class_linear1d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Spline1d</label>
+        <link refid="class_spline1d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/include/interp.H" line="39" column="1" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="40" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_interp1d_1a47936fb17ab09ba1a5adae98615703f7" prot="public" virt="pure-virtual"><scope>Interp1d</scope><name>deriv</name></member>
+      <member refid="class_interp1d_1acb91fcf561ac596869ce571c30cf5583" prot="public" virt="pure-virtual"><scope>Interp1d</scope><name>eval</name></member>
+      <member refid="class_interp1d_1a7acc2957f6163115ad925d21d9ab2783" prot="public" virt="pure-virtual"><scope>Interp1d</scope><name>xhi</name></member>
+      <member refid="class_interp1d_1ad7d8aaee41f1df6e533bfbb3089e8b67" prot="public" virt="pure-virtual"><scope>Interp1d</scope><name>xlo</name></member>
+      <member refid="class_interp1d_1a21ea97560f42d16715c1d9c6efb2d092" prot="public" virt="pure-virtual"><scope>Interp1d</scope><name>~Interp1d</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

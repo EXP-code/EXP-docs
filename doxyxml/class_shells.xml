@@ -1,0 +1,866 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_shells" kind="class" language="C++" prot="public">
+    <compoundname>Shells</compoundname>
+    <basecompoundref refid="class_pot_accel" prot="public" virt="non-virtual">PotAccel</basecompoundref>
+    <includes refid="_shells_8_h" local="no">Shells.H</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_shells_1a8b4503bed68052e53787d27b6e51058d" prot="private" static="no">
+        <type>pair&lt; double, double &gt;</type>
+        <definition>typedef pair&lt;double, double&gt; Shells::Dpair</definition>
+        <argsstring></argsstring>
+        <name>Dpair</name>
+        <qualifiedname>Shells::Dpair</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="36" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shells_1aa581742e519a0c8b90f347bca58cdb02" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Shells::firstime_accel</definition>
+        <argsstring></argsstring>
+        <name>firstime_accel</name>
+        <qualifiedname>Shells::firstime_accel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="32" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1ab2e9773b343f154f42d666f2279fb7f0" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_shells_1a8b4503bed68052e53787d27b6e51058d" kindref="member">Dpair</ref> &gt;</type>
+        <definition>vector&lt;Dpair&gt; Shells::grid</definition>
+        <argsstring></argsstring>
+        <name>grid</name>
+        <qualifiedname>Shells::grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="37" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a57377a173c9597159506eb3dd45347ac" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;int&gt; &gt; Shells::igrid</definition>
+        <argsstring></argsstring>
+        <name>igrid</name>
+        <qualifiedname>Shells::igrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="40" column="23" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a8c8606b1ee592086f540c982ffd68f0c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; Shells::igrid1</definition>
+        <argsstring></argsstring>
+        <name>igrid1</name>
+        <qualifiedname>Shells::igrid1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="41" column="34" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a5eca1cb52b886c774015c7f58cf7b7bc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;int&gt; &gt; Shells::igridT</definition>
+        <argsstring></argsstring>
+        <name>igridT</name>
+        <qualifiedname>Shells::igridT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="40" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a7d6e43f4a76ac189f545a90f08e7d6cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::map&lt; int, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::map&lt;int, double&gt; &gt; Shells::mgrid</definition>
+        <argsstring></argsstring>
+        <name>mgrid</name>
+        <qualifiedname>Shells::mgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="44" column="22" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a013a6d366efc9e3080e504e8196ec42a" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Shells::mgrid0</definition>
+        <argsstring></argsstring>
+        <name>mgrid0</name>
+        <qualifiedname>Shells::mgrid0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="43" column="38" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a40a49cbeca84d532bb46c8acd3f6d04d" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Shells::mgrid1</definition>
+        <argsstring></argsstring>
+        <name>mgrid1</name>
+        <qualifiedname>Shells::mgrid1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="42" column="38" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a274a488a7c776f6b0515a72f49395b75" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;double&gt; &gt; Shells::mgridT</definition>
+        <argsstring></argsstring>
+        <name>mgridT</name>
+        <qualifiedname>Shells::mgridT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="39" column="23" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a21f93b123539c57be3e9a511753cad1f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Shells::nsample</definition>
+        <argsstring></argsstring>
+        <name>nsample</name>
+        <qualifiedname>Shells::nsample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="33" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a4070b838b2a10d3072717695bb8f0bfc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Shells::nselect</definition>
+        <argsstring></argsstring>
+        <name>nselect</name>
+        <qualifiedname>Shells::nselect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="33" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a99fa52274eed38cbd0c89e14ec10ac69" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Shells::pgrid0</definition>
+        <argsstring></argsstring>
+        <name>pgrid0</name>
+        <qualifiedname>Shells::pgrid0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="43" column="45" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a0ad7151090b52e46f013d05957e0c0ac" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::rcvcts</definition>
+        <argsstring></argsstring>
+        <name>rcvcts</name>
+        <qualifiedname>Shells::rcvcts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="45" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a3452c5ca75f922fab9bd8414e0fc8945" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::rdispl</definition>
+        <argsstring></argsstring>
+        <name>rdispl</name>
+        <qualifiedname>Shells::rdispl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1ab9ac8b7fc807d11c421079ab07d32c96" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::map&lt; int, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::map&lt;int, double&gt; &gt; Shells::rgrid</definition>
+        <argsstring></argsstring>
+        <name>rgrid</name>
+        <qualifiedname>Shells::rgrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="44" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a8e08acad52f644cd346be175730739d1" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Shells::rgrid0</definition>
+        <argsstring></argsstring>
+        <name>rgrid0</name>
+        <qualifiedname>Shells::rgrid0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="43" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1aa3da25717b5b933148c8a0fbfbbcd1b3" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Shells::rgrid1</definition>
+        <argsstring></argsstring>
+        <name>rgrid1</name>
+        <qualifiedname>Shells::rgrid1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="42" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a765595d25c01156e9c9bdf7158c4be6a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;double&gt; &gt; Shells::rgridT</definition>
+        <argsstring></argsstring>
+        <name>rgridT</name>
+        <qualifiedname>Shells::rgridT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="39" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a7564e309c3f1d1bc887d0c6d6a662c8d" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::rnumbr</definition>
+        <argsstring></argsstring>
+        <name>rnumbr</name>
+        <qualifiedname>Shells::rnumbr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="17" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1aaf793bf9b93f95c4440aaa9ef780b0c0" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::sdispl</definition>
+        <argsstring></argsstring>
+        <name>sdispl</name>
+        <qualifiedname>Shells::sdispl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1abd19981499c716344b88df13d1ab79ff" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Shells::self_consistent</definition>
+        <argsstring></argsstring>
+        <name>self_consistent</name>
+        <qualifiedname>Shells::self_consistent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="32" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1af3dbc08899553157bd9273ebae4e1075" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::sndcts</definition>
+        <argsstring></argsstring>
+        <name>sndcts</name>
+        <qualifiedname>Shells::sndcts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="38" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a0b2a4a81096282136a3da32cdc7b539c" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::snumbr</definition>
+        <argsstring></argsstring>
+        <name>snumbr</name>
+        <qualifiedname>Shells::snumbr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="47" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a63778486c95858397c9c6b56316ed386" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; Shells::update_fr</definition>
+        <argsstring></argsstring>
+        <name>update_fr</name>
+        <qualifiedname>Shells::update_fr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="45" column="21" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1a385221ff098048781902b7becc4d2dd2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; Shells::update_ii</definition>
+        <argsstring></argsstring>
+        <name>update_ii</name>
+        <qualifiedname>Shells::update_ii</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="45" column="41" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1aa052c696e4a8d2d14d0235bd80d685da" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; Shells::update_to</definition>
+        <argsstring></argsstring>
+        <name>update_to</name>
+        <qualifiedname>Shells::update_to</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="45" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1abd9fff8ce1b52df6635272f1b1d5dbb4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Shells::used1</definition>
+        <argsstring></argsstring>
+        <name>used1</name>
+        <qualifiedname>Shells::used1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="33" column="23" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shells_1af603375e538442fffdc09788d0dbf567" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Shells::usedT</definition>
+        <argsstring></argsstring>
+        <name>usedT</name>
+        <qualifiedname>Shells::usedT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="34" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_shells_1a82ef6aca2b7cdef33f46c02cf396e5aa" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; Shells::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>Shells::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="58" column="25" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shells_1a50553b44e56706a523e145a46acd3697" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shells::determine_acceleration_and_potential</definition>
+        <argsstring>(void)</argsstring>
+        <name>determine_acceleration_and_potential</name>
+        <qualifiedname>Shells::determine_acceleration_and_potential</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="52" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a75fe62e9cd2ee5ebc339d39ef453c6df" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * Shells::determine_acceleration_and_potential_thread</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>determine_acceleration_and_potential_thread</name>
+        <qualifiedname>Shells::determine_acceleration_and_potential_thread</qualifiedname>
+        <reimplements refid="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3">determine_acceleration_and_potential_thread</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the force computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="55" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1af5724672fe479a862c5e1ef3aad281c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::determine_coefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>determine_coefficients</name>
+        <qualifiedname>Shells::determine_coefficients</qualifiedname>
+        <reimplements refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8">determine_coefficients</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by get_acceleration_and_potential to request that the expansion be performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a27b560308b474556d413e4bdcb559708" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * Shells::determine_coefficients_thread</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>determine_coefficients_thread</name>
+        <qualifiedname>Shells::determine_coefficients_thread</qualifiedname>
+        <reimplements refid="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49">determine_coefficients_thread</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the expansion computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="54" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a87e58339a8d7e7145e97aaeac4ac8f30" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>Shells::initialize</qualifiedname>
+        <reimplements refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d">initialize</reimplements>
+        <briefdescription>
+<para>Used by derived class to initialize any storage and parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="49" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shells_1ac28ac4176d1d367723599c113d19f8f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::get_acceleration_and_potential</definition>
+        <argsstring>(Component *)</argsstring>
+        <name>get_acceleration_and_potential</name>
+        <qualifiedname>Shells::get_acceleration_and_potential</qualifiedname>
+        <reimplements refid="class_pot_accel_1ab78f20762031db204f636fc8e74ea986">get_acceleration_and_potential</reimplements>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+        </param>
+        <briefdescription>
+<para>The main force call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="71" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1acc353d16b061c858f6181eaa9df11246" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::multistep_update</definition>
+        <argsstring>(int cur, int next, Component *c, int i, int id)</argsstring>
+        <name>multistep_update</name>
+        <qualifiedname>Shells::multistep_update</qualifiedname>
+        <reimplements refid="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a">multistep_update</reimplements>
+        <param>
+          <type>int</type>
+          <declname>cur</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of level shifts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="77" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a1ed597326ac936b3a5fe15a1f5b9f506" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::multistep_update_begin</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_update_begin</name>
+        <qualifiedname>Shells::multistep_update_begin</qualifiedname>
+        <reimplements refid="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381">multistep_update_begin</reimplements>
+        <briefdescription>
+<para>Execute to begin level shifts for particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="74" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a302dcfe0ce8eed66d351079619b5879a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Shells::multistep_update_finish</definition>
+        <argsstring>()</argsstring>
+        <name>multistep_update_finish</name>
+        <qualifiedname>Shells::multistep_update_finish</qualifiedname>
+        <reimplements refid="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e">multistep_update_finish</reimplements>
+        <briefdescription>
+<para>Execute to finish level shifts for particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="80" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1a204db8b89585cffd5ae09b262fd2f7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Shells::Shells</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;conf)</argsstring>
+        <name>Shells</name>
+        <qualifiedname>Shells::Shells</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the instantiating caller (a <ref refid="class_component" kindref="compound">Component</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>passes in any explicit parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="65" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shells_1afed19afb2213fcb211b81779144213b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Shells::~Shells</definition>
+        <argsstring>()</argsstring>
+        <name>~Shells</name>
+        <qualifiedname>Shells::~Shells</qualifiedname>
+        <briefdescription>
+<para>The constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="68" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Computes the potential, acceleration and density using spherical, Lagrangian shells</para>
+<para>Settable parameters: <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nsample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of particles per sample for the shell boundary computation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nselect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of particle intervals in computing the cumulative distribution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+      <node id="1">
+        <label>Shells</label>
+        <link refid="class_shells"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="5">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Shells</label>
+        <link refid="class_shells"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="3">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/Shells.H" line="28" column="1" bodyfile="/home/weinberg/Projects/EXP/src/Shells.H" bodystart="29" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>Shells</scope><name>atol</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>Shells</scope><name>cC</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>Shells</scope><name>cc_lock</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>Shells</scope><name>ClearExternal</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>Shells</scope><name>coef_dump</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>Shells</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>Shells</scope><name>compute</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>Shells</scope><name>conf</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>Shells</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>Shells</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>Shells</scope><name>cudaAware</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>Shells</scope><name>current_keys</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>Shells</scope><name>cylinder</name></member>
+      <member refid="class_shells_1a50553b44e56706a523e145a46acd3697" prot="private" virt="non-virtual"><scope>Shells</scope><name>determine_acceleration_and_potential</name></member>
+      <member refid="class_shells_1a75fe62e9cd2ee5ebc339d39ef453c6df" prot="private" virt="virtual"><scope>Shells</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_shells_1af5724672fe479a862c5e1ef3aad281c5" prot="private" virt="virtual"><scope>Shells</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" virt="virtual" ambiguityscope="PotAccel::"><scope>Shells</scope><name>determine_coefficients</name></member>
+      <member refid="class_shells_1a27b560308b474556d413e4bdcb559708" prot="private" virt="virtual"><scope>Shells</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>Shells</scope><name>dof</name></member>
+      <member refid="class_shells_1a8b4503bed68052e53787d27b6e51058d" prot="private" virt="non-virtual"><scope>Shells</scope><name>Dpair</name></member>
+      <member refid="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf" prot="public" virt="virtual"><scope>Shells</scope><name>dump_coefs</name></member>
+      <member refid="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c" prot="public" virt="virtual"><scope>Shells</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>Shells</scope><name>exp_thread_fork</name></member>
+      <member refid="class_shells_1aa581742e519a0c8b90f347bca58cdb02" prot="private" virt="non-virtual"><scope>Shells</scope><name>firstime_accel</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>Shells</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>Shells</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>Shells</scope><name>geoname</name></member>
+      <member refid="class_shells_1ac28ac4176d1d367723599c113d19f8f2" prot="public" virt="virtual"><scope>Shells</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>Shells</scope><name>getScale</name></member>
+      <member refid="class_shells_1ab2e9773b343f154f42d666f2279fb7f0" prot="private" virt="non-virtual"><scope>Shells</scope><name>grid</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>Shells</scope><name>HaveCoefDump</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>Shells</scope><name>id</name></member>
+      <member refid="class_shells_1a57377a173c9597159506eb3dd45347ac" prot="private" virt="non-virtual"><scope>Shells</scope><name>igrid</name></member>
+      <member refid="class_shells_1a8c8606b1ee592086f540c982ffd68f0c" prot="private" virt="non-virtual"><scope>Shells</scope><name>igrid1</name></member>
+      <member refid="class_shells_1a5eca1cb52b886c774015c7f58cf7b7bc" prot="private" virt="non-virtual"><scope>Shells</scope><name>igridT</name></member>
+      <member refid="class_shells_1a87e58339a8d7e7145e97aaeac4ac8f30" prot="private" virt="virtual"><scope>Shells</scope><name>initialize</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>Shells</scope><name>kill_mutex</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>Shells</scope><name>make_mutex</name></member>
+      <member refid="class_shells_1a7d6e43f4a76ac189f545a90f08e7d6cd" prot="private" virt="non-virtual"><scope>Shells</scope><name>mgrid</name></member>
+      <member refid="class_shells_1a013a6d366efc9e3080e504e8196ec42a" prot="private" virt="non-virtual"><scope>Shells</scope><name>mgrid0</name></member>
+      <member refid="class_shells_1a40a49cbeca84d532bb46c8acd3f6d04d" prot="private" virt="non-virtual"><scope>Shells</scope><name>mgrid1</name></member>
+      <member refid="class_shells_1a274a488a7c776f6b0515a72f49395b75" prot="private" virt="non-virtual"><scope>Shells</scope><name>mgridT</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>Shells</scope><name>mlevel</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>Shells</scope><name>multistep_debug</name></member>
+      <member refid="class_pot_accel_1aaada1d8e8970e63332269b0d00aed97f" prot="public" virt="virtual"><scope>Shells</scope><name>multistep_reset</name></member>
+      <member refid="class_shells_1acc353d16b061c858f6181eaa9df11246" prot="public" virt="virtual"><scope>Shells</scope><name>multistep_update</name></member>
+      <member refid="class_shells_1a1ed597326ac936b3a5fe15a1f5b9f506" prot="public" virt="virtual"><scope>Shells</scope><name>multistep_update_begin</name></member>
+      <member refid="class_shells_1a302dcfe0ce8eed66d351079619b5879a" prot="public" virt="virtual"><scope>Shells</scope><name>multistep_update_finish</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>Shells</scope><name>nbodies</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>Shells</scope><name>NoCoefs</name></member>
+      <member refid="class_shells_1a21f93b123539c57be3e9a511753cad1f" prot="private" virt="non-virtual"><scope>Shells</scope><name>nsample</name></member>
+      <member refid="class_shells_1a4070b838b2a10d3072717695bb8f0bfc" prot="private" virt="non-virtual"><scope>Shells</scope><name>nselect</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>Shells</scope><name>other</name></member>
+      <member refid="class_shells_1a99fa52274eed38cbd0c89e14ec10ac69" prot="private" virt="non-virtual"><scope>Shells</scope><name>pgrid0</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>Shells</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>Shells</scope><name>play_cnew</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>Shells</scope><name>PotAccel</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>Shells</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>Shells</scope><name>print_timings</name></member>
+      <member refid="class_shells_1a0ad7151090b52e46f013d05957e0c0ac" prot="private" virt="non-virtual"><scope>Shells</scope><name>rcvcts</name></member>
+      <member refid="class_shells_1a3452c5ca75f922fab9bd8414e0fc8945" prot="private" virt="non-virtual"><scope>Shells</scope><name>rdispl</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>Shells</scope><name>RegisterComponent</name></member>
+      <member refid="class_shells_1ab9ac8b7fc807d11c421079ab07d32c96" prot="private" virt="non-virtual"><scope>Shells</scope><name>rgrid</name></member>
+      <member refid="class_shells_1a8e08acad52f644cd346be175730739d1" prot="private" virt="non-virtual"><scope>Shells</scope><name>rgrid0</name></member>
+      <member refid="class_shells_1aa3da25717b5b933148c8a0fbfbbcd1b3" prot="private" virt="non-virtual"><scope>Shells</scope><name>rgrid1</name></member>
+      <member refid="class_shells_1a765595d25c01156e9c9bdf7158c4be6a" prot="private" virt="non-virtual"><scope>Shells</scope><name>rgridT</name></member>
+      <member refid="class_shells_1a7564e309c3f1d1bc887d0c6d6a662c8d" prot="private" virt="non-virtual"><scope>Shells</scope><name>rnumbr</name></member>
+      <member refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" virt="non-virtual"><scope>Shells</scope><name>scale</name></member>
+      <member refid="class_shells_1aaf793bf9b93f95c4440aaa9ef780b0c0" prot="private" virt="non-virtual"><scope>Shells</scope><name>sdispl</name></member>
+      <member refid="class_shells_1abd19981499c716344b88df13d1ab79ff" prot="private" virt="non-virtual"><scope>Shells</scope><name>self_consistent</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>Shells</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>Shells</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>Shells</scope><name>setScale</name></member>
+      <member refid="class_shells_1a204db8b89585cffd5ae09b262fd2f7d7" prot="public" virt="non-virtual"><scope>Shells</scope><name>Shells</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>Shells</scope><name>slab</name></member>
+      <member refid="class_shells_1af3dbc08899553157bd9273ebae4e1075" prot="private" virt="non-virtual"><scope>Shells</scope><name>sndcts</name></member>
+      <member refid="class_shells_1a0b2a4a81096282136a3da32cdc7b539c" prot="private" virt="non-virtual"><scope>Shells</scope><name>snumbr</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>Shells</scope><name>sphere</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>Shells</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>Shells</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>Shells</scope><name>td</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>Shells</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>Shells</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>Shells</scope><name>timer_list</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>Shells</scope><name>TList</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>Shells</scope><name>unmatched</name></member>
+      <member refid="class_shells_1a63778486c95858397c9c6b56316ed386" prot="private" virt="non-virtual"><scope>Shells</scope><name>update_fr</name></member>
+      <member refid="class_shells_1a385221ff098048781902b7becc4d2dd2" prot="private" virt="non-virtual"><scope>Shells</scope><name>update_ii</name></member>
+      <member refid="class_shells_1aa052c696e4a8d2d14d0235bd80d685da" prot="private" virt="non-virtual"><scope>Shells</scope><name>update_to</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>Shells</scope><name>use</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>Shells</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>Shells</scope><name>Used</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>Shells</scope><name>used</name></member>
+      <member refid="class_shells_1abd9fff8ce1b52df6635272f1b1d5dbb4" prot="private" virt="non-virtual"><scope>Shells</scope><name>used1</name></member>
+      <member refid="class_shells_1af603375e538442fffdc09788d0dbf567" prot="private" virt="non-virtual"><scope>Shells</scope><name>usedT</name></member>
+      <member refid="class_shells_1a82ef6aca2b7cdef33f46c02cf396e5aa" prot="private" virt="non-virtual"><scope>Shells</scope><name>valid_keys</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>Shells</scope><name>~PotAccel</name></member>
+      <member refid="class_shells_1afed19afb2213fcb211b81779144213b2" prot="public" virt="virtual"><scope>Shells</scope><name>~Shells</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

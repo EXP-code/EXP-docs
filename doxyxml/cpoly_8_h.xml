@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="cpoly_8_h" kind="file" language="C++">
+    <compoundname>cpoly.H</compoundname>
+    <includes refid="poly_8_h" local="yes">poly.H</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/cpoly.H</label>
+        <link refid="cpoly_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>poly.H</label>
+        <link refid="poly_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_poly" prot="public">CPoly</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="cpoly_8_h_1a59ecd58623c31c641057cb84cd3c0139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bomb_CPoly</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>bomb_CPoly</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="68" column="6" declfile="/home/weinberg/Projects/EXP/include/cpoly.H" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="cpoly_8_h_1a2477aab5627be7eaef9747ae683d4af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bomb_CPoly_operation</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>bomb_CPoly_operation</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/cpoly.H" line="67" column="6" declfile="/home/weinberg/Projects/EXP/include/cpoly.H" declline="67" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_cpoly_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cpoly_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="poly_8_h" kindref="compound">poly.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_c_poly" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Eigen::VectorXcd</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" kindref="member">order</ref>;</highlight></codeline>
+<codeline lineno="12" refid="class_c_poly_1a60135c14cac772b71b1c4d37e50a2412" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1a60135c14cac772b71b1c4d37e50a2412" kindref="member">reduce_order</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="class_c_poly_1a9886569156df79ca44fbe6b1fb7cec0a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1a9886569156df79ca44fbe6b1fb7cec0a" kindref="member">CPoly</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19" refid="class_c_poly_1a36107e6801caadd73d9a688dea55faf1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1a36107e6801caadd73d9a688dea55faf1" kindref="member">CPoly</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20" refid="class_c_poly_1a63566119ef1b5867909ccaf2354584d2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1a63566119ef1b5867909ccaf2354584d2" kindref="member">CPoly</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="21" refid="class_c_poly_1ab62837853f1a1cba09c4b9838d2b41e7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1ab62837853f1a1cba09c4b9838d2b41e7" kindref="member">CPoly</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXcd<sp/>&amp;);</highlight></codeline>
+<codeline lineno="22" refid="class_c_poly_1a072bfe6b04887d8deb20e24af6656a74" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1a072bfe6b04887d8deb20e24af6656a74" kindref="member">CPoly</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="23" refid="class_c_poly_1a6caca1b239a8568ce40712e96ce20d30" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly_1a6caca1b239a8568ce40712e96ce20d30" kindref="member">CPoly</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_poly" kindref="compound">Poly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>~CPoly(void);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>reduce<sp/>order<sp/>by<sp/>n<sp/>(BE<sp/>CAREFUL<sp/>with<sp/>this<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="class_c_poly_1a8dd20f6c37eb654f8633ea4ba3e24ccc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1a8dd20f6c37eb654f8633ea4ba3e24ccc" kindref="member">Pop</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{<ref refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" kindref="member">order</ref><sp/>-=<sp/>i;}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>to<sp/>privates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_c_poly_1a7a4451ba4caada9dd73cdcb541ebc0db" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;<ref refid="class_c_poly_1a7a4451ba4caada9dd73cdcb541ebc0db" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="36" refid="class_c_poly_1ac452104fdea710634e68f09e5d4e60d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1ac452104fdea710634e68f09e5d4e60d3" kindref="member">getorder</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1a969e3f70aad60653b9f4e610014fb978" kindref="member">order</ref>;}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unary<sp/>plus<sp/>and<sp/>minus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_c_poly_1af4549741abcfc4ebe0f0740694f1a909" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1af4549741abcfc4ebe0f0740694f1a909" kindref="member">operator+</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="41" refid="class_c_poly_1afd7ea1863ae07aaf76c39b86cb30aed5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1afd7ea1863ae07aaf76c39b86cb30aed5" kindref="member">operator-</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>addition<sp/>and<sp/>subtraction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="class_c_poly_1ae0060d8389401745d5447b32181d6db2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;<ref refid="class_c_poly_1ae0060d8389401745d5447b32181d6db2" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="46" refid="class_c_poly_1acbc6c01d4af95b1d8a63a60dd0a7738e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1acbc6c01d4af95b1d8a63a60dd0a7738e" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_c_poly_1a3c08062a3e3317e81f269bfc8f224ce9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;<ref refid="class_c_poly_1a3c08062a3e3317e81f269bfc8f224ce9" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="49" refid="class_c_poly_1a1d200439c93c6d65b62f7cc475b5569c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1a1d200439c93c6d65b62f7cc475b5569c" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_c_poly_1af5ce12201cb3816d72d6c0c993481afe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;<ref refid="class_c_poly_1af5ce12201cb3816d72d6c0c993481afe" kindref="member">operator&amp;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cauchy<sp/>product<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_poly_1af3cc5f442bae41cd78cacb888b534e09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1af3cc5f442bae41cd78cacb888b534e09" kindref="member">operator&amp;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_c_poly_1ad4f3d405618035449e32b077bf483b2c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;<ref refid="class_c_poly_1ad4f3d405618035449e32b077bf483b2c" kindref="member">operator%=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Synthetic<sp/>division<sp/>for<sp/>power<sp/>series<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_c_poly_1a47ff1b905e5b8133a1a1d07c8e055c50" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/><ref refid="class_c_poly_1a47ff1b905e5b8133a1a1d07c8e055c50" kindref="member">operator%</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_poly" kindref="compound">CPoly</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Evaluate<sp/>polynomial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_poly_1ac4b081a0d67388d5a595ea766aed62ea" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_c_poly_1ac4b081a0d67388d5a595ea766aed62ea" kindref="member">eval</ref>(std::complex&lt;double&gt;<sp/>z);</highlight></codeline>
+<codeline lineno="60" refid="class_c_poly_1a8bf7ec5ff2bfd2f9664849cae1c35ef6" refkind="member"><highlight class="normal"><sp/><sp/>std::complex&lt;double&gt;<sp/><ref refid="class_c_poly_1a8bf7ec5ff2bfd2f9664849cae1c35ef6" kindref="member">deriv</ref>(std::complex&lt;double&gt;<sp/>z);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>IO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_c_poly_1a87cfa383f120f5a4214e1fda5c2cb167" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_poly_1a87cfa383f120f5a4214e1fda5c2cb167" kindref="member">print</ref>(ostream<sp/>&amp;);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="cpoly_8_h_1a2477aab5627be7eaef9747ae683d4af0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cpoly_8_h_1a2477aab5627be7eaef9747ae683d4af0" kindref="member">bomb_CPoly_operation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="68" refid="cpoly_8_h_1a59ecd58623c31c641057cb84cd3c0139" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cpoly_8_h_1a59ecd58623c31c641057cb84cd3c0139" kindref="member">bomb_CPoly</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/cpoly.H"/>
+  </compounddef>
+</doxygen>

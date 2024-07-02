@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spline1d" kind="class" language="C++" prot="public">
+    <compoundname>Spline1d</compoundname>
+    <basecompoundref refid="class_interp1d" prot="public" virt="non-virtual">Interp1d</basecompoundref>
+    <includes refid="interp_8_h" local="no">interp.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spline1d_1a9893d02b2d855294177889021d619a88" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd Spline1d::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Spline1d::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="63" column="19" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" compoundref="interp_8_h" startline="97" endline="97">xhi</referencedby>
+        <referencedby refid="class_spline1d_1a604862983923c498185d9177d2b40d99" compoundref="interp_8_h" startline="96" endline="96">xlo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd Spline1d::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Spline1d::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="64" column="19" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spline1d_1a32a0f86bc7488946aba1db1c330d46ac" prot="private" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd Spline1d::y2</definition>
+        <argsstring></argsstring>
+        <name>y2</name>
+        <qualifiedname>Spline1d::y2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="64" column="21" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spline1d_1a27aa98f94472783eef5a68a005a79b16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Spline1d::deriv</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>deriv</name>
+        <qualifiedname>Spline1d::deriv</qualifiedname>
+        <reimplements refid="class_interp1d_1a47936fb17ab09ba1a5adae98615703f7">deriv</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate first derivative. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1acae16b27f9faccaa82f6b17701980e24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Spline1d::eval</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>eval</name>
+        <qualifiedname>Spline1d::eval</qualifiedname>
+        <reimplements refid="class_interp1d_1acb91fcf561ac596869ce571c30cf5583">eval</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the interpolant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1a0c75f5c5600c7acb11ccfed1bc23a584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spline1d::eval</definition>
+        <argsstring>(const double &amp;x, double &amp;val, double &amp;deriv)</argsstring>
+        <name>eval</name>
+        <qualifiedname>Spline1d::eval</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>deriv</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the interpolant and its first derivative. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="89" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1aa87545d1a3cc7a3b7b22f9239ca3f778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_spline1d" kindref="compound">Spline1d</ref> &amp;</type>
+        <definition>Spline1d &amp; Spline1d::operator=</definition>
+        <argsstring>(const Spline1d &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Spline1d::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_spline1d" kindref="compound">Spline1d</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="80" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1a5bf05ae73e84bf848b8e3e65dfd9dcec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spline1d::Spline1d</definition>
+        <argsstring>()</argsstring>
+        <name>Spline1d</name>
+        <qualifiedname>Spline1d::Spline1d</qualifiedname>
+        <briefdescription>
+<para>Null constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="69" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1aff78d6b8bfb8e3b1abf2c0de48a652a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spline1d::Spline1d</definition>
+        <argsstring>(const Eigen::VectorXd &amp;x, const Eigen::VectorXd &amp;y, double d1=-1.0e30, double d2=-1.0e30)</argsstring>
+        <name>Spline1d</name>
+        <qualifiedname>Spline1d::Spline1d</qualifiedname>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d1</declname>
+          <defval>-1.0e30</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d2</declname>
+          <defval>-1.0e30</defval>
+        </param>
+        <briefdescription>
+<para>Consruct with Eigen input. d1 and d2 are 2nd derivative BCs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="72" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1af59e1503b1dd03e2695664557e23e252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spline1d::Spline1d</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y, double d1=-1.0e30, double d2=-1.0e30)</argsstring>
+        <name>Spline1d</name>
+        <qualifiedname>Spline1d::Spline1d</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d1</declname>
+          <defval>-1.0e30</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d2</declname>
+          <defval>-1.0e30</defval>
+        </param>
+        <briefdescription>
+<para>Consruct with std::vector input. d1 and d2 are 2nd derivative BCs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="76" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double Spline1d::xhi</definition>
+        <argsstring>()</argsstring>
+        <name>xhi</name>
+        <qualifiedname>Spline1d::xhi</qualifiedname>
+        <reimplements refid="class_interp1d_1a7acc2957f6163115ad925d21d9ab2783">xhi</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="97" column="10" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="97" bodyend="97"/>
+        <references refid="class_spline1d_1a9893d02b2d855294177889021d619a88" compoundref="interp_8_h" startline="63">x</references>
+        <referencedby refid="class_one_d_model_table_1a13f27de596abd616ee395c5a27323346" compoundref="massmodel1d_8_h" startline="85" endline="85">OneDModelTable::get_max_radius</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1a604862983923c498185d9177d2b40d99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double Spline1d::xlo</definition>
+        <argsstring>()</argsstring>
+        <name>xlo</name>
+        <qualifiedname>Spline1d::xlo</qualifiedname>
+        <reimplements refid="class_interp1d_1ad7d8aaee41f1df6e533bfbb3089e8b67">xlo</reimplements>
+        <briefdescription>
+<para>Data limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="96" column="10" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="96" bodyend="96"/>
+        <references refid="class_spline1d_1a9893d02b2d855294177889021d619a88" compoundref="interp_8_h" startline="63">x</references>
+        <referencedby refid="class_one_d_model_table_1a4860f3919c37e90be0328cd512544c70" compoundref="massmodel1d_8_h" startline="84" endline="84">OneDModelTable::get_min_radius</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_spline1d_1a4af2948c59689f542ccfe1536efaf6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spline1d::~Spline1d</definition>
+        <argsstring>()</argsstring>
+        <name>~Spline1d</name>
+        <qualifiedname>Spline1d::~Spline1d</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/interp.H" line="83" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Interp1d</label>
+        <link refid="class_interp1d"/>
+      </node>
+      <node id="1">
+        <label>Spline1d</label>
+        <link refid="class_spline1d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Interp1d</label>
+        <link refid="class_interp1d"/>
+      </node>
+      <node id="1">
+        <label>Spline1d</label>
+        <link refid="class_spline1d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/interp.H" line="59" column="1" bodyfile="/home/weinberg/Projects/EXP/include/interp.H" bodystart="60" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_spline1d_1a27aa98f94472783eef5a68a005a79b16" prot="public" virt="virtual"><scope>Spline1d</scope><name>deriv</name></member>
+      <member refid="class_spline1d_1acae16b27f9faccaa82f6b17701980e24" prot="public" virt="virtual"><scope>Spline1d</scope><name>eval</name></member>
+      <member refid="class_spline1d_1a0c75f5c5600c7acb11ccfed1bc23a584" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>eval</name></member>
+      <member refid="class_spline1d_1aa87545d1a3cc7a3b7b22f9239ca3f778" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>operator=</name></member>
+      <member refid="class_spline1d_1a5bf05ae73e84bf848b8e3e65dfd9dcec" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>Spline1d</name></member>
+      <member refid="class_spline1d_1aff78d6b8bfb8e3b1abf2c0de48a652a6" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>Spline1d</name></member>
+      <member refid="class_spline1d_1af59e1503b1dd03e2695664557e23e252" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>Spline1d</name></member>
+      <member refid="class_spline1d_1a9893d02b2d855294177889021d619a88" prot="private" virt="non-virtual"><scope>Spline1d</scope><name>x</name></member>
+      <member refid="class_spline1d_1ae85bd74849b3023151a8b22ff9c61a72" prot="public" virt="virtual"><scope>Spline1d</scope><name>xhi</name></member>
+      <member refid="class_spline1d_1a604862983923c498185d9177d2b40d99" prot="public" virt="virtual"><scope>Spline1d</scope><name>xlo</name></member>
+      <member refid="class_spline1d_1a1d6edf52c9bd5c91e6f900184c3aa909" prot="private" virt="non-virtual"><scope>Spline1d</scope><name>y</name></member>
+      <member refid="class_spline1d_1a32a0f86bc7488946aba1db1c330d46ac" prot="private" virt="non-virtual"><scope>Spline1d</scope><name>y2</name></member>
+      <member refid="class_interp1d_1a21ea97560f42d16715c1d9c6efb2d092" prot="public" virt="pure-virtual"><scope>Spline1d</scope><name>~Interp1d</name></member>
+      <member refid="class_spline1d_1a4af2948c59689f542ccfe1536efaf6a9" prot="public" virt="non-virtual"><scope>Spline1d</scope><name>~Spline1d</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

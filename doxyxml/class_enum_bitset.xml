@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_enum_bitset" kind="class" language="C++" prot="public">
+    <compoundname>EnumBitset</compoundname>
+    <includes refid="_enum_bitset_8_h" local="no">EnumBitset.H</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" prot="private" static="no" mutable="no">
+        <type>std::bitset&lt; static_cast&lt; typename std::underlying_type&lt; T &gt;::type &gt;(<ref refid="struct_enum_traits" kindref="compound">EnumTraits</ref>&lt; T &gt;::max)&gt;</type>
+        <definition>std::bitset&lt;static_cast&lt;typename std::underlying_type&lt;T&gt;::type&gt;(EnumTraits&lt;T&gt;::max)&gt; EnumBitset&lt; T &gt;::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <qualifiedname>EnumBitset::s</qualifiedname>
+        <briefdescription>
+<para>The underlying bitset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="21" column="19" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" compoundref="_enum_bitset_8_h" startline="67" endline="71">EnumBitset&lt; T &gt;::flip</referencedby>
+        <referencedby refid="class_enum_bitset_1a25eca9a5c14266a764314ba64069e266" compoundref="_enum_bitset_8_h" startline="46" endline="50">EnumBitset&lt; T &gt;::operator[]</referencedby>
+        <referencedby refid="class_enum_bitset_1ae16c4498f32671b7fa2eaa560acbb6c8" compoundref="_enum_bitset_8_h" startline="40" endline="43">EnumBitset&lt; T &gt;::operator[]</referencedby>
+        <referencedby refid="class_enum_bitset_1ab25b31c8ab62e6e87efa86e2f9211efc" compoundref="_enum_bitset_8_h" startline="74" endline="77">EnumBitset&lt; T &gt;::reset</referencedby>
+        <referencedby refid="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" compoundref="_enum_bitset_8_h" startline="60" endline="64">EnumBitset&lt; T &gt;::reset</referencedby>
+        <referencedby refid="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" compoundref="_enum_bitset_8_h" startline="53" endline="57">EnumBitset&lt; T &gt;::set</referencedby>
+        <referencedby refid="class_enum_bitset_1ae1ee7cdfa387ad7cc42dad5e26438fc9" compoundref="_enum_bitset_8_h" startline="80" endline="83">EnumBitset&lt; T &gt;::size</referencedby>
+        <referencedby refid="class_enum_bitset_1aa404f760400af3e98e53ba5d0d3d4b57" compoundref="_enum_bitset_8_h" startline="34" endline="37">EnumBitset&lt; T &gt;::test</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::underlying_type&lt; T &gt;::type</type>
+        <definition>std::underlying_type&lt; T &gt;::type EnumBitset&lt; T &gt;::get_value</definition>
+        <argsstring>(T v) const</argsstring>
+        <name>get_value</name>
+        <qualifiedname>EnumBitset::get_value</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="23" column="40" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="23" bodyend="26"/>
+        <referencedby refid="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" compoundref="_enum_bitset_8_h" startline="67" endline="71">EnumBitset&lt; T &gt;::flip</referencedby>
+        <referencedby refid="class_enum_bitset_1ae16c4498f32671b7fa2eaa560acbb6c8" compoundref="_enum_bitset_8_h" startline="40" endline="43">EnumBitset&lt; T &gt;::operator[]</referencedby>
+        <referencedby refid="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" compoundref="_enum_bitset_8_h" startline="60" endline="64">EnumBitset&lt; T &gt;::reset</referencedby>
+        <referencedby refid="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" compoundref="_enum_bitset_8_h" startline="53" endline="57">EnumBitset&lt; T &gt;::set</referencedby>
+        <referencedby refid="class_enum_bitset_1aa404f760400af3e98e53ba5d0d3d4b57" compoundref="_enum_bitset_8_h" startline="34" endline="37">EnumBitset&lt; T &gt;::test</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_enum_bitset_1a6a676cc43a11608c33d0bccef926b5b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EnumBitset&lt; T &gt;::EnumBitset</definition>
+        <argsstring>()</argsstring>
+        <name>EnumBitset</name>
+        <qualifiedname>EnumBitset::EnumBitset</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="31" column="3" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_enum_bitset" kindref="compound">EnumBitset</ref> &amp;</type>
+        <definition>EnumBitset &amp; EnumBitset&lt; T &gt;::flip</definition>
+        <argsstring>(T pos)</argsstring>
+        <name>flip</name>
+        <qualifiedname>EnumBitset::flip</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Flip the flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="67" column="14" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="67" bodyend="71"/>
+        <references refid="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" compoundref="_enum_bitset_8_h" startline="67" endline="71">EnumBitset&lt; T &gt;::flip</references>
+        <references refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" compoundref="_enum_bitset_8_h" startline="23" endline="26">EnumBitset&lt; T &gt;::get_value</references>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+        <referencedby refid="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" compoundref="_enum_bitset_8_h" startline="67" endline="71">EnumBitset&lt; T &gt;::flip</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1a25eca9a5c14266a764314ba64069e266" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EnumBitset&lt; T &gt;::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>EnumBitset::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>operator version of the test </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="46" column="8" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="46" bodyend="50"/>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1ae16c4498f32671b7fa2eaa560acbb6c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EnumBitset&lt; T &gt;::operator[]</definition>
+        <argsstring>(T pos) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>EnumBitset::operator[]</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>operator version of the test </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="40" column="8" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="40" bodyend="43"/>
+        <references refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" compoundref="_enum_bitset_8_h" startline="23" endline="26">EnumBitset&lt; T &gt;::get_value</references>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1ab25b31c8ab62e6e87efa86e2f9211efc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnumBitset&lt; T &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>EnumBitset::reset</qualifiedname>
+        <briefdescription>
+<para>Reset all flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="74" column="8" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="74" bodyend="77"/>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_enum_bitset" kindref="compound">EnumBitset</ref> &amp;</type>
+        <definition>EnumBitset &amp; EnumBitset&lt; T &gt;::reset</definition>
+        <argsstring>(T pos)</argsstring>
+        <name>reset</name>
+        <qualifiedname>EnumBitset::reset</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Reset the flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="60" column="14" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="60" bodyend="64"/>
+        <references refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" compoundref="_enum_bitset_8_h" startline="23" endline="26">EnumBitset&lt; T &gt;::get_value</references>
+        <references refid="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" compoundref="_enum_bitset_8_h" startline="60" endline="64">EnumBitset&lt; T &gt;::reset</references>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+        <referencedby refid="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" compoundref="_enum_bitset_8_h" startline="60" endline="64">EnumBitset&lt; T &gt;::reset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_enum_bitset" kindref="compound">EnumBitset</ref> &amp;</type>
+        <definition>EnumBitset &amp; EnumBitset&lt; T &gt;::set</definition>
+        <argsstring>(T pos)</argsstring>
+        <name>set</name>
+        <qualifiedname>EnumBitset::set</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Set the flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="53" column="14" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="53" bodyend="57"/>
+        <references refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" compoundref="_enum_bitset_8_h" startline="23" endline="26">EnumBitset&lt; T &gt;::get_value</references>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+        <references refid="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" compoundref="_enum_bitset_8_h" startline="53" endline="57">EnumBitset&lt; T &gt;::set</references>
+        <referencedby refid="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" compoundref="_enum_bitset_8_h" startline="53" endline="57">EnumBitset&lt; T &gt;::set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1ae1ee7cdfa387ad7cc42dad5e26438fc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EnumBitset&lt; T &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <qualifiedname>EnumBitset::size</qualifiedname>
+        <briefdescription>
+<para>Return size of bitset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="80" column="10" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="80" bodyend="83"/>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+      </memberdef>
+      <memberdef kind="function" id="class_enum_bitset_1aa404f760400af3e98e53ba5d0d3d4b57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EnumBitset&lt; T &gt;::test</definition>
+        <argsstring>(T pos) const</argsstring>
+        <name>test</name>
+        <qualifiedname>EnumBitset::test</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Test the flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="34" column="8" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="34" bodyend="37"/>
+        <references refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" compoundref="_enum_bitset_8_h" startline="23" endline="26">EnumBitset&lt; T &gt;::get_value</references>
+        <references refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" compoundref="_enum_bitset_8_h" startline="21">EnumBitset&lt; T &gt;::s</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wrap the bitset according to the provided <ref refid="struct_enum_traits" kindref="compound">EnumTraits</ref> class. The class allows fields in a bit set to be accessed by members of the enum. </para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/src/EnumBitset.H" line="16" column="1" bodyfile="/home/weinberg/Projects/EXP/src/EnumBitset.H" bodystart="17" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_enum_bitset_1a6a676cc43a11608c33d0bccef926b5b5" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>EnumBitset</name></member>
+      <member refid="class_enum_bitset_1a279c3e0c203f34d4277ec57f965c1f92" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>flip</name></member>
+      <member refid="class_enum_bitset_1abd171154ac6e6652ead6f2397e3588d1" prot="private" virt="non-virtual"><scope>EnumBitset</scope><name>get_value</name></member>
+      <member refid="class_enum_bitset_1ae16c4498f32671b7fa2eaa560acbb6c8" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>operator[]</name></member>
+      <member refid="class_enum_bitset_1a25eca9a5c14266a764314ba64069e266" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>operator[]</name></member>
+      <member refid="class_enum_bitset_1a951f91d92abf8cb985b5d4c53f2cf2c8" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>reset</name></member>
+      <member refid="class_enum_bitset_1ab25b31c8ab62e6e87efa86e2f9211efc" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>reset</name></member>
+      <member refid="class_enum_bitset_1a36cbc7aa57a2c059e543494aeece3b2a" prot="private" virt="non-virtual"><scope>EnumBitset</scope><name>s</name></member>
+      <member refid="class_enum_bitset_1a6327630078eff6fc1e990a183acb59c8" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>set</name></member>
+      <member refid="class_enum_bitset_1ae1ee7cdfa387ad7cc42dad5e26438fc9" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>size</name></member>
+      <member refid="class_enum_bitset_1aa404f760400af3e98e53ba5d0d3d4b57" prot="public" virt="non-virtual"><scope>EnumBitset</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

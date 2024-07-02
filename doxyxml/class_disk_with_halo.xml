@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_disk_with_halo" kind="class" language="C++" prot="public">
+    <compoundname>DiskWithHalo</compoundname>
+    <basecompoundref refid="class_axi_sym_model" prot="public" virt="non-virtual">AxiSymModel</basecompoundref>
+    <includes refid="_disk_with_halo_8_h" local="no">DiskWithHalo.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AxiSymModel&gt; DiskWithHalo::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>DiskWithHalo::d</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="14" column="19" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_disk_with_halo_1acd9e6c29b53f51e98397c52978c66241" compoundref="_disk_with_halo_8_h" startline="33" endline="40">DiskWithHalo</referencedby>
+        <referencedby refid="class_disk_with_halo_1af7007bf28863d9a11dab396ba123c1d5" compoundref="_disk_with_halo_8_h" startline="23" endline="30">DiskWithHalo</referencedby>
+        <referencedby refid="class_disk_with_halo_1a90dc033f414be9f3c41ee0c0fad633bc" compoundref="_disk_with_halo_8_h" startline="47" endline="48">get_density</referencedby>
+        <referencedby refid="class_disk_with_halo_1a298f24fcd27cf5f837c18e52eafdc106" compoundref="_disk_with_halo_8_h" startline="54" endline="55">get_dpot</referencedby>
+        <referencedby refid="class_disk_with_halo_1a83af39a3f1f0eaaae16e9d6a54e57de3" compoundref="_disk_with_halo_8_h" startline="57" endline="58">get_dpot2</referencedby>
+        <referencedby refid="class_disk_with_halo_1a145b49523bfd5c4884a25a42002007a7" compoundref="_disk_with_halo_8_h" startline="44" endline="45">get_mass</referencedby>
+        <referencedby refid="class_disk_with_halo_1a62e38f166a9a04cee6f4a7361114a444" compoundref="_disk_with_halo_8_h" startline="84" endline="87">get_max_radius</referencedby>
+        <referencedby refid="class_disk_with_halo_1ad319d4ea72ea88dfcd0c3b0e1e37f07d" compoundref="_disk_with_halo_8_h" startline="80" endline="83">get_min_radius</referencedby>
+        <referencedby refid="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75" compoundref="_disk_with_halo_8_h" startline="50" endline="51">get_pot</referencedby>
+        <referencedby refid="class_disk_with_halo_1a522ab0472483200d97e5d9c18f437116" compoundref="_disk_with_halo_8_h" startline="60" endline="67">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AxiSymModel&gt; DiskWithHalo::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>DiskWithHalo::h</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="15" column="19" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_disk_with_halo_1acd9e6c29b53f51e98397c52978c66241" compoundref="_disk_with_halo_8_h" startline="33" endline="40">DiskWithHalo</referencedby>
+        <referencedby refid="class_disk_with_halo_1af7007bf28863d9a11dab396ba123c1d5" compoundref="_disk_with_halo_8_h" startline="23" endline="30">DiskWithHalo</referencedby>
+        <referencedby refid="class_disk_with_halo_1a298f24fcd27cf5f837c18e52eafdc106" compoundref="_disk_with_halo_8_h" startline="54" endline="55">get_dpot</referencedby>
+        <referencedby refid="class_disk_with_halo_1a83af39a3f1f0eaaae16e9d6a54e57de3" compoundref="_disk_with_halo_8_h" startline="57" endline="58">get_dpot2</referencedby>
+        <referencedby refid="class_disk_with_halo_1a62e38f166a9a04cee6f4a7361114a444" compoundref="_disk_with_halo_8_h" startline="84" endline="87">get_max_radius</referencedby>
+        <referencedby refid="class_disk_with_halo_1ad319d4ea72ea88dfcd0c3b0e1e37f07d" compoundref="_disk_with_halo_8_h" startline="80" endline="83">get_min_radius</referencedby>
+        <referencedby refid="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75" compoundref="_disk_with_halo_8_h" startline="50" endline="51">get_pot</referencedby>
+        <referencedby refid="class_disk_with_halo_1a522ab0472483200d97e5d9c18f437116" compoundref="_disk_with_halo_8_h" startline="60" endline="67">get_pot_dpot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_disk_with_halo_1a99b80f19dfa533b08c3c57d6c3d834fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::d2fde2</definition>
+        <argsstring>(double E, double L) override</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>DiskWithHalo::d2fde2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="104" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="104" bodyend="107"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a7dc15ec4c77e2364412dcaf54003da54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::dfde</definition>
+        <argsstring>(double E, double L) override</argsstring>
+        <name>dfde</name>
+        <qualifiedname>DiskWithHalo::dfde</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="94" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="94" bodyend="97"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a41bbb6d6bc1fb19553e1ed43e67dbd37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::dfdl</definition>
+        <argsstring>(double E, double L) override</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>DiskWithHalo::dfdl</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="99" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="99" bodyend="102"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1af2d9d93b9ff0164985f33db2f666ae0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DiskWithHalo::DiskWithHalo</definition>
+        <argsstring>()</argsstring>
+        <name>DiskWithHalo</name>
+        <qualifiedname>DiskWithHalo::DiskWithHalo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="20" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1acd9e6c29b53f51e98397c52978c66241" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DiskWithHalo::DiskWithHalo</definition>
+        <argsstring>(const DiskWithHalo &amp;t)</argsstring>
+        <name>DiskWithHalo</name>
+        <qualifiedname>DiskWithHalo::DiskWithHalo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_disk_with_halo" kindref="compound">DiskWithHalo</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="33" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="33" bodyend="40"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" compoundref="massmodel_8_h" startline="79">MassModel::dim</references>
+        <references refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" compoundref="massmodel_8_h" startline="165">AxiSymModel::dist_defined</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+        <references refid="class_mass_model_1acf360c000464aca6299bc47894672d70" compoundref="massmodel_8_h" startline="81">MassModel::ModelID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1af7007bf28863d9a11dab396ba123c1d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DiskWithHalo::DiskWithHalo</definition>
+        <argsstring>(std::shared_ptr&lt; AxiSymModel &gt; D, std::shared_ptr&lt; AxiSymModel &gt; H)</argsstring>
+        <name>DiskWithHalo</name>
+        <qualifiedname>DiskWithHalo::DiskWithHalo</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+          <declname>H</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="23" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="23" bodyend="30"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" compoundref="massmodel_8_h" startline="79">MassModel::dim</references>
+        <references refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" compoundref="massmodel_8_h" startline="165">AxiSymModel::dist_defined</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+        <references refid="class_mass_model_1acf360c000464aca6299bc47894672d70" compoundref="massmodel_8_h" startline="81">MassModel::ModelID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a47949ec45a68566a57d65c737dfbe6df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::distf</definition>
+        <argsstring>(double E, double L) override</argsstring>
+        <name>distf</name>
+        <qualifiedname>DiskWithHalo::distf</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="89" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="89" bodyend="92"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a90dc033f414be9f3c41ee0c0fad633bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double DiskWithHalo::get_density</definition>
+        <argsstring>(const double r) override</argsstring>
+        <name>get_density</name>
+        <qualifiedname>DiskWithHalo::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="47" column="18" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="47" bodyend="48"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <referencedby refid="class_disk_with_halo_1aecec1f9251a06ff76e8ecc4437daf49d" compoundref="_disk_with_halo_8_h" startline="72" endline="73">get_density</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1aecec1f9251a06ff76e8ecc4437daf49d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::get_density</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>DiskWithHalo::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5">get_density</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The density at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="72" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="72" bodyend="73"/>
+        <references refid="class_disk_with_halo_1a90dc033f414be9f3c41ee0c0fad633bc" compoundref="_disk_with_halo_8_h" startline="47" endline="48">get_density</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a298f24fcd27cf5f837c18e52eafdc106" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double DiskWithHalo::get_dpot</definition>
+        <argsstring>(const double r) override</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>DiskWithHalo::get_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845">get_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="54" column="18" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="54" bodyend="55"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a83af39a3f1f0eaaae16e9d6a54e57de3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double DiskWithHalo::get_dpot2</definition>
+        <argsstring>(const double r) override</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>DiskWithHalo::get_dpot2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae">get_dpot2</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="57" column="18" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="57" bodyend="58"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a145b49523bfd5c4884a25a42002007a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double DiskWithHalo::get_mass</definition>
+        <argsstring>(const double r) override</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>DiskWithHalo::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="44" column="18" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="44" bodyend="45"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <referencedby refid="class_disk_with_halo_1a8195eae7e7e1b287521ea9485d308b97" compoundref="_disk_with_halo_8_h" startline="69" endline="70">get_mass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a8195eae7e7e1b287521ea9485d308b97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::get_mass</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>DiskWithHalo::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the mass inside of position (x, y, z) (this is ambiguous in general and will depend on the model) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="69" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="69" bodyend="70"/>
+        <references refid="class_disk_with_halo_1a145b49523bfd5c4884a25a42002007a7" compoundref="_disk_with_halo_8_h" startline="44" endline="45">get_mass</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a62e38f166a9a04cee6f4a7361114a444" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::get_max_radius</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>DiskWithHalo::get_max_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c">get_max_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="84" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="84" bodyend="87"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1ad319d4ea72ea88dfcd0c3b0e1e37f07d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::get_min_radius</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>DiskWithHalo::get_min_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9">get_min_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="80" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="80" bodyend="83"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double DiskWithHalo::get_pot</definition>
+        <argsstring>(const double r) override</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>DiskWithHalo::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="50" column="18" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="50" bodyend="51"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+        <referencedby refid="class_disk_with_halo_1a46fe75fd3333984c70d90f9e4b7fc6d9" compoundref="_disk_with_halo_8_h" startline="75" endline="76">get_pot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a46fe75fd3333984c70d90f9e4b7fc6d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double DiskWithHalo::get_pot</definition>
+        <argsstring>(const double x1, const double x2, const double x3)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>DiskWithHalo::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>The potential at (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="75" column="10" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="75" bodyend="76"/>
+        <references refid="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75" compoundref="_disk_with_halo_8_h" startline="50" endline="51">get_pot</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disk_with_halo_1a522ab0472483200d97e5d9c18f437116" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void DiskWithHalo::get_pot_dpot</definition>
+        <argsstring>(const double r, double &amp;ur, double &amp;dur) override</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>DiskWithHalo::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632">get_pot_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ur</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="60" column="16" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="60" bodyend="67"/>
+        <references refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" compoundref="_disk_with_halo_8_h" startline="14">d</references>
+        <references refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" compoundref="_disk_with_halo_8_h" startline="15">h</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DiskWithHalo</label>
+        <link refid="class_disk_with_halo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DiskWithHalo</label>
+        <link refid="class_disk_with_halo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="6">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="5">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" line="10" column="1" bodyfile="/home/weinberg/Projects/EXP/include/DiskWithHalo.H" bodystart="11" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>bomb</name></member>
+      <member refid="class_disk_with_halo_1ab3c3130a2fcc26f1b451c28f1aa20dbe" prot="private" virt="non-virtual"><scope>DiskWithHalo</scope><name>d</name></member>
+      <member refid="class_disk_with_halo_1a99b80f19dfa533b08c3c57d6c3d834fd" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>d2fde2</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>dEgrid</name></member>
+      <member refid="class_disk_with_halo_1a7dc15ec4c77e2364412dcaf54003da54" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>dfde</name></member>
+      <member refid="class_disk_with_halo_1a41bbb6d6bc1fb19553e1ed43e67dbd37" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>dim</name></member>
+      <member refid="class_disk_with_halo_1af2d9d93b9ff0164985f33db2f666ae0a" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>DiskWithHalo</name></member>
+      <member refid="class_disk_with_halo_1af7007bf28863d9a11dab396ba123c1d5" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>DiskWithHalo</name></member>
+      <member refid="class_disk_with_halo_1acd9e6c29b53f51e98397c52978c66241" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>DiskWithHalo</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>dist_defined</name></member>
+      <member refid="class_disk_with_halo_1a47949ec45a68566a57d65c737dfbe6df" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>dof</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Emin_grid</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>gen_velocity</name></member>
+      <member refid="class_disk_with_halo_1a90dc033f414be9f3c41ee0c0fad633bc" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_density</name></member>
+      <member refid="class_disk_with_halo_1aecec1f9251a06ff76e8ecc4437daf49d" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_density</name></member>
+      <member refid="class_disk_with_halo_1a298f24fcd27cf5f837c18e52eafdc106" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_dpot</name></member>
+      <member refid="class_disk_with_halo_1a83af39a3f1f0eaaae16e9d6a54e57de3" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_dpot2</name></member>
+      <member refid="class_disk_with_halo_1a145b49523bfd5c4884a25a42002007a7" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_mass</name></member>
+      <member refid="class_disk_with_halo_1a8195eae7e7e1b287521ea9485d308b97" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_mass</name></member>
+      <member refid="class_disk_with_halo_1a62e38f166a9a04cee6f4a7361114a444" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_max_radius</name></member>
+      <member refid="class_disk_with_halo_1ad319d4ea72ea88dfcd0c3b0e1e37f07d" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_min_radius</name></member>
+      <member refid="class_disk_with_halo_1abb298a3eff91de4660de03ec7e8c8a75" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_pot</name></member>
+      <member refid="class_disk_with_halo_1a46fe75fd3333984c70d90f9e4b7fc6d9" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_pot</name></member>
+      <member refid="class_disk_with_halo_1a522ab0472483200d97e5d9c18f437116" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>get_pot_dpot</name></member>
+      <member refid="class_disk_with_halo_1a87f1d9290861d7a85c925c7b33d2fe43" prot="private" virt="non-virtual"><scope>DiskWithHalo</scope><name>h</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Kgrid</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>ModelID</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>numr</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Rgrid</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>DiskWithHalo</scope><name>set_itmax</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>Unit</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>DiskWithHalo</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>DiskWithHalo</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

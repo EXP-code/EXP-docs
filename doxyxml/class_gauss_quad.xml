@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_gauss_quad" kind="class" language="C++" prot="public">
+    <compoundname>GaussQuad</compoundname>
+    <derivedcompoundref refid="class_herm_quad" prot="public" virt="non-virtual">HermQuad</derivedcompoundref>
+    <derivedcompoundref refid="class_jaco_quad" prot="public" virt="non-virtual">JacoQuad</derivedcompoundref>
+    <derivedcompoundref refid="class_lagu_quad" prot="public" virt="non-virtual">LaguQuad</derivedcompoundref>
+    <includes refid="gauss_q_8_h" local="no">gaussQ.H</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GaussQuad::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>GaussQuad::alpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="61" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1ad0ff3faadab8afbd0ff35111a02938dc" compoundref="gauss_q_8_h" startline="76" endline="76">get_alpha</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GaussQuad::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <qualifiedname>GaussQuad::beta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="62" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1a647dda30c76a016d266d6ccc83ae79a7" compoundref="gauss_q_8_h" startline="77" endline="77">get_beta</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GaussQuad::FunctionID</definition>
+        <argsstring></argsstring>
+        <name>FunctionID</name>
+        <qualifiedname>GaussQuad::FunctionID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="57" column="15" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" compoundref="gauss_q_8_h" startline="79" endline="83">bomb</referencedby>
+        <referencedby refid="class_lege_quad_1ab46a851e9eb49f0d184df4903b2a036f" compoundref="gauss_q_8_h" startline="107" endline="107">LegeQuad::LegeQuad</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GaussQuad::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <qualifiedname>GaussQuad::n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="63" column="7" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1a4522920cf5303e3d0040b626b6ada8a6" compoundref="gauss_q_8_h" startline="75" endline="75">get_n</referencedby>
+        <referencedby refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" compoundref="gauss_q_8_h" startline="70" endline="71">knot</referencedby>
+        <referencedby refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" compoundref="gauss_q_8_h" startline="67" endline="68">weight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; GaussQuad::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>GaussQuad::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="60" column="15" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" compoundref="gauss_q_8_h" startline="70" endline="71">knot</referencedby>
+        <referencedby refid="class_gauss_quad_1ab5ce159e90af9f0912424e4351844882" compoundref="gauss_q_8_h" startline="74" endline="74">kV</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; GaussQuad::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>GaussQuad::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="59" column="15" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" compoundref="gauss_q_8_h" startline="67" endline="68">weight</referencedby>
+        <referencedby refid="class_gauss_quad_1a788426d5845819287474b161975389a0" compoundref="gauss_q_8_h" startline="73" endline="73">wV</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GaussQuad::bomb</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>bomb</name>
+        <qualifiedname>GaussQuad::bomb</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="79" column="7" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="79" bodyend="83"/>
+        <references refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" compoundref="gauss_q_8_h" startline="57">FunctionID</references>
+        <referencedby refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" compoundref="gauss_q_8_h" startline="70" endline="71">knot</referencedby>
+        <referencedby refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" compoundref="gauss_q_8_h" startline="67" endline="68">weight</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a2d164fe57b165dcd45a3f9ad4b102903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GaussQuad::GaussQuad</definition>
+        <argsstring>()</argsstring>
+        <name>GaussQuad</name>
+        <qualifiedname>GaussQuad::GaussQuad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="65" column="3" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1ad0ff3faadab8afbd0ff35111a02938dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GaussQuad::get_alpha</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_alpha</name>
+        <qualifiedname>GaussQuad::get_alpha</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="76" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="76" bodyend="76"/>
+        <references refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" compoundref="gauss_q_8_h" startline="61">alpha</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a647dda30c76a016d266d6ccc83ae79a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GaussQuad::get_beta</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_beta</name>
+        <qualifiedname>GaussQuad::get_beta</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="77" bodyend="77"/>
+        <references refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" compoundref="gauss_q_8_h" startline="62">beta</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a4522920cf5303e3d0040b626b6ada8a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GaussQuad::get_n</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_n</name>
+        <qualifiedname>GaussQuad::get_n</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="75" column="7" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="75" bodyend="75"/>
+        <references refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" compoundref="gauss_q_8_h" startline="63">n</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GaussQuad::knot</definition>
+        <argsstring>(const int i)</argsstring>
+        <name>knot</name>
+        <qualifiedname>GaussQuad::knot</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="70" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="70" bodyend="71"/>
+        <references refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" compoundref="gauss_q_8_h" startline="79" endline="83">bomb</references>
+        <references refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" compoundref="gauss_q_8_h" startline="63">n</references>
+        <references refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" compoundref="gauss_q_8_h" startline="60">r</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1ab5ce159e90af9f0912424e4351844882" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt; &amp;</type>
+        <definition>std::vector&lt; double &gt; &amp; GaussQuad::kV</definition>
+        <argsstring>(void)</argsstring>
+        <name>kV</name>
+        <qualifiedname>GaussQuad::kV</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="74" column="15" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="74" bodyend="74"/>
+        <references refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" compoundref="gauss_q_8_h" startline="60">r</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GaussQuad::weight</definition>
+        <argsstring>(const int i)</argsstring>
+        <name>weight</name>
+        <qualifiedname>GaussQuad::weight</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="67" column="10" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="67" bodyend="68"/>
+        <references refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" compoundref="gauss_q_8_h" startline="79" endline="83">bomb</references>
+        <references refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" compoundref="gauss_q_8_h" startline="63">n</references>
+        <references refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" compoundref="gauss_q_8_h" startline="59">w</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gauss_quad_1a788426d5845819287474b161975389a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt; &amp;</type>
+        <definition>std::vector&lt; double &gt; &amp; GaussQuad::wV</definition>
+        <argsstring>(void)</argsstring>
+        <name>wV</name>
+        <qualifiedname>GaussQuad::wV</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="73" column="15" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="73" bodyend="73"/>
+        <references refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" compoundref="gauss_q_8_h" startline="59">w</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="2">
+        <label>HermQuad</label>
+        <link refid="class_herm_quad"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>JacoQuad</label>
+        <link refid="class_jaco_quad"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LaguQuad</label>
+        <link refid="class_lagu_quad"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LegeQuad</label>
+        <link refid="class_lege_quad"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/include/gaussQ.H" line="53" column="1" bodyfile="/home/weinberg/Projects/EXP/include/gaussQ.H" bodystart="54" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_gauss_quad_1a9c69bf4fa86abd41689d3dcffa4a5851" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>alpha</name></member>
+      <member refid="class_gauss_quad_1a5e3f4ea3271cac850f964c12fd6d6eee" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>beta</name></member>
+      <member refid="class_gauss_quad_1aec3155c26b5792115c894a8288185fa5" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>bomb</name></member>
+      <member refid="class_gauss_quad_1ad1428170032a5c603f2e27044dc0817e" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>FunctionID</name></member>
+      <member refid="class_gauss_quad_1a2d164fe57b165dcd45a3f9ad4b102903" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>GaussQuad</name></member>
+      <member refid="class_gauss_quad_1ad0ff3faadab8afbd0ff35111a02938dc" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>get_alpha</name></member>
+      <member refid="class_gauss_quad_1a647dda30c76a016d266d6ccc83ae79a7" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>get_beta</name></member>
+      <member refid="class_gauss_quad_1a4522920cf5303e3d0040b626b6ada8a6" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>get_n</name></member>
+      <member refid="class_gauss_quad_1a30ed9e0400fddda528ad20b71fb040aa" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>knot</name></member>
+      <member refid="class_gauss_quad_1ab5ce159e90af9f0912424e4351844882" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>kV</name></member>
+      <member refid="class_gauss_quad_1af6bcda50fcfae1b73a9e1e2dfa3c83cf" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>n</name></member>
+      <member refid="class_gauss_quad_1a741719a378924dc7c11b9debb4e9b225" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>r</name></member>
+      <member refid="class_gauss_quad_1ae694260fcd21e6c830823fd780a782be" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>w</name></member>
+      <member refid="class_gauss_quad_1a5cac0f24ea4719573bf3913c7bef6490" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>weight</name></member>
+      <member refid="class_gauss_quad_1a788426d5845819287474b161975389a0" prot="public" virt="non-virtual"><scope>GaussQuad</scope><name>wV</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

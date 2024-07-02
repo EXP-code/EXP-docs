@@ -1,0 +1,1544 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_c_brock_disk" kind="class" language="C++" prot="public">
+    <compoundname>CBrockDisk</compoundname>
+    <basecompoundref refid="class_axisymmetric_basis" prot="public" virt="non-virtual">AxisymmetricBasis</basecompoundref>
+    <includes refid="_c_brock_disk_8_h" local="no">CBrockDisk.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_brock_disk_1a369f1e8182b80770794716e2340c91ae" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; CBrockDisk::cc</definition>
+        <argsstring></argsstring>
+        <name>cc</name>
+        <qualifiedname>CBrockDisk::cc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="27" column="24" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1aa10706c4c19e5f427821a11ad2b41a8c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; CBrockDisk::cc1</definition>
+        <argsstring></argsstring>
+        <name>cc1</name>
+        <qualifiedname>CBrockDisk::cc1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="27" column="27" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a0ea59f68a84031d83c86609f2b760b8b" prot="private" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int CBrockDisk::cmagic</definition>
+        <argsstring></argsstring>
+        <name>cmagic</name>
+        <qualifiedname>CBrockDisk::cmagic</qualifiedname>
+        <initializer>= 0xc0a57a4</initializer>
+        <briefdescription>
+<para>Coefficient magic number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="63" column="22" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a0d15ed9aac37dd4aba2f7de714ef2495" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::coefMaster</definition>
+        <argsstring></argsstring>
+        <name>coefMaster</name>
+        <qualifiedname>CBrockDisk::coefMaster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Master node ships coefficients to hosts. True (default) implies that only the master node caches the coefficients for playback to save core memory. This is set in the config input using the &apos;coefMaster: bool&apos; parameter. Once I am sure that there are no algorithmic issues, I will remove this as an option. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="74" column="8" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a247de583a4b1ab71942a08e316eede72" prot="private" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t CBrockDisk::cos_coef_lock</definition>
+        <argsstring></argsstring>
+        <name>cos_coef_lock</name>
+        <qualifiedname>CBrockDisk::cos_coef_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="23" column="29" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a1398c8360b1c5f56a3512528f01a2507" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; CBrockDisk::cosm</definition>
+        <argsstring></argsstring>
+        <name>cosm</name>
+        <qualifiedname>CBrockDisk::cosm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="30" column="20" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a1986080f09d4e215f0b3a5d587b61155" prot="private" static="no" mutable="no">
+        <type>CoefClasses::CylCoefs</type>
+        <definition>CoefClasses::CylCoefs CBrockDisk::cylCoefs</definition>
+        <argsstring></argsstring>
+        <name>cylCoefs</name>
+        <qualifiedname>CBrockDisk::cylCoefs</qualifiedname>
+        <briefdescription>
+<para>Coefficient container instance for writing HDF5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="80" column="25" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1af661588e863166600e9e4e48d623190f" prot="private" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* CBrockDisk::cylmass0</definition>
+        <argsstring></argsstring>
+        <name>cylmass0</name>
+        <qualifiedname>CBrockDisk::cylmass0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="24" column="10" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1ae6d5df816481bc133db8d6270f4a30d0" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd CBrockDisk::dend</definition>
+        <argsstring></argsstring>
+        <name>dend</name>
+        <qualifiedname>CBrockDisk::dend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="28" column="25" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a215296901220bea3a1ae5c5b1d30ff9c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; CBrockDisk::dpot</definition>
+        <argsstring></argsstring>
+        <name>dpot</name>
+        <qualifiedname>CBrockDisk::dpot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="29" column="20" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a4943da76965e3ee0ffb5602363110111" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; CBrockDisk::du</definition>
+        <argsstring></argsstring>
+        <name>du</name>
+        <qualifiedname>CBrockDisk::du</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="30" column="17" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1acb480518e732b65d8e4ce36a382b51b4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::EVEN_M</definition>
+        <argsstring></argsstring>
+        <name>EVEN_M</name>
+        <qualifiedname>CBrockDisk::EVEN_M</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="60" column="20" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a33853b32988ab47ca15296a70bbecfff" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::shared_ptr&lt;Eigen::MatrixXd&gt; CBrockDisk::expcoef</definition>
+        <argsstring></argsstring>
+        <name>expcoef</name>
+        <qualifiedname>CBrockDisk::expcoef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="26" column="19" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a5d8fb59fdfc6053ec1844451e8d2d37d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; CBrockDisk::expcoef0</definition>
+        <argsstring></argsstring>
+        <name>expcoef0</name>
+        <qualifiedname>CBrockDisk::expcoef0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="27" column="15" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a5c5d1725ad62f5847aef79243871900b" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::shared_ptr&lt;Eigen::MatrixXd&gt; CBrockDisk::expcoef1</definition>
+        <argsstring></argsstring>
+        <name>expcoef1</name>
+        <qualifiedname>CBrockDisk::expcoef1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="26" column="27" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a8a732649c1b1ca49c0d11ba3bfdd0398" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::shared_ptr&lt;Eigen::MatrixXd&gt; CBrockDisk::expcoefP</definition>
+        <argsstring></argsstring>
+        <name>expcoefP</name>
+        <qualifiedname>CBrockDisk::expcoefP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="26" column="36" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a99e27019c9b3d07460f31a93af88e6ed" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CBrockDisk::lastPlayTime</definition>
+        <argsstring></argsstring>
+        <name>lastPlayTime</name>
+        <qualifiedname>CBrockDisk::lastPlayTime</qualifiedname>
+        <briefdescription>
+<para>Last playback coefficient evaluation time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="77" column="10" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a47ca997e5c7e567f4e88335b49ce0485" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CBrockDisk::Lmax</definition>
+        <argsstring></argsstring>
+        <name>Lmax</name>
+        <qualifiedname>CBrockDisk::Lmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="58" column="7" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a808e0ff837481e01d1551c11ecc4803c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::M0_only</definition>
+        <argsstring></argsstring>
+        <name>M0_only</name>
+        <qualifiedname>CBrockDisk::M0_only</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="60" column="27" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a34c8730c552cac8d7cf5c3fb744af6ad" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mixture_basis" kindref="compound">MixtureBasis</ref> *</type>
+        <definition>MixtureBasis* CBrockDisk::mix</definition>
+        <argsstring></argsstring>
+        <name>mix</name>
+        <qualifiedname>CBrockDisk::mix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="22" column="16" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1af3e015b9faaa291817e75a76c9574e59" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CBrockDisk::nmax</definition>
+        <argsstring></argsstring>
+        <name>nmax</name>
+        <qualifiedname>CBrockDisk::nmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="58" column="12" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1ac4e6e40bd5200fe333403e7ace4030dc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::NO_M0</definition>
+        <argsstring></argsstring>
+        <name>NO_M0</name>
+        <qualifiedname>CBrockDisk::NO_M0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="60" column="8" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a55ffb89974c9ff99630830fc4f9678a5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::NO_M1</definition>
+        <argsstring></argsstring>
+        <name>NO_M1</name>
+        <qualifiedname>CBrockDisk::NO_M1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="60" column="14" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a2629b63efffff0594d5c0ded22b9931c" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd CBrockDisk::normM</definition>
+        <argsstring></argsstring>
+        <name>normM</name>
+        <qualifiedname>CBrockDisk::normM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="28" column="19" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a08212298ba2fe9ef970285a94485430c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_two_d_coefs" kindref="compound">TwoDCoefs</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;TwoDCoefs&gt; CBrockDisk::playback</definition>
+        <argsstring></argsstring>
+        <name>playback</name>
+        <qualifiedname>CBrockDisk::playback</qualifiedname>
+        <briefdescription>
+<para>Playback object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="66" column="19" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a32aab31eb26c5b2c248118fef3ab09f1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::MatrixXd &gt;</type>
+        <definition>std::vector&lt;Eigen::MatrixXd&gt; CBrockDisk::potd</definition>
+        <argsstring></argsstring>
+        <name>potd</name>
+        <qualifiedname>CBrockDisk::potd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="29" column="15" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a035828c4df82679a4a414933b68e6a6f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CBrockDisk::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>CBrockDisk::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="57" column="10" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1abae26982381956dfe4c7fb40bb2fd32c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CBrockDisk::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>CBrockDisk::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="57" column="15" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a711d5c0ea0e8fb5aee90d448d4afd825" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CBrockDisk::self_consistent</definition>
+        <argsstring></argsstring>
+        <name>self_consistent</name>
+        <qualifiedname>CBrockDisk::self_consistent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="59" column="8" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a8aa25e38e517181ba429d52d954f9dcd" prot="private" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t CBrockDisk::sin_coef_lock</definition>
+        <argsstring></argsstring>
+        <name>sin_coef_lock</name>
+        <qualifiedname>CBrockDisk::sin_coef_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="23" column="43" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a209428f9cb790412e7583dcbaea49670" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; CBrockDisk::sinm</definition>
+        <argsstring></argsstring>
+        <name>sinm</name>
+        <qualifiedname>CBrockDisk::sinm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="30" column="25" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a7943cdac146ca1d2f744b9f9cbf4aa7b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Eigen::VectorXd &gt;</type>
+        <definition>std::vector&lt;Eigen::VectorXd&gt; CBrockDisk::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <qualifiedname>CBrockDisk::u</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="30" column="15" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a887ac1dd5f27c671af0f53975d39f351" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CBrockDisk::use0</definition>
+        <argsstring></argsstring>
+        <name>use0</name>
+        <qualifiedname>CBrockDisk::use0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="32" column="12" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1ae58e834b8446db7f0d0f54da9df71de9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CBrockDisk::use1</definition>
+        <argsstring></argsstring>
+        <name>use1</name>
+        <qualifiedname>CBrockDisk::use1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="32" column="7" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1a3f59419da8520d8ed64b0fe07cee83e1" prot="private" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t CBrockDisk::used_lock</definition>
+        <argsstring></argsstring>
+        <name>used_lock</name>
+        <qualifiedname>CBrockDisk::used_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="23" column="19" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_brock_disk_1ae1eab22640fd005bcd88a8468dc943ba" prot="private" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd CBrockDisk::work</definition>
+        <argsstring></argsstring>
+        <name>work</name>
+        <qualifiedname>CBrockDisk::work</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="28" column="30" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_brock_disk_1aa8df7e75d7868ba351aab3484cf33503" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; CBrockDisk::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>CBrockDisk::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="83" column="25" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_brock_disk_1a00f37c5ce057c8537d91dcd498fc785c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_acceleration_and_potential</definition>
+        <argsstring>()</argsstring>
+        <name>determine_acceleration_and_potential</name>
+        <qualifiedname>CBrockDisk::determine_acceleration_and_potential</qualifiedname>
+        <reimplements refid="class_basis_1abb4dbfbe9c234f44b1719a4d89dc3951">determine_acceleration_and_potential</reimplements>
+        <briefdescription>
+<para>All derived classes must provide a method to compute the force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a18d9afa579242f0788b6f1741f5627b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * CBrockDisk::determine_acceleration_and_potential_thread</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>determine_acceleration_and_potential_thread</name>
+        <qualifiedname>CBrockDisk::determine_acceleration_and_potential_thread</qualifiedname>
+        <reimplements refid="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3">determine_acceleration_and_potential_thread</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the force computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="54" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a86d2dd823c864264001c0f504e8340ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_coefficients</definition>
+        <argsstring>()</argsstring>
+        <name>determine_coefficients</name>
+        <qualifiedname>CBrockDisk::determine_coefficients</qualifiedname>
+        <reimplements refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8">determine_coefficients</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by get_acceleration_and_potential to request that the expansion be performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="48" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ac4ed2d04027116069917f50ce99eb7d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_coefficients_particles</definition>
+        <argsstring>()</argsstring>
+        <name>determine_coefficients_particles</name>
+        <qualifiedname>CBrockDisk::determine_coefficients_particles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="50" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a7d8b28475581b881d32a282d5bd5c581" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_coefficients_playback</definition>
+        <argsstring>()</argsstring>
+        <name>determine_coefficients_playback</name>
+        <qualifiedname>CBrockDisk::determine_coefficients_playback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="49" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a3c44852b0a6193b22fbdb998be59a1f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * CBrockDisk::determine_coefficients_thread</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>determine_coefficients_thread</name>
+        <qualifiedname>CBrockDisk::determine_coefficients_thread</qualifiedname>
+        <reimplements refid="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49">determine_coefficients_thread</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Multithreading implementation of the expansion computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="53" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a1af05c45a1f4254f295e75bdd075f77d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_dens</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p)</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>CBrockDisk::get_dens</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="36" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1aa71ebc95cec606bb9ccbdcae999b0589" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_dens_coefs</definition>
+        <argsstring>(int, const Eigen::VectorXd &amp;, double &amp;)</argsstring>
+        <name>get_dens_coefs</name>
+        <qualifiedname>CBrockDisk::get_dens_coefs</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="41" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1aa917a4f764ad0df8183a226f7b186e8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_dpotl</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;dp)</argsstring>
+        <name>get_dpotl</name>
+        <qualifiedname>CBrockDisk::get_dpotl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="34" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ad45d2225cb9963a1beaeb0cdc3f128e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_pot_coefs</definition>
+        <argsstring>(int, const Eigen::VectorXd &amp;, double &amp;, double &amp;)</argsstring>
+        <name>get_pot_coefs</name>
+        <qualifiedname>CBrockDisk::get_pot_coefs</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="40" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a225b4790c1f5cd4610e2afec681457fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_pot_coefs_safe</definition>
+        <argsstring>(int, const Eigen::VectorXd &amp;, double &amp;, double &amp;, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;d)</argsstring>
+        <name>get_pot_coefs_safe</name>
+        <qualifiedname>CBrockDisk::get_pot_coefs_safe</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>const Eigen::VectorXd &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="43" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a84ecb958e172acbc425ad0cfa9a46e02" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_potl</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p)</argsstring>
+        <name>get_potl</name>
+        <qualifiedname>CBrockDisk::get_potl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="35" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a75897c31c0642108139c4e7eee0a6b76" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_potl_dens</definition>
+        <argsstring>(int lmax, int nmax, double r, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;d)</argsstring>
+        <name>get_potl_dens</name>
+        <qualifiedname>CBrockDisk::get_potl_dens</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="37" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ad1adc8bc5d5d86f5960b4172847f7935" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>CBrockDisk::initialize</qualifiedname>
+        <reimplements refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used by derived class to initialize any storage and parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="45" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a0c84bb7d7eb267269730c72abdb7872a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double CBrockDisk::norm</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>norm</name>
+        <qualifiedname>CBrockDisk::norm</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="38" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_brock_disk_1ac9faa6e3e97c0ff00a494152ca156be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CBrockDisk::CBrockDisk</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;conf, MixtureBasis *m=0)</argsstring>
+        <name>CBrockDisk</name>
+        <qualifiedname>CBrockDisk::CBrockDisk</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mixture_basis" kindref="compound">MixtureBasis</ref> *</type>
+          <declname>m</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the instantiating caller (<ref refid="class_component" kindref="compound">Component</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the parameter string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the <ref refid="class_mixture_basis" kindref="compound">MixtureBasis</ref> for a multicenter expansion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="91" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a072ab7de9fb5cd71f65fddffb73a7223" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_fields_at_point</definition>
+        <argsstring>(double x, double y, double z, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotX, double *tpotY, double *tpotZ)</argsstring>
+        <name>determine_fields_at_point</name>
+        <qualifiedname>CBrockDisk::determine_fields_at_point</qualifiedname>
+        <reimplements refid="class_basis_1a8d4bece8ddfe81223177e63d76779284">determine_fields_at_point</reimplements>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotX</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotY</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at arbitrary point in polar coordinates. Currently this is used to implement the required <computeroutput>determine_fields_at_point</computeroutput> members by ignoring the <computeroutput>z</computeroutput> coordinate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="107" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ab70d4326f206ae7f860c38b01da8b155" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_fields_at_point_cyl</definition>
+        <argsstring>(double r, double z, double phi, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotr, double *tpotz, double *tpotp)</argsstring>
+        <name>determine_fields_at_point_cyl</name>
+        <qualifiedname>CBrockDisk::determine_fields_at_point_cyl</qualifiedname>
+        <reimplements refid="class_basis_1a3bcc5e3250f82d0ce476b096eabf342a">determine_fields_at_point_cyl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotr</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotz</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at a point in cylindrical coordinates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="126" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a3cbfe51959a75a47868029551a98056e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_fields_at_point_polar</definition>
+        <argsstring>(double r, double phi, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotr, double *tpotp)</argsstring>
+        <name>determine_fields_at_point_polar</name>
+        <qualifiedname>CBrockDisk::determine_fields_at_point_polar</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotr</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="114" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a1105dff303169959c94d2898c7740e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::determine_fields_at_point_sph</definition>
+        <argsstring>(double r, double theta, double phi, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotr, double *tpott, double *tpotp)</argsstring>
+        <name>determine_fields_at_point_sph</name>
+        <qualifiedname>CBrockDisk::determine_fields_at_point_sph</qualifiedname>
+        <reimplements refid="class_basis_1a34f7d4340bcd0c5452f430cebf5c3665">determine_fields_at_point_sph</reimplements>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotr</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpott</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at a point in spherical coordinates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="119" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ad990d027c2795f3d31887620e945b258" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::dump_coefs</definition>
+        <argsstring>(ostream &amp;out)</argsstring>
+        <name>dump_coefs</name>
+        <qualifiedname>CBrockDisk::dump_coefs</qualifiedname>
+        <reimplements refid="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf">dump_coefs</reimplements>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Save coefficients to file (need type marker to id dump, component id?) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="133" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1a12712231bfccca298f3fa89126e127b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::dump_coefs_h5</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>dump_coefs_h5</name>
+        <qualifiedname>CBrockDisk::dump_coefs_h5</qualifiedname>
+        <reimplements refid="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c">dump_coefs_h5</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Save coefficients to HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="136" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1ab4ad38ef4a371e9adf418164a09b0684" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CBrockDisk::get_acceleration_and_potential</definition>
+        <argsstring>(Component *)</argsstring>
+        <name>get_acceleration_and_potential</name>
+        <qualifiedname>CBrockDisk::get_acceleration_and_potential</qualifiedname>
+        <reimplements refid="class_pot_accel_1ab78f20762031db204f636fc8e74ea986">get_acceleration_and_potential</reimplements>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Force evaluation called clients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="97" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_brock_disk_1aa99eae888f124ff056aa3e646215b578" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CBrockDisk::~CBrockDisk</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CBrockDisk</name>
+        <qualifiedname>CBrockDisk::~CBrockDisk</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="94" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This routine computes the potential, acceleration and density using the Clutton-Brock flat disk expansion </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CBrockDisk</label>
+        <link refid="class_c_brock_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CBrockDisk</label>
+        <link refid="class_c_brock_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mix</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="10">
+        <label>MixtureBasis</label>
+        <link refid="class_mixture_basis"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="11">
+        <label>TwoCenter</label>
+        <link refid="class_two_center"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>exp_in</edgelabel>
+          <edgelabel>exp_out</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mix_in</edgelabel>
+          <edgelabel>mix_out</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/CBrockDisk.H" line="17" column="1" bodyfile="/home/weinberg/Projects/EXP/src/CBrockDisk.H" bodystart="18" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>atol</name></member>
+      <member refid="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>AxisymmetricBasis</name></member>
+      <member refid="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>b_Hall</name></member>
+      <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>Basis</name></member>
+      <member refid="class_c_brock_disk_1ac9faa6e3e97c0ff00a494152ca156be8" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>CBrockDisk</name></member>
+      <member refid="class_c_brock_disk_1a369f1e8182b80770794716e2340c91ae" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cc</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>cC</name></member>
+      <member refid="class_c_brock_disk_1aa10706c4c19e5f427821a11ad2b41a8c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cc1</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>cc_lock</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>ClearExternal</name></member>
+      <member refid="class_c_brock_disk_1a0ea59f68a84031d83c86609f2b760b8b" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cmagic</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>coef_dump</name></member>
+      <member refid="class_c_brock_disk_1a0d15ed9aac37dd4aba2f7de714ef2495" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>coefMaster</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>compute</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>conf</name></member>
+      <member refid="class_c_brock_disk_1a247de583a4b1ab71942a08e316eede72" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cos_coef_lock</name></member>
+      <member refid="class_c_brock_disk_1a1398c8360b1c5f56a3512528f01a2507" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cosm</name></member>
+      <member refid="class_axisymmetric_basis_1a7bd4492f833f728f99891d38b7493631" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>covar</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>cudaAware</name></member>
+      <member refid="class_axisymmetric_basis_1a739cec07895fdd02850006d6a52639a8" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cuml</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a1dbf0ed28469f49a393a25a7b67753c3" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>CumulativeCut</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>current_keys</name></member>
+      <member refid="class_c_brock_disk_1a1986080f09d4e215f0b3a5d587b61155" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cylCoefs</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>cylinder</name></member>
+      <member refid="class_c_brock_disk_1af661588e863166600e9e4e48d623190f" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>cylmass0</name></member>
+      <member refid="class_axisymmetric_basis_1ad3b6c5272fa2aae68be0177ebb3f2edd" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>defSampT</name></member>
+      <member refid="class_c_brock_disk_1ae6d5df816481bc133db8d6270f4a30d0" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>dend</name></member>
+      <member refid="class_c_brock_disk_1a00f37c5ce057c8537d91dcd498fc785c" prot="private" virt="virtual"><scope>CBrockDisk</scope><name>determine_acceleration_and_potential</name></member>
+      <member refid="class_c_brock_disk_1a18d9afa579242f0788b6f1741f5627b7" prot="private" virt="virtual"><scope>CBrockDisk</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_c_brock_disk_1a86d2dd823c864264001c0f504e8340ad" prot="private" virt="virtual"><scope>CBrockDisk</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" virt="virtual" ambiguityscope="AxisymmetricBasis::"><scope>CBrockDisk</scope><name>determine_coefficients</name></member>
+      <member refid="class_c_brock_disk_1ac4ed2d04027116069917f50ce99eb7d5" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>determine_coefficients_particles</name></member>
+      <member refid="class_c_brock_disk_1a7d8b28475581b881d32a282d5bd5c581" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>determine_coefficients_playback</name></member>
+      <member refid="class_c_brock_disk_1a3c44852b0a6193b22fbdb998be59a1f0" prot="private" virt="virtual"><scope>CBrockDisk</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_c_brock_disk_1a072ab7de9fb5cd71f65fddffb73a7223" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>determine_fields_at_point</name></member>
+      <member refid="class_c_brock_disk_1ab70d4326f206ae7f860c38b01da8b155" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>determine_fields_at_point_cyl</name></member>
+      <member refid="class_c_brock_disk_1a3cbfe51959a75a47868029551a98056e" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>determine_fields_at_point_polar</name></member>
+      <member refid="class_c_brock_disk_1a1105dff303169959c94d2898c7740e18" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>determine_fields_at_point_sph</name></member>
+      <member refid="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>dlegendre_R</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>dof</name></member>
+      <member refid="class_c_brock_disk_1a215296901220bea3a1ae5c5b1d30ff9c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>dpot</name></member>
+      <member refid="class_c_brock_disk_1a4943da76965e3ee0ffb5602363110111" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>du</name></member>
+      <member refid="class_c_brock_disk_1ad990d027c2795f3d31887620e945b258" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>dump_coefs</name></member>
+      <member refid="class_c_brock_disk_1a12712231bfccca298f3fa89126e127b3" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_axisymmetric_basis_1a45362e008f1389402494647b75931e1e" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>eval</name></member>
+      <member refid="class_axisymmetric_basis_1ae30dc4a6d54a9b90dbe31e2b03821382" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>evec</name></member>
+      <member refid="class_c_brock_disk_1acb480518e732b65d8e4ce36a382b51b4" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>EVEN_M</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>exp_thread_fork</name></member>
+      <member refid="class_c_brock_disk_1a33853b32988ab47ca15296a70bbecfff" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoef</name></member>
+      <member refid="class_c_brock_disk_1a5d8fb59fdfc6053ec1844451e8d2d37d" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoef0</name></member>
+      <member refid="class_c_brock_disk_1a5c5d1725ad62f5847aef79243871900b" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoef1</name></member>
+      <member refid="class_axisymmetric_basis_1ad60eac81d3f5d960af091345128485a8" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefL</name></member>
+      <member refid="class_axisymmetric_basis_1acc9740eafab3aa6d3b935bb310c568bd" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefM</name></member>
+      <member refid="class_axisymmetric_basis_1a11d3819929833b80de31120b99912e96" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefM1</name></member>
+      <member refid="class_axisymmetric_basis_1abe415ce8067b52c57aeb4beccbd85d7f" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefN</name></member>
+      <member refid="class_c_brock_disk_1a8a732649c1b1ca49c0d11ba3bfdd0398" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefP</name></member>
+      <member refid="class_axisymmetric_basis_1acd8494e7bb875fc2c8677ca92a0c6f01" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefT</name></member>
+      <member refid="class_axisymmetric_basis_1a699990cc53ec82eb867cf9c85cb57f70" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>expcoefT1</name></member>
+      <member refid="class_axisymmetric_basis_1ae6dd8f205982c2e3ef87f6f467976018" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>fac02</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>geoname</name></member>
+      <member refid="class_c_brock_disk_1ab4ad38ef4a371e9adf418164a09b0684" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_c_brock_disk_1a1af05c45a1f4254f295e75bdd075f77d" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_dens</name></member>
+      <member refid="class_c_brock_disk_1aa71ebc95cec606bb9ccbdcae999b0589" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_dens_coefs</name></member>
+      <member refid="class_c_brock_disk_1aa917a4f764ad0df8183a226f7b186e8d" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_dpotl</name></member>
+      <member refid="class_c_brock_disk_1ad45d2225cb9963a1beaeb0cdc3f128e5" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_pot_coefs</name></member>
+      <member refid="class_c_brock_disk_1a225b4790c1f5cd4610e2afec681457fe" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_pot_coefs_safe</name></member>
+      <member refid="class_c_brock_disk_1a84ecb958e172acbc425ad0cfa9a46e02" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_potl</name></member>
+      <member refid="class_c_brock_disk_1a75897c31c0642108139c4e7eee0a6b76" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>get_potl_dens</name></member>
+      <member refid="class_axisymmetric_basis_1a81196ff99fb4254c4e37866ca3d2c7de" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>getCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1a392660898c9be95471072adb3f0faa25" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>getLmax</name></member>
+      <member refid="class_axisymmetric_basis_1ab09be7b0782949e27379ea930eb10171" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>getMmax</name></member>
+      <member refid="class_axisymmetric_basis_1a3026462dfa88e923d7673f3d56dc4de4" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>getNmax</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>getScale</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a355c2a93725cd932da5408330dec2a6b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>Hall</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>HaveCoefDump</name></member>
+      <member refid="class_axisymmetric_basis_1af0b7e5ba06a1acf652e61b9b4ecadfec" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>hexp</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>id</name></member>
+      <member refid="class_c_brock_disk_1ad1adc8bc5d5d86f5960b4172847f7935" prot="private" virt="virtual"><scope>CBrockDisk</scope><name>initialize</name></member>
+      <member refid="class_axisymmetric_basis_1abe6cac911f0415ee15378c104bd3fd16" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>inv</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>kill_mutex</name></member>
+      <member refid="class_axisymmetric_basis_1a77c3332bf7286f04c94af7d068c7b2c4" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>L0</name></member>
+      <member refid="class_c_brock_disk_1a99e27019c9b3d07460f31a93af88e6ed" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>lastPlayTime</name></member>
+      <member refid="class_axisymmetric_basis_1a570f3d24187073d3354933ace93a6bd6" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>Ldim</name></member>
+      <member refid="class_basis_1a80975218d67cc019d69fefb7a207d344" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>legendre_R</name></member>
+      <member refid="class_c_brock_disk_1a47ca997e5c7e567f4e88335b49ce0485" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>Lmax</name></member>
+      <member refid="class_c_brock_disk_1a808e0ff837481e01d1551c11ecc4803c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>M0_only</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>make_mutex</name></member>
+      <member refid="class_axisymmetric_basis_1a0c051b9729ad5af02ed9ca626b56d999" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>massT</name></member>
+      <member refid="class_axisymmetric_basis_1a695b88eea00afd8f04b80c7f08be1b82" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>massT1</name></member>
+      <member refid="class_axisymmetric_basis_1a4f7fd256528b06fa3124aa070e558c9a" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>MatrixP</name></member>
+      <member refid="class_c_brock_disk_1a34c8730c552cac8d7cf5c3fb744af6ad" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>mix</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>mlevel</name></member>
+      <member refid="class_axisymmetric_basis_1a2307130cf92a81e6cfb6f69fb2279585" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>Mmax</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>multistep_debug</name></member>
+      <member refid="class_axisymmetric_basis_1a93d8a3c0e104139477fec734a6baf8e6" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>multistep_reset</name></member>
+      <member refid="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>multistep_update</name></member>
+      <member refid="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>multistep_update_begin</name></member>
+      <member refid="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>multistep_update_finish</name></member>
+      <member refid="class_axisymmetric_basis_1a066a011ea1511b649a093b17a01bee1e" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>muse</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>nbodies</name></member>
+      <member refid="class_c_brock_disk_1af3e015b9faaa291817e75a76c9574e59" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>nmax</name></member>
+      <member refid="class_c_brock_disk_1ac4e6e40bd5200fe333403e7ace4030dc" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>NO_M0</name></member>
+      <member refid="class_c_brock_disk_1a55ffb89974c9ff99630830fc4f9678a5" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>NO_M1</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>NoCoefs</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a85300903a059bd6e3a193bd92112a16f" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>None</name></member>
+      <member refid="class_c_brock_disk_1a0c84bb7d7eb267269730c72abdb7872a" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>norm</name></member>
+      <member refid="class_c_brock_disk_1a2629b63efffff0594d5c0ded22b9931c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>normM</name></member>
+      <member refid="class_axisymmetric_basis_1afa81d9394890b9ebc0a7989651b021d9" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>npca</name></member>
+      <member refid="class_axisymmetric_basis_1a68be4e14ebd23388b75d8df12af76667" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>npca0</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>other</name></member>
+      <member refid="class_axisymmetric_basis_1a0ba9093da208645ba67931e04a61f4c7" prot="protected" virt="virtual"><scope>CBrockDisk</scope><name>parallel_distribute_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a1aba7be747336c8e6a67613a3109e285" prot="protected" virt="virtual"><scope>CBrockDisk</scope><name>parallel_gather_coef2</name></member>
+      <member refid="class_axisymmetric_basis_1a01ab8064885a073b48ad562790b89f86" prot="protected" virt="virtual"><scope>CBrockDisk</scope><name>parallel_gather_coefficients</name></member>
+      <member refid="class_axisymmetric_basis_1a408a19fff1093c88f6a9bcf9ad2601d4" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>pca_hall</name></member>
+      <member refid="class_axisymmetric_basis_1ae0353b5d1b82b19517ede95a862d7484" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>pca_hall_2d</name></member>
+      <member refid="class_axisymmetric_basis_1ab971c10417b2e844c9251d6a667103d4" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>pca_hall_3d</name></member>
+      <member refid="class_axisymmetric_basis_1aea08169a329b6608c42fdeeb1db91183" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>pcadiag</name></member>
+      <member refid="class_axisymmetric_basis_1af2a1f4efbdc887b29a6d49b770c1f060" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>pcaeof</name></member>
+      <member refid="class_axisymmetric_basis_1a8da7266925e30ee0056cf97e84d4809e" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>pcavar</name></member>
+      <member refid="class_axisymmetric_basis_1ad53aa251aa38d7645a4d3eece99dc9d5" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>pcavtk</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>play_cnew</name></member>
+      <member refid="class_c_brock_disk_1a08212298ba2fe9ef970285a94485430c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>playback</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>PotAccel</name></member>
+      <member refid="class_c_brock_disk_1a32aab31eb26c5b2c248118fef3ab09f1" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>potd</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>RegisterComponent</name></member>
+      <member refid="class_c_brock_disk_1a035828c4df82679a4a414933b68e6a6f" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>rmax</name></member>
+      <member refid="class_axisymmetric_basis_1a5116daa842c0f604c2a312db8e0ce97e" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>s_Hall</name></member>
+      <member refid="class_axisymmetric_basis_1a9e5bccb2a796e19083511f4e637cffda" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>sampT</name></member>
+      <member refid="class_c_brock_disk_1abae26982381956dfe4c7fb40bb2fd32c" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>scale</name></member>
+      <member refid="class_c_brock_disk_1a711d5c0ea0e8fb5aee90d448d4afd825" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>self_consistent</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>setScale</name></member>
+      <member refid="class_axisymmetric_basis_1a6af1bcb2359adc5091625d457a953efa" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>setTK</name></member>
+      <member refid="class_c_brock_disk_1a8aa25e38e517181ba429d52d954f9dcd" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>sin_coef_lock</name></member>
+      <member refid="class_basis_1a0779c0b0f74361d7861bbc19a194b63c" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>sinecosine_R</name></member>
+      <member refid="class_c_brock_disk_1a209428f9cb790412e7583dcbaea49670" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>sinm</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>slab</name></member>
+      <member refid="class_axisymmetric_basis_1a52873b88250c954ccca613fab178c5ee" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>smth</name></member>
+      <member refid="class_axisymmetric_basis_1ac4fce6a4930030f49b46844753ce3052" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>snr</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>sphere</name></member>
+      <member refid="class_axisymmetric_basis_1a2dd973d8ace9db32c65938425d159af9" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>sqnorm</name></member>
+      <member refid="class_axisymmetric_basis_1a592dd952d0301e3c55da82f78eb3cfe8" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>subsamp</name></member>
+      <member refid="class_axisymmetric_basis_1a8298f44c8cc6e6401b471c4a50c52662" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>swap_coefs</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>td</name></member>
+      <member refid="class_axisymmetric_basis_1a196db3f26a946c2dcbaabcbe31883b4a" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>Tevec</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>timer_list</name></member>
+      <member refid="class_axisymmetric_basis_1a3e85225ea1c3c408fe2bcf23ad09b555" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>tk_type</name></member>
+      <member refid="class_axisymmetric_basis_1a3a98442a6149253a6881c33cf6792e38" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>tkcum</name></member>
+      <member refid="class_axisymmetric_basis_1ad4dabce5bd04809a4644cb36705312f9" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>tksmooth</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>TKType</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>TList</name></member>
+      <member refid="class_axisymmetric_basis_1a8acdd32795c612cdcefee5da62cc5b3a" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>tvar</name></member>
+      <member refid="class_c_brock_disk_1a7943cdac146ca1d2f744b9f9cbf4aa7b" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>u</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>unmatched</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>use</name></member>
+      <member refid="class_c_brock_disk_1a887ac1dd5f27c671af0f53975d39f351" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>use0</name></member>
+      <member refid="class_c_brock_disk_1ae58e834b8446db7f0d0f54da9df71de9" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>use1</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>used</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>Used</name></member>
+      <member refid="class_c_brock_disk_1a3f59419da8520d8ed64b0fe07cee83e1" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>used_lock</name></member>
+      <member refid="class_c_brock_disk_1aa8df7e75d7868ba351aab3484cf33503" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>valid_keys</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a27bdb8b3a4040b794e7418581fda2615" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>VarianceCut</name></member>
+      <member refid="class_axisymmetric_basis_1a5665efe4d9ba08fd8e173a7aa6cf77b6a7381bdf9e2231e55827cf72d86f7f415" prot="public" virt="non-virtual"><scope>CBrockDisk</scope><name>VarianceWeighted</name></member>
+      <member refid="class_axisymmetric_basis_1a90258bc4c31858abd74719a452f7f807" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>VectorP</name></member>
+      <member refid="class_axisymmetric_basis_1ab0d1d51da0dc7f33cf3091bab41866d1" prot="protected" virt="non-virtual"><scope>CBrockDisk</scope><name>vtkfreq</name></member>
+      <member refid="class_axisymmetric_basis_1a3708ccfcde62cc3e88dbde5994d08f26" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>weight</name></member>
+      <member refid="class_c_brock_disk_1ae1eab22640fd005bcd88a8468dc943ba" prot="private" virt="non-virtual"><scope>CBrockDisk</scope><name>work</name></member>
+      <member refid="class_axisymmetric_basis_1a98dbe87cedd6dc28d03bba5aba133dd4" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>~AxisymmetricBasis</name></member>
+      <member refid="class_c_brock_disk_1aa99eae888f124ff056aa3e646215b578" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>~CBrockDisk</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>CBrockDisk</scope><name>~PotAccel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

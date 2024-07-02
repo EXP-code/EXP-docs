@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="include_2exp__thread_8h" kind="file" language="C++">
+    <compoundname>exp_thread.h</compoundname>
+    <includes local="no">pthread.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/exp_thread.h</label>
+        <link refid="include_2exp__thread_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pthread.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="include_2exp__thread_8h_1ae48298aaec9b7e7d899fa8c845967532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exp_thread_fork</definition>
+        <argsstring>(void *(*func)(void *), char *caller)</argsstring>
+        <name>exp_thread_fork</name>
+        <param>
+          <type>void *(*)(void *)</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>caller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/exp_thread.h" line="8" column="6" declfile="/home/weinberg/Projects/EXP/include/exp_thread.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2exp__thread_8h_1a83365789d3425fa17814ceef83c21919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill_mutex</definition>
+        <argsstring>(pthread_mutex_t *m, char *caller, char *name)</argsstring>
+        <name>kill_mutex</name>
+        <param>
+          <type>pthread_mutex_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/exp_thread.h" line="10" column="6" declfile="/home/weinberg/Projects/EXP/include/exp_thread.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2exp__thread_8h_1a2677869adef560fdfb885473e8a8862c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void make_mutex</definition>
+        <argsstring>(pthread_mutex_t *m, char *caller, char *name)</argsstring>
+        <name>make_mutex</name>
+        <param>
+          <type>pthread_mutex_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/exp_thread.h" line="9" column="6" declfile="/home/weinberg/Projects/EXP/include/exp_thread.h" declline="9" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="include_2exp__thread_8h_1ae48298aaec9b7e7d899fa8c845967532" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="include_2exp__thread_8h_1ae48298aaec9b7e7d899fa8c845967532" kindref="member">exp_thread_fork</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*(*func)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>caller);</highlight></codeline>
+<codeline lineno="9" refid="include_2exp__thread_8h_1a2677869adef560fdfb885473e8a8862c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="include_2exp__thread_8h_1a2677869adef560fdfb885473e8a8862c" kindref="member">make_mutex</ref>(pthread_mutex_t<sp/>*m,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*caller,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="10" refid="include_2exp__thread_8h_1a83365789d3425fa17814ceef83c21919" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="include_2exp__thread_8h_1a83365789d3425fa17814ceef83c21919" kindref="member">kill_mutex</ref>(pthread_mutex_t<sp/>*m,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*caller,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/exp_thread.h"/>
+  </compounddef>
+</doxygen>

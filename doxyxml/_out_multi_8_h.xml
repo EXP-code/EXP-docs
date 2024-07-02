@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_out_multi_8_h" kind="file" language="C++">
+    <compoundname>OutMulti.H</compoundname>
+    <includes refid="_out_multi_8_h" local="no">OutMulti.H</includes>
+    <includedby refid="_out_multi_8_h" local="no">/home/weinberg/Projects/EXP/src/OutMulti.H</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutMulti.H</label>
+        <link refid="_out_multi_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/src/OutMulti.H</label>
+        <link refid="_out_multi_8_h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_out_multi" prot="public">OutMulti</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OutMulti_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OutMulti_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_out_multi_8_h" kindref="compound">OutMulti.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_out_multi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_out_multi" kindref="compound">OutMulti</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_output" kindref="compound">Output</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_out_multi_1a27fdb1a3a3d5a7719d1280c3310e43e7" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_out_multi_1a27fdb1a3a3d5a7719d1280c3310e43e7" kindref="member">filename</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_out_multi_1a7c3711d07524a06dbe72c946c3322423" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_multi_1a7c3711d07524a06dbe72c946c3322423" kindref="member">initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_out_multi_1a1e77292ada50ca2379704f9bca0fdd9f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_out_multi_1a1e77292ada50ca2379704f9bca0fdd9f" kindref="member">prev</ref><sp/>=<sp/>-std::numeric_limits&lt;double&gt;::max();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_out_multi_1a39525b617da2a9af1e6844b5cdef9ef0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;<sp/><ref refid="class_out_multi_1a39525b617da2a9af1e6844b5cdef9ef0" kindref="member">valid_keys</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_out_multi_1affd458a59f9406787d48bd4e2305bbdc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_out_multi_1affd458a59f9406787d48bd4e2305bbdc" kindref="member">OutMulti</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;<sp/><ref refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" kindref="member">conf</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_out_multi_1a29ecce1f93c894116764968464d3e72b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_out_multi_1a29ecce1f93c894116764968464d3e72b" kindref="member">Run</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nstep,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8_h_1a88502f2706794e5f58c96bfa9a6287d0" kindref="member">mstep</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>last);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/src/OutMulti.H"/>
+  </compounddef>
+</doxygen>

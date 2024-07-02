@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_r_1_1_gadget_native" kind="class" language="C++" prot="public">
+    <compoundname>PR::GadgetNative</compoundname>
+    <basecompoundref refid="class_p_r_1_1_particle_reader" prot="public" virt="non-virtual">PR::ParticleReader</basecompoundref>
+    <includes refid="_particle_reader_8_h" local="no">ParticleReader.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1ac490d912e586b47ba6568d2c9c9ae692" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;::iterator</type>
+        <definition>std::vector&lt;std::string&gt;::iterator PR::GadgetNative::curfile</definition>
+        <argsstring></argsstring>
+        <name>curfile</name>
+        <qualifiedname>PR::GadgetNative::curfile</qualifiedname>
+        <briefdescription>
+<para>Current file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="109" column="28" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" compoundref="_particle_reader_8_h" startline="129" endline="143">SelectType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a12b10e7ce993cb63b34171631f861bec" prot="private" static="no" mutable="no">
+        <type><ref refid="structgadget__header" kindref="compound">gadget_header</ref></type>
+        <definition>gadget_header PR::GadgetNative::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <qualifiedname>PR::GadgetNative::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="97" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a891b33d7a2c7c192f8083570df74ff89" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PR::GadgetNative::mass[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>mass</name>
+        <qualifiedname>PR::GadgetNative::mass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="105" column="12" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1ac01f8a7d9c6597abf0d86da989c3c4eb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::GadgetNative::npart[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>npart</name>
+        <qualifiedname>PR::GadgetNative::npart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="106" column="9" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1aa06192c9d99310d7397003f64b647256" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::GadgetNative::nptot[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>nptot</name>
+        <qualifiedname>PR::GadgetNative::nptot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="106" column="15" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a53fcb4037f8424ab4932ca15f9a374ab" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>std::vector&lt;Particle&gt; PR::GadgetNative::particles</definition>
+        <argsstring></argsstring>
+        <name>particles</name>
+        <qualifiedname>PR::GadgetNative::particles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="101" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a11a6554a4ebf7771522ace196dff2cf7" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned PR::GadgetNative::pcount</definition>
+        <argsstring></argsstring>
+        <name>pcount</name>
+        <qualifiedname>PR::GadgetNative::pcount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="116" column="14" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1aff7b4a54be38839b5248a70472022a56" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::GadgetNative::Pfound</definition>
+        <argsstring></argsstring>
+        <name>Pfound</name>
+        <qualifiedname>PR::GadgetNative::Pfound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="113" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="113" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1a9122f85b25cb3e363870f89b7a969bb5" compoundref="_particle_reader_8_h" startline="149" endline="149">GetTypes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a26976f3909aa295f231598483a887efa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PR::GadgetNative::ptype</definition>
+        <argsstring></argsstring>
+        <name>ptype</name>
+        <qualifiedname>PR::GadgetNative::ptype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="114" column="9" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" compoundref="_particle_reader_8_h" startline="129" endline="143">SelectType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a0fa39690d0a499d2d8f129487cb43b86" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PR::GadgetNative::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>PR::GadgetNative::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="100" column="12" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1a354d4611ea99923c8622eb50ef27a569" compoundref="_particle_reader_8_h" startline="152" endline="152">CurrentTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1a3e3ccf543918d0458417bf442fda3797" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::GadgetNative::totalCount</definition>
+        <argsstring></argsstring>
+        <name>totalCount</name>
+        <qualifiedname>PR::GadgetNative::totalCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="98" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1acb886c19ac37c185a2c117ab817698ee" compoundref="_particle_reader_8_h" startline="146" endline="146">CurrentNumber</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1ab09aa004eb44c8c8cf8175bff54cdaf1" prot="private" static="yes" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; PR::GadgetNative::findP</definition>
+        <argsstring></argsstring>
+        <name>findP</name>
+        <qualifiedname>PR::GadgetNative::findP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="112" column="31" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="112" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" compoundref="_particle_reader_8_h" startline="129" endline="143">SelectType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_r_1_1_gadget_native_1ae2f0b535adea40ffe9e8913f2630cd57" prot="private" static="yes" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; PR::GadgetNative::Ptypes</definition>
+        <argsstring></argsstring>
+        <name>Ptypes</name>
+        <qualifiedname>PR::GadgetNative::Ptypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="111" column="24" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" compoundref="_particle_reader_8_h" startline="129" endline="143">SelectType</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1a9a3ca6128fa77fdbec189374672d80ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::GadgetNative::getNumbers</definition>
+        <argsstring>()</argsstring>
+        <name>getNumbers</name>
+        <qualifiedname>PR::GadgetNative::getNumbers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="119" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1af902478fe48655130bebcb746a7255c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PR::GadgetNative::nextFile</definition>
+        <argsstring>()</argsstring>
+        <name>nextFile</name>
+        <qualifiedname>PR::GadgetNative::nextFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="121" column="10"/>
+        <referencedby refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" compoundref="_particle_reader_8_h" startline="129" endline="143">SelectType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1aad3f1dde3ba8703572f4a112e5e11e52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::GadgetNative::packParticle</definition>
+        <argsstring>()</argsstring>
+        <name>packParticle</name>
+        <qualifiedname>PR::GadgetNative::packParticle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1a1b3d6384de8efdf3bc254d2b236a7a02" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PR::GadgetNative::read_and_load</definition>
+        <argsstring>()</argsstring>
+        <name>read_and_load</name>
+        <qualifiedname>PR::GadgetNative::read_and_load</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="117" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1acb886c19ac37c185a2c117ab817698ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long PR::GadgetNative::CurrentNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentNumber</name>
+        <qualifiedname>PR::GadgetNative::CurrentNumber</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1ad07059133f265c81866db1aad2026cdf">CurrentNumber</reimplements>
+        <briefdescription>
+<para>Number of particles in the chosen type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="146" column="19" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="146" bodyend="146"/>
+        <references refid="class_p_r_1_1_gadget_native_1a3e3ccf543918d0458417bf442fda3797" compoundref="_particle_reader_8_h" startline="98">totalCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1a354d4611ea99923c8622eb50ef27a569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PR::GadgetNative::CurrentTime</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentTime</name>
+        <qualifiedname>PR::GadgetNative::CurrentTime</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a10927485f5e04ee75096e70b52dca6a9">CurrentTime</reimplements>
+        <briefdescription>
+<para>Get current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="152" column="12" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="152" bodyend="152"/>
+        <references refid="class_p_r_1_1_gadget_native_1a0fa39690d0a499d2d8f129487cb43b86" compoundref="_particle_reader_8_h" startline="100">time</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1ac55817d77f80ccf30763ec5afa564c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::GadgetNative::firstParticle</definition>
+        <argsstring>()</argsstring>
+        <name>firstParticle</name>
+        <qualifiedname>PR::GadgetNative::firstParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a8b50438acca8230e8eb45a91781b9152">firstParticle</reimplements>
+        <briefdescription>
+<para>Reset to beginning of particles for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="155" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1a9deed42858112e1e979dc4a0e7ccf4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PR::GadgetNative::GadgetNative</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;file, bool verbose=false)</argsstring>
+        <name>GadgetNative</name>
+        <qualifiedname>PR::GadgetNative::GadgetNative</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="126" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1a9122f85b25cb3e363870f89b7a969bb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; PR::GadgetNative::GetTypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetTypes</name>
+        <qualifiedname>PR::GadgetNative::GetTypes</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1aaa7bdf2a176d8446e6229fd03256ab58">GetTypes</reimplements>
+        <briefdescription>
+<para>Return list of particle types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="149" column="17" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="149" bodyend="149"/>
+        <references refid="class_p_r_1_1_gadget_native_1aff7b4a54be38839b5248a70472022a56" compoundref="_particle_reader_8_h" startline="113">Pfound</references>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1acba766d12aa59d40490d77b805a86628" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_particle" kindref="compound">Particle</ref> *</type>
+        <definition>virtual const Particle * PR::GadgetNative::nextParticle</definition>
+        <argsstring>()</argsstring>
+        <name>nextParticle</name>
+        <qualifiedname>PR::GadgetNative::nextParticle</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a5768007e1583c7c59031fd611c699768">nextParticle</reimplements>
+        <briefdescription>
+<para>Get the next particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="158" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void PR::GadgetNative::SelectType</definition>
+        <argsstring>(const std::string &amp;type)</argsstring>
+        <name>SelectType</name>
+        <qualifiedname>PR::GadgetNative::SelectType</qualifiedname>
+        <reimplements refid="class_p_r_1_1_particle_reader_1a63c8f579270234489399e7e920ee59bd">SelectType</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Select a particular particle type and reset the iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="129" column="10" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="129" bodyend="143"/>
+        <references refid="class_p_r_1_1_gadget_native_1ac490d912e586b47ba6568d2c9c9ae692" compoundref="_particle_reader_8_h" startline="109">curfile</references>
+        <references refid="class_p_r_1_1_gadget_native_1ab09aa004eb44c8c8cf8175bff54cdaf1" compoundref="_particle_reader_8_h" startline="112">findP</references>
+        <references refid="class_p_r_1_1_gadget_native_1af902478fe48655130bebcb746a7255c7">nextFile</references>
+        <references refid="class_p_r_1_1_gadget_native_1a26976f3909aa295f231598483a887efa" compoundref="_particle_reader_8_h" startline="114">ptype</references>
+        <references refid="class_p_r_1_1_gadget_native_1ae2f0b535adea40ffe9e8913f2630cd57" compoundref="_particle_reader_8_h" startline="111">Ptypes</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PR::GadgetNative</label>
+        <link refid="class_p_r_1_1_gadget_native"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PR::GadgetNative</label>
+        <link refid="class_p_r_1_1_gadget_native"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PR::ParticleReader</label>
+        <link refid="class_p_r_1_1_particle_reader"/>
+      </node>
+      <node id="3">
+        <label>gadget_header</label>
+        <link refid="structgadget__header"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/ParticleReader.H" line="95" column="3" bodyfile="/home/weinberg/Projects/EXP/include/ParticleReader.H" bodystart="96" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_p_r_1_1_particle_reader_1a0965aecd1dbd2f6fbd1cfb868f9e4723" prot="public" virt="non-virtual"><scope>PR::GadgetNative</scope><name>createReader</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1ac490d912e586b47ba6568d2c9c9ae692" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>curfile</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1acb886c19ac37c185a2c117ab817698ee" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>CurrentNumber</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a354d4611ea99923c8622eb50ef27a569" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>CurrentTime</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1ab09aa004eb44c8c8cf8175bff54cdaf1" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>findP</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1ac55817d77f80ccf30763ec5afa564c6b" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>firstParticle</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a9deed42858112e1e979dc4a0e7ccf4ed" prot="public" virt="non-virtual"><scope>PR::GadgetNative</scope><name>GadgetNative</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a9a3ca6128fa77fdbec189374672d80ec" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>getNumbers</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a9122f85b25cb3e363870f89b7a969bb5" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>GetTypes</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a12b10e7ce993cb63b34171631f861bec" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>header</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a891b33d7a2c7c192f8083570df74ff89" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>mass</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a30a2c6bf1215b5a1898f610d66e2f597" prot="protected" virt="non-virtual"><scope>PR::GadgetNative</scope><name>myid</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1af902478fe48655130bebcb746a7255c7" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>nextFile</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1acba766d12aa59d40490d77b805a86628" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>nextParticle</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1ac01f8a7d9c6597abf0d86da989c3c4eb" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>npart</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1aa06192c9d99310d7397003f64b647256" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>nptot</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1abeb9841e4af7a88c1cf1293c7d59dfd7" prot="protected" virt="non-virtual"><scope>PR::GadgetNative</scope><name>numprocs</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1aad3f1dde3ba8703572f4a112e5e11e52" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>packParticle</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1af5d10d72983a64c933650656ab8e616c" prot="public" virt="non-virtual"><scope>PR::GadgetNative</scope><name>parseFileList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a7ae979e31716b0cdf44f6da87f11d853" prot="public" virt="non-virtual"><scope>PR::GadgetNative</scope><name>parseStringList</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1aff014ecb55fcf3bfdb2e4596ddbc8b20" prot="public" virt="non-virtual"><scope>PR::GadgetNative</scope><name>ParticleReader</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a53fcb4037f8424ab4932ca15f9a374ab" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>particles</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a11a6554a4ebf7771522ace196dff2cf7" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>pcount</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1aff7b4a54be38839b5248a70472022a56" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>Pfound</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1ab23fba530a517ea46bd6f68fa46c659c" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>PrintSummary</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a26976f3909aa295f231598483a887efa" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>ptype</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1ae2f0b535adea40ffe9e8913f2630cd57" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>Ptypes</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a1b3d6384de8efdf3bc254d2b236a7a02" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>read_and_load</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a6d0293092f653021b87b779bb2d20bc2" prot="protected" virt="non-virtual"><scope>PR::GadgetNative</scope><name>readerTypes</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1aea9565e7a8acc89cc3c327a542fff04e" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>SelectType</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a0fa39690d0a499d2d8f129487cb43b86" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>time</name></member>
+      <member refid="class_p_r_1_1_gadget_native_1a3e3ccf543918d0458417bf442fda3797" prot="private" virt="non-virtual"><scope>PR::GadgetNative</scope><name>totalCount</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a321c230acfa8d63e36166e2789cb001a" prot="protected" virt="non-virtual"><scope>PR::GadgetNative</scope><name>use_mpi</name></member>
+      <member refid="class_p_r_1_1_particle_reader_1a44664d520e38091ae61b53340fe9ec3e" prot="public" virt="virtual"><scope>PR::GadgetNative</scope><name>~ParticleReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

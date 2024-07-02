@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="modules" kind="page">
+    <compoundname>modules</compoundname>
+    <title>User loadable modules</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>One may derive classes from <ref refid="class_external_force" kindref="compound">ExternalForce</ref> that may be built as dynamic modules that may be loaded and instantiatied as needed. Modules are built in the <computeroutput>src/user</computeroutput> directory. There are only a few steps necessary to put one&apos;s code in the tree: <orderedlist>
+<listitem>
+<para>Write the code (see below for additional details</para>
+<para></para>
+</listitem>
+<listitem>
+<para>Edit <computeroutput>Makefile.am</computeroutput>. Assume you module is called <computeroutput>foo</computeroutput> and is implemented in the following source files <computeroutput>foo1.cc</computeroutput> and <computeroutput>foo2.cc</computeroutput>. Change the following lines: <itemizedlist>
+<listitem>
+<para>Add <computeroutput>libfoo.la</computeroutput> to the <computeroutput>lib_LTLIBRARIES</computeroutput> list </para>
+</listitem>
+<listitem>
+<para>Add a new line: <computeroutput>libfoo_la_SOURCES = foo1.cc foo2.cc</computeroutput> </para>
+</listitem>
+<listitem>
+<para>(Optional) Add a new line to define any libraries needed to link your code, e.g.: <computeroutput>libfoo_la_LDFLAGS = -lstdc++</computeroutput> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para>Compile the code: <computeroutput>make</computeroutput> </para>
+</listitem>
+<listitem>
+<para>Install the code in the location defined by your configure script: <computeroutput>make install</computeroutput> <linebreak/>
+ </para>
+</listitem>
+</orderedlist>
+</para>
+<para><heading level="3">Notes on writing your module</heading>
+</para>
+<para>A good place to start is the code already in the <computeroutput>src/user</computeroutput> directory. The simplest code is UserTest.cc; this does nothing but print messages but illustrates all of the necessary components.</para>
+<para>All classes, of course, must derive from <ref refid="class_external_force" kindref="compound">ExternalForce</ref>. A quick look at <ref refid="_external_force_8_h" kindref="compound">ExternalForce.H</ref> will show that you will need to implement at least the member <preformatted>determine_acceleration_and_potential_thread()</preformatted>. In order to parse command line parameters, you will also need a constructor and <preformatted>initialize()</preformatted> and maybe a destructor.</para>
+<para>In addition, there is a mechanism that identifies your new class to the <computeroutput>exp</computeroutput>. This has two parts. First you must define a C function which constructs an instance of your class and returns a pointer. Using the C calling interface here gets around the problem of name demangling in C++ in using the dynamic linking loader (there may be a more transparent way to do this, but this trick seems to work just fine). You will notice an addtional class at the end of the file called <computeroutput>proxy</computeroutput>. An instance of this simple class is instantiated when the module is loaded (the last line in the file). As a byproduct, a pointer to the function <computeroutput>makeTest()</computeroutput> is is added to the factory map defined in <ref refid="_external_force_8_h" kindref="compound">ExternalForce.H</ref>. This function can then be invoked by name in the code to create an instance of your class. You can simply copy this to your own source (changing <computeroutput>makerTest</computeroutput> to <computeroutput>makerFoo</computeroutput> or someother unique name).</para>
+<para><heading level="3">Add and destroying particles</heading>
+</para>
+<para>User modules can add and destroy particles from any component.</para>
+<para>You can add a particle by calling the <computeroutput><ref refid="class_component_1a4b11b2f976f09eef885414f2bb9ab214" kindref="member">Component::GetNewPart()</ref></computeroutput> member function. This function returns a pointer to the new particle and enters the particle in the component&apos;s particle list. It is the responsibility of the user module to add the mass, positions, velocities, and any required auxialliary attributtes.</para>
+<para>You can add a particle with shared pointer <computeroutput>p</computeroutput> by calling the <computeroutput><ref refid="class_component_1af429f6c5a793b0b7014557c0942e75f4" kindref="member">Component::DestroyPart(PartPtr p)</ref></computeroutput> member function. This function removes the particle from the component&apos;s particle list and level list structures. </para>
+    </detaileddescription>
+    <location file="modules.doc"/>
+  </compounddef>
+</doxygen>

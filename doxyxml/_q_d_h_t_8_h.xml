@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_q_d_h_t_8_h" kind="file" language="C++">
+    <compoundname>QDHT.H</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes refid="_e_x_pmath_8_h" local="no">EXPmath.H</includes>
+    <includedby refid="_pot_r_z_8_h" local="no">/home/weinberg/Projects/EXP/include/PotRZ.H</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>EXPmath.H</label>
+        <link refid="_e_x_pmath_8_h"/>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/QDHT.H</label>
+        <link refid="_q_d_h_t_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/PotRZ.H</label>
+        <link refid="_pot_r_z_8_h"/>
+      </node>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/QDHT.H</label>
+        <link refid="_q_d_h_t_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_q_d_h_t" prot="public">QDHT</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_QDHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_QDHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_e_x_pmath_8_h" kindref="compound">EXPmath.H</ref>&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>C++17<sp/>special<sp/>function<sp/>workarounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_q_d_h_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_q_d_h_t" kindref="compound">QDHT</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_q_d_h_t_1a6f81dbb61d456d837817e0053f3c2642" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a6f81dbb61d456d837817e0053f3c2642" kindref="member">nu</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_q_d_h_t_1ab07dcd2fae26d4bab6478e059f916a05" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1ab07dcd2fae26d4bab6478e059f916a05" kindref="member">N</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_q_d_h_t_1abe2b9013a76fc60975234f27a84d85be" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_q_d_h_t_1abe2b9013a76fc60975234f27a84d85be" kindref="member">zeros</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_q_d_h_t_1ad350bcdbde90afc8c1ad8cbfb30d9e40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1ad350bcdbde90afc8c1ad8cbfb30d9e40" kindref="member">R</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_q_d_h_t_1a89c0fd5b8e935c6dfd211a552c75491f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a89c0fd5b8e935c6dfd211a552c75491f" kindref="member">S</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_q_d_h_t_1a4b2903fc891ffffa654cbf47d1a3a1b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a4b2903fc891ffffa654cbf47d1a3a1b9" kindref="member">V</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_q_d_h_t_1a4f2f28e649bd561f522665157db2de42" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_q_d_h_t_1a2bb30d6ed32fa4a76dfd913abe6a8426" kindref="member">r</ref>,<sp/><ref refid="class_q_d_h_t_1a4f2f28e649bd561f522665157db2de42" kindref="member">k</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_q_d_h_t_1a8ee835705733e89ef097c315fdaca455" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_q_d_h_t_1a8ee835705733e89ef097c315fdaca455" kindref="member">Jp</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_q_d_h_t_1a82780d3255fae4851e5af3f1431ab33c" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::MatrixXd<sp/><ref refid="class_q_d_h_t_1a82780d3255fae4851e5af3f1431ab33c" kindref="member">T</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="class_q_d_h_t_1a32f95b71d2282c91ad1bd73a298d9415" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a32f95b71d2282c91ad1bd73a298d9415" kindref="member">debug</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_q_d_h_t_1a2e7abe4211e480193147f33e1265ad4f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_q_d_h_t_1a2e7abe4211e480193147f33e1265ad4f" kindref="member">QDHT</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_q_d_h_t_1a1c39b08bbdf5d2cbaac7899178c2054a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_q_d_h_t_1a1c39b08bbdf5d2cbaac7899178c2054a" kindref="member">QDHT</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1ab07dcd2fae26d4bab6478e059f916a05" kindref="member">N</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1ad350bcdbde90afc8c1ad8cbfb30d9e40" kindref="member">R</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_q_d_h_t_1a7932acbac720db1014040776691c58a5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_q_d_h_t_1a7932acbac720db1014040776691c58a5" kindref="member">~QDHT</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_q_d_h_t_1a6522df4c3a36e4f3f4368c889aacd7c4" refkind="member"><highlight class="normal"><sp/><sp/>Eigen::VectorXd<sp/><ref refid="class_q_d_h_t_1a6522df4c3a36e4f3f4368c889aacd7c4" kindref="member">operator()</ref>(Eigen::VectorXd&amp;<sp/>v,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>forward=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_q_d_h_t_1a1d7d6dc619bcf5b232db6a06052786ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a1d7d6dc619bcf5b232db6a06052786ea" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a2bb30d6ed32fa4a76dfd913abe6a8426" kindref="member">r</ref>,<sp/>Eigen::VectorXd&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_q_d_h_t_1a3698a331a45c81e36acc1b23e8e51861" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/><ref refid="class_q_d_h_t_1a3698a331a45c81e36acc1b23e8e51861" kindref="member">getR</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a2bb30d6ed32fa4a76dfd913abe6a8426" kindref="member">r</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_q_d_h_t_1a544bb6c7f92c9b89b14e77893a384a3b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::VectorXd&amp;<sp/><ref refid="class_q_d_h_t_1a544bb6c7f92c9b89b14e77893a384a3b" kindref="member">getK</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a4f2f28e649bd561f522665157db2de42" kindref="member">k</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_q_d_h_t_1a36c39f3231a2b6576a8b22ea93c12bf5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_q_d_h_t_1a36c39f3231a2b6576a8b22ea93c12bf5" kindref="member">check</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>END:<sp/>_QDHT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/QDHT.H"/>
+  </compounddef>
+</doxygen>

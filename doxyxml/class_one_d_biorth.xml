@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_one_d_biorth" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>OneDBiorth</compoundname>
+    <basecompoundref refid="class_biorth" prot="public" virt="non-virtual">Biorth</basecompoundref>
+    <derivedcompoundref refid="class_one_d_trig" prot="public" virt="non-virtual">OneDTrig</derivedcompoundref>
+    <includes refid="biorth1d_8_h" local="no">biorth1d.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_one_d_biorth_1af70cf7ccaf62402fd4e606f411c7dc67" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OneDBiorth::dof</definition>
+        <argsstring></argsstring>
+        <name>dof</name>
+        <qualifiedname>OneDBiorth::dof</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="18" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_one_d_biorth_1a492850ea00b9899b4e6b0609058d4798" compoundref="biorth1d_8_h" startline="53" endline="53">get_dof</referencedby>
+        <referencedby refid="class_one_d_biorth_1a9a6ab640327a3176156ba1185285972b" compoundref="biorth1d_8_h" startline="25" endline="25">OneDBiorth</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_one_d_biorth_1a55f1ed49d0ff2061da9879eecbc969ef" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OneDBiorth::kx</definition>
+        <argsstring></argsstring>
+        <name>kx</name>
+        <qualifiedname>OneDBiorth::kx</qualifiedname>
+        <briefdescription>
+<para>Vertical wave number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_one_d_biorth_1a56bae6b72ea0f8610148ace0fe9cc1e5" compoundref="biorth1d_8_h" startline="62" endline="62">reset_kx</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_one_d_biorth_1a717ed674c0b38e64c8ddb49f93f75ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::d_r_to_rb</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>d_r_to_rb</name>
+        <qualifiedname>OneDBiorth::d_r_to_rb</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a817e19c77d92480bbc23e7075a77f3bb">d_r_to_rb</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+<para>Jacobian of mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="45" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a7ce54ca54b7d1fdebebfc9d33d8899e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::dens</definition>
+        <argsstring>(const int, const int, const double)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>OneDBiorth::dens</qualifiedname>
+        <reimplements refid="class_biorth_1ae6bb6919cb7f72259d5ad36946f1f088">dens</reimplements>
+        <reimplementedby refid="class_one_d_trig_1a87f04d45ce73f86b46ccd5bdd588995c">dens</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Get density basis value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="31" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1ae93f7afbc1cea06e48e52776dba8f8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void OneDBiorth::dens</definition>
+        <argsstring>(const int, const int, const double, Eigen::VectorXd &amp;)=0</argsstring>
+        <name>dens</name>
+        <qualifiedname>OneDBiorth::dens</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a708a816fd858746e7a0678559d708cb4">dens</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+<para>Write density basis into a vetor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="38" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1ad6f2ecad8488030f0014c76f08ebb9c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::get_dens</definition>
+        <argsstring>(double r, int l, Eigen::VectorXd &amp;coef)=0</argsstring>
+        <name>get_dens</name>
+        <qualifiedname>OneDBiorth::get_dens</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a6fa91945fa5bf0d1d58057b991a8b3b0">get_dens</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Return value of density for given coefficient vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="59" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a492850ea00b9899b4e6b0609058d4798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int OneDBiorth::get_dof</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_dof</name>
+        <qualifiedname>OneDBiorth::get_dof</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Number of degrees of freedom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="53" column="7" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="53" bodyend="53"/>
+        <references refid="class_one_d_biorth_1af70cf7ccaf62402fd4e606f411c7dc67" compoundref="biorth1d_8_h" startline="18">dof</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a9830ba054b67c3d937cfb1a589280dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::get_potl</definition>
+        <argsstring>(double r, int l, Eigen::VectorXd &amp;coef)=0</argsstring>
+        <name>get_potl</name>
+        <qualifiedname>OneDBiorth::get_potl</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a675aa26eb078cd958c7df931cbd3a389">get_potl</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Return value of poential for given coefficient vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="56" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a9a6ab640327a3176156ba1185285972b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OneDBiorth::OneDBiorth</definition>
+        <argsstring>(void)</argsstring>
+        <name>OneDBiorth</name>
+        <qualifiedname>OneDBiorth::OneDBiorth</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="25" column="3" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="25" bodyend="25"/>
+        <references refid="class_one_d_biorth_1af70cf7ccaf62402fd4e606f411c7dc67" compoundref="biorth1d_8_h" startline="18">dof</references>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a29e8b3603be9cf51b2ac0e0597fd9194" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::potl</definition>
+        <argsstring>(const int, const int, const double)=0</argsstring>
+        <name>potl</name>
+        <qualifiedname>OneDBiorth::potl</qualifiedname>
+        <reimplements refid="class_biorth_1a26e01c406def571a76990d1fc1a02b7f">potl</reimplements>
+        <reimplementedby refid="class_one_d_trig_1a250a1bbe08ff11c6c84174f152b3c4bc">potl</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Get potential basis value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="28" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1afe2e38095f8f845c2d3a2d15baef5f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void OneDBiorth::potl</definition>
+        <argsstring>(const int, const int, const double, Eigen::VectorXd &amp;)=0</argsstring>
+        <name>potl</name>
+        <qualifiedname>OneDBiorth::potl</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1abe39f657af1bcac087459abef1896771">potl</reimplementedby>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const int</type>
+        </param>
+        <param>
+          <type>const double</type>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+        </param>
+        <briefdescription>
+<para>Write potential basis into a vetor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="36" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a4ec842bc4c47aa4d5a976ab9defdd227" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::r_to_rb</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>r_to_rb</name>
+        <qualifiedname>OneDBiorth::r_to_rb</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a419be6419b012e0ce639ba6846ce64b9">r_to_rb</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+<para>Dimensional to non-dimensional coordinate map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1ae8644eb78f3064b06b8dfc457c35587c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::rb_max</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>rb_max</name>
+        <qualifiedname>OneDBiorth::rb_max</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a742687e9dce7bc39caf319c680062c8c">rb_max</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Maximum value in non-dimensional mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1ae46ca1a70ee9e8bcfbaed70ffbaad258" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::rb_min</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>rb_min</name>
+        <qualifiedname>OneDBiorth::rb_min</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1a76826d3ef15f01cc682fc262fa20f626">rb_min</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Minimum value in non-dimensional mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="48" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a40b62743370db78cfb34961324b17e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double OneDBiorth::rb_to_r</definition>
+        <argsstring>(double const)=0</argsstring>
+        <name>rb_to_r</name>
+        <qualifiedname>OneDBiorth::rb_to_r</qualifiedname>
+        <reimplementedby refid="class_one_d_trig_1ace41f6c3a124efa6cf66503a61fe4744">rb_to_r</reimplementedby>
+        <param>
+          <type>double const</type>
+        </param>
+        <briefdescription>
+<para>Non-dimensional to dimensional coordinate map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="41" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_d_biorth_1a56bae6b72ea0f8610148ace0fe9cc1e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneDBiorth::reset_kx</definition>
+        <argsstring>(double KX)</argsstring>
+        <name>reset_kx</name>
+        <qualifiedname>OneDBiorth::reset_kx</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>KX</declname>
+        </param>
+        <briefdescription>
+<para>Reset vertical wave number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="62" column="8" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="62" bodyend="62"/>
+        <references refid="class_one_d_biorth_1a55f1ed49d0ff2061da9879eecbc969ef" compoundref="biorth1d_8_h" startline="22">kx</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>One-dimensional biorthgonal basis. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>OneDBiorth</label>
+        <link refid="class_one_d_biorth"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OneDTrig</label>
+        <link refid="class_one_d_trig"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Biorth</label>
+        <link refid="class_biorth"/>
+      </node>
+      <node id="1">
+        <label>OneDBiorth</label>
+        <link refid="class_one_d_biorth"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/biorth1d.H" line="15" column="1" bodyfile="/home/weinberg/Projects/EXP/include/biorth1d.H" bodystart="16" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_biorth_1a2e936fa39b497ab4f2316f7b6bd2f226" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>BiorthID</name></member>
+      <member refid="class_biorth_1a3331c0ec9dabbed562c32c3d59c7b1bb" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>bomb</name></member>
+      <member refid="class_one_d_biorth_1a717ed674c0b38e64c8ddb49f93f75ee5" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>d_r_to_rb</name></member>
+      <member refid="class_one_d_biorth_1a7ce54ca54b7d1fdebebfc9d33d8899e5" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>dens</name></member>
+      <member refid="class_one_d_biorth_1ae93f7afbc1cea06e48e52776dba8f8db" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>dens</name></member>
+      <member refid="class_one_d_biorth_1af70cf7ccaf62402fd4e606f411c7dc67" prot="private" virt="non-virtual"><scope>OneDBiorth</scope><name>dof</name></member>
+      <member refid="class_one_d_biorth_1ad6f2ecad8488030f0014c76f08ebb9c8" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>get_dens</name></member>
+      <member refid="class_one_d_biorth_1a492850ea00b9899b4e6b0609058d4798" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>get_dof</name></member>
+      <member refid="class_one_d_biorth_1a9830ba054b67c3d937cfb1a589280dbd" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>get_potl</name></member>
+      <member refid="class_biorth_1a732367609f458cf4128bb37f2641c30b" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>id</name></member>
+      <member refid="class_biorth_1a582200336065fac43a3282ee0671cffb" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>krnl</name></member>
+      <member refid="class_one_d_biorth_1a55f1ed49d0ff2061da9879eecbc969ef" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>kx</name></member>
+      <member refid="class_biorth_1a4997a44fb308362868547f4eb0f23c5a" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>norm</name></member>
+      <member refid="class_one_d_biorth_1a9a6ab640327a3176156ba1185285972b" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>OneDBiorth</name></member>
+      <member refid="class_one_d_biorth_1a29e8b3603be9cf51b2ac0e0597fd9194" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>potl</name></member>
+      <member refid="class_one_d_biorth_1afe2e38095f8f845c2d3a2d15baef5f2e" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>potl</name></member>
+      <member refid="class_one_d_biorth_1a4ec842bc4c47aa4d5a976ab9defdd227" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>r_to_rb</name></member>
+      <member refid="class_one_d_biorth_1ae8644eb78f3064b06b8dfc457c35587c" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>rb_max</name></member>
+      <member refid="class_one_d_biorth_1ae46ca1a70ee9e8bcfbaed70ffbaad258" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>rb_min</name></member>
+      <member refid="class_one_d_biorth_1a40b62743370db78cfb34961324b17e7f" prot="public" virt="pure-virtual"><scope>OneDBiorth</scope><name>rb_to_r</name></member>
+      <member refid="class_one_d_biorth_1a56bae6b72ea0f8610148ace0fe9cc1e5" prot="public" virt="non-virtual"><scope>OneDBiorth</scope><name>reset_kx</name></member>
+      <member refid="class_biorth_1a83c4824d7003048794102f54152cfdbc" prot="public" virt="virtual"><scope>OneDBiorth</scope><name>~Biorth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

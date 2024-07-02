@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_find_orb" kind="class" language="C++" prot="public">
+    <compoundname>FindOrb</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt;</basecompoundref>
+    <includes refid="_find_orb_8_h" local="no">FindOrb.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_find_orb_1abef92f272111db238ee0c0443eeff459" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::apo</definition>
+        <argsstring></argsstring>
+        <name>apo</name>
+        <qualifiedname>FindOrb::apo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="21" column="10" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1ab78532c8b5365d93002b164ffad6aa75" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::Emax</definition>
+        <argsstring></argsstring>
+        <name>Emax</name>
+        <qualifiedname>FindOrb::Emax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="20" column="25" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a8609c6e01a619e40db0394e1e2c930f5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::Emin</definition>
+        <argsstring></argsstring>
+        <name>Emin</name>
+        <qualifiedname>FindOrb::Emin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="20" column="20" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a5c1963ffe47aa3a92a8434dffb7d2bf9" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AxiSymModel&gt; FindOrb::halo_model</definition>
+        <argsstring></argsstring>
+        <name>halo_model</name>
+        <qualifiedname>FindOrb::halo_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="18" column="22" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a6e72b54846d362b1b34a6d8b52865e5d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::Kmax</definition>
+        <argsstring></argsstring>
+        <name>Kmax</name>
+        <qualifiedname>FindOrb::Kmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="20" column="15" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a4fde914b4caafa7a05eb834753a1cbff" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::Kmin</definition>
+        <argsstring></argsstring>
+        <name>Kmin</name>
+        <qualifiedname>FindOrb::Kmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="20" column="10" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a364de6e1c2b7beb559ac7490b37c6744" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FindOrb::maxit</definition>
+        <argsstring></argsstring>
+        <name>maxit</name>
+        <qualifiedname>FindOrb::maxit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="23" column="7" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1aee96ff7eca636b1dc2773184a2d1270a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::melt</definition>
+        <argsstring></argsstring>
+        <name>melt</name>
+        <qualifiedname>FindOrb::melt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="22" column="15" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1adaf6d5d0ed3f5edae681b2cb4aee3171" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_spherical_orbit" kindref="compound">SphericalOrbit</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SphericalOrbit&gt; FindOrb::orb</definition>
+        <argsstring></argsstring>
+        <name>orb</name>
+        <qualifiedname>FindOrb::orb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="17" column="19" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_find_orb_1a2ee2cbd0107340d78e9e0742b77953de" compoundref="_find_orb_8_h" startline="51" endline="51">Orb</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a1bc9ff07e6bcf226e4b11b90556d5df5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::peri</definition>
+        <argsstring></argsstring>
+        <name>peri</name>
+        <qualifiedname>FindOrb::peri</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="21" column="14" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a556ec502d7b3b6b0bcca57d12f2b9aa5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <qualifiedname>FindOrb::rate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_find_orb_1afe569eef08149bd2960d2c509f309aa6" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::EFAC</definition>
+        <argsstring></argsstring>
+        <name>EFAC</name>
+        <qualifiedname>FindOrb::EFAC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="37" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1ab847f9d03d3ea267544cc89a49c08dcf" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::KMAX</definition>
+        <argsstring></argsstring>
+        <name>KMAX</name>
+        <qualifiedname>FindOrb::KMAX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="33" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a5e8ea20f31452f2ec5af72ea7755850d" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::KMIN</definition>
+        <argsstring></argsstring>
+        <name>KMIN</name>
+        <qualifiedname>FindOrb::KMIN</qualifiedname>
+        <briefdescription>
+<para>Defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="32" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a6d038e4980807120048af21c483366ad" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int FindOrb::MAXIT</definition>
+        <argsstring></argsstring>
+        <name>MAXIT</name>
+        <qualifiedname>FindOrb::MAXIT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="34" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a30e86bbc901ba7702c691a04f2a8799d" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool FindOrb::MELT</definition>
+        <argsstring></argsstring>
+        <name>MELT</name>
+        <qualifiedname>FindOrb::MELT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="35" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a383f40793e9b14ee86be365305d8f3e5" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::RATE</definition>
+        <argsstring></argsstring>
+        <name>RATE</name>
+        <qualifiedname>FindOrb::RATE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="36" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_find_orb_1a03a256981bb4917198b16651dcc2603b" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double FindOrb::T0</definition>
+        <argsstring></argsstring>
+        <name>T0</name>
+        <qualifiedname>FindOrb::T0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="38" column="17" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_find_orb_1a9cd8a8e4eba0eca8ff3a2b309e762fbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FindOrb::mapvars</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;, double &amp;ee, double &amp;kk)</argsstring>
+        <name>mapvars</name>
+        <qualifiedname>FindOrb::mapvars</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ee</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="25" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_find_orb_1ac577617c5ffcabc2a9542c0afdafca0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FindOrb::operator()</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;ek)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>FindOrb::operator()</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>ek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="26" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_find_orb_1a02785568e04e5a1665ac5de3f7a31dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_orb_values" kindref="compound">OrbValues</ref></type>
+        <definition>OrbValues FindOrb::Anneal</definition>
+        <argsstring>()</argsstring>
+        <name>Anneal</name>
+        <qualifiedname>FindOrb::Anneal</qualifiedname>
+        <briefdescription>
+<para>Do the work! </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="48" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_find_orb_1a24beff1f157f81b5626869bb92f57033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FindOrb::FindOrb</definition>
+        <argsstring>(std::shared_ptr&lt; AxiSymModel &gt; mod, double PERI, double APO)</argsstring>
+        <name>FindOrb</name>
+        <qualifiedname>FindOrb::FindOrb</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_axi_sym_model" kindref="compound">AxiSymModel</ref> &gt;</type>
+          <declname>mod</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PERI</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>APO</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="42" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_find_orb_1a2ee2cbd0107340d78e9e0742b77953de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spherical_orbit" kindref="compound">SphericalOrbit</ref> &amp;</type>
+        <definition>SphericalOrbit &amp; FindOrb::Orb</definition>
+        <argsstring>()</argsstring>
+        <name>Orb</name>
+        <qualifiedname>FindOrb::Orb</qualifiedname>
+        <briefdescription>
+<para>Return the orbit instance (presumably now at minimum) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="51" column="18" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="51" bodyend="51"/>
+        <references refid="class_find_orb_1adaf6d5d0ed3f5edae681b2cb4aee3171" compoundref="_find_orb_8_h" startline="17">orb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_find_orb_1a5483d48e12dc5875b095d8e1ab988b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FindOrb::~FindOrb</definition>
+        <argsstring>()</argsstring>
+        <name>~FindOrb</name>
+        <qualifiedname>FindOrb::~FindOrb</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="45" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FindOrb</label>
+        <link refid="class_find_orb"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FindOrb</label>
+        <link refid="class_find_orb"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::function&lt; double(std::vector&lt; double &gt; &amp;)&gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/FindOrb.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/FindOrb.H" bodystart="15" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_find_orb_1a02785568e04e5a1665ac5de3f7a31dce" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>Anneal</name></member>
+      <member refid="class_find_orb_1abef92f272111db238ee0c0443eeff459" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>apo</name></member>
+      <member refid="class_find_orb_1afe569eef08149bd2960d2c509f309aa6" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>EFAC</name></member>
+      <member refid="class_find_orb_1ab78532c8b5365d93002b164ffad6aa75" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>Emax</name></member>
+      <member refid="class_find_orb_1a8609c6e01a619e40db0394e1e2c930f5" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>Emin</name></member>
+      <member refid="class_find_orb_1a24beff1f157f81b5626869bb92f57033" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>FindOrb</name></member>
+      <member refid="class_find_orb_1a5c1963ffe47aa3a92a8434dffb7d2bf9" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>halo_model</name></member>
+      <member refid="class_find_orb_1ab847f9d03d3ea267544cc89a49c08dcf" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>KMAX</name></member>
+      <member refid="class_find_orb_1a6e72b54846d362b1b34a6d8b52865e5d" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>Kmax</name></member>
+      <member refid="class_find_orb_1a5e8ea20f31452f2ec5af72ea7755850d" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>KMIN</name></member>
+      <member refid="class_find_orb_1a4fde914b4caafa7a05eb834753a1cbff" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>Kmin</name></member>
+      <member refid="class_find_orb_1a9cd8a8e4eba0eca8ff3a2b309e762fbe" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>mapvars</name></member>
+      <member refid="class_find_orb_1a364de6e1c2b7beb559ac7490b37c6744" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>maxit</name></member>
+      <member refid="class_find_orb_1a6d038e4980807120048af21c483366ad" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>MAXIT</name></member>
+      <member refid="class_find_orb_1aee96ff7eca636b1dc2773184a2d1270a" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>melt</name></member>
+      <member refid="class_find_orb_1a30e86bbc901ba7702c691a04f2a8799d" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>MELT</name></member>
+      <member refid="class_find_orb_1ac577617c5ffcabc2a9542c0afdafca0c" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>operator()</name></member>
+      <member refid="class_find_orb_1adaf6d5d0ed3f5edae681b2cb4aee3171" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>orb</name></member>
+      <member refid="class_find_orb_1a2ee2cbd0107340d78e9e0742b77953de" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>Orb</name></member>
+      <member refid="class_find_orb_1a1bc9ff07e6bcf226e4b11b90556d5df5" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>peri</name></member>
+      <member refid="class_find_orb_1a556ec502d7b3b6b0bcca57d12f2b9aa5" prot="private" virt="non-virtual"><scope>FindOrb</scope><name>rate</name></member>
+      <member refid="class_find_orb_1a383f40793e9b14ee86be365305d8f3e5" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>RATE</name></member>
+      <member refid="class_find_orb_1a03a256981bb4917198b16651dcc2603b" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>T0</name></member>
+      <member refid="class_find_orb_1a5483d48e12dc5875b095d8e1ab988b7e" prot="public" virt="non-virtual"><scope>FindOrb</scope><name>~FindOrb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

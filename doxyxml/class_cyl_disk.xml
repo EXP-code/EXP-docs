@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_cyl_disk" kind="class" language="C++" prot="public">
+    <compoundname>CylDisk</compoundname>
+    <basecompoundref refid="class_axi_sym_model" prot="public" virt="non-virtual">AxiSymModel</basecompoundref>
+    <includes refid="_cyl_disk_8_h" local="no">CylDisk.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" prot="private" static="no" mutable="no">
+        <type><ref refid="class_emp_cyl_s_l" kindref="compound">EmpCylSL</ref> *</type>
+        <definition>EmpCylSL* CylDisk::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>CylDisk::d</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="18" column="12" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" compoundref="_cyl_disk_8_h" startline="32" endline="41">CylDisk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; CylDisk::dd</definition>
+        <argsstring></argsstring>
+        <name>dd</name>
+        <qualifiedname>CylDisk::dd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="22" column="13" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" compoundref="_cyl_disk_8_h" startline="53" endline="58">get_density</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CylDisk::dr</definition>
+        <argsstring></argsstring>
+        <name>dr</name>
+        <qualifiedname>CylDisk::dr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="23" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a5a00b733696c58f0929af0a377c1aca7" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; CylDisk::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <qualifiedname>CylDisk::mm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="22" column="16" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" compoundref="_cyl_disk_8_h" startline="46" endline="51">get_mass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; CylDisk::pp</definition>
+        <argsstring></argsstring>
+        <name>pp</name>
+        <qualifiedname>CylDisk::pp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="22" column="19" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" compoundref="_cyl_disk_8_h" startline="68" endline="73">get_dpot</referencedby>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" compoundref="_cyl_disk_8_h" startline="60" endline="65">get_pot</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CylDisk::rlog</definition>
+        <argsstring></argsstring>
+        <name>rlog</name>
+        <qualifiedname>CylDisk::rlog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="21" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" compoundref="_cyl_disk_8_h" startline="53" endline="58">get_density</referencedby>
+        <referencedby refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" compoundref="_cyl_disk_8_h" startline="68" endline="73">get_dpot</referencedby>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" compoundref="_cyl_disk_8_h" startline="46" endline="51">get_mass</referencedby>
+        <referencedby refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" compoundref="_cyl_disk_8_h" startline="60" endline="65">get_pot</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CylDisk::rmax</definition>
+        <argsstring></argsstring>
+        <name>rmax</name>
+        <qualifiedname>CylDisk::rmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="23" column="18" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1" compoundref="_cyl_disk_8_h" startline="107" endline="110">get_max_radius</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CylDisk::rmin</definition>
+        <argsstring></argsstring>
+        <name>rmin</name>
+        <qualifiedname>CylDisk::rmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="23" column="13" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c" compoundref="_cyl_disk_8_h" startline="103" endline="106">get_min_radius</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; CylDisk::rr</definition>
+        <argsstring></argsstring>
+        <name>rr</name>
+        <qualifiedname>CylDisk::rr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="22" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" compoundref="_cyl_disk_8_h" startline="53" endline="58">get_density</referencedby>
+        <referencedby refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" compoundref="_cyl_disk_8_h" startline="68" endline="73">get_dpot</referencedby>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" compoundref="_cyl_disk_8_h" startline="46" endline="51">get_mass</referencedby>
+        <referencedby refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" compoundref="_cyl_disk_8_h" startline="60" endline="65">get_pot</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">get_pot_dpot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int CylDisk::NUMR</definition>
+        <argsstring></argsstring>
+        <name>NUMR</name>
+        <qualifiedname>CylDisk::NUMR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="28" column="14" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" compoundref="_cyl_disk_8_h" startline="75" endline="85">get_dpot2</referencedby>
+        <referencedby refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" compoundref="_cyl_disk_8_h" startline="87" endline="99">get_pot_dpot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cyl_disk_1a7cc9a87e8ee93e542068e4696b8877ea" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool CylDisk::RLOG</definition>
+        <argsstring></argsstring>
+        <name>RLOG</name>
+        <qualifiedname>CylDisk::RLOG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="30" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CylDisk::setup_model</definition>
+        <argsstring>(double rmin, double rmax)</argsstring>
+        <name>setup_model</name>
+        <qualifiedname>CylDisk::setup_model</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="19" column="8"/>
+        <referencedby refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" compoundref="_cyl_disk_8_h" startline="32" endline="41">CylDisk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CylDisk::CylDisk</definition>
+        <argsstring>(EmpCylSL *D, double Rmin, double Rmax)</argsstring>
+        <name>CylDisk</name>
+        <qualifiedname>CylDisk::CylDisk</qualifiedname>
+        <param>
+          <type><ref refid="class_emp_cyl_s_l" kindref="compound">EmpCylSL</ref> *</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Rmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Rmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="32" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="32" bodyend="41"/>
+        <references refid="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" compoundref="_cyl_disk_8_h" startline="18">d</references>
+        <references refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" compoundref="massmodel_8_h" startline="79">MassModel::dim</references>
+        <references refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" compoundref="massmodel_8_h" startline="165">AxiSymModel::dist_defined</references>
+        <references refid="class_mass_model_1acf360c000464aca6299bc47894672d70" compoundref="massmodel_8_h" startline="81">MassModel::ModelID</references>
+        <references refid="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a">setup_model</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1a0da36c44b6817549006433de12916474" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::d2fde2</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>d2fde2</name>
+        <qualifiedname>CylDisk::d2fde2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a12d39568c81a72b9e3ea2277816d05f9">d2fde2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="127" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="127" bodyend="130"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1af0e30c235213217773f8d8267642b9e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::dfde</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfde</name>
+        <qualifiedname>CylDisk::dfde</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a2978a19f299f41fdea7e3cefc1164e3a">dfde</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="117" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="117" bodyend="120"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1aa154476667df93960f11db39c913c5da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::dfdl</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>dfdl</name>
+        <qualifiedname>CylDisk::dfdl</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a120cec5af54e43d727f83df8678cc93b">dfdl</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="122" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="122" bodyend="125"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1ae9ef54bc692ed877ea1a6521eca9cf2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::distf</definition>
+        <argsstring>(double E, double L)</argsstring>
+        <name>distf</name>
+        <qualifiedname>CylDisk::distf</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a5530c3612f1c09c6c77401a9e21550b8">distf</reimplements>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="112" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="112" bodyend="115"/>
+        <references refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" compoundref="massmodel_8_h" startline="100" endline="105">MassModel::bomb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_density</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_density</name>
+        <qualifiedname>CylDisk::get_density</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1afe871e6b3d1dee86e7f045262559f69a">get_density</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="53" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="53" bodyend="58"/>
+        <references refid="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" compoundref="_cyl_disk_8_h" startline="22">dd</references>
+        <references refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c">odd2</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_dpot</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_dpot</name>
+        <qualifiedname>CylDisk::get_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1acc81caff799658620cd3075a2104d845">get_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="68" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="68" bodyend="73"/>
+        <references refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d">drv2</references>
+        <references refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" compoundref="_cyl_disk_8_h" startline="22">pp</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_dpot2</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_dpot2</name>
+        <qualifiedname>CylDisk::get_dpot2</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a77b9bb693457557d379167ca0ca2caae">get_dpot2</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="75" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="75" bodyend="85"/>
+        <references refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" compoundref="_cyl_disk_8_h" startline="23">dr</references>
+        <references refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" compoundref="_cyl_disk_8_h" startline="28">NUMR</references>
+        <references refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" compoundref="_cyl_disk_8_h" startline="22">pp</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+        <references refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614">Vlocate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_mass</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_mass</name>
+        <qualifiedname>CylDisk::get_mass</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a7d2efb78351c828250fd6bfc1b3a7465">get_mass</reimplements>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+<para>Access the profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="46" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="46" bodyend="51"/>
+        <references refid="class_cyl_disk_1a5a00b733696c58f0929af0a377c1aca7" compoundref="_cyl_disk_8_h" startline="22">mm</references>
+        <references refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c">odd2</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_max_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_max_radius</name>
+        <qualifiedname>CylDisk::get_max_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a87510a095e6b9533812eba57c7ca862c">get_max_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="107" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="107" bodyend="110"/>
+        <references refid="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" compoundref="_cyl_disk_8_h" startline="23">rmax</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_min_radius</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_min_radius</name>
+        <qualifiedname>CylDisk::get_min_radius</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1ab304897a450a2d79f4e27841526b70e9">get_min_radius</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="103" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="103" bodyend="106"/>
+        <references refid="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" compoundref="_cyl_disk_8_h" startline="23">rmin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double CylDisk::get_pot</definition>
+        <argsstring>(const double r)</argsstring>
+        <name>get_pot</name>
+        <qualifiedname>CylDisk::get_pot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a1c0583421a9f67665aa9157cbe16bbba">get_pot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="60" column="10" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="60" bodyend="65"/>
+        <references refid="interp_8_h_1a72e302630a423bfa1c4bb0d0af8db14c">odd2</references>
+        <references refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" compoundref="_cyl_disk_8_h" startline="22">pp</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void CylDisk::get_pot_dpot</definition>
+        <argsstring>(const double r, double &amp;ur, double &amp;dur)</argsstring>
+        <name>get_pot_dpot</name>
+        <qualifiedname>CylDisk::get_pot_dpot</qualifiedname>
+        <reimplements refid="class_axi_sym_model_1a4fc766458a1f45b3ece0410b2c85b632">get_pot_dpot</reimplements>
+        <param>
+          <type>const double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ur</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="87" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="87" bodyend="99"/>
+        <references refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" compoundref="_cyl_disk_8_h" startline="23">dr</references>
+        <references refid="interp_8_h_1aff85f732fb51d39630aea9fc48cf5c9d">drv2</references>
+        <references refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" compoundref="_cyl_disk_8_h" startline="28">NUMR</references>
+        <references refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" compoundref="_cyl_disk_8_h" startline="22">pp</references>
+        <references refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" compoundref="_cyl_disk_8_h" startline="21">rlog</references>
+        <references refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" compoundref="_cyl_disk_8_h" startline="22">rr</references>
+        <references refid="interp_8_h_1aef43f105ecadc0dd19c4be25d0398614">Vlocate</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CylDisk</label>
+        <link refid="class_cyl_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ANGLE_GRID</label>
+        <link refid="struct_a_n_g_l_e___g_r_i_d"/>
+      </node>
+      <node id="2">
+        <label>AxiSymModel</label>
+        <link refid="class_axi_sym_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gen_orb</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>CylCoefHeader</label>
+        <link refid="struct_cyl_coef_header"/>
+      </node>
+      <node id="1">
+        <label>CylDisk</label>
+        <link refid="class_cyl_disk"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>d</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EmpCylSL</label>
+        <link refid="class_emp_cyl_s_l"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>coefheadercyl</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>cosL</edgelabel>
+          <edgelabel>cosN</edgelabel>
+          <edgelabel>sinL</edgelabel>
+          <edgelabel>sinN</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>covV</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>covM</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>densRg</edgelabel>
+          <edgelabel>massRg</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>EmpCylSL::CoefMatrix</label>
+        <link refid="struct_emp_cyl_s_l_1_1_coef_matrix"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>EmpCylSL::CoefVector</label>
+        <link refid="struct_emp_cyl_s_l_1_1_coef_vector"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>EmpCylSL::MstepArray</label>
+        <link refid="struct_emp_cyl_s_l_1_1_mstep_array"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GaussQuad</label>
+        <link refid="class_gauss_quad"/>
+      </node>
+      <node id="18">
+        <label>Interp1d</label>
+        <link refid="class_interp1d"/>
+      </node>
+      <node id="17">
+        <label>Linear1d</label>
+        <link refid="class_linear1d"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MassModel</label>
+        <link refid="class_mass_model"/>
+      </node>
+      <node id="6">
+        <label>RegularOrbit</label>
+        <link refid="class_regular_orbit"/>
+      </node>
+      <node id="5">
+        <label>SphericalOrbit</label>
+        <link refid="class_spherical_orbit"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>angle_grid</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Gkn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; AxiSymModel &gt;</label>
+      </node>
+      <node id="12">
+        <label>std::vector&lt; VectorD2ptr &gt;</label>
+      </node>
+      <node id="16">
+        <label>std::vector&lt; std::vector&lt; MatrixM &gt; &gt;</label>
+      </node>
+      <node id="14">
+        <label>std::vector&lt; std::vector&lt; VectorM &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/ICs/CylDisk.H" bodystart="15" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_axi_sym_model_1ac0df4b049522622b8ac3c4b087be83a5" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>AxiSymModel</name></member>
+      <member refid="class_mass_model_1a6e55e3cb2647fcc4840e969768930b9f" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>bomb</name></member>
+      <member refid="class_cyl_disk_1aa7f980839ab56946643178c66df0e964" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>CylDisk</name></member>
+      <member refid="class_cyl_disk_1ae3d1fa808b1fdf1a280e37a163cd9a39" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>d</name></member>
+      <member refid="class_cyl_disk_1a0da36c44b6817549006433de12916474" prot="public" virt="virtual"><scope>CylDisk</scope><name>d2fde2</name></member>
+      <member refid="class_cyl_disk_1ab50bd04c5cc065a02bd416b7e8a12753" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>dd</name></member>
+      <member refid="class_mass_model_1afd175166ced6f7768342b631f983eb1a" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>defined</name></member>
+      <member refid="class_axi_sym_model_1a3556ad7640450879dd0d3d922c2cf6b9" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>dEgrid</name></member>
+      <member refid="class_cyl_disk_1af0e30c235213217773f8d8267642b9e9" prot="public" virt="virtual"><scope>CylDisk</scope><name>dfde</name></member>
+      <member refid="class_cyl_disk_1aa154476667df93960f11db39c913c5da" prot="public" virt="virtual"><scope>CylDisk</scope><name>dfdl</name></member>
+      <member refid="class_mass_model_1a80ab2b1813fdbbaf30f70d1089f2316d" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>dim</name></member>
+      <member refid="class_axi_sym_model_1a71a6a479380a41b28b633b1252550a7c" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>dist_defined</name></member>
+      <member refid="class_cyl_disk_1ae9ef54bc692ed877ea1a6521eca9cf2e" prot="public" virt="virtual"><scope>CylDisk</scope><name>distf</name></member>
+      <member refid="class_axi_sym_model_1a526eabe43c3685815c0fab271accbe32" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>dKgrid</name></member>
+      <member refid="class_mass_model_1a92409cb4786626a1beb92bea71d05846" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>dof</name></member>
+      <member refid="class_cyl_disk_1a342c906c2bf5cc8c1d1d74d3bedb1413" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>dr</name></member>
+      <member refid="class_axi_sym_model_1a86935282f15c2976cd9d5faef793d63e" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Egrid</name></member>
+      <member refid="class_axi_sym_model_1aedf45b15e0286153ef407f957a1eebf7" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>EgridMass</name></member>
+      <member refid="class_axi_sym_model_1a8ee767a8941390c7816d9c1c27bb4334" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Emax_grid</name></member>
+      <member refid="class_axi_sym_model_1acf573aca18c8e1687d639133d5710ea7" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Emin_grid</name></member>
+      <member refid="class_axi_sym_model_1aeda764e1f1145cf03bc79e89cb5f28ee" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Gauss</name></member>
+      <member refid="class_axi_sym_model_1af60c7d2a97b4e2242ece29ba77f990a8" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_E</name></member>
+      <member refid="class_axi_sym_model_1a85758608cec039affbc42c2ad3390056" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_ecut</name></member>
+      <member refid="class_axi_sym_model_1a89d1c8c1a334e17d164229404284b1aa" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_EJ</name></member>
+      <member refid="class_axi_sym_model_1ad3e1a1fcfe55dfa0f9332673faaad460" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_firstime</name></member>
+      <member refid="class_axi_sym_model_1a0256603484bb0820fe8ec15cc0f88a84" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_firstime_E</name></member>
+      <member refid="class_axi_sym_model_1a16b08425c760dcb7fe24635c05a4d9b1" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_firstime_jeans</name></member>
+      <member refid="class_axi_sym_model_1a5b9f30c0297a19e48806f53aa6b9d68e" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_fmax</name></member>
+      <member refid="class_axi_sym_model_1aaf38968f265e18cf20e403041279435c" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_fomax</name></member>
+      <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_itmax</name></member>
+      <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_K</name></member>
+      <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_logr</name></member>
+      <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_mass</name></member>
+      <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_N</name></member>
+      <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_orb</name></member>
+      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>CylDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>CylDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>CylDisk</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>CylDisk</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>gen_rloc</name></member>
+      <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_rmin</name></member>
+      <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_tolE</name></member>
+      <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>gen_tolK</name></member>
+      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>CylDisk</scope><name>gen_velocity</name></member>
+      <member refid="class_cyl_disk_1ae1834978ae1f35cccf035bde739a0100" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>CylDisk</scope><name>get_density</name></member>
+      <member refid="class_cyl_disk_1ad4ff5ae0adcc35a7e9326e87e48c43c2" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_dpot</name></member>
+      <member refid="class_cyl_disk_1aa08e6a84c54e052dfe816567b1352e45" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_dpot2</name></member>
+      <member refid="class_cyl_disk_1aea08fe9de8e203398ef0ac6e583b09cf" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>CylDisk</scope><name>get_mass</name></member>
+      <member refid="class_cyl_disk_1ac786069b5009aaba3c29d12044f1b4f1" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_max_radius</name></member>
+      <member refid="class_cyl_disk_1a0a7c0a769ddb247e134a4cf7197e992c" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_min_radius</name></member>
+      <member refid="class_cyl_disk_1a69c0c5c4932ea5a27a4035693f77e7c0" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>CylDisk</scope><name>get_pot</name></member>
+      <member refid="class_cyl_disk_1afe2f6caf2101d6b855548411a2d52a8a" prot="public" virt="virtual"><scope>CylDisk</scope><name>get_pot_dpot</name></member>
+      <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Jmax</name></member>
+      <member refid="class_axi_sym_model_1a95335dec87e9759cfb620c1cafb10a83" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Kgrid</name></member>
+      <member refid="class_cyl_disk_1a5a00b733696c58f0929af0a377c1aca7" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>mm</name></member>
+      <member refid="class_mass_model_1acf360c000464aca6299bc47894672d70" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>ModelID</name></member>
+      <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>numj</name></member>
+      <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>numr</name></member>
+      <member refid="class_cyl_disk_1ae7fe915b285ac150a5f2a73b11d6dafd" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>NUMR</name></member>
+      <member refid="class_cyl_disk_1a731dcfcde91257bfd153ddd106240fac" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>pp</name></member>
+      <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Rgrid</name></member>
+      <member refid="class_cyl_disk_1a7cc9a87e8ee93e542068e4696b8877ea" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>RLOG</name></member>
+      <member refid="class_cyl_disk_1a6a91d3c1451f8c9d2add04af68e37179" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>rlog</name></member>
+      <member refid="class_cyl_disk_1ae58a1c9cc465a7b980b83cbadec2b366" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>rmax</name></member>
+      <member refid="class_cyl_disk_1a7c268fc3b7230eca1337d96438186c9c" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>rmin</name></member>
+      <member refid="class_cyl_disk_1aad9d74d1bc5c93560d5424e9a185700a" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>rr</name></member>
+      <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>set_Ecut</name></member>
+      <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>CylDisk</scope><name>set_itmax</name></member>
+      <member refid="class_cyl_disk_1a647a54ae7b8de7f60bc31a05daa6ba3a" prot="private" virt="non-virtual"><scope>CylDisk</scope><name>setup_model</name></member>
+      <member refid="class_axi_sym_model_1a4d9c94aa4ebf8308dbb660e9f53093e1" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>Unit</name></member>
+      <member refid="class_axi_sym_model_1a624c90f1d36963b7b023b9818a41b43b" prot="protected" virt="non-virtual"><scope>CylDisk</scope><name>wrvector</name></member>
+      <member refid="class_axi_sym_model_1ac9a6c290463cfe45d95656d37c0c45f8" prot="public" virt="virtual"><scope>CylDisk</scope><name>~AxiSymModel</name></member>
+      <member refid="class_mass_model_1a95c0338ca07d1b2ea284c3c2605dc9b8" prot="public" virt="virtual"><scope>CylDisk</scope><name>~MassModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

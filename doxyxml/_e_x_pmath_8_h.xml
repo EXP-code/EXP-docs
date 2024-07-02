@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_e_x_pmath_8_h" kind="file" language="C++">
+    <compoundname>EXPmath.H</compoundname>
+    <includedby refid="_q_d_h_t_8_h" local="no">/home/weinberg/Projects/EXP/include/QDHT.H</includedby>
+    <includedby refid="_bess_8_h" local="no">/home/weinberg/Projects/EXP/utils/PhaseSpace/Bess.H</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/weinberg/Projects/EXP/include/EXPmath.H</label>
+        <link refid="_e_x_pmath_8_h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/weinberg/Projects/EXP/include/PotRZ.H</label>
+        <link refid="_pot_r_z_8_h"/>
+      </node>
+      <node id="2">
+        <label>/home/weinberg/Projects/EXP/include/QDHT.H</label>
+        <link refid="_q_d_h_t_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/utils/PhaseSpace/Bess.H</label>
+        <link refid="_bess_8_h"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_alt_math">AltMath</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Work<sp/>around<sp/>for<sp/>incomplete<sp/>C++17<sp/>special<sp/>function<sp/>implementations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Yes,<sp/>CLANG,<sp/>I<sp/>mean<sp/>you!<sp/><sp/>Come<sp/>on...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>you<sp/>are<sp/>using<sp/>anything<sp/>but<sp/>CLANG,<sp/>you<sp/>will<sp/>get<sp/>the<sp/>C++17<sp/>STL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>implementation<sp/>of<sp/>special<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_EXPmath_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_EXPmath_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespace_alt_math" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_alt_math" kindref="compound">AltMath</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="namespace_alt_math_1ac42ad664c538dbbdded58b375019a34e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_alt_math_1ac42ad664c538dbbdded58b375019a34e" kindref="member">cyl_bessel_i</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nu,<sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="14" refid="namespace_alt_math_1aaa2e959ee26a82a285ec0809aebf0d3a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_alt_math_1aaa2e959ee26a82a285ec0809aebf0d3a" kindref="member">cyl_bessel_j</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nu,<sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="15" refid="namespace_alt_math_1a29ac5a4960bc49847b8955bd2f449d3c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_alt_math_1a29ac5a4960bc49847b8955bd2f449d3c" kindref="member">cyl_bessel_k</ref><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nu,<sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="16" refid="namespace_alt_math_1ab1f245db359cef31db6898333186bb97" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_alt_math_1ab1f245db359cef31db6898333186bb97" kindref="member">sph_bessel</ref><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="17" refid="namespace_alt_math_1a4351f4a311e7737d65583bab04db5ed7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_alt_math_1a4351f4a311e7737d65583bab04db5ed7" kindref="member">assoc_laguerre</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__clang__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EXPmath<sp/>=<sp/><ref refid="namespace_alt_math" kindref="compound">AltMath</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EXPmath<sp/>=<sp/>std;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/weinberg/Projects/EXP/include/EXPmath.H"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classlargest_values" kind="class" language="C++" prot="public">
+    <compoundname>largestValues</compoundname>
+    <includes refid="largest_8_h" local="no">largest.H</includes>
+    <templateparamlist>
+      <param>
+        <type>class U</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlargest_values_1aa281b8f0458b01c2e8d77c995baffb46" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int largestValues&lt; U &gt;::maxSize</definition>
+        <argsstring></argsstring>
+        <name>maxSize</name>
+        <qualifiedname>largestValues::maxSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="50" column="7" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classlargest_values_1a0464850f712edff25999b530d77c429f" compoundref="largest_8_h" startline="17" endline="28">largestValues&lt; U &gt;::operator()</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classlargest_values_1a415295691baa182aff9819d24c0622a0" prot="private" static="no" mutable="no">
+        <type>std::priority_queue&lt; U, std::vector&lt; U &gt;, std::greater&lt; U &gt; &gt;</type>
+        <definition>std::priority_queue&lt;U, std::vector&lt;U&gt;, std::greater&lt;U&gt; &gt; largestValues&lt; U &gt;::pq</definition>
+        <argsstring></argsstring>
+        <name>pq</name>
+        <qualifiedname>largestValues::pq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="49" column="23" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classlargest_values_1a270980481483b26273f3ce69fa9c62f0" compoundref="largest_8_h" startline="43" endline="45">largestValues&lt; U &gt;::clear</referencedby>
+        <referencedby refid="classlargest_values_1a662b1f515af03b151f90623cabfe567e" compoundref="largest_8_h" startline="31" endline="40">largestValues&lt; U &gt;::getValues</referencedby>
+        <referencedby refid="classlargest_values_1a0464850f712edff25999b530d77c429f" compoundref="largest_8_h" startline="17" endline="28">largestValues&lt; U &gt;::operator()</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlargest_values_1a270980481483b26273f3ce69fa9c62f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void largestValues&lt; U &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>largestValues::clear</qualifiedname>
+        <briefdescription>
+<para>Empty the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="43" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="43" bodyend="45"/>
+        <references refid="classlargest_values_1a415295691baa182aff9819d24c0622a0" compoundref="largest_8_h" startline="49">largestValues&lt; U &gt;::pq</references>
+      </memberdef>
+      <memberdef kind="function" id="classlargest_values_1a662b1f515af03b151f90623cabfe567e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; U &gt;</type>
+        <definition>std::vector&lt; U &gt; largestValues&lt; U &gt;::getValues</definition>
+        <argsstring>()</argsstring>
+        <name>getValues</name>
+        <qualifiedname>largestValues::getValues</qualifiedname>
+        <briefdescription>
+<para>Get the current list of values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="31" column="15" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="31" bodyend="40"/>
+        <references refid="classlargest_values_1a415295691baa182aff9819d24c0622a0" compoundref="largest_8_h" startline="49">largestValues&lt; U &gt;::pq</references>
+      </memberdef>
+      <memberdef kind="function" id="classlargest_values_1a41a76e5a53d653d25a2ef560fc5497b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>largestValues&lt; U &gt;::largestValues</definition>
+        <argsstring>(int size)</argsstring>
+        <name>largestValues</name>
+        <qualifiedname>largestValues::largestValues</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Construtor: size is the desired size of the heap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="14" column="3" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlargest_values_1a0464850f712edff25999b530d77c429f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void largestValues&lt; U &gt;::operator()</definition>
+        <argsstring>(U data)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>largestValues::operator()</qualifiedname>
+        <param>
+          <type>U</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Add a new value set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="17" column="8" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="17" bodyend="28"/>
+        <references refid="classlargest_values_1aa281b8f0458b01c2e8d77c995baffb46" compoundref="largest_8_h" startline="50">largestValues&lt; U &gt;::maxSize</references>
+        <references refid="classlargest_values_1a415295691baa182aff9819d24c0622a0" compoundref="largest_8_h" startline="49">largestValues&lt; U &gt;::pq</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" line="9" column="1" bodyfile="/home/weinberg/Projects/EXP/utils/Analysis/largest.H" bodystart="10" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classlargest_values_1a270980481483b26273f3ce69fa9c62f0" prot="public" virt="non-virtual"><scope>largestValues</scope><name>clear</name></member>
+      <member refid="classlargest_values_1a662b1f515af03b151f90623cabfe567e" prot="public" virt="non-virtual"><scope>largestValues</scope><name>getValues</name></member>
+      <member refid="classlargest_values_1a41a76e5a53d653d25a2ef560fc5497b7" prot="public" virt="non-virtual"><scope>largestValues</scope><name>largestValues</name></member>
+      <member refid="classlargest_values_1aa281b8f0458b01c2e8d77c995baffb46" prot="private" virt="non-virtual"><scope>largestValues</scope><name>maxSize</name></member>
+      <member refid="classlargest_values_1a0464850f712edff25999b530d77c429f" prot="public" virt="non-virtual"><scope>largestValues</scope><name>operator()</name></member>
+      <member refid="classlargest_values_1a415295691baa182aff9819d24c0622a0" prot="private" virt="non-virtual"><scope>largestValues</scope><name>pq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

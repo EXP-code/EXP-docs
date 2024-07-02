@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_basis" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Basis</compoundname>
+    <basecompoundref refid="class_pot_accel" prot="public" virt="non-virtual">PotAccel</basecompoundref>
+    <derivedcompoundref refid="class_axisymmetric_basis" prot="public" virt="non-virtual">AxisymmetricBasis</derivedcompoundref>
+    <derivedcompoundref refid="class_cylinder" prot="public" virt="non-virtual">Cylinder</derivedcompoundref>
+    <derivedcompoundref refid="class_cylinder" prot="public" virt="non-virtual">Cylinder</derivedcompoundref>
+    <includes refid="_basis_8_h" local="no">Basis.H</includes>
+    <sectiondef kind="user-defined">
+      <header>Utility functions</header>
+      <memberdef kind="function" id="class_basis_1a80975218d67cc019d69fefb7a207d344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Basis::legendre_R</definition>
+        <argsstring>(int lmax, double x, Eigen::MatrixXd &amp;p)</argsstring>
+        <name>legendre_R</name>
+        <qualifiedname>Basis::legendre_R</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Compute Associated <ref refid="class_legendre" kindref="compound">Legendre</ref> Polynomials, return MatrixXd type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="47" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Basis::dlegendre_R</definition>
+        <argsstring>(int lmax, double x, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;dp)</argsstring>
+        <name>dlegendre_R</name>
+        <qualifiedname>Basis::dlegendre_R</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Eigen::MatrixXd &amp;</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute Associated <ref refid="class_legendre" kindref="compound">Legendre</ref> Polynomials and derivitives, return Matrix type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1a0779c0b0f74361d7861bbc19a194b63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Basis::sinecosine_R</definition>
+        <argsstring>(int mmax, double phi, Eigen::VectorXd &amp;c, Eigen::VectorXd &amp;s)</argsstring>
+        <name>sinecosine_R</name>
+        <qualifiedname>Basis::sinecosine_R</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>mmax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>Eigen::VectorXd &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Compute vectors of sines and cosines by recursion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="54" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Basis::Basis</definition>
+        <argsstring>(Component *c0, const YAML::Node &amp;conf)</argsstring>
+        <name>Basis</name>
+        <qualifiedname>Basis::Basis</qualifiedname>
+        <param>
+          <type><ref refid="class_component" kindref="compound">Component</ref> *</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="15" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1abb4dbfbe9c234f44b1719a4d89dc3951" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Basis::determine_acceleration_and_potential</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>determine_acceleration_and_potential</name>
+        <qualifiedname>Basis::determine_acceleration_and_potential</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a00f37c5ce057c8537d91dcd498fc785c">determine_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a2052d5c8fe1589f91215058ebd72ec2a">determine_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a2052d5c8fe1589f91215058ebd72ec2a">determine_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1acb8cf13811dc3e6d8556b70d00a4d8c6">determine_acceleration_and_potential</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a73773546d4e45c0ac442a9853ef42225">determine_acceleration_and_potential</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>All derived classes must provide a method to compute the force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="18" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1a8d4bece8ddfe81223177e63d76779284" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Basis::determine_fields_at_point</definition>
+        <argsstring>(double x, double y, double z, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotx, double *tpoty, double *tpotz)=0</argsstring>
+        <name>determine_fields_at_point</name>
+        <qualifiedname>Basis::determine_fields_at_point</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a072ab7de9fb5cd71f65fddffb73a7223">determine_fields_at_point</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a4cffcad313069e21b01a648d656f2296">determine_fields_at_point</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a4cffcad313069e21b01a648d656f2296">determine_fields_at_point</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1a05e6a24b91fd7c8239bffa2df1bb9004">determine_fields_at_point</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1a84fc725d4e62f743a3846b8b5908a42e">determine_fields_at_point</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotx</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpoty</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at a point in Cartesian coordinates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="22" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1a3bcc5e3250f82d0ce476b096eabf342a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Basis::determine_fields_at_point_cyl</definition>
+        <argsstring>(double r, double z, double phi, double *tdens0, double *dpotl0, double *tdens, double *tpotl, double *tpotr, double *tpotz, double *tpotp)=0</argsstring>
+        <name>determine_fields_at_point_cyl</name>
+        <qualifiedname>Basis::determine_fields_at_point_cyl</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1ab70d4326f206ae7f860c38b01da8b155">determine_fields_at_point_cyl</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a48d17ba2d4a5597c76e32050e40f54d1">determine_fields_at_point_cyl</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a48d17ba2d4a5597c76e32050e40f54d1">determine_fields_at_point_cyl</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1aeef7e49e923b2a7bd510c99f10cdb19e">determine_fields_at_point_cyl</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1ab11fe59ba8d3a8e251ea96e72d93b654">determine_fields_at_point_cyl</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotr</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotz</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at a point in cylindrical coordinates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="37" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basis_1a34f7d4340bcd0c5452f430cebf5c3665" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Basis::determine_fields_at_point_sph</definition>
+        <argsstring>(double r, double theta, double phi, double *tdens0, double *dpotl0, double *tdens, double *tpotl, double *tpotr, double *tpott, double *tpotp)=0</argsstring>
+        <name>determine_fields_at_point_sph</name>
+        <qualifiedname>Basis::determine_fields_at_point_sph</qualifiedname>
+        <reimplementedby refid="class_c_brock_disk_1a1105dff303169959c94d2898c7740e18">determine_fields_at_point_sph</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a021dbbef8f761e75fef8f25316bb71c8">determine_fields_at_point_sph</reimplementedby>
+        <reimplementedby refid="class_cylinder_1a021dbbef8f761e75fef8f25316bb71c8">determine_fields_at_point_sph</reimplementedby>
+        <reimplementedby refid="class_polar_basis_1a4d396e0af9e54f2f09009f05a5d95672">determine_fields_at_point_sph</reimplementedby>
+        <reimplementedby refid="class_spherical_basis_1ab139a46a2cc6813b375b041dbe3b6498">determine_fields_at_point_sph</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dpotl0</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tdens</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotl</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotr</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpott</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>tpotp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supply density, potential and derivatives at a point in spherical coordinates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="29" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines a basis-based potential and acceleration class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>AxisymmetricBasis</label>
+        <link refid="class_axisymmetric_basis"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bessel</label>
+        <link refid="class_bessel"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CBrock</label>
+        <link refid="class_c_brock"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CBrockDisk</label>
+        <link refid="class_c_brock_disk"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Cylinder</label>
+        <link refid="class_cylinder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FlatDisk</label>
+        <link refid="class_flat_disk"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Hernquist</label>
+        <link refid="class_hernquist"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PolarBasis</label>
+        <link refid="class_polar_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+      </node>
+      <node id="11">
+        <label>Sphere</label>
+        <link refid="class_sphere"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SphericalBasis</label>
+        <link refid="class_spherical_basis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Basis</label>
+        <link refid="class_basis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Component</label>
+        <link refid="class_component"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>c0</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>force</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>orient</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>time_so_far</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EL3</label>
+        <link refid="class_e_l3"/>
+      </node>
+      <node id="5">
+        <label>Orient</label>
+        <link refid="class_orient"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PotAccel</label>
+        <link refid="class_pot_accel"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>td</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cC</edgelabel>
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="3">
+        <label>thrd_pass_PotAccel</label>
+        <link refid="structthrd__pass___pot_accel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>t</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/Basis.H" line="8" column="1" bodyfile="/home/weinberg/Projects/EXP/src/Basis.H" bodystart="9" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>Basis</scope><name>atol</name></member>
+      <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>Basis</scope><name>Basis</name></member>
+      <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>Basis</scope><name>cC</name></member>
+      <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>Basis</scope><name>cc_lock</name></member>
+      <member refid="class_pot_accel_1a944213bbf31fca1508ba817e392b9fc6" prot="public" virt="non-virtual"><scope>Basis</scope><name>ClearExternal</name></member>
+      <member refid="class_pot_accel_1ac7ab5e578b5b2bbd29fe35738b03d771" prot="protected" virt="non-virtual"><scope>Basis</scope><name>coef_dump</name></member>
+      <member refid="class_pot_accel_1aa6d9bde455e08dc9fead4f152357cb15" prot="protected" virt="non-virtual"><scope>Basis</scope><name>component</name></member>
+      <member refid="class_pot_accel_1a49e2936503ffdad1dd86d3f0c934d25a" prot="public" virt="non-virtual"><scope>Basis</scope><name>compute</name></member>
+      <member refid="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" virt="non-virtual"><scope>Basis</scope><name>conf</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda489785884cf0770efb348b919878bf23" prot="public" virt="non-virtual"><scope>Basis</scope><name>cube</name></member>
+      <member refid="class_pot_accel_1ac4def6f1c9318d8b49e62a4c9f2d6786" prot="protected" virt="non-virtual"><scope>Basis</scope><name>cuda_aware</name></member>
+      <member refid="class_pot_accel_1a5029810ccad93845aab9919e005bafe0" prot="public" virt="non-virtual"><scope>Basis</scope><name>cudaAware</name></member>
+      <member refid="class_pot_accel_1a823dbb4c07cab1541d7ee738c6baef99" prot="protected" virt="non-virtual"><scope>Basis</scope><name>current_keys</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fdac215da2d633c31e7278fb1a3dd6af268" prot="public" virt="non-virtual"><scope>Basis</scope><name>cylinder</name></member>
+      <member refid="class_basis_1abb4dbfbe9c234f44b1719a4d89dc3951" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_acceleration_and_potential</name></member>
+      <member refid="class_pot_accel_1a45b09387fd7083e15a11522454f4c4b3" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_acceleration_and_potential_thread</name></member>
+      <member refid="class_pot_accel_1a30dac3c15c2a7a67e9860e086cda27b8" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a3a9722c6b123ba2a0dd3671dec6cf724" prot="public" virt="virtual"><scope>Basis</scope><name>determine_coefficients</name></member>
+      <member refid="class_pot_accel_1a28536cd936e5c94562d5bccff2470d49" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_coefficients_thread</name></member>
+      <member refid="class_basis_1a8d4bece8ddfe81223177e63d76779284" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_fields_at_point</name></member>
+      <member refid="class_basis_1a3bcc5e3250f82d0ce476b096eabf342a" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_fields_at_point_cyl</name></member>
+      <member refid="class_basis_1a34f7d4340bcd0c5452f430cebf5c3665" prot="public" virt="pure-virtual"><scope>Basis</scope><name>determine_fields_at_point_sph</name></member>
+      <member refid="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" virt="non-virtual"><scope>Basis</scope><name>dlegendre_R</name></member>
+      <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>Basis</scope><name>dof</name></member>
+      <member refid="class_pot_accel_1a10f4dd971b1a056bb6dacf01f2e2bcbf" prot="public" virt="virtual"><scope>Basis</scope><name>dump_coefs</name></member>
+      <member refid="class_pot_accel_1ac53a3ab4bdfa2be33fbe4286b939230c" prot="public" virt="virtual"><scope>Basis</scope><name>dump_coefs_h5</name></member>
+      <member refid="class_pot_accel_1abee9651463af53460b622250d311329e" prot="public" virt="non-virtual"><scope>Basis</scope><name>exp_thread_fork</name></member>
+      <member refid="class_pot_accel_1adb6ef0bdae7d3520ca1f9fd8a6d648ea" prot="public" virt="non-virtual"><scope>Basis</scope><name>geometry</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fd" prot="public" virt="non-virtual"><scope>Basis</scope><name>Geometry</name></member>
+      <member refid="class_pot_accel_1ade38f6ecdf80f80cde847d463b14909b" prot="public" virt="non-virtual"><scope>Basis</scope><name>geoname</name></member>
+      <member refid="class_pot_accel_1ab78f20762031db204f636fc8e74ea986" prot="public" virt="pure-virtual"><scope>Basis</scope><name>get_acceleration_and_potential</name></member>
+      <member refid="class_pot_accel_1a0998c361bca277b3bba95f59acaba203" prot="public" virt="virtual"><scope>Basis</scope><name>getScale</name></member>
+      <member refid="class_pot_accel_1a4a812594dff363f07bf57d69a60e4a13" prot="public" virt="non-virtual"><scope>Basis</scope><name>HaveCoefDump</name></member>
+      <member refid="class_pot_accel_1a1cdb2381070d7772caf533433455284c" prot="public" virt="non-virtual"><scope>Basis</scope><name>id</name></member>
+      <member refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d" prot="protected" virt="pure-virtual"><scope>Basis</scope><name>initialize</name></member>
+      <member refid="class_pot_accel_1a706b04f03c8beb4369dd125406770116" prot="public" virt="non-virtual"><scope>Basis</scope><name>kill_mutex</name></member>
+      <member refid="class_basis_1a80975218d67cc019d69fefb7a207d344" prot="public" virt="non-virtual"><scope>Basis</scope><name>legendre_R</name></member>
+      <member refid="class_pot_accel_1a65fa890eea987e18d552825ab074939b" prot="public" virt="non-virtual"><scope>Basis</scope><name>make_mutex</name></member>
+      <member refid="class_pot_accel_1ad9ff6c9f431ad2f8ad2e5895c222ede8" prot="protected" virt="non-virtual"><scope>Basis</scope><name>mlevel</name></member>
+      <member refid="class_pot_accel_1a2ba58ca0219d337b13c87697353d4121" prot="public" virt="virtual"><scope>Basis</scope><name>multistep_debug</name></member>
+      <member refid="class_pot_accel_1aaada1d8e8970e63332269b0d00aed97f" prot="public" virt="virtual"><scope>Basis</scope><name>multistep_reset</name></member>
+      <member refid="class_pot_accel_1aa6c3661783144fd643ebaf1a2fa6278a" prot="public" virt="virtual"><scope>Basis</scope><name>multistep_update</name></member>
+      <member refid="class_pot_accel_1a0e720b605350a9fb4e0d24dae2a1c381" prot="public" virt="virtual"><scope>Basis</scope><name>multistep_update_begin</name></member>
+      <member refid="class_pot_accel_1acb0c9d88466949f2bf84da42439f2a1e" prot="public" virt="virtual"><scope>Basis</scope><name>multistep_update_finish</name></member>
+      <member refid="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" virt="non-virtual"><scope>Basis</scope><name>nbodies</name></member>
+      <member refid="class_pot_accel_1a4f2099b1b705731b909e63c90ea59f04" prot="public" virt="non-virtual"><scope>Basis</scope><name>NoCoefs</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda7c49f38007dad33fb1e48fdebdd2f8c1" prot="public" virt="non-virtual"><scope>Basis</scope><name>other</name></member>
+      <member refid="class_pot_accel_1a74b41dd5c2f102dd3184ac53b6172462" prot="protected" virt="non-virtual"><scope>Basis</scope><name>play_back</name></member>
+      <member refid="class_pot_accel_1aea1c756cd9616a1daf73541780b45798" prot="protected" virt="non-virtual"><scope>Basis</scope><name>play_cnew</name></member>
+      <member refid="class_pot_accel_1a801fdbd01e551033e79f274e4a7c1d1e" prot="public" virt="non-virtual"><scope>Basis</scope><name>PotAccel</name></member>
+      <member refid="class_pot_accel_1a5e257d38dbf5c3d9630906a96abf6915" prot="public" virt="non-virtual"><scope>Basis</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a37a3c348c0febbf70ff94949071c3beb" prot="public" virt="non-virtual"><scope>Basis</scope><name>print_timings</name></member>
+      <member refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" prot="public" virt="virtual"><scope>Basis</scope><name>RegisterComponent</name></member>
+      <member refid="class_pot_accel_1added387424e4e4d23bac8500822e4324" prot="protected" virt="non-virtual"><scope>Basis</scope><name>scale</name></member>
+      <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>Basis</scope><name>set_multistep_level</name></member>
+      <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>Basis</scope><name>SetExternal</name></member>
+      <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>Basis</scope><name>setScale</name></member>
+      <member refid="class_basis_1a0779c0b0f74361d7861bbc19a194b63c" prot="public" virt="non-virtual"><scope>Basis</scope><name>sinecosine_R</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda0a1acd8c0d6e745fb0ae3e33e458a9b8" prot="public" virt="non-virtual"><scope>Basis</scope><name>slab</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda996ce4577548b6da6b1330a78b1c6f6a" prot="public" virt="non-virtual"><scope>Basis</scope><name>sphere</name></member>
+      <member refid="class_pot_accel_1aff158a74d7328a080ed619c1456836f5" prot="private" virt="non-virtual"><scope>Basis</scope><name>t</name></member>
+      <member refid="class_pot_accel_1ad55d9279ca0e8318bfe1a95d1c7566fda1792d3c00a41ee78957c83611fd368a2" prot="public" virt="non-virtual"><scope>Basis</scope><name>table</name></member>
+      <member refid="class_pot_accel_1a125d7343a34d292a3e4a48a5d984cac4" prot="private" virt="non-virtual"><scope>Basis</scope><name>td</name></member>
+      <member refid="class_pot_accel_1a86d0d012a44e2eb7c3e385d852a5fdde" prot="public" virt="non-virtual"><scope>Basis</scope><name>thread_timing_beg</name></member>
+      <member refid="class_pot_accel_1a76c805cd8d0d134d37929eeb48115b33" prot="public" virt="non-virtual"><scope>Basis</scope><name>thread_timing_end</name></member>
+      <member refid="class_pot_accel_1a4315e73a641c54eefc548b7d14cb06b6" prot="protected" virt="non-virtual"><scope>Basis</scope><name>timer_list</name></member>
+      <member refid="class_pot_accel_1aabce5ff868883c6191b8b7f8f6281c04" prot="public" virt="non-virtual"><scope>Basis</scope><name>TList</name></member>
+      <member refid="class_pot_accel_1a0355cfe43cdde5237f7be234e94de64b" prot="public" virt="non-virtual"><scope>Basis</scope><name>unmatched</name></member>
+      <member refid="class_pot_accel_1acd32c6464b705469911df718114187b9" prot="public" virt="non-virtual"><scope>Basis</scope><name>use</name></member>
+      <member refid="class_pot_accel_1a59a4a86ea8d2b3a9a5d420ef7e712697" prot="protected" virt="non-virtual"><scope>Basis</scope><name>use_external</name></member>
+      <member refid="class_pot_accel_1ae2e0dbf849707704a3d42a1fa91ce060" prot="public" virt="non-virtual"><scope>Basis</scope><name>Used</name></member>
+      <member refid="class_pot_accel_1a8fe5beef77e790f0d7bf6f455f5bf1d3" prot="protected" virt="non-virtual"><scope>Basis</scope><name>used</name></member>
+      <member refid="class_pot_accel_1adcc326688bb152249f81e88d6edfde62" prot="public" virt="virtual"><scope>Basis</scope><name>~PotAccel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

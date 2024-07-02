@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_out_multi" kind="class" language="C++" prot="public">
+    <compoundname>OutMulti</compoundname>
+    <basecompoundref refid="class_output" prot="public" virt="non-virtual">Output</basecompoundref>
+    <includes refid="_out_multi_8_h" local="no">OutMulti.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_out_multi_1a27fdb1a3a3d5a7719d1280c3310e43e7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutMulti::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>OutMulti::filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="16" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutMulti.H" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_multi_1a1e77292ada50ca2379704f9bca0fdd9f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OutMulti::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <qualifiedname>OutMulti::prev</qualifiedname>
+        <initializer>= -std::numeric_limits&lt;double&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="19" column="10" bodyfile="/home/weinberg/Projects/EXP/src/OutMulti.H" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_out_multi_1a39525b617da2a9af1e6844b5cdef9ef0" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; OutMulti::valid_keys</definition>
+        <argsstring></argsstring>
+        <name>valid_keys</name>
+        <qualifiedname>OutMulti::valid_keys</qualifiedname>
+        <briefdescription>
+<para>Valid keys for YAML configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="22" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutMulti.H" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_out_multi_1a7c3711d07524a06dbe72c946c3322423" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutMulti::initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>OutMulti::initialize</qualifiedname>
+        <reimplements refid="class_output_1ade7a25abbb901a224247fbbfa068f157">initialize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used to assign additional specific parameters, create storage, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="17" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_out_multi_1affd458a59f9406787d48bd4e2305bbdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OutMulti::OutMulti</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>OutMulti</name>
+        <qualifiedname>OutMulti::OutMulti</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="27" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_out_multi_1a29ecce1f93c894116764968464d3e72b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void OutMulti::Run</definition>
+        <argsstring>(int nstep, int mstep, bool last)</argsstring>
+        <name>Run</name>
+        <qualifiedname>OutMulti::Run</qualifiedname>
+        <reimplements refid="class_output_1af71ace8955ee2741677a7fbaf268ab82">Run</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nstep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mstep</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Provided by derived class to generate some output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current time step used to decide whether or not to dump </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mstep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current multistep level to decide whether or not to dump multisteps </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should be true on final step to force phase space dump indepentently of whether or not the frequency criterion is met </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="37" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Dump histogram of multistep levels to file in GNUPLOT format</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of the output file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of steps between dumps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OutMulti</label>
+        <link refid="class_out_multi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OutMulti</label>
+        <link refid="class_out_multi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Output</label>
+        <link refid="class_output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stopWatch</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/src/OutMulti.H" line="11" column="1" bodyfile="/home/weinberg/Projects/EXP/src/OutMulti.H" bodystart="12" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_output_1a0f16f4c45c70bbeffaad744b45eacdf5" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>conf</name></member>
+      <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>current_keys</name></member>
+      <member refid="class_out_multi_1a27fdb1a3a3d5a7719d1280c3310e43e7" prot="private" virt="non-virtual"><scope>OutMulti</scope><name>filename</name></member>
+      <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutMulti</scope><name>id</name></member>
+      <member refid="class_out_multi_1a7c3711d07524a06dbe72c946c3322423" prot="private" virt="virtual"><scope>OutMulti</scope><name>initialize</name></member>
+      <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>nint</name></member>
+      <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>nintsub</name></member>
+      <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>nintsub_warning</name></member>
+      <member refid="class_out_multi_1affd458a59f9406787d48bd4e2305bbdc" prot="public" virt="non-virtual"><scope>OutMulti</scope><name>OutMulti</name></member>
+      <member refid="class_output_1a12680d847644562a892fee224148729d" prot="public" virt="non-virtual"><scope>OutMulti</scope><name>Output</name></member>
+      <member refid="class_out_multi_1a1e77292ada50ca2379704f9bca0fdd9f" prot="private" virt="non-virtual"><scope>OutMulti</scope><name>prev</name></member>
+      <member refid="class_out_multi_1a29ecce1f93c894116764968464d3e72b" prot="public" virt="virtual"><scope>OutMulti</scope><name>Run</name></member>
+      <member refid="class_output_1a4bcd3bccc8d93387a70f94dea89f8a88" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>stopWatch</name></member>
+      <member refid="class_output_1a69f42df0c1eab6a81fb2346e59c66943" prot="protected" virt="non-virtual"><scope>OutMulti</scope><name>timer</name></member>
+      <member refid="class_output_1ad1c121a091c46c4c11ab76d90b1e39f9" prot="public" virt="non-virtual"><scope>OutMulti</scope><name>unmatched</name></member>
+      <member refid="class_out_multi_1a39525b617da2a9af1e6844b5cdef9ef0" prot="private" virt="non-virtual"><scope>OutMulti</scope><name>valid_keys</name></member>
+      <member refid="class_output_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>OutMulti</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

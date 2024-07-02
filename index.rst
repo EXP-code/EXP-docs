@@ -1,12 +1,13 @@
 
 .. _topics-index:
 
-.. image:: exp_logo.png
-   :width: 60px
-   :height: 55px
-   :scale: 120 %
-   :alt: EXP logo
-   :align: left
+..
+   .. image:: exp_logo.png
+      :width: 60px
+      :height: 34px
+      :scale: 120 %
+      :alt: EXP logo
+      :align: left
 
 ===========================
 EXP |version| documentation

@@ -1,0 +1,1263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_monot_cubic_interpolator" kind="class" language="C++" prot="public">
+    <compoundname>MonotCubicInterpolator</compoundname>
+    <includes refid="_monot_cubic_interpolator_8_h" local="no">MonotCubicInterpolator.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1a664653849fba0adff687da21f92a2c50" prot="private" static="no" mutable="no">
+        <type>std::map&lt; double, double &gt;</type>
+        <definition>std::map&lt;double, double&gt; MonotCubicInterpolator::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>MonotCubicInterpolator::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="502" column="12" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="502" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a6010fb0559add5a4caa5d2ecf7fb4ffb" compoundref="_monot_cubic_interpolator_8_h" startline="251" endline="254">getMaximumX</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a1494736ec67ea38a483117199f829937" compoundref="_monot_cubic_interpolator_8_h" startline="240" endline="243">getMinimumX</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a7e51d95079f77bb617feeacd12eee26e" compoundref="_monot_cubic_interpolator_8_h" startline="440" endline="442">getSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1a642373d6467598df56ef0e213f9cc7e7" prot="private" static="no" mutable="yes">
+        <type>std::map&lt; double, double &gt;</type>
+        <definition>std::map&lt;double, double&gt; MonotCubicInterpolator::ddata</definition>
+        <argsstring></argsstring>
+        <name>ddata</name>
+        <qualifiedname>MonotCubicInterpolator::ddata</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="505" column="20" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1ae62d5b8ddd32a797a58f8f331a3e3147" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::decreasing</definition>
+        <argsstring></argsstring>
+        <name>decreasing</name>
+        <qualifiedname>MonotCubicInterpolator::decreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="522" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="522" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" compoundref="_monot_cubic_interpolator_8_h" startline="389" endline="397">isMonotoneDecreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1aa0fd1dd1ed5a2170c6a87102a34f124f" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::increasing</definition>
+        <argsstring></argsstring>
+        <name>increasing</name>
+        <qualifiedname>MonotCubicInterpolator::increasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="523" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="523" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" compoundref="_monot_cubic_interpolator_8_h" startline="356" endline="364">isMonotoneIncreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1a1eb76f1770400c38473661c50d1bcd86" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::monotone</definition>
+        <argsstring></argsstring>
+        <name>monotone</name>
+        <qualifiedname>MonotCubicInterpolator::monotone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="517" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="517" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a9302b07699db98f262d530834688a306" compoundref="_monot_cubic_interpolator_8_h" startline="323" endline="331">isMonotone</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" compoundref="_monot_cubic_interpolator_8_h" startline="389" endline="397">isMonotoneDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" compoundref="_monot_cubic_interpolator_8_h" startline="356" endline="364">isMonotoneIncreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1abccf505d969bf6761287a05c02fb231d" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::monotoneCached</definition>
+        <argsstring></argsstring>
+        <name>monotoneCached</name>
+        <qualifiedname>MonotCubicInterpolator::monotoneCached</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="514" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="514" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a9302b07699db98f262d530834688a306" compoundref="_monot_cubic_interpolator_8_h" startline="323" endline="331">isMonotone</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" compoundref="_monot_cubic_interpolator_8_h" startline="389" endline="397">isMonotoneDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" compoundref="_monot_cubic_interpolator_8_h" startline="356" endline="364">isMonotoneIncreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1adecf61c001c3f9b3293bfebf1bd5edca" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::strictlyDecreasing</definition>
+        <argsstring></argsstring>
+        <name>strictlyDecreasing</name>
+        <qualifiedname>MonotCubicInterpolator::strictlyDecreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="520" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="520" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" compoundref="_monot_cubic_interpolator_8_h" startline="372" endline="382">isStrictlyDecreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1a090fcf67aab0e92482256eef3a5db244" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::strictlyIncreasing</definition>
+        <argsstring></argsstring>
+        <name>strictlyIncreasing</name>
+        <qualifiedname>MonotCubicInterpolator::strictlyIncreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="521" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="521" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" compoundref="_monot_cubic_interpolator_8_h" startline="339" endline="349">isStrictlyIncreasing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1a7f47c10641aec29b07f610bdc8d3d697" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::strictlyMonotone</definition>
+        <argsstring></argsstring>
+        <name>strictlyMonotone</name>
+        <qualifiedname>MonotCubicInterpolator::strictlyMonotone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="516" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="516" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" compoundref="_monot_cubic_interpolator_8_h" startline="372" endline="382">isStrictlyDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" compoundref="_monot_cubic_interpolator_8_h" startline="339" endline="349">isStrictlyIncreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afd775edd1e48b05532f912fb830501c7" compoundref="_monot_cubic_interpolator_8_h" startline="306" endline="316">isStrictlyMonotone</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_monot_cubic_interpolator_1af4f7e31f8a86f4d74ef78545da881d0f" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::strictlyMonotoneCached</definition>
+        <argsstring></argsstring>
+        <name>strictlyMonotoneCached</name>
+        <qualifiedname>MonotCubicInterpolator::strictlyMonotoneCached</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="513" column="16" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="513" bodyend="-1"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" compoundref="_monot_cubic_interpolator_8_h" startline="372" endline="382">isStrictlyDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" compoundref="_monot_cubic_interpolator_8_h" startline="339" endline="349">isStrictlyIncreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afd775edd1e48b05532f912fb830501c7" compoundref="_monot_cubic_interpolator_8_h" startline="306" endline="316">isStrictlyMonotone</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a752222ba7fe035ce6b64c5874bc0758e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::addPair</definition>
+        <argsstring>(double newx, double newf)</argsstring>
+        <name>addPair</name>
+        <qualifiedname>MonotCubicInterpolator::addPair</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>newx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>newf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New x point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New f(x) point</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Adds a new datapoint to the function.</para>
+<para>This causes all the derivatives at all points of the functions to be recomputed and then adjusted for monotone cubic interpolation. If this function ever enters a critical part of any code, the locality of the algorithm for monotone adjustment must be exploited. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="414" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a71f51d09499f535c0892fc186e97b4f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::chopFlatEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>chopFlatEndpoints</name>
+        <qualifiedname>MonotCubicInterpolator::chopFlatEndpoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper function for <ref refid="class_monot_cubic_interpolator_1a91de72bd2bff6f7d3bf0b5b82002ccd4" kindref="member">chopFlatEndpoints(const double)</ref> providing a default epsilon parameter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="469" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="469" bodyend="471"/>
+        <references refid="class_monot_cubic_interpolator_1a71f51d09499f535c0892fc186e97b4f5" compoundref="_monot_cubic_interpolator_8_h" startline="469" endline="471">chopFlatEndpoints</references>
+        <referencedby refid="class_monot_cubic_interpolator_1a71f51d09499f535c0892fc186e97b4f5" compoundref="_monot_cubic_interpolator_8_h" startline="469" endline="471">chopFlatEndpoints</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a91de72bd2bff6f7d3bf0b5b82002ccd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::chopFlatEndpoints</definition>
+        <argsstring>(const double)</argsstring>
+        <name>chopFlatEndpoints</name>
+        <qualifiedname>MonotCubicInterpolator::chopFlatEndpoints</qualifiedname>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the function curve is flat at the endpoints, chop off endpoint data points if that is the case.</para>
+<para>The notion of &quot;flat&quot; is determined by the input parameter &quot;epsilon&quot; Values whose difference are less than epsilon are regarded as equal.</para>
+<para>This is implemented to be able to obtain a strictly monotone curve from a data set that is strictly monotone except at the endpoints.</para>
+<para>Example: The data points (1,3), (2,3), (3,4), (4,5), (5,5), (6,5) will become (2,3), (3,4), (4,5)</para>
+<para>Assumes at least 3 datapoints. If less than three, this function is a noop. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="463" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1afa8df0327dfaba8d3b65819bff769e84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::evaluate</definition>
+        <argsstring>(double x) const</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>MonotCubicInterpolator::evaluate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns f(x) for given x (input). Interpolates (monotone cubic or linearly) if necessary.</para>
+<para>Extrapolates using the constants f(x_min) or f(x_max) if input x is outside (x_min, x_max)</para>
+<para><simplesect kind="return"><para>f(x) for a given x </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="211" column="10"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a0958e5f35b2ce7a3694e39270086cc4e" compoundref="_monot_cubic_interpolator_8_h" startline="198" endline="198">operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a64df179fe82fd50dd0c9f9ea898b08a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::evaluate</definition>
+        <argsstring>(double x, double &amp;errorestimate_output) const</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>MonotCubicInterpolator::evaluate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>errorestimate_output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorestimate_output</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns f(x) and an error estimate for given x (input).</para>
+<para>Interpolates (linearly) if necessary.</para>
+<para>Throws an exception if extrapolation would be necessary for evaluation. We do not want to do extrapolation (yet).</para>
+<para>The error estimate for x1 &lt; x &lt; x2 is (x2 - x1)^2/8 * f&apos;&apos;(x) where f&apos;&apos;(x) is evaluated using the stencil (1 -2 1) using either (x0, x1, x2) or (x1, x2, x3);</para>
+<para>Throws an exception if the table contains only two x-values.</para>
+<para>NOT IMPLEMENTED YET! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="232" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a7c7bb0b934bc26781b004f071bc46b3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; MonotCubicInterpolator::get_fVector</definition>
+        <argsstring>() const</argsstring>
+        <name>get_fVector</name>
+        <qualifiedname>MonotCubicInterpolator::get_fVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide a copy of tghe function data as a vector</para>
+<para>Unspecified order, but corresponds to get_xVector</para>
+<para><simplesect kind="return"><para>f values as a vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="290" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1ada1414008545d4c514dc4576d6907b1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; MonotCubicInterpolator::get_xVector</definition>
+        <argsstring>() const</argsstring>
+        <name>get_xVector</name>
+        <qualifiedname>MonotCubicInterpolator::get_xVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide a copy of the x-data as a vector</para>
+<para>Unspecified order, but corresponds to get_fVector.</para>
+<para><simplesect kind="return"><para>x values as a vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="280" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a9be851a504df8e804b71ab35616fcc82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; MonotCubicInterpolator::getMaximumF</definition>
+        <argsstring>() const</argsstring>
+        <name>getMaximumF</name>
+        <qualifiedname>MonotCubicInterpolator::getMaximumF</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum f-value, returns both x and f in a pair.</para>
+<para><simplesect kind="return"><para>x value corresponding to maximum f value </para>
+</simplesect>
+<simplesect kind="return"><para>maximum f value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="262" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a6010fb0559add5a4caa5d2ecf7fb4ffb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; MonotCubicInterpolator::getMaximumX</definition>
+        <argsstring>() const</argsstring>
+        <name>getMaximumX</name>
+        <qualifiedname>MonotCubicInterpolator::getMaximumX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum x-value, returns both x and f in a pair.</para>
+<para><simplesect kind="return"><para>maximum x value </para>
+</simplesect>
+<simplesect kind="return"><para>f(maximum x value) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="251" column="13" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="251" bodyend="254"/>
+        <references refid="class_monot_cubic_interpolator_1a664653849fba0adff687da21f92a2c50" compoundref="_monot_cubic_interpolator_8_h" startline="502">data</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a86d17f00caba1a7cf148ba9a04a33281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; MonotCubicInterpolator::getMinimumF</definition>
+        <argsstring>() const</argsstring>
+        <name>getMinimumF</name>
+        <qualifiedname>MonotCubicInterpolator::getMinimumF</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum f-value, returns both x and f in a pair</para>
+<para><simplesect kind="return"><para>x value corresponding to minimal f value </para>
+</simplesect>
+<simplesect kind="return"><para>minimum f value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="270" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a1494736ec67ea38a483117199f829937" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; MonotCubicInterpolator::getMinimumX</definition>
+        <argsstring>() const</argsstring>
+        <name>getMinimumX</name>
+        <qualifiedname>MonotCubicInterpolator::getMinimumX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum x-value, returns both x and f in a pair.</para>
+<para><simplesect kind="return"><para>minimum x value </para>
+</simplesect>
+<simplesect kind="return"><para>f(minimum x value) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="240" column="13" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="240" bodyend="243"/>
+        <references refid="class_monot_cubic_interpolator_1a664653849fba0adff687da21f92a2c50" compoundref="_monot_cubic_interpolator_8_h" startline="502">data</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a16b99f4c0757cc6957d9a1b8da9cf03a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; MonotCubicInterpolator::getMissingX</definition>
+        <argsstring>() const</argsstring>
+        <name>getMissingX</name>
+        <qualifiedname>MonotCubicInterpolator::getMissingX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an x-value that is believed to yield the best improvement in global accuracy for the interpolation if computed.</para>
+<para>Searches for the largest jump in f-values, and returns a x value being the average of the two x-values representing the f-value-jump.</para>
+<para><simplesect kind="return"><para>New x value beleived to yield the best improvement in global accuracy </para>
+</simplesect>
+<simplesect kind="return"><para>Maximal difference </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="428" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a7e51d95079f77bb617feeacd12eee26e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int MonotCubicInterpolator::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <qualifiedname>MonotCubicInterpolator::getSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of datapoint pairs in this object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="440" column="7" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="440" bodyend="442"/>
+        <references refid="class_monot_cubic_interpolator_1a664653849fba0adff687da21f92a2c50" compoundref="_monot_cubic_interpolator_8_h" startline="502">data</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a9302b07699db98f262d530834688a306" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isMonotone</definition>
+        <argsstring>() const</argsstring>
+        <name>isMonotone</name>
+        <qualifiedname>MonotCubicInterpolator::isMonotone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is monotone.</para>
+<para><simplesect kind="return"><para>True if f(x) is monotone, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="323" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="323" bodyend="331"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1a1eb76f1770400c38473661c50d1bcd86" compoundref="_monot_cubic_interpolator_8_h" startline="517">monotone</references>
+        <references refid="class_monot_cubic_interpolator_1abccf505d969bf6761287a05c02fb231d" compoundref="_monot_cubic_interpolator_8_h" startline="514">monotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isMonotoneDecreasing</definition>
+        <argsstring>() const</argsstring>
+        <name>isMonotoneDecreasing</name>
+        <qualifiedname>MonotCubicInterpolator::isMonotoneDecreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is monotone and decreasing</para>
+<para><simplesect kind="return"><para>True if f(x) is monotone and decreasing, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="389" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="389" bodyend="397"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1ae62d5b8ddd32a797a58f8f331a3e3147" compoundref="_monot_cubic_interpolator_8_h" startline="522">decreasing</references>
+        <references refid="class_monot_cubic_interpolator_1a1eb76f1770400c38473661c50d1bcd86" compoundref="_monot_cubic_interpolator_8_h" startline="517">monotone</references>
+        <references refid="class_monot_cubic_interpolator_1abccf505d969bf6761287a05c02fb231d" compoundref="_monot_cubic_interpolator_8_h" startline="514">monotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isMonotoneIncreasing</definition>
+        <argsstring>() const</argsstring>
+        <name>isMonotoneIncreasing</name>
+        <qualifiedname>MonotCubicInterpolator::isMonotoneIncreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is monotone and increasing.</para>
+<para><simplesect kind="return"><para>True if f(x) is monotone and increasing, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="356" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="356" bodyend="364"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1aa0fd1dd1ed5a2170c6a87102a34f124f" compoundref="_monot_cubic_interpolator_8_h" startline="523">increasing</references>
+        <references refid="class_monot_cubic_interpolator_1a1eb76f1770400c38473661c50d1bcd86" compoundref="_monot_cubic_interpolator_8_h" startline="517">monotone</references>
+        <references refid="class_monot_cubic_interpolator_1abccf505d969bf6761287a05c02fb231d" compoundref="_monot_cubic_interpolator_8_h" startline="514">monotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isStrictlyDecreasing</definition>
+        <argsstring>()</argsstring>
+        <name>isStrictlyDecreasing</name>
+        <qualifiedname>MonotCubicInterpolator::isStrictlyDecreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is strictly decreasing. This is a utility function for outsiders if they want to invert the data for example.</para>
+<para><simplesect kind="return"><para>True if f(x) is strictly decreasing, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="372" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="372" bodyend="382"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1adecf61c001c3f9b3293bfebf1bd5edca" compoundref="_monot_cubic_interpolator_8_h" startline="520">strictlyDecreasing</references>
+        <references refid="class_monot_cubic_interpolator_1a7f47c10641aec29b07f610bdc8d3d697" compoundref="_monot_cubic_interpolator_8_h" startline="516">strictlyMonotone</references>
+        <references refid="class_monot_cubic_interpolator_1af4f7e31f8a86f4d74ef78545da881d0f" compoundref="_monot_cubic_interpolator_8_h" startline="513">strictlyMonotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isStrictlyIncreasing</definition>
+        <argsstring>()</argsstring>
+        <name>isStrictlyIncreasing</name>
+        <qualifiedname>MonotCubicInterpolator::isStrictlyIncreasing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is strictly increasing. This is a utility function for outsiders if they want to invert the data for example.</para>
+<para><simplesect kind="return"><para>True if f(x) is strictly increasing, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="339" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="339" bodyend="349"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1a090fcf67aab0e92482256eef3a5db244" compoundref="_monot_cubic_interpolator_8_h" startline="521">strictlyIncreasing</references>
+        <references refid="class_monot_cubic_interpolator_1a7f47c10641aec29b07f610bdc8d3d697" compoundref="_monot_cubic_interpolator_8_h" startline="516">strictlyMonotone</references>
+        <references refid="class_monot_cubic_interpolator_1af4f7e31f8a86f4d74ef78545da881d0f" compoundref="_monot_cubic_interpolator_8_h" startline="513">strictlyMonotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1afd775edd1e48b05532f912fb830501c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isStrictlyMonotone</definition>
+        <argsstring>()</argsstring>
+        <name>isStrictlyMonotone</name>
+        <qualifiedname>MonotCubicInterpolator::isStrictlyMonotone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if the current function-value-data is strictly monotone. This is a utility function for outsiders if they want to invert the data for example.</para>
+<para><simplesect kind="return"><para>True if f(x) is strictly monotone, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="306" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="306" bodyend="316"/>
+        <references refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37">computeInternalFunctionData</references>
+        <references refid="class_monot_cubic_interpolator_1a7f47c10641aec29b07f610bdc8d3d697" compoundref="_monot_cubic_interpolator_8_h" startline="516">strictlyMonotone</references>
+        <references refid="class_monot_cubic_interpolator_1af4f7e31f8a86f4d74ef78545da881d0f" compoundref="_monot_cubic_interpolator_8_h" startline="513">strictlyMonotoneCached</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a9feb3521c6d339482c670c47c3273fab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>()</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No input, an empty function object is created.</para>
+<para>This object must be treated with care until populated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="154" column="3" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a103ab96b6b68651eaaaa85180f4d88ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>(const char *datafilename)</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>datafilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A datafile with the x values and the corresponding f(x) values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input and parses this file for two-column floating point data, interpreting the data as representing function values x and f(x).</para>
+<para>Ignores all lines not conforming to &lt;whitespace&gt;&lt;float&gt;&lt;whitespace&gt;&lt;float&gt;&lt;whatever&gt;&lt;newline&gt;</para>
+<para>All commas in the file will be treated as spaces when parsing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="99" column="3" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="99" bodyend="104"/>
+        <references refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1acccc26f87c47ab6149ce14b91bff327c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>(const char *datafilename, int xColumn, int fColumn)</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>datafilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xColumn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>f values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input, and parses the chosen columns in that file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="115" column="3" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="115" bodyend="120"/>
+        <references refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a6a631dba801b2cb4a54ea3e5b9ab4b99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>(const std::string &amp;datafilename)</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>datafilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A datafile with the x values and the corresponding f(x) values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input and parses this file for two-column floating point data, interpreting the data as representing function values x and f(x).</para>
+<para>Ignores all lines not conforming to &lt;whitespace&gt;&lt;float&gt;&lt;whitespace&gt;&lt;float&gt;&lt;whatever&gt;&lt;newline&gt; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="77" column="3" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="77" bodyend="82"/>
+        <references refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1ac9a3b7f50f24011576c6725dd62862ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>(const std::string &amp;datafilename, int xColumn, int fColumn)</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>datafilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xColumn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>f values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input, and parses the chosen columns in that file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="130" column="3" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="130" bodyend="135"/>
+        <references refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a9bac422d76d206f82b46cb971ae0fe41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MonotCubicInterpolator::MonotCubicInterpolator</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;f)</argsstring>
+        <name>MonotCubicInterpolator</name>
+        <qualifiedname>MonotCubicInterpolator::MonotCubicInterpolator</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of corresponding f values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts two equal-length vectors as input for constructing the interpolation object. First vector is the x-values, the second vector is the function values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="145" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a0958e5f35b2ce7a3694e39270086cc4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::operator()</definition>
+        <argsstring>(double x) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MonotCubicInterpolator::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns f(x) for given x (input). Interpolates (monotone cubic or linearly) if necessary.</para>
+<para>Extrapolates using the constants f(x_min) or f(x_max) if input x is outside (x_min, x_max)</para>
+<para><simplesect kind="return"><para>f(x) for a given x </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="198" column="10" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="198" bodyend="198"/>
+        <references refid="class_monot_cubic_interpolator_1afa8df0327dfaba8d3b65819bff769e84">evaluate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::read</definition>
+        <argsstring>(const std::string &amp;datafilename)</argsstring>
+        <name>read</name>
+        <qualifiedname>MonotCubicInterpolator::read</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>datafilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A datafile with the x values and the corresponding f(x) values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input and parses this file for two-column floating point data, interpreting the data as representing function values x and f(x).</para>
+<para>returns true on success</para>
+<para>All commas in file will be treated as spaces when parsing</para>
+<para>Ignores all lines not conforming to &lt;whitespace&gt;&lt;float&gt;&lt;whitespace&gt;&lt;float&gt;&lt;whatever&gt;&lt;newline&gt; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="171" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="171" bodyend="173"/>
+        <references refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</references>
+        <referencedby refid="class_monot_cubic_interpolator_1a103ab96b6b68651eaaaa85180f4d88ac" compoundref="_monot_cubic_interpolator_8_h" startline="99" endline="104">MonotCubicInterpolator</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1acccc26f87c47ab6149ce14b91bff327c" compoundref="_monot_cubic_interpolator_8_h" startline="115" endline="120">MonotCubicInterpolator</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a6a631dba801b2cb4a54ea3e5b9ab4b99" compoundref="_monot_cubic_interpolator_8_h" startline="77" endline="82">MonotCubicInterpolator</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1ac9a3b7f50f24011576c6725dd62862ce" compoundref="_monot_cubic_interpolator_8_h" startline="130" endline="135">MonotCubicInterpolator</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" compoundref="_monot_cubic_interpolator_8_h" startline="171" endline="173">read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a0d099337ab5d0f8b4d2c69ec6bcbc5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::read</definition>
+        <argsstring>(const std::string &amp;datafilename, int xColumn, int fColumn)</argsstring>
+        <name>read</name>
+        <qualifiedname>MonotCubicInterpolator::read</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>datafilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xColumn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datafilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>f values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Accepts a filename as input, and parses the chosen columns in that file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="183" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a28f4640da98b82b087e74732c620f3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::scaleData</definition>
+        <argsstring>(double factor)</argsstring>
+        <name>scaleData</name>
+        <qualifiedname>MonotCubicInterpolator::scaleData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling constant</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Scale all the function value data by a constant </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="297" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1afec063b4c7537300ed99905d025c0ef6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::shrinkFlatAreas</definition>
+        <argsstring>()</argsstring>
+        <name>shrinkFlatAreas</name>
+        <qualifiedname>MonotCubicInterpolator::shrinkFlatAreas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper function for <ref refid="class_monot_cubic_interpolator_1ae9cd95952a0251fe8c44ab8305ed1a1e" kindref="member">shrinkFlatAreas(const double)</ref> providing a default epsilon parameter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="493" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="493" bodyend="495"/>
+        <references refid="class_monot_cubic_interpolator_1afec063b4c7537300ed99905d025c0ef6" compoundref="_monot_cubic_interpolator_8_h" startline="493" endline="495">shrinkFlatAreas</references>
+        <referencedby refid="class_monot_cubic_interpolator_1afec063b4c7537300ed99905d025c0ef6" compoundref="_monot_cubic_interpolator_8_h" startline="493" endline="495">shrinkFlatAreas</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1ae9cd95952a0251fe8c44ab8305ed1a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::shrinkFlatAreas</definition>
+        <argsstring>(const double)</argsstring>
+        <name>shrinkFlatAreas</name>
+        <qualifiedname>MonotCubicInterpolator::shrinkFlatAreas</qualifiedname>
+        <param>
+          <type>const double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If function is monotone, but not strictly monotone, this function will remove datapoints from intervals with zero derivative so that the curve become strictly monotone.</para>
+<para>Example The data points (1,2), (2,3), (3,4), (4,4), (5,5), (6,6) will become (1,2), (2,3), (3,4), (5,5), (6,6)</para>
+<para>Assumes at least two datapoints, if one or zero datapoint, this is a noop. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="487" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a37150b71b5453de787f9e9185e7e41e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MonotCubicInterpolator::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <qualifiedname>MonotCubicInterpolator::toString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a string containing the data in a table</para>
+<para><simplesect kind="return"><para>a string containing the data in a table </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="435" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a11a59bc51ddfd431869ced297e1b3eb0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::adjustDerivativesForMonotoneness</definition>
+        <argsstring>() const</argsstring>
+        <name>adjustDerivativesForMonotoneness</name>
+        <qualifiedname>MonotCubicInterpolator::adjustDerivativesForMonotoneness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adjusts the derivative values (ddata) so that we can guarantee that the resulting piecewise <ref refid="class_hermite" kindref="compound">Hermite</ref> polymial is monotone. This is done according to the algorithm of Fritsch and Carlsson 1980, see Section 4, especially the two last lines. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="563" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::computeInternalFunctionData</definition>
+        <argsstring>() const</argsstring>
+        <name>computeInternalFunctionData</name>
+        <qualifiedname>MonotCubicInterpolator::computeInternalFunctionData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="545" column="8"/>
+        <referencedby refid="class_monot_cubic_interpolator_1a9302b07699db98f262d530834688a306" compoundref="_monot_cubic_interpolator_8_h" startline="323" endline="331">isMonotone</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" compoundref="_monot_cubic_interpolator_8_h" startline="389" endline="397">isMonotoneDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" compoundref="_monot_cubic_interpolator_8_h" startline="356" endline="364">isMonotoneIncreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" compoundref="_monot_cubic_interpolator_8_h" startline="372" endline="382">isStrictlyDecreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" compoundref="_monot_cubic_interpolator_8_h" startline="339" endline="349">isStrictlyIncreasing</referencedby>
+        <referencedby refid="class_monot_cubic_interpolator_1afd775edd1e48b05532f912fb830501c7" compoundref="_monot_cubic_interpolator_8_h" startline="306" endline="316">isStrictlyMonotone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a01333da09996298258f6ce9d47cb128c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MonotCubicInterpolator::computeSimpleDerivatives</definition>
+        <argsstring>() const</argsstring>
+        <name>computeSimpleDerivatives</name>
+        <qualifiedname>MonotCubicInterpolator::computeSimpleDerivatives</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes initial derivative values using centered (second order) difference for internal datapoints, and one-sided derivative for endpoints</para>
+<para>The internal datastructure map&lt;double,double&gt; ddata is populated by this method. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="554" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a8cdadccef9cb6675ff25c9339346dee2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::H00</definition>
+        <argsstring>(double t) const</argsstring>
+        <name>H00</name>
+        <qualifiedname>MonotCubicInterpolator::H00</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="531" column="10" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="531" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a5396824ca0482d00a29b72a550155a96" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::H01</definition>
+        <argsstring>(double t) const</argsstring>
+        <name>H01</name>
+        <qualifiedname>MonotCubicInterpolator::H01</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="537" column="10" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="537" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a56b2c59c4a6d29928ac7924097d23844" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::H10</definition>
+        <argsstring>(double t) const</argsstring>
+        <name>H10</name>
+        <qualifiedname>MonotCubicInterpolator::H10</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="534" column="10" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="534" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1ab92f6967f6e6a750816e974d2ece5348" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonotCubicInterpolator::H11</definition>
+        <argsstring>(double t) const</argsstring>
+        <name>H11</name>
+        <qualifiedname>MonotCubicInterpolator::H11</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="540" column="10" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="540" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monot_cubic_interpolator_1a5b486f66fd61a841fc639416da6e3411" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonotCubicInterpolator::isMonotoneCoeff</definition>
+        <argsstring>(double alpha, double beta) const</argsstring>
+        <name>isMonotoneCoeff</name>
+        <qualifiedname>MonotCubicInterpolator::isMonotoneCoeff</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>beta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the coefficient alpha and beta is in the region that guarantees monotoneness of the derivative values they represent</para>
+<para>See Fritsch and Carlson 1980, Lemma 2, alternatively Step 5 in Wikipedia&apos;s article on Monotone cubic interpolation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="574" column="8" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="574" bodyend="580"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents one dimensional function f with single valued argument x that can be interpolated using monotone cubic interpolation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to represent a one-dimensional function f with single-valued argument x. The function is represented by a table of function values. Interpolation between table values is cubic and monotonicity preserving if input values are monotonous.</para>
+<para>Outside x_min and x_max, the class will extrapolate using the constant f(x_min) or f(x_max).</para>
+<para>Extra functionality:<itemizedlist>
+<listitem><para>Can return (x_1+x_2)/2 where x_1 and x_2 are such that abs(f(x_1) - f(x_2)) is maximized. This is used to determine where one should calculate a new value for increased accuracy in the current function</para>
+</listitem></itemizedlist>
+</para>
+<para>Monotonicity preserving cubic interpolation algorithm is taken from Fritsch and Carlson, &quot;Monotone piecewise cubic interpolation&quot;, SIAM J. Numer. Anal. 17, 238<ndash/>246, no. 2,</para>
+<para>$Id$</para>
+<para>Algorithm also described here: <ulink url="http://en.wikipedia.org/wiki/Monotone_cubic_interpolation">http://en.wikipedia.org/wiki/Monotone_cubic_interpolation</ulink></para>
+<para><simplesect kind="author"><para>Håvard Berland &lt;havb (at) statoil.com&gt;, December 2006, Updated for &gt;=C++ 11 by M. Weinberg </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" line="62" column="1" bodyfile="/home/weinberg/Projects/EXP/include/MonotCubicInterpolator.H" bodystart="63" bodyend="582"/>
+    <listofallmembers>
+      <member refid="class_monot_cubic_interpolator_1a752222ba7fe035ce6b64c5874bc0758e" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>addPair</name></member>
+      <member refid="class_monot_cubic_interpolator_1a11a59bc51ddfd431869ced297e1b3eb0" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>adjustDerivativesForMonotoneness</name></member>
+      <member refid="class_monot_cubic_interpolator_1a91de72bd2bff6f7d3bf0b5b82002ccd4" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>chopFlatEndpoints</name></member>
+      <member refid="class_monot_cubic_interpolator_1a71f51d09499f535c0892fc186e97b4f5" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>chopFlatEndpoints</name></member>
+      <member refid="class_monot_cubic_interpolator_1a0e586e116460ac35936e5ccc78059d37" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>computeInternalFunctionData</name></member>
+      <member refid="class_monot_cubic_interpolator_1a01333da09996298258f6ce9d47cb128c" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>computeSimpleDerivatives</name></member>
+      <member refid="class_monot_cubic_interpolator_1a664653849fba0adff687da21f92a2c50" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>data</name></member>
+      <member refid="class_monot_cubic_interpolator_1a642373d6467598df56ef0e213f9cc7e7" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>ddata</name></member>
+      <member refid="class_monot_cubic_interpolator_1ae62d5b8ddd32a797a58f8f331a3e3147" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>decreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1afa8df0327dfaba8d3b65819bff769e84" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>evaluate</name></member>
+      <member refid="class_monot_cubic_interpolator_1a64df179fe82fd50dd0c9f9ea898b08a9" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>evaluate</name></member>
+      <member refid="class_monot_cubic_interpolator_1a7c7bb0b934bc26781b004f071bc46b3b" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>get_fVector</name></member>
+      <member refid="class_monot_cubic_interpolator_1ada1414008545d4c514dc4576d6907b1b" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>get_xVector</name></member>
+      <member refid="class_monot_cubic_interpolator_1a9be851a504df8e804b71ab35616fcc82" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getMaximumF</name></member>
+      <member refid="class_monot_cubic_interpolator_1a6010fb0559add5a4caa5d2ecf7fb4ffb" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getMaximumX</name></member>
+      <member refid="class_monot_cubic_interpolator_1a86d17f00caba1a7cf148ba9a04a33281" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getMinimumF</name></member>
+      <member refid="class_monot_cubic_interpolator_1a1494736ec67ea38a483117199f829937" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getMinimumX</name></member>
+      <member refid="class_monot_cubic_interpolator_1a16b99f4c0757cc6957d9a1b8da9cf03a" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getMissingX</name></member>
+      <member refid="class_monot_cubic_interpolator_1a7e51d95079f77bb617feeacd12eee26e" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>getSize</name></member>
+      <member refid="class_monot_cubic_interpolator_1a8cdadccef9cb6675ff25c9339346dee2" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>H00</name></member>
+      <member refid="class_monot_cubic_interpolator_1a5396824ca0482d00a29b72a550155a96" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>H01</name></member>
+      <member refid="class_monot_cubic_interpolator_1a56b2c59c4a6d29928ac7924097d23844" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>H10</name></member>
+      <member refid="class_monot_cubic_interpolator_1ab92f6967f6e6a750816e974d2ece5348" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>H11</name></member>
+      <member refid="class_monot_cubic_interpolator_1aa0fd1dd1ed5a2170c6a87102a34f124f" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>increasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1a9302b07699db98f262d530834688a306" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isMonotone</name></member>
+      <member refid="class_monot_cubic_interpolator_1a5b486f66fd61a841fc639416da6e3411" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isMonotoneCoeff</name></member>
+      <member refid="class_monot_cubic_interpolator_1a6d7ea3c296303c255e485c083ec5a76a" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isMonotoneDecreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1a8b7fcc56aa55c4d47b67ede95f2bf721" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isMonotoneIncreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1a050b5c4031ad3be6c63a930ee32d3c30" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isStrictlyDecreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1afde66e6c4fd72a3c8b07e4396cc949d0" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isStrictlyIncreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1afd775edd1e48b05532f912fb830501c7" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>isStrictlyMonotone</name></member>
+      <member refid="class_monot_cubic_interpolator_1a6a631dba801b2cb4a54ea3e5b9ab4b99" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1a103ab96b6b68651eaaaa85180f4d88ac" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1acccc26f87c47ab6149ce14b91bff327c" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1ac9a3b7f50f24011576c6725dd62862ce" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1a9bac422d76d206f82b46cb971ae0fe41" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1a9feb3521c6d339482c670c47c3273fab" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>MonotCubicInterpolator</name></member>
+      <member refid="class_monot_cubic_interpolator_1a1eb76f1770400c38473661c50d1bcd86" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>monotone</name></member>
+      <member refid="class_monot_cubic_interpolator_1abccf505d969bf6761287a05c02fb231d" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>monotoneCached</name></member>
+      <member refid="class_monot_cubic_interpolator_1a0958e5f35b2ce7a3694e39270086cc4e" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>operator()</name></member>
+      <member refid="class_monot_cubic_interpolator_1abd5924a2e51068e10f5f412df9608db7" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>read</name></member>
+      <member refid="class_monot_cubic_interpolator_1a0d099337ab5d0f8b4d2c69ec6bcbc5a3" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>read</name></member>
+      <member refid="class_monot_cubic_interpolator_1a28f4640da98b82b087e74732c620f3f0" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>scaleData</name></member>
+      <member refid="class_monot_cubic_interpolator_1ae9cd95952a0251fe8c44ab8305ed1a1e" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>shrinkFlatAreas</name></member>
+      <member refid="class_monot_cubic_interpolator_1afec063b4c7537300ed99905d025c0ef6" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>shrinkFlatAreas</name></member>
+      <member refid="class_monot_cubic_interpolator_1adecf61c001c3f9b3293bfebf1bd5edca" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>strictlyDecreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1a090fcf67aab0e92482256eef3a5db244" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>strictlyIncreasing</name></member>
+      <member refid="class_monot_cubic_interpolator_1a7f47c10641aec29b07f610bdc8d3d697" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>strictlyMonotone</name></member>
+      <member refid="class_monot_cubic_interpolator_1af4f7e31f8a86f4d74ef78545da881d0f" prot="private" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>strictlyMonotoneCached</name></member>
+      <member refid="class_monot_cubic_interpolator_1a37150b71b5453de787f9e9185e7e41e5" prot="public" virt="non-virtual"><scope>MonotCubicInterpolator</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
