@@ -133,9 +133,8 @@ long as the original author is acknowledged by keeping his/her
 commits.
 
 You can pull an existing pull request to a local branch by running
-``git fetch upstream pull/$PR_NUMBER/head:$BRANCH_NAME_TO_CREATE``
-(replace 'upstream' with a remote name for scrapy repository,
-``$PR_NUMBER`` with an ID of the pull request, and
+``git fetch https://github.com/EXP-code/EXP pull/$PR_NUMBER/head:$BRANCH_NAME_TO_CREATE``
+(replace ``$PR_NUMBER`` with an ID of the pull request, and
 ``$BRANCH_NAME_TO_CREATE`` with a name of the branch you want to
 create locally).  See also:
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally#modifying-an-inactive-pull-request-locally.
@@ -287,7 +286,6 @@ pyEXP changes, respectively:
    don't expect anyone to try all of them.  But please use your best
    judgment to try those affected by your proposed change.
 
-.. _issue tracker: https://github.com/scrapy/scrapy/issues
-.. _tests/: https://github.com/scrapy/scrapy/tree/master/tests
-.. _open issues: https://github.com/scrapy/scrapy/issues
+.. _issue tracker: https://github.com/EXP-code/EXP/issues
+.. _open issues: https://github.com/EXP-code/EXP/issues
 .. _pull request: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
