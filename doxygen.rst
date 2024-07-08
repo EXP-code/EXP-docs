@@ -31,6 +31,6 @@ All classes, members, and utilities
 Code reference with inheritance diagrams
 ========================================
 
-.. doxygenindex::
-   :allow-dot-graphs:
+# .. doxygenindex::
+#   :allow-dot-graphs:
 
