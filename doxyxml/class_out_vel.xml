@@ -64,20 +64,6 @@
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="57" column="7" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="57" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_out_vel_1ad9a46637766a28169d6eabe05aa7436b" prot="private" static="no" mutable="no">
-        <type>std::string</type>
-        <definition>std::string OutVel::filename</definition>
-        <argsstring></argsstring>
-        <name>filename</name>
-        <qualifiedname>OutVel::filename</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_out_vel_1aeada5d27536d975b914fc80809939a45" prot="private" static="no" mutable="no">
         <type>std::string</type>
         <definition>std::string OutVel::model</definition>
@@ -90,7 +76,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="24" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="25" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_out_vel_1aef724fab158ee450f195a3459f16dc78" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OutVel::modelname</definition>
+        <argsstring></argsstring>
+        <name>modelname</name>
+        <qualifiedname>OutVel::modelname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="15" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_out_vel_1af430cf7b2a415ac945fed5dd2a836656" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="30" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/OutVel.H" line="53" column="31" bodyfile="/home/weinberg/Projects/EXP/src/OutVel.H" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_out_vel_1a3da7062ac67c00d26e4c2d69e9b1d0c8" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -319,10 +319,10 @@
 <para>Dump velocity flow coefficients at each interval</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>filename</parametername>
+<parametername>modelname</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>of the coefficient file</para>
+<para>is the file specifying the density model</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -367,10 +367,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>scale</parametername>
+<parametername>rmapping</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>is the scale parameter for the density field</para>
+<para>is the coordinate mapping parameter for the expansion</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -504,10 +504,10 @@
       <member refid="class_output_1aee441fea89e02b2858245ee28b9b025b" prot="protected" virt="non-virtual"><scope>OutVel</scope><name>current_keys</name></member>
       <member refid="class_out_vel_1a3a482e29d1dbbbf3706b353f2c834934" prot="private" virt="non-virtual"><scope>OutVel</scope><name>dof</name></member>
       <member refid="class_out_vel_1ac82da276bb4043c665ee25d6c337037d" prot="private" virt="non-virtual"><scope>OutVel</scope><name>ExtendH5Coefs</name></member>
-      <member refid="class_out_vel_1ad9a46637766a28169d6eabe05aa7436b" prot="private" virt="non-virtual"><scope>OutVel</scope><name>filename</name></member>
       <member refid="class_output_1a536938d67e94f7495a433f273db577cf" prot="public" virt="non-virtual"><scope>OutVel</scope><name>id</name></member>
       <member refid="class_out_vel_1a6999a3df3535236f41afebac2089ccfe" prot="private" virt="virtual"><scope>OutVel</scope><name>initialize</name></member>
       <member refid="class_out_vel_1aeada5d27536d975b914fc80809939a45" prot="private" virt="non-virtual"><scope>OutVel</scope><name>model</name></member>
+      <member refid="class_out_vel_1aef724fab158ee450f195a3459f16dc78" prot="private" virt="non-virtual"><scope>OutVel</scope><name>modelname</name></member>
       <member refid="class_output_1a39eaed6fed933cc17bf987664aa7dabf" prot="protected" virt="non-virtual"><scope>OutVel</scope><name>nint</name></member>
       <member refid="class_output_1a598ba954d78d8328eb821ed309ed3618" prot="protected" virt="non-virtual"><scope>OutVel</scope><name>nintsub</name></member>
       <member refid="class_output_1a530b50b274e5edf4d8cc9588a94c3979" prot="protected" virt="non-virtual"><scope>OutVel</scope><name>nintsub_warning</name></member>

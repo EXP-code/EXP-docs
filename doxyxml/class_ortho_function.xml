@@ -369,6 +369,25 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ortho_function_1a14279151a6c9cea9db93ebf056ab0c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrthoFunction::dumpOrtho</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>dumpOrtho</name>
+        <qualifiedname>OrthoFunction::dumpOrtho</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Dump the orthogonal function table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="105" column="8"/>
+      </memberdef>
       <memberdef kind="function" id="class_ortho_function_1a5dce33e098819f50e474faaec38f8e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Eigen::VectorXd</type>
         <definition>Eigen::VectorXd OrthoFunction::operator()</definition>
@@ -489,13 +508,14 @@
     <detaileddescription>
 <para>Compute orthogonal functions whose lowest-order member is the background density using the Stieltjes procedure for generating 3-term recursion </para>
     </detaileddescription>
-    <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="15" bodyend="103"/>
+    <location file="/home/weinberg/Projects/EXP/include/OrthoFunction.H" line="14" column="1" bodyfile="/home/weinberg/Projects/EXP/include/OrthoFunction.H" bodystart="15" bodyend="106"/>
     <listofallmembers>
       <member refid="class_ortho_function_1abcda02877da0939ed12bf55417b2a082" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>alph</name></member>
       <member refid="class_ortho_function_1ab721d5201751cc3eedf241fa51b4428d" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>beta</name></member>
       <member refid="class_ortho_function_1a214ec08eca9cacf8e79bf382e750b871" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>d_r_to_x</name></member>
       <member refid="class_ortho_function_1ae9ede9ae3c0c32d5e60ec326bce606f0" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>DensFunc</name></member>
       <member refid="class_ortho_function_1a1cab252ae2b89b95da17bf6e59aaa9d9" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>dof</name></member>
+      <member refid="class_ortho_function_1a14279151a6c9cea9db93ebf056ab0c8c" prot="public" virt="non-virtual"><scope>OrthoFunction</scope><name>dumpOrtho</name></member>
       <member refid="class_ortho_function_1a3a2733eb9891d1b40ed7a9a98cc99f4b" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>dx</name></member>
       <member refid="class_ortho_function_1ad48d9a2800afd2d519ee48a104dc1d43" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>generate</name></member>
       <member refid="class_ortho_function_1af05163e297127c0405fc7330f65ec90e" prot="private" virt="non-virtual"><scope>OrthoFunction</scope><name>knots</name></member>

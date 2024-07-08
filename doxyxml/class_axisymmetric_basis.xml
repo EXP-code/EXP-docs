@@ -3,7 +3,6 @@
   <compounddef id="class_axisymmetric_basis" kind="class" language="C++" prot="public">
     <compoundname>AxisymmetricBasis</compoundname>
     <basecompoundref refid="class_basis" prot="public" virt="non-virtual">Basis</basecompoundref>
-    <derivedcompoundref refid="class_c_brock_disk" prot="public" virt="non-virtual">CBrockDisk</derivedcompoundref>
     <derivedcompoundref refid="class_polar_basis" prot="public" virt="non-virtual">PolarBasis</derivedcompoundref>
     <derivedcompoundref refid="class_spherical_basis" prot="public" virt="non-virtual">SphericalBasis</derivedcompoundref>
     <includes refid="_axisymmetric_basis_8_h" local="no">AxisymmetricBasis.H</includes>
@@ -1222,37 +1221,19 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>Bessel</label>
         <link refid="class_bessel"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>CBrock</label>
-        <link refid="class_c_brock"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>CBrockDisk</label>
-        <link refid="class_c_brock_disk"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>FlatDisk</label>
-        <link refid="class_flat_disk"/>
-        <childnode refid="5" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>Hernquist</label>
-        <link refid="class_hernquist"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5">
+        <label>FlatDisk</label>
+        <link refid="class_flat_disk"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
         <label>PolarBasis</label>
         <link refid="class_polar_basis"/>
         <childnode refid="1" relation="public-inheritance">
@@ -1262,13 +1243,13 @@
         <label>PotAccel</label>
         <link refid="class_pot_accel"/>
       </node>
-      <node id="11">
+      <node id="8">
         <label>Sphere</label>
         <link refid="class_sphere"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>SphericalBasis</label>
         <link refid="class_spherical_basis"/>
         <childnode refid="1" relation="public-inheritance">

@@ -11,7 +11,6 @@
     <includes local="no">cmath</includes>
     <includes local="no">map</includes>
     <includes local="no">Eigen/Eigen</includes>
-    <includedby refid="_c_brock_disk_8_h" local="no">/home/weinberg/Projects/EXP/src/CBrockDisk.H</includedby>
     <incdepgraph>
       <node id="1">
         <label>/home/weinberg/Projects/EXP/src/TwoDCoefs.H</label>
@@ -63,36 +62,6 @@
         <label>vector</label>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>/home/weinberg/Projects/EXP/src/CBrockDisk.H</label>
-        <link refid="_c_brock_disk_8_h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
-        <link refid="_e_jcom_8_h"/>
-      </node>
-      <node id="5">
-        <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
-        <link refid="_mixture_basis_8_h"/>
-      </node>
-      <node id="3">
-        <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
-        <link refid="_two_center_8_h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>/home/weinberg/Projects/EXP/src/TwoDCoefs.H</label>
-        <link refid="_two_d_coefs_8_h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innerclass refid="struct_two_d_coefs_1_1_coefs" prot="public">TwoDCoefs::Coefs</innerclass>
     <innerclass refid="class_two_d_coefs" prot="public">TwoDCoefs</innerclass>
     <briefdescription>

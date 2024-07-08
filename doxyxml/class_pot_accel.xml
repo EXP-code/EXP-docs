@@ -166,7 +166,7 @@
         <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="56" column="13" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="56" bodyend="-1"/>
         <referencedby refid="class_cylinder_1a5c444052ebe63288e65ea8da6f3a2918" compoundref="_cylinder_8_h" startline="424" endline="437">Cylinder::multistep_update_begin</referencedby>
         <referencedby refid="class_pot_accel_1a8aea0d1740bf7432e1193dda7121a8bb" compoundref="_pot_accel_8_h" startline="154" endline="154">RegisterComponent</referencedby>
-        <referencedby refid="class_two_center_1a7ce7e41b10ddda4a7fc67b72d901f0e7" compoundref="_two_center_8_h" startline="130" endline="134">TwoCenter::RegisterComponent</referencedby>
+        <referencedby refid="class_two_center_1a7ce7e41b10ddda4a7fc67b72d901f0e7" compoundref="_two_center_8_h" startline="126" endline="130">TwoCenter::RegisterComponent</referencedby>
         <referencedby refid="class_cube_1_1exe_timer_1a6a72d798de758a187cdc1efe342cf444" compoundref="_cube_8_h" startline="124" endline="145">Cube::exeTimer::~exeTimer</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_pot_accel_1ab682d4480d7d2946a7bef7f93ac0c6a0" prot="protected" static="no" mutable="no">
@@ -231,7 +231,7 @@
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/src/PotAccel.H" line="80" column="12" bodyfile="/home/weinberg/Projects/EXP/src/PotAccel.H" bodystart="80" bodyend="-1"/>
         <referencedby refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" compoundref="_pot_accel_8_h" startline="204" endline="204">set_multistep_level</referencedby>
-        <referencedby refid="class_two_center_1afc027c542932d0fb5c23365730c7a225" compoundref="_two_center_8_h" startline="138" endline="143">TwoCenter::set_multistep_level</referencedby>
+        <referencedby refid="class_two_center_1afc027c542932d0fb5c23365730c7a225" compoundref="_two_center_8_h" startline="134" endline="139">TwoCenter::set_multistep_level</referencedby>
         <referencedby refid="class_cube_1_1exe_timer_1a6a72d798de758a187cdc1efe342cf444" compoundref="_cube_8_h" startline="124" endline="145">Cube::exeTimer::~exeTimer</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_pot_accel_1a73976f361ed7abf13001835bfcdee639" prot="protected" static="no" mutable="no">
@@ -492,13 +492,10 @@
         <reimplementedby refid="class_user_m_w_1a40939e74cec9a7afbf18620cd3142c16">initialize</reimplementedby>
         <reimplementedby refid="class_user_test_1a6cf68b085da1e0be852e2a464e7fc2eb">initialize</reimplementedby>
         <reimplementedby refid="class_user_test_cuda_1a77bf45d3c5d2f758c6c810be5900a61c">initialize</reimplementedby>
-        <reimplementedby refid="class_c_brock_1aae55f8c8c93c8f72fc62a2f997957126">initialize</reimplementedby>
-        <reimplementedby refid="class_c_brock_disk_1ad1adc8bc5d5d86f5960b4172847f7935">initialize</reimplementedby>
         <reimplementedby refid="class_cube_1a4889dfcc0b07a325577d3a632ab167d3">initialize</reimplementedby>
         <reimplementedby refid="class_cylinder_1a0da47f0873d61edd6c7733115de9f143">initialize</reimplementedby>
         <reimplementedby refid="class_cylinder_1a0da47f0873d61edd6c7733115de9f143">initialize</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a99ce7aa447bc828ce26a69cf18136556">initialize</reimplementedby>
-        <reimplementedby refid="class_hernquist_1ad1f47f7a2150b79229624d103a81655f">initialize</reimplementedby>
         <reimplementedby refid="class_slab_s_l_1adcfe2a7cda812280a978793ccd8997e8">initialize</reimplementedby>
         <reimplementedby refid="class_sphere_1aba7d59251bc70b4b2f45271025f285ff">initialize</reimplementedby>
         <reimplementedby refid="class_two_center_1acd8e8d4c102a148dfca2d0e57355aa9f">initialize</reimplementedby>
@@ -574,7 +571,6 @@
         <argsstring>(void *arg)=0</argsstring>
         <name>determine_acceleration_and_potential_thread</name>
         <qualifiedname>PotAccel::determine_acceleration_and_potential_thread</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a18d9afa579242f0788b6f1741f5627b7">determine_acceleration_and_potential_thread</reimplementedby>
         <reimplementedby refid="class_cube_1aa2a95971c28f6143b7521bd0d2087662">determine_acceleration_and_potential_thread</reimplementedby>
         <reimplementedby refid="class_cylinder_1a7833c07ea8eeb02353c696114de18fbc">determine_acceleration_and_potential_thread</reimplementedby>
         <reimplementedby refid="class_cylinder_1a7833c07ea8eeb02353c696114de18fbc">determine_acceleration_and_potential_thread</reimplementedby>
@@ -642,7 +638,6 @@
         <argsstring>(void)=0</argsstring>
         <name>determine_coefficients</name>
         <qualifiedname>PotAccel::determine_coefficients</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a86d2dd823c864264001c0f504e8340ad">determine_coefficients</reimplementedby>
         <reimplementedby refid="class_cylinder_1a31fffadf7f868525edeb6b561357f8bd">determine_coefficients</reimplementedby>
         <reimplementedby refid="class_cylinder_1a31fffadf7f868525edeb6b561357f8bd">determine_coefficients</reimplementedby>
         <reimplementedby refid="class_cube_1a6da6df3f255795b3e3765bc72af8ea76">determine_coefficients</reimplementedby>
@@ -674,7 +669,6 @@
         <argsstring>(void *arg)=0</argsstring>
         <name>determine_coefficients_thread</name>
         <qualifiedname>PotAccel::determine_coefficients_thread</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a3c44852b0a6193b22fbdb998be59a1f0">determine_coefficients_thread</reimplementedby>
         <reimplementedby refid="class_cube_1a3defa1a8f6b8fe67fa353632c0c9635a">determine_coefficients_thread</reimplementedby>
         <reimplementedby refid="class_cylinder_1a2362b4060aa3fb06b5b8de448ae61f81">determine_coefficients_thread</reimplementedby>
         <reimplementedby refid="class_cylinder_1a2362b4060aa3fb06b5b8de448ae61f81">determine_coefficients_thread</reimplementedby>
@@ -707,7 +701,6 @@
         <qualifiedname>PotAccel::dump_coefs</qualifiedname>
         <reimplementedby refid="class_polar_basis_1a4326226fbd3814c1b159c9a8d1714dc9">dump_coefs</reimplementedby>
         <reimplementedby refid="class_spherical_basis_1a518203f6db28e171c7dccd04611994b5">dump_coefs</reimplementedby>
-        <reimplementedby refid="class_c_brock_disk_1ad990d027c2795f3d31887620e945b258">dump_coefs</reimplementedby>
         <reimplementedby refid="class_cylinder_1a15c516b5506bd769ee4cca1f5c838e2a">dump_coefs</reimplementedby>
         <reimplementedby refid="class_cylinder_1a15c516b5506bd769ee4cca1f5c838e2a">dump_coefs</reimplementedby>
         <param>
@@ -729,7 +722,6 @@
         <argsstring>(const std::string &amp;file)</argsstring>
         <name>dump_coefs_h5</name>
         <qualifiedname>PotAccel::dump_coefs_h5</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a12712231bfccca298f3fa89126e127b3">dump_coefs_h5</reimplementedby>
         <reimplementedby refid="class_cube_1ad41166930efa0c9005e1190ea95c98e0">dump_coefs_h5</reimplementedby>
         <reimplementedby refid="class_cylinder_1a0e2194b76e3515007c157ddf7f1dbe72">dump_coefs_h5</reimplementedby>
         <reimplementedby refid="class_cylinder_1a0e2194b76e3515007c157ddf7f1dbe72">dump_coefs_h5</reimplementedby>
@@ -773,7 +765,6 @@
         <argsstring>(Component *c)=0</argsstring>
         <name>get_acceleration_and_potential</name>
         <qualifiedname>PotAccel::get_acceleration_and_potential</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1ab4ad38ef4a371e9adf418164a09b0684">get_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_cube_1a8477225cbb41bff514d27192542d7155">get_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_cylinder_1a7eedc780551196e17ce0949acf5c951c">get_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_cylinder_1a7eedc780551196e17ce0949acf5c951c">get_acceleration_and_potential</reimplementedby>
@@ -1292,31 +1283,19 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>Bessel</label>
         <link refid="class_bessel"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9">
-        <label>CBrock</label>
-        <link refid="class_c_brock"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>CBrockDisk</label>
-        <link refid="class_c_brock_disk"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="13">
+      <node id="10">
         <label>Cube</label>
         <link refid="class_cube"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="12">
+      <node id="9">
         <label>Cylinder</label>
         <link refid="class_cylinder"/>
         <childnode refid="2" relation="public-inheritance">
@@ -1324,55 +1303,49 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="11">
         <label>Direct</label>
         <link refid="class_direct"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="34">
+      <node id="31">
         <label>EJcom</label>
         <link refid="class_e_jcom"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="30" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="12">
         <label>ExternalForce</label>
         <link refid="class_external_force"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="5">
         <label>FlatDisk</label>
         <link refid="class_flat_disk"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="4" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="16">
+      <node id="13">
         <label>HaloBulge</label>
         <link refid="class_halo_bulge"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
-        <label>Hernquist</label>
-        <link refid="class_hernquist"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="30">
+      <node id="27">
         <label>NoForce</label>
         <link refid="class_no_force"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
+      <node id="14">
         <label>PeriodicBC</label>
         <link refid="class_periodic_b_c"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="4">
         <label>PolarBasis</label>
         <link refid="class_polar_basis"/>
         <childnode refid="3" relation="public-inheritance">
@@ -1382,106 +1355,106 @@
         <label>PotAccel</label>
         <link refid="class_pot_accel"/>
       </node>
-      <node id="18">
+      <node id="15">
         <label>ScatterMFP</label>
         <link refid="class_scatter_m_f_p"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="31">
+      <node id="28">
         <label>Shells</label>
         <link refid="class_shells"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="32">
+      <node id="29">
         <label>SlabSL</label>
         <link refid="class_slab_s_l"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="8">
         <label>Sphere</label>
         <link refid="class_sphere"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>SphericalBasis</label>
         <link refid="class_spherical_basis"/>
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="30">
         <label>TwoCenter</label>
         <link refid="class_two_center"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="19">
+      <node id="16">
         <label>UserBar</label>
         <link refid="class_user_bar"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>UserDisk</label>
+        <link refid="class_user_disk"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>UserHalo</label>
+        <link refid="class_user_halo"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>UserLogPot</label>
+        <link refid="class_user_log_pot"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="20">
-        <label>UserDisk</label>
-        <link refid="class_user_disk"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>UserMNdisk</label>
+        <link refid="class_user_m_ndisk"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="21">
-        <label>UserHalo</label>
-        <link refid="class_user_halo"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>UserMW</label>
+        <link refid="class_user_m_w"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="22">
-        <label>UserLogPot</label>
-        <link refid="class_user_log_pot"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>UserTest</label>
+        <link refid="class_user_test"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="23">
-        <label>UserMNdisk</label>
-        <link refid="class_user_m_ndisk"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>UserTestCuda</label>
+        <link refid="class_user_test_cuda"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="24">
-        <label>UserMW</label>
-        <link refid="class_user_m_w"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>externalShock</label>
+        <link refid="classexternal_shock"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="25">
-        <label>UserTest</label>
-        <link refid="class_user_test"/>
-        <childnode refid="15" relation="public-inheritance">
+        <label>generateRelaxation</label>
+        <link refid="classgenerate_relaxation"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="26">
-        <label>UserTestCuda</label>
-        <link refid="class_user_test_cuda"/>
-        <childnode refid="15" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="27">
-        <label>externalShock</label>
-        <link refid="classexternal_shock"/>
-        <childnode refid="15" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="28">
-        <label>generateRelaxation</label>
-        <link refid="classgenerate_relaxation"/>
-        <childnode refid="15" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="29">
         <label>tidalField</label>
         <link refid="classtidal_field"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

@@ -129,7 +129,6 @@
         <argsstring>(void)=0</argsstring>
         <name>determine_acceleration_and_potential</name>
         <qualifiedname>Basis::determine_acceleration_and_potential</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a00f37c5ce057c8537d91dcd498fc785c">determine_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_cylinder_1a2052d5c8fe1589f91215058ebd72ec2a">determine_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_cylinder_1a2052d5c8fe1589f91215058ebd72ec2a">determine_acceleration_and_potential</reimplementedby>
         <reimplementedby refid="class_polar_basis_1acb8cf13811dc3e6d8556b70d00a4d8c6">determine_acceleration_and_potential</reimplementedby>
@@ -152,7 +151,6 @@
         <argsstring>(double x, double y, double z, double *tdens0, double *tpotl0, double *tdens, double *tpotl, double *tpotx, double *tpoty, double *tpotz)=0</argsstring>
         <name>determine_fields_at_point</name>
         <qualifiedname>Basis::determine_fields_at_point</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a072ab7de9fb5cd71f65fddffb73a7223">determine_fields_at_point</reimplementedby>
         <reimplementedby refid="class_cylinder_1a4cffcad313069e21b01a648d656f2296">determine_fields_at_point</reimplementedby>
         <reimplementedby refid="class_cylinder_1a4cffcad313069e21b01a648d656f2296">determine_fields_at_point</reimplementedby>
         <reimplementedby refid="class_polar_basis_1a05e6a24b91fd7c8239bffa2df1bb9004">determine_fields_at_point</reimplementedby>
@@ -212,7 +210,6 @@
         <argsstring>(double r, double z, double phi, double *tdens0, double *dpotl0, double *tdens, double *tpotl, double *tpotr, double *tpotz, double *tpotp)=0</argsstring>
         <name>determine_fields_at_point_cyl</name>
         <qualifiedname>Basis::determine_fields_at_point_cyl</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1ab70d4326f206ae7f860c38b01da8b155">determine_fields_at_point_cyl</reimplementedby>
         <reimplementedby refid="class_cylinder_1a48d17ba2d4a5597c76e32050e40f54d1">determine_fields_at_point_cyl</reimplementedby>
         <reimplementedby refid="class_cylinder_1a48d17ba2d4a5597c76e32050e40f54d1">determine_fields_at_point_cyl</reimplementedby>
         <reimplementedby refid="class_polar_basis_1aeef7e49e923b2a7bd510c99f10cdb19e">determine_fields_at_point_cyl</reimplementedby>
@@ -272,7 +269,6 @@
         <argsstring>(double r, double theta, double phi, double *tdens0, double *dpotl0, double *tdens, double *tpotl, double *tpotr, double *tpott, double *tpotp)=0</argsstring>
         <name>determine_fields_at_point_sph</name>
         <qualifiedname>Basis::determine_fields_at_point_sph</qualifiedname>
-        <reimplementedby refid="class_c_brock_disk_1a1105dff303169959c94d2898c7740e18">determine_fields_at_point_sph</reimplementedby>
         <reimplementedby refid="class_cylinder_1a021dbbef8f761e75fef8f25316bb71c8">determine_fields_at_point_sph</reimplementedby>
         <reimplementedby refid="class_cylinder_1a021dbbef8f761e75fef8f25316bb71c8">determine_fields_at_point_sph</reimplementedby>
         <reimplementedby refid="class_polar_basis_1a4d396e0af9e54f2f09009f05a5d95672">determine_fields_at_point_sph</reimplementedby>
@@ -345,25 +341,13 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>Bessel</label>
         <link refid="class_bessel"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
       <node id="9">
-        <label>CBrock</label>
-        <link refid="class_c_brock"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>CBrockDisk</label>
-        <link refid="class_c_brock_disk"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="12">
         <label>Cylinder</label>
         <link refid="class_cylinder"/>
         <childnode refid="1" relation="public-inheritance">
@@ -371,19 +355,13 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="5">
         <label>FlatDisk</label>
         <link refid="class_flat_disk"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="4" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
-        <label>Hernquist</label>
-        <link refid="class_hernquist"/>
-        <childnode refid="7" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
+      <node id="4">
         <label>PolarBasis</label>
         <link refid="class_polar_basis"/>
         <childnode refid="3" relation="public-inheritance">
@@ -393,13 +371,13 @@
         <label>PotAccel</label>
         <link refid="class_pot_accel"/>
       </node>
-      <node id="11">
+      <node id="8">
         <label>Sphere</label>
         <link refid="class_sphere"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>SphericalBasis</label>
         <link refid="class_spherical_basis"/>
         <childnode refid="3" relation="public-inheritance">
