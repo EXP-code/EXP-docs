@@ -15,8 +15,8 @@ your bases.  A Jupyter notebook implementing these examples,
 `Tutorials/Basis` directory.
 
 
-A spherical basis
------------------
+Spherical
+---------
 
 .. _visualizing-spherical-basis:
 
@@ -100,8 +100,8 @@ The resulting images are:
    :align: center
 
 
-Cylindrical basis
------------------
+Cylindrical
+-----------
 
 .. _visualizing-cylindrical-basis:
 

@@ -1,7 +1,7 @@
 .. _howtosim:
 
 How to run your own N-body simulation in EXP
-###############################################
+############################################
 
 This tutorial will walk you through the steps to get started with running
 your own N-body simulations in EXP. EXP uses YAML configuration files, and
@@ -24,7 +24,7 @@ The general steps for creating an N-body simulation in EXP are to:
 #. Sanity check your output 
 
 Step One: generate a model and body files
-******************************
+*****************************************
 Model files are ascii files that contain the initial density distribution of your dark matter halo. We provide an example of how to create a  
 model file from an analytic density distribution or a simulation snapshot in `the pyEXP-Examples repo <https://github.com/EXP-code/pyEXP-examples/blob/main/How-To/Recipes/Basis/generate%20GSE%20(Naidu%2B%202021)%20basis.py>`_. These files contain four columns that provide spherical radius values (R) along with
 the density (D), mass enclosed (M), and gravitational potential (P) at that radius. Example  model files (ending in ``.model``,e.g. ``SLGridSph.model``) are provided in the DiskHalo, Halo, and NBody examples in the `EXP-Examples repo <https://github.com/EXP-code/EXP-examples/blob/main/>`_. Model files
@@ -215,6 +215,7 @@ C. Relax this disk in the presence of the halo. Make a copy of your original EXP
 and the following lines in the ``force`` parameter map of the disk:
 
 .. code-block:: python
+
    self_consistent:     true
    mlim:                0
 

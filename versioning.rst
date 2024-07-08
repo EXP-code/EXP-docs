@@ -4,8 +4,8 @@
 Versioning and API stability
 ============================
 
-Versioning
-==========
+Version policy
+==============
 
 .. index:: versioning
 

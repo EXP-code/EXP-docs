@@ -367,8 +367,6 @@ separately.
 		     for Sturm-Liouville Problems. ACM Transactions on
 		     Mathematical Software, 19:360–376, Sept. 1993.
 
-.. [weinberg99] M. D. Weinberg. AJ, 117:629, 1999.
-
 .. [weinberg07a] M. D. Weinberg and N. Katz. The bar-halo
 		 interaction - I. From funda- mental dynamics to
 		 revised N-body requirements. MNRAS, 375:425–459,
