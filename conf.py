@@ -15,21 +15,21 @@ version = '7.x'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# extensions = ['sphinx_rtd_theme', 'breathe', 'sphinx.ext.graphviz']
+extensions = ['sphinx_rtd_theme', 'breathe', 'sphinx.ext.graphviz']
 
-extensions = [
-    'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.inheritance_diagram',
-    'sphinx.ext.graphviz',
-    'breathe'
-]
+# extensions = [
+#     'sphinx_rtd_theme',
+#     'sphinx.ext.autodoc',
+#     'sphinx.ext.intersphinx',
+#     'sphinx.ext.todo',
+#     'sphinx.ext.coverage',
+#     'sphinx.ext.mathjax',
+#     'sphinx.ext.ifconfig',
+#     'sphinx.ext.viewcode',
+#     'sphinx.ext.graphviz',
+#     'sphinx.ext.inheritance_diagram',
+#     'breathe'
+# ]
 
 
 templates_path = ['_templates']
