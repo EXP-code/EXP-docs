@@ -33,7 +33,7 @@ The basic BFE algorithm
 The harmonic basis-function expansion (BFE) technique has been used to
 both study and compare simulations to theoretical predictions, owing
 to its natural relationship with analytic perturbation theory
-([weinberg07a]_, [weinberg07b]_). To use the BFE approach for $n$-body
+([weinberg07a]_, [weinberg07b]_}. To use the BFE approach for `n`-body
 simulations, one uses the :index:`biorthogonal` nature of the
 appropriately chosen basis functions to solve the :index:`Poisson
 equation` using separable azimuthal harmonics at the same time as the
@@ -153,8 +153,7 @@ we may derive an infinity of radial bases.  In particular, the
 weighting function :math:`\omega` in equation :eq:`sle` may be
 selected to be an equilibrium solution of the Poisson equation.  In
 other words, the unperturbed potential would be represented by a
-single term! In EXP, we solve the SLE to get the new
-biorthogonal basis using the SLEDGE solver [pruess_fulton93]_.
+single term!
 
 The disk is more complicated.  Although one can construct a disk basis
 from the eigenfunctions of the Laplacian as in the spherical case
@@ -289,11 +288,9 @@ subspace.
 .. _twodcyl:
 .. include:: two_d_disk.rst
 
-.. _slabSL:
-.. include:: slab.rst
-
-.. _cube:
 .. include:: cube.rst
+
+.. include:: slab.rst
 
 Final comments and caveats
 ==========================
@@ -318,8 +315,8 @@ order to provide a low-noise, bandwidth-limited representation of the
 gravitational field. One must investigate whether the basis can
 capture all possible mechanisms of disk evolution.  For example, this
 method will work very well for near equilibrium systems but could give
-biases results for grossly asymmetric systems.  A simple example of
-this is centering (see Sec. :ref:`centering`).   Please be vigilant.
+biased results for grossly asymmetric systems.  A simple example of
+this is centering (see Sec. `EJ`).   Please be vigilant.
 
 On the up side, a basis function representation provides an
 information--rich summary of the gravitational field and provides
@@ -358,14 +355,13 @@ separately.
 	       Universal Density Profile from Hierarchical
 	       Clustering. ApJ, 490:493–508, Dec. 1997.
 
-
+.. [pruess_fulton93] S.Pruess and C. T. Fulton. Mathematical software
+		     for Sturm-Liouville problems. ACM
+		     Trans. Math. Softw., 19:360-376, 1993.
+		     
 .. [weinberg98] Weinberg M. D. MNRAS, 297:101, June 1998.
 
 .. [weinberg99] M. D. Weinberg. AJ, 117:629, Jan. 1999.
-
-.. [pruess_fulton93] S. Pruess and C. T. Fulton. Mathematical Software
-		     for Sturm-Liouville Problems. ACM Transactions on
-		     Mathematical Software, 19:360–376, Sept. 1993.
 
 .. [weinberg07a] M. D. Weinberg and N. Katz. The bar-halo
 		 interaction - I. From funda- mental dynamics to

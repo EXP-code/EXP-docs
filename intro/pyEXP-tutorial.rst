@@ -127,6 +127,7 @@ Putting all of this together, we have the following code:
    basis.set_coefs(coefs.getCoefStruct(time))
 
 
+
 Next steps
 ==========
 
