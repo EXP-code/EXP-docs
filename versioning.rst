@@ -4,8 +4,8 @@
 Versioning and API stability
 ============================
 
-Versioning
-==========
+What the version number means
+=============================
 
 .. index:: versioning
 
