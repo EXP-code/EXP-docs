@@ -9,7 +9,7 @@
 project = 'EXP'
 copyright = '2023-2024, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.13'
+release = '0.14'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------
