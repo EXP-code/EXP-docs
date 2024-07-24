@@ -86,6 +86,58 @@ approximately 12 wall clock hours for 10 Gyr of simulation for a
 Milky-Way-like model.  Similar throughput for a CPU cluster requires
 approximately 512 cores.
 
+How do I restart EXP from a checkpoint?
+---------------------------------------
+
+EXP writes phase space files to disk using on of the checkpoints to
+disk at regular intervals based on your choice of output routine.  The
+main phase-space output routines are:
+
+  =============     ===========
+  Output type       Explanation
+  =============     ===========
+  outpsp            Writes single-precision binary N-body phase-space
+                    in PSP format.
+  outpsq            As in `outpsp` but each process writes in parallel
+                    for runtime efficiency.
+  outchkpt          Writes double-precision binary N-body phase-space
+                    into a single file.
+  outchkpq          As in `outchkpt` but each process writes in parallel
+                    for runtime efficiency.
+  =============     ===========
+
+Each of these output routines takes the integer argument `nint`
+describing the number of steps between each output.  These routines
+will construct a unique file name based on the `runtag` and file
+type.  You can override this with the `filename` argument.
+
+For example, assume that you are running simulation with 4000 time
+steps and want a snapshot every 100 steps and a checkpoint every 1000
+time steps. Your configuration might look like this:
+
+.. code-block:: yaml
+
+   Output:
+     - id : outpsq
+       parameters : {nint : 100}
+     - id : outchkptq
+       parameters : {nint : 1000}
+
+This will write snapshot and checkpoint files of the following form:
+`SPL.<runtag>.<xxxxx>` and `SPL.<runtag>.chkpt` where `runtag` is the
+parameter specified in the `Global` section of the EXP YAML
+configuration and `xxxxx` is a five-digit zero-padded number that
+identifies the snapshot.  You can restart EXP from a snapshot
+checkpoint by specifying one of these file names as the `infile`
+parameter.  For example:
+
+.. code-block:: yaml
+
+   Global:
+     runtag: run001
+     infile: SPL.run001.chkpt
+
+
 My HPC cluster does not have the required dependencies.  What are my options?
 -----------------------------------------------------------------------------
 
