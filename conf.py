@@ -4,7 +4,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import sys, os
-sys.path.insert(0, os.path.abspath('./lib'))
+sys.path.insert(0, os.path.abspath('lib'))
+print(sys.path)
+print(os.system('ls {}'.format(os.path.abspath('lib'))))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
