@@ -220,6 +220,7 @@ More about EXP
    news
    contributing
    doxygen
+   pybind11
    versioning
 
 :doc:`news`
@@ -229,7 +230,10 @@ More about EXP
     Learn how to contribute to the EXP project.
 
 :doc:`doxygen`
-    Doxygen manual for EXP and pyEXP classes.
+    Index to C++ EXP classes 
+
+:doc:`pybind11`
+    Index to Python pyEXP classes
 
 :doc:`versioning`
     Understand EXP versioning and API stability.

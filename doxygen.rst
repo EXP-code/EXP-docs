@@ -1,8 +1,8 @@
 .. _doxygen:
 
-=====================
-Doxygen EXP web pages
-=====================
+====================
+Index to C++ classes
+====================
 
 .. index:: Doxygen
 

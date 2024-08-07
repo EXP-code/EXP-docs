@@ -86,6 +86,66 @@ approximately 12 wall clock hours for 10 Gyr of simulation for a
 Milky-Way-like model.  Similar throughput for a CPU cluster requires
 approximately 512 cores.
 
+How do I restart EXP from a checkpoint?
+---------------------------------------
+
+EXP uses Output routines to write phase space files to disk at regular
+intervals. The main phase-space output routines are:
+
+  =============     ===========
+  Output type       Explanation
+  =============     ===========
+  outpsp            Writes single-precision binary N-body phase-space
+                    in PSP format.
+  outpsq            As in `outpsp` but each process writes in parallel
+                    for runtime efficiency.
+  outchkpt          Writes double-precision binary N-body phase-space
+                    into a single file.
+  outchkpq          As in `outchkpt` but each process writes in parallel
+                    for runtime efficiency.
+  =============     ===========
+
+Each of these output routines takes the integer argument `nint`
+describing the number of steps between each output.  These routines
+will construct a unique file name based on the `runtag` and file type.
+You can override this with the `filename` argument.  The first two in
+the table above make sequentially index snapshots.  These are intended
+to enable post-processing tasks.  The second two retain the final and
+penultimate checkpoints only.
+
+For example, assume that you are running simulation with 4000 time
+steps and want a snapshot every 100 steps and a checkpoint every 1000
+time steps. Your configuration might look like this:
+
+.. code-block:: yaml
+
+   Output:
+     - id : outpsq
+       parameters : {nint : 100}
+     - id : outchkptq
+       parameters : {nint : 1000}
+
+This will write snapshot and checkpoint files of the following form:
+`SPL.<runtag>.<xxxxx>` and `SPL.<runtag>.chkpt` where `runtag` is the
+parameter specified in the `Global` section of the EXP YAML
+configuration and `xxxxx` is a five-digit zero-padded number that
+identifies the snapshot.  The previously written checkpoint has the
+`.bak` suffix.  You can restart EXP from a snapshot checkpoint by
+specifying one of these file names as the `infile` parameter.  For
+example, assume that your run is tagged by `run001` and that you
+want to restart from the last checkpoint:
+
+.. code-block:: yaml
+
+   Global:
+     runtag: run001
+     infile: SPL.run001.chkpt
+
+EXP will read the checkpoint file `SPL.run001.chkpt`, check for
+consistency with the parameters in the current configuration file, and start
+from that point.
+
+
 My HPC cluster does not have the required dependencies.  What are my options?
 -----------------------------------------------------------------------------
 
