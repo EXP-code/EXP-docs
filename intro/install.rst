@@ -239,6 +239,14 @@ guides below <intro-install-platform-notes>`.
 In case of any trouble related to these dependencies,
 please refer to their respective installation instructions.
 
+How to Update EXP
+-----------------
+To update your build of EXP, go to whichever directory EXP lives in and enter ``git pull``
+to retrieve the latest version of the code. Change in to your build directory 
+(if your setup matches that of the installation instructions, this would be ``cd build``). Enter ``make``, then ``make install``
+once ``make`` finishes.
+
+
 .. _intro-using-virtualenv:
 
 Using a Python virtual environment (recommended)
