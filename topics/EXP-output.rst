@@ -17,52 +17,61 @@ runtag and the output module name.  Here is a brief description of the
 output modules.  For details on the available arguments, please see
 the Doxygen generated man pages or the source code itself.
 
-- `outlog` produces a simple summary of the running simulation that
+- ``outlog`` produces a simple summary of the running simulation that
   includes the center of mass position and velocities, angular
   momenta, kinetic and potential energies for the total phase space
   and each component separately.  It also lists the wall-clock time
-  for each step.  The file name can be specified with the `filename`
+  for each step.  The file name can be specified with the ``filename``
   parameter.
 
-- `outps, outpsn, outpsp, outpsq, outchkpt` produce phase-space dumps. The
-  first method appends successive dumps to the same file.  The second
-  and third methods generate an individual sequentially numbered file
-  for each call.  The `outpsn` uses a native phase-space consolidation
-  routine which gather all phase space at the root node before
-  writing.  The `outpsp` uses MPI-IO to write phase-space files. This
-  will be faster if you have fast, parallel network hardware. All of
-  the floating data fields are written as 4-byte floats (single
-  precision). 
+- ``outps, outpsn, outpsp, outpsq, outchkpt, outchkptq`` produce
+  phase-space dumps. The first method appends successive dumps to the
+  same file.  The second and third methods generate an individual
+  sequentially numbered file for each call.  The ``outpsn`` uses a
+  native phase-space consolidation routine which gather all phase
+  space at the root node before writing.  The ``outpsp`` uses MPI-IO
+  to write phase-space files. This will be faster if you have fast,
+  parallel network hardware. All of the floating data fields are
+  written as 4-byte floats (single precision).
 
-- `outpsq` is the parallel version of `outpsp`, it results in ``SPL`` split
-   PSP files. This format is recommended for large phase spaces, as it can
-   be faster to output these files.
+- ``outpsq`` is the parallel version of `outpsp`, it results in split
+  PSP files prefixed by ``SPL`` rather than the ``OUT`` for
+  ``outps``. This format is recommended for large phase spaces, as it
+  can be much faster if your HPC center has a parallel file system.
 
-- `outchkpt` is a version of `outpsp` that writes floating fields as
+- ``outchkpt`` is a version of ``outpsp`` that writes floating fields as
   8-byte floats whose primary use is restarting your simulation with
   full information.
 
-- `outascii` emits phase-space snapshots for a single name-specified
+- ``outchkptq`` is a version of ``outchkpt`` that writes 8-byte floats in
+  ``SPL`` split format. This is the recommended check-point format for
+  runs with :math:`N>10^6`
+
+- ``outascii`` emits phase-space snapshots for a single name-specified
   component at regular intervals in ascii format.  Each line contains:
-  `mass, pos[3], vel[3], acc[3], pot, potext`, followed by the
-  attribute arrays `ival[niattr], dval[ndattr]`. Like `outpsn`, each
+  ``mass, pos[3], vel[3], acc[3], pot, potext``, followed by the
+  attribute arrays ``ival[niattr], dval[ndattr]``. Like ``outpsn``, each
   snapshot is written into a file with a sequentially increasing
   counter.
 
-- `outcoef` writes the basis coefficients in binary
+- ``outcoef`` writes the basis coefficients in binary
   format for the specified component at the desired frequency
-  `nint`.
+  ``nint``.
 
-- `outfrac` provides the radius containing the specified mass fraction
+- ``outfrac`` provides the radius containing the specified mass fraction
   for each specified component and frequency.  This method will work
   for any component but makes the most sense for near-equilibrium
   galaxy components such as disks, bulges and halos.
 
-- `orbtrace` will output a select number of orbits to the same file, appending phase space
-   information to the end at each time step. This is helpful for quick looks, but 
-   is not meant to be science product output (i.e. one should probably not try to set 
-   `orbtrace` to the number of disk particles).
+- ``orbtrace`` will output a select number of orbits to the same file,
+  appending phase space information to the end at each time step. This
+  is helpful for quick looks, but is not meant to be science product
+  output (i.e. one should probably not try to set ``orbtrace`` to the
+  number of disk particles).
 
+.. note::
+   The ``SPL`` and ``OUT`` prefixes are for humans.  EXP does not use
+   these names to distinguish between ``SPL`` and ``OUT`` files.
 
 An example
 ----------
