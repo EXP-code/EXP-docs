@@ -310,7 +310,9 @@ Docker Setup
 1. Check whether you have Windows System Linux (WSL) installed on your computer. If you do, check that Ubuntu is installed and/or you can run bash commands. (You can check this by running ``bash -v`` and making sure you don’t get an error). If that works, skip to Step 4.
 2. If you don’t have WSL with a working Linux installation, you need to install WSL. To do this, open a Command Prompt and run: 	
 
-   >>> wsl –-install
+   .. code-block:: bash
+      
+      wsl --install
 
    **Note:** By default, this installs WSL2 and Ubuntu, but you can customize that with the instructions `here <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
 
@@ -325,23 +327,21 @@ Docker Setup
 
    .. code-block:: bash
     
-      $ sudo usermod -a -G docker $USER
+      sudo usermod -a -G docker $USER
 
 8. You will need to enter your Ubuntu password. 
 9. Check that your username was added to the docker group by running
 
    .. code-block:: bash
     
-      $ grep docker /etc/group
+      grep docker /etc/group
 
 10. You should get something like ``docker:x:1001:username``, though the number may be different.
-11. Run the command 
+11. Run the following command so that when you log in you will always be part of the ``docker`` group:
 
-   .. code-block:: bash
-       
-      $ newgrp docker 
+    .. code-block:: bash
 
-   so that when you log in you will always be part of the ``docker`` group.
+       newgrp docker 
 
 12. Logout of the terminal tab with ``logout`` and open up a new Ubuntu terminal.
 
@@ -354,33 +354,29 @@ EXP Container Setup
 
    .. code-block:: bash
        
-      $ docker pull the9cat/exp
+      docker pull the9cat/exp
 
    Navigate to where you placed your expbox script. If you placed it in the WSL file area, you can navigate to it like you are using a Linux machine. More likely, though, you put it somewhere on your C: drive. You can navigate there via:
 
    .. code-block:: bash
    
-       $ cd /mnt/c/Users/username/path/to/directory/with/expbox/script
+      cd /mnt/c/Users/username/path/to/directory/with/expbox/script
 
 3. Make sure your Docker Desktop is running in the background. We can now run the expbox script.
 
-  a. If your script is in the WSL folders, you can execute it with 
+   If your script is in your **WSL folders**, you can execute it with 
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        ./expbox
+      ./expbox
 
-        ## OR ##
+   If your script is on your **C: drive**, you will need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you navigated to where your expbox folder is). You can do so with the ``-d`` flag, i.e.,
 
-        bash expbox
+   .. code-block:: bash
 
-  b. If your script is on your C: drive, you will need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you navigated to where your expbox folder is). You can do so with the ``-d`` flag, i.e.,
+      ./expbox -d /mnt/c/Users/username/path/to/working/directory
 
-    .. code-block:: bash
-
-        $ ./expbox -d /mnt/c/Users/username/path/to/working/directory
-
-  You can see other flags for customization by calling ``/.expbox -h``
+   You can see other flags for customization by calling ``/.expbox -h``
 
 4. Your terminal tab will give you links to access the Jupyter server. You can copy and paste them into your browser, or open them directly from the terminal window by holding down Ctrl and clicking on one of the links.
 
