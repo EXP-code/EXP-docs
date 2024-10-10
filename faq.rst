@@ -264,7 +264,7 @@ mass distribution (e.g. if you are starting with an arbitrary set of particles a
 build a basis from that with the most naive approach - here you would use ``pnum`` ~ 100 and let it go).
 These generally don't need to be changed from the defaults.
 
-The EJ parameters are explained in :ref: `the section on centering <centering>`.
+The EJ parameters are explained in :ref:`the section on centering <centering>`.
 You only want to change these values from their defaults if you have an external perturber,
 these shouldn't be changed if you are working with with simulations of isolated systems.
 
