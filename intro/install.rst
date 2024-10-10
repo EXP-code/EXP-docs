@@ -310,7 +310,7 @@ Docker Setup
 1. Check whether you have Windows System Linux (WSL) installed on your computer. If you do, check that Ubuntu is installed and/or you can run bash commands. (You can check this by running ``bash -v`` and making sure you don’t get an error). If that works, skip to Step 4.
 2. If you don’t have WSL with a working Linux installation, you need to install WSL. To do this, open a Command Prompt and run: 	
 
-   >>> wsl –install
+   >>> wsl –-install
 
    **Note:** By default, this installs WSL2 and Ubuntu, but you can customize that with the instructions `here <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
 
