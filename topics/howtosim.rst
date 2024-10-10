@@ -61,7 +61,8 @@ Parameters for ``gendisk`` are specified in a YAML file with the following field
    LMAXFID              : 128                  # Number of harmonics for Spherical SL for determining disk basis (may want to bump to 256)
    LOGR                 : true                 # Make a logarithmic coordinate mapping
    MMAX                 : 6                    # Number of azimuthal harmonics for disk basis
-   NCHEB                : 12                   # Chebyshev order for smoothing
+   CHEBY                : false                # Chebyshev smoothing
+   NCHEB                : 12                   # Chebyshev order for smoothing if CHEBY = true
    NDP                  : 8                    # Number of angular wedges for disc 
    NDR                  : 2000                 # Number of points in DiskHalo radial table for disk
    NDZ                  : 800                  # Number of points in DiskHalo vertical table for disk
@@ -83,12 +84,12 @@ Parameters for ``gendisk`` are specified in a YAML file with the following field
    RFACTOR              : 1.0                  # Disk radial scaling factor for spherical deprojection model
    RMIN                 : 0.001                # Minimum halo radius
    RNUM                 : 200                  # Number of radial knots for EmpCylSL basis construction quadrature
-   RSPHSL               : 47.5                 # Maximum halo expansion radius
+   RSPHSL               : 1.95                 # Maximum halo expansion radius
    RTRUNC               : 0.1                  # Maximum disk radius for erf truncation of EOF conditioning density
    RWIDTH               : 0.0                  # Width for erf truncation of r EOF conditioning density (ignored if zero)
-   R_DF                 : -1.0e20              # Change over radius for Eddington
+   R_DF                 : -1.0e20              # Change over radius for Eddington (default is all Eddington)
    SCMAP                : 1                    # Turn on Spherical SL coordinate mapping (1, 2, 0:off)
-   SCSPH                : 1.0                  # Scale for Spherical SL coordinate mapping
+   SCSPH                : XXXXX                # Scale for Spherical SL coordinate mapping - this should match rmapping in exp
    SEED                 : XXXXX                # Random number seed (e.g. your favorite number)
    SELECT               : false                # Enable significance selection in coefficient computation
    SHFAC                : 16                   # Scale height factor for assigning vertical table size
