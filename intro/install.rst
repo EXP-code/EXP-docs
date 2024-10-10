@@ -317,7 +317,7 @@ Docker Setup
 3. Once WSL is installed, it will prompt you to set a username and password for your WSL Linux “machine.”
 4. Now, install Docker Desktop from the following link: https://www.docker.com/products/docker-desktop/
    
-   **Note:** When you open up the Desktop app, it will prompt you to make a Docker account. When starting Docker Desktop, it will ask you to sign in with your account. You can choose to skip this. If you do make an account, occasionally, even after you sign in, it will stay on the sign-in screen. Click the skip button, and it should show that you’re signed in.
+   **Note:** When you open up the Desktop app, it will prompt you to make a Docker account. When starting Docker Desktop, it will ask you to sign in with your account. You can choose to skip this. If you do make an account, occasionally, even after you sign in, it will stay on the sign-in screen. Click the skip button, and it should show that you are signed in.
 
 5. Install the Windows Terminal program either from the Microsoft Store or via this `link <https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=en-us&gl=US>`_.
 6. Open up the Windows Terminal and use the down arrow along the top bar of the window to open an Ubuntu terminal (or use the shortcut Ctrl+Shift+5).
@@ -325,38 +325,38 @@ Docker Setup
 
    .. code-block:: bash
     
-       $ sudo usermod -a -G docker $USER
+      $ sudo usermod -a -G docker $USER
 
 8. You will need to enter your Ubuntu password. 
 9. Check that your username was added to the docker group by running
 
    .. code-block:: bash
     
-       $ grep docker /etc/group
+      $ grep docker /etc/group
 
-10. You should get something like docker:x:1001:username, though the number may be different.
+10. You should get something like ``docker:x:1001:username``, though the number may be different.
 11. Run the command 
 
    .. code-block:: bash
        
-       $ newgrp docker 
+      $ newgrp docker 
 
-   so that when you log in you’ll always be part of the docker group.
+   so that when you log in you will always be part of the ``docker`` group.
 
-12. Logout of the terminal tab and open up a new Ubuntu terminal.
+12. Logout of the terminal tab with ``logout`` and open up a new Ubuntu terminal.
 
 EXP Container Setup
 ^^^^^^^^^^^^^^^^^^^
 
-1. Download the expbox container script from https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox and put it in the desired folder you want it to live in (or your working directory for EXP stuff). If you want to put it in part of the Ubuntu area, you can follow the instructions on how to access it `here <https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/>`_.
+1. Download the expbox container script from https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox and put it in the desired folder you want it to live in (e.g., your working directory for EXP stuff). If you want to put it in part of the WSL/Ubuntu area, you can follow the instructions on how to access it `here <https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/>`_.
 
-2.Now, we need to get the EXP image. In an Ubuntu terminal, pull the most updated image with the command: 
+2. Now, we need to get the EXP image. In an Ubuntu terminal, pull the most updated image with the command: 
 
    .. code-block:: bash
        
-       docker pull the9cat/exp
+      $ docker pull the9cat/exp
 
-   Navigate to where you placed your expbox script. If you placed it in the WSL file area, you can cd to it like you are using a Linux machine. More likely, though, you put it somewhere on your C: drive. You can navigate there via:
+   Navigate to where you placed your expbox script. If you placed it in the WSL file area, you can navigate to it like you are using a Linux machine. More likely, though, you put it somewhere on your C: drive. You can navigate there via:
 
    .. code-block:: bash
    
@@ -374,7 +374,7 @@ EXP Container Setup
 
         bash expbox
 
-  b. If your script is on your C: drive, you’ll need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you’ve navigated to where your expbox folder is). You can do so with the ``-d`` flag, i.e.,
+  b. If your script is on your C: drive, you will need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you navigated to where your expbox folder is). You can do so with the ``-d`` flag, i.e.,
 
     .. code-block:: bash
 
