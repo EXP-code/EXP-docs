@@ -305,9 +305,85 @@ Platform-specific installation notes
 Windows
 -------
 
-Though it should be possible to install EXP and pyEXP under Windows,
-we haven't tried.  If you have a working install, please *do*
-contribute some notes!
+Docker Setup
+^^^^^^^^^^^^
+1. Check whether you have Windows System Linux (WSL) installed on your computer. If you do, check that Ubuntu is installed and/or you can run bash commands. (You can check this by running ``bash -v`` and making sure you don’t get an error). If that works, skip to Step 4.
+2. If you don’t have WSL with a working Linux installation, you need to install WSL. To do this, open a Command Prompt and run: 	
+
+   >>> wsl –install
+
+   **Note:** By default, this installs WSL2 and Ubuntu, but you can customize that with the instructions `here <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
+
+3. Once WSL is installed, it will prompt you to set a username and password for your WSL Linux “machine.”
+4. Now, install Docker Desktop from the following link: https://www.docker.com/products/docker-desktop/
+   
+   **Note:** When you open up the Desktop app, it will prompt you to make a Docker account. When starting Docker Desktop, it will ask you to sign in with your account. You can choose to skip this. If you do make an account, occasionally, even after you sign in, it will stay on the sign-in screen. Click the skip button, and it should show that you’re signed in.
+
+5. Install the Windows Terminal program either from the Microsoft Store or via this `link <https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=en-us&gl=US>`_.
+6. Open up the Windows Terminal and use the down arrow along the top bar of the window to open an Ubuntu terminal (or use the shortcut Ctrl+Shift+5).
+7. Now you need to add your username to the docker group. To do so, run the following command: 
+
+   .. code-block:: bash
+    
+       $ sudo usermod -a -G docker $USER
+
+8. You will need to enter your Ubuntu password. 
+9. Check that your username was added to the docker group by running
+
+   .. code-block:: bash
+    
+       $ grep docker /etc/group
+
+10. You should get something like docker:x:1001:username, though the number may be different.
+11. Run the command 
+
+   .. code-block:: bash
+       
+       $ newgrp docker 
+
+   so that when you log in you’ll always be part of the docker group.
+
+12. Logout of the terminal tab and open up a new Ubuntu terminal.
+
+EXP Container Setup
+^^^^^^^^^^^^^^^^^^^
+
+1. Download the expbox container script from https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox and put it in the desired folder you want it to live in (or your working directory for EXP stuff). If you want to put it in part of the Ubuntu area, you can follow the instructions on how to access it `here <https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/>`_.
+
+2.Now, we need to get the EXP image. In an Ubuntu terminal, pull the most updated image with the command: 
+
+   .. code-block:: bash
+       
+       docker pull the9cat/exp
+
+   Navigate to where you placed your expbox script. If you placed it in the WSL file area, you can cd to it like you are using a Linux machine. More likely, though, you put it somewhere on your C: drive. You can navigate there via:
+
+   .. code-block:: bash
+   
+       $ cd /mnt/c/Users/username/path/to/directory/with/expbox/script
+
+3. Make sure your Docker Desktop is running in the background. We can now run the expbox script.
+
+  a. If your script is in the WSL folders, you can execute it with 
+
+    .. code-block:: bash
+
+        ./expbox
+
+        ## OR ##
+
+        bash expbox
+
+  b. If your script is on your C: drive, you’ll need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you’ve navigated to where your expbox folder is). You can do so with the ``-d`` flag, i.e.,
+
+    .. code-block:: bash
+
+        $ ./expbox -d /mnt/c/Users/username/path/to/working/directory
+
+  You can see other flags for customization by calling ``/.expbox -h``
+
+4. Your terminal tab will give you links to access the Jupyter server. You can copy and paste them into your browser, or open them directly from the terminal window by holding down Ctrl and clicking on one of the links.
+
 
 .. _intro-install-ubuntu:
 
