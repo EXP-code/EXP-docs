@@ -9,13 +9,11 @@
 project = 'EXP'
 copyright = '2023-2024, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.14'
+release = '0.15'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-# extensions = ['sphinx_rtd_theme', 'breathe', 'sphinx.ext.graphviz']
 
 extensions = [
     'sphinx_rtd_theme',
@@ -28,7 +26,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.inheritance_diagram',
     'sphinx.ext.graphviz',
-    'breathe'
+    'breathe',
+    'sphinx_copybutton'
 ]
 
 
