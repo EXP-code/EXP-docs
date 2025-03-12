@@ -6,14 +6,15 @@ pyEXP Tutorial
 
 .. index:: sort: pyEXP; tutorial
 
-You will find the first two of the introductory tutorials from
+The **Tutorials** section of the `**pyEXP-examples**
+<https://github.com/EXP-code/pyEXP-examples>`_ repository is designed
+to be a standalone self-guided EXP course.  At the bottom of each
+notebook you will find a link to the next one in the sequence.
+
+We include the first two of the introductory tutorials from
 **pyEXP-examples** below. These will give you the flavor of the
 workflow and introduce the key pyEXP ideas.  Rather than read, we
 strongly encourage you to run these yourself.
-
-The **Tutorials** section of the **pyEXP-examples** repository are
-designed to be a standalone self-guided EXP course.  At the bottom of
-each notebook you will find a link to the next one in the sequence.
 
 To get started, make sure that EXP is installed on your system (see
 :ref:`intro-install`).  Then, you may use the copy button and paste
