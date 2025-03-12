@@ -19,12 +19,18 @@ strongly encourage you to run these yourself.
 
 To get started, make sure that EXP is installed on your system (see
 :ref:`intro-install`).  Then, you may use the copy button and paste
-each cell into a local notebook. Or, `git clone` the
+each cell into a local notebook.  Or, `git clone` the
 **pyEXP-examples** repository from `here
 <https://github.com/EXP-code/pyEXP-examples>`_ and load the notebooks
 into Jupyter in their entirety.  If you are using the EXP Docker
 container, the **pyEXP-examples** repository can be copied or loaded
 from `/usr/local/pyEXP-examples` in the container.
+
+.. note::
+
+   You will need the example `data` directory from the
+   **pyEXP-examples/Tutorials** directory do the computations in some
+   of the cells in these notebooks.
 
 .. toctree::
    :maxdepth: 2
