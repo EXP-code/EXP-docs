@@ -464,7 +464,7 @@ Provide a fix or suggestion.
 .. _Python: https://www.python.org/
 .. _FFTW: http://fftw.org
 .. _OpenMPI: https://www.open-mpi.org/
-.. _HDF5: https://portal.hdfgroup.org/display/HDF5/HDF5
+.. _HDF5: https://www.hdfgroup.org/solutions/hdf5/
 .. _Eigen3: https://eigen.tuxfamily.org/
 .. _HighFive: https://github.com/BlueBrain/HighFive
 .. _libyaml-cpp: https://github.com/jasonjei/libyaml-cpp

@@ -32,7 +32,7 @@ changes.
 Perhaps the best way to learn how to use this code is through an
 example.  As described in :ref:`tutorial intro <intro-tutorial>`, we
 have provided a separate `git repository
-<https://github.com/orgs/EXP-examples>`_ with three quick examples.
+<https://github.com/EXP-code/EXP-examples>`_ with three quick examples.
 Each example contains all of the body files, configuration files and
 model files necessary to run the simulation.  All of these can be run
 on a laptop or workstation.
