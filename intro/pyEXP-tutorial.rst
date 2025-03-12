@@ -28,7 +28,7 @@ from `/usr/local/pyEXP-examples` in the container.
 
 .. note::
 
-   You will need the example `data` directory from the
+   You will need the example `Data` directory from the
    **pyEXP-examples/Tutorials** directory do the computations in some
    of the cells in these notebooks.
 
