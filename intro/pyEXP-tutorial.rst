@@ -36,9 +36,8 @@ from `/usr/local/pyEXP-examples` in the container.
 Next steps
 ==========
 
-These first two tutorials covered only the basics of pyEXP, but
-there's a lot of other features not mentioned here.  We encourage you
-to work through the rest of the tutorial in sequence.  You can also
-learn to run EXP simulations.  We include notebooks that demonstrate
-running simulations with EXP in the **EXP** directory of the
-**Tutorials** repository.
+These first two notebooks covered only the basics of pyEXP, but
+there's a lot of other features not mentioned here.  If these seem
+useful, we encourage you to work through the rest of the tutorial
+notebooks in sequence.  Also, you can learn to run EXP n-body
+simulations using the notebooks in the **Tutorials/EXP** directory.
