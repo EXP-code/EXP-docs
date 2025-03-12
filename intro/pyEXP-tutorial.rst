@@ -8,16 +8,21 @@ pyEXP Tutorial
 
 You will find the first two of the introductory tutorials from
 **pyEXP-examples** below. These will give you the flavor of the
-workflow.  Rather than read, we strongly encourage you to run these
-yourself.
+workflow and introduce the key pyEXP ideas.  Rather than read, we
+strongly encourage you to run these yourself.
+
+The **Tutorials** section of the **pyEXP-examples** repository are
+designed to be a standalone self-guided EXP course.  At the bottom of
+each notebook you will find a link to the next one in the sequence.
 
 To get started, make sure that EXP is installed on your system (see
-:ref:`intro-install`), `git clone` the **pyEXP-examples** repository
-from `here <https://github.com/EXP-code/pyEXP-examples>`_ If you are
-using the Docker container, the **pyEXP-examples** repository can be
-copied from `/usr/local` in the container.  The **Tutorials** section
-of the **pyEXP-examples** repository are designed to be a standalone
-self-guided EXP course.
+:ref:`intro-install`).  Then, you may use the copy button and paste
+each cell into a local notebook. Or, `git clone` the
+**pyEXP-examples** repository from `here
+<https://github.com/EXP-code/pyEXP-examples>`_ and load the notebooks
+into Jupyter in their entirety.  If you are using the EXP Docker
+container, the **pyEXP-examples** repository can be copied from
+`/usr/local` in the container.
 
 .. toctree::
    :maxdepth: 2
