@@ -46,10 +46,13 @@ html_theme = 'sphinx_rtd_theme'
 html_logo = 'exp_logo_white.png'
 html_static_path = ['_static']
 
-# Turn on figure numering
+# -- Turn on figure numering -------------------------------------------------
 numfig = True
 
-# Grab files from pyEXP-examples
+# -- Grab files from pyEXP-examples -----------------------------------------
 import os
 
 os.system("cd intro/notebook; rm *ipynb*; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part1-Coefficients.ipynb; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part2-Analysis.ipynb")
+
+# -- Extension configuration -------------------------------------------------
+nbsphinx_execute = 'never'
