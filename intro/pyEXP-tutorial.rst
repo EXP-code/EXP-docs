@@ -28,9 +28,9 @@ from `/usr/local/pyEXP-examples` in the container.
 
 .. note::
 
-   You will need the example `Data` directory from the
-   **pyEXP-examples/Tutorials** directory do the computations in some
-   of the cells in these notebooks.
+   The full output is provided for all Jupyter cells below.  However,
+   repeating the computations will require the `Data` directory from
+   **pyEXP-examples/Tutorials**.
 
 .. toctree::
    :maxdepth: 2
