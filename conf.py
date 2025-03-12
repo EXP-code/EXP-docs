@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EXP'
-copyright = '2023-2024, EXP-code collaboration'
+copyright = '2023-2025, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.15'
+release = '0.16'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------

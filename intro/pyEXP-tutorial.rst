@@ -22,8 +22,8 @@ self-guided EXP course.
 .. toctree::
    :maxdepth: 2
 
-   notebook/Part1-Coefficients
-   notebook/Part2-Analysis
+   notebook/Part1-Coefficients.ipynb
+   notebook/Part2-Analysis.ipynb
 
 
 Next steps
