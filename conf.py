@@ -49,10 +49,11 @@ html_static_path = ['_static']
 # -- Turn on figure numering -------------------------------------------------
 numfig = True
 
+# -- Extension configuration -------------------------------------------------
+nbsphinx_execute = 'never'
+
 # -- Grab files from pyEXP-examples -----------------------------------------
 import os
 
 os.system("cd intro/notebook; rm *ipynb*; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part1-Coefficients.ipynb; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part2-Analysis.ipynb")
 
-# -- Extension configuration -------------------------------------------------
-nbsphinx_execute = 'never'
