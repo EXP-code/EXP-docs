@@ -29,8 +29,8 @@ from `/usr/local/pyEXP-examples` in the container.
 .. toctree::
    :maxdepth: 2
 
-   notebook/Part1-Coefficients.ipynb
-   notebook/Part2-Analysis.ipynb
+   Tutorials/Part1-Coefficients.ipynb
+   Tutorials/Part2-Analysis.ipynb
 
 
 Next steps
