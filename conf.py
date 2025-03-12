@@ -27,7 +27,9 @@ extensions = [
     'sphinx.ext.inheritance_diagram',
     'sphinx.ext.graphviz',
     'breathe',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'nbsphinx',
+    'nbsphinx_link'
 ]
 
 
@@ -46,3 +48,8 @@ html_static_path = ['_static']
 
 # Turn on figure numering
 numfig = True
+
+# Grab files from pyEXP-examples
+import os
+
+os.system("cd intro/notebook; rm *ipynb*; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part1-Coefficients.ipynb; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part2-Analysis.ipynb")

@@ -347,8 +347,8 @@
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/GenPoly.H" line="34" column="10" bodyfile="/home/weinberg/Projects/EXP/include/GenPoly.H" bodystart="34" bodyend="34"/>
         <references refid="class_generalized_polytrope_1a70249bf05be2fabe096c1ffaadc7d361" compoundref="_gen_poly_8_h" startline="10">mass</references>
-        <references refid="class_r_u_n_1ab7530cfee3955f1a9f1deb497a83b1da" compoundref="massmodel_8_h" startline="22">RUN::num</references>
-        <references refid="class_r_u_n_1a76f53056d68ccd55c6e525cc4da63851" compoundref="massmodel_8_h" startline="19">RUN::x</references>
+        <references refid="class_r_u_n_1ab7530cfee3955f1a9f1deb497a83b1da" compoundref="massmodel_8_h" startline="23">RUN::num</references>
+        <references refid="class_r_u_n_1a76f53056d68ccd55c6e525cc4da63851" compoundref="massmodel_8_h" startline="20">RUN::x</references>
       </memberdef>
       <memberdef kind="function" id="class_generalized_polytrope_1ae36b9c46f56a8dbe4c1928549cb21bb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>double</type>
@@ -368,7 +368,7 @@
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/GenPoly.H" line="33" column="10" bodyfile="/home/weinberg/Projects/EXP/include/GenPoly.H" bodystart="33" bodyend="33"/>
         <references refid="class_generalized_polytrope_1a70249bf05be2fabe096c1ffaadc7d361" compoundref="_gen_poly_8_h" startline="10">mass</references>
-        <references refid="class_r_u_n_1a76f53056d68ccd55c6e525cc4da63851" compoundref="massmodel_8_h" startline="19">RUN::x</references>
+        <references refid="class_r_u_n_1a76f53056d68ccd55c6e525cc4da63851" compoundref="massmodel_8_h" startline="20">RUN::x</references>
       </memberdef>
       <memberdef kind="function" id="class_generalized_polytrope_1a243e9d11aff03024e8f635ef5807af2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
@@ -531,36 +531,41 @@
       <member refid="class_axi_sym_model_1a2b491db27d15b7b20b6f9ab473373d90" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_itmax</name></member>
       <member refid="class_axi_sym_model_1a739b1e9027c37122906c3f38d88b3a17" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_K</name></member>
       <member refid="class_axi_sym_model_1a1df0ddafb9d52556b7306aac0b4d1390" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_kmin</name></member>
+      <member refid="class_axi_sym_model_1aa0aea523e00ecd60effa0c8302f88070" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_lastr</name></member>
       <member refid="class_axi_sym_model_1a2ddd661afb64be0edc0c903cc1d0d6a3" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_logr</name></member>
       <member refid="class_axi_sym_model_1a21d0612b687d8f4e2fa57f45ebea5ad9" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_mass</name></member>
       <member refid="class_axi_sym_model_1ac697c676c4cdf1a2f6fd9aaa0afc3cf1" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_N</name></member>
       <member refid="class_axi_sym_model_1a274294584539a1bf61ddcb08d28385e4" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_orb</name></member>
-      <member refid="class_axi_sym_model_1a29297280d1fb4603b2138a7a2ede86f4" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
-      <member refid="class_axi_sym_model_1a8ec2585dc6f33e2ebae4f8dd3d22fc5a" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
-      <member refid="class_axi_sym_model_1a5e4cb31e8463807b1b14b3858c5c03b2" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
-      <member refid="class_axi_sym_model_1a65a0d8629fdcf8dcb1e3bcf17eee2fd0" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_2d</name></member>
-      <member refid="class_axi_sym_model_1a18ecb1fa667cf977306b34d3dab34ed1" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_2d</name></member>
-      <member refid="class_axi_sym_model_1a98fb5e4481e2ee8ecc7a47db1ae33f44" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d</name></member>
-      <member refid="class_axi_sym_model_1a20602aa25410c1f5d2bc3bf017899049" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d</name></member>
-      <member refid="class_axi_sym_model_1adcafd558768aeb72e0cc483f231a1be5" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_jeans</name></member>
-      <member refid="class_axi_sym_model_1a13d7af1df29796004e2d14194d8d8c7a" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_jeans_3d</name></member>
+      <member refid="class_axi_sym_model_1afbcda3ecaca7c554aac3e23b5d8bd034" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a4010d290667cb6801bbea09f0f16b859" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a04ba9defb0f892097b20c1d607682b8f" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1a03d123dc090dced65bc8030b52b2ebd2" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point</name></member>
+      <member refid="class_axi_sym_model_1ac64da4f6361794d206e732e83575cf8c" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1ab04d3c270802af02c1f064cd57ebebb5" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_2d</name></member>
+      <member refid="class_axi_sym_model_1adf35195ab29f8ea2a8e6d022cbcacd15" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1ab90ef1ffa51a1edb48144df562301c9c" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a543cb620398d71ae92e0698a7cd898a3" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d</name></member>
+      <member refid="class_axi_sym_model_1a6c94b5df1f02060d1520c7a6d7ec700e" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_3d_iso</name></member>
+      <member refid="class_axi_sym_model_1a16d528b0b93c299c7c8654a563dff05e" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_iso</name></member>
+      <member refid="class_axi_sym_model_1a8a91e093089e9ef1933c39ee25a435e5" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_jeans</name></member>
+      <member refid="class_axi_sym_model_1a0d7184f359fe9e7de3cec0489b371195" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_point_jeans_3d</name></member>
       <member refid="class_axi_sym_model_1a35aead49704365788684b280e04c21f2" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_rloc</name></member>
       <member refid="class_axi_sym_model_1a0dd4a002aead3430280c95b84a33848c" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_rmin</name></member>
       <member refid="class_axi_sym_model_1a8fd26f16e980f9ca09582c43d37d556b" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_tolE</name></member>
       <member refid="class_axi_sym_model_1a34258a7b205c15211b94d68869ff481a" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>gen_tolK</name></member>
-      <member refid="class_axi_sym_model_1a524ea3beb7a799ffa2c5f90afbcf0bd7" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_velocity</name></member>
+      <member refid="class_axi_sym_model_1abfbe9badff403eef8f7ae1601f734684" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>gen_velocity</name></member>
       <member refid="class_generalized_polytrope_1affb84a1acbbf5ee4c5f2858bf6f8ca0e" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>GeneralizedPolytrope</name></member>
       <member refid="class_generalized_polytrope_1a0f470281b1c0098aae9e3dc078c8b11b" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>GeneralizedPolytrope</name></member>
       <member refid="class_generalized_polytrope_1a125f13afc28f30693e35c13dcbfde7fe" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_density</name></member>
-      <member refid="class_axi_sym_model_1a566ed236b9da1fb059e4cb85783396f5" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_density</name></member>
+      <member refid="class_axi_sym_model_1ab7eaa6f141efb864c02c45ed602b8bcc" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_density</name></member>
       <member refid="class_generalized_polytrope_1aaa1f8ae202009ce7ae1431b172960b46" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_dpot</name></member>
       <member refid="class_generalized_polytrope_1ae5a4a781841c445d7945f01e4e5b6135" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_dpot2</name></member>
       <member refid="class_generalized_polytrope_1a77454bcd6978e4b86684ed7d4b7732d7" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_mass</name></member>
-      <member refid="class_axi_sym_model_1a0a63da2bab3eb4a661272f8982129342" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_mass</name></member>
+      <member refid="class_axi_sym_model_1a0cf696274a70d513e020046e796b0787" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_mass</name></member>
       <member refid="class_generalized_polytrope_1a6f820fed7dfb1835337fbb0edeccd2ed" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_max_radius</name></member>
       <member refid="class_generalized_polytrope_1ae36b9c46f56a8dbe4c1928549cb21bb0" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_min_radius</name></member>
       <member refid="class_generalized_polytrope_1a243e9d11aff03024e8f635ef5807af2c" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_pot</name></member>
-      <member refid="class_axi_sym_model_1a1189504780980f20abda7c737c356948" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_pot</name></member>
+      <member refid="class_axi_sym_model_1a7494ef2d7e5cd796414c8a9a231bb3cc" prot="public" virt="virtual" ambiguityscope="AxiSymModel::"><scope>GeneralizedPolytrope</scope><name>get_pot</name></member>
       <member refid="class_generalized_polytrope_1a840a6bc68bdcd6d06d9c841d01717b08" prot="public" virt="virtual"><scope>GeneralizedPolytrope</scope><name>get_pot_dpot</name></member>
       <member refid="class_axi_sym_model_1a9e96775fb63f7ad15e20ed12ada30e66" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>Jmax</name></member>
       <member refid="class_generalized_polytrope_1aa3ff71bffeec1836500e2eba7653f7ab" prot="private" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>KF</name></member>
@@ -572,6 +577,7 @@
       <member refid="class_axi_sym_model_1a793a2dff2246be92c1e4b2ff900087a1" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>numj</name></member>
       <member refid="class_axi_sym_model_1a0c33462222d9cb53229f9572b07cf792" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>numr</name></member>
       <member refid="class_generalized_polytrope_1a801d2fae3ebe3bcb5f851f2476a4303d" prot="private" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>pot</name></member>
+      <member refid="class_axi_sym_model_1ab579dcbdc54ec53ed9ddd1a1d5da7cd9" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>PSret</name></member>
       <member refid="class_axi_sym_model_1a1f18cc5ef08cdb02dcf6d794410c04f6" prot="protected" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>Rgrid</name></member>
       <member refid="class_axi_sym_model_1acb659b6dc20ae1410997e69144677423" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>set_Ecut</name></member>
       <member refid="class_axi_sym_model_1a17660c094f1c143f779c7ce7e667de86" prot="public" virt="non-virtual"><scope>GeneralizedPolytrope</scope><name>set_itmax</name></member>

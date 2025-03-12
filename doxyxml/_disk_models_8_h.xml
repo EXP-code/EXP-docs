@@ -3,15 +3,28 @@
   <compounddef id="_disk_models_8_h" kind="file" language="C++">
     <compoundname>DiskModels.H</compoundname>
     <includes refid="_emp_cyl_s_l_8_h" local="no">EmpCylSL.H</includes>
+    <includes refid="_disk_density_func_8_h" local="no">DiskDensityFunc.H</includes>
     <includedby refid="_disk_eval_8_h" local="no">/home/weinberg/Projects/EXP/utils/ICs/DiskEval.H</includedby>
     <incdepgraph>
+      <node id="39">
+        <label>DiskDensityFunc.H</label>
+        <link refid="_disk_density_func_8_h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>/home/weinberg/Projects/EXP/include/DiskModels.H</label>
         <link refid="_disk_models_8_h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>DiskWithHalo.H</label>
         <link refid="_disk_with_halo_8_h"/>
         <childnode refid="29" relation="include">
@@ -42,9 +55,9 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -67,7 +80,7 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="33">
         <label>QPDistF.H</label>
         <link refid="_q_p_dist_f_8_h"/>
         <childnode refid="11" relation="include">
@@ -78,9 +91,9 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -102,11 +115,11 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
         <childnode refid="35" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -119,7 +132,7 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>coef.H</label>
         <link refid="include_2coef_8_h"/>
       </node>
@@ -151,7 +164,7 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>libvars.H</label>
         <link refid="libvars_8_h"/>
         <childnode refid="30" relation="include">
@@ -182,16 +195,18 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
         <childnode refid="32" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
       </node>
-      <node id="31">
+      <node id="32">
         <label>orbit.H</label>
         <link refid="orbit_8_h"/>
         <childnode refid="3" relation="include">
@@ -203,7 +218,7 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="35">
         <label>sltableMP2.H</label>
         <link refid="sltable_m_p2_8_h"/>
         <childnode refid="8" relation="include">
@@ -254,6 +269,12 @@
       <node id="26">
         <label>mpi.h</label>
       </node>
+      <node id="41">
+        <label>pybind11/embed.h</label>
+      </node>
+      <node id="40">
+        <label>pybind11/pybind11.h</label>
+      </node>
       <node id="30">
         <label>random</label>
       </node>
@@ -263,13 +284,16 @@
       <node id="14">
         <label>string</label>
       </node>
+      <node id="31">
+        <label>tuple</label>
+      </node>
       <node id="22">
         <label>unordered_map</label>
       </node>
       <node id="4">
         <label>vector</label>
       </node>
-      <node id="35">
+      <node id="36">
         <label>yaml-cpp/yaml.h</label>
       </node>
     </incdepgraph>
@@ -285,11 +309,13 @@
         <link refid="_disk_eval_8_h"/>
       </node>
     </invincdepgraph>
+    <innerclass refid="classdiskbulge" prot="public">diskbulge</innerclass>
     <innerclass refid="class_double_exponential" prot="public">DoubleExponential</innerclass>
     <innerclass refid="class_exponential" prot="public">Exponential</innerclass>
     <innerclass refid="class_f_e_e_d" prot="public">FEED</innerclass>
     <innerclass refid="class_ferrers" prot="public">Ferrers</innerclass>
     <innerclass refid="class_m_ndisk" prot="public">MNdisk</innerclass>
+    <innerclass refid="class_py_model" prot="public">PyModel</innerclass>
     <innerclass refid="class_truncated" prot="public">Truncated</innerclass>
     <briefdescription>
     </briefdescription>
@@ -300,7 +326,7 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DISK_MODELS_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_emp_cyl_s_l_8_h" kindref="compound">EmpCylSL.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_disk_density_func_8_h" kindref="compound">DiskDensityFunc.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9" refid="class_f_e_e_d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_f_e_e_d" kindref="compound">FEED</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk" kindref="compound">EmpCylSL::AxiDisk</ref></highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
@@ -514,8 +540,59 @@
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="224"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classdiskbulge" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdiskbulge" kindref="compound">diskbulge</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk" kindref="compound">EmpCylSL::AxiDisk</ref></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="231" refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>,<sp/><ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>,<sp/><ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>,<sp/><ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>,<sp/><ref refid="classdiskbulge_1a6d461ef1a8cfc47969cc79086a43bd90" kindref="member">d1</ref>,<sp/><ref refid="classdiskbulge_1a454d86d1c99aae27e870c65165241b1a" kindref="member">d2</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="classdiskbulge_1a4ed5451ebb1a5251ddd071a0ef2a80c4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdiskbulge_1a4ed5451ebb1a5251ddd071a0ef2a80c4" kindref="member">diskbulge</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" kindref="member">M</ref>=1)<sp/>:</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>(<ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>),<sp/><ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>(<ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>),<sp/><ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>(<ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>),<sp/><ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>(<ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>),<sp/><ref refid="class_emp_cyl_s_l" kindref="compound">EmpCylSL</ref>::<ref refid="class_emp_cyl_s_l_1_1_axi_disk_1a47284137e24ca113e6250992a26d5920" kindref="member">AxiDisk</ref>(<ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" kindref="member">M</ref>,<sp/></highlight><highlight class="stringliteral">&quot;diskbulge&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" kindref="member">params</ref>.push_back(<ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" kindref="member">params</ref>.push_back(<ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" kindref="member">params</ref>.push_back(<ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" kindref="member">params</ref>.push_back(<ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="classdiskbulge_1afbaa683e3b914246ebf78aa03cfc9fdc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1afbaa683e3b914246ebf78aa03cfc9fdc" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi=0.)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sh<sp/>=<sp/>1.0/cosh(z/<ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdiskbulge_1a6d461ef1a8cfc47969cc79086a43bd90" kindref="member">d1</ref><sp/>=<sp/>0.25*<ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" kindref="member">M</ref>*<ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>/(M_PI*<ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>*<ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>*<ref refid="classdiskbulge_1ab1fe99c10c0eaf439fe3f8d57bcb9fa8" kindref="member">h</ref>)<sp/>*<sp/>exp(-R/<ref refid="classdiskbulge_1a820998ba083638158412b909bf59a39e" kindref="member">a</ref>)<sp/>*<sp/>sh<sp/>*<sp/>sh;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rr<sp/>=<sp/>pow(pow(R,<sp/>2)<sp/>+<sp/>pow(z,2),<sp/>0.5);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdiskbulge_1a454d86d1c99aae27e870c65165241b1a" kindref="member">d2</ref><sp/>=<sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk_1ad8a0011315ce0798c2426813c29cf2ed" kindref="member">M</ref>*(1-<ref refid="classdiskbulge_1a618355c67a81523e0fe70316a88d75f2" kindref="member">Mfac</ref>)*pow(<ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>,<sp/>4)/(2.0*M_PI*rr)*pow(rr+<ref refid="classdiskbulge_1a80b01da0a44b38619a4a9d092abb161c" kindref="member">as</ref>,-3.0);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdiskbulge_1a6d461ef1a8cfc47969cc79086a43bd90" kindref="member">d1</ref><sp/>+<sp/><ref refid="classdiskbulge_1a454d86d1c99aae27e870c65165241b1a" kindref="member">d2</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="class_py_model" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_py_model" kindref="compound">PyModel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_emp_cyl_s_l_1_1_axi_disk" kindref="compound">EmpCylSL::AxiDisk</ref></highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="class_py_model_1ae0f3d3b73e012999b128797e3eb9cc97" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;DiskDensityFunc&gt;<sp/><ref refid="class_py_model_1ae0f3d3b73e012999b128797e3eb9cc97" kindref="member">pyDens</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_py_model_1a846594da51cd77b8c9e6bf019aac9959" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_py_model_1a846594da51cd77b8c9e6bf019aac9959" kindref="member">PyModel</ref>(std::string&amp;<sp/>pyname)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_py_model_1ae0f3d3b73e012999b128797e3eb9cc97" kindref="member">pyDens</ref><sp/>=<sp/>std::make_shared&lt;DiskDensityFunc&gt;(pyname);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="class_py_model_1a565a4d630b7c6bab5f5c2e1de9b46959" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_py_model_1a565a4d630b7c6bab5f5c2e1de9b46959" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi=0.)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="class_py_model_1ae0f3d3b73e012999b128797e3eb9cc97" kindref="member">pyDens</ref>)(R,<sp/>z,<sp/>phi);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/weinberg/Projects/EXP/include/DiskModels.H"/>
   </compounddef>

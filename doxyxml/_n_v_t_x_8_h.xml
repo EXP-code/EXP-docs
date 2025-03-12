@@ -5,7 +5,6 @@
     <includes local="no">memory</includes>
     <includes local="no">config_exp.h</includes>
     <includedby refid="_cyl_two_d_8_h" local="no">/home/weinberg/Projects/EXP/src/CylTwoD.H</includedby>
-    <includedby refid="_cylinder_8_h" local="no">/home/weinberg/Projects/EXP/src/Cylinder.H</includedby>
     <includedby refid="_polar_basis_8_h" local="no">/home/weinberg/Projects/EXP/src/PolarBasis.H</includedby>
     <includedby refid="_spherical_basis_8_h" local="no">/home/weinberg/Projects/EXP/src/SphericalBasis.H</includedby>
     <incdepgraph>
@@ -25,31 +24,29 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10">
+      <node id="7">
         <label>/home/weinberg/Projects/EXP/src/Bessel.H</label>
         <link refid="_bessel_8_h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>/home/weinberg/Projects/EXP/src/CBDisk.H</label>
+        <link refid="_c_b_disk_8_h"/>
       </node>
       <node id="2">
         <label>/home/weinberg/Projects/EXP/src/CylTwoD.H</label>
         <link refid="_cyl_two_d_8_h"/>
       </node>
-      <node id="3">
-        <label>/home/weinberg/Projects/EXP/src/Cylinder.H</label>
-        <link refid="_cylinder_8_h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
+      <node id="9">
         <label>/home/weinberg/Projects/EXP/src/EJcom.H</label>
         <link refid="_e_jcom_8_h"/>
       </node>
-      <node id="8">
+      <node id="5">
         <label>/home/weinberg/Projects/EXP/src/FlatDisk.H</label>
         <link refid="_flat_disk_8_h"/>
       </node>
-      <node id="6">
+      <node id="10">
         <label>/home/weinberg/Projects/EXP/src/MixtureBasis.H</label>
         <link refid="_mixture_basis_8_h"/>
       </node>
@@ -60,37 +57,37 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="3">
         <label>/home/weinberg/Projects/EXP/src/PolarBasis.H</label>
         <link refid="_polar_basis_8_h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="11">
         <label>/home/weinberg/Projects/EXP/src/Sphere.H</label>
         <link refid="_sphere_8_h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="6">
         <label>/home/weinberg/Projects/EXP/src/SphericalBasis.H</label>
         <link refid="_spherical_basis_8_h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="8">
         <label>/home/weinberg/Projects/EXP/src/TwoCenter.H</label>
         <link refid="_two_center_8_h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -107,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/NVTX.H" line="31" column="25" bodyfile="/home/weinberg/Projects/EXP/src/NVTX.H" bodystart="31" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/NVTX.H" line="35" column="25" bodyfile="/home/weinberg/Projects/EXP/src/NVTX.H" bodystart="35" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -124,30 +121,34 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nvToolsExt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnv_tracer" kindref="compound">nvTracer</ref><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__CUDACC_VER_MAJOR__<sp/>&lt;<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nvToolsExt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nvtx3/nvToolsExt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer" kindref="compound">nvTracer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" kindref="member">~nvTracer</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>nvtxRangePop();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="classnv_tracer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnv_tracer" kindref="compound">nvTracer</ref><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26" refid="classnv_tracer_1ad46dfd2b94d3bbbe30cf39778b8b5023" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1ad46dfd2b94d3bbbe30cf39778b8b5023" kindref="member">nvTracer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)<sp/>{}</highlight></codeline>
-<codeline lineno="27" refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" kindref="member">~nvTracer</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="_n_v_t_x_8_h_1a31a371410753045ab3817221bb7f609b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;nvTracer&gt;<sp/><ref refid="_n_v_t_x_8_h_1a31a371410753045ab3817221bb7f609b" kindref="member">nvTracerPtr</ref>;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnv_tracer" kindref="compound">nvTracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer" kindref="compound">nvTracer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" kindref="member">~nvTracer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>nvtxRangePop();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classnv_tracer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnv_tracer" kindref="compound">nvTracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="classnv_tracer_1ad46dfd2b94d3bbbe30cf39778b8b5023" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1ad46dfd2b94d3bbbe30cf39778b8b5023" kindref="member">nvTracer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)<sp/>{}</highlight></codeline>
+<codeline lineno="31" refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classnv_tracer_1af34ae43cbed9a9a6f3926db6eb8a2727" kindref="member">~nvTracer</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_n_v_t_x_8_h_1a31a371410753045ab3817221bb7f609b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;nvTracer&gt;<sp/><ref refid="_n_v_t_x_8_h_1a31a371410753045ab3817221bb7f609b" kindref="member">nvTracerPtr</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/weinberg/Projects/EXP/src/NVTX.H"/>
   </compounddef>

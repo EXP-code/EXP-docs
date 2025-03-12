@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="127" column="3" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="127" bodyend="127"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="131" column="3" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="enum" id="class_orient_1ac11a69e8024f1092460e9f969d273596" prot="public" static="no" strong="no">
         <type></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="124" column="3" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="124" bodyend="124"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="128" column="3" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="128" bodyend="128"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-type">
@@ -84,10 +84,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="92" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="92" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="91" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="91" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_orient_1aae522c2f57d3dc55cfc623af0eb95f33" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_pseudo_accel" kindref="compound">PseudoAccel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;PseudoAccel&gt; Orient::accel</definition>
+        <argsstring></argsstring>
+        <name>accel</name>
+        <qualifiedname>Orient::accel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="119" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_orient_1a2aaecf7e96749b9f1f89b61a6f1218f7" compoundref="_orient_8_h" startline="179" endline="184">currentAccel</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="class_orient_1a32063926f65bbdf3fb80d0b3834fab66" prot="private" static="no" mutable="no">
         <type>set&lt; <ref refid="class_e_l3" kindref="compound">EL3</ref>, <ref refid="structlt_e_l3" kindref="compound">ltEL3</ref> &gt;</type>
         <definition>set&lt;EL3, ltEL3&gt; Orient::angm</definition>
@@ -100,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="96" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="96" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="95" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1ab517af8a0cade5f03a44dd47c663a6e2" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -114,8 +129,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_orient_1abd75e9d427721004de6b7ae615767259" compoundref="_orient_8_h" startline="167" endline="167">currentAxis</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_orient_1abd75e9d427721004de6b7ae615767259" compoundref="_orient_8_h" startline="171" endline="171">currentAxis</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a078b6aad808b4de7ae9e360bcd9f0a3e" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -129,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="31" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1acec1058ed4797b77efa21e8f87696386" prot="private" static="no" mutable="no">
         <type>Eigen::Matrix3d</type>
@@ -143,8 +158,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
-        <referencedby refid="class_orient_1a7c8daade94aabf07737c7ef20ba3358b" compoundref="_orient_8_h" startline="161" endline="161">transformBody</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="99" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_orient_1a7c8daade94aabf07737c7ef20ba3358b" compoundref="_orient_8_h" startline="165" endline="165">transformBody</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a0e0c27e1f35f0156e18febc3b6bbd2e4" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -158,9 +173,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_orient_1aa97d11652158f43075e70f1b43654c84" compoundref="_orient_8_h" startline="170" endline="170">currentCenter</referencedby>
-        <referencedby refid="class_orient_1aab4939d097ff48294805c98a625fc2a4" compoundref="_orient_8_h" startline="138" endline="142">set_center</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_orient_1aa97d11652158f43075e70f1b43654c84" compoundref="_orient_8_h" startline="174" endline="174">currentCenter</referencedby>
+        <referencedby refid="class_orient_1aab4939d097ff48294805c98a625fc2a4" compoundref="_orient_8_h" startline="142" endline="146">set_center</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a36f1ade07be9d350eac5597c384af7a5" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -174,8 +189,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="45" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_orient_1aab4939d097ff48294805c98a625fc2a4" compoundref="_orient_8_h" startline="138" endline="142">set_center</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="45" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_orient_1aab4939d097ff48294805c98a625fc2a4" compoundref="_orient_8_h" startline="142" endline="146">set_center</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1acdca4d2318782049a68286afa958d7e4" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -189,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="37" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="37" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1ade6f7629954efbf54fa1824f5095d54b" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -203,8 +218,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="53" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_orient_1a16b6bc7639a7bc3888e57ddc6d2aed23" compoundref="_orient_8_h" startline="145" endline="149">set_cenvel</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="53" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_orient_1a16b6bc7639a7bc3888e57ddc6d2aed23" compoundref="_orient_8_h" startline="149" endline="153">set_cenvel</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a7ad70bac0470a10119f23260b1da293f" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -218,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="111" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="111" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="113" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1af60dd7161f82c6acb93ccbb89cd8112a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -232,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="98" column="12" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="98" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="97" column="12" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a47243960d8f23df2999835510f296b86" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -246,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="99" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="99" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="98" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1af041ec03cb4ab346b776194a99f62c80" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -260,7 +275,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="107" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="107" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="109" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orient_1a825f23bee6c0be3b0176f4f65f57c60f" prot="private" static="no" mutable="no">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d Orient::domdt</definition>
+        <argsstring></argsstring>
+        <name>domdt</name>
+        <qualifiedname>Orient::domdt</qualifiedname>
+        <initializer>= Eigen::Vector3d::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a1d04a94ca95c872f4806290759e9edf7" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -274,8 +304,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="108" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="108" bodyend="-1"/>
-        <referencedby refid="class_orient_1a8a36ae9f3eafc8d4afb6a93841240c33" compoundref="_orient_8_h" startline="185" endline="185">currentE</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="110" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_orient_1a8a36ae9f3eafc8d4afb6a93841240c33" compoundref="_orient_8_h" startline="199" endline="199">currentE</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a45d424fe0561d6c0e3082917444b903f" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -289,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="108" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="108" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="110" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a8af3f658740ff3a2e2b3632228f87a9e" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -303,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="42" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="105" column="42" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a2bcc27eac45acb48eca63319729130f8" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -317,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="98" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="98" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="97" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1ac6cd9c440a258703bf550137c86df8f1" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -331,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="107" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="107" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="109" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a4b1088387f9d9cc2ccfd2082a5410fdc" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -345,8 +375,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="113" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="113" bodyend="-1"/>
-        <referencedby refid="class_orient_1a1c8fb4529d57d33dd60ec4e4e3318394" compoundref="_orient_8_h" startline="155" endline="155">set_linear</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="115" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="115" bodyend="-1"/>
+        <referencedby refid="class_orient_1a1c8fb4529d57d33dd60ec4e4e3318394" compoundref="_orient_8_h" startline="159" endline="159">set_linear</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a25dc109bf488f4cf78e1208f6e198eda" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -360,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="112" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="112" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="114" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a1d7c8f7f7107fcb19b80d564431d1879" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -374,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="106" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="106" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="108" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a7584024b0d593158785e0f45e34c6484" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -388,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="109" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="109" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="111" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a7772353ad05b52b64e28a39b7c15ec1b" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -402,7 +432,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="110" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="110" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="112" column="16" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orient_1a281e8a15aa2f951c7634190e65071a9b" prot="private" static="no" mutable="no">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d Orient::omega</definition>
+        <argsstring></argsstring>
+        <name>omega</name>
+        <qualifiedname>Orient::omega</qualifiedname>
+        <initializer>= Eigen::Vector3d::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="102" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1afcdb5ceb334f569702d848df957f9803" prot="private" static="no" mutable="no">
         <type>Eigen::Matrix3d</type>
@@ -416,12 +461,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="100" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="100" bodyend="-1"/>
-        <referencedby refid="class_orient_1a16619422febe1574aa86d402d65a4594" compoundref="_orient_8_h" startline="164" endline="164">transformOrig</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="99" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_orient_1a16619422febe1574aa86d402d65a4594" compoundref="_orient_8_h" startline="168" endline="168">transformOrig</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_orient_1a9aa5c4774af4b3e096bbd0ba3832703b" prot="private" static="no" mutable="no">
-        <type>vector&lt; double &gt;</type>
-        <definition>vector&lt;double&gt; Orient::pos</definition>
+      <memberdef kind="variable" id="class_orient_1a3c2620c2dd967b5ee26eafe5ba3abb18" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Orient::pos</definition>
         <argsstring></argsstring>
         <name>pos</name>
         <qualifiedname>Orient::pos</qualifiedname>
@@ -431,11 +476,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="115" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="115" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="117" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="117" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_orient_1af442c03308168b4ed1b3ad7f040a8ef6" prot="private" static="no" mutable="no">
-        <type>vector&lt; double &gt;</type>
-        <definition>vector&lt;double&gt; Orient::psa</definition>
+      <memberdef kind="variable" id="class_orient_1a70af3b9f2042db78043be7b8693f5b97" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Orient::psa</definition>
         <argsstring></argsstring>
         <name>psa</name>
         <qualifiedname>Orient::psa</qualifiedname>
@@ -445,7 +490,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="115" column="14" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="115" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="117" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orient_1a92e4cf917f9bc05b829012aa70ec173c" prot="private" static="no" mutable="no">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d Orient::pseudo</definition>
+        <argsstring></argsstring>
+        <name>pseudo</name>
+        <qualifiedname>Orient::pseudo</qualifiedname>
+        <initializer>= Eigen::Vector3d::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="101" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_orient_1a2aaecf7e96749b9f1f89b61a6f1218f7" compoundref="_orient_8_h" startline="179" endline="184">currentAccel</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a608f69f374c8506493118fd078a686de" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -459,8 +520,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="104" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="104" bodyend="-1"/>
-        <referencedby refid="class_orient_1aa81c949d07c23e010579495ae9fcbeec" compoundref="_orient_8_h" startline="173" endline="173">currentAxisVar</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="106" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="106" bodyend="-1"/>
+        <referencedby refid="class_orient_1aa81c949d07c23e010579495ae9fcbeec" compoundref="_orient_8_h" startline="187" endline="187">currentAxisVar</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a6b473e284278e092e123a55db5a86384" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -474,8 +535,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="104" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="104" bodyend="-1"/>
-        <referencedby refid="class_orient_1a63dc5d8f5cd59b45eb91ff2960c2760c" compoundref="_orient_8_h" startline="176" endline="176">currentCenterVar</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="106" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="106" bodyend="-1"/>
+        <referencedby refid="class_orient_1a63dc5d8f5cd59b45eb91ff2960c2760c" compoundref="_orient_8_h" startline="190" endline="190">currentCenterVar</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1ab74f590e11d8a94c4f4279cb1c09b4bd" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -489,8 +550,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="104" column="20" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="104" bodyend="-1"/>
-        <referencedby refid="class_orient_1afbffdea19192fa3d6aec41469ff2eafd" compoundref="_orient_8_h" startline="179" endline="179">currentCenterVarZ</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="106" column="20" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="106" bodyend="-1"/>
+        <referencedby refid="class_orient_1afbffdea19192fa3d6aec41469ff2eafd" compoundref="_orient_8_h" startline="193" endline="193">currentCenterVarZ</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a7204a57eb72da10e184c6a73237f0ca8" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -504,7 +565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="36" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="105" column="36" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a52a52d397aba95defaf4829ad3140538" prot="private" static="no" mutable="no">
         <type>deque&lt; <ref refid="class_orient_1a5bfc70c0f60da8df19a7f4dd83575d0d" kindref="member">DV</ref> &gt;</type>
@@ -518,7 +579,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="97" column="9" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="97" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="96" column="9" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a7e5d32fea9e37b494d3c996abb7df986" prot="private" static="no" mutable="no">
         <type>deque&lt; <ref refid="class_orient_1a5bfc70c0f60da8df19a7f4dd83575d0d" kindref="member">DV</ref> &gt;</type>
@@ -532,7 +593,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="97" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="97" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="96" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a0e96e1d64b6f52362af01357a51d0de3" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -546,7 +607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="102" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="102" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="104" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a789c5fcb61ec7da8f4a2040b9f8241c5" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -560,7 +621,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="102" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="102" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="104" column="15" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1abc44b1ed2fa6a15076a736061efc225d" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -574,7 +635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="30" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="105" column="30" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a88d781162d0d60aa0e532d2dc218b092" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -588,7 +649,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="105" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1ad27fd08445ab1bff8d12a580980fe23b" prot="private" static="no" mutable="no">
         <type>Eigen::Vector3d</type>
@@ -602,7 +663,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="103" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="103" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="105" column="24" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1a8790d2a2606f0756386cfa61e6c771ec" prot="private" static="no" mutable="no">
         <type><ref refid="class_e_l3" kindref="compound">EL3</ref></type>
@@ -616,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="95" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="95" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="94" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_orient_1afdb91c183fd364fe2991af75abef823c" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -630,12 +691,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="106" column="12" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="106" bodyend="-1"/>
-        <referencedby refid="class_orient_1a5e862e1a3a6efd39c0b28df031b6261d" compoundref="_orient_8_h" startline="182" endline="182">currentUsed</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="108" column="12" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_orient_1a5e862e1a3a6efd39c0b28df031b6261d" compoundref="_orient_8_h" startline="196" endline="196">currentUsed</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_orient_1a6e3a40ebfd479041ee320f3c2fcfb3e2" prot="private" static="no" mutable="no">
-        <type>vector&lt; double &gt;</type>
-        <definition>vector&lt;double&gt; Orient::vel</definition>
+      <memberdef kind="variable" id="class_orient_1a37a9fae59c55d4e4a808f7b69ac634b9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Orient::vel</definition>
         <argsstring></argsstring>
         <name>vel</name>
         <qualifiedname>Orient::vel</qualifiedname>
@@ -645,7 +706,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="115" column="18" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="115" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="117" column="23" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="117" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -669,7 +730,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="117" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="121" column="8"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -694,7 +755,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="158" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="162" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orient_1a2aaecf7e96749b9f1f89b61a6f1218f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::tuple&lt; Eigen::Vector3d &amp;, Eigen::Vector3d &amp;, Eigen::Vector3d &amp; &gt;</type>
+        <definition>const std::tuple&lt; Eigen::Vector3d &amp;, Eigen::Vector3d &amp;, Eigen::Vector3d &amp; &gt; Orient::currentAccel</definition>
+        <argsstring>(void)</argsstring>
+        <name>currentAccel</name>
+        <qualifiedname>Orient::currentAccel</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return current pseudo force, angular velocity, and angular velocity derivative </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="179" column="3" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="179" bodyend="184"/>
+        <references refid="class_orient_1aae522c2f57d3dc55cfc623af0eb95f33" compoundref="_orient_8_h" startline="119">accel</references>
+        <references refid="class_orient_1a92e4cf917f9bc05b829012aa70ec173c" compoundref="_orient_8_h" startline="101">pseudo</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1abd75e9d427721004de6b7ae615767259" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Eigen::Vector3d &amp;</type>
@@ -712,8 +793,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="167" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="167" bodyend="167"/>
-        <references refid="class_orient_1ab517af8a0cade5f03a44dd47c663a6e2" compoundref="_orient_8_h" startline="101">axis</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="171" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="171" bodyend="171"/>
+        <references refid="class_orient_1ab517af8a0cade5f03a44dd47c663a6e2" compoundref="_orient_8_h" startline="100">axis</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1aa81c949d07c23e010579495ae9fcbeec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -731,8 +812,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="173" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="173" bodyend="173"/>
-        <references refid="class_orient_1a608f69f374c8506493118fd078a686de" compoundref="_orient_8_h" startline="104">sigA</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="187" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="187" bodyend="187"/>
+        <references refid="class_orient_1a608f69f374c8506493118fd078a686de" compoundref="_orient_8_h" startline="106">sigA</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1aa97d11652158f43075e70f1b43654c84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Eigen::Vector3d &amp;</type>
@@ -750,8 +831,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="170" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="170" bodyend="170"/>
-        <references refid="class_orient_1a0e0c27e1f35f0156e18febc3b6bbd2e4" compoundref="_orient_8_h" startline="101">center</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="174" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="174" bodyend="174"/>
+        <references refid="class_orient_1a0e0c27e1f35f0156e18febc3b6bbd2e4" compoundref="_orient_8_h" startline="100">center</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a63dc5d8f5cd59b45eb91ff2960c2760c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -769,8 +850,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="176" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="176" bodyend="176"/>
-        <references refid="class_orient_1a6b473e284278e092e123a55db5a86384" compoundref="_orient_8_h" startline="104">sigC</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="190" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="190" bodyend="190"/>
+        <references refid="class_orient_1a6b473e284278e092e123a55db5a86384" compoundref="_orient_8_h" startline="106">sigC</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1afbffdea19192fa3d6aec41469ff2eafd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -788,8 +869,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="179" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="179" bodyend="179"/>
-        <references refid="class_orient_1ab74f590e11d8a94c4f4279cb1c09b4bd" compoundref="_orient_8_h" startline="104">sigCz</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="193" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="193" bodyend="193"/>
+        <references refid="class_orient_1ab74f590e11d8a94c4f4279cb1c09b4bd" compoundref="_orient_8_h" startline="106">sigCz</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a8a36ae9f3eafc8d4afb6a93841240c33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -807,8 +888,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="185" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="185" bodyend="185"/>
-        <references refid="class_orient_1a1d04a94ca95c872f4806290759e9edf7" compoundref="_orient_8_h" startline="108">Ecurr</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="199" column="10" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="199" bodyend="199"/>
+        <references refid="class_orient_1a1d04a94ca95c872f4806290759e9edf7" compoundref="_orient_8_h" startline="110">Ecurr</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a5e862e1a3a6efd39c0b28df031b6261d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -826,8 +907,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="182" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="182" bodyend="182"/>
-        <references refid="class_orient_1afdb91c183fd364fe2991af75abef823c" compoundref="_orient_8_h" startline="106">used</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="196" column="7" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="196" bodyend="196"/>
+        <references refid="class_orient_1afdb91c183fd364fe2991af75abef823c" compoundref="_orient_8_h" startline="108">used</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1ac7560513b2547f3bb788cb98368a34f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -850,12 +931,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="152" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="156" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="class_orient_1a28722d1defbc521cdf0d125f5d604d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_orient_1ae40302e5cfa6dc14e1b7cb5d4977d93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Orient::Orient</definition>
-        <argsstring>(int number_to_keep, int target, unsigned orient_flags, unsigned control_flags, string logfile, double dt=0.0, double damping=1.0)</argsstring>
+        <argsstring>(int number_to_keep, int target, int Naccel, unsigned orient_flags, unsigned control_flags, string logfile, double dt=0.0, double damping=1.0)</argsstring>
         <name>Orient</name>
         <qualifiedname>Orient::Orient</qualifiedname>
         <param>
@@ -865,6 +946,10 @@
         <param>
           <type>int</type>
           <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Naccel</declname>
         </param>
         <param>
           <type>unsigned</type>
@@ -895,7 +980,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="130" column="3"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="134" column="3"/>
       </memberdef>
       <memberdef kind="function" id="class_orient_1aab4939d097ff48294805c98a625fc2a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -922,9 +1007,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="138" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="138" bodyend="142"/>
-        <references refid="class_orient_1a0e0c27e1f35f0156e18febc3b6bbd2e4" compoundref="_orient_8_h" startline="101">center</references>
-        <references refid="class_orient_1a36f1ade07be9d350eac5597c384af7a5" compoundref="_orient_8_h" startline="101">center0</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="142" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="142" bodyend="146"/>
+        <references refid="class_orient_1a0e0c27e1f35f0156e18febc3b6bbd2e4" compoundref="_orient_8_h" startline="100">center</references>
+        <references refid="class_orient_1a36f1ade07be9d350eac5597c384af7a5" compoundref="_orient_8_h" startline="100">center0</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a16b6bc7639a7bc3888e57ddc6d2aed23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -951,8 +1036,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="145" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="145" bodyend="149"/>
-        <references refid="class_orient_1ade6f7629954efbf54fa1824f5095d54b" compoundref="_orient_8_h" startline="101">cenvel0</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="149" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="149" bodyend="153"/>
+        <references refid="class_orient_1ade6f7629954efbf54fa1824f5095d54b" compoundref="_orient_8_h" startline="100">cenvel0</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a1c8fb4529d57d33dd60ec4e4e3318394" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -967,8 +1052,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="155" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="155" bodyend="155"/>
-        <references refid="class_orient_1a4b1088387f9d9cc2ccfd2082a5410fdc" compoundref="_orient_8_h" startline="113">linear</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="159" column="8" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="159" bodyend="159"/>
+        <references refid="class_orient_1a4b1088387f9d9cc2ccfd2082a5410fdc" compoundref="_orient_8_h" startline="115">linear</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a7c8daade94aabf07737c7ef20ba3358b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Eigen::Matrix3d &amp;</type>
@@ -986,8 +1071,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="161" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="161" bodyend="161"/>
-        <references refid="class_orient_1acec1058ed4797b77efa21e8f87696386" compoundref="_orient_8_h" startline="100">body</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="165" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="165" bodyend="165"/>
+        <references refid="class_orient_1acec1058ed4797b77efa21e8f87696386" compoundref="_orient_8_h" startline="99">body</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1a16619422febe1574aa86d402d65a4594" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Eigen::Matrix3d &amp;</type>
@@ -1005,8 +1090,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="164" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="164" bodyend="164"/>
-        <references refid="class_orient_1afcdb5ceb334f569702d848df957f9803" compoundref="_orient_8_h" startline="100">orig</references>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="168" column="19" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="168" bodyend="168"/>
+        <references refid="class_orient_1afcdb5ceb334f569702d848df957f9803" compoundref="_orient_8_h" startline="99">orig</references>
       </memberdef>
       <memberdef kind="function" id="class_orient_1ade8e8e2be43f17d2550539575c24cab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1021,7 +1106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="135" column="3"/>
+        <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="139" column="3"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1118,8 +1203,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="90" column="1" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="91" bodyend="187"/>
+    <location file="/home/weinberg/Projects/EXP/src/Orient.H" line="89" column="1" bodyfile="/home/weinberg/Projects/EXP/src/Orient.H" bodystart="90" bodyend="201"/>
     <listofallmembers>
+      <member refid="class_orient_1aae522c2f57d3dc55cfc623af0eb95f33" prot="private" virt="non-virtual"><scope>Orient</scope><name>accel</name></member>
       <member refid="class_orient_1a248c5cab4353d1e0e479d3a5a5ee786e" prot="public" virt="non-virtual"><scope>Orient</scope><name>accumulate</name></member>
       <member refid="class_orient_1a333f3ce67df7508c31241998328e106b" prot="private" virt="non-virtual"><scope>Orient</scope><name>accumulate_cpu</name></member>
       <member refid="class_orient_1a32063926f65bbdf3fb80d0b3834fab66" prot="private" virt="non-virtual"><scope>Orient</scope><name>angm</name></member>
@@ -1135,6 +1221,7 @@
       <member refid="class_orient_1a7ad70bac0470a10119f23260b1da293f" prot="private" virt="non-virtual"><scope>Orient</scope><name>cflags</name></member>
       <member refid="class_orient_1ab5d37af72a85b76b2227627b490116f2" prot="public" virt="non-virtual"><scope>Orient</scope><name>ControlFlags</name></member>
       <member refid="class_orient_1af60dd7161f82c6acb93ccbb89cd8112a" prot="private" virt="non-virtual"><scope>Orient</scope><name>current</name></member>
+      <member refid="class_orient_1a2aaecf7e96749b9f1f89b61a6f1218f7" prot="public" virt="non-virtual"><scope>Orient</scope><name>currentAccel</name></member>
       <member refid="class_orient_1abd75e9d427721004de6b7ae615767259" prot="public" virt="non-virtual"><scope>Orient</scope><name>currentAxis</name></member>
       <member refid="class_orient_1aa81c949d07c23e010579495ae9fcbeec" prot="public" virt="non-virtual"><scope>Orient</scope><name>currentAxisVar</name></member>
       <member refid="class_orient_1aa97d11652158f43075e70f1b43654c84" prot="public" virt="non-virtual"><scope>Orient</scope><name>currentCenter</name></member>
@@ -1145,6 +1232,7 @@
       <member refid="class_orient_1a47243960d8f23df2999835510f296b86" prot="private" virt="non-virtual"><scope>Orient</scope><name>damp</name></member>
       <member refid="class_orient_1af041ec03cb4ab346b776194a99f62c80" prot="private" virt="non-virtual"><scope>Orient</scope><name>deltaT</name></member>
       <member refid="class_orient_1ab5d37af72a85b76b2227627b490116f2a9bea29023577cfecab897fb1bf4efea4" prot="public" virt="non-virtual"><scope>Orient</scope><name>DIAG</name></member>
+      <member refid="class_orient_1a825f23bee6c0be3b0176f4f65f57c60f" prot="private" virt="non-virtual"><scope>Orient</scope><name>domdt</name></member>
       <member refid="class_orient_1a5bfc70c0f60da8df19a7f4dd83575d0d" prot="private" virt="non-virtual"><scope>Orient</scope><name>DV</name></member>
       <member refid="class_orient_1a1d04a94ca95c872f4806290759e9edf7" prot="private" virt="non-virtual"><scope>Orient</scope><name>Ecurr</name></member>
       <member refid="class_orient_1a45d424fe0561d6c0e3082917444b903f" prot="private" virt="non-virtual"><scope>Orient</scope><name>Elast</name></member>
@@ -1159,11 +1247,13 @@
       <member refid="class_orient_1a1d7c8f7f7107fcb19b80d564431d1879" prot="private" virt="non-virtual"><scope>Orient</scope><name>many</name></member>
       <member refid="class_orient_1a7584024b0d593158785e0f45e34c6484" prot="private" virt="non-virtual"><scope>Orient</scope><name>Nlast</name></member>
       <member refid="class_orient_1a7772353ad05b52b64e28a39b7c15ec1b" prot="private" virt="non-virtual"><scope>Orient</scope><name>oflags</name></member>
-      <member refid="class_orient_1a28722d1defbc521cdf0d125f5d604d03" prot="public" virt="non-virtual"><scope>Orient</scope><name>Orient</name></member>
+      <member refid="class_orient_1a281e8a15aa2f951c7634190e65071a9b" prot="private" virt="non-virtual"><scope>Orient</scope><name>omega</name></member>
+      <member refid="class_orient_1ae40302e5cfa6dc14e1b7cb5d4977d93a" prot="public" virt="non-virtual"><scope>Orient</scope><name>Orient</name></member>
       <member refid="class_orient_1ac11a69e8024f1092460e9f969d273596" prot="public" virt="non-virtual"><scope>Orient</scope><name>OrientFlags</name></member>
       <member refid="class_orient_1afcdb5ceb334f569702d848df957f9803" prot="private" virt="non-virtual"><scope>Orient</scope><name>orig</name></member>
-      <member refid="class_orient_1a9aa5c4774af4b3e096bbd0ba3832703b" prot="private" virt="non-virtual"><scope>Orient</scope><name>pos</name></member>
-      <member refid="class_orient_1af442c03308168b4ed1b3ad7f040a8ef6" prot="private" virt="non-virtual"><scope>Orient</scope><name>psa</name></member>
+      <member refid="class_orient_1a3c2620c2dd967b5ee26eafe5ba3abb18" prot="private" virt="non-virtual"><scope>Orient</scope><name>pos</name></member>
+      <member refid="class_orient_1a70af3b9f2042db78043be7b8693f5b97" prot="private" virt="non-virtual"><scope>Orient</scope><name>psa</name></member>
+      <member refid="class_orient_1a92e4cf917f9bc05b829012aa70ec173c" prot="private" virt="non-virtual"><scope>Orient</scope><name>pseudo</name></member>
       <member refid="class_orient_1aab4939d097ff48294805c98a625fc2a4" prot="public" virt="non-virtual"><scope>Orient</scope><name>set_center</name></member>
       <member refid="class_orient_1a16b6bc7639a7bc3888e57ddc6d2aed23" prot="public" virt="non-virtual"><scope>Orient</scope><name>set_cenvel</name></member>
       <member refid="class_orient_1a1c8fb4529d57d33dd60ec4e4e3318394" prot="public" virt="non-virtual"><scope>Orient</scope><name>set_linear</name></member>
@@ -1182,7 +1272,7 @@
       <member refid="class_orient_1a7c8daade94aabf07737c7ef20ba3358b" prot="public" virt="non-virtual"><scope>Orient</scope><name>transformBody</name></member>
       <member refid="class_orient_1a16619422febe1574aa86d402d65a4594" prot="public" virt="non-virtual"><scope>Orient</scope><name>transformOrig</name></member>
       <member refid="class_orient_1afdb91c183fd364fe2991af75abef823c" prot="private" virt="non-virtual"><scope>Orient</scope><name>used</name></member>
-      <member refid="class_orient_1a6e3a40ebfd479041ee320f3c2fcfb3e2" prot="private" virt="non-virtual"><scope>Orient</scope><name>vel</name></member>
+      <member refid="class_orient_1a37a9fae59c55d4e4a808f7b69ac634b9" prot="private" virt="non-virtual"><scope>Orient</scope><name>vel</name></member>
       <member refid="class_orient_1ade8e8e2be43f17d2550539575c24cab9" prot="public" virt="non-virtual"><scope>Orient</scope><name>~Orient</name></member>
     </listofallmembers>
   </compounddef>
