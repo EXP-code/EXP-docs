@@ -77,6 +77,7 @@ Here's the code for computing coefficients::
        nmax: 10
        rmapping: 0.0667
        modelname: SLGridSph.model
+       cachename: halo.cache
      ...
      """
 
@@ -87,7 +88,7 @@ Here's the code for computing coefficients::
      # Open the file and read the array.  The file is an ascii phase-space file
      # with mass, x, y, z in the first four columns with a leading  header line
      #
-     bodyfile = 'bodies.dat'
+     bodyfile = 'halo.bods'
 
      data = np.loadtxt(bodyfile, skiprows=1, usecols=(1, 2, 3, 4))
 
@@ -108,9 +109,23 @@ Here's the code for computing coefficients::
    
 
 Put this in a text file, name it to something like ``make_coefs.py``
-and run the it using::
+and run the it using:
 
     python3 make_coefs.py
+
+
+.. note::
+
+   Here are links to the model and body files for this example if you
+   would like to try it: `SLGridSph.model <https://raw.githubusercontent.com/EXP-code/EXP-examples/refs/heads/main/Halo/SLGridSph.model>`_ and `halo.bods <https://raw.githubusercontent.com/EXP-code/EXP-examples/refs/heads/main/Halo/halo.bods>`_.
+
+
+The expected output is::
+
+  ---- SLGridSph::ReadH5Cache: error reading <halo.cache>
+  ---- SLGridSph::ReadH5Cache: HDF5 error is <Unable to open file halo.cache (File accessibility) Unable to open file>
+  ---- SLGridSph::WriteH5Cache: wrote <halo.cache>
+  ---- Spherical::orthoTest: worst=5.60697e-05
 
 
 What just happened?
@@ -120,10 +135,14 @@ The script ``make_coefs.py`` begins by defining a spherical basis to
 represent your halo.  The configuration is specified by YAML schema
 called ``config``.  This file defines the type of basis and parameters
 needed for basis construction, including a file describing the density
-and potential model for your basis. More detailed information on YAML
-and config parameters is available in the :ref:`What is YAML?<yamlconfig>`
-and :ref:`How to visualize the BFE bases used to make your coefficients<visualizing-bases>`
-pages.
+and potential model for your basis.  The HDF5 _error_ is expected and
+harmless. The code tries to open a cache file in HDF5 format to read
+the basis.  If it can not, it will recompute the basis and write a new
+cache file.
+
+More detailed information on YAML and config parameters is available
+in the :ref:`What is YAML?<yamlconfig>` and :ref:`How to visualize the
+BFE bases used to make your coefficients<visualizing-bases>` pages.
 
 pyEXP is then ready to make the coefficients from your phase-space
 data.  This example assumes that the mass and positions of your
