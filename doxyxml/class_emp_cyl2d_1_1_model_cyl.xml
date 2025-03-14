@@ -2,6 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="class_emp_cyl2d_1_1_model_cyl" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>EmpCyl2d::ModelCyl</compoundname>
+    <derivedcompoundref refid="class_emp_cyl2d_1_1_expon_cyl" prot="public" virt="non-virtual">EmpCyl2d::ExponCyl</derivedcompoundref>
+    <derivedcompoundref refid="class_emp_cyl2d_1_1_kuzmin_cyl" prot="public" virt="non-virtual">EmpCyl2d::KuzminCyl</derivedcompoundref>
+    <derivedcompoundref refid="class_emp_cyl2d_1_1_mestel_cyl" prot="public" virt="non-virtual">EmpCyl2d::MestelCyl</derivedcompoundref>
     <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
     <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" prot="protected" static="no" mutable="no">
@@ -16,8 +19,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="35" column="17" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="35" bodyend="-1"/>
-        <referencedby refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" compoundref="_emp_cyl2d_8_h" startline="44" endline="44">ID</referencedby>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="38" column="17" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" compoundref="_emp_cyl2d_8_h" startline="47" endline="47">ID</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -27,6 +30,10 @@
         <argsstring>(const YAML::Node &amp;)=0</argsstring>
         <name>parse</name>
         <qualifiedname>EmpCyl2d::ModelCyl::parse</qualifiedname>
+        <reimplementedby refid="class_emp_cyl2d_1_1_expon_cyl_1ab7e68f45c42103e046e0b22fc6ab4898">parse</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a683b26fd21592b52bdf9cb9c5a509d4b">parse</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_mestel_cyl_1a3cf3ad11fe49cd8bd3d9cff714241b0b">parse</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15">parse</reimplementedby>
         <param>
           <type>const YAML::Node &amp;</type>
         </param>
@@ -36,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="36" column="18"/>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="39" column="18"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -46,6 +53,10 @@
         <argsstring>(double r)=0</argsstring>
         <name>dens</name>
         <qualifiedname>EmpCyl2d::ModelCyl::dens</qualifiedname>
+        <reimplementedby refid="class_emp_cyl2d_1_1_expon_cyl_1a23975a947174e6d6f15324ddd8049e72">dens</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab78966b1e02a599fd5cb703da8a78bb1">dens</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_mestel_cyl_1a5bd3548fb3a191a1c4a0831166416820">dens</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67">dens</reimplementedby>
         <param>
           <type>double</type>
           <declname>r</declname>
@@ -56,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="42" column="20"/>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="45" column="20"/>
       </memberdef>
       <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>double</type>
@@ -64,6 +75,9 @@
         <argsstring>(double r)=0</argsstring>
         <name>dpot</name>
         <qualifiedname>EmpCyl2d::ModelCyl::dpot</qualifiedname>
+        <reimplementedby refid="class_emp_cyl2d_1_1_expon_cyl_1a9201ef90daeca2fb0dcdec94bdc8a694">dpot</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a44b53dd9c6922cb0fb6a0a28a0690b34">dpot</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_mestel_cyl_1a9a86c14800160298c7fefb80241e5128">dpot</reimplementedby>
         <param>
           <type>double</type>
           <declname>r</declname>
@@ -74,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="41" column="20"/>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="44" column="20"/>
       </memberdef>
       <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -88,8 +102,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="44" column="25" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="44" bodyend="44"/>
-        <references refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" compoundref="_emp_cyl2d_8_h" startline="35">id</references>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="47" column="25" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="47" bodyend="47"/>
+        <references refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" compoundref="_emp_cyl2d_8_h" startline="38">id</references>
       </memberdef>
       <memberdef kind="function" id="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>double</type>
@@ -97,6 +111,9 @@
         <argsstring>(double r)=0</argsstring>
         <name>pot</name>
         <qualifiedname>EmpCyl2d::ModelCyl::pot</qualifiedname>
+        <reimplementedby refid="class_emp_cyl2d_1_1_expon_cyl_1a1f4f1365fea9b1bdd97ad232c878e392">pot</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab1c2dabbf6b68ed0c19c26d4096a6491">pot</reimplementedby>
+        <reimplementedby refid="class_emp_cyl2d_1_1_mestel_cyl_1a26d0c0b25f4e57347e9480e5a37003b9">pot</reimplementedby>
         <param>
           <type>double</type>
           <declname>r</declname>
@@ -107,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="40" column="20"/>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="43" column="20"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -115,7 +132,37 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="31" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="32" bodyend="45"/>
+    <inheritancegraph>
+      <node id="2">
+        <label>EmpCyl2d::ExponCyl</label>
+        <link refid="class_emp_cyl2d_1_1_expon_cyl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EmpCyl2d::KuzminCyl</label>
+        <link refid="class_emp_cyl2d_1_1_kuzmin_cyl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EmpCyl2d::MestelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_mestel_cyl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EmpCyl2d::ModelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_model_cyl"/>
+      </node>
+      <node id="5">
+        <label>EmpCyl2d::ZangCyl</label>
+        <link refid="class_emp_cyl2d_1_1_zang_cyl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="34" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="35" bodyend="48"/>
     <listofallmembers>
       <member refid="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a" prot="public" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>dens</name></member>
       <member refid="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697" prot="public" virt="pure-virtual"><scope>EmpCyl2d::ModelCyl</scope><name>dpot</name></member>

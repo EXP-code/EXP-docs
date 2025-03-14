@@ -17,9 +17,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="27" column="17" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="27" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="24" column="17" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="24" bodyend="-1"/>
         <referencedby refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" compoundref="_data_grid_8_h" startline="51" endline="54">Add</referencedby>
-        <referencedby refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" compoundref="_data_grid_8_h" startline="32" endline="48">DataGrid</referencedby>
+        <referencedby refid="class_data_grid_1ab07533b097a221024850ae1b669df297" compoundref="_data_grid_8_h" startline="29" endline="48">DataGrid</referencedby>
         <referencedby refid="class_data_grid_1a30fa6af1d044ec8eb11d719a8b2c1a79" compoundref="_data_grid_8_h" startline="57" endline="60">Write</referencedby>
       </memberdef>
     </sectiondef>
@@ -47,12 +47,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="51" column="8" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="51" bodyend="54"/>
-        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="24">ptr</references>
       </memberdef>
-      <memberdef kind="function" id="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_data_grid_1ab07533b097a221024850ae1b669df297" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>DataGrid::DataGrid</definition>
-        <argsstring>(int nx, int ny, int nz, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax)</argsstring>
+        <argsstring>(int nx, int ny, int nz, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, std::string type=&quot;VTK&quot;)</argsstring>
         <name>DataGrid</name>
         <qualifiedname>DataGrid::DataGrid</qualifiedname>
         <param>
@@ -91,6 +91,11 @@
           <type>double</type>
           <declname>zmax</declname>
         </param>
+        <param>
+          <type>std::string</type>
+          <declname>type</declname>
+          <defval>&quot;VTK&quot;</defval>
+        </param>
         <briefdescription>
 <para>Constructor. </para>
         </briefdescription>
@@ -98,11 +103,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="32" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="32" bodyend="48"/>
+        <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="29" column="3" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="29" bodyend="48"/>
         <references refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::nx</references>
         <references refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::ny</references>
         <references refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" compoundref="_three_d_grid_8_h" startline="21">ThreeDGrid::nz</references>
-        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="24">ptr</references>
         <references refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::xmax</references>
         <references refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::xmin</references>
         <references refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" compoundref="_three_d_grid_8_h" startline="22">ThreeDGrid::ymax</references>
@@ -129,7 +134,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="57" column="8" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="57" bodyend="60"/>
-        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="27">ptr</references>
+        <references refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" compoundref="_data_grid_8_h" startline="24">ptr</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -162,10 +167,10 @@
         <link refid="class_three_d_grid"/>
       </node>
     </collaborationgraph>
-    <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="23" column="1" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="24" bodyend="61"/>
+    <location file="/home/weinberg/Projects/EXP/include/DataGrid.H" line="20" column="1" bodyfile="/home/weinberg/Projects/EXP/include/DataGrid.H" bodystart="21" bodyend="61"/>
     <listofallmembers>
       <member refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" prot="public" virt="virtual"><scope>DataGrid</scope><name>Add</name></member>
-      <member refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" prot="public" virt="non-virtual"><scope>DataGrid</scope><name>DataGrid</name></member>
+      <member refid="class_data_grid_1ab07533b097a221024850ae1b669df297" prot="public" virt="non-virtual"><scope>DataGrid</scope><name>DataGrid</name></member>
       <member refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>nx</name></member>
       <member refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>ny</name></member>
       <member refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" prot="protected" virt="non-virtual"><scope>DataGrid</scope><name>nz</name></member>

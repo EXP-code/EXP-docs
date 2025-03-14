@@ -39,9 +39,9 @@
       </node>
     </incdepgraph>
     <sectiondef kind="var">
-      <memberdef kind="variable" id="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" prot="public" static="no" mutable="no">
-        <type>volatile int</type>
-        <definition>volatile int my_err</definition>
+      <memberdef kind="variable" id="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int my_err</definition>
         <argsstring></argsstring>
         <name>my_err</name>
         <briefdescription>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/include/fpetrap.h" line="19" column="14" bodyfile="/home/weinberg/Projects/EXP/include/fpetrap.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/include/fpetrap.h" line="19" column="12" bodyfile="/home/weinberg/Projects/EXP/include/fpetrap.h" bodystart="19" bodyend="-1"/>
         <referencedby refid="fpetrap_8h_1a2226e0dd8dd57eefc21a83b6462022a7" compoundref="fpetrap_8h" startline="22" endline="26">my_fpu_handler</referencedby>
       </memberdef>
       <memberdef kind="variable" id="fpetrap_8h_1a942b8fb4c34353a6183d3bd574ba768f" prot="public" static="yes" mutable="no">
@@ -88,7 +88,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/fpetrap.h" line="22" column="13" bodyfile="/home/weinberg/Projects/EXP/include/fpetrap.h" bodystart="22" bodyend="26"/>
-        <references refid="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" compoundref="fpetrap_8h" startline="19">my_err</references>
+        <references refid="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" compoundref="fpetrap_8h" startline="19">my_err</references>
         <referencedby refid="fpetrap_8h_1a76440b3b5a08d9d65df560ed501d1f4d" compoundref="fpetrap_8h" startline="35" endline="73">set_fpu_handler</referencedby>
       </memberdef>
       <memberdef kind="function" id="fpetrap_8h_1a76440b3b5a08d9d65df560ed501d1f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -132,12 +132,12 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fpu_control.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" refkind="member"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" kindref="member">my_err</ref>;</highlight></codeline>
+<codeline lineno="19" refid="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" kindref="member">my_err</ref>;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22" refid="fpetrap_8h_1a2226e0dd8dd57eefc21a83b6462022a7" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fpetrap_8h_1a2226e0dd8dd57eefc21a83b6462022a7" kindref="member">my_fpu_handler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err)</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" kindref="member">my_err</ref><sp/>=<sp/>err;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FP<sp/>trapped<sp/>error=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="fpetrap_8h_1a25ec3ac2828efa4e8ad197061c542554" kindref="member">my_err</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" kindref="member">my_err</ref><sp/>=<sp/>err;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FP<sp/>trapped<sp/>error=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="fpetrap_8h_1a361ed6a787b7e40102cf6cb632bfaf3f" kindref="member">my_err</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28" refid="fpetrap_8h_1a942b8fb4c34353a6183d3bd574ba768f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="fpetrap_8h_1a942b8fb4c34353a6183d3bd574ba768f" kindref="member">oldhandler</ref>)(int);<sp/></highlight><highlight class="comment">//<sp/>keep<sp/>a<sp/>reference<sp/>to<sp/>the<sp/>initial<sp/>value</highlight><highlight class="normal"></highlight></codeline>

@@ -3,6 +3,7 @@
   <compounddef id="class_polar_basis" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>PolarBasis</compoundname>
     <basecompoundref refid="class_axisymmetric_basis" prot="public" virt="non-virtual">AxisymmetricBasis</basecompoundref>
+    <derivedcompoundref refid="class_c_b_disk" prot="public" virt="non-virtual">CBDisk</derivedcompoundref>
     <derivedcompoundref refid="class_flat_disk" prot="public" virt="non-virtual">FlatDisk</derivedcompoundref>
     <includes refid="_polar_basis_8_h" local="no">PolarBasis.H</includes>
     <innerclass refid="struct_polar_basis_1_1_coef_matrix" prot="protected">PolarBasis::CoefMatrix</innerclass>
@@ -1080,6 +1081,32 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_polar_basis_1a89ded72802c057e9900f24d493f9dce3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::tuple&lt; double, double, double &gt;</type>
+        <definition>virtual std::tuple&lt; double, double, double &gt; PolarBasis::background</definition>
+        <argsstring>(double r, double z)</argsstring>
+        <name>background</name>
+        <qualifiedname>PolarBasis::background</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1a82d0b59e367b9d8f65feea21bcc2b921">background</reimplementedby>
+        <reimplementedby refid="class_flat_disk_1a7605820abb7e8222f48e04c25209f20b">background</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>CUDA method for coefficient accumulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Background evaluation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/PolarBasis.H" line="383" column="3" bodyfile="/home/weinberg/Projects/EXP/src/PolarBasis.H" bodystart="383" bodyend="383"/>
+      </memberdef>
       <memberdef kind="function" id="class_polar_basis_1ac71935d93632a102114d3f7d3cc52656" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void PolarBasis::check_range</definition>
@@ -1237,6 +1264,7 @@
         <argsstring>(Eigen::MatrixXd &amp;Vc, Eigen::MatrixXd &amp;Vs, double r, double z)=0</argsstring>
         <name>get_pot</name>
         <qualifiedname>PolarBasis::get_pot</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1a14ea57104484741b6934b807e1505e3d">get_pot</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a4d17639bc22514aa13b0c20ddc62c315">get_pot</reimplementedby>
         <param>
           <type>Eigen::MatrixXd &amp;</type>
@@ -1261,31 +1289,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/src/PolarBasis.H" line="188" column="16"/>
-      </memberdef>
-      <memberdef kind="function" id="class_polar_basis_1a83f2209d666ea696e7bc3dec7f0a625a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>std::tuple&lt; double, double, double &gt;</type>
-        <definition>virtual std::tuple&lt; double, double, double &gt; PolarBasis::get_pot_background</definition>
-        <argsstring>(double r, double z)</argsstring>
-        <name>get_pot_background</name>
-        <qualifiedname>PolarBasis::get_pot_background</qualifiedname>
-        <reimplementedby refid="class_flat_disk_1a23ec93578ccc231fe0ebf3cc4044e66e">get_pot_background</reimplementedby>
-        <param>
-          <type>double</type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>z</declname>
-        </param>
-        <briefdescription>
-<para>CUDA method for coefficient accumulation. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Background evaluation </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/PolarBasis.H" line="383" column="3" bodyfile="/home/weinberg/Projects/EXP/src/PolarBasis.H" bodystart="383" bodyend="383"/>
       </memberdef>
       <memberdef kind="function" id="class_polar_basis_1ae13b2d394784b9344d9ec473c5f2d781" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1375,6 +1378,7 @@
         <argsstring>()=0</argsstring>
         <name>getRtable</name>
         <qualifiedname>PolarBasis::getRtable</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1ada5af15d64a58e2ad1125b21b518704e">getRtable</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a60547addec40a8e202c206ff94497843">getRtable</reimplementedby>
         <briefdescription>
 <para>Get table scale. </para>
@@ -1407,6 +1411,7 @@
         <name>initialize</name>
         <qualifiedname>PolarBasis::initialize</qualifiedname>
         <reimplements refid="class_pot_accel_1ada60d03bc82b8740fc7275d4c3f2149d">initialize</reimplements>
+        <reimplementedby refid="class_c_b_disk_1a5ad6907893c4b46cf8a74737a70e02fa">initialize</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a99ce7aa447bc828ce26a69cf18136556">initialize</reimplementedby>
         <briefdescription>
 <para>Initialize method. </para>
@@ -1750,6 +1755,7 @@
         <argsstring>(double r, double z, Eigen::MatrixXd &amp;d, int tid)=0</argsstring>
         <name>get_dens</name>
         <qualifiedname>PolarBasis::get_dens</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1aee6e15ba0b5c67150d23e0dc720fa2b3">get_dens</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a661d3b56742b8816e6ddb5ef60a1764d">get_dens</reimplementedby>
         <param>
           <type>double</type>
@@ -1815,6 +1821,7 @@
         <argsstring>(double r, double z, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;dpr, Eigen::MatrixXd &amp;dpz, int tid)=0</argsstring>
         <name>get_dpotl</name>
         <qualifiedname>PolarBasis::get_dpotl</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1a38663aa86ab5a642b78a2ab929584181">get_dpotl</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a22f0831bd87fafebf499abc0556c0d60">get_dpotl</reimplementedby>
         <param>
           <type>double</type>
@@ -1904,6 +1911,7 @@
         <argsstring>(double r, double z, Eigen::MatrixXd &amp;p, int tid)=0</argsstring>
         <name>get_potl</name>
         <qualifiedname>PolarBasis::get_potl</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1a8ac1e7c2a2efee6990cc31ca6c53f9a1">get_potl</reimplementedby>
         <reimplementedby refid="class_flat_disk_1adfae4fe4709805480d401787378b14ef">get_potl</reimplementedby>
         <param>
           <type>double</type>
@@ -1969,6 +1977,7 @@
         <argsstring>(double r, double z, Eigen::MatrixXd &amp;p, Eigen::MatrixXd &amp;d, int tid)=0</argsstring>
         <name>get_potl_dens</name>
         <qualifiedname>PolarBasis::get_potl_dens</qualifiedname>
+        <reimplementedby refid="class_c_b_disk_1a1dd056d9fc6501b320a84ad51bf58771">get_potl_dens</reimplementedby>
         <reimplementedby refid="class_flat_disk_1a9fbcdede578288260d155e0033de33d1">get_potl_dens</reimplementedby>
         <param>
           <type>double</type>
@@ -2327,6 +2336,12 @@ Other parameters may be defined and passed to any derived classes in addition to
         </childnode>
       </node>
       <node id="5">
+        <label>CBDisk</label>
+        <link refid="class_c_b_disk"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
         <label>FlatDisk</label>
         <link refid="class_flat_disk"/>
         <childnode refid="1" relation="public-inheritance">
@@ -2465,6 +2480,7 @@ Other parameters may be defined and passed to any derived classes in addition to
       <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>PolarBasis</scope><name>atol</name></member>
       <member refid="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" virt="non-virtual"><scope>PolarBasis</scope><name>AxisymmetricBasis</name></member>
       <member refid="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" virt="non-virtual"><scope>PolarBasis</scope><name>b_Hall</name></member>
+      <member refid="class_polar_basis_1a89ded72802c057e9900f24d493f9dce3" prot="protected" virt="virtual"><scope>PolarBasis</scope><name>background</name></member>
       <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>PolarBasis</scope><name>Basis</name></member>
       <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>PolarBasis</scope><name>cC</name></member>
       <member refid="class_pot_accel_1a630b9cdcae4ed4915cc72179fe9821c6" prot="public" virt="non-virtual"><scope>PolarBasis</scope><name>cc_lock</name></member>
@@ -2540,7 +2556,6 @@ Other parameters may be defined and passed to any derived classes in addition to
       <member refid="class_polar_basis_1a4ccfeea60a5f68a4f7b3a5034f4e3d1d" prot="protected" virt="non-virtual"><scope>PolarBasis</scope><name>get_dens_coefs</name></member>
       <member refid="class_polar_basis_1a35dcc79a47abe1c6de84dbdb9203896d" prot="public" virt="pure-virtual"><scope>PolarBasis</scope><name>get_dpotl</name></member>
       <member refid="class_polar_basis_1adacb1bb523e1ed452d7075cf6b97135f" prot="protected" virt="pure-virtual"><scope>PolarBasis</scope><name>get_pot</name></member>
-      <member refid="class_polar_basis_1a83f2209d666ea696e7bc3dec7f0a625a" prot="protected" virt="virtual"><scope>PolarBasis</scope><name>get_pot_background</name></member>
       <member refid="class_polar_basis_1ae13b2d394784b9344d9ec473c5f2d781" prot="protected" virt="non-virtual"><scope>PolarBasis</scope><name>get_pot_coefs</name></member>
       <member refid="class_polar_basis_1af5eabfde1ceca1aab0df39bf82bd99c3" prot="protected" virt="non-virtual"><scope>PolarBasis</scope><name>get_pot_coefs_safe</name></member>
       <member refid="class_polar_basis_1a5bd90a17ffb1b1f7e06fdb9a9861b9e9" prot="public" virt="pure-virtual"><scope>PolarBasis</scope><name>get_potl</name></member>

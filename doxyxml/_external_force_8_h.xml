@@ -34,19 +34,19 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="47">
         <label>CenterFile.H</label>
         <link refid="_center_file_8_h"/>
         <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="48">
         <label>Circular.H</label>
         <link refid="_circular_8_h"/>
         <childnode refid="19" relation="include">
@@ -64,6 +64,28 @@
         <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>PseudoAccel.H</label>
+        <link refid="_pseudo_accel_8_h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>QuadLS.H</label>
+        <link refid="_quad_l_s_8_h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -106,7 +128,7 @@
         <childnode refid="40" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="45">
         <label>header.H</label>
         <link refid="header_8_h"/>
         <childnode refid="29" relation="include">
@@ -157,17 +179,17 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="43" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
@@ -197,10 +219,12 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="46">
         <label>ParticleFerry.H</label>
         <link refid="_particle_ferry_8_h"/>
         <childnode refid="19" relation="include">
@@ -297,7 +321,7 @@
       <node id="38">
         <label>algorithm</label>
       </node>
-      <node id="44">
+      <node id="42">
         <label>array</label>
       </node>
       <node id="5">
@@ -353,6 +377,9 @@
       </node>
       <node id="27">
         <label>time.h</label>
+      </node>
+      <node id="44">
+        <label>tuple</label>
       </node>
       <node id="17">
         <label>utility</label>
@@ -503,7 +530,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/ExternalForce.H" line="64" column="23" bodyfile="/home/weinberg/Projects/EXP/src/ExternalForce.H" bodystart="64" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/ExternalForce.H" line="65" column="23" bodyfile="/home/weinberg/Projects/EXP/src/ExternalForce.H" bodystart="65" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -547,17 +574,18 @@
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="class_external_force_1a3ab7afbf87f6bbc2338ef6f61265b16f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_external_force_1a3ab7afbf87f6bbc2338ef6f61265b16f" kindref="member">finish</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getParticlesCuda(<ref refid="class_component" kindref="compound">Component</ref><sp/>*c);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>#if<sp/>HAVE_LIBCUDA==1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HAVE_LIBCUDA==1</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getParticlesCuda(<ref refid="class_component" kindref="compound">Component</ref><sp/>*c);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="_external_force_8_h_1a39448e49c790d53d9661e465dc94307e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_external_force" kindref="compound">ExternalForce</ref><sp/>*<ref refid="_external_force_8_h_1a39448e49c790d53d9661e465dc94307e" kindref="member">maker_t</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_external_force_8_h_1a39448e49c790d53d9661e465dc94307e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_external_force" kindref="compound">ExternalForce</ref><sp/>*<ref refid="_external_force_8_h_1a39448e49c790d53d9661e465dc94307e" kindref="member">maker_t</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node&amp;);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/weinberg/Projects/EXP/src/ExternalForce.H"/>
   </compounddef>

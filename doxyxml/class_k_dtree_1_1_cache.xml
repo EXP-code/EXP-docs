@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_k_dtree_1_1_cache" kind="class" language="C++" prot="public">
+    <compoundname>KDtree::Cache</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::map&lt; key_t, value_t &gt;</basecompoundref>
+    <includes refid="_k_dtree_8_h" local="no">KDtree.H</includes>
+    <templateparamlist>
+      <param>
+        <type>typename key_t</type>
+      </param>
+      <param>
+        <type>typename value_t</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_k_dtree_1_1_cache_1aed57f00769b00f8c9d1964729a1ea39b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int KDtree::Cache&lt; key_t, value_t &gt;::max_size</definition>
+        <argsstring></argsstring>
+        <name>max_size</name>
+        <qualifiedname>KDtree::Cache::max_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="29" column="9" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_k_dtree_1_1_cache_1a496ef1c22183670fd782fad18c0d559f" compoundref="_k_dtree_8_h" startline="20" endline="26">KDtree::Cache&lt; key_t, value_t &gt;::add</referencedby>
+        <referencedby refid="class_k_dtree_1_1_cache_1a32fbf35f2f64d89669b35c340bcfef29" compoundref="_k_dtree_8_h" startline="18" endline="18">KDtree::Cache&lt; key_t, value_t &gt;::resize</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_k_dtree_1_1_cache_1a496ef1c22183670fd782fad18c0d559f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KDtree::Cache&lt; key_t, value_t &gt;::add</definition>
+        <argsstring>(key_t key, value_t value)</argsstring>
+        <name>add</name>
+        <qualifiedname>KDtree::Cache::add</qualifiedname>
+        <param>
+          <type>key_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>value_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="20" column="10" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="20" bodyend="26"/>
+        <references refid="class_k_dtree_1_1_cache_1aed57f00769b00f8c9d1964729a1ea39b" compoundref="_k_dtree_8_h" startline="29">KDtree::Cache&lt; key_t, value_t &gt;::max_size</references>
+        <referencedby refid="class_k_dtree_1_1kdtree_1aa58bba9dfe7d739510ef269d0eda12a7" compoundref="_k_dtree_8_h" startline="224" endline="246">KDtree::kdtree&lt; coordinate_type, dimensions &gt;::nearestN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_k_dtree_1_1_cache_1aa0c064f398368f4b9117787fe293a02f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KDtree::Cache&lt; key_t, value_t &gt;::Cache</definition>
+        <argsstring>(int N=1)</argsstring>
+        <name>Cache</name>
+        <qualifiedname>KDtree::Cache::Cache</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="16" column="5" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_k_dtree_1_1_cache_1a32fbf35f2f64d89669b35c340bcfef29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KDtree::Cache&lt; key_t, value_t &gt;::resize</definition>
+        <argsstring>(int N)</argsstring>
+        <name>resize</name>
+        <qualifiedname>KDtree::Cache::resize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="18" column="10" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="18" bodyend="18"/>
+        <references refid="class_k_dtree_1_1_cache_1aed57f00769b00f8c9d1964729a1ea39b" compoundref="_k_dtree_8_h" startline="29">KDtree::Cache&lt; key_t, value_t &gt;::max_size</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Wrapper class for std::map to keep a finite size. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>KDtree::Cache&lt; key_t, value_t &gt;</label>
+        <link refid="class_k_dtree_1_1_cache"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::map&lt; key_t, value_t &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>KDtree::Cache&lt; key_t, value_t &gt;</label>
+        <link refid="class_k_dtree_1_1_cache"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::map&lt; key_t, value_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/KDtree.H" line="13" column="3" bodyfile="/home/weinberg/Projects/EXP/include/KDtree.H" bodystart="14" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_k_dtree_1_1_cache_1a496ef1c22183670fd782fad18c0d559f" prot="public" virt="non-virtual"><scope>KDtree::Cache</scope><name>add</name></member>
+      <member refid="class_k_dtree_1_1_cache_1aa0c064f398368f4b9117787fe293a02f" prot="public" virt="non-virtual"><scope>KDtree::Cache</scope><name>Cache</name></member>
+      <member refid="class_k_dtree_1_1_cache_1aed57f00769b00f8c9d1964729a1ea39b" prot="private" virt="non-virtual"><scope>KDtree::Cache</scope><name>max_size</name></member>
+      <member refid="class_k_dtree_1_1_cache_1a32fbf35f2f64d89669b35c340bcfef29" prot="public" virt="non-virtual"><scope>KDtree::Cache</scope><name>resize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

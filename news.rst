@@ -3,6 +3,85 @@
 Release notes
 =============
 
+.. _release-7.7.99:
+
+
+EXP 7.7.99 (2025-03-12)
+-----------------------
+
+New features
+~~~~~~~~~~~~
+
+- The pyEXP `CoefStruct::setCoefs()` now takes a coefficient array as
+  an argument.  This is the recommended method for setting coefficients.
+
+- VTK file writing is now standalone.  EXP no longer needs VTK-package
+  libraries.
+
+- New `DiskBulge` target density for Cylindrical bases.
+
+- Added support for pseudo-force generation for expansions with
+  non-inertial expansion centers.
+
+- Added full support for two-dimensional disk bases and
+  two-dimensional disk IC generation.  Added a general abstract
+  `PolarBasis` class to support the two-dimensional disk bases.
+
+- Added two-dimensional exponential and Mestel disks with optional
+  inner and outer tapers.  These include the three-dimensional
+  gravitational field for halo coupling.
+
+- Added point field evaluation to `FieldGenerator`.
+
+- Added velocity field methods, `VelocityField`, to EXP and pyEXP.
+  Added `OutVel` class to EXP for writing velocity field coefficients.
+
+
+General changes
+~~~~~~~~~~~~~~~
+
+- Signs of mSSA PCs have a definite sign convention to ensure
+  repeatability.
+
+- Updates for CUDA version >= 12.0 and compliance for latest versions
+  of Clang and Clang++.
+
+- Improve data semantics for `setMatrix()` and `createFromArray` in
+  pyEXP.
+
+- Require a cachename for SL and EOF basis generation.
+
+- Implement compatibility with old (buggy) HighFive Eigen wrappers.
+
+- Full implementation of the `Cube` basis in EXP and pyEXP.
+
+- Improvements to `TableData` API in pyEXP.
+
+- Make target directory for EXP output files consist between various
+  `Output` methods.
+
+- Remove old, unused, and unsupported bases from EXP.
+
+
+Bug fixes
+~~~~~~~~~
+
+- std::sqrt is not a `constexpr` in all cases for Clang++ consistency
+  and consistency with the C++17 standard.
+
+- Fix HighFive type mismatches in mSSA cache.
+
+- Github action bug fixes and improvements.  Improvements to CTest
+  implementation.
+
+- Improvements and fixes to coefficient norm consistency.
+
+- General improvements to pyEXP exception handling.  Try to prevent
+  crashes in favor of standard runtime exception handling.
+
+- Fixes to Eigen::Tensor() wrappers in pyEXP.
+
+
 .. _release-7.7.26:
 
 

@@ -7,7 +7,9 @@
     <derivedcompoundref refid="class_f_e_e_d" prot="public" virt="non-virtual">FEED</derivedcompoundref>
     <derivedcompoundref refid="class_ferrers" prot="public" virt="non-virtual">Ferrers</derivedcompoundref>
     <derivedcompoundref refid="class_m_ndisk" prot="public" virt="non-virtual">MNdisk</derivedcompoundref>
+    <derivedcompoundref refid="class_py_model" prot="public" virt="non-virtual">PyModel</derivedcompoundref>
     <derivedcompoundref refid="class_truncated" prot="public" virt="non-virtual">Truncated</derivedcompoundref>
+    <derivedcompoundref refid="classdiskbulge" prot="public" virt="non-virtual">diskbulge</derivedcompoundref>
     <includes refid="_emp_cyl_s_l_8_h" local="no">EmpCylSL.H</includes>
     <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_emp_cyl_s_l_1_1_axi_disk_1a9f5ac6ec69ca06b68d48b23b6c8c034f" prot="protected" static="no" mutable="no">
@@ -44,6 +46,7 @@
         <referencedby refid="class_exponential_1a9d5b044bf0435207b4cde747a62663de" compoundref="_disk_models_8_h" startline="134" endline="138">Exponential::operator()</referencedby>
         <referencedby refid="class_double_exponential_1af349fa39100fae66fe0a70f8df8f1ce8" compoundref="_disk_models_8_h" startline="160" endline="169">DoubleExponential::operator()</referencedby>
         <referencedby refid="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe" compoundref="_disk_models_8_h" startline="190" endline="196">MNdisk::operator()</referencedby>
+        <referencedby refid="classdiskbulge_1afbaa683e3b914246ebf78aa03cfc9fdc" compoundref="_disk_models_8_h" startline="244" endline="254">diskbulge::operator()</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_emp_cyl_s_l_1_1_axi_disk_1ae117d1cc1fbe5e503b751accd64c3d1e" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; double &gt;</type>
@@ -58,6 +61,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/weinberg/Projects/EXP/include/EmpCylSL.H" line="367" column="17" bodyfile="/home/weinberg/Projects/EXP/include/EmpCylSL.H" bodystart="367" bodyend="-1"/>
+        <referencedby refid="classdiskbulge_1a4ed5451ebb1a5251ddd071a0ef2a80c4" compoundref="_disk_models_8_h" startline="235" endline="242">diskbulge::diskbulge</referencedby>
         <referencedby refid="class_double_exponential_1a71e0a47f9c67a92c51dcefaeafab33a8" compoundref="_disk_models_8_h" startline="150" endline="158">DoubleExponential::DoubleExponential</referencedby>
         <referencedby refid="class_exponential_1af4ced1db8ef741a0ad657bbbd86f847f" compoundref="_disk_models_8_h" startline="127" endline="132">Exponential::Exponential</referencedby>
         <referencedby refid="class_f_e_e_d_1a665cdaf1a2e9f4df26004b4b8b80c1e6" compoundref="_disk_models_8_h" startline="32" endline="41">FEED::FEED</referencedby>
@@ -153,6 +157,8 @@
         <reimplementedby refid="class_double_exponential_1af349fa39100fae66fe0a70f8df8f1ce8">operator()</reimplementedby>
         <reimplementedby refid="class_m_ndisk_1ae3af9cb061a40b31dec7486ca24c3fbe">operator()</reimplementedby>
         <reimplementedby refid="class_truncated_1aaf3541affbceec441a258be79354963b">operator()</reimplementedby>
+        <reimplementedby refid="classdiskbulge_1afbaa683e3b914246ebf78aa03cfc9fdc">operator()</reimplementedby>
+        <reimplementedby refid="class_py_model_1a565a4d630b7c6bab5f5c2e1de9b46959">operator()</reimplementedby>
         <param>
           <type>double</type>
           <declname>R</declname>
@@ -217,8 +223,20 @@
         </childnode>
       </node>
       <node id="7">
+        <label>PyModel</label>
+        <link refid="class_py_model"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
         <label>Truncated</label>
         <link refid="class_truncated"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>diskbulge</label>
+        <link refid="classdiskbulge"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

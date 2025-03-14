@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_emp_cyl2d_1_1_kuzmin_cyl" kind="class" language="C++" prot="public">
+    <compoundname>EmpCyl2d::KuzminCyl</compoundname>
+    <basecompoundref refid="class_emp_cyl2d_1_1_model_cyl" prot="public" virt="non-virtual">EmpCyl2d::ModelCyl</basecompoundref>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::KuzminCyl::acyl</definition>
+        <argsstring></argsstring>
+        <name>acyl</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::acyl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="139" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab78966b1e02a599fd5cb703da8a78bb1" compoundref="_emp_cyl2d_8_h" startline="182" endline="188">dens</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a44b53dd9c6922cb0fb6a0a28a0690b34" compoundref="_emp_cyl2d_8_h" startline="177" endline="180">dpot</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a683b26fd21592b52bdf9cb9c5a509d4b" compoundref="_emp_cyl2d_8_h" startline="143" endline="162">parse</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab1c2dabbf6b68ed0c19c26d4096a6491" compoundref="_emp_cyl2d_8_h" startline="172" endline="175">pot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_kuzmin_cyl_1a683b26fd21592b52bdf9cb9c5a509d4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::KuzminCyl::parse</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>parse</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::parse</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_model_cyl_1a590bae8af6992903978f94d799bdd012">parse</reimplements>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="143" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="143" bodyend="162"/>
+        <references refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" compoundref="_emp_cyl2d_8_h" startline="139">acyl</references>
+        <references refid="localmpi_8_h_1a20705b4372a9940d34a164bae541be1f" compoundref="localmpi_8_h" startline="17">myid</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_kuzmin_cyl_1ab78966b1e02a599fd5cb703da8a78bb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::KuzminCyl::dens</definition>
+        <argsstring>(double R)</argsstring>
+        <name>dens</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::dens</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_model_cyl_1aee9c57bca32e7568d5b8cd07e6db854a">dens</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="182" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="182" bodyend="188"/>
+        <references refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" compoundref="_emp_cyl2d_8_h" startline="139">acyl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_kuzmin_cyl_1a44b53dd9c6922cb0fb6a0a28a0690b34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::KuzminCyl::dpot</definition>
+        <argsstring>(double R)</argsstring>
+        <name>dpot</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::dpot</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_model_cyl_1adc81ff2bbbc92a4130b22a091acf4697">dpot</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="177" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="177" bodyend="180"/>
+        <references refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" compoundref="_emp_cyl2d_8_h" startline="139">acyl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_kuzmin_cyl_1a254f4c6869a61aca9ee538cc7529ac59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::KuzminCyl::KuzminCyl</definition>
+        <argsstring>(const YAML::Node &amp;par)</argsstring>
+        <name>KuzminCyl</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::KuzminCyl</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="166" column="5" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="166" bodyend="170"/>
+        <references refid="global_8_h_1a735b1ce7a340373ac87191026132d105">parse</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_kuzmin_cyl_1ab1c2dabbf6b68ed0c19c26d4096a6491" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::KuzminCyl::pot</definition>
+        <argsstring>(double R)</argsstring>
+        <name>pot</name>
+        <qualifiedname>EmpCyl2d::KuzminCyl::pot</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_model_cyl_1a0bf2b7f035ab97b7ce38fd7079eadeda">pot</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="172" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="172" bodyend="175"/>
+        <references refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" compoundref="_emp_cyl2d_8_h" startline="139">acyl</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EmpCyl2d::KuzminCyl</label>
+        <link refid="class_emp_cyl2d_1_1_kuzmin_cyl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EmpCyl2d::ModelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_model_cyl"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EmpCyl2d::KuzminCyl</label>
+        <link refid="class_emp_cyl2d_1_1_kuzmin_cyl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EmpCyl2d::ModelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_model_cyl"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="135" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="136" bodyend="190"/>
+    <listofallmembers>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a882ab53e9c0ace2f830d0818e9aaf1bb" prot="private" virt="non-virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>acyl</name></member>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab78966b1e02a599fd5cb703da8a78bb1" prot="public" virt="virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>dens</name></member>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a44b53dd9c6922cb0fb6a0a28a0690b34" prot="public" virt="virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>dpot</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" prot="protected" virt="non-virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>id</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" prot="public" virt="virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>ID</name></member>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a254f4c6869a61aca9ee538cc7529ac59" prot="public" virt="non-virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>KuzminCyl</name></member>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1a683b26fd21592b52bdf9cb9c5a509d4b" prot="private" virt="virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>parse</name></member>
+      <member refid="class_emp_cyl2d_1_1_kuzmin_cyl_1ab1c2dabbf6b68ed0c19c26d4096a6491" prot="public" virt="virtual"><scope>EmpCyl2d::KuzminCyl</scope><name>pot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

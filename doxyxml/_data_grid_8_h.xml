@@ -7,6 +7,7 @@
     <includes local="no">memory</includes>
     <includes local="no">config_exp.h</includes>
     <includes refid="_table_grid_8_h" local="no">TableGrid.H</includes>
+    <includes refid="_vtk_grid_8_h" local="no">VtkGrid.H</includes>
     <incdepgraph>
       <node id="1">
         <label>/home/weinberg/Projects/EXP/include/DataGrid.H</label>
@@ -20,6 +21,8 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -46,8 +49,37 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>VtkGrid.H</label>
+        <link refid="_vtk_grid_8_h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
       <node id="5">
         <label>config_exp.h</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>limits</label>
       </node>
       <node id="7">
         <label>map</label>
@@ -93,35 +125,35 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config_exp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_table_grid_8_h" kindref="compound">TableGrid.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_VTK</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_vtk_grid_8_h" kindref="compound">VtkGrid.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="class_data_grid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_grid" kindref="compound">DataGrid</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid" kindref="compound">ThreeDGrid</ref></highlight></codeline>
-<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_three_d_grid_8_h_1abc218c0a19f8602e69200454c9561499" kindref="member">ThreeDGridPtr</ref><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_data_grid_1a73cb6e2c77723a343712cd2590c454a7" kindref="member">DataGrid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_VTK</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;VtkGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;TableGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_vtk_grid_8_h" kindref="compound">VtkGrid.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_data_grid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_grid" kindref="compound">DataGrid</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid" kindref="compound">ThreeDGrid</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_three_d_grid_8_h_1abc218c0a19f8602e69200454c9561499" kindref="member">ThreeDGridPtr</ref><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_data_grid_1ab07533b097a221024850ae1b669df297" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_data_grid_1ab07533b097a221024850ae1b669df297" kindref="member">DataGrid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>type=</highlight><highlight class="stringliteral">&quot;VTK&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::transform(type.begin(),<sp/>type.end(),<sp/>type.begin(),<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c){<sp/>return<sp/>std::tolower(c);<sp/>});</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type.compare(</highlight><highlight class="stringliteral">&quot;vtk&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;VtkGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_data_grid_1afda58ed7335a9f68e4de0a754057d55e" kindref="member">ptr</ref><sp/>=<sp/>std::make_shared&lt;TableGrid&gt;(<ref refid="class_three_d_grid_1af3f15bb9f7dcca996ff9ead3daecc12c" kindref="member">nx</ref>,<sp/><ref refid="class_three_d_grid_1a8fed9b8b37fd120d334ecf4558f0c0d1" kindref="member">ny</ref>,<sp/><ref refid="class_three_d_grid_1a72b74fa12c115f82a70dd844811a8911" kindref="member">nz</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a5ae56bdafe5245e3ce50f366e39cfe85" kindref="member">xmin</ref>,<sp/><ref refid="class_three_d_grid_1a575fb5d71a08509ff618f683682b3627" kindref="member">xmax</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a0c2341f1d692d67d03bea2049d72b15e" kindref="member">ymin</ref>,<sp/><ref refid="class_three_d_grid_1a98c1af92014aa52cb1483ed89e0f9e94" kindref="member">ymax</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_three_d_grid_1a7321b40406cdf7138a669840745c6597" kindref="member">zmin</ref>,<sp/><ref refid="class_three_d_grid_1a3b0b0a6875cb1885f3db40f858f3cd72" kindref="member">zmax</ref>);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="51" refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_grid_1a01496cbad06db14c9214a675df1997e8" kindref="member">Add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>

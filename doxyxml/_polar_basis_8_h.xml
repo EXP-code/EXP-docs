@@ -13,6 +13,7 @@
     <includes refid="_n_v_t_x_8_h" local="no">NVTX.H</includes>
     <includes local="no">CoefContainer.H</includes>
     <includes refid="_biorth_cyl_8_h" local="no">BiorthCyl.H</includes>
+    <includedby refid="_c_b_disk_8_h" local="no">/home/weinberg/Projects/EXP/src/CBDisk.H</includedby>
     <includedby refid="_flat_disk_8_h" local="no">/home/weinberg/Projects/EXP/src/FlatDisk.H</includedby>
     <incdepgraph>
       <node id="23">
@@ -55,6 +56,10 @@
         <childnode refid="30" relation="include">
         </childnode>
       </node>
+      <node id="49">
+        <label>EXPmath.H</label>
+        <link refid="_e_x_pmath_8_h"/>
+      </node>
       <node id="44">
         <label>EmpCyl2d.H</label>
         <link refid="_emp_cyl2d_8_h"/>
@@ -74,15 +79,19 @@
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
         <childnode refid="49" relation="include">
         </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
         <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
         </childnode>
       </node>
       <node id="33">
@@ -327,10 +336,10 @@
       <node id="40">
         <label>highfive/H5File.hpp</label>
       </node>
-      <node id="50">
+      <node id="51">
         <label>highfive/eigen.hpp</label>
       </node>
-      <node id="49">
+      <node id="50">
         <label>highfive/highfive.hpp</label>
       </node>
       <node id="29">
@@ -375,6 +384,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
+        <label>/home/weinberg/Projects/EXP/src/CBDisk.H</label>
+        <link refid="_c_b_disk_8_h"/>
+      </node>
+      <node id="3">
         <label>/home/weinberg/Projects/EXP/src/FlatDisk.H</label>
         <link refid="_flat_disk_8_h"/>
       </node>
@@ -382,6 +395,8 @@
         <label>/home/weinberg/Projects/EXP/src/PolarBasis.H</label>
         <link refid="_polar_basis_8_h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -696,7 +711,7 @@
 <codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="380"><highlight class="normal"></highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::tuple&lt;double,<sp/>double,<sp/>double&gt;</highlight></codeline>
-<codeline lineno="383" refid="class_polar_basis_1a83f2209d666ea696e7bc3dec7f0a625a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_polar_basis_1a83f2209d666ea696e7bc3dec7f0a625a" kindref="member">get_pot_background</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{0.0,<sp/>0.0,<sp/>0.0};<sp/>}</highlight></codeline>
+<codeline lineno="383" refid="class_polar_basis_1a89ded72802c057e9900f24d493f9dce3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_polar_basis_1a89ded72802c057e9900f24d493f9dce3" kindref="member">background</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{0.0,<sp/>0.0,<sp/>0.0};<sp/>}</highlight></codeline>
 <codeline lineno="384"><highlight class="normal"></highlight></codeline>
 <codeline lineno="386" refid="class_polar_basis_1acaba49129ac6aeeb0d44e1ff25eb4e22" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="class_polar_basis_1acaba49129ac6aeeb0d44e1ff25eb4e22" kindref="member">determine_acceleration_and_potential_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg);</highlight></codeline>
 <codeline lineno="387"><highlight class="normal"></highlight></codeline>
