@@ -4,6 +4,23 @@
     <compoundname>FlatDisk</compoundname>
     <basecompoundref refid="class_polar_basis" prot="public" virt="non-virtual">PolarBasis</basecompoundref>
     <includes refid="_flat_disk_8_h" local="no">FlatDisk.H</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_flat_disk_1ac006bf5130da0326357efebf23e49dea" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_emp_cyl2d_1_1_model_cyl" kindref="compound">EmpCyl2d::ModelCyl</ref> &gt;</type>
+        <definition>using FlatDisk::Disk2d =  std::shared_ptr&lt;EmpCyl2d::ModelCyl&gt;</definition>
+        <argsstring></argsstring>
+        <name>Disk2d</name>
+        <qualifiedname>FlatDisk::Disk2d</qualifiedname>
+        <briefdescription>
+<para>Background instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="88" column="3" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_flat_disk_1ac81dad1d2fc54b67f5aca603916f112c" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -17,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="91" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="91" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="105" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a990e9606b5f56506fcc9f8d1fcd97a15" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -31,7 +48,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="96" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="96" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="110" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_flat_disk_1a50ea5cdeac07d334db7b0f1c2f7e714a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_flat_disk_1ac006bf5130da0326357efebf23e49dea" kindref="member">Disk2d</ref></type>
+        <definition>Disk2d FlatDisk::disk</definition>
+        <argsstring></argsstring>
+        <name>disk</name>
+        <qualifiedname>FlatDisk::disk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="89" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="89" bodyend="-1"/>
+        <referencedby refid="class_flat_disk_1a7605820abb7e8222f48e04c25209f20b" compoundref="_flat_disk_8_h" startline="96" endline="97">background</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_flat_disk_1a829b341fce5b6656537225116a0a70cd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FlatDisk::dump_basis</definition>
+        <argsstring></argsstring>
+        <name>dump_basis</name>
+        <qualifiedname>FlatDisk::dump_basis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="116" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a015184ce4a14ed1fd6e96584d003c5b0" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -45,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="94" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="94" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="108" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a91d1dd1d35d2b21c717f8b8d6fc73201" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -59,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="97" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="97" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="111" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a20ea051932dcf9a890c64230050ebaae" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -73,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="93" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="93" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="107" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a8f34e318bd07c46deb0d65e9e23bf05b" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -87,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="95" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="95" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="109" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a678a676a416f83fde29fc47674e279d7" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -101,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="92" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="92" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="106" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" prot="private" static="no" mutable="no">
         <type><ref refid="_flat_disk_8_h_1a44ac299dfbdd6e45965acbe30c201240" kindref="member">CylPtr</ref></type>
@@ -115,10 +161,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="53" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="53" bodyend="-1"/>
-        <referencedby refid="class_flat_disk_1a4d17639bc22514aa13b0c20ddc62c315" compoundref="_flat_disk_8_h" startline="105" endline="106">get_pot</referencedby>
-        <referencedby refid="class_flat_disk_1a23ec93578ccc231fe0ebf3cc4044e66e" compoundref="_flat_disk_8_h" startline="79" endline="83">get_pot_background</referencedby>
-        <referencedby refid="class_flat_disk_1a60547addec40a8e202c206ff94497843" compoundref="_flat_disk_8_h" startline="62" endline="62">getRtable</referencedby>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="63" column="10" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_flat_disk_1a4d17639bc22514aa13b0c20ddc62c315" compoundref="_flat_disk_8_h" startline="121" endline="122">get_pot</referencedby>
+        <referencedby refid="class_flat_disk_1a60547addec40a8e202c206ff94497843" compoundref="_flat_disk_8_h" startline="72" endline="72">getRtable</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1ab46447ce29362256e6216ae996c73a1a" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -132,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="91" column="32" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="91" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="105" column="32" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a84f29ab9899e8a21d9761bd20108c2a7" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -146,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="91" column="24" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="91" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="105" column="24" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_flat_disk_1a20a52477e571fea4c0f80e5308db97ed" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -160,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="91" column="18" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="91" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="105" column="18" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="105" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -177,10 +222,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="100" column="25" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="100" bodyend="-1"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="114" column="25" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="114" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_flat_disk_1a7605820abb7e8222f48e04c25209f20b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::tuple&lt; double, double, double &gt;</type>
+        <definition>virtual std::tuple&lt; double, double, double &gt; FlatDisk::background</definition>
+        <argsstring>(double r, double z)</argsstring>
+        <name>background</name>
+        <qualifiedname>FlatDisk::background</qualifiedname>
+        <reimplements refid="class_polar_basis_1a89ded72802c057e9900f24d493f9dce3">background</reimplements>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Background evaluation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="96" column="3" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="96" bodyend="97"/>
+        <references refid="class_flat_disk_1a50ea5cdeac07d334db7b0f1c2f7e714a" compoundref="_flat_disk_8_h" startline="89">disk</references>
+      </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a661d3b56742b8816e6ddb5ef60a1764d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void FlatDisk::get_dens</definition>
@@ -244,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="85" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="99" column="8"/>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a22f0831bd87fafebf499abc0556c0d60" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -333,32 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="57" column="8"/>
-      </memberdef>
-      <memberdef kind="function" id="class_flat_disk_1a23ec93578ccc231fe0ebf3cc4044e66e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>std::tuple&lt; double, double, double &gt;</type>
-        <definition>virtual std::tuple&lt; double, double, double &gt; FlatDisk::get_pot_background</definition>
-        <argsstring>(double r, double z)</argsstring>
-        <name>get_pot_background</name>
-        <qualifiedname>FlatDisk::get_pot_background</qualifiedname>
-        <reimplements refid="class_polar_basis_1a83f2209d666ea696e7bc3dec7f0a625a">get_pot_background</reimplements>
-        <param>
-          <type>double</type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>z</declname>
-        </param>
-        <briefdescription>
-<para>Background evaluation. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="79" column="3" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="79" bodyend="83"/>
-        <references refid="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" compoundref="_flat_disk_8_h" startline="53">ortho</references>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="67" column="8"/>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1adfae4fe4709805480d401787378b14ef" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -423,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="60" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="70" column="8"/>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a9fbcdede578288260d155e0033de33d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -492,7 +537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="87" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="101" column="8"/>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a60547addec40a8e202c206ff94497843" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>double</type>
@@ -508,8 +553,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="62" column="18" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="62" bodyend="62"/>
-        <references refid="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" compoundref="_flat_disk_8_h" startline="53">ortho</references>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="72" column="18" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="72" bodyend="72"/>
+        <references refid="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" compoundref="_flat_disk_8_h" startline="63">ortho</references>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a99ce7aa447bc828ce26a69cf18136556" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -528,7 +573,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="55" column="8"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_flat_disk_1af564a3c779bd3f731e90de066198f02f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlatDisk::setBackground</definition>
+        <argsstring>()</argsstring>
+        <name>setBackground</name>
+        <qualifiedname>FlatDisk::setBackground</qualifiedname>
+        <briefdescription>
+<para>Set background from YAML. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="92" column="8"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -562,8 +622,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="105" column="8" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="105" bodyend="106"/>
-        <references refid="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" compoundref="_flat_disk_8_h" startline="53">ortho</references>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="121" column="8" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="121" bodyend="122"/>
+        <references refid="class_flat_disk_1aa8f816e88d31d95ef9ed39082b81bb4f" compoundref="_flat_disk_8_h" startline="63">ortho</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -675,7 +735,7 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="124" column="3"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="140" column="3"/>
       </memberdef>
       <memberdef kind="function" id="class_flat_disk_1a508a4d23c2eee77a4259a9519ba74cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -690,22 +750,15 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="127" column="11"/>
+        <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="143" column="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Computes the potential, acceleration and density using an empirical function analysis for a flat <ref refid="class_bessel" kindref="compound">Bessel</ref> basis and a target density</para>
+<para>Parameters</para>
 <para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>acyltbl</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is the scale length of target density (default is 0.6)</para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
 <parameternamelist>
 <parametername>rcylmin</parametername>
 </parameternamelist>
@@ -731,6 +784,14 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>mmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum azimuthal order</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>numx</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -743,22 +804,6 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
 </parameternamelist>
 <parameterdescription>
 <para>is the number of grid points in the scaled vertical direction</para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>numr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is the number radial coordinate knots in the table (default is 1000)</para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>nfid</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is the number of basis elements used in the EOF computation</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -782,7 +827,7 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
 <parametername>model</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>name for <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref> (default: expon)</para>
+<para>name for conditioning the new basis using <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref> (default: expon)</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -790,7 +835,63 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
 <parametername>biorth</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set for <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref> (default: bess) </para>
+<para>is the biorthogonal basis set used by <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref> for conditioning (default: bess)</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>background</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets a fixed monopole potential and force for the model. Used for stability analysis of disks with active and inactive tapers, following Zang</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmaxfid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum radial order for the basis used by <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref> for conditioning</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of grid points in the radial direction for the numerical basis in <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NQDHT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of grid points for the numerical Hankel transform</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diskconf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a YAML configuration for the target disk model in <ref refid="class_emp_cyl2d" kindref="compound">EmpCyl2d</ref></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cachename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of the cache file for the newly constructed basis</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dumpbasis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>provides the user with a ascii table of the basis potential-density pairs </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -949,12 +1050,13 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="48" column="1" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="49" bodyend="128"/>
+    <location file="/home/weinberg/Projects/EXP/src/FlatDisk.H" line="58" column="1" bodyfile="/home/weinberg/Projects/EXP/src/FlatDisk.H" bodystart="59" bodyend="144"/>
     <listofallmembers>
       <member refid="class_flat_disk_1ac81dad1d2fc54b67f5aca603916f112c" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>acyltbl</name></member>
       <member refid="class_pot_accel_1a6a637997f73ca85ce78d8c92eec7ad1b" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>atol</name></member>
       <member refid="class_axisymmetric_basis_1ab965e325410d79d567903f51dd2c6dd0" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>AxisymmetricBasis</name></member>
       <member refid="class_axisymmetric_basis_1aa4fc18ccf44bdf56ac60b7caa68b1cfc" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>b_Hall</name></member>
+      <member refid="class_flat_disk_1a7605820abb7e8222f48e04c25209f20b" prot="private" virt="virtual"><scope>FlatDisk</scope><name>background</name></member>
       <member refid="class_basis_1a3deeb360a898d1c144f7f6ad44813b3e" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>Basis</name></member>
       <member refid="class_flat_disk_1a990e9606b5f56506fcc9f8d1fcd97a15" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>biorth</name></member>
       <member refid="class_pot_accel_1afa2cd3b0bf51e23d8bfc54aac73ef010" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>cC</name></member>
@@ -999,10 +1101,13 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
       <member refid="class_polar_basis_1afb8531a9c023e49bc2a2c112e47490eb" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>differ1</name></member>
       <member refid="class_polar_basis_1a62f0e567cfac40ee6c955aa9b46b331c" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>differC1</name></member>
       <member refid="class_polar_basis_1a14b747134e7a5e92e73f2c6cb6570a14" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>differS1</name></member>
+      <member refid="class_flat_disk_1a50ea5cdeac07d334db7b0f1c2f7e714a" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>disk</name></member>
+      <member refid="class_flat_disk_1ac006bf5130da0326357efebf23e49dea" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>Disk2d</name></member>
       <member refid="class_basis_1ad9a9f2f2d18335ae482b1d4e12490d0b" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>dlegendre_R</name></member>
       <member refid="class_pot_accel_1a6a9ec23d29b553c1625bd8e88fe7692d" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>dof</name></member>
       <member refid="class_polar_basis_1a90e8f6bee803544cedde1c5334540808" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>dpotR</name></member>
       <member refid="class_polar_basis_1ad1b9268b7f03dcbb53afb51d15595875" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>dpotZ</name></member>
+      <member refid="class_flat_disk_1a829b341fce5b6656537225116a0a70cd" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>dump_basis</name></member>
       <member refid="class_polar_basis_1a4326226fbd3814c1b159c9a8d1714dc9" prot="public" virt="virtual"><scope>FlatDisk</scope><name>dump_coefs</name></member>
       <member refid="class_polar_basis_1a2ab3b12283586fff2210ef28df12f834" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>dump_coefs_all</name></member>
       <member refid="class_polar_basis_1aa99664ea268f363763f3577416ae367c" prot="public" virt="virtual"><scope>FlatDisk</scope><name>dump_coefs_h5</name></member>
@@ -1032,7 +1137,6 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
       <member refid="class_polar_basis_1a4ccfeea60a5f68a4f7b3a5034f4e3d1d" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>get_dens_coefs</name></member>
       <member refid="class_flat_disk_1a22f0831bd87fafebf499abc0556c0d60" prot="private" virt="virtual"><scope>FlatDisk</scope><name>get_dpotl</name></member>
       <member refid="class_flat_disk_1a4d17639bc22514aa13b0c20ddc62c315" prot="protected" virt="virtual"><scope>FlatDisk</scope><name>get_pot</name></member>
-      <member refid="class_flat_disk_1a23ec93578ccc231fe0ebf3cc4044e66e" prot="private" virt="virtual"><scope>FlatDisk</scope><name>get_pot_background</name></member>
       <member refid="class_polar_basis_1ae13b2d394784b9344d9ec473c5f2d781" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>get_pot_coefs</name></member>
       <member refid="class_polar_basis_1af5eabfde1ceca1aab0df39bf82bd99c3" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>get_pot_coefs_safe</name></member>
       <member refid="class_flat_disk_1adfae4fe4709805480d401787378b14ef" prot="private" virt="virtual"><scope>FlatDisk</scope><name>get_potl</name></member>
@@ -1137,6 +1241,7 @@ Input line parameters include: <parameterlist kind="param"><parameteritem>
       <member refid="class_polar_basis_1a05fd3a74d0b2657ded0339a346cbf997" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>seedN</name></member>
       <member refid="class_polar_basis_1ad09ca298def19fc208e57ef144ce16f6" prot="protected" virt="non-virtual"><scope>FlatDisk</scope><name>self_consistent</name></member>
       <member refid="class_pot_accel_1ac65dfca720c42ea4a773024d1eaf977f" prot="public" virt="virtual"><scope>FlatDisk</scope><name>set_multistep_level</name></member>
+      <member refid="class_flat_disk_1af564a3c779bd3f731e90de066198f02f" prot="private" virt="non-virtual"><scope>FlatDisk</scope><name>setBackground</name></member>
       <member refid="class_pot_accel_1a6dc784a141afdec5f4daad63eba20b81" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>SetExternal</name></member>
       <member refid="class_pot_accel_1ad528efbd280a21543addaf7747e9089a" prot="public" virt="virtual"><scope>FlatDisk</scope><name>setScale</name></member>
       <member refid="class_axisymmetric_basis_1a6af1bcb2359adc5091625d457a953efa" prot="public" virt="non-virtual"><scope>FlatDisk</scope><name>setTK</name></member>

@@ -18,10 +18,22 @@
     <includes refid="_disk_models_8_h" local="no">DiskModels.H</includes>
     <includes local="no">config_exp.h</includes>
     <incdepgraph>
+      <node id="42">
+        <label>DiskDensityFunc.H</label>
+        <link refid="_disk_density_func_8_h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
       <node id="41">
         <label>DiskModels.H</label>
         <link refid="_disk_models_8_h"/>
         <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
       <node id="36">
@@ -311,6 +323,12 @@
       </node>
       <node id="29">
         <label>mpi.h</label>
+      </node>
+      <node id="44">
+        <label>pybind11/embed.h</label>
+      </node>
+      <node id="43">
+        <label>pybind11/pybind11.h</label>
       </node>
       <node id="33">
         <label>random</label>

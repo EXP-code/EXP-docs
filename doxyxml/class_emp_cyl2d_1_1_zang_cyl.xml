@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_emp_cyl2d_1_1_zang_cyl" kind="class" language="C++" prot="public">
+    <compoundname>EmpCyl2d::ZangCyl</compoundname>
+    <basecompoundref refid="class_emp_cyl2d_1_1_mestel_cyl" prot="public" virt="non-virtual">EmpCyl2d::MestelCyl</basecompoundref>
+    <includes refid="_emp_cyl2d_8_h" local="no">EmpCyl2d.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1ac5740ba03f4d293f6dd2fba0851ad484" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::asoft</definition>
+        <argsstring></argsstring>
+        <name>asoft</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::asoft</qualifiedname>
+        <initializer>= 1.0e-8</initializer>
+        <briefdescription>
+<para>Softening factor (not currently used) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="256" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1aea1830c1aed130c7f05699519ce52e25" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EmpCyl2d::ZangCyl::Inner</definition>
+        <argsstring></argsstring>
+        <name>Inner</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::Inner</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Ignore inner cut-off for N&lt;0.05. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="259" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="259" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67" compoundref="_emp_cyl2d_8_h" startline="354" endline="359">dens</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1a8976cc73d5d3a0e212a35828157aad44" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::mu</definition>
+        <argsstring></argsstring>
+        <name>mu</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::mu</qualifiedname>
+        <briefdescription>
+<para>Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="253" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="253" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a58311bc5eb1402a9506d36d80ce9155c" compoundref="_emp_cyl2d_8_h" startline="286" endline="291">dTouter</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" compoundref="_emp_cyl2d_8_h" startline="296" endline="330">parse</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a5e109a82cee9c50e79b4cd91e751cec4" compoundref="_emp_cyl2d_8_h" startline="272" endline="275">Touter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::nu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="253" column="15" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="253" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a49f87e15df18e406da330041c99c3e96" compoundref="_emp_cyl2d_8_h" startline="278" endline="283">dTinner</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" compoundref="_emp_cyl2d_8_h" startline="296" endline="330">parse</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a9ec6fce0cf7ca99e6eb1d42c4b7f7609" compoundref="_emp_cyl2d_8_h" startline="265" endline="269">Tinner</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1aae4845cfcf7366f1601cfb90c9e59fc6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::ri</definition>
+        <argsstring></argsstring>
+        <name>ri</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::ri</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="253" column="18" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="253" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" compoundref="_emp_cyl2d_8_h" startline="296" endline="330">parse</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1af5cd8eb236aea13e4ed3810f200a8045" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::ro</definition>
+        <argsstring></argsstring>
+        <name>ro</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::ro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="253" column="21" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="253" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" compoundref="_emp_cyl2d_8_h" startline="296" endline="330">parse</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1ad7716bf0d4e00af79e41639a5e3bd1f4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::Tifac</definition>
+        <argsstring></argsstring>
+        <name>Tifac</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::Tifac</qualifiedname>
+        <briefdescription>
+<para>Taper factors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="262" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="262" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a49f87e15df18e406da330041c99c3e96" compoundref="_emp_cyl2d_8_h" startline="278" endline="283">dTinner</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a9ec6fce0cf7ca99e6eb1d42c4b7f7609" compoundref="_emp_cyl2d_8_h" startline="265" endline="269">Tinner</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_emp_cyl2d_1_1_zang_cyl_1a3478441280a03c6c33f69ff59d0ff0f6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::Tofac</definition>
+        <argsstring></argsstring>
+        <name>Tofac</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::Tofac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="262" column="18" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="262" bodyend="-1"/>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a58311bc5eb1402a9506d36d80ce9155c" compoundref="_emp_cyl2d_8_h" startline="286" endline="291">dTouter</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a5e109a82cee9c50e79b4cd91e751cec4" compoundref="_emp_cyl2d_8_h" startline="272" endline="275">Touter</referencedby>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" compoundref="_emp_cyl2d_8_h" startline="335" endline="351">ZangCyl</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a49f87e15df18e406da330041c99c3e96" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::dTinner</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>dTinner</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::dTinner</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Deriv of inner taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="278" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="278" bodyend="283"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" compoundref="_emp_cyl2d_8_h" startline="253">nu</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1ad7716bf0d4e00af79e41639a5e3bd1f4" compoundref="_emp_cyl2d_8_h" startline="262">Tifac</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a58311bc5eb1402a9506d36d80ce9155c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::dTouter</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>dTouter</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::dTouter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Deriv of outer taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="286" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="286" bodyend="291"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a8976cc73d5d3a0e212a35828157aad44" compoundref="_emp_cyl2d_8_h" startline="253">mu</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a3478441280a03c6c33f69ff59d0ff0f6" compoundref="_emp_cyl2d_8_h" startline="262">Tofac</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a9ec6fce0cf7ca99e6eb1d42c4b7f7609" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::Tinner</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>Tinner</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::Tinner</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Inner taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="265" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="265" bodyend="269"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" compoundref="_emp_cyl2d_8_h" startline="253">nu</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1ad7716bf0d4e00af79e41639a5e3bd1f4" compoundref="_emp_cyl2d_8_h" startline="262">Tifac</references>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67" compoundref="_emp_cyl2d_8_h" startline="354" endline="359">dens</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a5e109a82cee9c50e79b4cd91e751cec4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::Touter</definition>
+        <argsstring>(double Jp)</argsstring>
+        <name>Touter</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::Touter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Jp</declname>
+        </param>
+        <briefdescription>
+<para>Outer taper function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="272" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="272" bodyend="275"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a8976cc73d5d3a0e212a35828157aad44" compoundref="_emp_cyl2d_8_h" startline="253">mu</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a3478441280a03c6c33f69ff59d0ff0f6" compoundref="_emp_cyl2d_8_h" startline="262">Tofac</references>
+        <referencedby refid="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67" compoundref="_emp_cyl2d_8_h" startline="354" endline="359">dens</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void EmpCyl2d::ZangCyl::parse</definition>
+        <argsstring>(const YAML::Node &amp;conf)</argsstring>
+        <name>parse</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::parse</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_mestel_cyl_1a3cf3ad11fe49cd8bd3d9cff714241b0b">parse</reimplements>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <briefdescription>
+<para>Assign values from YAML. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="296" column="10" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="296" bodyend="330"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a8976cc73d5d3a0e212a35828157aad44" compoundref="_emp_cyl2d_8_h" startline="253">mu</references>
+        <references refid="localmpi_8_h_1a20705b4372a9940d34a164bae541be1f" compoundref="localmpi_8_h" startline="17">myid</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" compoundref="_emp_cyl2d_8_h" startline="253">nu</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1aae4845cfcf7366f1601cfb90c9e59fc6" compoundref="_emp_cyl2d_8_h" startline="253">ri</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af5cd8eb236aea13e4ed3810f200a8045" compoundref="_emp_cyl2d_8_h" startline="253">ro</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double EmpCyl2d::ZangCyl::dens</definition>
+        <argsstring>(double R)</argsstring>
+        <name>dens</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::dens</qualifiedname>
+        <reimplements refid="class_emp_cyl2d_1_1_mestel_cyl_1a5bd3548fb3a191a1c4a0831166416820">dens</reimplements>
+        <param>
+          <type>double</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+<para>Surface density. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="354" column="12" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="354" bodyend="359"/>
+        <references refid="class_emp_cyl2d_1_1_mestel_cyl_1a5bd3548fb3a191a1c4a0831166416820" compoundref="_emp_cyl2d_8_h" startline="241" endline="244">EmpCyl2d::MestelCyl::dens</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1aea1830c1aed130c7f05699519ce52e25" compoundref="_emp_cyl2d_8_h" startline="259">Inner</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a9ec6fce0cf7ca99e6eb1d42c4b7f7609" compoundref="_emp_cyl2d_8_h" startline="265" endline="269">Tinner</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a5e109a82cee9c50e79b4cd91e751cec4" compoundref="_emp_cyl2d_8_h" startline="272" endline="275">Touter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EmpCyl2d::ZangCyl::ZangCyl</definition>
+        <argsstring>(const YAML::Node &amp;par)</argsstring>
+        <name>ZangCyl</name>
+        <qualifiedname>EmpCyl2d::ZangCyl::ZangCyl</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="335" column="5" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="335" bodyend="351"/>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1aea1830c1aed130c7f05699519ce52e25" compoundref="_emp_cyl2d_8_h" startline="259">Inner</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" compoundref="_emp_cyl2d_8_h" startline="253">nu</references>
+        <references refid="global_8_h_1a735b1ce7a340373ac87191026132d105">parse</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1aae4845cfcf7366f1601cfb90c9e59fc6" compoundref="_emp_cyl2d_8_h" startline="253">ri</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1af5cd8eb236aea13e4ed3810f200a8045" compoundref="_emp_cyl2d_8_h" startline="253">ro</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1ad7716bf0d4e00af79e41639a5e3bd1f4" compoundref="_emp_cyl2d_8_h" startline="262">Tifac</references>
+        <references refid="class_emp_cyl2d_1_1_zang_cyl_1a3478441280a03c6c33f69ff59d0ff0f6" compoundref="_emp_cyl2d_8_h" startline="262">Tofac</references>
+        <references refid="class_emp_cyl2d_1_1_mestel_cyl_1aaf0149751912988746e917a2718469ae" compoundref="_emp_cyl2d_8_h" startline="197">EmpCyl2d::MestelCyl::vrot</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EmpCyl2d::MestelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_mestel_cyl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EmpCyl2d::ModelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_model_cyl"/>
+      </node>
+      <node id="1">
+        <label>EmpCyl2d::ZangCyl</label>
+        <link refid="class_emp_cyl2d_1_1_zang_cyl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EmpCyl2d::MestelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_mestel_cyl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EmpCyl2d::ModelCyl</label>
+        <link refid="class_emp_cyl2d_1_1_model_cyl"/>
+      </node>
+      <node id="1">
+        <label>EmpCyl2d::ZangCyl</label>
+        <link refid="class_emp_cyl2d_1_1_zang_cyl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" line="248" column="3" bodyfile="/home/weinberg/Projects/EXP/include/EmpCyl2d.H" bodystart="249" bodyend="361"/>
+    <listofallmembers>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1ac5740ba03f4d293f6dd2fba0851ad484" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>asoft</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1ac8aade9ab8ab18ab48487af22d47ea67" prot="public" virt="virtual"><scope>EmpCyl2d::ZangCyl</scope><name>dens</name></member>
+      <member refid="class_emp_cyl2d_1_1_mestel_cyl_1a9a86c14800160298c7fefb80241e5128" prot="public" virt="virtual"><scope>EmpCyl2d::ZangCyl</scope><name>dpot</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a49f87e15df18e406da330041c99c3e96" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>dTinner</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a58311bc5eb1402a9506d36d80ce9155c" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>dTouter</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a33ddabc3a850b26ef1f0180f8a4bb39c" prot="public" virt="virtual"><scope>EmpCyl2d::ZangCyl</scope><name>ID</name></member>
+      <member refid="class_emp_cyl2d_1_1_model_cyl_1a8ebbf39ceec61afa0b35ca0b97bed332" prot="protected" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>id</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1aea1830c1aed130c7f05699519ce52e25" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>Inner</name></member>
+      <member refid="class_emp_cyl2d_1_1_mestel_cyl_1a7ab83a137e406503bcb59a1fe0cee7a0" prot="public" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>MestelCyl</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a8976cc73d5d3a0e212a35828157aad44" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>mu</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1af70fa62fe3fa9fffd2dcd9195650d5bf" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>nu</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a4a7f9b1cf01e346033aa9f6da3cbbe15" prot="protected" virt="virtual"><scope>EmpCyl2d::ZangCyl</scope><name>parse</name></member>
+      <member refid="class_emp_cyl2d_1_1_mestel_cyl_1a26d0c0b25f4e57347e9480e5a37003b9" prot="public" virt="virtual"><scope>EmpCyl2d::ZangCyl</scope><name>pot</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1aae4845cfcf7366f1601cfb90c9e59fc6" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>ri</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1af5cd8eb236aea13e4ed3810f200a8045" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>ro</name></member>
+      <member refid="class_emp_cyl2d_1_1_mestel_cyl_1a2c5e53c75a2984746f0f85efee1637ec" prot="protected" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>rot</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1ad7716bf0d4e00af79e41639a5e3bd1f4" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>Tifac</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a9ec6fce0cf7ca99e6eb1d42c4b7f7609" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>Tinner</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a3478441280a03c6c33f69ff59d0ff0f6" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>Tofac</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a5e109a82cee9c50e79b4cd91e751cec4" prot="private" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>Touter</name></member>
+      <member refid="class_emp_cyl2d_1_1_mestel_cyl_1aaf0149751912988746e917a2718469ae" prot="protected" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>vrot</name></member>
+      <member refid="class_emp_cyl2d_1_1_zang_cyl_1a776d07246c36af2b90a2b25b637492b3" prot="public" virt="non-virtual"><scope>EmpCyl2d::ZangCyl</scope><name>ZangCyl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
