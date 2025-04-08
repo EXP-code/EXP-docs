@@ -235,16 +235,30 @@ Thus, graphs of eigenvectors or discrete Fourier transforms can help
 identify like components.
 
 Very helpful information for separation is contained in the so-called
-:math:`\mathbf{W}`-correlation matrix. This is the matrix consisting of
-weighted correlations between the reconstructed time series
-components. The weights reflects the number of entries of the time
-series terms into its trajectory matrix. Well separated components
-have small correlation whereas badly separated components have large
-correlation. Therefore, looking at the :math:`\mathbf{W}`-correlation
-matrix one can find groups of correlated elementary reconstructed
-series and use this information for the consequent grouping. One of
-the rules is not to include into different groups the correlated
-components.
+weighted correlation matrix, w-correlation matrix for short. This is
+the matrix consisting of weighted correlations between the
+reconstructed time series components.  Let :math:`\mathbf{A},
+\mathbf{B}` be trajectory matrices constructed from series :math:`a_i,
+b_i, i=1,\ldots,N`.  Recall that the trajectory matrix has duplicated
+entries with respect to the original series.  The _weight_ reflects
+the number of entries of the time series terms into its trajectory
+matrix.  Define :math:`(\mathbf{A}, \mathbf{B}) := \sum_{ij} A_{ij}
+B_{ij})`. This defines a scalar product in a linear space of the
+original rank of the input series which is _weighted_.  Let
+:math:`\mathbf{A}^k` be the trajectory matrix reconstructed from PC
+:math:`k`.  We define the elements of the w-correlation matrix to be
+
+.. math::
+   \mbox{wCorr}_{\mu\nu} = \frac{(\mathbf{A}^\mu, \mathbf{B}^\nu)}
+   {\sqrt{(\mathbf{A}^\mu , \mathbf{A}^\mu)(\mathbf{B}^\nu, \mathbf{B}^\nu)}}.
+
+Well separated components have small correlation whereas badly
+separated components have large correlation. The diagonal values
+:math:\mbox`{wCorr}_{ii}=1` by construction. Therefore, looking at the
+off-diagonal contributions of w-correlation matrix, one can find
+groups of correlated elementary reconstructed series and use this
+information for the consequent grouping. One of the rules is not to
+include into different groups the correlated components.
 
 Multichannel SSA (M-SSA)
 ------------------------
@@ -358,9 +372,10 @@ Applications of mSSA
 
 .. index:: pair: singular spectrum analysis; applications
 
-- *Compression.* In many cases, a small number of
-    eigenpairs relative to the total number :math:`MK` have the lion's
-    share of the variance; that is:
+- **Compression**
+
+  In many cases, a small number of eigenpairs relative to the total
+  number :math:`MK` have the lion's share of the variance; that is:
 
     .. math::
        \frac{\sum_{k=1}^d\lambda_k}{\sum_{k=1}^{MK}\lambda_k} \approx 1
@@ -368,48 +383,51 @@ Applications of mSSA
     for :math:`d\ll MK`.  Therefore, we can reconstruct most of the
     dynamics with a small number of eigenpairs.
 
-- *Diagnostics.*  Similarly, we can use the
-      :math:`\tilde{a}_{m,i}^{I_j}` to reconstruct the underlying
-      potential or density fields in physical space using the standard
-      BFE series.
+- **Diagnostics**
 
-- *Channel contributions.* One can use the reconstructions to an
-      estimate of the fraction of each coefficient in any particular
-      eigenpair or group.  Specifically, let us measure the
-      contribution of the :math:`k\mbox{th}` eigenpair to the
-      :math:`j\mbox{th}` coefficient by:
+  Similarly, we can use the :math:`\tilde{a}_{m,i}^{I_j}` to
+  reconstruct the underlying potential or density fields in physical
+  space using the standard BFE series.
 
-      .. math::
-	 f^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},
+- **Channel contributions**
 
-      where the Frobenius norm :math:`||\cdot||_F` is equivalent to
-      the Euclidean norm in this context: :math:`||\mathbf{x}||_F =
-      \sqrt{\mathbf{x}\cdot\mathbf{x}}`.  By definition
-      :math:`0<f^k_j<1` and :math:`\sum_k f^k_j=1`. Thus,
-      :math:`f^k_j` tells us the fraction of time series :math:`j`
-      that is in principal component :math:`k`.  Alternatively, we
-      compute measure:
+  One can use the reconstructions to an estimate of the fraction of
+  each coefficient in any particular eigenpair or group.
+  Specifically, let us measure the contribution of the
+  :math:`k\mbox{th}` eigenpair to the :math:`j\mbox{th}` coefficient
+  by:
 
-      .. math::
-	 g^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{\sum_{j=1}^M||\mathbf{a}^k_j||_F},
+  .. math::
+     f^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},
 
-      which is the fraction of principal component in
-      series :math:`j`.  Thus, the histogram :math:`g^k_j` reflects
-      the partitioning of power in the principal component :math:`k`
-      into the input coefficient channels :math:`j`.
+  where the Frobenius norm :math:`||\cdot||_F` is equivalent to the
+  Euclidean norm in this context: :math:`||\mathbf{x}||_F =
+  \sqrt{\mathbf{x}\cdot\mathbf{x}}`.  By definition :math:`0<f^k_j<1`
+  and :math:`\sum_k f^k_j=1`. Thus, :math:`f^k_j` tells us the
+  fraction of time series :math:`j` that is in principal component
+  :math:`k`.  Alternatively, we compute measure:
 
-      So, we can think of this representation as a single matrix,
-      normed on rows in the case of :math:`f` and normed on columns in the
-      case of :math:`g`.
+  .. math::
+     g^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{\sum_{j=1}^M||\mathbf{a}^k_j||_F},
 
-      In both cases, the norm over the time series may be restricted
-      to some window smaller than the total time series.
+  which is the fraction of principal component in series :math:`j`.
+  Thus, the histogram :math:`g^k_j` reflects the partitioning of power
+  in the principal component :math:`k` into the input coefficient
+  channels :math:`j`.
 
-- *Dynamical correlations.* This application is motivated by the
-      structure of the biorthogonal expansion described in
-      :ref:`theory <bfetheory>`.  For example, we have found
-      (Petersen et al. 2019c) that strong perturbations couple
-      harmonic subspaces that would be uncoupled at linear order.  By
-      selecting particular coefficients from various harmonics
-      (:math:`m=1, 2` in our case), we can look for the joint mode.
+  So, we can think of this representation as a single matrix, normed
+  on rows in the case of :math:`f` and normed on columns in the case
+  of :math:`g`.
+
+  In both cases, the norm over the time series may be restricted to
+  some window smaller than the total time series.
+
+- **Dynamical correlations**
+
+  This application is motivated by the structure of the biorthogonal
+  expansion described in :ref:`theory <bfetheory>`.  For example, we
+  have found (Petersen et al. 2019c) that strong perturbations couple
+  harmonic subspaces that would be uncoupled at linear order.  By
+  selecting particular coefficients from various harmonics
+  (:math:`m=1, 2` in our case), we can look for the joint mode.
 
