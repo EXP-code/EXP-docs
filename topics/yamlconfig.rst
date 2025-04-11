@@ -97,7 +97,7 @@ is an EXP YAML file with annotation.
        bodyfile   : halo.bod
        force :
          id : sphereSL
-	 parameters : {rmax : 27.5}
+	 parameters : {rmax : 2.5}
 
      - name       : star disk
        parameters : {nlevel: 1, indexing: true, EJ: 2, nEJkeep: 256, EJdryrun: true}
@@ -231,8 +231,8 @@ documentation <doxygen>`.
             Cachename: slgrid_sph_cache  # cache name, this can be omitted if you are only interested in making a basis and not a simulation 
 
 
-The parameters *rmin* and *rmax* define the inner and outer radii for the basis in virial units
-(e.g. where :math:`R_{vir} = 1`), *Lmax* and *nmax* describe the maximum harmonic and radial
+The parameters *rmin* and *rmax* define the inner and outer radii for the basis in units where
+:math:`G = 1`, *Lmax* and *nmax* describe the maximum harmonic and radial
 orders for the basis, respectively. The *rmapping* parameter adjusts the internal coordinate mapping
 and a good choice is the characteristic or scale radius of the halo.
 
