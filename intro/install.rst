@@ -239,6 +239,14 @@ guides below <intro-install-platform-notes>`.
 In case of any trouble related to these dependencies,
 please refer to their respective installation instructions.
 
+How to Update EXP
+-----------------
+To update your build of EXP, go to whichever directory EXP lives in and enter ``git pull``
+to retrieve the latest version of the code. Change in to your build directory 
+(if your setup matches that of the installation instructions, this would be ``cd build``). Enter ``make``, then ``make install``
+once ``make`` finishes.
+
+
 .. _intro-using-virtualenv:
 
 Using a Python virtual environment (recommended)
@@ -464,7 +472,7 @@ Provide a fix or suggestion.
 .. _Python: https://www.python.org/
 .. _FFTW: http://fftw.org
 .. _OpenMPI: https://www.open-mpi.org/
-.. _HDF5: https://portal.hdfgroup.org/display/HDF5/HDF5
+.. _HDF5: https://www.hdfgroup.org/solutions/hdf5/
 .. _Eigen3: https://eigen.tuxfamily.org/
 .. _HighFive: https://github.com/BlueBrain/HighFive
 .. _libyaml-cpp: https://github.com/jasonjei/libyaml-cpp
