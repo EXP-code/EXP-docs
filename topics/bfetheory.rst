@@ -185,10 +185,13 @@ coordinates.  The second equation shows the approximation for
 
 
 The covariance of the coefficient given the density :math:`\rho(R,
-z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly.  The
-covariance matrix describes which terms :math:`a_{lm}^j` contribute
-the most variance.  By diagonalizing :math:`\mbox{cov}(\mathbf{a}),`
-we may find a new basis, uncorrelated by the target density.  Because
+z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly. For
+each azimuthal harmonic :math:`m`, all spherical terms :math:`l\ge m`
+and radial indices :math:`j` are covariant.  So the full matrix may be
+separated into blocks for each :math:`m`.  Each covariance matrix
+describes which terms :math:`a_{lm}^j` contribute the most variance.
+By diagonalizing :math:`\mbox{cov}(\mathbf{a}),` we may find a new
+basis, uncorrelated by the target density.  Because
 :math:`\mbox{cov}(\mathbf{a})` is symmetric and positive definite, all
 eigenvalues will be positive.  The term with the largest eigenvalue
 describes the majority of the correlated contribution, and so on for
