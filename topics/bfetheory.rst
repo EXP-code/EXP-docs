@@ -53,9 +53,9 @@ Then, approximations for the density and potential fields are
 
 .. math::
    \text{density:}\qquad
-   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), \\
+   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_j d_j(\mathbf{x}), \\
    \text{potential:}\qquad
-   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}),
+   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_j p_j(\mathbf{x}),
 
 where
 
