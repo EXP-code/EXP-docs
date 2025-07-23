@@ -3,6 +3,29 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# -- Generate doxygen xml prior to build --------------------------------------
+import os
+import subprocess
+
+# Define the repository URL and target directory
+repo_url  = "https://github.com/EXP-code/EXP.git"
+clone_dir = "exp_repo"
+branch    = "SLboundaries"
+doxyfile  = "exp.cfg.breathe"
+doxy_dir  = "doc"
+
+# Clone the repository if it doesn't exist
+if not os.path.exists(clone_dir):
+    subprocess.run(["git", "clone", repo_url, clone_dir], check=True)
+
+# Move to source and get the desired branch
+os.chdir(clone_dir)
+subprocess.run(["git", "checkout", branch])
+os.chdir(doxy_dir)
+
+# Ensure Doxygen is installed and its executable is in your PATH
+subprocess.run(["doxygen", doxyfile], check=True)
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -36,7 +59,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 
-breathe_projects = {"EXP": "doxyxml/"}
+breathe_projects = {"EXP": "exp_repo/doc/xml/"}
 breathe_default_project = "EXP"
 
 # -- Options for HTML output -------------------------------------------------
@@ -53,7 +76,5 @@ numfig = True
 nbsphinx_execute = 'never'
 
 # -- Grab files from pyEXP-examples -----------------------------------------
-import os
-
 os.system("cd intro/Tutorials; rm *ipynb*; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part1-Coefficients.ipynb; wget -L https://raw.githubusercontent.com/EXP-code/pyEXP-examples/refs/heads/main/Tutorials/Introduction/Part2-Analysis.ipynb")
 
