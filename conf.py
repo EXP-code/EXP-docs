@@ -14,6 +14,9 @@ branch    = "SLboundaries"
 doxyfile  = "exp.cfg.breathe"
 doxy_dir  = "doc"
 
+# Cache the current working directory
+build_dir = os.getcwd()
+
 # Clone the repository if it doesn't exist
 if not os.path.exists(clone_dir):
     subprocess.run(["git", "clone", repo_url, clone_dir], check=True)
@@ -26,13 +29,23 @@ os.chdir(doxy_dir)
 # Ensure Doxygen is installed and its executable is in your PATH
 subprocess.run(["doxygen", doxyfile], check=True)
 
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+# Build pyEXP to populate Python API documenation
+os.chdir('..')
+if not os.path.exists('build'):
+    subprocess.run(["mkdir", "build"], check=True)
+os.chdir('build')
+subprocess.run(["cmake", "-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev", ".."])
+subprocess.run(["make", "-j8", "install"])
 
+# Return to top level
+os.chdir(build_dir)
+
+# -- Project information -----------------------------------------------------
+#
 project = 'EXP'
 copyright = '2023-2025, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.16'
+release = '0.17'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------
