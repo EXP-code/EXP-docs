@@ -3,11 +3,13 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Generate doxygen xml prior to build --------------------------------------
 import os, sys
 import subprocess
 
+# -- Generate doxygen xml prior to build --------------------------------------
+
 # Define the repository URL and target directory
+#
 repo_url  = "https://github.com/EXP-code/EXP.git"
 clone_dir = "exp_repo"
 branch    = "SLboundaries"
@@ -15,24 +17,30 @@ doxyfile  = "exp.cfg.breathe"
 doxy_dir  = "doc"
 
 # Cache the current working directory
+#
 build_dir = os.getcwd()
 
-# Clone the repository if it doesn't exist
+# Clone the EXP repository if it doesn't exist
+#
 if not os.path.exists(clone_dir):
     subprocess.run(["git", "clone", repo_url, clone_dir], check=True)
 
 # Move to source and get the desired branch
+#
 os.chdir(clone_dir)
 subprocess.run(["git", "checkout", branch])
 os.chdir(doxy_dir)
 
 # Ensure Doxygen is installed and its executable is in your PATH
+#
 subprocess.run(["doxygen", doxyfile], check=True)
 
 # Build pyEXP to populate Python API documenation
+#
 os.chdir('..')
 
 # Workaround for cmake version
+#
 subprocess.run(['cp', 'CMakeLists.txt', 'CMakeLists.txt.orig'])
 command_to_pipe = subprocess.Popen(['cat', 'CMakeLists.txt.orig'], stdout=subprocess.PIPE)
 foutput = open('CMakeLists.txt', 'w')
@@ -40,7 +48,8 @@ sed_command = subprocess.Popen(['sed', 's/VERSION 3.25/VERSION 3.22/'], stdin=co
 foutput.close()
 command_to_pipe.stdout.close()
 
-# Make build directory
+# Make build directory and begin
+#
 if not os.path.exists('build'):
     subprocess.run(["mkdir", "build"], check=True)
 os.chdir('build')
@@ -48,14 +57,18 @@ subprocess.run(['cmake', '-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_N
 subprocess.run(['make', '-j8'])
 
 # Return to top level
+#
 os.chdir(build_dir)
 
-my_module_path = os.path.join(build_dir, 'exp_repo/build/pyEXP')
 
 # Add 'my_module_path' to the beginning of sys.path
+#
+my_module_path = os.path.join(build_dir, 'exp_repo/build/pyEXP')
 sys.path.insert(0, my_module_path)
 
-# -- Project information -----------------------------------------------------
+# Begin Sphinx configuration
+
+# -- project information -----------------------------------------------------
 #
 project = 'EXP'
 copyright = '2023-2025, EXP-code collaboration'
