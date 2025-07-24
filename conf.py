@@ -31,15 +31,19 @@ subprocess.run(["doxygen", doxyfile], check=True)
 
 # Build pyEXP to populate Python API documenation
 os.chdir('..')
-if not os.path.exists('build'):
-    subprocess.run(["mkdir", "build"], check=True)
-os.chdir('build')
+
+# Workaround for cmake version
 subprocess.run(['cp', 'CMakeLists.txt', 'CMakeLists.txt.orig'])
 command_to_pipe = subprocess.Popen(['cat', 'CMakeLists.txt.orig'], stdout=subprocess.PIPE)
 foutput = open('CMakeLists.txt', 'w')
 sed_command = subprocess.Popen(['sed', 's/VERSION 3.25/VERSION 3.22/'], stdin=command_to_pipe.stdout, stdout=foutput)
 foutput.close()
 command_to_pipe.stdout.close()
+
+# Make build directory
+if not os.path.exists('build'):
+    subprocess.run(["mkdir", "build"], check=True)
+os.chdir('build')
 subprocess.run(['cmake', '-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev', '..'])
 subprocess.run(['make', '-j8'])
 
