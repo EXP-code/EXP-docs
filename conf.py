@@ -53,7 +53,7 @@ os.chdir(build_dir)
 my_module_path = os.path.join(build_dir, 'exp_repo/build/pyEXP')
 
 # Add 'my_module_path' to the beginning of sys.path
-sys.path.insert(0, my_modules_path)
+sys.path.insert(0, my_module_path)
 
 # -- Project information -----------------------------------------------------
 #
