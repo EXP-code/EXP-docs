@@ -31,11 +31,17 @@ subprocess.run(["doxygen", doxyfile], check=True)
 
 # Build pyEXP to populate Python API documenation
 os.chdir('..')
+print('My current directory is:', os.getcwd())
+print('Beginning pyEXP build')
 if not os.path.exists('build'):
+    print('Making build directory')
     subprocess.run(["mkdir", "build"], check=True)
 os.chdir('build')
+print('My current directory is:', os.getcwd())
+print('Beginning cmake')
 subprocess.run(["cmake", "-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev", ".."])
 subprocess.run(["make", "-j8", "install"])
+print('Finished cmake')
 
 # Return to top level
 os.chdir(build_dir)
