@@ -34,12 +34,14 @@ os.chdir('..')
 if not os.path.exists('build'):
     subprocess.run(["mkdir", "build"], check=True)
 os.chdir('build')
-subprocess.run(["cp", "CMakeLists.txt", "CMakeLists.txt.orig"])
+subprocess.run(['cp', 'CMakeLists.txt', 'CMakeLists.txt.orig'])
+command_to_pipe = subprocess.Popen(['cat', 'CMakeLists.txt.orig'], stdout=subprocess.PIPE)
 foutput = open('CMakeLists.txt', 'w')
-subprocess.run(["sed", "-s/VERSION 3.25/VERSION 3.22/", "CMakeLists.txt.orig"], stdout=foutput)
+sed_command = subprocess.Popen(['sed', 's/VERSION 3.25/VERSION 3.22/'], stdin=command_to_pipe.stdout, stdout=foutput)
 foutput.close()
-subprocess.run(["cmake", "-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev", ".."])
-subprocess.run(["make", "-j8"])
+command_to_pipe.stdout.close()
+subprocess.run(['cmake', '-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev', '..'])
+subprocess.run(['make', '-j8'])
 
 # Return to top level
 os.chdir(build_dir)
