@@ -30,6 +30,7 @@ if not os.path.exists(clone_dir):
 os.chdir(clone_dir)
 subprocess.run(["git", "checkout", branch])
 os.chdir(doxy_dir)
+os.system("git submodule update --init --recursive")
 
 # Ensure Doxygen is installed and its executable is in your PATH
 #
@@ -38,15 +39,6 @@ subprocess.run(["doxygen", doxyfile], check=True)
 # Build pyEXP to populate Python API documenation
 #
 os.chdir('..')
-
-# Workaround for cmake version
-#
-subprocess.run(['cp', 'CMakeLists.txt', 'CMakeLists.txt.orig'])
-command_to_pipe = subprocess.Popen(['cat', 'CMakeLists.txt.orig'], stdout=subprocess.PIPE)
-foutput = open('CMakeLists.txt', 'w')
-sed_command = subprocess.Popen(['sed', 's/VERSION 3.25/VERSION 3.22/'], stdin=command_to_pipe.stdout, stdout=foutput)
-foutput.close()
-command_to_pipe.stdout.close()
 
 # Make build directory and begin
 #

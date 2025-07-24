@@ -1,0 +1,39 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04  # Specify the operating system
+
+    steps:
+      - uses: actions/checkout@v4  # Checkout the repository
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Specify your Python version
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libeigen3-dev libfftw3-dev libhdf5-dev libopenmpi-dev libomp-dev python3-numpy python3-venv doxygen graphviz cmake make pandoc
+          python3 -m venv .venv # Create a virtual environment
+          source .venv/bin/activate # Activate the environment
+          pip install sphinx sphinx-rtd-theme  # Install Sphinx and theme
+          pip install -r requirements.txt  # Install any additional dependencies (optional)
+      - name: Build Sphinx documentation
+        run: |
+          source .venv/bin/activate # Activate the environment
+          make html  # Build the HTML documentation
+      - name: Upload built documentation (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-docs
+          path: _build/html  # Path to your built documentation
+      - name: Trigger Read the Docs build (using webhook)
+        run: |
+          # Replace with your actual Read the Docs webhook URL and token
+          curl -X POST -d "{}" ${{ secrets.RTDS_WEBHOOK_URL }} -H "Authorization: token ${{ secrets.RTDS_WEBHOOK_TOKEN }}"
+
