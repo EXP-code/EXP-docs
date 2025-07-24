@@ -4,7 +4,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Generate doxygen xml prior to build --------------------------------------
-import os
+import os, sys
 import subprocess
 
 # Define the repository URL and target directory
