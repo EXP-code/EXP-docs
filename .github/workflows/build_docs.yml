@@ -32,8 +32,12 @@ jobs:
         with:
           name: html-docs
           path: _build/html  # Path to your built documentation
-      - name: Deploy to github pages
-        uses: peaceiris/actions-gh-pages@v3  # Or other suitable deploy action
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+#        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' }}
         with:
+          publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/html
+          force_orphan: true
