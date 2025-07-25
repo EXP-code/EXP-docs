@@ -32,8 +32,12 @@ jobs:
         with:
           name: html-docs
           path: _build/html  # Path to your built documentation
-      - name: Trigger Read the Docs build (using webhook)
-        run: |
-          # Replace with your actual Read the Docs webhook URL and token
-          curl -X POST -d "{}" ${{ secrets.RTDS_WEBHOOK_URL }} -H "Authorization: token ${{ secrets.RTDS_WEBHOOK_TOKEN }}"
-
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+#        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true
