@@ -30,10 +30,11 @@ if not os.path.exists(clone_dir):
 os.chdir(clone_dir)
 subprocess.run(["git", "checkout", branch])
 subprocess.run(["cp", "CMakeLists.txt", "CMakeLists.txt.orig"])
-fwrite = open("CMakeLists.txt", "w")
-pipe = subprocess.Popen(["sed", "-e", "s/VERSION 3.25/VERSION 3.22/", "CMakeLists.txt.orig"], stdout=fwrite)
-pipe.stdout.close()
-fwrite.close()
+command = ["sed", "-i", "-e", 's/VERSION 3.25/VERSION 3.22/g', "CMakeLists.txt"] 
+result = subprocess.run(command, capture_output=True, text=True, check=True)
+
+# Initialize submodules
+#
 os.chdir(doxy_dir)
 os.system("git submodule update --init --recursive")
 
