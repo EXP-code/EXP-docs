@@ -74,7 +74,7 @@ if not on_rtd:
 project = 'EXP'
 copyright = '2023-2025, EXP-code collaboration'
 author = 'EXP-code collaboration'
-release = '0.17'
+release = '0.172'
 version = '7.x'
 
 # -- General configuration ---------------------------------------------------
