@@ -183,7 +183,6 @@ where :math:`R, z` are the radial and vertical cylindrical
 coordinates.  The second equation shows the approximation for
 :math:`N` particles where :math:`\sum_i m_i = \int \rho(R, z)d^3x`.
 
-
 The covariance of the coefficient given the density :math:`\rho(R,
 z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly. For
 each azimuthal harmonic :math:`m`, all spherical terms :math:`l\ge m`
