@@ -9,7 +9,6 @@ import subprocess
 on_rtd = os.environ.get("READTHEDOCS") == "True"
 
 
-
 # -- Generate doxygen xml prior to build --------------------------------------
 
 # Define the repository URL and target directory
@@ -46,7 +45,7 @@ os.system("git submodule update --init --recursive")
 #
 subprocess.run(["doxygen", doxyfile], check=True)
 
-if not on rtd:
+if not on_rtd:
     # Build pyEXP to populate Python API documenation
     #
     os.chdir('..')
@@ -114,7 +113,7 @@ html_static_path = ['_static']
 
 # -- A readthedocs conditional  ----------------------------------------------
 def setup(app):
-    if os.environ.get('READTHEDOCS') == 'True':
+    if on_rtd:
         app.add_tag('rtd')
 
 # -- Turn on figure numering -------------------------------------------------
