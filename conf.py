@@ -6,6 +6,10 @@
 import os, sys
 import subprocess
 
+on_rtd = os.environ.get("READTHEDOCS") == "True"
+
+
+
 # -- Generate doxygen xml prior to build --------------------------------------
 
 # Define the repository URL and target directory
@@ -42,27 +46,27 @@ os.system("git submodule update --init --recursive")
 #
 subprocess.run(["doxygen", doxyfile], check=True)
 
-# Build pyEXP to populate Python API documenation
-#
-os.chdir('..')
+if not on rtd:
+    # Build pyEXP to populate Python API documenation
+    #
+    os.chdir('..')
 
-# Make build directory and begin
-#
-if not os.path.exists('build'):
-    subprocess.run(["mkdir", "build"], check=True)
-os.chdir('build')
-subprocess.run(['cmake', '-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev', '..'])
-subprocess.run(['make', '-j8'])
+    # Make build directory and begin
+    #
+    if not os.path.exists('build'):
+        subprocess.run(["mkdir", "build"], check=True)
+    os.chdir('build')
+    subprocess.run(['cmake', '-DCMAKE_BUILD_TYPE=Release -DENABLE_USER=NO -DENABLE_NBODY=NO -DEigen3_DIR=$EIGEN_BASE/share/eigen3/cmake -Wno-dev', '..'])
+    subprocess.run(['make', '-j8'])
 
-# Return to top level
-#
-os.chdir(build_dir)
+    # Return to top level
+    #
+    os.chdir(build_dir)
 
-
-# Add 'my_module_path' to the beginning of sys.path
-#
-my_module_path = os.path.join(build_dir, 'exp_repo/build/pyEXP')
-sys.path.insert(0, my_module_path)
+    # Add 'my_module_path' to the beginning of sys.path
+    #
+    my_module_path = os.path.join(build_dir, 'exp_repo/build/pyEXP')
+    sys.path.insert(0, my_module_path)
 
 # Begin Sphinx configuration
 
@@ -107,6 +111,11 @@ breathe_default_project = "EXP"
 html_theme = 'sphinx_rtd_theme'
 html_logo = 'exp_logo_white.png'
 html_static_path = ['_static']
+
+# -- A readthedocs conditional  ----------------------------------------------
+def setup(app):
+    if os.environ.get('READTHEDOCS') == 'True':
+        app.add_tag('rtd')
 
 # -- Turn on figure numering -------------------------------------------------
 numfig = True
