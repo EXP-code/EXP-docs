@@ -53,9 +53,9 @@ Then, approximations for the density and potential fields are
 
 .. math::
    \text{density:}\qquad
-   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_i d_j(\mathbf{x}), \\
+   \hat{\rho}(\mathbf{x}) &= \sum_{j=1}^n a_j d_j(\mathbf{x}), \\
    \text{potential:}\qquad
-   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_i p_j(\mathbf{x}),
+   \hat{\Phi}(\mathbf{x}) &= \sum_{j=1}^n a_j p_j(\mathbf{x}),
 
 where
 
@@ -185,17 +185,21 @@ coordinates.  The second equation shows the approximation for
 
 
 The covariance of the coefficient given the density :math:`\rho(R,
-z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly.  The
+z)`, :math:`\mbox{cov}(\mathbf{a})`, is constructed similarly. For
+each azimuthal harmonic :math:`m`, all spherical terms :math:`l\ge m`
+and radial indices :math:`j` are covariant.  So the full matrix may be
+separated into blocks for each :math:`m`.  Each block in the
 covariance matrix describes which terms :math:`a_{lm}^j` contribute
-the most variance.  By diagonalizing :math:`\mbox{cov}(\mathbf{a}),`
-we may find a new basis, uncorrelated by the target density.  Because
-:math:`\mbox{cov}(\mathbf{a})` is symmetric and positive definite, all
-eigenvalues will be positive.  The term with the largest eigenvalue
-describes the majority of the correlated contribution, and so on for
-the second largest eigenvalue, etc.  EXP performs this diagonalization
-using the singular value decomposition (SVD) and the singular matrices
-(now mutual transposes owing to symmetry) describe a rotation of the
-original basis into the uncorrelated basis.
+the most variance for a particular :math:`m`. By diagonalizing
+:math:`\mbox{cov}(\mathbf{a}),` we may find a new basis, uncorrelated
+by the target density.  Because :math:`\mbox{cov}(\mathbf{a})` is
+symmetric and positive definite, all eigenvalues will be positive.
+The term with the largest eigenvalue describes the majority of the
+correlated contribution, and so on for the second largest eigenvalue,
+etc.  EXP performs this diagonalization using the singular value
+decomposition (SVD) and the singular matrices (now mutual transposes
+owing to symmetry) describe a rotation of the original basis into the
+uncorrelated basis.
 
 The new basis functions optimally approximate the true distribution
 from the spherical-harmonic expansion in the original basis in the
