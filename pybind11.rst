@@ -32,6 +32,7 @@ Index to pyEXP classes
 .. only:: rtd
 
    .. warning::
+
       The Python API documentation can not be generated in the
       **ReadTheDocs** environment owing to memory and runtime
       limitations.  You can find these webpages that include the full
