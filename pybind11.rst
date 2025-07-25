@@ -31,9 +31,8 @@ Index to pyEXP classes
 
 .. only:: rtd
 
-.. note::
+   .. note::
 
-   The Python API can not be generated in the _readthedocs_ environment.
-   You can find these webpages that include the full pyEXP API `on
-   GitHub Pages
-   <https://exp-code.github.io/EXP-docs/>`_.
+      The Python API can not be generated in the _readthedocs_
+      environment.  You can find these webpages that include the full
+      pyEXP API `on GitHub Pages <https://exp-code.github.io/EXP-docs/>`_.

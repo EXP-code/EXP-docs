@@ -112,9 +112,8 @@ html_logo = 'exp_logo_white.png'
 html_static_path = ['_static']
 
 # -- A readthedocs conditional  ----------------------------------------------
-def setup(app):
-    if on_rtd:
-        app.add_tag('rtd')
+if on_rtd:
+    tags.add('rtd')
 
 # -- Turn on figure numering -------------------------------------------------
 numfig = True

@@ -1,9 +1,10 @@
-name: Build and Deploy Docs
+name: Build and Deploy Sphinx Docs
 
 on:
   push:
     branches:
-      - Doxygen  # Trigger on pushes to the main branch
+      - main                    # Trigger on pushes to the main branch
+      - Doxygen                 # Trigger on pushes to the devel branch
 
 jobs:
   build:
@@ -34,7 +35,6 @@ jobs:
           path: _build/html  # Path to your built documentation
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-#        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         if: ${{ github.event_name == 'push' }}
         with:
           publish_branch: gh-pages
