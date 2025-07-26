@@ -1,0 +1,114 @@
+.. _usermodules:
+
+User modules
+============
+
+.. index: user modules; extending EXP; ExternalForce
+
+Users may write modules that are found and loaded at run time.  One may
+derive classes from `ExternalForce` that may be built as
+dynamic modules that may be loaded and instantiated as needed.
+Modules are built in the `src/user` directory.  This is
+accomplished using dynamically loaded (DL) libraries that register
+themselves on a list of `ExternalForce` instances that may be
+instantiated as directed in your configuration file.  These new
+modules have access to the entire phase space for each component.  It
+is the user's responsibility to not change the phase space in
+unphysical ways, of course.
+
+We offer two strategies for incorporating your user modules into EXP:
+
+1. Extend the `CMakeLists.txt` file in `src/user` to build and install
+   your source in EXP.  You can keep your code private in a local
+   branch or a fork.  This is described in :ref:`Extending
+   <module_branch>` below.
+
+2. Create a private git repository and use the submodule facility in
+   git to build the source and install the source in EXP.  This is
+   described in :ref:`Using a private repo <module_private>`.
+
+Extending `src/user`
+--------------------
+
+.. _module_branch:
+
+
+There are only a few steps necessary to put one's code in the tree:
+
+1. Write the code (see below for additional details)
+
+2. Edit `CMakeLists.txt`.  Assume you module is called
+   `foo` and is implemented in the following source files
+   `foo1.cc` and `foo2.cc`. Do the following:
+
+   - Define a new source variable pointing to the source files in the
+     `CMakeLists.txt`.  E.g.  `set(foo_SRC foo1.cc foo2.cc)`
+    
+3. Compile the code
+
+4. Install the code in the location defined by your configuration
+
+
+Notes on writing your module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A good place to start is the code already in the `src/user`
+directory. The simplest code is `UserTest.cc`; this does
+nothing but print messages but illustrates all of the necessary
+components.
+
+All classes, of course, must derive from `ExternalForce`.  A quick
+look at `src/ExternalForce.H` will show that you will need to
+implement at least the member
+`determine_acceleration_and_potential_thread()`.  In order to parse
+command line parameters, you will also need a constructor and
+`initialize()` and maybe a destructor.
+
+In addition, there is a mechanism that identifies your new class to
+EXP.  This has two parts.  First you must define a C
+function which constructs an instance of your class and returns a
+pointer. Using the C calling interface here gets around the problem of
+name demangling in C++ in using the dynamic linking loader (there may
+be a more transparent and portable way to do this).  You will notice
+an additional class at the end of the file called `proxy`.  An
+instance of this simple class is instantiated when the module is
+loaded (the last line in the file).  As a byproduct, a pointer to the
+function `makeTest()` is is added to the factory map defined in
+`ExternalForce.H`.  This function can then be invoked by name
+in the code to create an instance of your class.  Cute trick, eh?  You
+can simply copy this to your own source (changing `makerTest`
+to `makerFoo` or some other unique name).
+
+Using a private repository for your modules
+-------------------------------------------
+
+.. _module_private:
+
+The strategy above describes adding your module directly to the
+`src/user` directory. With this workflow, you would keep a personal
+branch and merge new changes from the `main` EXP branch as they become
+available.
+
+We support an additional strategy that allows you to work directly
+from the `main` EXP repo without a private local branch or a fork.  In
+this alternative scenario, you would make a private git repository,
+either on your local machine or git server (e.g. GitHub) and install
+your repository in the `extern/user-modules` directory.  This steps
+for this are:
+
+1. Copy `CMakeLists.txt` from `src/user` to your new git repository as
+   a template.
+
+2. Replace the existing module list and source strings with the
+   source for your new module, just as in the instructions for Step 2
+   at the top of this section.
+
+3. `git clone` your repository into the `extern/user-modules`
+   directory with your new `CMakeLists.txt` in the top level of the
+   cloned repository.  You may include any number user module code
+   directories into `extern/user-modules`.  Just remember to use
+   unique names for each.
+    
+4. Now, when you build EXP, your private modules will be automatically
+   built for each directory and installed.
+   
