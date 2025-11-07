@@ -96,6 +96,11 @@ Here's the code for computing coefficients::
      #
      coef = basis.createFromArray(data[:,0], data[:,1:4], time=3.0)
 
+     # Add your simulation units (we assume a unit-free simulation here)
+     #
+     coef.setUnits([('mass', 'none', 1.0), ('length', 'none', 1.0),
+     ('time', 'none', 1.0), ('G', 'none', 1.0)])
+
      # Make an HDF5 file
      #
      coefs = pyEXP.coefs.Coefs.makecoefs(coef)
@@ -143,6 +148,11 @@ cache file.
 More detailed information on YAML and config parameters is available
 in the :ref:`What is YAML?<yamlconfig>` and :ref:`How to visualize the
 BFE bases used to make your coefficients<visualizing-bases>` pages.
+
+The unit system in EXP is described in more detail in :ref:`Units in
+EXP and pyEXP<units>`.  For this example, we assume a unit-free
+simulation but it's easy to add any unit system that is convenient for
+you.
 
 pyEXP is then ready to make the coefficients from your phase-space
 data.  This example assumes that the mass and positions of your

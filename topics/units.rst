@@ -1,3 +1,7 @@
+.. role:: python(code)
+       :language: python
+       :class: highlight
+
 .. _units:
 
 Units in EXP and pyEXP
@@ -6,10 +10,10 @@ Units in EXP and pyEXP
 Overview
 --------
 
-The EXP N-body code assumes the gravitational constant is unity,
-``G=1``, and that mass, position and velocity units can have any
-value defined by the user.  In other words, EXP does not enforce any
-particular unit set.
+The EXP N-body code assumes the gravitational constant is unity and
+that mass, position and velocity units can have any value defined by
+the user.  In other words, the EXP N-body code does not enforce any
+particular unit set consistent with ``G=1``.
 
 pyEXP will also accept mass, position, time, and velocity with any
 unit set defined by the imported simulation as well as an arbitrary
@@ -17,12 +21,15 @@ value of the gravitational constant. Explicit units types and the
 gravitational constant ``G`` may be set at construction time as we
 will describe below in :ref:`unit-schema`.  pyEXP **requires** the
 user to set units explicitly when coefficient sets are
-constructed. See :ref:`intro-pyEXP-tutorial`. There is no default.
+constructed. There is no default. See :ref:`intro-pyEXP-tutorial` for
+an end-to-end example of coefficient computation.
 
 All unit information is written into the EXP coefficient files as HDF5
-attributes.  Also see :ref:`hdf5-unit-attributes` for details.
+attributes.  Also see :ref:`hdf5-unit-attributes` for details.  You
+may add units to previously computed coefficient files using the
+script described in :ref:`units_old`.
 
-.. _unit-scheme:
+.. _unit-schema:
 
 The EXP unit schema
 -------------------
@@ -34,7 +41,12 @@ EXP requires one of the following two sequences of 4 unit types:
 2. Mass, Length, Velocity, gravitational constant (G)
 
 
-Each unit is a ``tuple`` which takes the form::
+Other combinations are possible in principle, such as Mass, Length,
+Velocity and Time.  However, this would require an automatic deduction
+of the gravitational constant. EXP does not current know about
+physical unit conversion.  This feature may be added in the future.
+
+Each separate unit is defined as a ``tuple`` which takes the form::
 
   ('unit type', 'unit name', <float value>)
 
@@ -57,8 +69,8 @@ The type and name strings are checked against the allowed values as follows:
   The value can be any valid floating-point number.
 
 The allowed types and names may be queried interactively in pyEXP
-using the ``getAllowedUnitTypes()`` and
-``getAllowedUnitNames(type)``, see :ref:`units-interface`.  For
+using the :python:`getAllowedUnitTypes()` and
+:python:`getAllowedUnitNames(type)`, see :ref:`units-interface`.  For
 development reference, these allowed strings are defined in
 ``expui/UnitValidator.cc`` in the EXP source tree.
 
@@ -67,13 +79,14 @@ As an example, a Gadget user might define mass units as::
   ('mass', 'Msun', 1.0e10)
 
 The full units specification is a list of tuples that includes one of
-the four sequences.  In C++, the list is a ``std::vector`` of tuples.
+the four sequences.  In C++, the list is a :cpp:any:`std::vector<>` of
+tuples.
 
 As an example, all native EXP simulations have the following unit
-lists::
+lists:
 
- [('mass', 'none', 1.0f), ('length', 'none', 1.0f), ('time', 'none',
- 1.0f), ('G', 'none', 1.0f)]
+   .. code-block:: python
+      [('mass', 'none', 1.0f), ('length', 'none', 1.0f), ('time', 'none', 1.0f), ('G', 'none', 1.0f)]
  
 
 Units in pyEXP
@@ -119,24 +132,28 @@ is called ``coefs``.   The following command will register the unit set:
       ('velocity', 'km/s', 1.0), ('G', 'mixed', 43007.1) ])
 
 These units will be in the HDF5 that you create using
-``coefs.WriteH5Coefs('filename')``.  You can query, for example, the
-allowed 'mass' units with the call
-``coefs.getAllowedUnitNames('mass')`` which returns:
+:python:`coefs.WriteH5Coefs('filename')`.  You can query, for example,
+the allowed 'mass' units with the call
+:python:`coefs.getAllowedUnitNames('mass')` which returns:
 
     .. code-block:: python
 
        ['gram', 'earth_mass', 'solar_mass', 'kilograms', 'kg', 'g', 'Mearth', 'Msun', 'None', 'none']
 
-A quick note: 'mixed' is an allowed alias when dealing with
-gravitational constants that have physical units.  You can see all
-unit types with ``getAllowedUnitTypes()``; this returns ``['mass',
-'length', 'time', 'velocity', 'G']``.  You can see the recognized
-aliases for each type using ``getAllowedTypeAliases(type)``.  For
-example, the recognized aliases for 'G' are:
+The allowed mass units for 'G' are:
 
     .. code-block:: python
 
-       ['G', 'Grav', 'Grav_constant', 'Gravitational_constant', 'grav', 'grav_constant', 'gravitational_constant']
+       ['gram', 'earth_mass', 'solar_mass', 'kilograms', 'kg', 'g', 'Mearth', 'Msun', 'None', 'none']
+
+
+A quick note: 'mixed' is an allowed alias when dealing with
+gravitational constants that have physical units.  You can see all
+unit types with :python:`getAllowedUnitTypes()`; this returns
+:python:`['mass', 'length', 'time', 'velocity', 'G']`.  You can see
+the recognized aliases for each type using
+:python:`getAllowedTypeAliases(type)`.  The gravitational constant is
+	a special case. The recognized unit names for 'G' are: :python:`['','mixed', 'none', 'unitless']``.
 
 The C++ UI echos the functions above and adds functions to retrieve
 units
@@ -167,8 +184,8 @@ developers creating new coefficient classes.
 The HDF5 specification
 ----------------------
 
-.. note:: This section assumes basic familiarity with HDF5 and `h5py`
-          in particular.
+.. note:: This and the following sections assumes basic familiarity
+          with HDF5 and `h5py` in particular.
 
 EXP HDF5 coefficient files contain a full set of metadata describing
 their basis type, basis parameters, geometry, and units as attributes
@@ -226,6 +243,11 @@ group with the following hierarchy::
    }
   
 
+.. _units_old:
+
+Backward compatibility
+----------------------
+
 A units attribute list could be easily added to existing HDF5 files
 using `h5py` using the schema described above.  For example, assuming
 that you already have an open HDF5 coefficient file named `f`, the
@@ -264,3 +286,6 @@ following code:
 
       # File is automatically closed on leaving the 'with' block, flush and
       # update saved data on disk
+
+You can update the  :python:`data` array in the example above to match your
+unit set.
