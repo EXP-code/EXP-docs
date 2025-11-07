@@ -154,7 +154,7 @@ units
       // Get a list of unit types and their aliases
       std::vector<std::string> getAllowedTypes();
       // Get a list aliases for each type
-      std::vector<std::string> getAllowedTypeAliaes(const std::string& type);
+      std::vector<std::string> getAllowedTypeAliases(const std::string& type);
       // Get a list of unit name and their aliases for a given unit type
       std::vector<std::string> getAllowedUnits(const std::string& type)
 
