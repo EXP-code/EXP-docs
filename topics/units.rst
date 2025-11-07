@@ -239,28 +239,28 @@ following code:
 
       # Define the compound datatype with fixed-length ASCII strings and a float32
       dt = np.dtype([
-		   ('name', 'S16'),   # Fixed-length ASCII string of 16 bytes
-		   ('unit', 'S16'),   # Fixed-length ASCII string of 16 bytes
-		   ('value', '<f4')   # Little-endian 32-bit float
-		   ])
+          ('name', 'S16'),   # Fixed-length ASCII string of 16 bytes
+          ('unit', 'S16'),   # Fixed-length ASCII string of 16 bytes
+          ('value', '<f4')   # Little-endian 32-bit float
+      ])
 
       # Create the dataset data as a numpy array
       data = np.array([
           (b'G',       b'none', 1.0),
-	  (b'length',  b'none', 1.0),
-	  (b'mass',    b'none', 1.0),
-	  (b'time',    b'none', 1.0),
-	  ], dtype=dt)
+          (b'length',  b'none', 1.0),
+          (b'mass',    b'none', 1.0),
+          (b'time',    b'none', 1.0),
+      ], dtype=dt)
 
       # Open the HDF5 coefficient file and add the dataset
       with h5py.File('outcoef.disk.runtag', 'a') as f:
           # 'a' mode opens file for read/write, creates if not exist
 
-	  # Create dataset 'Units'
-	  if 'Units' in f:
+          # Create dataset 'Units'
+          if 'Units' in f:
               # Optional: remove existing dataset if you want to overwrite
               del f['Units']  
-	  dset = f.create_dataset('Units', data=data, dtype=dt)
+          dset = f.create_dataset('Units', data=data, dtype=dt)
 
       # File is automatically closed on leaving the 'with' block, flush and
       # update saved data on disk
