@@ -6,18 +6,18 @@ Units in EXP and pyEXP
 Overview
 --------
 
-The EXP N-body code assumes the gravitational constant ``G=1`` and
-accepts any mass, position and velocity units consistent with that
-assumption.  In other words, it does not enforce any particular unit
-set.
+The EXP N-body code assumes the gravitational constant is unity,
+``G=1``, and that mass, position and velocity units can have any
+value defined by the user.  In other words, EXP does not enforce any
+particular unit set.
 
-pyEXP will also accept any mass, position, time, and velocity units
-provided by the imported simulation as well as an arbitrary value of
-the gravitational constant. Explicit units types and the gravitational
-constant `G` may be set at construction time as we will describe below
-in :ref:`unit-schema`.  pyEXP requires the user to set units
-explicitly when coefficient sets are constructed. See
-:ref:`intro-pyEXP-tutorial`. There is no default.
+pyEXP will also accept mass, position, time, and velocity with any
+unit set defined by the imported simulation as well as an arbitrary
+value of the gravitational constant. Explicit units types and the
+gravitational constant ``G`` may be set at construction time as we
+will describe below in :ref:`unit-schema`.  pyEXP **requires** the
+user to set units explicitly when coefficient sets are
+constructed. See :ref:`intro-pyEXP-tutorial`. There is no default.
 
 All unit information is written into the EXP coefficient files as HDF5
 attributes.  Also see :ref:`hdf5-unit-attributes` for details.
@@ -27,14 +27,14 @@ attributes.  Also see :ref:`hdf5-unit-attributes` for details.
 The EXP unit schema
 -------------------
 
-EXP requires one of the following two sequences of units:
+EXP requires one of the following two sequences of 4 unit types:
 
 1. Mass, Length, Time, gravitational constant (G)
 
 2. Mass, Length, Velocity, gravitational constant (G)
 
 
-Each unit is a _tuple_ which takes the form::
+Each is defined by a _tuple_ which takes the form::
 
   ('unit type', 'unit name', <float value>)
 
@@ -56,8 +56,11 @@ The type and name strings are checked against the allowed values as follows:
 - The floating value defines the number of each unit for the type.
   The value can be any valid floating-point number.
 
-For development reference, these allowed strings are defined in
-`expui/UnitValidator.cc` in the EXP source tree.
+The allowed types and names may be queried interactively in pyEXP
+using the ``getAllowedUnitNTypes()`` and
+``getAllowedUnitNames(type)``, see :ref:`units-interface`.  For
+development reference, these allowed strings are defined in
+``expui/UnitValidator.cc`` in the EXP source tree.
 
 As an example, a Gadget user might define mass units as::
 
@@ -94,22 +97,48 @@ units, we have:
 
    .. code-block:: python
 
-      setUnits(name, unit, value)
+      setUnits(type, unit, value)
       setUnits(list)
-      removeUnits(name)
+      removeUnits(type)
+      getAllowedUnitTypes()
+      getAllowedUnitName(type)
 
-where ``name`` and ``unit` and strings and ``value`` is a float.  The
-list is a list of tuples of ``(name, unit, value)``.
+where ``type`` and ``unit`` are strings and ``value`` is a float.  The
+list is a list of tuples of ``(name, unit, value)``.  The last two
+members return the list of unit types and their aliaes and the allowed
+unit names for each unit type, respectively.
+
+For an example, suppose you are making a set of coefficients for a
+simulation with default Gadget units.  Say your coefficients instance
+is called ``coefs``.   The following command will register the unit set:
+
+   .. code-block:: python
+
+      coefs.setUnits([ ('mass', 'Msun', 1e10), ('length', 'kpc', 1.0),
+      ('velocity', 'km/s', 1.0), ('G', 'mixed', 43007.1) ])
+
+These units will be in the HDF5 that you create using
+``coefs.WriteH5Coefs('filename')``.  A quick note: 'mixed' is an
+allowed alias when dealing with gravitational constants that have
+physical units.
 
 The C++ UI echos the functions above and adds functions to retrieve
 units
 
    .. code-block:: C++
 
+      // Add or replace a unit by specifying its unit tuple
       void setUnits(const std::string name, const std::string unit, float value);
+      // Add or replace a unit(s) by specifying an array of unit tuple
       void setUnits(std::vector<std::tuple<std::string, std::string, float>> list);
-      void removeUnits(const std::string name);
+      // Remove a unit tuple by type
+      void removeUnits(const std::string type);
+      // Retrieve the currently define unit set
       std::vector<std::tuple<std::string, std::string, float>> getUnits();
+      // Get a list of unit types and their aliases
+      std::vector<std::string> getAllowedTypes();
+      // Get a list of unit name and their aliases for a given unit type
+      std::vector<std::string> getAllowedUnits(const std::string& type)
 
 and to interact with HDF files that will only of interest to
 developers creating new coefficient classes.
