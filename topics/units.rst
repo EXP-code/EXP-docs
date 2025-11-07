@@ -34,7 +34,7 @@ EXP requires one of the following two sequences of units:
 2. Mass, Length, Velocity, gravitational constant (G)
 
 
-Each unit is a _tuple_ which takes the form::
+Each unit is a ``tuple`` which takes the form::
 
   ('unit type', 'unit name', <float value>)
 
