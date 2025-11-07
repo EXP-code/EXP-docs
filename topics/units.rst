@@ -119,7 +119,7 @@ is called ``coefs``.   The following command will register the unit set:
       ('velocity', 'km/s', 1.0), ('G', 'mixed', 43007.1) ])
 
 These units will be in the HDF5 that you create using
-``coefs.WriteH5Coeds('filename')``.  You can query, for example, the
+``coefs.WriteH5Coefs('filename')``.  You can query, for example, the
 allowed 'mass' units with the call
 ``coefs.getAllowedUnitNames('mass')`` which returns:
 
