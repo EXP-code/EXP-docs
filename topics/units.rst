@@ -190,7 +190,7 @@ following code:
       import h5py
       import numpy as np
 
-      # Define the compound datatype with fixed-length UTF-8 strings and a float32
+      # Define the compound datatype with fixed-length ASCII strings and a float32
       dt = np.dtype([
 		   ('name', 'S16'),   # Fixed-length ASCII string of 16 bytes
 		   ('unit', 'S16'),   # Fixed-length ASCII string of 16 bytes
