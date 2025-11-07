@@ -34,7 +34,7 @@ EXP requires one of the following two sequences of 4 unit types:
 2. Mass, Length, Velocity, gravitational constant (G)
 
 
-Each is defined by a _tuple_ which takes the form::
+Each unit is a ``tuple`` which takes the form::
 
   ('unit type', 'unit name', <float value>)
 
@@ -46,7 +46,7 @@ The type and name strings are checked against the allowed values as follows:
   'M' for 'mass'; 'Time', 't', 'T' for 'time', 'vel',
   'Vel', 'Velocity', 'v', 'V' for 'velocity'; and 'Grav', 'grav',
   'grav_constant', 'Grav_constant', 'gravitational_constant',
-  'Graviational_constant' for 'G'.
+  'Gravitational_constant' for 'G'.
 
 - The ``unit name`` is one of the usual unit names for each of the
   ``unit type``.  The allowed list is a subset of the standard
@@ -91,7 +91,7 @@ gravitational constant and length units provided by the user.
 The Units interface
 -------------------
 
-The `pyEXP` user interface includes two member functions for explicity
+The `pyEXP` user interface includes two member functions for explicitly
 setting and removing units as part of the `Coef` class.  For setting
 units, we have:
 
@@ -101,12 +101,13 @@ units, we have:
       setUnits(list)
       removeUnits(type)
       getAllowedUnitTypes()
+      getAllowedTypeAliases(type)
       getAllowedUnitName(type)
 
 where ``type`` and ``unit`` are strings and ``value`` is a float.  The
-list is a list of tuples of ``(name, unit, value)``.  The last two
-members return the list of unit types and their aliaes and the allowed
-unit names for each unit type, respectively.
+list is a list of tuples of ``(name, unit, value)``.  The last three
+members return the list of unit types, the recognized aliases for each
+type, and the allowed unit names for each unit type, respectively.
 
 For an example, suppose you are making a set of coefficients for a
 simulation with default Gadget units.  Say your coefficients instance
@@ -118,9 +119,24 @@ is called ``coefs``.   The following command will register the unit set:
       ('velocity', 'km/s', 1.0), ('G', 'mixed', 43007.1) ])
 
 These units will be in the HDF5 that you create using
-``coefs.WriteH5Coefs('filename')``.  A quick note: 'mixed' is an
-allowed alias when dealing with gravitational constants that have
-physical units.
+``coefs.WriteH5Coeds('filename')``.  You can query, for example, the
+allowed 'mass' units with the call
+``coefs.getAllowedUnitNames('mass')`` which returns:
+
+    .. code-block:: python
+
+       ['gram', 'earth_mass', 'solar_mass', 'kilograms', 'kg', 'g', 'Mearth', 'Msun', 'None', 'none']
+
+A quick note: 'mixed' is an allowed alias when dealing with
+gravitational constants that have physical units.  You can see all
+unit types with ``getAllowedUnitTypes()``; this returns ``['mass',
+'length', 'time', 'velocity', 'G']``.  You can see the recognized
+aliases for each type using ``getAllowedTypeAliases(type)``.  For
+example, the recognized aliases for 'G' are:
+
+    .. code-block:: python
+
+       ['G', 'Grav', 'Grav_constant', 'Gravitational_constant', 'grav', 'grav_constant', 'gravitational_constant']
 
 The C++ UI echos the functions above and adds functions to retrieve
 units
@@ -137,10 +153,12 @@ units
       std::vector<std::tuple<std::string, std::string, float>> getUnits();
       // Get a list of unit types and their aliases
       std::vector<std::string> getAllowedTypes();
+      // Get a list aliases for each type
+      std::vector<std::string> getAllowedTypeAliaes(const std::string& type);
       // Get a list of unit name and their aliases for a given unit type
       std::vector<std::string> getAllowedUnits(const std::string& type)
 
-and to interact with HDF files that will only of interest to
+and to interact with HDF files that will only be of interest to
 developers creating new coefficient classes.
 
 
@@ -160,7 +178,7 @@ information) for each snapshot time in the coefficient set.
 
 The units information is stored in the root group as dataset named
 "Units".  The dataset is a sequence  or list of 4 tuples.  Each tuple
-had three fields: two fixed length strings of sixteen (16) characters
+has three fields: two fixed length strings of sixteen (16) characters
 and a float value.
 
 For an EXP run, the units specification appears as dataset in the root
@@ -219,7 +237,7 @@ following code:
       import h5py
       import numpy as np
 
-      # Define the compound datatype with fixed-length UTF-8 strings and a float32
+      # Define the compound datatype with fixed-length ASCII strings and a float32
       dt = np.dtype([
 		   ('name', 'S16'),   # Fixed-length ASCII string of 16 bytes
 		   ('unit', 'S16'),   # Fixed-length ASCII string of 16 bytes
