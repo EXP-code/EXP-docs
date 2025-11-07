@@ -168,7 +168,7 @@ The HDF5 specification
 ----------------------
 
 .. note:: This section assumes basic familiarity with HDF5 and `h5py`
-	  in particular.
+          in particular.
 
 EXP HDF5 coefficient files contain a full set of metadata describing
 their basis type, basis parameters, geometry, and units as attributes
