@@ -111,7 +111,7 @@ units
       void removeUnits(const std::string name);
       std::vector<std::tuple<std::string, std::string, float>> getUnits();
 
-and to interact with HDF files that will only of interest to
+and to interact with HDF files that will only be of interest to
 developers creating new coefficient classes.
 
 
