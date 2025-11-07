@@ -57,7 +57,7 @@ The type and name strings are checked against the allowed values as follows:
   The value can be any valid floating-point number.
 
 The allowed types and names may be queried interactively in pyEXP
-using the ``getAllowedUnitNTypes()`` and
+using the ``getAllowedUnitTypes()`` and
 ``getAllowedUnitNames(type)``, see :ref:`units-interface`.  For
 development reference, these allowed strings are defined in
 ``expui/UnitValidator.cc`` in the EXP source tree.
