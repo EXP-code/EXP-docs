@@ -98,7 +98,7 @@ units, we have:
       setUnits(list)
       removeUnits(name)
 
-where ``name`` and ``unit` and strings and ``value`` is a float.  The
+where ``name`` and ``unit`` are strings and ``value`` is a float.  The
 list is a list of tuples of ``(name, unit, value)``.
 
 The C++ UI echos the functions above and adds functions to retrieve
