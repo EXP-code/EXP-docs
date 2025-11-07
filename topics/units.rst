@@ -88,7 +88,7 @@ gravitational constant and length units provided by the user.
 The Units interface
 -------------------
 
-The `pyEXP` user interface includes two member functions for explicity
+The `pyEXP` user interface includes two member functions for explicitly
 setting and removing units as part of the `Coef` class.  For setting
 units, we have:
 
