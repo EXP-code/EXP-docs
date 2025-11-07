@@ -46,7 +46,7 @@ The type and name strings are checked against the allowed values as follows:
   'M' for 'mass'; 'Time', 't', 'T' for 'time', 'vel',
   'Vel', 'Velocity', 'v', 'V' for 'velocity'; and 'Grav', 'grav',
   'grav_constant', 'Grav_constant', 'gravitational_constant',
-  'Graviational_constant' for 'G'.
+  'Gravitational_constant' for 'G'.
 
 - The ``unit name`` is one of the usual unit names for each of the
   ``unit type``.  The allowed list is a subset of the standard
