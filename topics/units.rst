@@ -131,7 +131,7 @@ information) for each snapshot time in the coefficient set.
 
 The units information is stored in the root group as dataset named
 "Units".  The dataset is a sequence  or list of 4 tuples.  Each tuple
-had three fields: two fixed length strings of sixteen (16) characters
+has three fields: two fixed length strings of sixteen (16) characters
 and a float value.
 
 For an EXP run, the units specification appears as dataset in the root
