@@ -89,6 +89,7 @@ EXP concepts
    topics/bfetheory
    topics/codeintro
    topics/timesseries
+   topics/units
    topics/multistep
    topics/centering
    topics/yamlconfig
@@ -105,6 +106,9 @@ mathematics used in EXP.
 
 :doc:`topics/timesseries`
     Descriptions for methods to analyze BFE time series
+
+:doc:`topics/units`
+    Physical units in EXP 
 
 :doc:`topics/multistep`
     A quick review of EXP's ODE solver and multi time step ladder
