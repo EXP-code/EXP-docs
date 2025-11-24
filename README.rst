@@ -24,7 +24,8 @@ For a Linux system with `apt` (e.g. Ubuntu), you can do:
 
    apt-get install python3-sphinx python3-sphinx-rtd-theme
 
-   Note: The `nbsphinx-link` package is not available via apt and should be installed using pip:
+   Note: The `nbsphinx-link` package is needed to process Python notebook examples 
+         but is not available via apt. It may be installed using pip:
 
        pip install nbsphinx-link
 
