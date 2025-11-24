@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Units in EXP and pyEXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="N-Body optimization in EXP" href="multistep.html" />
+    <link rel="prev" title="Extended Dynamical Mode Decomposition" href="edmd.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Units in EXP and pyEXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-exp-unit-schema">The EXP unit schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#units-in-pyexp">Units in pyEXP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-units-interface">The Units interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-hdf5-specification">The HDF5 specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backward-compatibility">Backward compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Units in EXP and pyEXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/units.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="units-in-exp-and-pyexp">
+<span id="units"></span><h1>Units in EXP and pyEXP<a class="headerlink" href="#units-in-exp-and-pyexp" title="Link to this heading"></a></h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The Units interface described below is available in the EXP <cite>devel</cite>
+branch only!  You will need to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">devel</span></code> and recompile
+to use this feature.</p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The EXP N-body code assumes the gravitational constant is unity and
+that mass, position and velocity units can have any value defined by
+the user.  In other words, the EXP N-body code does not enforce any
+particular unit set consistent with <code class="docutils literal notranslate"><span class="pre">G=1</span></code>.</p>
+<p>pyEXP will also accept mass, position, time, and velocity with any
+unit set defined by the imported simulation as well as an arbitrary
+value of the gravitational constant. Explicit units types and the
+gravitational constant <code class="docutils literal notranslate"><span class="pre">G</span></code> may be set at construction time as we
+will describe below in <a class="reference internal" href="#unit-schema"><span class="std std-ref">The EXP unit schema</span></a>.  pyEXP <strong>requires</strong> the
+user to set units explicitly when coefficient sets are
+constructed. There is no default. See <a class="reference internal" href="../intro/pyEXP-tutorial.html#intro-pyexp-tutorial"><span class="std std-ref">pyEXP Tutorial</span></a> for
+an end-to-end example of coefficient computation.</p>
+<p>All unit information is written into the EXP coefficient files as HDF5
+attributes.  Also see <a class="reference internal" href="#hdf5-unit-attributes"><span class="std std-ref">The HDF5 specification</span></a> for details.  You
+may add units to previously computed coefficient files using the
+script described in <a class="reference internal" href="#units-old"><span class="std std-ref">Backward compatibility</span></a>.</p>
+</section>
+<section id="the-exp-unit-schema">
+<span id="unit-schema"></span><h2>The EXP unit schema<a class="headerlink" href="#the-exp-unit-schema" title="Link to this heading"></a></h2>
+<p>EXP requires one of the following two sequences of 4 unit types:</p>
+<ol class="arabic simple">
+<li><p>Mass, Length, Time, gravitational constant (G)</p></li>
+<li><p>Mass, Length, Velocity, gravitational constant (G)</p></li>
+</ol>
+<p>Other combinations are possible in principle, such as Mass, Length,
+Velocity and Time.  However, this would require an automatic deduction
+of the gravitational constant. EXP does not current know about
+physical unit conversion.  This feature may be added in the future.</p>
+<p>Each separate unit is defined as a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> which takes the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;unit type&#39;</span><span class="p">,</span> <span class="s1">&#39;unit name&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">float</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The type and name strings are checked against the allowed values as follows:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">unit</span> <span class="pre">type</span></code> is one of ‘length’, ‘mass’, ‘time’, ‘velocity’ or
+‘G’. The internal parser will accept a variety of aliases for these
+such as ‘Length’, ‘Len’, ‘len’, ‘l’, ‘L’ for ‘length’; ‘Mass’, ‘m’,
+‘M’ for ‘mass’; ‘Time’, ‘t’, ‘T’ for ‘time’, ‘vel’,
+‘Vel’, ‘Velocity’, ‘v’, ‘V’ for ‘velocity’; and ‘Grav’, ‘grav’,
+‘grav_constant’, ‘Grav_constant’, ‘gravitational_constant’,
+‘Gravitational_constant’ for ‘G’.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">unit</span> <span class="pre">name</span></code> is one of the usual unit names for each of the
+<code class="docutils literal notranslate"><span class="pre">unit</span> <span class="pre">type</span></code>.  The allowed list is a subset of the standard
+<cite>astropy</cite> strings.  For example, ‘pc’ or ‘kpc’ for ‘length’.  There
+is also a ‘none’ type which implies no assigned physical units.</p></li>
+<li><p>The floating value defines the number of each unit for the type.
+The value can be any valid floating-point number.</p></li>
+</ul>
+<p>The allowed types and names may be queried interactively in pyEXP
+using the <code class="code highlight python docutils literal highlight-python"><span class="n">getAllowedUnitTypes</span><span class="p">()</span></code> and
+<code class="code highlight python docutils literal highlight-python"><span class="n">getAllowedUnitNames</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span></code>, see <a class="reference internal" href="#units-interface"><span class="std std-ref">The Units interface</span></a>.  For
+development reference, these allowed strings are defined in
+<code class="docutils literal notranslate"><span class="pre">expui/UnitValidator.cc</span></code> in the EXP source tree.</p>
+<p>As an example, a Gadget user might define mass units as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="s1">&#39;Msun&#39;</span><span class="p">,</span> <span class="mf">1.0e10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The full units specification is a list of tuples that includes one of
+the four sequences.  In C++, the list is a <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">std::vector</span></code> of
+tuples.</p>
+<p>As an example, all native EXP simulations have the following unit
+lists:</p>
+<blockquote>
+<div></div></blockquote>
+</section>
+<section id="units-in-pyexp">
+<h2>Units in pyEXP<a class="headerlink" href="#units-in-pyexp" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">pyEXP.basis</span></code> classes will use the units specified by the user
+in the <code class="docutils literal notranslate"><span class="pre">pyEXP.coefs</span></code> class created from simulation snapshots (see
+<a class="reference internal" href="../intro/pyEXP-tutorial.html#intro-pyexp-tutorial"><span class="std std-ref">pyEXP Tutorial</span></a>) or read by the coefficient factory from
+an existing HDF5 file to produce accelerations using the value of the
+gravitational constant and length units provided by the user.</p>
+</section>
+<section id="the-units-interface">
+<span id="units-interface"></span><h2>The Units interface<a class="headerlink" href="#the-units-interface" title="Link to this heading"></a></h2>
+<p>The <cite>pyEXP</cite> user interface includes two member functions for explicitly
+setting and removing units as part of the <cite>Coef</cite> class.  For setting
+units, we have:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">setUnits</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="n">setUnits</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">removeUnits</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+<span class="n">getAllowedUnitTypes</span><span class="p">()</span>
+<span class="n">getAllowedTypeAliases</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+<span class="n">getAllowedUnitName</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>where <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">unit</span></code> are strings and <code class="docutils literal notranslate"><span class="pre">value</span></code> is a float.  The
+list is a list of tuples of <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">unit,</span> <span class="pre">value)</span></code>.  The last three
+members return the list of unit types, the recognized aliases for each
+type, and the allowed unit names for each unit type, respectively.</p>
+<p>For an example, suppose you are making a set of coefficients for a
+simulation with default Gadget units.  Say your coefficients instance
+is called <code class="docutils literal notranslate"><span class="pre">coefs</span></code>.   The following command will register the unit set:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coefs</span><span class="o">.</span><span class="n">setUnits</span><span class="p">([</span> <span class="p">(</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="s1">&#39;Msun&#39;</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;length&#39;</span><span class="p">,</span> <span class="s1">&#39;kpc&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">,</span> <span class="s1">&#39;km/s&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="mf">43007.1</span><span class="p">)</span> <span class="p">])</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>These units will be in the HDF5 that you create using
+<code class="code highlight python docutils literal highlight-python"><span class="n">coefs</span><span class="o">.</span><span class="n">WriteH5Coefs</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">)</span></code>.  You can query, for example,
+the allowed ‘mass’ units with the call
+<code class="code highlight python docutils literal highlight-python"><span class="n">coefs</span><span class="o">.</span><span class="n">getAllowedUnitNames</span><span class="p">(</span><span class="s1">&#39;mass&#39;</span><span class="p">)</span></code> which returns:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;gram&#39;</span><span class="p">,</span> <span class="s1">&#39;earth_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;kilograms&#39;</span><span class="p">,</span> <span class="s1">&#39;kg&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;Mearth&#39;</span><span class="p">,</span> <span class="s1">&#39;Msun&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The allowed mass units for ‘G’ are:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;gram&#39;</span><span class="p">,</span> <span class="s1">&#39;earth_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;kilograms&#39;</span><span class="p">,</span> <span class="s1">&#39;kg&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;Mearth&#39;</span><span class="p">,</span> <span class="s1">&#39;Msun&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>A quick note: ‘mixed’ is an allowed alias when dealing with
+gravitational constants that have physical units.  You can see all
+unit types with <code class="code highlight python docutils literal highlight-python"><span class="n">getAllowedUnitTypes</span><span class="p">()</span></code>; this returns
+<code class="code highlight python docutils literal highlight-python"><span class="p">[</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="s1">&#39;length&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;velocity&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]</span></code>.  You can see
+the recognized aliases for each type using
+<code class="code highlight python docutils literal highlight-python"><span class="n">getAllowedTypeAliases</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span></code>.  The gravitational constant is</p>
+<blockquote>
+<div><p>a special case. The recognized unit names for ‘G’ are: <code class="code highlight python docutils literal highlight-python"><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;unitless&#39;</span><span class="p">]</span><span class="err">`</span></code>.</p>
+</div></blockquote>
+<p>The C++ UI echos the functions above and adds functions to retrieve
+units</p>
+<blockquote>
+<div><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add or replace a unit by specifying its unit tuple</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setUnits</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<span class="c1">// Add or replace a unit(s) by specifying an array of unit tuple</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setUnits</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+<span class="c1">// Remove a unit tuple by type</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">removeUnits</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">);</span>
+<span class="c1">// Retrieve the currently define unit set</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">getUnits</span><span class="p">();</span>
+<span class="c1">// Get a list of unit types and their aliases</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getAllowedTypes</span><span class="p">();</span>
+<span class="c1">// Get a list aliases for each type</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getAllowedTypeAliases</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">type</span><span class="p">);</span>
+<span class="c1">// Get a list of unit name and their aliases for a given unit type</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getAllowedUnits</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">type</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>and to interact with HDF files that will only be of interest to
+developers creating new coefficient classes.</p>
+</section>
+<section id="the-hdf5-specification">
+<span id="hdf5-unit-attributes"></span><h2>The HDF5 specification<a class="headerlink" href="#the-hdf5-specification" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This and the following sections assumes basic familiarity
+with HDF5 and <cite>h5py</cite> in particular.</p>
+</div>
+<p>EXP HDF5 coefficient files contain a full set of metadata describing
+their basis type, basis parameters, geometry, and units as attributes
+of the root (“/”) group.  The <code class="docutils literal notranslate"><span class="pre">snapshots</span></code> group contains all of the
+coefficient data and metadata (such as center and rotation
+information) for each snapshot time in the coefficient set.</p>
+<p>The units information is stored in the root group as dataset named
+“Units”.  The dataset is a sequence  or list of 4 tuples.  Each tuple
+has three fields: two fixed length strings of sixteen (16) characters
+and a float value.</p>
+<p>For an EXP run, the units specification appears as dataset in the root
+group with the following hierarchy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">DATASET</span> <span class="s2">&quot;Units&quot;</span> <span class="p">{</span>
+   <span class="n">DATATYPE</span>  <span class="n">H5T_COMPOUND</span> <span class="p">{</span>
+      <span class="n">H5T_STRING</span> <span class="p">{</span>
+         <span class="n">STRSIZE</span> <span class="mi">16</span><span class="p">;</span>
+         <span class="n">STRPAD</span> <span class="n">H5T_STR_NULLTERM</span><span class="p">;</span>
+         <span class="n">CSET</span> <span class="n">H5T_CSET_UTF8</span><span class="p">;</span>
+         <span class="n">CTYPE</span> <span class="n">H5T_C_S1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="s2">&quot;name&quot;</span><span class="p">;</span>
+      <span class="n">H5T_STRING</span> <span class="p">{</span>
+         <span class="n">STRSIZE</span> <span class="mi">16</span><span class="p">;</span>
+         <span class="n">STRPAD</span> <span class="n">H5T_STR_NULLTERM</span><span class="p">;</span>
+         <span class="n">CSET</span> <span class="n">H5T_CSET_UTF8</span><span class="p">;</span>
+         <span class="n">CTYPE</span> <span class="n">H5T_C_S1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="s2">&quot;unit&quot;</span><span class="p">;</span>
+      <span class="n">H5T_IEEE_F32LE</span> <span class="s2">&quot;value&quot;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">DATASPACE</span>  <span class="n">SIMPLE</span> <span class="p">{</span> <span class="p">(</span> <span class="mi">4</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="mi">4</span> <span class="p">)</span> <span class="p">}</span>
+   <span class="n">DATA</span> <span class="p">{</span>
+   <span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="p">{</span>
+         <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+         <span class="mi">1</span>
+      <span class="p">},</span>
+   <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="p">{</span>
+         <span class="s2">&quot;length&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+         <span class="mi">1</span>
+      <span class="p">},</span>
+   <span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="p">{</span>
+         <span class="s2">&quot;mass&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+         <span class="mi">1</span>
+      <span class="p">},</span>
+   <span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="p">{</span>
+         <span class="s2">&quot;time&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+         <span class="mi">1</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="backward-compatibility">
+<span id="units-old"></span><h2>Backward compatibility<a class="headerlink" href="#backward-compatibility" title="Link to this heading"></a></h2>
+<p>A units attribute list could be easily added to existing HDF5 files
+using <cite>h5py</cite> using the schema described above.  For example, assuming
+that you already have an open HDF5 coefficient file named <cite>f</cite>, the
+units described in the scheme above could be added to <cite>f</cite> with the
+following code:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">h5py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Define the compound datatype with fixed-length ASCII strings and a float32</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;S16&#39;</span><span class="p">),</span>   <span class="c1"># Fixed-length ASCII string of 16 bytes</span>
+    <span class="p">(</span><span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="s1">&#39;S16&#39;</span><span class="p">),</span>   <span class="c1"># Fixed-length ASCII string of 16 bytes</span>
+    <span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>   <span class="c1"># Little-endian 32-bit float</span>
+<span class="p">])</span>
+
+<span class="c1"># Create the dataset data as a numpy array</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;G&#39;</span><span class="p">,</span>       <span class="sa">b</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;length&#39;</span><span class="p">,</span>  <span class="sa">b</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span>    <span class="sa">b</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;time&#39;</span><span class="p">,</span>    <span class="sa">b</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="c1"># Open the HDF5 coefficient file and add the dataset</span>
+<span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s1">&#39;outcoef.disk.runtag&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># &#39;a&#39; mode opens file for read/write, creates if not exist</span>
+
+    <span class="c1"># Create dataset &#39;Units&#39;</span>
+    <span class="k">if</span> <span class="s1">&#39;Units&#39;</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="c1"># Optional: remove existing dataset if you want to overwrite</span>
+        <span class="k">del</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;Units&#39;</span><span class="p">]</span>
+    <span class="n">dset</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s1">&#39;Units&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+
+<span class="c1"># File is automatically closed on leaving the &#39;with&#39; block, flush and</span>
+<span class="c1"># update saved data on disk</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>You can update the  <code class="code highlight python docutils literal highlight-python"><span class="n">data</span></code> array in the example above to match your
+unit set.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="edmd.html" class="btn btn-neutral float-left" title="Extended Dynamical Mode Decomposition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="multistep.html" class="btn btn-neutral float-right" title="N-Body optimization in EXP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart pointers &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Smart pointers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/smart_ptrs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="smart-pointers">
+<h1>Smart pointers<a class="headerlink" href="#smart-pointers" title="Link to this heading"></a></h1>
+<section id="std-unique-ptr">
+<h2>std::unique_ptr<a class="headerlink" href="#std-unique-ptr" title="Link to this heading"></a></h2>
+<p>Given a class <code class="docutils literal notranslate"><span class="pre">Example</span></code> with Python bindings, it’s possible to return
+instances wrapped in C++11 unique pointers, like so</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Example</span><span class="o">&gt;</span><span class="w"> </span><span class="n">create_example</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Example</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Example</span><span class="p">());</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;create_example&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">create_example</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In other words, there is nothing special that needs to be done. While returning
+unique pointers in this way is allowed, it is <em>illegal</em> to use them as function
+arguments. For instance, the following function signature cannot be processed
+by pybind11.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">do_something_with_example</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Example</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The above signature would imply that Python needs to give up ownership of an
+object that is passed to this function, which is generally not possible (for
+instance, the object might be referenced elsewhere).</p>
+</section>
+<section id="std-shared-ptr">
+<h2>std::shared_ptr<a class="headerlink" href="#std-shared-ptr" title="Link to this heading"></a></h2>
+<p>The binding generator for classes, <code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code>, can be passed a template
+type that denotes a special <em>holder</em> type that is used to manage references to
+the object.  If no such holder type template argument is given, the default for
+a type named <code class="docutils literal notranslate"><span class="pre">Type</span></code> is <code class="docutils literal notranslate"><span class="pre">std::unique_ptr&lt;Type&gt;</span></code>, which means that the object
+is deallocated when Python’s reference count goes to zero.</p>
+<p>It is possible to switch to other types of reference counting wrappers or smart
+pointers, which is useful in codebases that rely on them. For instance, the
+following snippet causes <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> to be used instead.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Example</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Example</span><span class="o">&gt;</span><span class="w"> </span><span class="cm">/* &lt;- holder type */</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obj</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note that any particular class can only be associated with a single holder type.</p>
+<p>One potential stumbling block when using holder types is that they need to be
+applied consistently. Can you guess what’s broken about the following binding
+code?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">   </span><span class="n">Parent</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">child</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">   </span><span class="n">Child</span><span class="w"> </span><span class="o">*</span><span class="n">get_child</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">child</span><span class="p">.</span><span class="n">get</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="cm">/* Hint: ** DON&#39;T DO THIS ** */</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="n">child</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Child</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Child&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Parent</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Parent&quot;</span><span class="p">)</span>
+<span class="w">       </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">       </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;get_child&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Parent</span><span class="o">::</span><span class="n">get_child</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The following Python code will cause undefined behavior (and likely a
+segmentation fault).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">example</span><span class="w"> </span><span class="kn">import</span> <span class="n">Parent</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Parent</span><span class="p">()</span><span class="o">.</span><span class="n">get_child</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The problem is that <code class="docutils literal notranslate"><span class="pre">Parent::get_child()</span></code> returns a pointer to an instance of
+<code class="docutils literal notranslate"><span class="pre">Child</span></code>, but the fact that this instance is already managed by
+<code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;...&gt;</span></code> is lost when passing raw pointers. In this case,
+pybind11 will create a second independent <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;...&gt;</span></code> that also
+claims ownership of the pointer. In the end, the object will be freed <strong>twice</strong>
+since these shared pointers have no way of knowing about each other.</p>
+<p>There are two ways to resolve this issue:</p>
+<ol class="arabic simple">
+<li><p>For types that are managed by a smart pointer class, never use raw pointers
+in function arguments or return values. In other words: always consistently
+wrap pointers into their designated holder types (such as
+<code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;...&gt;</span></code>). In this case, the signature of <code class="docutils literal notranslate"><span class="pre">get_child()</span></code>
+should be modified as follows:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_child</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">child</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Adjust the definition of <code class="docutils literal notranslate"><span class="pre">Child</span></code> by specifying
+<code class="docutils literal notranslate"><span class="pre">std::enable_shared_from_this&lt;T&gt;</span></code> (see <a class="reference external" href="http://en.cppreference.com/w/cpp/memory/enable_shared_from_this">cppreference</a> for details) as a
+base class. This adds a small bit of information to <code class="docutils literal notranslate"><span class="pre">Child</span></code> that allows
+pybind11 to realize that there is already an existing
+<code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;...&gt;</span></code> and communicate with it. In this case, the
+declaration of <code class="docutils literal notranslate"><span class="pre">Child</span></code> should look as follows:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-smart-pointers">
+<span id="id1"></span><h2>Custom smart pointers<a class="headerlink" href="#custom-smart-pointers" title="Link to this heading"></a></h2>
+<p>pybind11 supports <code class="docutils literal notranslate"><span class="pre">std::unique_ptr</span></code> and <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> right out of the
+box. For any other custom smart pointer, transparent conversions can be enabled
+using a macro invocation similar to the following. It must be declared at the
+top namespace level before any binding code:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_DECLARE_HOLDER_TYPE</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">SmartPtr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The first argument of <code class="xref py py-func docutils literal notranslate"><span class="pre">PYBIND11_DECLARE_HOLDER_TYPE()</span></code> should be a
+placeholder name that is used as a template parameter of the second argument.
+Thus, feel free to use any identifier, but use it consistently on both sides;
+also, don’t use the name of a type that already exists in your codebase.</p>
+<p>The macro also accepts a third optional boolean parameter that is set to false
+by default. Specify</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_DECLARE_HOLDER_TYPE</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">SmartPtr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>if <code class="docutils literal notranslate"><span class="pre">SmartPtr&lt;T&gt;</span></code> can always be initialized from a <code class="docutils literal notranslate"><span class="pre">T*</span></code> pointer without the
+risk of inconsistencies (such as multiple independent <code class="docutils literal notranslate"><span class="pre">SmartPtr</span></code> instances
+believing that they are the sole owner of the <code class="docutils literal notranslate"><span class="pre">T*</span></code> pointer). A common
+situation where <code class="docutils literal notranslate"><span class="pre">true</span></code> should be passed is when the <code class="docutils literal notranslate"><span class="pre">T</span></code> instances use
+<em>intrusive</em> reference counting.</p>
+<p>Please take a look at the <a class="reference internal" href="misc.html#macro-notes"><span class="std std-ref">General notes regarding convenience macros</span></a> before using this feature.</p>
+<p>By default, pybind11 assumes that your custom smart pointer has a standard
+interface, i.e. provides a <code class="docutils literal notranslate"><span class="pre">.get()</span></code> member function to access the underlying
+raw pointer. If this is not the case, pybind11’s <code class="docutils literal notranslate"><span class="pre">holder_helper</span></code> must be
+specialized:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Always needed for custom holder types</span>
+<span class="n">PYBIND11_DECLARE_HOLDER_TYPE</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">SmartPtr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="c1">// Only needed if the type&#39;s `.get()` goes by another name</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PYBIND11_NAMESPACE</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">detail</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">holder_helper</span><span class="o">&lt;</span><span class="n">SmartPtr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// &lt;-- specialization</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="nf">get</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SmartPtr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">getPointer</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}}</span>
+</pre></div>
+</div>
+<p>The above specialization informs pybind11 that the custom <code class="docutils literal notranslate"><span class="pre">SmartPtr</span></code> class
+provides <code class="docutils literal notranslate"><span class="pre">.get()</span></code> functionality via <code class="docutils literal notranslate"><span class="pre">.getPointer()</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_smart_ptr.cpp</span></code> contains a complete example
+that demonstrates how to work with custom reference-counting holder types
+in more detail.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

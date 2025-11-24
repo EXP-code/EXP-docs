@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are there pre-compiled versions of pyEXP and EXP? &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to visualize the BFE bases used to make your coefficients" href="topics/visualizing-bases.html" />
+    <link rel="prev" title="How to run your own N-body simulation in EXP" href="topics/howtosim.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EXP
+              <img src="_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Are there pre-compiled versions of pyEXP and EXP?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/faq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="are-there-pre-compiled-versions-of-pyexp-and-exp">
+<span id="faq-exp-bs-cmp"></span><span id="faq"></span><h1>Are there pre-compiled versions of pyEXP and EXP?<a class="headerlink" href="#are-there-pre-compiled-versions-of-pyexp-and-exp" title="Link to this heading"></a></h1>
+<p>Yes! We have a Docker containers for the Intel/AMD 64 and ARM64
+architectures that will run under Linux, MacOS and Windows (using
+WSL).  These will give you access to both the simulation code, EXP,
+and the Python module, pyEXP using Jupyter Notebooks and Lab without
+any additional configuration or code building.</p>
+<p>Super quick start: download <a class="reference external" href="https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox">this Bash script</a>
+and run it.  This will download the Docker image and start a Jupyter
+notebook by default.  Use the <cite>-t</cite> flag for an interactive terminal.
+Use the <cite>-h</cite> flag for additional options.  For further details and
+links to installing Docker, see <a class="reference external" href="https://github.com/EXP-code/EXP-container/tree/main/Docker">this README</a>.</p>
+<p>A native installation will be a bit faster and allow you to fine tune
+package versions in HPC environments. See <a class="reference internal" href="intro/install.html#intro-install"><span class="std std-ref">the Installation Guide</span></a> for details.</p>
+</section>
+<section id="i-only-want-pyexp-do-i-need-c-to-compile-exp">
+<h1>I only want pyEXP, do I need C++ to compile EXP?<a class="headerlink" href="#i-only-want-pyexp-do-i-need-c-to-compile-exp" title="Link to this heading"></a></h1>
+<p>Yes, EXP is an C++ library with Python support provided by
+<a class="reference external" href="https://pybind11.readthedocs.io/">pybind11</a>.  So, you need to compile the C++ library first.  However,
+you can compile pyEXP without the N-body code itself.  Please see
+<a class="reference internal" href="intro/install.html#intro-install"><span class="std std-ref">the Installation Guide</span></a> for compilation and
+configuration details.</p>
+</section>
+<section id="why-would-i-use-exp-rather-than-pyexp">
+<h1>Why would I use EXP rather than pyEXP?<a class="headerlink" href="#why-would-i-use-exp-rather-than-pyexp" title="Link to this heading"></a></h1>
+<p>The EXP N-body code is designed to accurately model disequilbria from
+modest satellite interactions, the gravitational coupling between
+different galaxy components, and model internal instabilities.  The
+bases used in EXP are also suitable for Hamiltonian perturbation
+theory calculations.  This provides a self-consistency check and path
+to understanding the non-linear development of linear predictions.
+The EXP N-body code <em>will not</em> work well for major mergers!</p>
+<p>pyEXP uses the same library routines as EXP but applies to analyses of
+existing simulations done with EXP or most well-known cosmological
+N-body codes.  The EXP code base provides stand-alone Unix routines
+for these analyses, too.  If you want to analyze existing N-body
+simulation output and prefer the Jupyter/Python ecosystem, pyEXP is
+what you want.</p>
+</section>
+<section id="what-hardware-do-i-need-to-run-exp-and-pyexp">
+<h1>What hardware do I need to run EXP and pyEXP?<a class="headerlink" href="#what-hardware-do-i-need-to-run-exp-and-pyexp" title="Link to this heading"></a></h1>
+<p>EXP and pyEXP can run on a wide variety of hardware, from laptops and
+HPC clusters.  EXP and pyEXP can make use of multiple cores on a single laptop
+or compute node using a combination of POSIX threads and OpenMP.</p>
+<p>pyEXP in particular is optimized to run on a single node.  In Linux
+you can use the environment setting to tell pyEXP to use 8 cores:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">8</span>
+</pre></div>
+</div>
+<p>This will speed up your mSSA computation in particular.</p>
+<p>The core EXP libraries use <a class="reference external" href="https://www.mpi-forum.org/">MPI</a>
+which allows EXP (and pyEXP in some instances) to use many compute nodes.
+While this is key for simulations with large numbers of particles,
+pyEXP can be run on a cluster as well.  See the <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP examples repo</a> for some sample scripts
+that use MPI.</p>
+<p>Some of the core force implementations in EXP have GPU
+implementations.  Even a simple commodity gaming card provides enough
+power to allow you to easily perform a simulation with 1 million
+particles.  Moreover, EXP can be run on GPU clusters, enabling
+simulations of 100 million particles and larger.  For example, a
+galaxy halo simulation on 8 NVidia V100 GPU cards will take
+approximately 12 wall clock hours for 10 Gyr of simulation for a
+Milky-Way-like model.  Similar throughput for a CPU cluster requires
+approximately 512 cores.</p>
+</section>
+<section id="how-do-i-restart-exp-from-a-checkpoint">
+<h1>How do I restart EXP from a checkpoint?<a class="headerlink" href="#how-do-i-restart-exp-from-a-checkpoint" title="Link to this heading"></a></h1>
+<p>EXP uses Output routines to write phase space files to disk at regular
+intervals. The main phase-space output routines are:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Output type</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>outpsp</p></td>
+<td><p>Writes single-precision binary N-body phase-space
+in PSP format.</p></td>
+</tr>
+<tr class="row-odd"><td><p>outpsq</p></td>
+<td><p>As in <cite>outpsp</cite> but each process writes in parallel
+for runtime efficiency.</p></td>
+</tr>
+<tr class="row-even"><td><p>outchkpt</p></td>
+<td><p>Writes double-precision binary N-body phase-space
+into a single file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>outchkpq</p></td>
+<td><p>As in <cite>outchkpt</cite> but each process writes in parallel
+for runtime efficiency.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Each of these output routines takes the integer argument <cite>nint</cite>
+describing the number of steps between each output.  These routines
+will construct a unique file name based on the <cite>runtag</cite> and file type.
+You can override this with the <cite>filename</cite> argument.  The first two in
+the table above make sequentially index snapshots.  These are intended
+to enable post-processing tasks.  The second two retain the final and
+penultimate checkpoints only.</p>
+<p>For example, assume that you are running simulation with 4000 time
+steps and want a snapshot every 100 steps and a checkpoint every 1000
+time steps. Your configuration might look like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Output</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outpsq</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nint </span><span class="p">:</span><span class="w"> </span><span class="nv">100</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outchkptq</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nint </span><span class="p">:</span><span class="w"> </span><span class="nv">1000</span><span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<p>This will write snapshot and checkpoint files of the following form:
+<cite>SPL.&lt;runtag&gt;.&lt;xxxxx&gt;</cite> and <cite>SPL.&lt;runtag&gt;.chkpt</cite> where <cite>runtag</cite> is the
+parameter specified in the <cite>Global</cite> section of the EXP YAML
+configuration and <cite>xxxxx</cite> is a five-digit zero-padded number that
+identifies the snapshot.  The previously written checkpoint has the
+<cite>.bak</cite> suffix.  You can restart EXP from a snapshot checkpoint by
+specifying one of these file names as the <cite>infile</cite> parameter.  For
+example, assume that your run is tagged by <cite>run001</cite> and that you
+want to restart from the last checkpoint:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">runtag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run001</span>
+<span class="w">  </span><span class="nt">infile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPL.run001.chkpt</span>
+</pre></div>
+</div>
+<p>EXP will read the checkpoint file <cite>SPL.run001.chkpt</cite>, check for
+consistency with the parameters in the current configuration file, and start
+from that point.</p>
+</section>
+<section id="my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">
+<h1>My HPC cluster does not have the required dependencies.  What are my options?<a class="headerlink" href="#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options" title="Link to this heading"></a></h1>
+<p>See next question…</p>
+</section>
+<section id="can-i-run-exp-or-pyexp-in-a-container">
+<h1>Can I run EXP or pyEXP in a container?<a class="headerlink" href="#can-i-run-exp-or-pyexp-in-a-container" title="Link to this heading"></a></h1>
+<p>Ask your HPC administrators about running applications in containers.
+This will help you avoid module conflicts and non-standard development
+environments with missing dependencies.</p>
+<p>We have had good success with <a class="reference external" href="https://apptainer.org/">Apptainer</a>
+(formerly known as <cite>Singularity</cite>).  Apptainer containers provide all
+of the libraries and executable objects necessary to run EXP as an MPI
+application in a Linux environment of their choosing.</p>
+<p>Most likely, your HPC admin will have recommendations for a base
+container OS image that will work with your cluster.  There are two
+ways of getting EXP into a container:</p>
+<ol class="arabic simple">
+<li><p>Building natively on an OS instance that is the same as your target
+container.  Installing the OS in VirtualBox is a good strategy if
+you do not have a native installation. Then you can copy the
+compiled EXP into the container. This <a class="reference external" href="https://github.com/EXP-code/EXP-apptainer">repo</a> gives a simple
+example of this approach for an Ubuntu image.</p></li>
+<li><p>You can build EXP inside the container.  This is more
+self-contained but will require some work.  See <a class="reference external" href="https://apptainer.org/user-docs/3.1/build_a_container.html">this link</a> for
+generic instructions.</p></li>
+<li><p>The NVidia people have developed the <a class="reference external" href="https://github.com/NVIDIA/hpc-container-maker">HPC Container Maker</a>, a Python tool
+called <cite>hpccm</cite> for generating an Apptainer/Singularity definition
+file using base images for Linux distributions with Cuda support.
+Our <a class="reference external" href="https://github.com/EXP-code/EXP-apptainer">repo</a> also gives
+an <cite>hpccm</cite> recipe for an Ubuntu image.  The container includes EXP
+and pyEXP with AstroPy, NumPy, Matplotlib, and mpi4py. EXP in this
+container has been tested but remains experimental (esp. for pyEXP).
+Please provide feedback and bug reports on this and please consider
+contributing your working recipe to <a class="reference external" href="https://github.com/EXP-code/EXP-apptainer">our EXP repo</a>!</p></li>
+</ol>
+<p>Some HPC centers are exploring Kubernetes, also known as K8s.  This is
+an open-source system for automating deployment, scaling, and
+management of containerized applications.  We have no experience with
+EXP as a Kubernetes app.  So, again, please share your experience!</p>
+</section>
+<section id="i-got-a-seg-fault-now-what-do-i-do">
+<h1>I got a “seg fault”, now what do I do?<a class="headerlink" href="#i-got-a-seg-fault-now-what-do-i-do" title="Link to this heading"></a></h1>
+<p>First of all, we are sorry!  Please report the problem in our <a class="reference external" href="https://github.com/orgs/EXP-code/repositories/issues">issue tracker</a>.</p>
+<p>As you probably know, segmentation faults often arise when a program
+is attempting to access memory that the OS cannot locate or will not
+allow.  Most often, this is the result of EXP/pyEXP being used in a
+way that the developers haven’t considered and tested.</p>
+<p>If you are an experienced programmer and would like to contribute by
+providing a fix, this is what we usually do:</p>
+<ul class="simple">
+<li><p>Recompile EXP/pyEXP as ‘Debug’ using <code class="docutils literal notranslate"><span class="pre">ccmake</span></code> or by changing the
+value of the <code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_TYPE</span></code> to ‘Debug’ in your
+<code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> file.</p></li>
+<li><p>Run the code in <code class="docutils literal notranslate"><span class="pre">gdb</span></code>.  If you are using pyEXP, you can launch
+<code class="docutils literal notranslate"><span class="pre">gdb</span> <span class="pre">python3</span></code> and run your script in the debugger.</p></li>
+<li><p>Look for failures such as undefined arrays, vectors, etc.  Even if
+you only report the approximate location in the source file, you
+will have saved the developers a lot of time and sped up the time to
+a fix.</p></li>
+</ul>
+</section>
+<section id="how-can-i-do-a-calculation-with-phase-space-in-pyexp">
+<h1>How can I do a calculation with phase space in pyEXP<a class="headerlink" href="#how-can-i-do-a-calculation-with-phase-space-in-pyexp" title="Link to this heading"></a></h1>
+<p>The phase-space interface in pyEXP is the <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code> which is
+really a stream or iterator.  The user can access the phase-space
+variables directly using the <code class="docutils literal notranslate"><span class="pre">pyEXP.util.particleIterator(reader,</span>
+<span class="pre">func)</span></code> where <code class="docutils literal notranslate"><span class="pre">reader</span></code> is of type <code class="docutils literal notranslate"><span class="pre">pyEXP.read.ParticleReader</span></code> and
+<code class="docutils literal notranslate"><span class="pre">func</span></code> is a callback function that takes a scalar mass, position and
+velocity arrays, and a scalar index as input. For example, you can
+define the callback <code class="docutils literal notranslate"><span class="pre">func</span></code> in your Python environment and accumulate
+summary statistics or even collect up phase space vectors by appending
+to existing arrays.  Because <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code> is a stream, pyEXP does
+not have an interface to phase space by array index.  This was a
+design choice; the idea was not to push huge phase space snapshots
+onto the users stack.</p>
+<p>A simple example of this in practice is provided in the
+<code class="docutils literal notranslate"><span class="pre">sample_part1_callback.ipynb</span></code> in <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP-examples repo</a>.</p>
+</section>
+<section id="what-do-these-parameters-mean">
+<h1>What do these parameters mean?<a class="headerlink" href="#what-do-these-parameters-mean" title="Link to this heading"></a></h1>
+<p>There are a lot of parameters that you can set in EXP/pyEXP! We describe
+some of them below.</p>
+<p><code class="docutils literal notranslate"><span class="pre">numr</span></code> is the number of radial grid points for spherical expansion, this
+sets the interpolation length between grid points. There is really no downside to making this
+large, but anything larger than ~2000 is overkill. This generally doesn’t need to
+be changed from the defaults.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rnum</span></code>, <code class="docutils literal notranslate"><span class="pre">pnum</span></code>, and <code class="docutils literal notranslate"><span class="pre">tnum</span></code> are the radial, azimuthal, latitudinal quadrature knots,
+respectively, for Gram matrix. These are for computing orthogonal functions for cylindrical
+bases. You generally want <code class="docutils literal notranslate"><span class="pre">rnum</span></code> to be of order <code class="docutils literal notranslate"><span class="pre">numr</span></code> (like 1000), <code class="docutils literal notranslate"><span class="pre">tnum</span></code> can be a
+factor of 10 down from that (~100). <code class="docutils literal notranslate"><span class="pre">pnum</span></code> should be 1 <em>unless</em> you do not have an axisymmetric
+mass distribution (e.g. if you are starting with an arbitrary set of particles and you want to
+build a basis from that with the most naive approach - here you would use <code class="docutils literal notranslate"><span class="pre">pnum</span></code> ~ 100 and let it go).
+These generally don’t need to be changed from the defaults.</p>
+<p>The EJ parameters are explained in :ref: <cite>the section on centering &lt;centering&gt;</cite>.
+You only want to change these values from their defaults if you have an external perturber,
+these shouldn’t be changed if you are working with with simulations of isolated systems.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ratefile</span></code> is an expert parameter for load balancing, this file gives diagnostics about
+the different nodes/processesors on your system. EXP will produce a <code class="docutils literal notranslate"><span class="pre">ratefile</span></code> when running
+simulations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">nmax</span></code>, <code class="docutils literal notranslate"><span class="pre">lmax</span></code>, <code class="docutils literal notranslate"><span class="pre">mmax</span></code> are the maximum radial order of cylindrical or spherical basis, the
+the maximum spherical harmonic order, and maximum azimuthal order of the cylindrical basis. There
+are benchmark numbers but no hard-and-fast recommendations for these values. For simulations with
+~ one million particles in the halo, we typically use <code class="docutils literal notranslate"><span class="pre">lmax</span></code> = 6,  <code class="docutils literal notranslate"><span class="pre">nmax</span></code> = 18 in the spherical
+halo <code class="docutils literal notranslate"><span class="pre">mmax</span></code> = 6, <code class="docutils literal notranslate"><span class="pre">nmax</span></code> = 18 for the disk. This should give you all or most of the signal but
+some coefficients will be noisy. In general, we recommend that you go slightly past what you want
+so that you get all the components and can analyse the significance of each coefficient post-facto.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="topics/howtosim.html" class="btn btn-neutral float-left" title="How to run your own N-body simulation in EXP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="topics/visualizing-bases.html" class="btn btn-neutral float-right" title="How to visualize the BFE bases used to make your coefficients" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On version numbers &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">On version numbers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/release.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-version-numbers">
+<h1>On version numbers<a class="headerlink" href="#on-version-numbers" title="Link to this heading"></a></h1>
+<p>The two version numbers (C++ and Python) must match when combined (checked when
+you build the PyPI package), and must be a valid <a class="reference external" href="https://www.python.org/dev/peps/pep-0440">PEP 440</a> version when combined.</p>
+<p>For example:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PYBIND11_VERSION_MAJOR X</span>
+<span class="cp">#define PYBIND11_VERSION_MINOR Y</span>
+<span class="cp">#define PYBIND11_VERSION_PATCH Z.dev1</span>
+</pre></div>
+</div>
+<p>For beta, <code class="docutils literal notranslate"><span class="pre">PYBIND11_VERSION_PATCH</span></code> should be <code class="docutils literal notranslate"><span class="pre">Z.b1</span></code>. RC’s can be <code class="docutils literal notranslate"><span class="pre">Z.rc1</span></code>.
+Always include the dot (even though PEP 440 allows it to be dropped). For a
+final release, this must be a simple integer. There is also
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_VERSION_HEX</span></code> just below that needs to be updated.</p>
+</section>
+<section id="to-release-a-new-version-of-pybind11">
+<h1>To release a new version of pybind11:<a class="headerlink" href="#to-release-a-new-version-of-pybind11" title="Link to this heading"></a></h1>
+<p>If you don’t have nox, you should either use <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">nox</span></code> instead, or use
+<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">nox</span></code> or <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">nox</span></code> (Unix).</p>
+<ul class="simple">
+<li><p>Update the version number</p>
+<ul>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">PYBIND11_VERSION_MAJOR</span></code> etc. in
+<code class="docutils literal notranslate"><span class="pre">include/pybind11/detail/common.h</span></code>. PATCH should be a simple integer.</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">PYBIND11_VERSION_HEX</span></code> just below as well.</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">pybind11/_version.py</span></code> (match above).</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">tests_packaging</span></code> to ensure this was done correctly.</p></li>
+</ul>
+</li>
+<li><dl class="simple">
+<dt>Ensure that all the information in <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> is up-to-date, like</dt><dd><p>supported Python versions.</p>
+</dd>
+</dl>
+</li>
+<li><p>Add release date in <code class="docutils literal notranslate"><span class="pre">docs/changelog.rst</span></code> and integrate the output of
+<code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">make_changelog</span></code>.</p>
+<ul>
+<li><p>Note that the <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">make_changelog</span></code> command inspects
+<a class="reference external" href="https://github.com/pybind/pybind11/pulls?q=is%3Apr+is%3Aclosed+label%3A%22needs+changelog%22">needs changelog</a>.</p></li>
+<li><p>Manually clear the <code class="docutils literal notranslate"><span class="pre">needs</span> <span class="pre">changelog</span></code> labels using the GitHub web
+interface (very easy: start by clicking the link above).</p></li>
+</ul>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. <strong>Ensure CI passes</strong>. (If it</dt><dd><p>fails due to a known flake issue, either ignore or restart CI.)</p>
+</dd>
+</dl>
+</li>
+<li><p>Add a release branch if this is a new MINOR version, or update the existing
+release branch if it is a patch version</p>
+<ul>
+<li><p>New branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">vX.Y</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">vX.Y</span></code></p></li>
+<li><p>Update branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">vX.Y</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">&lt;release</span> <span class="pre">branch&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+</ul>
+</li>
+<li><p>Update tags (optional; if you skip this, the GitHub release makes a
+non-annotated tag for you)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">vX.Y.Z</span> <span class="pre">-m</span> <span class="pre">'vX.Y.Z</span> <span class="pre">release'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">^__version__</span> <span class="pre">pybind11/_version.py</span></code></p>
+<ul>
+<li><p>Last-minute consistency check: same as tag?</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--tags</span></code></p></li>
+</ul>
+</li>
+<li><p>Update stable</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">stable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">-X</span> <span class="pre">theirs</span> <span class="pre">vX.Y.Z</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">vX.Y.Z</span></code></p></li>
+<li><p>Carefully review and reconcile any diffs. There should be none.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+</ul>
+</li>
+<li><p>Make a GitHub release (this shows up in the UI, sends new release
+notifications to users watching releases, and also uploads PyPI packages).
+(Note: if you do not use an existing tag, this creates a new lightweight tag
+for you, so you could skip the above step.)</p>
+<ul>
+<li><p>GUI method: Under <a class="reference external" href="https://github.com/pybind/pybind11/releases">releases</a>
+click “Draft a new release” on the far right, fill in the tag name
+(if you didn’t tag above, it will be made here), fill in a release name
+like “Version X.Y.Z”, and copy-and-paste the markdown-formatted (!) changelog
+into the description. You can use <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">docs/changelog.rst</span> <span class="pre">|</span> <span class="pre">pandoc</span> <span class="pre">-f</span> <span class="pre">rst</span> <span class="pre">-t</span> <span class="pre">gfm</span></code>,
+then manually remove line breaks and strip links to PRs and issues,
+e.g. to a bare <code class="docutils literal notranslate"><span class="pre">#1234</span></code>, without the surrounding <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;_</span></code> hyperlink markup.
+Check “pre-release” if this is a beta/RC.</p></li>
+<li><p>CLI method: with <code class="docutils literal notranslate"><span class="pre">gh</span></code> installed, run <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">release</span> <span class="pre">create</span> <span class="pre">vX.Y.Z</span> <span class="pre">-t</span> <span class="pre">&quot;Version</span> <span class="pre">X.Y.Z&quot;</span></code>
+If this is a pre-release, add <code class="docutils literal notranslate"><span class="pre">-p</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Get back to work</p>
+<ul>
+<li><p>Make sure you are on master, not somewhere else: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></p></li>
+<li><p>Update version macros in <code class="docutils literal notranslate"><span class="pre">include/pybind11/detail/common.h</span></code> (set PATCH to
+<code class="docutils literal notranslate"><span class="pre">0.dev1</span></code> and increment MINOR).</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">pybind11/_version.py</span></code> to match.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">tests_packaging</span></code> to ensure this was done correctly.</p></li>
+<li><p>If the release was a new MINOR version, add a new <code class="docutils literal notranslate"><span class="pre">IN</span> <span class="pre">DEVELOPMENT</span></code>
+section in <code class="docutils literal notranslate"><span class="pre">docs/changelog.rst</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>If a version branch is updated, remember to set PATCH to <code class="docutils literal notranslate"><span class="pre">1.dev1</span></code>.</p>
+<p>If you’d like to bump homebrew, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew bump-formula-pr --url https://github.com/pybind/pybind11/archive/vX.Y.Z.tar.gz</span>
+</pre></div>
+</div>
+<p>Conda-forge should automatically make a PR in a few hours, and automatically
+merge it if there are no issues.</p>
+</section>
+<section id="manual-packaging">
+<h1>Manual packaging<a class="headerlink" href="#manual-packaging" title="Link to this heading"></a></h1>
+<p>If you need to manually upload releases, you can download the releases from
+the job artifacts and upload them with twine. You can also make the files
+locally (not recommended in general, as your local directory is more likely
+to be “dirty” and SDists love picking up random unrelated/hidden files);
+this is the procedure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nox<span class="w"> </span>-s<span class="w"> </span>build
+twine<span class="w"> </span>upload<span class="w"> </span>dist/*
+</pre></div>
+</div>
+<p>This makes SDists and wheels, and the final line uploads them.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

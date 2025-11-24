@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to convert your coefficients back to physical fields &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Making movies of your BFE field quantities" href="make-movies.html" />
+    <link rel="prev" title="How to save and reuse your newly generated coefficients" href="saving-coefficients.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to convert your coefficients back to physical fields</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/visualizing-fields.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-convert-your-coefficients-back-to-physical-fields">
+<span id="visualizing-fields"></span><h1>How to convert your coefficients back to physical fields<a class="headerlink" href="#how-to-convert-your-coefficients-back-to-physical-fields" title="Link to this heading"></a></h1>
+<p>Now that we have our new coefficients, we can use the <code class="docutils literal notranslate"><span class="pre">FieldGenerator</span></code>
+to view the BFE representation of the underlying fields. Here is an
+example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now try some slices for rendering</span>
+<span class="c1">#</span>
+
+<span class="n">times</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">pmin</span>  <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">pmax</span>  <span class="o">=</span> <span class="p">[</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">grid</span>  <span class="o">=</span> <span class="p">[</span>  <span class="mi">40</span><span class="p">,</span>   <span class="mi">40</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">FieldGenerator</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+
+<span class="n">surfaces</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">slices</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We now have the following [time field] pairs&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:8.4f}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Here is the first one:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----&#39;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">u</span><span class="p">])</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">We</span> <span class="n">now</span> <span class="n">have</span> <span class="n">the</span> <span class="n">following</span> <span class="p">[</span><span class="n">time</span> <span class="n">field</span><span class="p">]</span> <span class="n">pairs</span>
+<span class="o">----------------------------------------</span>
+  <span class="mf">0.0050</span>  <span class="n">d</span>
+  <span class="mf">0.0050</span>  <span class="n">d0</span>
+  <span class="mf">0.0050</span>  <span class="n">d1</span>
+  <span class="mf">0.0050</span>  <span class="n">dd</span>
+  <span class="mf">0.0050</span>  <span class="n">fp</span>
+  <span class="mf">0.0050</span>  <span class="n">fr</span>
+  <span class="mf">0.0050</span>  <span class="n">ft</span>
+  <span class="mf">0.0050</span>  <span class="n">p</span>
+  <span class="mf">0.0050</span>  <span class="n">p0</span>
+  <span class="mf">0.0050</span>  <span class="n">p1</span>
+<span class="o">----------------------------------------</span>
+  <span class="mf">0.0100</span>  <span class="n">d</span>
+  <span class="mf">0.0100</span>  <span class="n">d0</span>
+  <span class="mf">0.0100</span>  <span class="n">d1</span>
+  <span class="mf">0.0100</span>  <span class="n">dd</span>
+  <span class="mf">0.0100</span>  <span class="n">fp</span>
+  <span class="mf">0.0100</span>  <span class="n">fr</span>
+  <span class="mf">0.0100</span>  <span class="n">ft</span>
+  <span class="mf">0.0100</span>  <span class="n">p</span>
+  <span class="mf">0.0100</span>  <span class="n">p0</span>
+  <span class="mf">0.0100</span>  <span class="n">p1</span>
+<span class="o">----------------------------------------</span>
+  <span class="mf">0.0150</span>  <span class="n">d</span>
+  <span class="mf">0.0150</span>  <span class="n">d0</span>
+  <span class="mf">0.0150</span>  <span class="n">d1</span>
+  <span class="mf">0.0150</span>  <span class="n">dd</span>
+  <span class="mf">0.0150</span>  <span class="n">fp</span>
+  <span class="mf">0.0150</span>  <span class="n">fr</span>
+  <span class="mf">0.0150</span>  <span class="n">ft</span>
+  <span class="mf">0.0150</span>  <span class="n">p</span>
+  <span class="mf">0.0150</span>  <span class="n">p0</span>
+  <span class="mf">0.0150</span>  <span class="n">p1</span>
+
+<span class="n">Here</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">first</span> <span class="n">one</span><span class="p">:</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">d</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="mf">0.01466935</span> <span class="mf">0.01572764</span> <span class="mf">0.01683037</span> <span class="o">...</span> <span class="mf">0.01691943</span> <span class="mf">0.01569578</span> <span class="mf">0.01454976</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01579922</span> <span class="mf">0.01698843</span> <span class="mf">0.01823976</span> <span class="o">...</span> <span class="mf">0.01824065</span> <span class="mf">0.01685886</span> <span class="mf">0.01557862</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01700229</span> <span class="mf">0.01834482</span> <span class="mf">0.01977141</span> <span class="o">...</span> <span class="mf">0.01965588</span> <span class="mf">0.01809046</span> <span class="mf">0.01665567</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="mf">0.01620709</span> <span class="mf">0.01764648</span> <span class="mf">0.01922052</span> <span class="o">...</span> <span class="mf">0.01933605</span> <span class="mf">0.01790085</span> <span class="mf">0.0165537</span> <span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01512669</span> <span class="mf">0.01641221</span> <span class="mf">0.01780488</span> <span class="o">...</span> <span class="mf">0.01780399</span> <span class="mf">0.01654179</span> <span class="mf">0.01534729</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01409477</span> <span class="mf">0.0152446</span>  <span class="mf">0.0164784</span>  <span class="o">...</span> <span class="mf">0.01638934</span> <span class="mf">0.01527646</span> <span class="mf">0.01421436</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">d0</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="mf">0.01437625</span> <span class="mf">0.01548706</span> <span class="mf">0.01666514</span> <span class="o">...</span> <span class="mf">0.01666514</span> <span class="mf">0.01548706</span> <span class="mf">0.01437625</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01548706</span> <span class="mf">0.01673475</span> <span class="mf">0.01807075</span> <span class="o">...</span> <span class="mf">0.01807075</span> <span class="mf">0.01673475</span> <span class="mf">0.01548706</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01666514</span> <span class="mf">0.01807075</span> <span class="mf">0.01959023</span> <span class="o">...</span> <span class="mf">0.01959023</span> <span class="mf">0.01807075</span> <span class="mf">0.01666514</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="mf">0.01666514</span> <span class="mf">0.01807075</span> <span class="mf">0.01959023</span> <span class="o">...</span> <span class="mf">0.01959023</span> <span class="mf">0.01807075</span> <span class="mf">0.01666514</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01548706</span> <span class="mf">0.01673475</span> <span class="mf">0.01807075</span> <span class="o">...</span> <span class="mf">0.01807075</span> <span class="mf">0.01673475</span> <span class="mf">0.01548706</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.01437625</span> <span class="mf">0.01548706</span> <span class="mf">0.01666514</span> <span class="o">...</span> <span class="mf">0.01666514</span> <span class="mf">0.01548706</span> <span class="mf">0.01437625</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">d1</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span> <span class="mf">2.9310214e-04</span>  <span class="mf">2.4057881e-04</span>  <span class="mf">1.6522847e-04</span> <span class="o">...</span>  <span class="mf">2.5428724e-04</span>
+   <span class="mf">2.0872064e-04</span>  <span class="mf">1.7351801e-04</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">3.1216009e-04</span>  <span class="mf">2.5367373e-04</span>  <span class="mf">1.6900530e-04</span> <span class="o">...</span>  <span class="mf">1.6989630e-04</span>
+   <span class="mf">1.2410045e-04</span>  <span class="mf">9.1563532e-05</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">3.3714369e-04</span>  <span class="mf">2.7406731e-04</span>  <span class="mf">1.8118456e-04</span> <span class="o">...</span>  <span class="mf">6.5652450e-05</span>
+   <span class="mf">1.9704208e-05</span> <span class="o">-</span><span class="mf">9.4723200e-06</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">4.5805585e-04</span> <span class="o">-</span><span class="mf">4.2427101e-04</span> <span class="o">-</span><span class="mf">3.6970933e-04</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.5417723e-04</span>
+  <span class="o">-</span><span class="mf">1.6990790e-04</span> <span class="o">-</span><span class="mf">1.1143985e-04</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">3.6036380e-04</span> <span class="o">-</span><span class="mf">3.2254297e-04</span> <span class="o">-</span><span class="mf">2.6587487e-04</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.6676588e-04</span>
+  <span class="o">-</span><span class="mf">1.9296970e-04</span> <span class="o">-</span><span class="mf">1.3976726e-04</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">2.8147074e-04</span> <span class="o">-</span><span class="mf">2.4245947e-04</span> <span class="o">-</span><span class="mf">1.8674540e-04</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.7580417e-04</span>
+  <span class="o">-</span><span class="mf">2.1060130e-04</span> <span class="o">-</span><span class="mf">1.6188661e-04</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">dd</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span> <span class="mf">0.02038795</span>  <span class="mf">0.01553419</span>  <span class="mf">0.00991461</span> <span class="o">...</span>  <span class="mf">0.01525863</span>  <span class="mf">0.0134771</span>
+   <span class="mf">0.01206977</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.02015619</span>  <span class="mf">0.0151585</span>   <span class="mf">0.00935242</span> <span class="o">...</span>  <span class="mf">0.00940173</span>  <span class="mf">0.00741573</span>
+   <span class="mf">0.00591226</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.02023047</span>  <span class="mf">0.01516635</span>  <span class="mf">0.00924872</span> <span class="o">...</span>  <span class="mf">0.00335129</span>  <span class="mf">0.00109039</span>
+  <span class="o">-</span><span class="mf">0.00056839</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.02748586</span> <span class="o">-</span><span class="mf">0.02347832</span> <span class="o">-</span><span class="mf">0.01887213</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.01297469</span> <span class="o">-</span><span class="mf">0.00940237</span>
+  <span class="o">-</span><span class="mf">0.006687</span>  <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.02326871</span> <span class="o">-</span><span class="mf">0.01927384</span> <span class="o">-</span><span class="mf">0.01471299</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.0147623</span>  <span class="o">-</span><span class="mf">0.01153107</span>
+  <span class="o">-</span><span class="mf">0.00902478</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.01957888</span> <span class="o">-</span><span class="mf">0.01565562</span> <span class="o">-</span><span class="mf">0.01120575</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.01654976</span> <span class="o">-</span><span class="mf">0.01359854</span>
+  <span class="o">-</span><span class="mf">0.0112607</span> <span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">fp</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span> <span class="mf">2.3523889e-05</span> <span class="o">-</span><span class="mf">2.7494747e-05</span> <span class="o">-</span><span class="mf">4.6142261e-05</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.3744381e-03</span>
+  <span class="o">-</span><span class="mf">2.4765318e-03</span> <span class="o">-</span><span class="mf">2.5420913e-03</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">2.8253578e-05</span> <span class="o">-</span><span class="mf">3.1490850e-05</span> <span class="o">-</span><span class="mf">5.5665809e-05</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.5630798e-03</span>
+  <span class="o">-</span><span class="mf">2.6640687e-03</span> <span class="o">-</span><span class="mf">2.7256690e-03</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.6333553e-05</span> <span class="o">-</span><span class="mf">2.1516280e-05</span> <span class="o">-</span><span class="mf">5.0185608e-05</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.7228037e-03</span>
+  <span class="o">-</span><span class="mf">2.8249177e-03</span> <span class="o">-</span><span class="mf">2.8843500e-03</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">2.1641932e-03</span> <span class="o">-</span><span class="mf">2.2813964e-03</span> <span class="o">-</span><span class="mf">2.3770637e-03</span> <span class="o">...</span> <span class="o">-</span><span class="mf">3.9592560e-04</span>
+  <span class="o">-</span><span class="mf">5.6503766e-04</span> <span class="o">-</span><span class="mf">6.7382312e-04</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">2.0946811e-03</span> <span class="o">-</span><span class="mf">2.1986777e-03</span> <span class="o">-</span><span class="mf">2.2811126e-03</span> <span class="o">...</span> <span class="o">-</span><span class="mf">3.3763298e-04</span>
+  <span class="o">-</span><span class="mf">4.9688172e-04</span> <span class="o">-</span><span class="mf">6.0273433e-04</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">1.9825757e-03</span> <span class="o">-</span><span class="mf">2.0702051e-03</span> <span class="o">-</span><span class="mf">2.1361131e-03</span> <span class="o">...</span> <span class="o">-</span><span class="mf">2.8446739e-04</span>
+  <span class="o">-</span><span class="mf">4.3382143e-04</span> <span class="o">-</span><span class="mf">5.3599157e-04</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">fr</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="mf">0.58427083</span> <span class="mf">0.6082849</span>  <span class="mf">0.63328177</span> <span class="o">...</span> <span class="mf">0.6348349</span>  <span class="mf">0.6097044</span>  <span class="mf">0.5855306</span> <span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.6083254</span>  <span class="mf">0.6327109</span>  <span class="mf">0.66183424</span> <span class="o">...</span> <span class="mf">0.663443</span>   <span class="mf">0.6341739</span>  <span class="mf">0.6096149</span> <span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.63334346</span> <span class="mf">0.66184974</span> <span class="mf">0.6909387</span>  <span class="o">...</span> <span class="mf">0.6926467</span>  <span class="mf">0.6633966</span>  <span class="mf">0.63469154</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="mf">0.6335817</span>  <span class="mf">0.6622526</span>  <span class="mf">0.6914552</span>  <span class="o">...</span> <span class="mf">0.6897473</span>  <span class="mf">0.66070575</span> <span class="mf">0.6322336</span> <span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.60857403</span> <span class="mf">0.6331353</span>  <span class="mf">0.6623904</span>  <span class="o">...</span> <span class="mf">0.6607817</span>  <span class="mf">0.63167226</span> <span class="mf">0.6072846</span> <span class="p">]</span>
+ <span class="p">[</span><span class="mf">0.58453256</span> <span class="mf">0.6087315</span>  <span class="mf">0.6338822</span>  <span class="o">...</span> <span class="mf">0.63232917</span> <span class="mf">0.6073121</span>  <span class="mf">0.5832728</span> <span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">ft</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span> <span class="mf">0.0012785</span>   <span class="mf">0.00119742</span>  <span class="mf">0.0011111</span>  <span class="o">...</span>  <span class="mf">0.00318776</span>  <span class="mf">0.00310654</span>
+   <span class="mf">0.00301686</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.00131722</span>  <span class="mf">0.00122571</span>  <span class="mf">0.00112941</span> <span class="o">...</span>  <span class="mf">0.00322231</span>  <span class="mf">0.00313888</span>
+   <span class="mf">0.0030473</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.0013581</span>   <span class="mf">0.00125646</span>  <span class="mf">0.00115072</span> <span class="o">...</span>  <span class="mf">0.00324172</span>  <span class="mf">0.00315533</span>
+   <span class="mf">0.0030613</span> <span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.00032756</span> <span class="o">-</span><span class="mf">0.00041616</span> <span class="o">-</span><span class="mf">0.00050753</span> <span class="o">...</span>  <span class="mf">0.00158347</span>  <span class="mf">0.00148271</span>
+   <span class="mf">0.00137564</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.00043507</span> <span class="o">-</span><span class="mf">0.00052673</span> <span class="o">-</span><span class="mf">0.00062107</span> <span class="o">...</span>  <span class="mf">0.00147183</span>  <span class="mf">0.00138643</span>
+   <span class="mf">0.00129502</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.00051574</span> <span class="o">-</span><span class="mf">0.00060837</span> <span class="o">-</span><span class="mf">0.00070339</span> <span class="o">...</span>  <span class="mf">0.00137327</span>  <span class="mf">0.00130075</span>
+   <span class="mf">0.00122262</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">p</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="o">-</span><span class="mf">0.9201083</span>  <span class="o">-</span><span class="mf">0.94142485</span> <span class="o">-</span><span class="mf">0.96298295</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.9640897</span>  <span class="o">-</span><span class="mf">0.9424115</span>
+  <span class="o">-</span><span class="mf">0.9209808</span> <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9414251</span>  <span class="o">-</span><span class="mf">0.9642257</span>  <span class="o">-</span><span class="mf">0.987366</span>   <span class="o">...</span> <span class="o">-</span><span class="mf">0.988466</span>   <span class="o">-</span><span class="mf">0.9651967</span>
+  <span class="o">-</span><span class="mf">0.9422744</span> <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9629851</span>  <span class="o">-</span><span class="mf">0.98736846</span> <span class="o">-</span><span class="mf">1.0122092</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">1.013295</span>   <span class="o">-</span><span class="mf">0.98831606</span>
+  <span class="o">-</span><span class="mf">0.9638034</span> <span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9620315</span>  <span class="o">-</span><span class="mf">0.9864852</span>  <span class="o">-</span><span class="mf">1.0114089</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">1.0103232</span>  <span class="o">-</span><span class="mf">0.9855376</span>
+  <span class="o">-</span><span class="mf">0.96121323</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.94052106</span> <span class="o">-</span><span class="mf">0.96339077</span> <span class="o">-</span><span class="mf">0.9866123</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">0.9855123</span>  <span class="o">-</span><span class="mf">0.96241975</span>
+  <span class="o">-</span><span class="mf">0.9396718</span> <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9192482</span>  <span class="o">-</span><span class="mf">0.94063103</span> <span class="o">-</span><span class="mf">0.9622668</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">0.96116006</span> <span class="o">-</span><span class="mf">0.9396444</span>
+  <span class="o">-</span><span class="mf">0.9183758</span> <span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">p0</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="o">-</span><span class="mf">0.91991323</span> <span class="o">-</span><span class="mf">0.9412575</span>  <span class="o">-</span><span class="mf">0.96284693</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.96284693</span> <span class="o">-</span><span class="mf">0.9412575</span>
+  <span class="o">-</span><span class="mf">0.91991323</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9412575</span>  <span class="o">-</span><span class="mf">0.9640891</span>  <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">-</span><span class="mf">0.9640891</span>
+  <span class="o">-</span><span class="mf">0.9412575</span> <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.96284693</span> <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">-</span><span class="mf">1.012143</span>   <span class="o">...</span> <span class="o">-</span><span class="mf">1.012143</span>   <span class="o">-</span><span class="mf">0.9872643</span>
+  <span class="o">-</span><span class="mf">0.96284693</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.96284693</span> <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">-</span><span class="mf">1.012143</span>   <span class="o">...</span> <span class="o">-</span><span class="mf">1.012143</span>   <span class="o">-</span><span class="mf">0.9872643</span>
+  <span class="o">-</span><span class="mf">0.96284693</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.9412575</span>  <span class="o">-</span><span class="mf">0.9640891</span>  <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">...</span> <span class="o">-</span><span class="mf">0.9872643</span>  <span class="o">-</span><span class="mf">0.9640891</span>
+  <span class="o">-</span><span class="mf">0.9412575</span> <span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.91991323</span> <span class="o">-</span><span class="mf">0.9412575</span>  <span class="o">-</span><span class="mf">0.96284693</span> <span class="o">...</span> <span class="o">-</span><span class="mf">0.96284693</span> <span class="o">-</span><span class="mf">0.9412575</span>
+  <span class="o">-</span><span class="mf">0.91991323</span><span class="p">]]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">----</span> <span class="n">p1</span>
+<span class="o">----------------------------------------</span>
+<span class="p">[[</span><span class="o">-</span><span class="mf">1.9506646e-04</span> <span class="o">-</span><span class="mf">1.6740267e-04</span> <span class="o">-</span><span class="mf">1.3601784e-04</span> <span class="o">...</span> <span class="o">-</span><span class="mf">1.2427544e-03</span>
+  <span class="o">-</span><span class="mf">1.1540418e-03</span> <span class="o">-</span><span class="mf">1.0675343e-03</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">1.6762824e-04</span> <span class="o">-</span><span class="mf">1.3661387e-04</span> <span class="o">-</span><span class="mf">1.0173081e-04</span> <span class="o">...</span> <span class="o">-</span><span class="mf">1.2017373e-03</span>
+  <span class="o">-</span><span class="mf">1.1076175e-03</span> <span class="o">-</span><span class="mf">1.0169116e-03</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">1.3819906e-04</span> <span class="o">-</span><span class="mf">1.0418223e-04</span> <span class="o">-</span><span class="mf">6.6171742e-05</span> <span class="o">...</span> <span class="o">-</span><span class="mf">1.1519545e-03</span>
+  <span class="o">-</span><span class="mf">1.0517898e-03</span> <span class="o">-</span><span class="mf">9.5646293e-04</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span> <span class="mf">8.1542262e-04</span>  <span class="mf">7.7908312e-04</span>  <span class="mf">7.3413475e-04</span> <span class="o">...</span>  <span class="mf">1.8199176e-03</span>
+   <span class="mf">1.7266908e-03</span>  <span class="mf">1.6336865e-03</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">7.3637860e-04</span>  <span class="mf">6.9830474e-04</span>  <span class="mf">6.5194303e-04</span> <span class="o">...</span>  <span class="mf">1.7519495e-03</span>
+   <span class="mf">1.6693083e-03</span>  <span class="mf">1.5856619e-03</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">6.6501868e-04</span>  <span class="mf">6.2645477e-04</span>  <span class="mf">5.8010087e-04</span> <span class="o">...</span>  <span class="mf">1.6868374e-03</span>
+   <span class="mf">1.6130940e-03</span>  <span class="mf">1.5374866e-03</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>These could be made into images and so forth. We’ll do this in another
+example notebook.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="saving-coefficients.html" class="btn btn-neutral float-left" title="How to save and reuse your newly generated coefficients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="make-movies.html" class="btn btn-neutral float-right" title="Making movies of your BFE field quantities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

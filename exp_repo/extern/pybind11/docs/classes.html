@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object-oriented code &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Object-oriented code</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="object-oriented-code">
+<span id="classes"></span><h1>Object-oriented code<a class="headerlink" href="#object-oriented-code" title="Link to this heading"></a></h1>
+<section id="creating-bindings-for-a-custom-type">
+<h2>Creating bindings for a custom type<a class="headerlink" href="#creating-bindings-for-a-custom-type" title="Link to this heading"></a></h2>
+<p>Let’s now look at a more complex example where we’ll create bindings for a
+custom C++ data structure named <code class="docutils literal notranslate"><span class="pre">Pet</span></code>. Its definition is given below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Pet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The binding code for <code class="docutils literal notranslate"><span class="pre">Pet</span></code> looks as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/pybind11.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+
+<span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;setName&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">setName</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getName&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">getName</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code> creates bindings for a C++ <em>class</em> or <em>struct</em>-style data
+structure. <code class="xref py py-func docutils literal notranslate"><span class="pre">init()</span></code> is a convenience function that takes the types of a
+constructor’s parameters as template arguments and wraps the corresponding
+constructor (see the <a class="reference internal" href="advanced/classes.html#custom-constructors"><span class="std std-ref">Custom constructors</span></a> section for details). An
+interactive Python session demonstrating this example is shown below:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">% python</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Molly&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">&lt;example.Pet object at 0x10cd98060&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+<span class="go">&#39;Molly&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">&quot;Charly&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+<span class="go">&#39;Charly&#39;</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Static member functions can be bound in the same way using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_static()</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Binding C++ types in unnamed namespaces (also known as anonymous namespaces)
+works reliably on many platforms, but not all. The <cite>XFAIL_CONDITION</cite> in
+tests/test_unnamed_namespace_a.py encodes the currently known conditions.
+For background see <a class="reference external" href="https://github.com/pybind/pybind11/pull/4319">#4319</a>.
+If portability is a concern, it is therefore not recommended to bind C++
+types in unnamed namespaces. It will be safest to manually pick unique
+namespace names.</p>
+</div>
+</section>
+<section id="keyword-and-default-arguments">
+<h2>Keyword and default arguments<a class="headerlink" href="#keyword-and-default-arguments" title="Link to this heading"></a></h2>
+<p>It is possible to specify keyword and default arguments using the syntax
+discussed in the previous chapter. Refer to the sections <a class="reference internal" href="basics.html#keyword-args"><span class="std std-ref">Keyword arguments</span></a>
+and <a class="reference internal" href="basics.html#default-args"><span class="std std-ref">Default arguments</span></a> for details.</p>
+</section>
+<section id="binding-lambda-functions">
+<h2>Binding lambda functions<a class="headerlink" href="#binding-lambda-functions" title="Link to this heading"></a></h2>
+<p>Note how <code class="docutils literal notranslate"><span class="pre">print(p)</span></code> produced a rather useless summary of our data structure in the example above:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">&lt;example.Pet object at 0x10cd98060&gt;</span>
+</pre></div>
+</div>
+<p>To address this, we could bind a utility function that returns a human-readable
+summary to the special method slot named <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>. Unfortunately, there is no
+suitable functionality in the <code class="docutils literal notranslate"><span class="pre">Pet</span></code> data structure, and it would be nice if
+we did not have to change it. This can easily be accomplished by binding a
+Lambda function instead:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;setName&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">setName</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getName&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">getName</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__repr__&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Pet</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&lt;example.Pet named &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&gt;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Both stateless <a class="footnote-reference brackets" href="#f1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and stateful lambda closures are supported by pybind11.
+With the above change, the same Python code now produces the following output:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">&lt;example.Pet named &#39;Molly&#39;&gt;</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Stateless closures are those with an empty pair of brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> as the capture object.</p>
+</aside>
+</aside>
+</section>
+<section id="instance-and-static-fields">
+<span id="properties"></span><h2>Instance and static fields<a class="headerlink" href="#instance-and-static-fields" title="Link to this heading"></a></h2>
+<p>We can also directly expose the <code class="docutils literal notranslate"><span class="pre">name</span></code> field using the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_readwrite()</span></code> method. A similar <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_readonly()</span></code>
+method also exists for <code class="docutils literal notranslate"><span class="pre">const</span></code> fields.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ... remainder ...</span>
+</pre></div>
+</div>
+<p>This makes it possible to write</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Molly&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Molly&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charly&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Charly&#39;</span>
+</pre></div>
+</div>
+<p>Now suppose that <code class="docutils literal notranslate"><span class="pre">Pet::name</span></code> was a private internal variable
+that can only be accessed via setters and getters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Pet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>In this case, the method <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_property()</span></code>
+(<code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_property_readonly()</span></code> for read-only data) can be used to
+provide a field-like interface within Python that will transparently call
+the setter and getter functions:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_property</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">getName</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">setName</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ... remainder ...</span>
+</pre></div>
+</div>
+<p>Write only properties can be defined by passing <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> as the
+input for the read function.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Similar functions <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_readwrite_static()</span></code>,
+<code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_readonly_static()</span></code> <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_property_static()</span></code>,
+and <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_property_readonly_static()</span></code> are provided for binding
+static variables and properties. Please also see the section on
+<a class="reference internal" href="advanced/classes.html#static-properties"><span class="std std-ref">Static properties</span></a> in the advanced part of the documentation.</p>
+</div>
+</section>
+<section id="dynamic-attributes">
+<h2>Dynamic attributes<a class="headerlink" href="#dynamic-attributes" title="Link to this heading"></a></h2>
+<p>Native Python classes can pick up new attributes dynamically:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Pet</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Molly&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charly&quot;</span>  <span class="c1"># overwrite existing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># dynamically add a new attribute</span>
+</pre></div>
+</div>
+<p>By default, classes exported from C++ do not support this and the only writable
+attributes are the ones explicitly defined using <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_readwrite()</span></code>
+or <code class="xref py py-func docutils literal notranslate"><span class="pre">class_::def_property()</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Trying to set any other attribute results in an error:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">Pet</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charly&quot;</span>  <span class="c1"># OK, attribute defined in C++</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># fail</span>
+<span class="go">AttributeError: &#39;Pet&#39; object has no attribute &#39;age&#39;</span>
+</pre></div>
+</div>
+<p>To enable dynamic attributes for C++ classes, the <code class="xref py py-class docutils literal notranslate"><span class="pre">py::dynamic_attr</span></code> tag
+must be added to the <code class="xref py py-class docutils literal notranslate"><span class="pre">py::class_</span></code> constructor:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dynamic_attr</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Now everything works as expected:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">Pet</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charly&quot;</span>  <span class="c1"># OK, overwrite value in C++</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># OK, dynamically add a new attribute</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="vm">__dict__</span>  <span class="c1"># just like a native Python class</span>
+<span class="go">{&#39;age&#39;: 2}</span>
+</pre></div>
+</div>
+<p>Note that there is a small runtime cost for a class with dynamic attributes.
+Not only because of the addition of a <code class="docutils literal notranslate"><span class="pre">__dict__</span></code>, but also because of more
+expensive garbage collection tracking which must be activated to resolve
+possible circular references. Native Python classes incur this same cost by
+default, so this is not anything to worry about. By default, pybind11 classes
+are more efficient than native Python classes. Enabling dynamic attributes
+just brings them on par.</p>
+</section>
+<section id="inheritance-and-automatic-downcasting">
+<span id="inheritance"></span><h2>Inheritance and automatic downcasting<a class="headerlink" href="#inheritance-and-automatic-downcasting" title="Link to this heading"></a></h2>
+<p>Suppose now that the example consists of two data structures with an
+inheritance relationship:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Pet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Dog</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Dog</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Pet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">bark</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;woof!&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>There are two different ways of indicating a hierarchical relationship to
+pybind11: the first specifies the C++ base class as an extra template
+parameter of the <code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">);</span>
+
+<span class="c1">// Method 1: template parameter:</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Dog</span><span class="p">,</span><span class="w"> </span><span class="n">Pet</span><span class="w"> </span><span class="cm">/* &lt;- specify C++ parent type */</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Dog&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;bark&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Dog</span><span class="o">::</span><span class="n">bark</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternatively, we can also assign a name to the previously bound <code class="docutils literal notranslate"><span class="pre">Pet</span></code>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code> object and reference it when binding the <code class="docutils literal notranslate"><span class="pre">Dog</span></code> class:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pet</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">);</span>
+<span class="n">pet</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">);</span>
+
+<span class="c1">// Method 2: pass parent class_ object:</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Dog&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pet</span><span class="w"> </span><span class="cm">/* &lt;- specify Python parent type */</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;bark&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Dog</span><span class="o">::</span><span class="n">bark</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Functionality-wise, both approaches are equivalent. Afterwards, instances will
+expose fields and methods of both types:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Molly&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Molly&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="go">&#39;woof!&#39;</span>
+</pre></div>
+</div>
+<p>The C++ classes defined above are regular non-polymorphic types with an
+inheritance relationship. This is reflected in Python:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Return a base pointer to a derived instance</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pet_store&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Molly&quot;</span><span class="p">));</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">pet_store</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>  <span class="c1"># `Dog` instance behind `Pet` pointer</span>
+<span class="go">Pet          # no pointer downcasting for regular non-polymorphic types</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="go">AttributeError: &#39;Pet&#39; object has no attribute &#39;bark&#39;</span>
+</pre></div>
+</div>
+<p>The function returned a <code class="docutils literal notranslate"><span class="pre">Dog</span></code> instance, but because it’s a non-polymorphic
+type behind a base pointer, Python only sees a <code class="docutils literal notranslate"><span class="pre">Pet</span></code>. In C++, a type is only
+considered polymorphic if it has at least one virtual function and pybind11
+will automatically recognize this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">PolymorphicPet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">PolymorphicPet</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">PolymorphicDog</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">PolymorphicPet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">bark</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;woof!&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Same binding code</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">PolymorphicPet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PolymorphicPet&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">PolymorphicDog</span><span class="p">,</span><span class="w"> </span><span class="n">PolymorphicPet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PolymorphicDog&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;bark&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PolymorphicDog</span><span class="o">::</span><span class="n">bark</span><span class="p">);</span>
+
+<span class="c1">// Again, return a base pointer to a derived instance</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pet_store2&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PolymorphicPet</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PolymorphicDog</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">pet_store2</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">PolymorphicDog  # automatically downcast</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="go">&#39;woof!&#39;</span>
+</pre></div>
+</div>
+<p>Given a pointer to a polymorphic base, pybind11 performs automatic downcasting
+to the actual derived type. Note that this goes beyond the usual situation in
+C++: we don’t just get access to the virtual functions of the base, we get the
+concrete derived type including functions and attributes that the base type may
+not even be aware of.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about polymorphic behavior see <a class="reference internal" href="advanced/classes.html#overriding-virtuals"><span class="std std-ref">Overriding virtual functions in Python</span></a>.</p>
+</div>
+</section>
+<section id="overloaded-methods">
+<h2>Overloaded methods<a class="headerlink" href="#overloaded-methods" title="Link to this heading"></a></h2>
+<p>Sometimes there are several overloaded C++ methods with the same name taking
+different kinds of input arguments:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Pet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">age</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Attempting to bind <code class="docutils literal notranslate"><span class="pre">Pet::set</span></code> will cause an error since the compiler does not
+know which method the user intended to select. We can disambiguate by casting
+them to function pointers. Binding multiple functions to the same Python name
+automatically creates a chain of function overloads that will be tried in
+sequence.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">Pet</span><span class="o">::*</span><span class="p">)(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s age&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">Pet</span><span class="o">::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s name&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The overload signatures are also visible in the method’s docstring:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">Pet</span><span class="p">)</span>
+
+<span class="go">class Pet(__builtin__.object)</span>
+<span class="go"> |  Methods defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  __init__(...)</span>
+<span class="go"> |      Signature : (Pet, str, int) -&gt; NoneType</span>
+<span class="go"> |</span>
+<span class="go"> |  set(...)</span>
+<span class="go"> |      1. Signature : (Pet, int) -&gt; NoneType</span>
+<span class="go"> |</span>
+<span class="go"> |      Set the pet&#39;s age</span>
+<span class="go"> |</span>
+<span class="go"> |      2. Signature : (Pet, str) -&gt; NoneType</span>
+<span class="go"> |</span>
+<span class="go"> |      Set the pet&#39;s name</span>
+</pre></div>
+</div>
+<p>If you have a C++14 compatible compiler <a class="footnote-reference brackets" href="#cpp14" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, you can use an alternative
+syntax to cast the overloaded function:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">overload_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s age&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">overload_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s name&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">py::overload_cast</span></code> only requires the parameter types to be specified.
+The return type and class are deduced. This avoids the additional noise of
+<code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">(Pet::*)()</span></code> as seen in the raw cast. If a function is overloaded based
+on constness, the <code class="docutils literal notranslate"><span class="pre">py::const_</span></code> tag should be used:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Widget</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Widget&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;foo_mutable&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">overload_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Widget</span><span class="o">::</span><span class="n">foo</span><span class="p">))</span>
+<span class="w">   </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;foo_const&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">py</span><span class="o">::</span><span class="n">overload_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Widget</span><span class="o">::</span><span class="n">foo</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">const_</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>If you prefer the <code class="docutils literal notranslate"><span class="pre">py::overload_cast</span></code> syntax but have a C++11 compatible compiler only,
+you can use <code class="docutils literal notranslate"><span class="pre">py::detail::overload_cast_impl</span></code> with an additional set of parentheses:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">overload_cast_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">detail</span><span class="o">::</span><span class="n">overload_cast_impl</span><span class="o">&lt;</span><span class="n">Args</span><span class="p">...</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">overload_cast_</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s age&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">overload_cast_</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">()(</span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">set</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Set the pet&#39;s name&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="cpp14" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>A compiler which supports the <code class="docutils literal notranslate"><span class="pre">-std=c++14</span></code> flag.</p>
+</aside>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To define multiple overloaded constructors, simply declare one after the
+other using the <code class="docutils literal notranslate"><span class="pre">.def(py::init&lt;...&gt;())</span></code> syntax. The existing machinery
+for specifying keyword and default arguments also works.</p>
+</div>
+</section>
+<section id="enumerations-and-internal-types">
+<h2>Enumerations and internal types<a class="headerlink" href="#enumerations-and-internal-types" title="Link to this heading"></a></h2>
+<p>Let’s now suppose that the example class contains internal types like enumerations, e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">Kind</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">Cat</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Attributes</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">Pet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Kind</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="p">(</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Kind</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Attributes</span><span class="w"> </span><span class="n">attr</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The binding code for this example looks as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pet</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pet&quot;</span><span class="p">);</span>
+
+<span class="n">pet</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">Pet</span><span class="o">::</span><span class="n">Kind</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">name</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">type</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;attr&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">attr</span><span class="p">);</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">enum_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">::</span><span class="n">Kind</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pet</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kind&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="s">&quot;Dog&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Pet</span><span class="o">::</span><span class="n">Kind</span><span class="o">::</span><span class="n">Dog</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="s">&quot;Cat&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Pet</span><span class="o">::</span><span class="n">Kind</span><span class="o">::</span><span class="n">Cat</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">export_values</span><span class="p">();</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">::</span><span class="n">Attributes</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pet</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Attributes&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pet</span><span class="o">::</span><span class="n">Attributes</span><span class="o">::</span><span class="n">age</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To ensure that the nested types <code class="docutils literal notranslate"><span class="pre">Kind</span></code> and <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> are created within the scope of <code class="docutils literal notranslate"><span class="pre">Pet</span></code>, the
+<code class="docutils literal notranslate"><span class="pre">pet</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code> instance must be supplied to the <code class="xref py py-class docutils literal notranslate"><span class="pre">enum_</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">class_</span></code>
+constructor. The <code class="xref py py-func docutils literal notranslate"><span class="pre">enum_::export_values()</span></code> function exports the enum entries
+into the parent scope, which should be skipped for newer C++11-style strongly
+typed enums.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Lucy&quot;</span><span class="p">,</span> <span class="n">Pet</span><span class="o">.</span><span class="n">Cat</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">type</span>
+<span class="go">Kind.Cat</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+<span class="go">1L</span>
+</pre></div>
+</div>
+<p>The entries defined by the enumeration type are exposed in the <code class="docutils literal notranslate"><span class="pre">__members__</span></code> property:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Pet</span><span class="o">.</span><span class="n">Kind</span><span class="o">.</span><span class="n">__members__</span>
+<span class="go">{&#39;Dog&#39;: Kind.Dog, &#39;Cat&#39;: Kind.Cat}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">name</span></code> property returns the name of the enum value as a unicode string.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is also possible to use <code class="docutils literal notranslate"><span class="pre">str(enum)</span></code>, however these accomplish different
+goals. The following shows how these two approaches differ.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Lucy&quot;</span><span class="p">,</span> <span class="n">Pet</span><span class="o">.</span><span class="n">Cat</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pet_type</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">type</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pet_type</span>
+<span class="go">Pet.Cat</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">pet_type</span><span class="p">)</span>
+<span class="go">&#39;Pet.Cat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pet_type</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Cat&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the special tag <code class="docutils literal notranslate"><span class="pre">py::arithmetic()</span></code> is specified to the <code class="docutils literal notranslate"><span class="pre">enum_</span></code>
+constructor, pybind11 creates an enumeration that also supports rudimentary
+arithmetic and bit-level operations like comparisons, and, or, xor, negation,
+etc.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">enum_</span><span class="o">&lt;</span><span class="n">Pet</span><span class="o">::</span><span class="n">Kind</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pet</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kind&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arithmetic</span><span class="p">())</span>
+<span class="w">   </span><span class="p">...</span>
+</pre></div>
+</div>
+<p>By default, these are omitted to conserve space.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Contrary to Python customs, enum values from the wrappers should not be compared using <code class="docutils literal notranslate"><span class="pre">is</span></code>, but with <code class="docutils literal notranslate"><span class="pre">==</span></code> (see <a class="reference external" href="https://github.com/pybind/pybind11/issues/1177">#1177</a> for background).</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

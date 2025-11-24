@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embedding the interpreter &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Embedding the interpreter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/embedding.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="embedding-the-interpreter">
+<span id="embedding"></span><h1>Embedding the interpreter<a class="headerlink" href="#embedding-the-interpreter" title="Link to this heading"></a></h1>
+<p>While pybind11 is mainly focused on extending Python using C++, it’s also
+possible to do the reverse: embed the Python interpreter into a C++ program.
+All of the other documentation pages still apply here, so refer to them for
+general pybind11 usage. This section will cover a few extra things required
+for embedding.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>A basic executable with an embedded interpreter can be created with just a few
+lines of CMake and the <code class="docutils literal notranslate"><span class="pre">pybind11::embed</span></code> target, as shown below. For more
+information, see <span class="xref std std-doc">/compiling</span>.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.5...3.29</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span><span class="w">  </span><span class="c"># or `add_subdirectory(pybind11)`</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">main.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">pybind11::embed</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The essential structure of the <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> file looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span><span class="c1"> // everything needed for embedding</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span><span class="w"> </span><span class="c1">// start the interpreter and keep it alive</span>
+
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// use the Python API</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The interpreter must be initialized before using any Python API, which includes
+all the functions and classes in pybind11. The RAII guard class <code class="docutils literal notranslate"><span class="pre">scoped_interpreter</span></code>
+takes care of the interpreter lifetime. After the guard is destroyed, the interpreter
+shuts down and clears its memory. No Python functions can be called after this.</p>
+</section>
+<section id="executing-python-code">
+<h2>Executing Python code<a class="headerlink" href="#executing-python-code" title="Link to this heading"></a></h2>
+<p>There are a few different ways to run Python code. One option is to use <code class="docutils literal notranslate"><span class="pre">eval</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exec</span></code> or <code class="docutils literal notranslate"><span class="pre">eval_file</span></code>, as explained in <a class="reference internal" href="pycpp/utilities.html#eval"><span class="std std-ref">Evaluating Python expressions from strings and files</span></a>. Here is a quick example in
+the context of an executable with an embedded interpreter:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span>
+
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">exec</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">        kwargs = dict(name=&quot;World&quot;, number=42)</span>
+<span class="s">        message = &quot;Hello, {name}! The answer is {number}&quot;.format(**kwargs)</span>
+<span class="s">        print(message)</span>
+<span class="s">    </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Alternatively, similar results can be achieved using pybind11’s API (see
+<span class="xref std std-doc">/advanced/pycpp/index</span> for more details).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">kwargs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;number&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">42</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, {name}! The answer is {number}&quot;</span><span class="n">_s</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">);</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The two approaches can also be combined:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">locals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;number&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">42</span><span class="p">);</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">exec</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">        message = &quot;Hello, {name}! The answer is {number}&quot;.format(**locals())</span>
+<span class="s">    </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">globals</span><span class="p">(),</span><span class="w"> </span><span class="n">locals</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">locals</span><span class="p">[</span><span class="s">&quot;message&quot;</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="importing-modules">
+<h2>Importing modules<a class="headerlink" href="#importing-modules" title="Link to this heading"></a></h2>
+<p>Python modules can be imported using <code class="docutils literal notranslate"><span class="pre">module_::import()</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;sys&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;path&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>For convenience, the current working directory is included in <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> when
+embedding the interpreter. This makes it easy to import local Python files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;calc.py located in the working directory&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="n">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;calc&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Modules can be reloaded using <code class="docutils literal notranslate"><span class="pre">module_::reload()</span></code> if the source is modified e.g.
+by an external process. This can be useful in scenarios where the application
+imports a user defined data processing script which needs to be updated after
+changes by the user. Note that this function does not reload modules recursively.</p>
+</section>
+<section id="adding-embedded-modules">
+<span id="embedding-modules"></span><h2>Adding embedded modules<a class="headerlink" href="#adding-embedded-modules" title="Link to this heading"></a></h2>
+<p>Embedded binary modules can be added using the <code class="docutils literal notranslate"><span class="pre">PYBIND11_EMBEDDED_MODULE</span></code> macro.
+Note that the definition must be placed at global scope. They can be imported
+like any other module.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+
+<span class="n">PYBIND11_EMBEDDED_MODULE</span><span class="p">(</span><span class="n">fast_calc</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// `m` is a `py::module_` which is used to bind functions and classes</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">fast_calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;fast_calc&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fast_calc</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">).</span><span class="n">cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Unlike extension modules where only a single binary module can be created, on
+the embedded side an unlimited number of modules can be added using multiple
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_EMBEDDED_MODULE</span></code> definitions (as long as they have unique names).</p>
+<p>These modules are added to Python’s list of builtins, so they can also be
+imported in pure Python files loaded by the interpreter. Everything interacts
+naturally:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;py_module.py located in the working directory&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cpp_module</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">cpp_module</span><span class="o">.</span><span class="n">a</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/embed.h&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+
+<span class="n">PYBIND11_EMBEDDED_MODULE</span><span class="p">(</span><span class="n">cpp_module</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">scoped_interpreter</span><span class="w"> </span><span class="n">guard</span><span class="p">{};</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">py_module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;py_module&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">locals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;fmt&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;{} + {} = {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">py_module</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__dict__&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">locals</span><span class="p">[</span><span class="s">&quot;a&quot;</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">locals</span><span class="p">[</span><span class="s">&quot;b&quot;</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">exec</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">        c = a + b</span>
+<span class="s">        message = fmt.format(a, b, c)</span>
+<span class="s">    </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">globals</span><span class="p">(),</span><span class="w"> </span><span class="n">locals</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">locals</span><span class="p">[</span><span class="s">&quot;c&quot;</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">locals</span><span class="p">[</span><span class="s">&quot;message&quot;</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1 + 2 = 3&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="interpreter-lifetime">
+<h2>Interpreter lifetime<a class="headerlink" href="#interpreter-lifetime" title="Link to this heading"></a></h2>
+<p>The Python interpreter shuts down when <code class="docutils literal notranslate"><span class="pre">scoped_interpreter</span></code> is destroyed. After
+this, creating a new instance will restart the interpreter. Alternatively, the
+<code class="docutils literal notranslate"><span class="pre">initialize_interpreter</span></code> / <code class="docutils literal notranslate"><span class="pre">finalize_interpreter</span></code> pair of functions can be used
+to directly set the state at any time.</p>
+<p>Modules created with pybind11 can be safely re-initialized after the interpreter
+has been restarted. However, this may not apply to third-party extension modules.
+The issue is that Python itself cannot completely unload extension modules and
+there are several caveats with regard to interpreter restarting. In short, not
+all memory may be freed, either due to Python reference cycles or user-created
+global data. All the details can be found in the CPython documentation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Creating two concurrent <code class="docutils literal notranslate"><span class="pre">scoped_interpreter</span></code> guards is a fatal error. So is
+calling <code class="docutils literal notranslate"><span class="pre">initialize_interpreter</span></code> for a second time after the interpreter
+has already been initialized.</p>
+<p>Do not use the raw CPython API functions <code class="docutils literal notranslate"><span class="pre">Py_Initialize</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Py_Finalize</span></code> as these do not properly handle the lifetime of
+pybind11’s internal data.</p>
+</div>
+</section>
+<section id="sub-interpreter-support">
+<h2>Sub-interpreter support<a class="headerlink" href="#sub-interpreter-support" title="Link to this heading"></a></h2>
+<p>Creating multiple copies of <code class="docutils literal notranslate"><span class="pre">scoped_interpreter</span></code> is not possible because it
+represents the main Python interpreter. Sub-interpreters are something different
+and they do permit the existence of multiple interpreters. This is an advanced
+feature of the CPython API and should be handled with care. pybind11 does not
+currently offer a C++ interface for sub-interpreters, so refer to the CPython
+documentation for all the details regarding this feature.</p>
+<p>We’ll just mention a couple of caveats the sub-interpreters support in pybind11:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Sub-interpreters will not receive independent copies of embedded modules.
+Instead, these are shared and modifications in one interpreter may be
+reflected in another.</p></li>
+<li><p>Managing multiple threads, multiple interpreters and the GIL can be
+challenging and there are several caveats here, even within the pure
+CPython API (please refer to the Python docs for details). As for
+pybind11, keep in mind that <code class="docutils literal notranslate"><span class="pre">gil_scoped_release</span></code> and <code class="docutils literal notranslate"><span class="pre">gil_scoped_acquire</span></code>
+do not take sub-interpreters into account.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

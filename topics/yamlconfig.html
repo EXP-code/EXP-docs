@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is YAML? &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A YAML primer" href="yaml-primer.html" />
+    <link rel="prev" title="Centering" href="centering.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What is YAML?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="yaml-primer.html">A YAML primer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#some-additional-explanation">Some additional explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-on-the-global-stanza">More on the Global stanza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-metadata">Additional metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What is YAML?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/yamlconfig.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-is-yaml">
+<span id="yamlconfig"></span><h1>What is YAML?<a class="headerlink" href="#what-is-yaml" title="Link to this heading"></a></h1>
+<p>EXP and pyEXP use YAML for specifying configurations.  YAML is a data
+serialization language that is often used for writing configuration
+files. The official <cite>YAML documentation &lt;https://yaml.org&gt;</cite> says YAML
+stands for yet another markup language or YAML ain’t markup language
+(a recursive acronym), emphasizing that YAML is about data not
+documents.</p>
+<div class="toctree-wrapper compound" id="index-0">
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="yaml-primer.html"><span class="doc">A YAML primer</span></a></dt><dd><p>An optional quick introduction to YAML syntax</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Here and throughout the documentation, we give examples of
+configuring EXP.  However, this is not a complete description of
+all the available parameters and options for every method.</p>
+<p>For a more complete description of EXP classes and methods, you may
+configure and build the Doxygen manual which provides a detailed
+description of the classes, methods, and their arguments.  You may
+do this by specifying <cite>-DBUILD_DOCS=ON</cite> when invoking CMake or
+toggle the <cite>BUILD_DOCS</cite> parameter in <code class="docutils literal notranslate"><span class="pre">ccmake</span></code>.  <cite>BUILD_DOCS=OFF</cite>
+by default.</p>
+<p>The Doxygen web manual will be built in the <code class="docutils literal notranslate"><span class="pre">docs/html</span></code> directory
+in the top-level <code class="docutils literal notranslate"><span class="pre">EXP</span></code> directory.  You can start the Doxygen
+manual in a web browser with the URL
+<code class="docutils literal notranslate"><span class="pre">file:///&lt;top-level-EXP-src&gt;/docs/html/index.html</span></code>. Doxygen
+provides a search bar in the upper right corner and a navigation
+bar on the left.</p>
+</div>
+</section>
+<section id="an-annotated-exp-yaml-configuration">
+<span id="exp-config"></span><h1>An annotated EXP YAML configuration<a class="headerlink" href="#an-annotated-exp-yaml-configuration" title="Link to this heading"></a></h1>
+<p>An example is probably better than paragraphs of description.  So here
+is an EXP YAML file with annotation.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="c1"># YAML 1.2</span>
+<span class="c1"># See: http://yaml.org for more info.  EXP uses the</span>
+<span class="c1"># yaml-cpp library (http://github.com/jbeder/yaml-cpp)</span>
+<span class="c1"># for parsing and emitting YAML</span>
+<span class="c1">#</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="c1"># These parameters control the simulation</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="nt">Global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outdir     </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/user/Nbody</span>
+<span class="w">  </span><span class="nt">nbodmax    </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000</span>
+<span class="w">  </span><span class="nt">nthrds     </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">dtime      </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05</span>
+<span class="w">  </span><span class="nt">ldlibdir   </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/user/lib/user</span>
+<span class="w">  </span><span class="nt">runtag     </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run1</span>
+<span class="w">  </span><span class="nt">nsteps     </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">multistep  </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">infile     </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OUT.run1.chkpt</span>
+
+<span class="c1"># ------------------------------------------------------</span>
+<span class="c1"># This is a sequence of components.</span>
+<span class="c1">#</span>
+<span class="c1"># Each component file should contain four fields</span>
+<span class="c1"># deliminated by &#39;:&#39; characters.</span>
+<span class="c1">#</span>
+<span class="c1"># The first is the Force name.  The parameters for</span>
+<span class="c1"># the force are included as a parameter map.</span>
+<span class="c1">#</span>
+<span class="c1"># The second is the list of parameters that that will</span>
+<span class="c1"># be passed to the Component on creation.</span>
+<span class="c1">#</span>
+<span class="c1"># The third is the name of the bodies file (in ascii).</span>
+<span class="c1">#</span>
+<span class="c1"># The fourth is the force name or id and list of</span>
+<span class="c1"># parameters that will be passed to the Force.</span>
+<span class="c1">#</span>
+<span class="c1"># Each indented stanza beginning with &#39;-&#39; is a component</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="nt">Components</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name       </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dark halo</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nlevel</span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> indexing</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">,</span><span class="nt"> EJ</span><span class="p">:</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="nt"> nEJkeep</span><span class="p">:</span><span class="w"> </span><span class="nv">256</span><span class="p p-Indicator">,</span><span class="nt"> EJdryrun</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">}</span>
+<span class="w">    </span><span class="nt">bodyfile   </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">halo.bod</span>
+<span class="w">    </span><span class="nt">force </span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sphereSL</span>
+<span class="w">      </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">rmax </span><span class="p">:</span><span class="w"> </span><span class="nv">27.5</span><span class="p p-Indicator">}</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name       </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">star disk</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nlevel</span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> indexing</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">,</span><span class="nt"> EJ</span><span class="p">:</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="nt"> nEJkeep</span><span class="p">:</span><span class="w"> </span><span class="nv">256</span><span class="p p-Indicator">,</span><span class="nt"> EJdryrun</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">}</span>
+<span class="w">    </span><span class="nt">bodyfile   </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disk.bod</span>
+<span class="w">    </span><span class="nt">force </span><span class="p">:</span>
+<span class="w">    </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cylinder</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">acyl</span><span class="p">:</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="nt"> nmax</span><span class="p">:</span><span class="w"> </span><span class="nv">32</span><span class="p p-Indicator">,</span><span class="nt"> mmax</span><span class="p">:</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="nt"> hcyl</span><span class="p">:</span><span class="w"> </span><span class="nv">0.05</span><span class="p p-Indicator">,</span><span class="nt"> ncylorder</span><span class="p">:</span><span class="w"> </span><span class="nv">24</span><span class="p p-Indicator">,</span><span class="nt"> pca</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">,</span><span class="nt"> hallfreq</span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="p p-Indicator">,</span><span class="nt"> pcavtk</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">}</span>
+
+<span class="c1">#</span>
+<span class="c1"># The parameters could be expressed like this,</span>
+<span class="c1"># equivalently:</span>
+<span class="c1">#</span>
+<span class="c1">#       parameters :</span>
+<span class="c1">#         acyl : 1.0</span>
+<span class="c1">#         nmax : 32</span>
+<span class="c1">#         mmax : 2</span>
+<span class="c1">#         hcyl : 0.05</span>
+<span class="c1">#         pca  : true</span>
+<span class="c1">#         ncylorder : 24</span>
+<span class="c1">#         hallfreq : 10</span>
+<span class="c1">#         pcavtk : true</span>
+
+<span class="c1"># ------------------------------------------------------</span>
+<span class="c1"># This is a sequence of outputs</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="nt">Output</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outlog</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nint </span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outps</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nint </span><span class="p">:</span><span class="w"> </span><span class="nv">5</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outpsp</span>
+<span class="w">    </span><span class="nt">parameters </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">nint </span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> timer </span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">}</span>
+
+<span class="c1"># ------------------------------------------------------</span>
+<span class="c1"># This is a sequence of external forces</span>
+<span class="c1"># This can be empty (or missing)</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="nt">External</span><span class="p">:</span>
+
+<span class="c1"># Currently empty</span>
+
+<span class="c1"># ------------------------------------------------------</span>
+<span class="c1"># List of interations to exclude as name1 : name2 map</span>
+<span class="c1">#  entries.  This can be empty (or missing)</span>
+<span class="c1"># ------------------------------------------------------</span>
+<span class="nt">Interaction</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>…</p>
+<section id="some-additional-explanation">
+<h2>Some additional explanation<a class="headerlink" href="#some-additional-explanation" title="Link to this heading"></a></h2>
+<p id="index-1">The main configuration file identified on the <code class="docutils literal notranslate"><span class="pre">exp</span></code> command line as
+the first parameter or optionally using the <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag. The default
+parameter file is named <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> if no config file is given.</p>
+<p>The parameter file is divided into stanzas.  Each stanza begins with a
+tag of the form <code class="docutils literal notranslate"><span class="pre">stanza_name</span></code>.  Each stanza is followed by lines
+which contain Key and Value pairs demarcated in standard YAML syntax
+by a ‘:’.  Each stanza is a YAML node and the order of nodes in the
+YAML sequence is not significant.  I usually put the <code class="docutils literal notranslate"><span class="pre">Global</span></code> stanza
+first anyhow, but note that YAML emitters are not required to preserve
+order.</p>
+<p>A line may be commented with a leading ‘#’.  The YAML EXP
+configuration file has 5 sections or ‘nodes’ in YAML parlance.  The
+<code class="docutils literal notranslate"><span class="pre">Components</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, and <code class="docutils literal notranslate"><span class="pre">Output</span></code> nodes are sequences that
+instruct the containers to build particular objects.  Full parameter
+lists for the <code class="docutils literal notranslate"><span class="pre">Component</span></code>, <code class="docutils literal notranslate"><span class="pre">Output</span></code> and <code class="docutils literal notranslate"><span class="pre">ExternalForce</span></code> classes
+are listed in the manpage for each class in the <a class="reference internal" href="../doxygen.html#doxygen"><span class="std std-ref">Doxygen web
+documentation</span></a>.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Global:</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>This stanza defines basic features of the simulation such as name,
+time step and time step parameters, and working directory.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">Key</span></code> defines a specific parameter value or boolean toggle.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Components:</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>This stanza defines the phase-space components with associated
+parameters and force methods as a list.  Each list element starts
+with ‘-’ and has four fields:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key word</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>the mnemonic name for the component</p></td>
+</tr>
+<tr class="row-odd"><td><p>parameters</p></td>
+<td><p>a list of key: value pairs</p></td>
+</tr>
+<tr class="row-even"><td><p>bodyfile</p></td>
+<td><p>the name of the ascii phase-space file to initialize this component</p></td>
+</tr>
+<tr class="row-odd"><td><p>force</p></td>
+<td><p>the method for computing the potential and acceleration</p></td>
+</tr>
+</tbody>
+</table>
+<p>The mnemonic name may contain spaces.  The body file is in EXP
+native formation.  EXP has its own hierarchical phase space
+structure that we call <a class="reference internal" href="exp-phase-space.html#exp-phase-space"><span class="std std-ref">PSP</span></a>.  EXP provides a
+number of standalone routines to manipulate, visualize and summarize
+the content of PSP files.  EXP uses the list index internally to
+describe the component. However, there is support for reflection by
+mnemonic name.</p>
+<p>For example, you could have a stellar disk component and a dark matter halo component.
+The <strong>dark halo</strong> is the dark matter halo with a spherical basis, where parameters can
+be set as follows:</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the halo basis config</span>
+
+<span class="n">Components</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">name</span><span class="p">:</span>      <span class="n">dark</span> <span class="n">halo</span>             <span class="c1">#component name, this is up to you</span>
+     <span class="n">bodyfile</span><span class="p">:</span>  <span class="n">halo</span><span class="o">.</span><span class="n">bods</span>             <span class="c1">#body file, this can be omitted if you are only interested in making a basis and not a simulation</span>
+     <span class="n">parameters</span><span class="p">:</span>
+        <span class="c1">#leaving blank to set to defaults, these are expert parameters</span>
+     <span class="n">force</span>
+         <span class="nb">id</span><span class="p">:</span>    <span class="n">sphereSL</span>              <span class="c1">#adaptive basis, here the sphereSL type</span>
+     <span class="n">parameters</span> <span class="p">:</span>
+         <span class="n">numr</span><span class="p">:</span>  <span class="mi">2000</span>                  <span class="c1"># number of radial grid points</span>
+         <span class="n">rmin</span><span class="p">:</span>  <span class="mf">0.0001</span>                <span class="c1"># smallest radial grid point</span>
+         <span class="n">rmax</span><span class="p">:</span>  <span class="mf">1.95</span>                  <span class="c1"># largest radial grid point</span>
+         <span class="n">Lmax</span><span class="p">:</span>  <span class="mi">4</span>                     <span class="c1"># maximum spherical harmonic degree</span>
+         <span class="n">nmax</span><span class="p">:</span>  <span class="mi">10</span>                    <span class="c1"># maximum radial order</span>
+         <span class="n">rmapping</span><span class="p">:</span> <span class="mf">0.0667</span>             <span class="c1"># radius for coordinate mapping</span>
+         <span class="n">modelname</span><span class="p">:</span> <span class="n">SLGridSph</span><span class="o">.</span><span class="n">model</span>   <span class="c1"># model file name</span>
+         <span class="n">Cachename</span><span class="p">:</span> <span class="n">slgrid_sph_cache</span>  <span class="c1"># cache name, this can be omitted if you are only interested in making a basis and not a simulation</span>
+</pre></div>
+</div>
+<p>The parameters <em>rmin</em> and <em>rmax</em> define the inner and outer radii for the basis in virial units
+(e.g. where <span class="math notranslate nohighlight">\(R_{vir} = 1\)</span>), <em>Lmax</em> and <em>nmax</em> describe the maximum harmonic and radial
+orders for the basis, respectively. The <em>rmapping</em> parameter adjusts the internal coordinate mapping
+and a good choice is the characteristic or scale radius of the halo.</p>
+<p>The <strong>star disk</strong> is the stellar disk with a cylindrical basis. Parameters for this component
+are set as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">name</span><span class="p">:</span>      <span class="n">disk</span>                  <span class="c1">#component name, this is up to you</span>
+  <span class="n">bodyfile</span><span class="p">:</span>  <span class="n">disk</span><span class="o">.</span><span class="n">bods</span>             <span class="c1">#body file, this can be omitted if you are only interested in making a basis and not a simulation</span>
+  <span class="n">parameters</span><span class="p">:</span>
+     <span class="c1">#leaving blank to set to defaults, these are expert parameters</span>
+  <span class="n">force</span><span class="p">:</span>
+      <span class="nb">id</span><span class="p">:</span>    <span class="n">cylinder</span>              <span class="c1">#adaptive basis, here the cylindrical type</span>
+  <span class="n">parameters</span><span class="p">:</span>
+      <span class="n">acyl</span><span class="p">:</span> <span class="mf">0.01</span>                   <span class="c1"># radial scale length for the disk basis reconstruction</span>
+      <span class="n">hcyl</span><span class="p">:</span> <span class="mf">0.001</span>                  <span class="c1"># vertical scale height for the disk basis reconstruction</span>
+      <span class="n">nmaxfid</span><span class="p">:</span> <span class="mi">32</span>                  <span class="c1"># maximum radial order for spherical basis</span>
+      <span class="n">lmaxfid</span><span class="p">:</span> <span class="mi">32</span>                  <span class="c1"># maximum harmonic order for spherical basis</span>
+      <span class="n">mmax</span><span class="p">:</span> <span class="mi">6</span>                      <span class="c1"># maximum azimuthal order of cylindrical basis</span>
+      <span class="n">nmax</span><span class="p">:</span> <span class="mi">8</span>                      <span class="c1"># maximum radial order of cylindrical basis</span>
+      <span class="n">ncylodd</span><span class="p">:</span> <span class="mi">3</span>                   <span class="c1"># vertically anti-symmetric basis functions</span>
+      <span class="n">ncylnx</span><span class="p">:</span> <span class="mi">256</span>                  <span class="c1"># grid points in radial direction</span>
+      <span class="n">ncylny</span><span class="p">:</span> <span class="mi">128</span>                  <span class="c1"># grid points in vertical direction</span>
+      <span class="n">vflag</span><span class="p">:</span> <span class="mi">0</span>                     <span class="c1"># verbose output flag</span>
+      <span class="n">logr</span><span class="p">:</span> <span class="n">false</span>                  <span class="c1"># logarithmically spaced radial grid</span>
+      <span class="n">density</span><span class="p">:</span> <span class="n">false</span>               <span class="c1"># generate density basis functions</span>
+      <span class="n">eof_file</span><span class="p">:</span> <span class="o">.</span><span class="n">eof</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">run0</span>    <span class="c1"># EOF cache file name</span>
+</pre></div>
+</div>
+<p>The <em>ncylodd</em> parameters sets the number of vertically anti-symmetric basis functions. The first
+<em>nmax-ncylodd</em> basis functions are symmetric and the last <em>ncylodd</em> are vertically anti-symmetric.
+You can adjust these parameters to provide the desired number of basis functions,
+anticipating the degree of vertical symmetry. The parameters <em>acyl</em> and <em>hcyl</em> are the scale length and height,
+respectively, in virial units.</p>
+<p>See <a class="reference internal" href="howtosim.html#howtosim"><span class="std std-ref">how to run simulations</span></a> for how to generate the relevant files.</p>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">Output:</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>The list of output methods to be run after each step at the user
+specified frequency.  Again, each list item begins with ‘-’ and
+there are two fields:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key word</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>the name of the <code class="docutils literal notranslate"><span class="pre">Output</span></code> class</p></td>
+</tr>
+<tr class="row-odd"><td><p>parameters</p></td>
+<td><p>a list of key: value pairs</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> is the class name in lower case.  The id value is
+parsed and used to construct a class of that type.  EXP
+will terminate with an error message if the class does not exist.
+You can have as many instances of these as you like (there might be
+occasional reasons to have duplicates).
+See <a class="reference internal" href="EXP-output.html#exp-output"><span class="std std-ref">EXP outputs</span></a> for more information on EXP outputs
+and the parameter options.</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">External:</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>All of the external forces and phase-space manipulations that occur
+in addition to the gravitational fields generated by the phase space
+itself.  These have the same two fields as the <code class="docutils literal notranslate"><span class="pre">Output</span></code> node and
+the same overall keys: the <code class="docutils literal notranslate"><span class="pre">id</span></code> key is the class name in lower
+case and the <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are a list key: value pairs.</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">Interaction:</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>This stanza defines the couplings between all of the phase-space
+components to exclude.  These may be toggled to explore the
+influence of the various phase-space components on each other.</p>
+<p>Key and Value pairs here define the interactions between components
+to remove.  Think: Key feels Value to get the sense of the
+interaction.</p>
+<p>If no pairs are listed, all components interact with each other.</p>
+</div></blockquote>
+</section>
+<section id="more-on-the-global-stanza">
+<h2>More on the Global stanza<a class="headerlink" href="#more-on-the-global-stanza" title="Link to this heading"></a></h2>
+<p>The allowed parameters in the <code class="docutils literal notranslate"><span class="pre">Global</span></code> stanza are listed in the
+<code class="docutils literal notranslate"><span class="pre">Configuration</span> <span class="pre">files</span></code> sidebar page in the Doxygen web documentation
+which is reproduced here for completeness. We provide the key words and
+their definitions below, separating key words into those that are changeable
+and of interest to users and those that are “expert” parameters that should
+generally not be changed unless there is a specific reason. When in doubt, use the
+automatically supplied default value that you get without the key word.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key word</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nsteps</p></td>
+<td><p>maximum number of steps to execute</p></td>
+</tr>
+<tr class="row-odd"><td><p>nthrds</p></td>
+<td><p>number of threads per process (e.g. one per processor)</p></td>
+</tr>
+<tr class="row-even"><td><p>ngpus</p></td>
+<td><p>the number of GPUs to assign on each node (can be more than the physical number)</p></td>
+</tr>
+<tr class="row-odd"><td><p>time</p></td>
+<td><p>current or initial time on start up</p></td>
+</tr>
+<tr class="row-even"><td><p>dtime</p></td>
+<td><p>time step value</p></td>
+</tr>
+<tr class="row-odd"><td><p>NICE</p></td>
+<td><p>Unix process priority</p></td>
+</tr>
+<tr class="row-even"><td><p>VERBOSE</p></td>
+<td><p>output logging level</p></td>
+</tr>
+<tr class="row-odd"><td><p>runtime</p></td>
+<td><p>maximum runtime in wall clock hours</p></td>
+</tr>
+<tr class="row-even"><td><p>multistep</p></td>
+<td><p>number of time step levels</p></td>
+</tr>
+<tr class="row-odd"><td><p>ldlibdir</p></td>
+<td><p>directory containing loadable modules</p></td>
+</tr>
+<tr class="row-even"><td><p>infile</p></td>
+<td><p>input file for restart</p></td>
+</tr>
+<tr class="row-odd"><td><p>parmfile</p></td>
+<td><p>parameter dump file</p></td>
+</tr>
+<tr class="row-even"><td><p>outdir</p></td>
+<td><p>directory for output</p></td>
+</tr>
+<tr class="row-odd"><td><p>runtag</p></td>
+<td><p>suffix or prefix used for labeling report files</p></td>
+</tr>
+<tr class="row-even"><td><p>restart_cmd</p></td>
+<td><p>command used to restart simulation on termination</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Expert Parameters</strong></p>
+<p>These parameters should generally not need to be changed. We recommend that you
+ommit them from the YAML file, which will ensure that the default values will
+automatically be applied.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key Word</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nbalance</p></td>
+<td><p>number of steps between load balancing (use 0 for none)</p></td>
+</tr>
+<tr class="row-odd"><td><p>rlimit</p></td>
+<td><p>virtual memory limit per process</p></td>
+</tr>
+<tr class="row-even"><td><p>dbthresh</p></td>
+<td><p>load balancing threshold (larger difference initiates balancing)</p></td>
+</tr>
+<tr class="row-odd"><td><p>PFbufsz</p></td>
+<td><p>particle ferry buffer size (the size of the internal MPI particle buffer)</p></td>
+</tr>
+<tr class="row-even"><td><p>ratefile</p></td>
+<td><p>initial processor rate file</p></td>
+</tr>
+<tr class="row-odd"><td><p>global_cov</p></td>
+<td><p>resets total center of velocity to zero if true</p></td>
+</tr>
+<tr class="row-even"><td><p>shiftlevl</p></td>
+<td><p>shift at most this number of step levels at one time</p></td>
+</tr>
+<tr class="row-odd"><td><p>centerlevl</p></td>
+<td><p>compute active centering below this multistep level (set to 1/2 the multistep level, multistep is most conservative)</p></td>
+</tr>
+<tr class="row-even"><td><p>posnsync</p></td>
+<td><p>synchronizes multistep positions at each substep (default: true)</p></td>
+</tr>
+<tr class="row-odd"><td><p>use_cwd</p></td>
+<td><p>the Node 0 home dir for the working dir on all nodes</p></td>
+</tr>
+<tr class="row-even"><td><p>dynfracV</p></td>
+<td><p>time step velocity coefficient (default: 0.01)</p></td>
+</tr>
+<tr class="row-odd"><td><p>dynfracA</p></td>
+<td><p>time step acceleration coefficient (default: 0.03)</p></td>
+</tr>
+<tr class="row-even"><td><p>dynfracS</p></td>
+<td><p>time step crossing time for an externally set scale (default: 1.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>dynfracS</p></td>
+<td><p>time step potential/accerlation coefficient (default: 0.05)</p></td>
+</tr>
+<tr class="row-even"><td><p>eqmotion</p></td>
+<td><p>toggles phase space advance for use with externally supplied mapping.  On by default.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="additional-metadata">
+<h2>Additional metadata<a class="headerlink" href="#additional-metadata" title="Link to this heading"></a></h2>
+<p id="add-metadata">You can include entries that are not part of the EXP YAML convention
+and they will be ignored by EXP.  For example, you can include a
+<cite>Comment</cite> stanza as follows:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">Comment</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This is Run0 for the tidal interaction project</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Martin Weinberg</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">June 23, 2022</span>
+<span class="c1"># EXP will ignore the above stanza</span>
+<span class="nt">Global</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="l l-Scalar l-Scalar-Plain">.</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="centering.html" class="btn btn-neutral float-left" title="Centering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="yaml-primer.html" class="btn btn-neutral float-right" title="A YAML primer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

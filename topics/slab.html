@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three-dimensional periodic slab bases &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Three-dimensional periodic slab bases</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/slab.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="three-dimensional-periodic-slab-bases">
+<h1>Three-dimensional periodic slab bases<a class="headerlink" href="#three-dimensional-periodic-slab-bases" title="Link to this heading"></a></h1>
+<p>The latest version of EXP includes support for slab basis that is
+periodic in the unit square with equilibrium self-gravity in the
+vertical dimension. The coordinate system is Cartesian and Poisson
+equation separates in Cartesian coordinates.  Since the equilibrium in
+the horizontal directions is uniform, the natural basis is
+trigonometric, e.g. <span class="math notranslate nohighlight">\(e^{i2\pi (k_x x + k_y y)}\)</span> where
+<span class="math notranslate nohighlight">\(k_x, k_y\in\mathbb{Z}\)</span>.  The resulting unknown basis functions
+satisfy</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^2\Psi(z)}{d^2z} - (k_x^2+k_y^2) \Psi(z) = 4\pi G
+\rho(z).\]</div>
+<p>We assume an equilibrium solution <span class="math notranslate nohighlight">\(d^2\Psi_o(z)/dz^2 = 4\pi
+G\rho_o(z)\)</span> and write <span class="math notranslate nohighlight">\(\Psi(z) = \Psi_o(z)u(z)\)</span>.  Substituting
+this into the Poisson equation above and multiplying by
+<span class="math notranslate nohighlight">\(\Psi_o(z)\)</span>, we obtain a Sturm-Liouville differential equation,
+eq. <a class="reference internal" href="bfetheory.html#equation-sle">(1)</a>, with eigenfunctions <span class="math notranslate nohighlight">\(u(z)\)</span> and eigenvalues
+<span class="math notranslate nohighlight">\(\lambda\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p(z) &amp;= \Psi_o(z)^2 \\\\
+q(z) &amp;= [(k_x^2+k_y^2)\Psi_o(z) - \rho_o(z)]\Psi_o(z) \\\\
+\omega(z) &amp;= \rho_o(z)\Psi_o(z)\end{split}\]</div>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<p>The SLE is straightforwardly solved using the shooting algorithm in
+SLEDGE <a class="reference internal" href="bfetheory.html#pruess-fulton93" id="id1"><span>[pruess_fulton93]</span></a>. The boundary conditions for the spherical
+solution are the natural ones for typical gravitational system at
+large radii.  However, the potential and mass of our
+periodically-infinite slab is unbounded, rising linearly to infinity
+as <span class="math notranslate nohighlight">\(|z|\rightarrow\infty\)</span>. Furthermore, our construction of the
+weighed SLE from the Poisson equation requires a non-zero weighing
+function <span class="math notranslate nohighlight">\(\omega(z)\)</span>.  We accomplish this by</p>
+<ol class="arabic simple">
+<li><p>Choosing a maximum vertical extent <span class="math notranslate nohighlight">\(z_{max}\)</span></p></li>
+<li><p>Evaluating the potential at some point outside this range,
+e.g. <span class="math notranslate nohighlight">\(K\equiv\Psi_o(z_{max}[1+\delta])\)</span></p></li>
+<li><p>Subtracting this value from the potential: <span class="math notranslate nohighlight">\(\bar{\Psi}(z) =
+\Psi_o(z) - K\)</span></p></li>
+</ol>
+<p>Adding a constant to the potential will not change the physical
+properties of the solution.  A basis with different values of
+<span class="math notranslate nohighlight">\(K\)</span> will differ in scale but remain biorthogonal and valid
+solutions of the Poisson equation.  The value of <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> is
+unimportant as long as <span class="math notranslate nohighlight">\(\bar{\Psi}(z)\not=0\)</span> in <span class="math notranslate nohighlight">\(|z|\le
+z_{max}\)</span>.  Finally, the SLE basis solutions are tabled on a fine grid
+and interpolated as needed.  The horizontal, trigonometric part of
+basis is constructed by recursion as needed.</p>
+</section>
+<section id="usage-notes">
+<h2>Usage notes<a class="headerlink" href="#usage-notes" title="Link to this heading"></a></h2>
+<p>The user accessible parameters that may be specified in the YAML
+configuration (see the <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">YAML config example</span></a>) include:</p>
+<ul class="simple">
+<li><p><cite>nmaxx</cite>: the maximum number order in the x direction. These basis
+functions are periodic in x and have wave number
+<span class="math notranslate nohighlight">\(n_x=-n_{x\,max}\)</span> through <span class="math notranslate nohighlight">\(n_x=n_{x\,max}\)</span>.</p></li>
+<li><p><cite>nmaxy</cite>: the maximum number order in the y direction.</p></li>
+<li><p><cite>nmaxz</cite>: the maximum number order in the z direction.  These are
+basis functions will be index from 0 to <cite>nmaxz-1</cite>.</p></li>
+<li><p><cite>nminx</cite>: restrict the minimum wave number for x dimension  to <span class="math notranslate nohighlight">\(n_x\geq
+n_{x\,nmin}\)</span></p></li>
+<li><p><cite>nminy</cite>: restrict the minimum wave number for y dimension</p></li>
+<li><p><cite>hslab</cite>: scale height for slab basis</p></li>
+<li><p><cite>zmax</cite>: maximum height for slab basis</p></li>
+<li><p><cite>ngrid</cite>: number of grid points for basis table (default is 1000)</p></li>
+<li><p><cite>type</cite>: the base model for the slab.  Choices are
+<span class="math notranslate nohighlight">\(\rho(z)\propto\mbox{sech}^2(z/h), 1-(z/h)^2, \mbox{constant}\)</span> which
+are denoted as <em>isothermal</em>, <em>parabolic</em>, and <em>constant</em>,
+respectively.  The default is <em>isothermal</em> or (<em>iso</em> for short).</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

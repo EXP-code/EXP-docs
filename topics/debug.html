@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debugging EXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Software design goals and features" href="design.html" />
+    <link rel="prev" title="How to configure a razor-thin disk" href="flatdisk.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Debugging EXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exp">EXP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagnostic-output-for-various-verbose-values">Diagnostic output for various VERBOSE values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#floating-point-error-handling">Floating-point error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checking-for-mpi-consistency">Checking for MPI consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyexp">pyEXP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-gdb-debugger">Using the GDB debugger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Debugging EXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/debug.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="debugging-exp">
+<span id="topics-debug"></span><h1>Debugging EXP<a class="headerlink" href="#debugging-exp" title="Link to this heading"></a></h1>
+<section id="exp">
+<span id="debug"></span><h2>EXP<a class="headerlink" href="#exp" title="Link to this heading"></a></h2>
+<p>The combination of MPI, threading and CUDA makes debugging a
+challenge.  To aid in this, EXP both installs its own error handlers
+and tries to use C++ exceptions and clean MPI terminations with error
+messages when possible.  Nevertheless, some number of <em>ugly</em> unhandled
+erros that generate tracebacks are unavoidable.  When possible, <em>EXP</em>
+will unwind the stack on each process and write the traceback to a
+file tagged with the runtag name and the MPI node number.  Most
+problems can be diagnosed by a very careful reading of the standard
+output messages and generated tracebacks.  The EXP code can seem very
+<em>chatty</em> at times and and the user may have the tendency to ignore the
+various messages.  So to repeat: when in doubt, <strong>check the standard
+output logfile first</strong>.</p>
+<section id="diagnostic-output-for-various-verbose-values">
+<h3>Diagnostic output for various VERBOSE values<a class="headerlink" href="#diagnostic-output-for-various-verbose-values" title="Link to this heading"></a></h3>
+<p>EXP has a <cite>VERBOSE</cite> flag at the global top level <cite>YAML configuration
+&lt;yamlconfig&gt;</cite> which sets the chattiness as follows:</p>
+<ul class="simple">
+<li><p><cite>VERBOSE=0</cite></p>
+<ul>
+<li><p>No extra output</p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=1</cite> (default value)</p>
+<ul>
+<li><p>Output timestep diagnostics for each component <cite>multistep.cc</cite></p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=2</cite></p>
+<ul>
+<li><p>Currently an unused level</p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=4</cite></p>
+<ul>
+<li><p>multistep output timestep diagnostics for each component
+<cite>multistep.cc</cite></p></li>
+<li><p>use cputime counters for timing each part of the force
+computation and time step advance <cite>ComponentContainer.cc</cite></p></li>
+<li><p>use cputime counters for each part of the step <cite>step.cc</cite></p></li>
+<li><p>log each center and axis computation <cite>Cylinder.cc</cite></p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=5</cite></p>
+<ul>
+<li><p>output the multistep level totals for each component <cite>step.cc</cite></p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=6</cite></p>
+<ul>
+<li><p>thread timing in force routines</p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=7</cite></p>
+<ul>
+<li><p>log force calls that are off the basis grid to stdout
+<cite>Cylinder.cc</cite></p></li>
+<li><p>dump YAML config file to standard output.  The current
+configuration will also be written to <cite>PARAM.&lt;runtag&gt;.yml</cite></p></li>
+</ul>
+</li>
+<li><p><cite>VERBOSE=11</cite></p>
+<ul>
+<li><p>write out multistep control structure (no one really needs this
+level of detail unless one is debugging <cite>multistep.cc</cite></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="floating-point-error-handling">
+<h3>Floating-point error handling<a class="headerlink" href="#floating-point-error-handling" title="Link to this heading"></a></h3>
+<p>For numerical errors that generate floating point exceptions (FPEs),
+EXP offers a three levels of debugging support using the <cite>gdb</cite>
+debugger.</p>
+<ol class="arabic simple">
+<li><p>The global parameter <cite>fpe_trap: true</cite> enables the installation of a
+user FPE error handler.  To use this, start EXP in <cite>gdb</cite> or in many
+instances of <cite>gdb</cite> for MPI debugging.  Then set a breakpoint in
+<cite>fpetrap.h:21</cite> to catch and debug FP errors.</p></li>
+<li><p>The global parameter <cite>fpe_trace: true</cite> installs an error handler
+that prints a backtrace to stderr on detecting an FP error.  In
+order to use this productively, you will need to compile with
+symbols; that is, with the <cite>gcc/g++</cite> compile flag <cite>-g</cite> (DEBUG in
+CMake).</p></li>
+<li><p>The global parameter <cite>fpe_wait: true</cite> installs an error handler
+that will print an error message to the standard output and wait.
+When an FPE is signalled, process will spin, waiting for a <cite>gdb</cite>
+connection. Messages describing the affected node and pid will be
+written to the standard output.</p></li>
+<li><p>To allow a person to set break points when the run starts, EXP
+offers the global parameter <cite>debug_wait: true</cite>.  all processes will
+wait in a loop until <cite>gdb</cite> is attached and the loop is freed but
+setting the variable <cite>debug_wait</cite> to <cite>false</cite>.  If the global
+parameter <cite>main_wait: true</cite>, only the root process will wait.</p></li>
+<li><p>Finally, the global parameter <cite>mpi_wait: true</cite> enables
+the installation of an MPI error handler that will spin in a loop
+when called, waiting for a gdb connection. Messages describing the
+affected node and pid will be written to the standard output.</p></li>
+</ol>
+</section>
+<section id="checking-for-mpi-consistency">
+<h3>Checking for MPI consistency<a class="headerlink" href="#checking-for-mpi-consistency" title="Link to this heading"></a></h3>
+<p>EXP includes a built-in synchronization checker, <code class="docutils literal notranslate"><span class="pre">BarrierWrapper</span></code>,
+that uses <cite>MPI_Barrier</cite> to mark a code location with a string token
+and verifies that each process in the MPI multi-computer arrives at
+the barrier with the same token.</p>
+<p>There are two distinct implementations, a light-weight and
+heavy-weight checker.  The light-weight implementation is simple: when
+nodes arrive at an MPI barrier, the tokens are sent to the root node.
+When all processes have arrived at the barrier, the root node checks
+that all tokens agree, and complains to stdout if they do not.  The
+heavy-weight implementation polls in loop and reports the status of
+processes that have reached and not reached the barrier.  This
+provides more information than the light-weight version but can be
+confusing.</p>
+<p>The light-weight version is used by default.  The heavy-weight version
+can be specified by including <code class="docutils literal notranslate"><span class="pre">barrier_light:</span> <span class="pre">false</span></code> in the global
+YAML stanza (see the <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">YAML config example</span></a>).
+Other global parameters affecting the <code class="docutils literal notranslate"><span class="pre">BarrierWrapper</span></code> behavior
+include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">barrier_check</span></code>: set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the <code class="docutils literal notranslate"><span class="pre">BarrierWrapper</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">barrier_quiet</span></code>: set to <code class="docutils literal notranslate"><span class="pre">true</span></code> turns OFF extra output describing
+the wrapper state.  This is the default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">barrier_verbose</span></code>: set to <code class="docutils literal notranslate"><span class="pre">true</span></code> turns ON extra output
+describing the wrapper state.  This is the opposite of
+<code class="docutils literal notranslate"><span class="pre">barrier_quiet:</span> <span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">barrier_debug</span></code>: provides some additional information about internal synchronization to be used if the wrapper is providing confusing results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">barrier_extra</span></code>: provide even more internal diagnostics than verbose.</p></li>
+</ul>
+</section>
+</section>
+<section id="pyexp">
+<h2>pyEXP<a class="headerlink" href="#pyexp" title="Link to this heading"></a></h2>
+<section id="using-the-gdb-debugger">
+<h3>Using the GDB debugger<a class="headerlink" href="#using-the-gdb-debugger" title="Link to this heading"></a></h3>
+<p>Debugging the C++ implementation of pyEXP is no different than EXP.
+For example, you can just start GDB with Python:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdb<span class="w"> </span>python
+<span class="k">break</span><span class="w"> </span>&lt;C++<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">break</span><span class="w"> </span>point&gt;
+run<span class="w"> </span>mytest.py
+</pre></div>
+</div>
+<p>You need to compile EXP with debug information by specifying
+‘Debug’ for <code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_TYPE</span></code> by editing the <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code>
+file directly.  For example, from your build directory you can execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake<span class="w"> </span>&lt;top-level<span class="w"> </span><span class="nb">source</span><span class="w"> </span>dir&gt;
+</pre></div>
+</div>
+<p>If you are not debugging the Python interpreter itself, you do not
+need to do anything special; you can use the regular interpreter and
+no extensions.  GDB will complain that there are no debugging symbols
+in <cite>python3</cite> but that does not matter; the C++ code referenced by the
+pyEXP bindings <em>will</em> have debugging symbols.</p>
+<p>Debugging both Python and C++ from GDB is more complicated but
+possible although we do not recommend doing this. You will need a
+Python build with debug info.  For example, if you are running Python
+3.10 on Ubuntu, you can install the debug build as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3.10-dbg
+</pre></div>
+</div>
+<p>There are a number of online resources for debugging Python using
+GDB.  See <a class="reference external" href="https://wiki.python.org/moin/DebuggingWithGdb">Python GDB</a> to get started.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="flatdisk.html" class="btn btn-neutral float-left" title="How to configure a razor-thin disk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="design.html" class="btn btn-neutral float-right" title="Software design goals and features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

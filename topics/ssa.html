@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singular Spectrum Analysis &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extended Dynamical Mode Decomposition" href="edmd.html" />
+    <link rel="prev" title="BFE time series analysis" href="timesseries.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="timesseries.html">BFE time series analysis</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Singular Spectrum Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssa-algorithms-and-methodology">SSA algorithms and methodology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#algorithm-of-ssa-analysis">Algorithm of SSA analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separability-and-choice-of-parameters">Separability and choice of parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#multichannel-ssa-m-ssa">Multichannel SSA (M-SSA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applications-of-mssa">Applications of mSSA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="edmd.html">Extended Dynamical Mode Decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edmd.html#discussion-and-relationship-to-mssa">Discussion and relationship to mSSA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="timesseries.html">BFE time series analysis</a></li>
+      <li class="breadcrumb-item active">Singular Spectrum Analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/ssa.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="singular-spectrum-analysis">
+<span id="mssa"></span><h1>Singular Spectrum Analysis<a class="headerlink" href="#singular-spectrum-analysis" title="Link to this heading"></a></h1>
+<p id="index-0">Singular Spectrum Analysis (SSA) is a non-parametric analysis tool for
+for time series analysis.  It has been used for a wide variety of
+primarily Earth-science problems where finite data sets that may be
+censored are prevalent.  It makes no strong prior assumptions about
+the spectrum.  There is a natural multivariate extension (called
+<em>multichannel</em> in the literature) that we will use below.</p>
+<p>In most applications, the time series is a direct observable.  The
+main extension here is to use the spatial summary provided by our
+biorthogonal-function coefficients as the multichannel data.  The
+subsequent analysis is then a combined spatio-temporal filter and
+reconstruction of the dynamics.  This is exactly what we need and want
+for n-body dynamical analysis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following sections provides mathematical details of SSA,
+multichannel SSA, and its implementation in EXP.  Feel free
+to skip this on your first read through if you want to skip
+right to an <a class="reference internal" href="using-mssa.html#using-mssa"><span class="std std-ref">example application</span></a>.</p>
+</div>
+<section id="ssa-algorithms-and-methodology">
+<h2>SSA algorithms and methodology<a class="headerlink" href="#ssa-algorithms-and-methodology" title="Link to this heading"></a></h2>
+<p id="index-1">SSA analysis separates the observed time series into the sum of
+interpretable components with no a priori information about the time
+series structure. We begin with a statement of the underlying
+algorithm for a single time series.  Think: one particular
+coefficient <span class="math notranslate nohighlight">\(a_j(t)\)</span> at a particular time step.  Let us simply
+denote the coefficient at time step <span class="math notranslate nohighlight">\(k\)</span> as
+<span class="math notranslate nohighlight">\(a_{j,k} = a_j(t_o+hk)\)</span> where <span class="math notranslate nohighlight">\(h\)</span> is the time-step
+interval.</p>
+<section id="algorithm-of-ssa-analysis">
+<h3>Algorithm of SSA analysis<a class="headerlink" href="#algorithm-of-ssa-analysis" title="Link to this heading"></a></h3>
+<p>Now, consider the real-valued time series of coefficients
+<span class="math notranslate nohighlight">\(\mathbf{a}_N=(a_1,\ldots,a_{N})\)</span> of length <span class="math notranslate nohighlight">\(N\)</span>.  Since we
+are considering a single coefficient <span class="math notranslate nohighlight">\(a_j(t)\)</span>, we will drop the
+coefficient index <span class="math notranslate nohighlight">\(j\)</span> for now.  Define the <em>window length</em>
+<span class="math notranslate nohighlight">\(L\)</span> and let <span class="math notranslate nohighlight">\(K=N-L+1\)</span>. The SSA algorithm (1) decomposes the
+temporal cross-correlation matrix by an eigenfunction analysis into
+uncorrelated components and then (2) reconstructs relevant parts of
+the time series.  We will now consider each step in detail.</p>
+<section id="embedding">
+<h4>Embedding<a class="headerlink" href="#embedding" title="Link to this heading"></a></h4>
+<p id="index-2">We <em>embed</em> the original time series into a sequence of lagged vectors
+of size <span class="math notranslate nohighlight">\(L\)</span> by forming <span class="math notranslate nohighlight">\(K=N-L+1\)</span> <em>lagged vectors</em></p>
+<div class="math notranslate nohighlight">
+\[A_i=(a_{i},\ldots,a_{i+L-1})^\top, \quad i=1\ldots,K.\]</div>
+<p id="index-3">The <em>trajectory matrix</em> of the series <span class="math notranslate nohighlight">\(A_N\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-traj-m">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-traj-m" title="Link to this equation"></a></span>\[\mathbf{T} = [A_1:\ldots:A_K]=(T_{ij})_{i,j=1}^{L,K}=
+\left(
+\begin{array}{lllll}
+a_1&amp;a_2&amp;a_3&amp;\ldots&amp;a_{K}\cr
+a_2&amp;a_3&amp;a_4&amp;\ldots&amp;a_{K+1}\cr
+a_3&amp;a_4&amp;a_5&amp;\ldots&amp;a_{K+2}\cr
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\cr
+a_{L}&amp;a_{L+1}&amp;a_{L+2}&amp;\ldots&amp;a_{N}\cr
+\end{array}
+\right).\]</div>
+<p>There are two important properties of the trajectory matrix: the rows
+and columns of <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> are subseries of the original series,
+and <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> has equal elements on anti-diagonals and therefore
+the trajectory matrix is has the Hankel property.</p>
+<p id="index-4">From the trajectory matrix, we can form the <em>lag-covariance</em>
+matrix:</p>
+<div class="math notranslate nohighlight" id="equation-eq-lagcovar">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-lagcovar" title="Link to this equation"></a></span>\[\mathbf{C} = \frac{1}{K} \mathbf{T}^\top\cdot\mathbf{T}.\]</div>
+</section>
+<section id="decomposition">
+<h4>Decomposition<a class="headerlink" href="#decomposition" title="Link to this heading"></a></h4>
+<p id="index-5">We may analyze the lag-covariance matrix using the standard singular
+value decomposition (SVD). index{singular value decomposition (SVD)}
+From the form of equation (<a class="reference internal" href="#equation-eq-lagcovar">(5)</a>), we observe that
+<span class="math notranslate nohighlight">\(\mathbf{C}\)</span> is real, symmetric and positive definite, so the SVD
+yields a decomposition of the form: <span class="math notranslate nohighlight">\(\mathbf{C} =
+\mathbf{U}\cdot\mathbf{\Lambda}\cdot\mathbf{V}^\top\)</span> where
+<span class="math notranslate nohighlight">\(\mathbf{\Lambda}\)</span> is diagonal. The symmetry properties imply that
+the left- and right-singular vectors are the same, or
+<span class="math notranslate nohighlight">\(\mathbf{E}\equiv\mathbf{U}=\mathbf{V}\)</span>.  We may then write</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\Lambda} = \mathbf{E}^\top\cdot\mathbf{C}\cdot\mathbf{E}.\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(\mathbf{\Lambda}\)</span> is a diagonal matrix of eigenvalues,
+<span class="math notranslate nohighlight">\(\lambda_k\)</span> and the columns of <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> are the eigenvectors,
+<span class="math notranslate nohighlight">\(\mathbf{E}^k\)</span>.</p>
+<p>An alternative decomposition is based on the eigenvectors of the
+Toeplitz matrix <span class="math notranslate nohighlight">\(\mathbf{C}\)</span> whose entries are</p>
+<div class="math notranslate nohighlight">
+\[c_{ij}=\frac{1}{N-|i-j|} \sum_{n=1}^{N-|i-j|}a_n a_{n+|i-j|}, \quad
+1\leq i,j\leq L.\]</div>
+<p>In both cases the eigenvectors are ordered so that the corresponding
+eigenvalues are placed in the decreasing order.  The Toeplitz
+formulation reduces approximately to the covariance form for
+stationary time series with zero mean.  Since this is not the case for
+most of our simulations, we will adopt Choice 1. The pair
+<span class="math notranslate nohighlight">\((\sqrt{\lambda_k}, \mathbf{E}^k)\)</span> will be called <span class="math notranslate nohighlight">\(k\)</span> th
+<em>eigenpair</em>.  I will assume that the eigenpairs are sorted in
+order of decreasing value of <span class="math notranslate nohighlight">\(\lambda_k&gt;0\)</span>, which is traditional for
+SVD.  As before, we may write this decomposition in <em>elementary
+matrix</em> form as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{C} = \sum_k \lambda_k \mathbf{E}^k \mathbf{E}^{k\top}
+= \sum_k \lambda_k \mathbf{E}^k \otimes \mathbf{E}^{k}
+= \sum_k \mathbf{C}_k\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{a}\otimes\mathbf{b}\)</span> denotes the outer or Kronecker
+product of the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{C}_k \equiv \lambda_k \mathbf{E}^k\otimes\mathbf{E}^k\)</span>.
+Clearly, the <span class="math notranslate nohighlight">\(\mathbf{C}_k\)</span> have dimension <span class="math notranslate nohighlight">\(K\times K\)</span>.</p>
+<section id="reconstruction">
+<h5>Reconstruction<a class="headerlink" href="#reconstruction" title="Link to this heading"></a></h5>
+</section>
+</section>
+<section id="eigenpair-grouping">
+<h4><strong>Eigenpair grouping</strong><a class="headerlink" href="#eigenpair-grouping" title="Link to this heading"></a></h4>
+<p id="index-6">Let <span class="math notranslate nohighlight">\(d=\max\{j:\ \lambda_j \neq \epsilon\}\)</span>, where <span class="math notranslate nohighlight">\(\epsilon\)</span> is
+some threshold for the eigenvector to be in the null space.  From the
+decomposition in equation ref{eq:elem_matr}, the grouping procedure
+partitions the set of indices <span class="math notranslate nohighlight">\(\{1,\ldots,d\}\)</span> into <span class="math notranslate nohighlight">\(m\)</span> disjoint
+subsets <span class="math notranslate nohighlight">\(I_1,\ldots,I_m\)</span>.</p>
+<p>Define <span class="math notranslate nohighlight">\(\mathbf{C}_I=\sum_{k\in I} \mathbf{C_k}\)</span>.
+This leads to the decomposition</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{C}=\mathbf{C}_{I_1}+\ldots+\mathbf{C}_{I_m}.\]</div>
+<p>The procedure of choosing the sets <span class="math notranslate nohighlight">\(I_1,\ldots,I_m\)</span> is called
+<em>eigenpair grouping</em>. If <span class="math notranslate nohighlight">\(m=d\)</span> and <span class="math notranslate nohighlight">\(I_k=\{k\}\)</span>,
+<span class="math notranslate nohighlight">\(k=1,\ldots,d\)</span>, then the corresponding grouping is called
+<em>elementary</em>.  The choice of several leading eigentriples corresponds
+to the approximation of the time series in view of the well-known
+optimality property of the SVD.</p>
+</section>
+<section id="the-principal-components">
+<h4><strong>The principal components</strong><a class="headerlink" href="#the-principal-components" title="Link to this heading"></a></h4>
+<p id="index-7">We may now project the original time series represented in the
+trajectory matrix in to the new basis represented by <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>:
+<span class="math notranslate nohighlight">\(\mathbf{P} = \mathbf{E}^\top\cdot \mathbf{T}\)</span>. The columns of
+<span class="math notranslate nohighlight">\(\mathbf{P}\)</span> are known as the <em>principal components</em>, following
+the terminology of standard Principal Component Analysis (PCA).  In
+components, the <span class="math notranslate nohighlight">\(k\)</span> eigenpair yields at time step <span class="math notranslate nohighlight">\(j\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-eq-pc1d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-pc1d" title="Link to this equation"></a></span>\[P^k_j = \sum_{l=1}^L E^k_l T_{lj}  = \sum_{l=1}^L E^k_l a_{j+l-1}\]</div>
+<p>The principal components are uncorrelated (i.e. orthogonal) by
+construction.</p>
+</section>
+<section id="the-reconstructed-components">
+<h4><strong>The reconstructed components</strong><a class="headerlink" href="#the-reconstructed-components" title="Link to this heading"></a></h4>
+<p id="index-8">At this step, project the principle components back to the original
+basis and then diagonally average the result, imposing the Hankel
+property of the original trajectory matrix to get an approximation to
+the contribution to the coefficients.  Specifically, the transformed
+principle components corresponding to the eigenpair <span class="math notranslate nohighlight">\(k\)</span> are:
+<span class="math notranslate nohighlight">\(\tilde{\mathbf{T}}^k = \mathbf{P}^\cdot\cdot\mathbf{E}^k\)</span>.
+Making the <em>diagonal average</em> to get the reconstructed coefficients,
+we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tilde{a}^k_j =
+\begin{cases} \displaystyle
+\frac{1}{j} \sum_{n=1}^{j} P^k_{n-j+1} E^k_n &amp; \mbox{if}\ 1\le j &lt; L-1, \\
+\displaystyle
+\frac{1}{L} \sum_{n=1}^{L} P^k_{n-j+1} E^k_n &amp; \mbox{if}\ L\le j \le N - L + 1 \, \\
+\displaystyle
+ \frac{1}{N-j+1} \sum_{n=N-L+1}^{N} P^k_{n-j+1} E^k_l &amp; \mbox{if}\ N-L+2\le j \le N. \\
+\end{cases}\end{split}\]</div>
+</section>
+</section>
+<section id="separability-and-choice-of-parameters">
+<h3>Separability and choice of parameters<a class="headerlink" href="#separability-and-choice-of-parameters" title="Link to this heading"></a></h3>
+<p id="index-9">The goal of grouping into sets <span class="math notranslate nohighlight">\(\{I_j\}\)</span> is the separation of the
+time series into distinct dynamical components.
+Distinct time series components can be
+identified based on their similar temporal properties.  For example,
+if the underlying dynamical signals are periodic, then the eigenvectors
+will reflect that by producing sine- and cosine-like pairs with
+distinct frequencies.
+Thus, graphs of eigenvectors or discrete Fourier transforms can help
+identify like components.</p>
+<p>Very helpful information for separation is contained in the so-called
+weighted correlation matrix, w-correlation matrix for short. This is
+the matrix consisting of weighted correlations between the
+reconstructed time series components.  Let <span class="math notranslate nohighlight">\(\mathbf{A},
+\mathbf{B}\)</span> be trajectory matrices constructed from series <span class="math notranslate nohighlight">\(a_i,
+b_i, i=1,\ldots,N\)</span>.  Recall that the trajectory matrix has duplicated
+entries with respect to the original series.  The _weight_ reflects
+the number of entries of the time series terms into its trajectory
+matrix.  Define <span class="math notranslate nohighlight">\((\mathbf{A}, \mathbf{B}) := \sum_{ij} A_{ij}
+B_{ij})\)</span>. This defines a scalar product in a linear space of the
+original rank of the input series which is _weighted_.  Let
+<span class="math notranslate nohighlight">\(\mathbf{A}^k\)</span> be the trajectory matrix reconstructed from PC
+<span class="math notranslate nohighlight">\(k\)</span>.  We define the elements of the w-correlation matrix to be</p>
+<div class="math notranslate nohighlight">
+\[\mbox{wCorr}_{\mu\nu} = \frac{(\mathbf{A}^\mu, \mathbf{B}^\nu)}
+{\sqrt{(\mathbf{A}^\mu , \mathbf{A}^\mu)(\mathbf{B}^\nu, \mathbf{B}^\nu)}}.\]</div>
+<p>Well separated components have small correlation whereas badly
+separated components have large correlation. The diagonal values
+:math:mbox`{wCorr}_{ii}=1` by construction. Therefore, looking at the
+off-diagonal contributions of w-correlation matrix, one can find
+groups of correlated elementary reconstructed series and use this
+information for the consequent grouping. One of the rules is not to
+include into different groups the correlated components.</p>
+</section>
+</section>
+<section id="multichannel-ssa-m-ssa">
+<h2>Multichannel SSA (M-SSA)<a class="headerlink" href="#multichannel-ssa-m-ssa" title="Link to this heading"></a></h2>
+<p id="index-10">We can now generalize the SSA to <span class="math notranslate nohighlight">\(M\)</span> time series, here assume to be
+<span class="math notranslate nohighlight">\(M\)</span> particular coefficients from equation (ref{eq:coefdef}): the
+set <span class="math notranslate nohighlight">\(\mathcal{M} = \{j_1, \ldots\, \j_M\}\)</span>.  Following the
+previous section, denote each time series for the coefficient <span class="math notranslate nohighlight">\(a_j\)</span>
+as:</p>
+<div class="math notranslate nohighlight">
+\[A_{ji}=(a_{j,i},\ldots,a_{j,i+L-1})^\top, \quad i=1\ldots,K.\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}_j = [A_{j1} : A_{j2} : \ldots : A_{jK}].\]</div>
+<p>Then, the multichannel trajectory matrix <span class="math notranslate nohighlight">\(\mathbb{T}\)</span> may be defined
+as</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{T}_M = \left[\mathbf{A}_1, \mathbf{A}_2, \ldots,
+\mathbf{A}_M\right].\]</div>
+<p>The multichannel trajectory matrix has <span class="math notranslate nohighlight">\(KL\)</span> columns with length <span class="math notranslate nohighlight">\(K
+= N - L - 1\)</span> (rows).  The covariance matrix of this multichannel
+trajectory matrix is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{C}_M = \frac{1}{K} \mathbb{T}_M^\top\cdot\mathbb{T}_M
+ = \left(
+ \begin{array}{lllll}
+  \mathbf{C}_{1,1} &amp; \mathbf{C}_{1,2} &amp; \mathbf{C}_{1,3} &amp;\ldots&amp; \mathbf{C}_{1,M}\cr
+  \mathbf{C}_{2,1} &amp; \mathbf{C}_{2,2} &amp; \mathbf{C}_{2,3} &amp;\ldots&amp; \mathbf{C}_{2,M}\cr
+  \mathbf{C}_{3,1} &amp; \mathbf{C}_{3,2} &amp; \mathbf{C}_{3,3} &amp;\ldots&amp; \mathbf{C}_{3,M}\cr
+  \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\cr
+  \mathbf{C}_{M,1} &amp; \mathbf{C}_{L,2} &amp; \mathbf{C}_{L,3} &amp;\ldots&amp; \mathbf{C}_{M,M}\cr
+\end{array}
+\right)\]</div>
+<p>where each submatrix is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{C}_{j,k} =
+\frac{1}{K}\mathbf{A}_j^\top\cdot\mathbf{A}_k.\]</div>
+<p>Each submatrix <span class="math notranslate nohighlight">\(\mathbf{C}_{j,k}\)</span> has dimension <span class="math notranslate nohighlight">\(K\times K\)</span> as in
+the one-dimensional SSA case.</p>
+<p>The SVD step is the same as
+in the one-dimensional SSA.  However, each eigenvector now has a block
+of length <span class="math notranslate nohighlight">\(K\)</span> that corresponds to each series.  Let us denote this
+as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{E}^k = \left[\mathbf{E}^k_1 : \mathbf{E}^k_2 : \ldots :
+\mathbf{E}^k_M\right].\]</div>
+<p>As for standard SSA, we obtain the principle components by projecting
+the trajectory matrix into the new basis as follows:</p>
+<div class="math notranslate nohighlight">
+\[P^k_i = \sum_{m=1}^M \sum_{j=1}^L a_{m,i+j-1} E^k_{m, j}.\]</div>
+<p>The principle components are single orthongonal time series that
+represent a mixture of all the contributions from the original time
+series.</p>
+<p>Finally, the last step of the process reconstructs the original time
+series of index <span class="math notranslate nohighlight">\(m\in[1,\ldots, M]\)</span> from the principle components as
+follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tilde{a}^k_{m,j} =
+\begin{cases} \displaystyle
+\frac{1}{j} \sum_{n=1}^{j} P^k_{n-j+1} E^k_{m,n} &amp; \mbox{if}\ 1\le j &lt; L-1, \\
+\displaystyle
+ \frac{1}{L} \sum_{n=1}^{L} P^k_{n-j+1} E^k_{m,n} &amp; \mbox{if}\ L\le j \le N - L + 1 \, \\
+ \displaystyle
+ \frac{1}{N-j+1} \sum_{n=1-N+M}^{N} P^k_{n-j+1} E^k_m &amp; \mbox{if}\ N-L+2\le j \le N. \\
+ \end{cases}\end{split}\]</div>
+<p>If we sum up all of the individual principle components, no
+information is lost; that is:</p>
+<div class="math notranslate nohighlight">
+\[a_{m,i} \rightarrow \sum_{k=1}^d \tilde{a}^k_{m,i}\]</div>
+<p>In practice, we often want to sum up the reconstructions for specific
+groupings:</p>
+<div class="math notranslate nohighlight" id="equation-eq-recongroup">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-recongroup" title="Link to this equation"></a></span>\[\tilde{a}_{m,i}^{I_j} = \sum_{k\in I_j} \tilde{a}^k_{m,i}\]</div>
+<p>which gives us the parts of of each coefficient <span class="math notranslate nohighlight">\(a_l(t)\)</span> that
+correspond to each dynamical component <span class="math notranslate nohighlight">\(I_j\)</span>.</p>
+</section>
+<section id="applications-of-mssa">
+<h2>Applications of mSSA<a class="headerlink" href="#applications-of-mssa" title="Link to this heading"></a></h2>
+<ul id="index-11">
+<li><p><strong>Compression</strong></p>
+<p>In many cases, a small number of eigenpairs relative to the total
+number <span class="math notranslate nohighlight">\(MK\)</span> have the lion’s share of the variance; that is:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\frac{\sum_{k=1}^d\lambda_k}{\sum_{k=1}^{MK}\lambda_k} \approx 1\]</div>
+<p>for <span class="math notranslate nohighlight">\(d\ll MK\)</span>.  Therefore, we can reconstruct most of the
+dynamics with a small number of eigenpairs.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Diagnostics</strong></p>
+<p>Similarly, we can use the <span class="math notranslate nohighlight">\(\tilde{a}_{m,i}^{I_j}\)</span> to
+reconstruct the underlying potential or density fields in physical
+space using the standard BFE series.</p>
+</li>
+<li><p><strong>Channel contributions</strong></p>
+<p>One can use the reconstructions to an estimate of the fraction of
+each coefficient in any particular eigenpair or group.
+Specifically, let us measure the contribution of the
+<span class="math notranslate nohighlight">\(k\mbox{th}\)</span> eigenpair to the <span class="math notranslate nohighlight">\(j\mbox{th}\)</span> coefficient
+by:</p>
+<div class="math notranslate nohighlight">
+\[f^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{||\mathbf{a}_j||_F},\]</div>
+<p>where the Frobenius norm <span class="math notranslate nohighlight">\(||\cdot||_F\)</span> is equivalent to the
+Euclidean norm in this context: <span class="math notranslate nohighlight">\(||\mathbf{x}||_F =
+\sqrt{\mathbf{x}\cdot\mathbf{x}}\)</span>.  By definition <span class="math notranslate nohighlight">\(0&lt;f^k_j&lt;1\)</span>
+and <span class="math notranslate nohighlight">\(\sum_k f^k_j=1\)</span>. Thus, <span class="math notranslate nohighlight">\(f^k_j\)</span> tells us the
+fraction of time series <span class="math notranslate nohighlight">\(j\)</span> that is in principal component
+<span class="math notranslate nohighlight">\(k\)</span>.  Alternatively, we compute measure:</p>
+<div class="math notranslate nohighlight">
+\[g^k_j \equiv \frac{||\tilde{\mathbf{a}}^k_j||_F}{\sum_{j=1}^M||\mathbf{a}^k_j||_F},\]</div>
+<p>which is the fraction of principal component in series <span class="math notranslate nohighlight">\(j\)</span>.
+Thus, the histogram <span class="math notranslate nohighlight">\(g^k_j\)</span> reflects the partitioning of power
+in the principal component <span class="math notranslate nohighlight">\(k\)</span> into the input coefficient
+channels <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<p>So, we can think of this representation as a single matrix, normed
+on rows in the case of <span class="math notranslate nohighlight">\(f\)</span> and normed on columns in the case
+of <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>In both cases, the norm over the time series may be restricted to
+some window smaller than the total time series.</p>
+</li>
+<li><p><strong>Dynamical correlations</strong></p>
+<p>This application is motivated by the structure of the biorthogonal
+expansion described in <a class="reference internal" href="bfetheory.html#bfetheory"><span class="std std-ref">theory</span></a>.  For example, we
+have found (Petersen et al. 2019c) that strong perturbations couple
+harmonic subspaces that would be uncoupled at linear order.  By
+selecting particular coefficients from various harmonics
+(<span class="math notranslate nohighlight">\(m=1, 2\)</span> in our case), we can look for the joint mode.</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="timesseries.html" class="btn btn-neutral float-left" title="BFE time series analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="edmd.html" class="btn btn-neutral float-right" title="Extended Dynamical Mode Decomposition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

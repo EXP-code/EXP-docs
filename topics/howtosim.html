@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to run your own N-body simulation in EXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Are there pre-compiled versions of pyEXP and EXP?" href="../faq.html" />
+    <link rel="prev" title="A YAML primer" href="yaml-primer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to run your own N-body simulation in EXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-one-generate-a-model-and-body-files">Step One: generate a model and body files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generating-body-files-in-exp">Generating body files in EXP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-two-generate-cache-files">Step Two: generate cache files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-three-three-part-relaxation-process-optional">Step Three: three-part relaxation process (<strong>optional</strong>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-four-run-the-simulation">Step Four: run the simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-five-sanity-check-your-output">Step Five: sanity check your output</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to run your own N-body simulation in EXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/howtosim.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-run-your-own-n-body-simulation-in-exp">
+<span id="howtosim"></span><h1>How to run your own N-body simulation in EXP<a class="headerlink" href="#how-to-run-your-own-n-body-simulation-in-exp" title="Link to this heading"></a></h1>
+<p>This tutorial will walk you through the steps to get started with running
+your own N-body simulations in EXP. EXP uses YAML configuration files, and
+we provide an <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">an annotated example</span></a>
+for reference as well as an <a class="reference internal" href="yaml-primer.html#yaml-primer"><span class="std std-ref">introduction to YAML syntax</span></a>.
+We will also need body and cache files, which we will discuss in more
+detail below. These files can be generated within EXP, or you can provide
+your own body file.</p>
+<p>The general steps for creating an N-body simulation in EXP are to:</p>
+<ol class="arabic simple">
+<li><p>Generate a model file and body files. The model file contains the initial density distribution for your dark matter halo. The body file contains the initial phase space positions for (e.g.) your stellar disk and dark matter halo</p></li>
+<li><p>Generate a cache file with your bases. In this example, you would need one cache file for your cylindrical (disk) basis and another for your spherical (halo) basis</p></li>
+<li><p>Run a three-step relaxation process to ensure that your initial conditions are as quiet as possible</p></li>
+<li><p>Run your simulation with EXP</p></li>
+<li><p>Sanity check your output</p></li>
+</ol>
+<section id="step-one-generate-a-model-and-body-files">
+<h2>Step One: generate a model and body files<a class="headerlink" href="#step-one-generate-a-model-and-body-files" title="Link to this heading"></a></h2>
+<p>Model files are ascii files that contain the initial density distribution of your dark matter halo. We provide an example of how to create a
+model file from an analytic density distribution or a simulation snapshot in <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples/blob/main/How-To/Recipes/Basis/generate%20GSE%20(Naidu%2B%202021)%20basis.py">the pyEXP-Examples repo</a>. These files contain four columns that provide spherical radius values (R) along with
+the density (D), mass enclosed (M), and gravitational potential (P) at that radius. Example  model files (ending in <code class="docutils literal notranslate"><span class="pre">.model</span></code>,e.g. <code class="docutils literal notranslate"><span class="pre">SLGridSph.model</span></code>) are provided in the DiskHalo, Halo, and NBody examples in the <a class="reference external" href="https://github.com/EXP-code/EXP-examples/blob/main/">EXP-Examples repo</a>. Model files
+must follow the file format of the provided examples.</p>
+<p>Body files are ascii files that provide the initial phase-space information for your galaxy components. These could be generated from your favorite initial
+conditions generator and translated into the correct format, or you could generate the files within EXP. The columns are particle mass, particle position
+(<span class="math notranslate nohighlight">\(x, y, z\)</span>), and particle velocity (<span class="math notranslate nohighlight">\(V_x, V_y, V_z\)</span>). Example body files (ending in <code class="docutils literal notranslate"><span class="pre">.bod</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">halo.bod</span></code>) are provided in the Disk
+Halo, Halo, and NBody examples in the <a class="reference external" href="https://github.com/EXP-code/EXP-examples/blob/main/">EXP-Examples repo</a>. Body files must follow the same format as
+these provided examples, and be in units where G = 1. The number of particles in the body files sets the number of particles that are in your simulation.</p>
+<section id="generating-body-files-in-exp">
+<h3>Generating body files in EXP<a class="headerlink" href="#generating-body-files-in-exp" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> function, which lives in <code class="docutils literal notranslate"><span class="pre">/utils/ICs</span></code>, can generate the body files for the disk and halo as well as the cache files (step three).
+Parameters for <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> are specified in a YAML file with the following fields:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CMAPR</span>                <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Radial coordinate mapping type for cylindrical grid (0:none, 1:rational fct)</span>
+<span class="n">CMAPZ</span>                <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Vertical coordinate mapping type for cylindrical grid (0:none, 1:sech, 2:power in z</span>
+<span class="n">DF</span>                   <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Use change-over from Jeans to Eddington</span>
+<span class="n">DFLAG</span>                <span class="p">:</span> <span class="mi">6</span>                    <span class="c1"># Output flags for DiskHalo</span>
+<span class="n">DIVERGE</span>              <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Cusp extrapolation for primary halo model</span>
+<span class="n">DIVERGE2</span>             <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Cusp extrapolation for number model</span>
+<span class="n">DIVERGE_RFAC</span>         <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Extrapolation exponent for primary mass model</span>
+<span class="n">DIVERGE_RFAC2</span>        <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Extrapolation exponent for number model</span>
+<span class="n">DMFAC</span>                <span class="p">:</span> <span class="mf">0.0</span>                  <span class="c1"># Disk mass scaling factor for spherical deprojection model</span>
+<span class="n">DR_DF</span>                <span class="p">:</span> <span class="mi">5</span>                    <span class="c1"># Width of change for to Eddington</span>
+<span class="n">DUMPCOEF</span>             <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Dump coefficients</span>
+<span class="n">HSCALE</span>               <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Vertical scale length for disk basis construction (e.g. 0.002)</span>
+<span class="n">LMAX</span>                 <span class="p">:</span> <span class="mi">6</span>                    <span class="c1"># Number of harmonics for Spherical SL for halo/spheroid</span>
+<span class="n">LMAXFID</span>              <span class="p">:</span> <span class="mi">64</span>                   <span class="c1"># Number of harmonics for Spherical SL for determining disk basis</span>
+<span class="n">LOGR</span>                 <span class="p">:</span> <span class="n">true</span>                 <span class="c1"># Make a logarithmic coordinate mapping</span>
+<span class="n">MMAX</span>                 <span class="p">:</span> <span class="mi">6</span>                    <span class="c1"># Number of azimuthal harmonics for disk basis</span>
+<span class="n">NCHEB</span>                <span class="p">:</span> <span class="mi">16</span>                   <span class="c1"># Chebyshev order for smoothing</span>
+<span class="n">NDP</span>                  <span class="p">:</span> <span class="mi">1</span>
+<span class="n">NDR</span>                  <span class="p">:</span> <span class="mi">2000</span>                 <span class="c1"># Number of points in DiskHalo radial table for disk</span>
+<span class="n">NDZ</span>                  <span class="p">:</span> <span class="mi">200</span>                  <span class="c1"># Number of points in DiskHalo vertical table for disk</span>
+<span class="n">NHR</span>                  <span class="p">:</span> <span class="mi">800</span>                  <span class="c1"># Number of points in DiskHalo radial table for halo</span>
+<span class="n">NHT</span>                  <span class="p">:</span> <span class="mi">200</span>                  <span class="c1"># Number of points in DiskHalo cos(theta) table for halo</span>
+<span class="n">NMAXH</span>                <span class="p">:</span> <span class="mi">18</span>                   <span class="c1"># Number of radial basis functions in Spherical SL for halo/spheroid</span>
+<span class="n">NMAXFID</span>              <span class="p">:</span> <span class="mi">72</span>                   <span class="c1"># Number of radial basis functions in Spherical SL for determining disk basis</span>
+<span class="n">NODD</span>                 <span class="p">:</span> <span class="mi">8</span>                    <span class="c1"># Number of vertically antisymmetric disk basis functions per M-order</span>
+<span class="n">NMAXD</span>                <span class="p">:</span> <span class="mi">18</span>                   <span class="c1"># Number of disk basis functions per M-order</span>
+<span class="n">NMAXLIM</span>              <span class="p">:</span> <span class="mi">10000</span>                <span class="c1"># Restricts disk basis function to NORDER1&lt;NORDER after basis construction for testing</span>
+<span class="n">NOUT</span>                 <span class="p">:</span> <span class="mi">1000</span>                 <span class="c1"># Number of radial basis functions to output for each harmonic order</span>
+<span class="n">NUMDF</span>                <span class="p">:</span> <span class="mi">1000</span>                 <span class="c1"># Number of grid points for Eddington inversion</span>
+<span class="n">NUMR</span>                 <span class="p">:</span> <span class="mi">1000</span>                 <span class="c1"># Size of radial grid for Spherical SL</span>
+<span class="n">NUMX</span>                 <span class="p">:</span> <span class="mi">256</span>                  <span class="c1"># Radial grid size for disk basis table</span>
+<span class="n">NUMY</span>                 <span class="p">:</span> <span class="mi">128</span>                  <span class="c1"># Vertical grid size for disk basis table</span>
+<span class="n">PNUM</span>                 <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Number of azimthal knots for EmpCylSL basis construction quadrature</span>
+<span class="n">RCYLMAX</span>              <span class="p">:</span> <span class="mf">20.0</span>                 <span class="c1"># Maximum disk radius</span>
+<span class="n">RCYLMIN</span>              <span class="p">:</span> <span class="mf">0.001</span>                <span class="c1"># Minimum disk radius</span>
+<span class="n">RFACTOR</span>              <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Disk radial scaling factor for spherical deprojection model</span>
+<span class="n">RMIN</span>                 <span class="p">:</span> <span class="mf">0.00001</span>              <span class="c1"># Minimum halo radius</span>
+<span class="n">RNUM</span>                 <span class="p">:</span> <span class="mi">200</span>                  <span class="c1"># Number of radial knots for EmpCylSL basis construction quadrature</span>
+<span class="n">RSPHSL</span>               <span class="p">:</span> <span class="mf">4.00</span>                 <span class="c1"># Maximum halo expansion radius</span>
+<span class="n">RTRUNC</span>               <span class="p">:</span> <span class="mf">0.1</span>                  <span class="c1"># Maximum disk radius for erf truncation of EOF conditioning density</span>
+<span class="n">RWIDTH</span>               <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Width for erf truncationofr EOF conditioning density (ignored if zero)</span>
+<span class="n">R_DF</span>                 <span class="p">:</span> <span class="mi">20</span>                   <span class="c1"># Change over radius for Eddington</span>
+<span class="n">SCMAP</span>                <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Turn on Spherical SL coordinate mapping (1, 2, 0:off</span>
+<span class="n">SCSPH</span>                <span class="p">:</span> <span class="mf">0.05</span>                 <span class="c1"># Scale for Spherical SL coordinate mapping</span>
+<span class="n">SEED</span>                 <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Random number seed (e.g. your favorite number)</span>
+<span class="n">SELECT</span>               <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Enable significance selection in coefficient computation</span>
+<span class="n">SHFAC</span>                <span class="p">:</span> <span class="mi">16</span>                   <span class="c1"># Scale height factor for assigning vertical table size</span>
+<span class="n">SVD</span>                  <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Use svd for symmetric eigenvalue problesm</span>
+<span class="n">TNUM</span>                 <span class="p">:</span> <span class="mi">80</span>                   <span class="c1"># Number of cos(theta) knots for EmpCylSL basis construction quadrature</span>
+<span class="n">Temp</span>                 <span class="p">:</span> <span class="mi">2000</span>                 <span class="c1"># Gas temperature (in K)</span>
+<span class="n">Tmin</span>                 <span class="p">:</span> <span class="mi">500</span>                  <span class="c1"># Temperature floor (in K) for gas disk generation</span>
+<span class="n">ToomreQ</span>              <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Toomre Q parameter for stellar disk generation (e.g. 1.4)</span>
+<span class="n">U0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo x velocity center position</span>
+<span class="n">V0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo y velocity center position</span>
+<span class="n">VFLAG</span>                <span class="p">:</span> <span class="mi">16</span>                   <span class="c1"># Output flags for EmpCylSL</span>
+<span class="n">W0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo z velocity center position</span>
+<span class="n">X0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo x center position</span>
+<span class="n">Y0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo y center position</span>
+<span class="n">Z0</span>                   <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Disk-Halo z center position</span>
+<span class="n">basis</span>                <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Print out disk and halo basis</span>
+<span class="n">ignore</span>               <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># &#39;false&#39; if you want to generate and save out cache files, otherwise &#39;true&#39;</span>
+<span class="n">cachefile</span>            <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Name of EOF cache file (e.g. eof.cache.fileF)</span>
+<span class="n">centerfile</span>           <span class="p">:</span>                      <span class="c1"># Read position and velocity center from this file</span>
+<span class="n">constheight</span>          <span class="p">:</span> <span class="n">true</span>                 <span class="c1"># Use constant disk scale height</span>
+<span class="n">dbods</span>                <span class="p">:</span> <span class="n">disk</span><span class="o">.</span><span class="n">bods</span>            <span class="c1"># Disk particle output file</span>
+<span class="n">deproject</span>            <span class="p">:</span> <span class="n">Exponential</span>          <span class="c1"># set deprojection model (Exponential or MN)</span>
+<span class="n">disk_mass</span>            <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Mass of stellar disk (e.g. 0.0125)</span>
+<span class="n">dtype</span>                <span class="p">:</span> <span class="n">exponential</span>          <span class="c1"># Disk type for condition (one of: constant, gaussian, mn, exponential)</span>
+<span class="n">expcond</span>              <span class="p">:</span> <span class="n">true</span>                 <span class="c1"># Use analytic density function for computing EmpCylSL basis</span>
+<span class="n">gentype</span>              <span class="p">:</span> <span class="n">asymmetric</span>           <span class="c1"># DiskGenType string for velocity initialization (Jeans, Asymmetric, or Epicyclic)</span>
+<span class="n">halofile1</span>            <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># File with input halo model (your .model file here)</span>
+<span class="n">evolved</span>              <span class="p">:</span> <span class="n">false</span>
+<span class="n">hbods</span>                <span class="p">:</span> <span class="n">halo</span><span class="o">.</span><span class="n">bods</span>            <span class="c1"># Halo particle output file</span>
+<span class="n">ignore</span>               <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Recompute EOF regardless of existence</span>
+<span class="n">multi</span>                <span class="p">:</span> <span class="n">false</span>                <span class="c1"># Use multimass halo</span>
+<span class="n">ndisk</span>                <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Number of disk particles (e.g. 1000000)</span>
+<span class="n">ngas</span>                 <span class="p">:</span> <span class="mi">0</span>                    <span class="c1"># Number of gas particles</span>
+<span class="n">ngparam</span>              <span class="p">:</span> <span class="mi">3</span>                    <span class="c1"># Number of gas particle parameters</span>
+<span class="n">nhalo</span>                <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Number of halo particles (e.g. 10000000)</span>
+<span class="n">report</span>               <span class="p">:</span> <span class="n">true</span>                 <span class="c1"># Report particle progress in EOF computation</span>
+<span class="n">runtag</span>               <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Label prefix for diagnostic images (e.g. &#39;run1&#39;)</span>
+<span class="n">scale_height</span>         <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Scale height for disk realization (e.g. 0.002)</span>
+<span class="n">scale_length</span>         <span class="p">:</span> <span class="n">XXXXX</span>                <span class="c1"># Scale length for disk realization (e.g. 0.01)</span>
+<span class="n">threads</span>              <span class="p">:</span> <span class="mi">1</span>                    <span class="c1"># Number of lightweight threads</span>
+<span class="n">zerovel</span>              <span class="p">:</span> <span class="n">true</span>                 <span class="c1"># zero center of mass and velocity</span>
+<span class="n">suffix</span>               <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Parameters that have values set to ‘XXXXX’ are those that users are encouraged to change. Example values are given in the
+comment following the parameter value. The remaining parameters are “expert parameters” and generally do not need to be changed
+unless you have a good reason to use a different value. Note that the <code class="docutils literal notranslate"><span class="pre">exponential</span></code> disk is
+exponential in R and <span class="math notranslate nohighlight">\(sech^2\)</span> in z.</p>
+<p>To generate the initial conditions, you would run:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mpirun</span> <span class="n">gendisk</span> <span class="o">--</span><span class="n">config</span> <span class="n">gendisk_step1</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>in the terminal, replacing <code class="docutils literal notranslate"><span class="pre">gendisk_step1.yml</span></code> with the name of your YAML file that specifies the <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> parameters. If
+you set <code class="docutils literal notranslate"><span class="pre">ignore</span> <span class="pre">=</span> <span class="pre">false</span></code>, it may take a moment to generate the cylindrical bases cache file. The cylindrical bases will be
+saved out to whatever name is specified in <code class="docutils literal notranslate"><span class="pre">cachefile</span></code>, and the halo basis will generally be saved out to
+<code class="docutils literal notranslate"><span class="pre">.slgrid_sph_cache</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">diskgen</span></code> YAML file here is distinct from the EXP YAML config file, EXP YAML config files
+look like <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">this annotated example</span></a>.</p>
+</section>
+</section>
+<section id="step-two-generate-cache-files">
+<h2>Step Two: generate cache files<a class="headerlink" href="#step-two-generate-cache-files" title="Link to this heading"></a></h2>
+<p>If you didn’t generate cache files in step one, you need to generate these files now. An example of how to do this is in the
+<a class="reference external" href="https://github.com/EXP-code/pyEXP-examples/blob/main/How-To/Utilities/create%20Cylinder%20basis%20(parallel).py">pyEXP-Examples repo</a>.
+If you are including a stellar disk in your simulation, EXP requires that you provide a cylindrical cache file with a name that matches
+the <code class="docutils literal notranslate"><span class="pre">cachename</span></code> for the <strong>star disk</strong> in the EXP YAML config file. You are not required to provide a spherical cache file, as it is much
+faster to compute the spherical cache file than the cylindrical cache file. You must specify a name for the spherical cache file in the
+EXP YAML config file, and if that file does not exist, EXP will generate the spherical cache file on-the-fly and save it as the specified name.</p>
+</section>
+<section id="step-three-three-part-relaxation-process-optional">
+<h2>Step Three: three-part relaxation process (<strong>optional</strong>)<a class="headerlink" href="#step-three-three-part-relaxation-process-optional" title="Link to this heading"></a></h2>
+<p>We recommend a performing the following three step process to produce quiet initial conditions. This process minimizes ringing and other symptoms of
+slight dynamical disequilibrium in the initial conditions by allowing the disk and halo to adjust and virialize in the presence of one another before
+starting the full simulation. The steps are as follows:</p>
+<ol class="upperalpha simple">
+<li><p>After creating your disk and halo body files, relax the halo in the presence of the disk. To do this, set the following parameters in the <code class="docutils literal notranslate"><span class="pre">force</span></code> parameter map for the halo portion of the EXP YAML config to true:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_consistent</span><span class="p">:</span>       <span class="n">true</span>
+<span class="n">EVEN_L</span><span class="p">:</span>                <span class="n">true</span>
+<span class="n">M0_ONLY</span><span class="p">:</span>               <span class="n">true</span>
+</pre></div>
+</div>
+<p>and set <code class="docutils literal notranslate"><span class="pre">self_consistent</span></code> in the <code class="docutils literal notranslate"><span class="pre">force</span></code> parameter map of the disk portion of the EXP YAML config to false</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_consistent</span><span class="p">:</span>       <span class="n">false</span>
+</pre></div>
+</div>
+<p>(see e.g. <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">an annotated example</span></a>). The rest of your config YAML file should be as normal. Lets call this YAML file “first_step_config.yml”. We suggest running for at least T ~ 4 Gyr, though you should check the output coefficients to know if you should run for longer. Note that in the YAML config, you can reduce the cadence of when phase space dumps (i.e. snapshots) are saved out to avoid unnecessarily cluttering up your storage. The <code class="docutils literal notranslate"><span class="pre">acyl</span></code> and <code class="docutils literal notranslate"><span class="pre">hcyl</span></code> parameters should match <code class="docutils literal notranslate"><span class="pre">ascale</span></code> and <code class="docutils literal notranslate"><span class="pre">hscale</span></code> in your <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> YAML config file. Run EXP with this YAML config file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mpirun</span> <span class="o">-</span><span class="n">v</span> <span class="n">exp</span> <span class="o">--</span><span class="n">config</span> <span class="n">first_step_config</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<ol class="upperalpha simple" start="2">
+<li><p>Generate a new disk in your newly relaxed halo. To do this, you’ll need to convert the last phase space output of the EXP run in the previous step into a properly formatted body file. You can do this in the terminal using <code class="docutils literal notranslate"><span class="pre">psp2ascii</span></code>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">psp2ascii</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">f</span> <span class="n">your_file_name_here</span><span class="o">.</span><span class="n">last_timestep</span> <span class="o">-</span><span class="n">o</span> <span class="n">your_chosen_outfile_name</span><span class="o">.</span><span class="n">diag</span>
+</pre></div>
+</div>
+<p>followed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">your_chosen_outfile_name</span><span class="o">.</span><span class="n">diag</span><span class="o">.</span><span class="n">halo</span> <span class="n">your_chosen_outfile_name</span><span class="o">.</span><span class="n">diag</span><span class="o">.</span><span class="n">halo</span><span class="o">.</span><span class="n">diag</span>
+</pre></div>
+</div>
+<p>to comply with naming conventions. Here we have assumed that the <code class="docutils literal notranslate"><span class="pre">name</span></code> for your dark matter halo in first_step_config.yml was ‘halo’. You can now use this body file as an input to <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> to generate your new disk in this halo. Make a copy your original <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> YAML file and give the copy a new name. In this example, we’ll call this new copy “gendisk_step2.yml”. Pick a name for your new disk body file and change the following lines in your copied <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> YAML file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hbods</span><span class="p">:</span>        <span class="n">your_chosen_outfile_name</span><span class="o">.</span><span class="n">diag</span><span class="o">.</span><span class="n">halo</span><span class="o">.</span><span class="n">diag</span>
+<span class="n">evolved</span><span class="p">:</span>      <span class="n">true</span>
+<span class="n">dbods</span><span class="p">:</span>        <span class="n">disk_step2</span><span class="o">.</span><span class="n">bod</span>
+</pre></div>
+</div>
+<p>here we call our new disk body file “disk_step2.bod”. Run <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> with <code class="docutils literal notranslate"><span class="pre">--config</span></code> set to this new YAML file.</p>
+<ol class="upperalpha simple" start="3">
+<li><p>Relax this disk in the presence of the halo. Make a copy of your original EXP YAML config file and rename it, we’ll call this new file “third_step_config.yml” in our example. In your copied EXP YAML config file, change the following lines in the <code class="docutils literal notranslate"><span class="pre">force</span></code> parameter map of the halo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_consistent</span><span class="p">:</span>     <span class="n">false</span>
+<span class="n">EVEN_L</span><span class="p">:</span>              <span class="n">true</span>
+<span class="n">M0_ONLY</span><span class="p">:</span>             <span class="n">true</span>
+</pre></div>
+</div>
+<p>and the following lines in the <code class="docutils literal notranslate"><span class="pre">force</span></code> parameter map of the disk:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_consistent</span><span class="p">:</span>     <span class="n">true</span>
+<span class="n">mlim</span><span class="p">:</span>                <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Finally, set the disk and halo <code class="docutils literal notranslate"><span class="pre">bodyfile</span></code> parameters to your updated body files (here we would set the halo <code class="docutils literal notranslate"><span class="pre">bodyfile</span></code> to your_chosen_outfile_name.diag.halo.diag and the disk <code class="docutils literal notranslate"><span class="pre">bodyfile</span></code> to disk_step2.bod). Setting <code class="docutils literal notranslate"><span class="pre">mlim</span></code> to zero here allows only axisymmetric structure to evolve. Run EXP with this edited YAML config file, we recommend allowing the system to evolve for at least T ~ 2 Gyr. As before, you can set a low cadence for saving out phase space dumps to reduce the amount of storage used in this step.  The last phase space dump from this step will be the input initial conditions (body files) for your full run of the simulation. Follow the procedure given in B to get the phase space files into the proper body file format, remembering to separate the phase space file into the stellar and dark components for the disk and halo body files, respectively.</p>
+<p>As a final note, the symmetries in the <code class="docutils literal notranslate"><span class="pre">sphereSL</span></code> (i.e. dark matter halo) can be controlled by setting the following options to true or false:</p>
+<p><code class="docutils literal notranslate"><span class="pre">NO_L0</span></code> -  turn off the monopole component (you’ve supplied a background model!)</p>
+<p><code class="docutils literal notranslate"><span class="pre">NO_L1</span></code> - turn off the dipole component</p>
+<p><code class="docutils literal notranslate"><span class="pre">EVEN_L</span></code> - only allow even harmonic orders to evolve</p>
+<p><code class="docutils literal notranslate"><span class="pre">EVEN_M</span></code>  - only allow even harmonic subspaces to evolve</p>
+<p><code class="docutils literal notranslate"><span class="pre">M0_ONLY</span></code> - only allow the m=0 harmonic subspace to evolve</p>
+<p><code class="docutils literal notranslate"><span class="pre">self_gravity</span></code> - allow the component to evolve</p>
+<p>with similar options for the stellar disk.</p>
+</section>
+<section id="step-four-run-the-simulation">
+<h2>Step Four: run the simulation<a class="headerlink" href="#step-four-run-the-simulation" title="Link to this heading"></a></h2>
+<p>Run your full simulation! Make an EXP YAML config file, we’ll call ours “real_run_config.yml”, then run it with <code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">-v</span> <span class="pre">exp</span> <span class="pre">--config</span> <span class="pre">first_step_config.yml</span></code> . If you skipped Step 3, you’ll set the disk and halo <code class="docutils literal notranslate"><span class="pre">bodyfile</span></code> parameters in the EXP YAML config file to the files from Step 1. If you did the full three-step relaxation process, you’ll need to reformat the last phase space output from Step 3C into disk and halo body files, then you will set the <code class="docutils literal notranslate"><span class="pre">bodyfile</span></code> parameters to these new body files. If you generated your own disk initial conditions, the <code class="docutils literal notranslate"><span class="pre">acyl</span></code> and <code class="docutils literal notranslate"><span class="pre">hcyl</span></code> parameters should match <code class="docutils literal notranslate"><span class="pre">ascale</span></code> and <code class="docutils literal notranslate"><span class="pre">hscale</span></code>, respectively, in your <code class="docutils literal notranslate"><span class="pre">gendisk</span></code> YAML config file (note that <code class="docutils literal notranslate"><span class="pre">scale_length</span></code> and <code class="docutils literal notranslate"><span class="pre">scale_height</span></code> can differ from <code class="docutils literal notranslate"><span class="pre">acyl</span></code> and <code class="docutils literal notranslate"><span class="pre">hcyl</span></code>). For the real run of your simulation, <code class="docutils literal notranslate"><span class="pre">self_consistent</span></code> should be set to true for all components and <code class="docutils literal notranslate"><span class="pre">mlim</span></code> should be set to a value equal to or greater than your <code class="docutils literal notranslate"><span class="pre">mmax</span></code> parameter  (instead of setting these explicitly, these lines can be omitted from the EXP YAML config file which will set these values to the sensible defaults).</p>
+<p>Step Three and Four can be run with a <code class="docutils literal notranslate"><span class="pre">.sh</span></code> script, and could even be combined into a single script. If you’re using a machine with SLURM, you can set the SLURM parameters at the top of the script.</p>
+</section>
+<section id="step-five-sanity-check-your-output">
+<h2>Step Five: sanity check your output<a class="headerlink" href="#step-five-sanity-check-your-output" title="Link to this heading"></a></h2>
+<p>You’ve run your first simulation with EXP! You should check that the results are sensible. You can do this in a few ways, we provide a few checks that we like to perform. If you have additional checks that you do, please contribute these!</p>
+<ol class="arabic simple">
+<li><p>Inspect the phase space dumps at a few times in the simulation. Do you see big rings at early times? A three armed spiral/bar? These patterns can be a sign of issues with dynamical equilibrium in the initial conditions. You can do the three step relaxation procedure to help ensure a quiet start</p></li>
+<li><p>Inspect <code class="docutils literal notranslate"><span class="pre">OUTLOG</span> <span class="pre">file</span></code>, which should live in the same directory as your phase space dumps. Plotting column 1 versus 38 and column 1 versus 58 is a helpful diagnostic - these plots will show the virial parameter (i.e. <span class="math notranslate nohighlight">\(-2T/V_c\)</span>, where <span class="math notranslate nohighlight">\(V_c\)</span> is the Virial of Clausius) for the halo and disk, respectively. Perfect equilibrium would have <span class="math notranslate nohighlight">\(-2T/V_c = 1\)</span> - this plot should look like tiny oscillations around one.</p></li>
+<li><p>Look at some orbits of star particles. Are they sensible?</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="yaml-primer.html" class="btn btn-neutral float-left" title="A YAML primer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../faq.html" class="btn btn-neutral float-right" title="Are there pre-compiled versions of pyEXP and EXP?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STL containers &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">STL containers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/cast/stl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stl-containers">
+<h1>STL containers<a class="headerlink" href="#stl-containers" title="Link to this heading"></a></h1>
+<section id="automatic-conversion">
+<h2>Automatic conversion<a class="headerlink" href="#automatic-conversion" title="Link to this heading"></a></h2>
+<p>When including the additional header file <code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code>, conversions
+between <code class="docutils literal notranslate"><span class="pre">std::vector&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::deque&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::list&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::array&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::valarray&lt;&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">std::set&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::unordered_set&lt;&gt;</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">std::map&lt;&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">std::unordered_map&lt;&gt;</span></code> and the Python <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code> and
+<code class="docutils literal notranslate"><span class="pre">dict</span></code> data structures are automatically enabled. The types <code class="docutils literal notranslate"><span class="pre">std::pair&lt;&gt;</span></code>
+and <code class="docutils literal notranslate"><span class="pre">std::tuple&lt;&gt;</span></code> are already supported out of the box with just the core
+<code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code> header.</p>
+<p>The major downside of these implicit conversions is that containers must be
+converted (i.e. copied) on every Python-&gt;C++ and C++-&gt;Python transition, which
+can have implications on the program semantics and performance. Please read the
+next sections for more details and alternative approaches that avoid this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arbitrary nesting of any of these types is possible.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_stl.cpp</span></code> contains a complete
+example that demonstrates how to pass STL data types in more detail.</p>
+</div>
+</section>
+<section id="c-17-library-containers">
+<span id="cpp17-container-casters"></span><h2>C++17 library containers<a class="headerlink" href="#c-17-library-containers" title="Link to this heading"></a></h2>
+<p>The <code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code> header also includes support for <code class="docutils literal notranslate"><span class="pre">std::optional&lt;&gt;</span></code>
+and <code class="docutils literal notranslate"><span class="pre">std::variant&lt;&gt;</span></code>. These require a C++17 compiler and standard library.
+In C++14 mode, <code class="docutils literal notranslate"><span class="pre">std::experimental::optional&lt;&gt;</span></code> is supported if available.</p>
+<p>Various versions of these containers also exist for C++11 (e.g. in Boost).
+pybind11 provides an easy way to specialize the <code class="docutils literal notranslate"><span class="pre">type_caster</span></code> for such
+types:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// `boost::optional` as an example -- can be any `std::optional`-like container</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PYBIND11_NAMESPACE</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">detail</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">type_caster</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">optional_caster</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{};</span>
+<span class="p">}}</span>
+</pre></div>
+</div>
+<p>The above should be placed in a header file and included in all translation units
+where automatic conversion is needed. Similarly, a specialization can be provided
+for custom variant types:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// `boost::variant` as an example -- can be any `std::variant`-like container</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PYBIND11_NAMESPACE</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">detail</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Ts</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">type_caster</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">variant_caster</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{};</span>
+
+<span class="w">    </span><span class="c1">// Specifies the function used to visit the variant -- `apply_visitor` instead of `visit`</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">visit_helper</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">variant</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">call</span><span class="p">(</span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">apply_visitor</span><span class="p">(</span><span class="n">args</span><span class="p">...))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">apply_visitor</span><span class="p">(</span><span class="n">args</span><span class="p">...);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}}</span><span class="w"> </span><span class="c1">// namespace PYBIND11_NAMESPACE::detail</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">visit_helper</span></code> specialization is not required if your <code class="docutils literal notranslate"><span class="pre">name::variant</span></code> provides
+a <code class="docutils literal notranslate"><span class="pre">name::visit()</span></code> function. For any other function name, the specialization must be
+included to tell pybind11 how to visit the variant.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When converting a <code class="docutils literal notranslate"><span class="pre">variant</span></code> type, pybind11 follows the same rules as when
+determining which function overload to call (<a class="reference internal" href="../functions.html#overload-resolution"><span class="std std-ref">Overload resolution order</span></a>), and
+so the same caveats hold. In particular, the order in which the <code class="docutils literal notranslate"><span class="pre">variant</span></code>’s
+alternatives are listed is important, since pybind11 will try conversions in
+this order. This means that, for example, when converting <code class="docutils literal notranslate"><span class="pre">variant&lt;int,</span> <span class="pre">bool&gt;</span></code>,
+the <code class="docutils literal notranslate"><span class="pre">bool</span></code> variant will never be selected, as any Python <code class="docutils literal notranslate"><span class="pre">bool</span></code> is already
+an <code class="docutils literal notranslate"><span class="pre">int</span></code> and is convertible to a C++ <code class="docutils literal notranslate"><span class="pre">int</span></code>. Changing the order of alternatives
+(and using <code class="docutils literal notranslate"><span class="pre">variant&lt;bool,</span> <span class="pre">int&gt;</span></code>, in this example) provides a solution.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>pybind11 only supports the modern implementation of <code class="docutils literal notranslate"><span class="pre">boost::variant</span></code>
+which makes use of variadic templates. This requires Boost 1.56 or newer.</p>
+</div>
+</section>
+<section id="making-opaque-types">
+<span id="opaque"></span><h2>Making opaque types<a class="headerlink" href="#making-opaque-types" title="Link to this heading"></a></h2>
+<p>pybind11 heavily relies on a template matching mechanism to convert parameters
+and return values that are constructed from STL data types such as vectors,
+linked lists, hash tables, etc. This even works in a recursive manner, for
+instance to deal with lists of hash maps of pairs of elementary and custom
+types, etc.</p>
+<p>However, a fundamental limitation of this approach is that internal conversions
+between Python and C++ types involve a copy operation that prevents
+pass-by-reference semantics. What does this mean?</p>
+<p>Suppose we bind the following function</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">append_1</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">v</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and call it from Python, the following happens:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">append_1</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">[5, 6]</span>
+</pre></div>
+</div>
+<p>As you can see, when passing STL data structures by reference, modifications
+are not propagated back the Python side. A similar situation arises when
+exposing STL data structures using the <code class="docutils literal notranslate"><span class="pre">def_readwrite</span></code> or <code class="docutils literal notranslate"><span class="pre">def_readonly</span></code>
+functions:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* ... definition ... */</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">contents</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cm">/* ... binding code ... */</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MyClass&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;contents&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">contents</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this case, properties can be read and written in their entirety. However, an
+<code class="docutils literal notranslate"><span class="pre">append</span></code> operation involving such a list type has no effect:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+<span class="go">[5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">contents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+<span class="go">[5, 6]</span>
+</pre></div>
+</div>
+<p>Finally, the involved copy operations can be costly when dealing with very
+large lists. To deal with all of the above situations, pybind11 provides a
+macro named <code class="docutils literal notranslate"><span class="pre">PYBIND11_MAKE_OPAQUE(T)</span></code> that disables the template-based
+conversion machinery of types, thus rendering them <em>opaque</em>. The contents of
+opaque objects are never inspected or extracted, hence they <em>can</em> be passed by
+reference. For instance, to turn <code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code> into an opaque type, add
+the declaration</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_MAKE_OPAQUE</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>before any binding code (e.g. invocations to <code class="docutils literal notranslate"><span class="pre">class_::def()</span></code>, etc.). This
+macro must be specified at the top level (and outside of any namespaces), since
+it adds a template instantiation of <code class="docutils literal notranslate"><span class="pre">type_caster</span></code>. If your binding code consists of
+multiple compilation units, it must be present in every file (typically via a
+common header) preceding any usage of <code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code>. Opaque types must
+also have a corresponding <code class="docutils literal notranslate"><span class="pre">class_</span></code> declaration to associate them with a name
+in Python, and to define a set of available operations, e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;IntVector&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span><span class="w"> </span><span class="cm">/* Keep vector alive while iterator is used */</span>
+<span class="w">    </span><span class="c1">// ....</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_opaque_types.cpp</span></code> contains a complete
+example that demonstrates how to create and expose opaque types using
+pybind11 in more detail.</p>
+</div>
+</section>
+<section id="binding-stl-containers">
+<span id="stl-bind"></span><h2>Binding STL containers<a class="headerlink" href="#binding-stl-containers" title="Link to this heading"></a></h2>
+<p>The ability to expose STL containers as native Python objects is a fairly
+common request, hence pybind11 also provides an optional header file named
+<code class="file docutils literal notranslate"><span class="pre">pybind11/stl_bind.h</span></code> that does exactly this. The mapped containers try
+to match the behavior of their native Python counterparts as much as possible.</p>
+<p>The following example showcases usage of <code class="file docutils literal notranslate"><span class="pre">pybind11/stl_bind.h</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don&#39;t forget this</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/stl_bind.h&gt;</span>
+
+<span class="n">PYBIND11_MAKE_OPAQUE</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">PYBIND11_MAKE_OPAQUE</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// later in binding code:</span>
+<span class="n">py</span><span class="o">::</span><span class="n">bind_vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;VectorInt&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">bind_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MapStringDouble&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When binding STL containers pybind11 considers the types of the container’s
+elements to decide whether the container should be confined to the local module
+(via the <a class="reference internal" href="../classes.html#module-local"><span class="std std-ref">Module-local class bindings</span></a> feature).  If the container element types are
+anything other than already-bound custom types bound without
+<code class="docutils literal notranslate"><span class="pre">py::module_local()</span></code> the container binding will have <code class="docutils literal notranslate"><span class="pre">py::module_local()</span></code>
+applied.  This includes converting types such as numeric types, strings, Eigen
+types; and types that have not yet been bound at the time of the stl container
+binding.  This module-local binding is designed to avoid potential conflicts
+between module bindings (for example, from two separate modules each attempting
+to bind <code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code> as a python type).</p>
+<p>It is possible to override this behavior to force a definition to be either
+module-local or global.  To do so, you can pass the attributes
+<code class="docutils literal notranslate"><span class="pre">py::module_local()</span></code> (to make the binding module-local) or
+<code class="docutils literal notranslate"><span class="pre">py::module_local(false)</span></code> (to make the binding global) into the
+<code class="docutils literal notranslate"><span class="pre">py::bind_vector</span></code> or <code class="docutils literal notranslate"><span class="pre">py::bind_map</span></code> arguments:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">bind_vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;VectorInt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_local</span><span class="p">(</span><span class="nb">false</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Note, however, that such a global binding would make it impossible to load this
+module at the same time as any other pybind module that also attempts to bind
+the same container type (<code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code> in the above example).</p>
+<p>See <a class="reference internal" href="../classes.html#module-local"><span class="std std-ref">Module-local class bindings</span></a> for more details on module-local bindings.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_stl_binders.cpp</span></code> shows how to use the
+convenience STL container wrappers.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

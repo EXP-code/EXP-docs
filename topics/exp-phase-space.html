@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The EXP phase-space format &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How the EXP N-body code selects what and when to write data" href="EXP-output.html" />
+    <link rel="prev" title="Replaying a simulation using EXP" href="replay.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The EXP phase-space format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-another-format">Why another format?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation-overview">Implementation overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phase-space-file-utilities">Phase-space file utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#binary-file-format-details">Binary file-format details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The EXP phase-space format</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/exp-phase-space.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-exp-phase-space-format">
+<span id="exp-phase-space"></span><h1>The EXP phase-space format<a class="headerlink" href="#the-exp-phase-space-format" title="Link to this heading"></a></h1>
+<section id="why-another-format">
+<h2>Why another format?<a class="headerlink" href="#why-another-format" title="Link to this heading"></a></h2>
+<p>When EXP was written, there was no common N-body format.  The
+typical structures were serial lists of each phase-space variable
+<span class="math notranslate nohighlight">\(m_1, m_2, \ldots, m_N, x_1, x_2, \ldots, y_i, \ldots,\)</span>.  On the
+other hand, for the object-orientated design strategy described in
+<a class="reference internal" href="design.html#design"><span class="std std-ref">Software design goals and features</span></a>, the smallest object is the particle phase space
+described by <span class="math notranslate nohighlight">\(m_i, \mathbf{x}_i, \mathbf{v_i}, \ldots\)</span>, for
+<span class="math notranslate nohighlight">\(i=1,\ldots, N\)</span>.  Similarly, each distinct astronomical component
+(think <em>stellar disk</em>, <em>dark-matter halo</em>, etc.) is
+described by a group of phase-space particle along with any geometric
+or physical parameters common the the component.  That is, an
+object-oriented code motivates a phase-space description which not
+only contains the phase-space elements but the associated methods for
+computing the gravitational field together with all information
+required to reproduce the fields, along with any common
+properties of all components together, such as the current time.</p>
+<p>The result was the EXP phase-space protocol (PSP).  This
+hierarchical format begins with a header which describes the current
+time and the number of components in the phase space.  This
+emph{master} header is then followed by a description of each
+component (i.e. the name, the gravitational force method with all the
+parameters necessary for generating the force-computation method, and
+the phase-space particles themselves).  The code designed or user may
+choose to concatenated successive time slices, multiple phase-spaces,
+or put them in separate files.  Overall strategy the strategy of the
+PSP is a self-describing format that keeps the parameters together
+with phase-space details as a way of ensuring that the provenance of
+the particular phase space description is clear.  This self-describing
+phase-space format also expedites restarts.  The PSP format is fully
+IEEE compliant and can be moved from one machine to another without
+fear of incompatibility.  This format does not enforce endianness,
+however, that is rarely a concern these days since there are very few
+big endian architectures left.</p>
+<p>A port of the PSP features to HDF would be straightforward and is
+planned for a later release.</p>
+</section>
+<section id="implementation-overview">
+<h2>Implementation overview<a class="headerlink" href="#implementation-overview" title="Link to this heading"></a></h2>
+<p>The PSP format is a binary format.  However, for ease of construction,
+EXP initializes its components with ascii files that describe
+the particles and the associated geometric and force methods are
+provided in the configuration file as previously described.  Each
+phase-space particle is described by the mass, followed by the vector
+position and velocity, followed by an arbitrary number of intger and
+floating-point values.  These are described in ascii input by the
+first line contains the following three integer values:</p>
+<ol class="arabic simple">
+<li><p>the number of bodies, <span class="math notranslate nohighlight">\(N\)</span>,</p></li>
+<li><p>the number of integer attributes, <span class="math notranslate nohighlight">\(n_i\)</span>, per body</p></li>
+<li><p>the number of real (float or double) attributes, <span class="math notranslate nohighlight">\(n_d\)</span>, per body</p></li>
+</ol>
+<p>The next <span class="math notranslate nohighlight">\(N\)</span> lines are space delimited fields containing the
+information for each particle.</p>
+<p>EXP phase-space output is in binary PSP format.  The floating-point
+precision may be either single or double and specified by the user on
+configuration.  There are two versions of PSP writers in EXP: one that
+gather all particle information at the root node into a single
+phase-space structure before writing to disk from the root node, and
+one that using MPI-IO to write from each node.  Throughput will depend
+on the cluster hardware.  In principle, we could implement a true
+parallel writing scheme to many files with either an asynchronous
+concurrent thread or post-processing utility to consolidate the
+phase-space.  This is worth doing, especially as our ability to
+compute dynamics seems to be outpacing our ability to write
+phase-space files to storage.</p>
+<p>Because the phase-space dumps may be large, considerable disk space is
+saved by using the single- rather than double-precision floating
+representation if analysis does not require the full precision.  It is
+possible to restart a simulation from either a single- or
+double-precision PSP file, but it makes most sense to use
+double-precision PSP for checkpoints.</p>
+</section>
+<section id="phase-space-file-utilities">
+<h2>Phase-space file utilities<a class="headerlink" href="#phase-space-file-utilities" title="Link to this heading"></a></h2>
+<p>The following utilities manipulate the phase-space files:</p>
+<ul class="simple">
+<li><p><strong>pspinfo</strong> reads the master header and the header for each
+component in the PSP format and writes these fields to the standard
+output.</p></li>
+<li><p><strong>psp2ascii</strong> unpacks the PSP file into ascii files, one for each
+component with the same overall structure as the ascii input files.
+The one difference with the ascii input files is that the mass,
+position and velocity is followed by the value of the gravitational
+potential.</p></li>
+<li><p>Early versions of EXP imported and exported to <span class="target" id="index-0"></span>tipsy files.
+The utilities <cite>ascii2psp, psp2tipsy, tipstd2psp</cite> may be used to make
+these conversions.  I am not generally using tipsy format at this
+time and have not maintained these routines in many years, so user
+beware.</p></li>
+</ul>
+</section>
+<section id="binary-file-format-details">
+<h2>Binary file-format details<a class="headerlink" href="#binary-file-format-details" title="Link to this heading"></a></h2>
+<p>The binary phase space structure consists of a master header followed
+by <em>stanzas</em>.  Each stanza is has a header followed by the phase
+space.  The master header is:</p>
+<p>The parameters are:</p>
+<ul class="simple">
+<li><p><cite>time</cite> - the current time</p></li>
+<li><p><cite>ntot</cite> - total number of bodies in all components</p></li>
+<li><p><cite>ncomp</cite> - number of components</p></li>
+</ul>
+<p>Each stanza begins with a header:</p>
+<p>which describes the number of bodies in the component (<cite>nbod</cite>),
+the number of integer attributes (<cite>niatr</cite>), the number of
+double components (<cite>ndatr</cite>), number of characters reserved for
+the info string (<cite>ninfochar</cite>) and the info string itself.  The
+default size is <cite>ninfochar=1024</cite>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="replay.html" class="btn btn-neutral float-left" title="Replaying a simulation using EXP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="EXP-output.html" class="btn btn-neutral float-right" title="How the EXP N-body code selects what and when to write data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

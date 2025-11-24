@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Making movies of your BFE field quantities &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to use mSSA with your coefficient series in pyEXP" href="using-mssa.html" />
+    <link rel="prev" title="How to convert your coefficients back to physical fields" href="visualizing-fields.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Making movies of your BFE field quantities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#begin-with-the-usual-imports">Begin with the usual imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-basis-and-component">Configure the basis and component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#switch-to-the-working-directory">Switch to the working directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-the-exp-config-file-generate-the-basis-from-the-config-and-get-the-run-tag-for-convenience">Read the EXP config file, generate the basis from the config, and get the run tag for convenience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-the-coefficients">Read the coefficients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-the-output-field-grid-and-render-the-slices">Set the output field grid and render the slices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-movie-frames">Make a movie frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-mp4-file-from-the-frames-using-ffmpeg">Make a mp4 file from the frames using ffmpeg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preview-the-new-movie">Preview the new movie</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Making movies of your BFE field quantities</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/make-movies.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="making-movies-of-your-bfe-field-quantities">
+<span id="making-movies"></span><h1>Making movies of your BFE field quantities<a class="headerlink" href="#making-movies-of-your-bfe-field-quantities" title="Link to this heading"></a></h1>
+<p>Read in config from EXP yaml file and render a movie from the
+coefficient file. This notebook will create the movie for either the
+disk or the halo by changing the component variable from ‘dark’ to
+‘star’ and vice versa.</p>
+<section id="begin-with-the-usual-imports">
+<h2>Begin with the usual imports<a class="headerlink" href="#begin-with-the-usual-imports" title="Link to this heading"></a></h2>
+<p>You may need to append the pyEXP location to your Python path, depending
+on your installation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="c1"># sys.path.append(&#39;/my/path/to/site-packages&#39;)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyEXP</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">cm</span><span class="p">,</span> <span class="n">colors</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os.path</span><span class="w"> </span><span class="kn">import</span> <span class="n">exists</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="configure-the-basis-and-component">
+<h2>Configure the basis and component<a class="headerlink" href="#configure-the-basis-and-component" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">At minimum, you need to:</div>
+<div class="line">- Define the EXP config file to import the
+config.</div>
+<div class="line">- Define the target component.</div>
+</div>
+<p>The rest of the notebook should then run without changes.</p>
+<p>Two optional parameters:
+- The half size of each axis
+- Number of pixels
+along each axis</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># key parameters</span>
+<span class="n">exp_config</span> <span class="o">=</span> <span class="s1">&#39;step3_try9.yml&#39;</span>
+<span class="n">component</span>  <span class="o">=</span> <span class="s1">&#39;star&#39;</span>  <span class="c1"># You can make the halo (disk) movie by changing this to &#39;dark&#39; (&#39;star&#39;)</span>
+
+<span class="c1"># options</span>
+<span class="n">size</span>       <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">npix</span>       <span class="o">=</span> <span class="mi">50</span>
+</pre></div>
+</div>
+</section>
+<section id="switch-to-the-working-directory">
+<h2>Switch to the working directory<a class="headerlink" href="#switch-to-the-working-directory" title="Link to this heading"></a></h2>
+<p>I like to be explicit about my working directory but you don’t need to
+do this here. It would be sufficient to simply pass the full path to the
+coefficient factory below or launch the notebook from a working
+directory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># os.chdir(&#39;/data/Nbody/Test&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="read-the-exp-config-file-generate-the-basis-from-the-config-and-get-the-run-tag-for-convenience">
+<h2>Read the EXP config file, generate the basis from the config, and get the run tag for convenience<a class="headerlink" href="#read-the-exp-config-file-generate-the-basis-from-the-config-and-get-the-run-tag-for-convenience" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open and read the yaml file</span>
+<span class="c1">#</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exp_config</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">yaml_db</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+
+<span class="c1"># Grab both star and dark, although I&#39;m mostly interested in star at this point</span>
+<span class="c1">#</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">yaml_db</span><span class="p">[</span><span class="s1">&#39;Components&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">component</span><span class="p">:</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;force&#39;</span><span class="p">])</span>
+
+<span class="c1"># Construct the basis instance</span>
+<span class="c1">#</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">Basis</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># Get the runtag</span>
+<span class="c1">#</span>
+<span class="n">runtag</span> <span class="o">=</span> <span class="n">yaml_db</span><span class="p">[</span><span class="s1">&#39;Global&#39;</span><span class="p">][</span><span class="s1">&#39;runtag&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Runtag from </span><span class="si">{}</span><span class="s2"> is: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp_config</span><span class="p">,</span> <span class="n">runtag</span><span class="p">))</span>
+<span class="n">coeffile</span> <span class="o">=</span> <span class="s1">&#39;outcoef.</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">.h5&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">runtag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Coef file is:&quot;</span><span class="p">,</span> <span class="n">coeffile</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="read-the-coefficients">
+<h2>Read the coefficients<a class="headerlink" href="#read-the-coefficients" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coefs</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">coefs</span><span class="o">.</span><span class="n">Coefs</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="n">coeffile</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="set-the-output-field-grid-and-render-the-slices">
+<h2>Set the output field grid and render the slices<a class="headerlink" href="#set-the-output-field-grid-and-render-the-slices" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()</span>
+<span class="n">pmin</span>  <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">pmax</span>  <span class="o">=</span> <span class="p">[</span> <span class="n">size</span><span class="p">,</span>  <span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">grid</span>  <span class="o">=</span> <span class="p">[</span> <span class="n">npix</span><span class="p">,</span>  <span class="n">npix</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">FieldGenerator</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created fields instance&#39;</span><span class="p">)</span>
+
+<span class="n">surfaces</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">slices</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="make-a-movie-frames">
+<h2>Make a movie frames<a class="headerlink" href="#make-a-movie-frames" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the shape</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">surfaces</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Make the mesh</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ny</span><span class="p">)</span>
+<span class="n">xv</span><span class="p">,</span> <span class="n">yv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">})</span>
+
+<span class="c1"># Fix the contour levels to prevent jitter in the movie</span>
+<span class="n">cbar1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">cbar2</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.01</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
+
+<span class="c1"># Frame counter</span>
+<span class="n">icnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">colormaps</span><span class="p">[</span><span class="s1">&#39;viridis&#39;</span><span class="p">])</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">cmap</span><span class="o">.</span><span class="n">N</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Iterate through the keys</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+    <span class="n">mat</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">:</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">10000.0</span><span class="p">:</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10000.0</span>
+
+    <span class="n">cont1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">cbar2</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="c1"># You can label the contours inline by uncommenting the next two lines...</span>
+    <span class="c1"># ax[0].clabel(cont1, fontsize=9, inline=True)</span>
+    <span class="c1"># cont2 = ax.contourf(xv, yv, surfaces[v][&#39;d&#39;].transpose(), cbar2, vmin=cbar2[0], vmax=cbar2[-1])</span>
+    <span class="n">cont2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">cbar1</span><span class="p">,</span> <span class="n">locator</span><span class="o">=</span><span class="n">ticker</span><span class="o">.</span><span class="n">LogLocator</span><span class="p">())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;T=</span><span class="si">{:4.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_movie_</span><span class="si">{}</span><span class="s1">_</span><span class="si">{:04d}</span><span class="s1">.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">runtag</span><span class="p">,</span> <span class="n">icnt</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">icnt</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="make-a-mp4-file-from-the-frames-using-ffmpeg">
+<h2>Make a mp4 file from the frames using ffmpeg<a class="headerlink" href="#make-a-mp4-file-from-the-frames-using-ffmpeg" title="Link to this heading"></a></h2>
+<p>This will only work if you have ‘ffmpeg’ installed, of course …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;ffmpeg -y -i </span><span class="se">\&#39;</span><span class="si">{0}</span><span class="s1">_movie_</span><span class="si">{1}</span><span class="s1">_</span><span class="si">%04d</span><span class="s1">.png</span><span class="se">\&#39;</span><span class="s1"> movie_</span><span class="si">{0}</span><span class="s1">_</span><span class="si">{1}</span><span class="s1">.mp4&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">runtag</span><span class="p">))</span>
+</pre></div>
+</div>
+<section id="preview-the-new-movie">
+<h3>Preview the new movie<a class="headerlink" href="#preview-the-new-movie" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Video</span>
+<span class="n">Video</span><span class="p">(</span><span class="s1">&#39;movie_</span><span class="si">{0}</span><span class="s1">_</span><span class="si">{1}</span><span class="s1">.mp4&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">runtag</span><span class="p">),</span> <span class="n">embed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="visualizing-fields.html" class="btn btn-neutral float-left" title="How to convert your coefficients back to physical fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="using-mssa.html" class="btn btn-neutral float-right" title="How to use mSSA with your coefficient series in pyEXP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

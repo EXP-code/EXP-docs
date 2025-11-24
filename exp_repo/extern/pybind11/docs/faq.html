@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently asked questions &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frequently asked questions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/faq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequently-asked-questions">
+<h1>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading"></a></h1>
+<section id="importerror-dynamic-module-does-not-define-init-function">
+<h2>“ImportError: dynamic module does not define init function”<a class="headerlink" href="#importerror-dynamic-module-does-not-define-init-function" title="Link to this heading"></a></h2>
+<p>1. Make sure that the name specified in PYBIND11_MODULE is identical to the
+filename of the extension library (without suffixes such as <code class="docutils literal notranslate"><span class="pre">.so</span></code>).</p>
+<p>2. If the above did not fix the issue, you are likely using an incompatible
+version of Python that does not match what you compiled with.</p>
+</section>
+<section id="symbol-not-found-py-zerostruct-pyinstancemethod-type">
+<h2>“Symbol not found: <code class="docutils literal notranslate"><span class="pre">__Py_ZeroStruct</span></code> / <code class="docutils literal notranslate"><span class="pre">_PyInstanceMethod_Type</span></code>”<a class="headerlink" href="#symbol-not-found-py-zerostruct-pyinstancemethod-type" title="Link to this heading"></a></h2>
+<p>See the first answer.</p>
+</section>
+<section id="systemerror-dynamic-module-not-initialized-properly">
+<h2>“SystemError: dynamic module not initialized properly”<a class="headerlink" href="#systemerror-dynamic-module-not-initialized-properly" title="Link to this heading"></a></h2>
+<p>See the first answer.</p>
+</section>
+<section id="the-python-interpreter-immediately-crashes-when-importing-my-module">
+<h2>The Python interpreter immediately crashes when importing my module<a class="headerlink" href="#the-python-interpreter-immediately-crashes-when-importing-my-module" title="Link to this heading"></a></h2>
+<p>See the first answer.</p>
+</section>
+<section id="limitations-involving-reference-arguments">
+<span id="faq-reference-arguments"></span><h2>Limitations involving reference arguments<a class="headerlink" href="#limitations-involving-reference-arguments" title="Link to this heading"></a></h2>
+<p>In C++, it’s fairly common to pass arguments using mutable references or
+mutable pointers, which allows both read and write access to the value
+supplied by the caller. This is sometimes done for efficiency reasons, or to
+realize functions that have multiple return values. Here are two very basic
+examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">increment_ptr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>In Python, all arguments are passed by reference, so there is no general
+issue in binding such code from Python.</p>
+<p>However, certain basic Python types (like <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>,
+<code class="docutils literal notranslate"><span class="pre">float</span></code>, etc.) are <strong>immutable</strong>. This means that the following attempt
+to port the function to Python doesn’t have the same effect on the value
+provided by the caller – in fact, it does nothing at all.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># nope..</span>
+</pre></div>
+</div>
+<p>pybind11 is also affected by such language-level conventions, which means that
+binding <code class="docutils literal notranslate"><span class="pre">increment</span></code> or <code class="docutils literal notranslate"><span class="pre">increment_ptr</span></code> will also create Python functions
+that don’t modify their arguments.</p>
+<p>Although inconvenient, one workaround is to encapsulate the immutable types in
+a custom type that does allow modifications.</p>
+<p>An other alternative involves binding a small wrapper lambda function that
+returns a tuple with all output arguments (see the remainder of the
+documentation for examples on binding lambda functions). An example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>and the binding code</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-reduce-the-build-time">
+<h2>How can I reduce the build time?<a class="headerlink" href="#how-can-i-reduce-the-build-time" title="Link to this heading"></a></h2>
+<p>It’s good practice to split binding code over multiple files, as in the
+following example:</p>
+<p><code class="file docutils literal notranslate"><span class="pre">example.cpp</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">init_ex1</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">init_ex2</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
+<span class="cm">/* ... */</span>
+
+<span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">init_ex1</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="w">    </span><span class="n">init_ex2</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">ex1.cpp</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">init_ex1</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">ex2.cpp</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">init_ex2</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;sub&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong class="command">python</strong>:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>As shown above, the various <code class="docutils literal notranslate"><span class="pre">init_ex</span></code> functions should be contained in
+separate files that can be compiled independently from one another, and then
+linked together into the same final shared object.  Following this approach
+will:</p>
+<ol class="arabic simple">
+<li><p>reduce memory requirements per compilation unit.</p></li>
+<li><p>enable parallel builds (if desired).</p></li>
+<li><p>allow for faster incremental builds. For instance, when a single class
+definition is changed, only a subset of the binding code will generally need
+to be recompiled.</p></li>
+</ol>
+</section>
+<section id="recursive-template-instantiation-exceeded-maximum-depth-of-256">
+<h2>“recursive template instantiation exceeded maximum depth of 256”<a class="headerlink" href="#recursive-template-instantiation-exceeded-maximum-depth-of-256" title="Link to this heading"></a></h2>
+<p>If you receive an error about excessive recursive template evaluation, try
+specifying a larger value, e.g. <code class="docutils literal notranslate"><span class="pre">-ftemplate-depth=1024</span></code> on GCC/Clang. The
+culprit is generally the generation of function signatures at compile time
+using C++14 template metaprogramming.</p>
+</section>
+<section id="someclass-declared-with-greater-visibility-than-the-type-of-its-field-someclass-member-wattributes">
+<span id="faq-hidden-visibility"></span><h2>“‘SomeClass’ declared with greater visibility than the type of its field ‘SomeClass::member’ [-Wattributes]”<a class="headerlink" href="#someclass-declared-with-greater-visibility-than-the-type-of-its-field-someclass-member-wattributes" title="Link to this heading"></a></h2>
+<p>This error typically indicates that you are compiling without the required
+<code class="docutils literal notranslate"><span class="pre">-fvisibility</span></code> flag.  pybind11 code internally forces hidden visibility on
+all internal code, but if non-hidden (and thus <em>exported</em>) code attempts to
+include a pybind type (for example, <code class="docutils literal notranslate"><span class="pre">py::object</span></code> or <code class="docutils literal notranslate"><span class="pre">py::list</span></code>) you can run
+into this warning.</p>
+<p>To avoid it, make sure you are specifying <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> when
+compiling pybind code.</p>
+<p>As to why <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> is necessary, because pybind modules could
+have been compiled under different versions of pybind itself, it is also
+important that the symbols defined in one module do not clash with the
+potentially-incompatible symbols defined in another.  While Python extension
+modules are usually loaded with localized symbols (under POSIX systems
+typically using <code class="docutils literal notranslate"><span class="pre">dlopen</span></code> with the <code class="docutils literal notranslate"><span class="pre">RTLD_LOCAL</span></code> flag), this Python default
+can be changed, but even if it isn’t it is not always enough to guarantee
+complete independence of the symbols involved when not using
+<code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code>.</p>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> can deliver considerably binary size
+savings. (See the following section for more details.)</p>
+</section>
+<section id="how-can-i-create-smaller-binaries">
+<span id="faq-symhidden"></span><h2>How can I create smaller binaries?<a class="headerlink" href="#how-can-i-create-smaller-binaries" title="Link to this heading"></a></h2>
+<p>To do its job, pybind11 extensively relies on a programming technique known as
+<em>template metaprogramming</em>, which is a way of performing computation at compile
+time using type information. Template metaprogramming usually instantiates code
+involving significant numbers of deeply nested types that are either completely
+removed or reduced to just a few instructions during the compiler’s optimization
+phase. However, due to the nested nature of these types, the resulting symbol
+names in the compiled extension library can be extremely long. For instance,
+the included test suite contains the following symbol:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_​_​Z​N​8​p​y​b​i​n​d​1​1​1​2​c​p​p​_​f​u​n​c​t​i​o​n​C​1​I​v​8​E​x​a​m​p​l​e​2​J​R​N​S​t​3​_​_​1​6​v​e​c​t​o​r​I​N​S​3​_​1​2​b​a​s​i​c​_​s​t​r​i​n​g​I​w​N​S​3​_​1​1​c​h​a​r​_​t​r​a​i​t​s​I​w​E​E​N​S​3​_​9​a​l​l​o​c​a​t​o​r​I​w​E​E​E​E​N​S​8​_​I​S​A​_​E​E​E​E​E​J​N​S​_​4​n​a​m​e​E​N​S​_​7​s​i​b​l​i​n​g​E​N​S​_​9​i​s​_​m​e​t​h​o​d​E​A​2​8​_​c​E​E​E​M​T​0​_​F​T​_​D​p​T​1​_​E​D​p​R​K​T​2​_
+</pre></div>
+</div>
+<p>which is the mangled form of the following function type:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pybind11</span><span class="o">::</span><span class="n">cpp_function</span><span class="o">::</span><span class="n">cpp_function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">,</span><span class="w"> </span><span class="n">Example2</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">basic_string</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">char_traits</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">basic_string</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">char_traits</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">sibling</span><span class="p">,</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">is_method</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[</span><span class="mi">28</span><span class="p">]</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">Example2</span><span class="o">::*</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">basic_string</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">char_traits</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">basic_string</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">char_traits</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">__1</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;&amp;</span><span class="p">),</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">name</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">sibling</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">pybind11</span><span class="o">::</span><span class="n">is_method</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="mi">28</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The memory needed to store just the mangled name of this function (196 bytes)
+is larger than the actual piece of code (111 bytes) it represents! On the other
+hand, it’s silly to even give this function a name – after all, it’s just a
+tiny cog in a bigger piece of machinery that is not exposed to the outside
+world. So we’ll generally only want to export symbols for those functions which
+are actually called from the outside.</p>
+<p>This can be achieved by specifying the parameter <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> to GCC
+and Clang, which sets the default symbol visibility to <em>hidden</em>, which has a
+tremendous impact on the final binary size of the resulting extension library.
+(On Visual Studio, symbols are already hidden by default, so nothing needs to
+be done there.)</p>
+<p>In addition to decreasing binary size, <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> also avoids
+potential serious issues when loading multiple modules and is required for
+proper pybind operation.  See the previous FAQ entry for more details.</p>
+</section>
+<section id="how-can-i-properly-handle-ctrl-c-in-long-running-functions">
+<h2>How can I properly handle Ctrl-C in long-running functions?<a class="headerlink" href="#how-can-i-properly-handle-ctrl-c-in-long-running-functions" title="Link to this heading"></a></h2>
+<p>Ctrl-C is received by the Python interpreter, and holds it until the GIL
+is released, so a long-running function won’t be interrupted.</p>
+<p>To interrupt from inside your function, you can use the <code class="docutils literal notranslate"><span class="pre">PyErr_CheckSignals()</span></code>
+function, that will tell if a signal has been raised on the Python side.  This
+function merely checks a flag, so its impact is negligible. When a signal has
+been received, you must either explicitly interrupt execution by throwing
+<code class="docutils literal notranslate"><span class="pre">py::error_already_set</span></code> (which will propagate the existing
+<code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code>), or clear the error (which you usually will not want):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;long running_func&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(;;)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PyErr_CheckSignals</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">error_already_set</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// Long running iteration</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="what-is-a-highly-conclusive-and-simple-way-to-find-memory-leaks-e-g-in-pybind11-bindings">
+<h2>What is a highly conclusive and simple way to find memory leaks (e.g. in pybind11 bindings)?<a class="headerlink" href="#what-is-a-highly-conclusive-and-simple-way-to-find-memory-leaks-e-g-in-pybind11-bindings" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">top</span></code> (Linux, macOS).</p>
+<p>For example, locally change tests/test_type_caster_pyobject_ptr.py like this:</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>def test_return_list_pyobject_ptr_reference():
+<span class="gi">+  while True:</span>
+<span class="w"> </span>    vec_obj = m.return_list_pyobject_ptr_reference(ValueHolder)
+<span class="w"> </span>    assert [e.value for e in vec_obj] == [93, 186]
+<span class="w"> </span>    # Commenting out the next `assert` will leak the Python references.
+<span class="w"> </span>    # An easy way to see evidence of the leaks:
+<span class="w"> </span>    # Insert `while True:` as the first line of this function and monitor the
+<span class="w"> </span>    # process RES (Resident Memory Size) with the Unix top command.
+<span class="gd">-    assert m.dec_ref_each_pyobject_ptr(vec_obj) == 2</span>
+<span class="gi">+    # assert m.dec_ref_each_pyobject_ptr(vec_obj) == 2</span>
+</pre></div>
+</div>
+<p>Then run the test as you would normally do, which will go into the infinite loop.</p>
+<p><strong>In another shell, but on the same machine</strong> run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>top
+</pre></div>
+</div>
+<p>This will show:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">PID</span> <span class="n">USER</span>      <span class="n">PR</span>  <span class="n">NI</span>    <span class="n">VIRT</span>    <span class="n">RES</span>    <span class="n">SHR</span> <span class="n">S</span>  <span class="o">%</span><span class="n">CPU</span>  <span class="o">%</span><span class="n">MEM</span>     <span class="n">TIME</span><span class="o">+</span> <span class="n">COMMAND</span>
+<span class="mi">1266095</span> <span class="n">rwgk</span>      <span class="mi">20</span>   <span class="mi">0</span> <span class="mi">5207496</span> <span class="mi">611372</span>  <span class="mi">45696</span> <span class="n">R</span> <span class="mf">100.0</span>   <span class="mf">0.3</span>   <span class="mi">0</span><span class="p">:</span><span class="mf">08.01</span> <span class="n">test_type_caste</span>
+</pre></div>
+</div>
+<p>Look for the number under <code class="docutils literal notranslate"><span class="pre">RES</span></code> there. You’ll see it going up very quickly.</p>
+<p><strong>Don’t forget to Ctrl-C the test command</strong> before your machine becomes
+unresponsive due to swapping.</p>
+<p>This method only takes a couple minutes of effort and is very conclusive.
+What you want to see is that the <code class="docutils literal notranslate"><span class="pre">RES</span></code> number is stable after a couple
+seconds.</p>
+</section>
+<section id="cmake-doesn-t-detect-the-right-python-version">
+<h2>CMake doesn’t detect the right Python version<a class="headerlink" href="#cmake-doesn-t-detect-the-right-python-version" title="Link to this heading"></a></h2>
+<p>The CMake-based build system will try to automatically detect the installed
+version of Python and link against that. When this fails, or when there are
+multiple versions of Python and it finds the wrong one, delete
+<code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> and then add <code class="docutils literal notranslate"><span class="pre">-DPYTHON_EXECUTABLE=$(which</span> <span class="pre">python)</span></code> to your
+CMake configure line. (Replace <code class="docutils literal notranslate"><span class="pre">$(which</span> <span class="pre">python)</span></code> with a path to python if
+your prefer.)</p>
+<p>You can alternatively try <code class="docutils literal notranslate"><span class="pre">-DPYBIND11_FINDPYTHON=ON</span></code>, which will activate the
+new CMake FindPython support instead of pybind11’s custom search. Requires
+CMake 3.12+, and 3.15+ or 3.18.2+ are even better. You can set this in your
+<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> before adding or finding pybind11, as well.</p>
+</section>
+<section id="inconsistent-detection-of-python-version-in-cmake-and-pybind11">
+<h2>Inconsistent detection of Python version in CMake and pybind11<a class="headerlink" href="#inconsistent-detection-of-python-version-in-cmake-and-pybind11" title="Link to this heading"></a></h2>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">find_package(PythonInterp)</span></code> and <code class="docutils literal notranslate"><span class="pre">find_package(PythonLibs)</span></code>
+provided by CMake for Python version detection are modified by pybind11 due to
+unreliability and limitations that make them unsuitable for pybind11’s needs.
+Instead pybind11 provides its own, more reliable Python detection CMake code.
+Conflicts can arise, however, when using pybind11 in a project that <em>also</em> uses
+the CMake Python detection in a system with several Python versions installed.</p>
+<p>This difference may cause inconsistencies and errors if <em>both</em> mechanisms are
+used in the same project.</p>
+<p>There are three possible solutions:</p>
+<ol class="arabic simple">
+<li><p>Avoid using <code class="docutils literal notranslate"><span class="pre">find_package(PythonInterp)</span></code> and <code class="docutils literal notranslate"><span class="pre">find_package(PythonLibs)</span></code>
+from CMake and rely on pybind11 in detecting Python version. If this is not
+possible, the CMake machinery should be called <em>before</em> including pybind11.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">PYBIND11_FINDPYTHON</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> or use <code class="docutils literal notranslate"><span class="pre">find_package(Python</span>
+<span class="pre">COMPONENTS</span> <span class="pre">Interpreter</span> <span class="pre">Development)</span></code> on modern CMake (3.12+, 3.15+ better,
+3.18.2+ best). Pybind11 in these cases uses the new CMake FindPython instead
+of the old, deprecated search tools, and these modules are much better at
+finding the correct Python. If FindPythonLibs/Interp are not available
+(CMake 3.27+), then this will be ignored and FindPython will be used.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">PYBIND11_NOPYTHON</span></code> to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>. Pybind11 will not search for Python.
+However, you will have to use the target-based system, and do more setup
+yourself, because it does not know about or include things that depend on
+Python, like <code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code>. This might be ideal for integrating
+into an existing system, like scikit-build’s Python helpers.</p></li>
+</ol>
+</section>
+<section id="how-to-cite-this-project">
+<h2>How to cite this project?<a class="headerlink" href="#how-to-cite-this-project" title="Link to this heading"></a></h2>
+<p>We suggest the following BibTeX template to cite pybind11 in scientific
+discourse:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@misc<span class="o">{</span>pybind11,
+<span class="w">   </span><span class="nv">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>Wenzel<span class="w"> </span>Jakob<span class="w"> </span>and<span class="w"> </span>Jason<span class="w"> </span>Rhinelander<span class="w"> </span>and<span class="w"> </span>Dean<span class="w"> </span>Moldovan<span class="o">}</span>,
+<span class="w">   </span><span class="nv">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="m">2017</span><span class="o">}</span>,
+<span class="w">   </span><span class="nv">note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>https://github.com/pybind/pybind11<span class="o">}</span>,
+<span class="w">   </span><span class="nv">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>pybind11<span class="w"> </span>--<span class="w"> </span>Seamless<span class="w"> </span>operability<span class="w"> </span>between<span class="w"> </span>C++11<span class="w"> </span>and<span class="w"> </span>Python<span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

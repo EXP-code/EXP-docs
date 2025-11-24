@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Release notes &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing to EXP" href="contributing.html" />
+    <link rel="prev" title="How to make a new EXP force" href="topics/newforces.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EXP
+              <img src="_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exp-7-7-99-2025-03-12">EXP 7.7.99 (2025-03-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-features">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-changes">General changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exp-7-7-26-2023-10-02">EXP 7.7.26 (2023-10-02)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">General changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cylindrical-basis">Cylindrical basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spherical-basis">Spherical Basis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exp-7-6-0-2023-02-02">EXP 7.6.0 (2023-02-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exp-7-7-18-2023-01-29">EXP 7.7.18 (2023-01-29)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exp-7-7-17-2022-12-05">EXP 7.7.17 (2022-12-05)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality-assurance">Quality assurance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Release notes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/news.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="release-notes">
+<span id="news"></span><h1>Release notes<a class="headerlink" href="#release-notes" title="Link to this heading"></a></h1>
+<section id="exp-7-7-99-2025-03-12">
+<span id="release-7-7-99"></span><h2>EXP 7.7.99 (2025-03-12)<a class="headerlink" href="#exp-7-7-99-2025-03-12" title="Link to this heading"></a></h2>
+<section id="new-features">
+<h3>New features<a class="headerlink" href="#new-features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The pyEXP <cite>CoefStruct::setCoefs()</cite> now takes a coefficient array as
+an argument.  This is the recommended method for setting coefficients.</p></li>
+<li><p>VTK file writing is now standalone.  EXP no longer needs VTK-package
+libraries.</p></li>
+<li><p>New <cite>DiskBulge</cite> target density for Cylindrical bases.</p></li>
+<li><p>Added support for pseudo-force generation for expansions with
+non-inertial expansion centers.</p></li>
+<li><p>Added full support for two-dimensional disk bases and
+two-dimensional disk IC generation.  Added a general abstract
+<cite>PolarBasis</cite> class to support the two-dimensional disk bases.</p></li>
+<li><p>Added two-dimensional exponential and Mestel disks with optional
+inner and outer tapers.  These include the three-dimensional
+gravitational field for halo coupling.</p></li>
+<li><p>Added point field evaluation to <cite>FieldGenerator</cite>.</p></li>
+<li><p>Added velocity field methods, <cite>VelocityField</cite>, to EXP and pyEXP.
+Added <cite>OutVel</cite> class to EXP for writing velocity field coefficients.</p></li>
+</ul>
+</section>
+<section id="general-changes">
+<h3>General changes<a class="headerlink" href="#general-changes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Signs of mSSA PCs have a definite sign convention to ensure
+repeatability.</p></li>
+<li><p>Updates for CUDA version &gt;= 12.0 and compliance for latest versions
+of Clang and Clang++.</p></li>
+<li><p>Improve data semantics for <cite>setMatrix()</cite> and <cite>createFromArray</cite> in
+pyEXP.</p></li>
+<li><p>Require a cachename for SL and EOF basis generation.</p></li>
+<li><p>Implement compatibility with old (buggy) HighFive Eigen wrappers.</p></li>
+<li><p>Full implementation of the <cite>Cube</cite> basis in EXP and pyEXP.</p></li>
+<li><p>Improvements to <cite>TableData</cite> API in pyEXP.</p></li>
+<li><p>Make target directory for EXP output files consist between various
+<cite>Output</cite> methods.</p></li>
+<li><p>Remove old, unused, and unsupported bases from EXP.</p></li>
+</ul>
+</section>
+<section id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>std::sqrt is not a <cite>constexpr</cite> in all cases for Clang++ consistency
+and consistency with the C++17 standard.</p></li>
+<li><p>Fix HighFive type mismatches in mSSA cache.</p></li>
+<li><p>Github action bug fixes and improvements.  Improvements to CTest
+implementation.</p></li>
+<li><p>Improvements and fixes to coefficient norm consistency.</p></li>
+<li><p>General improvements to pyEXP exception handling.  Try to prevent
+crashes in favor of standard runtime exception handling.</p></li>
+<li><p>Fixes to Eigen::Tensor() wrappers in pyEXP.</p></li>
+</ul>
+</section>
+</section>
+<section id="exp-7-7-26-2023-10-02">
+<span id="release-7-7-26"></span><h2>EXP 7.7.26 (2023-10-02)<a class="headerlink" href="#exp-7-7-26-2023-10-02" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>General changes<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Added code to enforce a sign convention on SL eigenfunctions
+(<cite>SphericalSL</cite>) and EOF eigenvectors (<cite>Cylindrical</cite>). The
+eigenfunctions from numerical methods can have either sign and still
+be good eigenvectors. This change ensures a consistent sign even if
+the basis needs to be remade or slightly tweaked (e.g. remade with
+larger nmax).  Note, however, that older bases will still have
+arbitrary signs.</p>
+<p>You have two options to deal with this:</p>
+<ol class="arabic simple">
+<li><p>You can make a new basis and remake your coefficients to take
+advantage of the new sign convention</p></li>
+<li><p>Retain and reuse your old bases (see note for <cite>SphericalSL</cite>
+below)</p></li>
+</ol>
+</li>
+<li><p>Check the orthgonality of adaptive bases on creation and throw
+exception if they are not sufficiently biorthogonal</p></li>
+<li><p>Throw exceptions for SL solutions that fall below a reasonable error
+threshold</p></li>
+<li><p>Implemented both OpenMP and MPI parallel FieldGenerator evaluation for
+improved throughput</p></li>
+<li><p>Improve logged output readability for user with additional
+formatting</p></li>
+<li><p>Fixed an error in expMSSA for OpenMP threading on Macs</p></li>
+</ul>
+</section>
+<section id="cylindrical-basis">
+<h3>Cylindrical basis<a class="headerlink" href="#cylindrical-basis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <cite>density</cite> flag is now inactive and deprecated.  The density
+field for cylindrical bases is always computed.</p></li>
+<li><p>Fixed missing factor of 1/(4*pi) in density field; correct return
+matrix so the diagonal is 1 for both m=0 and m&gt;0.  This was a true
+bug that would not have affected coefficient computation but would
+give density fields too large by 4*pi</p></li>
+</ul>
+</section>
+<section id="spherical-basis">
+<h3>Spherical Basis<a class="headerlink" href="#spherical-basis" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Rename <cite>rs</cite> to <cite>rmapping</cite> in pyEXP and EXP</p></li>
+<li><p>Note the difference between <cite>scale</cite> and <cite>rmapping</cite>:</p>
+<ul>
+<li><p>The <cite>rmapping</cite> parameter is a radial scale is used to map large
+or infinite ranges to the unit segment for tables.</p></li>
+<li><p>The <cite>scale</cite> parameter is linear rescaling of the radius to the
+original basis.  This would be used for tidal truncation, for
+example.</p>
+<p>You can convert an existing basis file, say <cite>SLGridSph.cache.tmp</cite>
+to the new attributes with the following Python code:</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">h5py</span>
+
+<span class="c1"># This will add a new attribute &#39;rmapping&quot; with the same value as</span>
+<span class="c1"># &#39;rs&#39; and update the file.</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s1">&#39;SLGridSph.cache.tmp&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;rmapping&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;rs&#39;</span><span class="p">]</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="exp-7-6-0-2023-02-02">
+<span id="release-7-6-0"></span><h2>EXP 7.6.0 (2023-02-02)<a class="headerlink" href="#exp-7-6-0-2023-02-02" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The stable main branch is merged from the 7.7.18 development branch</p></li>
+<li><p>This branch will only be updated for bug fixes moving forward</p></li>
+</ul>
+</section>
+<section id="exp-7-7-18-2023-01-29">
+<span id="release-7-7-18"></span><h2>EXP 7.7.18 (2023-01-29)<a class="headerlink" href="#exp-7-7-18-2023-01-29" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>‘sphereSL’ in pyEXP.basis updated to use rmin from the input table by
+default</p></li>
+<li><p>Devel branch and Main now reflect the new versioning policy</p></li>
+</ul>
+<section id="id2">
+<h3>New features<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Implemented the proposed versioning policy</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Bug fixes<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>pyEXP basis factory for a spherical basis will now use the model
+table minimum as the default <code class="docutils literal notranslate"><span class="pre">rmin</span></code> value</p></li>
+</ul>
+</section>
+</section>
+<section id="exp-7-7-17-2022-12-05">
+<span id="release-7-7-17"></span><h2>EXP 7.7.17 (2022-12-05)<a class="headerlink" href="#exp-7-7-17-2022-12-05" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>New features<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Project is now hosted by github</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Bug fixes<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Many minor pyEXP bug fixes</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Sphinx/ReadTheDocs writing in progress</p></li>
+</ul>
+</section>
+<section id="quality-assurance">
+<h3>Quality assurance<a class="headerlink" href="#quality-assurance" title="Link to this heading"></a></h3>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="topics/newforces.html" class="btn btn-neutral float-left" title="How to make a new EXP force" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing to EXP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software design goals and features &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User modules" href="usermodules.html" />
+    <link rel="prev" title="Debugging EXP" href="debug.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Software design goals and features</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/design.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="software-design-goals-and-features">
+<span id="design"></span><h1>Software design goals and features<a class="headerlink" href="#software-design-goals-and-features" title="Link to this heading"></a></h1>
+<p>The mathematical and algorithmic structure of basis function expansion
+(BFE) technique is common to all variants of the method.
+Object-oriented software patterns naturally promote code reuse by
+allowing the programmer to implement algorithms generally and allow
+variants to override the general case only when necessary.  Moreover,
+the object-oriented approach allows the compiler to enforce the
+underlying mathematical and physical relationships that the code
+represents.  This approach makes the code easier to maintain, verify
+and debug.</p>
+<p>The classes are organized into major abstract classes the represent
+common functions and relations between functions common to n-body
+simulations and the BFE method in particular:</p>
+<ul class="simple" id="index-0">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Phase</span> <span class="pre">space</span></code>. Each phase-space point is described by a</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Particle</span></code>, which contains the mass, position, velocity,
+and an arbitrary number of user-defined attributes
+(e.g. particular non-collisionless properties such as chemical
+state or various per particle diagnostics such as computational
+effort).</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple" id="index-1">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Distributions</span></code>. Particles are grouped together into a</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Component</span></code> container.  A <code class="docutils literal notranslate"><span class="pre">Component</span></code> represents a particular
+distinct phase-space distribution.  For example, EXP uses
+individual components to represent astronomical entities such as a
+disks and dark-matter halos.  A force method appropriate for the
+geometry of each phase-space distribution is associated with each
+component (<code class="docutils literal notranslate"><span class="pre">PotAccel</span></code>, see below).  The <code class="docutils literal notranslate"><span class="pre">Component</span></code> instances
+are gather into a container, the <code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code>.  The
+<code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code> instance, for example, triggers the
+evaluation of the acceleration for every particle in each
+component.  Specifically, the time step routine calls the
+<code class="docutils literal notranslate"><span class="pre">compute_potential()</span></code> of the simulation’s <code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code>
+instance to begin a force evaluation.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple" id="index-2">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Force</span> <span class="pre">methods</span></code>.  The <code class="docutils literal notranslate"><span class="pre">PotAccel</span></code> class defines the</dt><dd><p>core interface for describing a gravitational potential and
+acceleration.  From this abstract base class, the properties
+specific to basis function expansions are <em>layered on</em> by the
+derived class <code class="docutils literal notranslate"><span class="pre">Basis</span></code>.  Further specializations include
+details specific to harmonic expansions in
+<code class="docutils literal notranslate"><span class="pre">AxisymmetricBasis</span></code> and the standard spherical and
+cylindrical geometries appropriate for halos and disks in
+<code class="docutils literal notranslate"><span class="pre">Sphere</span></code> and <code class="docutils literal notranslate"><span class="pre">Cylinder</span></code>, respectively.  Most
+non-basis classes, such as <code class="docutils literal notranslate"><span class="pre">Direct</span></code> which defines a direct
+ring code have <code class="docutils literal notranslate"><span class="pre">PotAccel</span></code> as the parent class.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple" id="index-3">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">External</span> <span class="pre">forces</span></code>. The class <code class="docutils literal notranslate"><span class="pre">ExternalForce</span></code> provides additional</dt><dd><p>possibly time-dependent analytic or self-consistent forces to be
+applies to any or every component.  These methods can be very
+general manipulators of the phase space, not necessarily forces
+per se.  For example, EXP uses an external force class called
+<code class="docutils literal notranslate"><span class="pre">PeriodicBC</span></code> to enforce periodic boundary conditions.  The
+user-specified external forces are gather up into an
+<code class="docutils literal notranslate"><span class="pre">ExternalForce</span></code> list and evaluated at each step by the
+<code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code>.  Per particle accelerations may be added
+to each particle’s acceleration vector if appropriate.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple" id="index-4">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">routines</span></code>.  The <code class="docutils literal notranslate"><span class="pre">Output</span></code> base class</dt><dd><p>integrate over phase-space components to provide summary
+statistics of various sorts and snapshots of the phase space
+itself.  Each <code class="docutils literal notranslate"><span class="pre">Output</span></code> instance either integrates over the
+entire phase space or individually specified phase-space
+components.  For example, the <code class="docutils literal notranslate"><span class="pre">OutLog</span></code> class provides the
+standard global quantities of center of mass and velocity, angular
+momentum, kinetic and potential energies, etc. for each component
+and the entirely.  The <code class="docutils literal notranslate"><span class="pre">OrbTrace</span></code> class records the
+trajectory of a list of specific particles.  The <code class="docutils literal notranslate"><span class="pre">OutCoef</span></code>
+class records the basis expansion coefficients.  All of these
+<code class="docutils literal notranslate"><span class="pre">Output</span></code> instances are gather up into an
+<code class="docutils literal notranslate"><span class="pre">OutputContainer</span></code>.  After each time step, each instance is
+<em>asked</em> whether it wants to run.  The run frequency is
+controlled by <a class="reference internal" href="yamlconfig.html#exp-config"><span class="std std-ref">input parameters</span></a>).</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>As described in <a class="reference internal" href="multistep.html#multistep"><span class="std std-ref">EXP time stepping</span></a>, the Hamilton
+equations are solved by a <em>kick-drift-kick</em> version of the
+time-centered leapfrog algorithm.  In principle, time evolution could
+(and perhaps should) be defined by an evolution operator class.  This
+may be done for a future version of EXP.  At present, the time
+evolution is driven by a calls to the <code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code> instance
+to evaluate the accelerations.</p>
+</section>
+<section id="overall-organization-of-the-code">
+<h1>Overall organization of the code<a class="headerlink" href="#overall-organization-of-the-code" title="Link to this heading"></a></h1>
+<p id="index-5">The <code class="docutils literal notranslate"><span class="pre">main()</span></code> routine is defined in <code class="docutils literal notranslate"><span class="pre">src/expand.cc</span></code>.  In essence, the
+<code class="docutils literal notranslate"><span class="pre">main()</span></code> calls three subroutines:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">begin_run()</span></code>: this code initializes the three key container objects:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code> will hold phase-space and
+force definitions for each distinct component.  For example, a
+three-dimensional flattened disk or an approximately spherical
+halo along with its associated force would each be represented by
+a particular <code class="docutils literal notranslate"><span class="pre">Container</span></code> instance.  The
+<code class="docutils literal notranslate"><span class="pre">begin_run()</span></code> routine instantiates particular phase-space
+components as defined in the YAML configuration and adds them to
+the <code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ExternalCollection</span></code> defines force methods that are
+applied to phase space components but are not defined by
+components.  For example, an external force, such as an analytic
+tidal field, would be instantiated as a member of the
+<cite>ExternalCollection</cite>.  This collection may have zero
+members.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">OutputContainer</span></code> keeps a collection of procedures
+that may operate on each component or specific components in the
+<code class="docutils literal notranslate"><span class="pre">ComponentContainer</span></code> at some time step frequency
+defined by the parameter specification for each <code class="docutils literal notranslate"><span class="pre">Output</span></code>
+method.  These are specified for construction in the YAML
+configuration.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">do_step()</span></code> inside of its time-step loop. <code class="docutils literal notranslate"><span class="pre">do_step</span></code> implements
+the kick-drift-kick leapfrog time-integration algorithm described in
+<a class="reference internal" href="multistep.html#multistep"><span class="std std-ref">multistep</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clean_up()</span></code> calls the <code class="docutils literal notranslate"><span class="pre">OutputContainer</span></code> run method one last
+time, and then deletes the three container instances defined by
+<code class="docutils literal notranslate"><span class="pre">begin_run()</span></code>.</p></li>
+</ol>
+</section>
+<section id="parallel-usage">
+<h1>Parallel usage<a class="headerlink" href="#parallel-usage" title="Link to this heading"></a></h1>
+<p id="index-6">EXP is designed to use MPI for internode communication and
+parallelization and POSIX threads (pthreads) and OpenMP for intranode
+parallelization.  Although MPI can be used exclusively, without
+multiple threads per process by starting one process for every core on
+each node, basis tables and other data will be duplicated by these
+heavy weight processes.  This may lead to poor allocation of memory
+resources and out-of-core conditions.  By using multiple threads per
+process on compute nodes with multiple cores, the storage internal
+arrays and tables will not be duplicated.</p>
+<p>The <cite>Global</cite> stanza (see <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">YAML config</span></a>) allows the
+user to specify the number of threads per process using the <code class="docutils literal notranslate"><span class="pre">nthrds</span></code>
+parameter.  For example, on a cluster where nodes have 20 cores,
+specifying <code class="docutils literal notranslate"><span class="pre">nthrds:</span> <span class="pre">20</span></code> and one process per node using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mpirun<span class="w"> </span>-bind-to<span class="w"> </span>none<span class="w"> </span>-npernode<span class="w"> </span><span class="m">1</span><span class="w"> </span>exp<span class="w"> </span>-f<span class="w"> </span>myjob.yml
+</pre></div>
+</div>
+<p>or for a Slurm job</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>srun<span class="w"> </span>--ntasks-per-node<span class="o">=</span><span class="m">1</span><span class="w"> </span>exp<span class="w"> </span>-f<span class="w"> </span>myjob.yml
+</pre></div>
+</div>
+<p>allow code bottlenecks to using pthreads rather than MPI for
+parallelization.  For MPI parallelization only, specify <code class="docutils literal notranslate"><span class="pre">nthrds:</span> <span class="pre">1</span></code>,
+which is the default value.  Not all force methods are thread aware,
+but many are.</p>
+<p>Both pyEXP and EXP are use OpenMP to parallelize bottleneck loops. The
+<cite>FieldGenerator</cite> in pyEXP, in particular, can achieve linear scaling
+with the number of available cores.  To take advantage of this,
+specify the <cite>OMP_NUM_THREADS</cite> environment variable and set it to the
+number of available cores on your machine.  For example, in Bash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">16</span>
+</pre></div>
+</div>
+<p>for an 16-core architecture.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="debug.html" class="btn btn-neutral float-left" title="Debugging EXP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usermodules.html" class="btn btn-neutral float-right" title="User modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

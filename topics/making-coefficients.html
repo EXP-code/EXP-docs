@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to generate coefficients from phase-space snapshots &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to save and reuse your newly generated coefficients" href="saving-coefficients.html" />
+    <link rel="prev" title="How to visualize the BFE bases used to make your coefficients" href="visualizing-bases.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to  generate coefficients from phase-space snapshots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-basis">Create the basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-coefficients-from-the-basis">Getting coefficients from the basis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-and-using-a-particle-reader">Creating and using a particle reader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-coefficients-using-your-own-arrays">Creating coefficients using your own arrays</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-single-set-of-arrays">A single set of arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiple-sets-of-arrays">Multiple sets of arrays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#done">DONE!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to  generate coefficients from phase-space snapshots</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/making-coefficients.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-generate-coefficients-from-phase-space-snapshots">
+<span id="making-coefficients"></span><h1>How to  generate coefficients from phase-space snapshots<a class="headerlink" href="#how-to-generate-coefficients-from-phase-space-snapshots" title="Link to this heading"></a></h1>
+<p>This example assumes that you have pulled the <a class="reference external" href="https://github.com/EXP-code/EXP-examples">EXP examples
+repository</a> and run the
+<cite>Nbody</cite> simulation.  We have also provided output from this simulation
+in the <cite>Nbody/data</cite> directory for your convenience. The methods
+in this example can be adapted for any simulation you like, not only
+EXP-generated simulations.</p>
+<p>Many of the examples described in this documentation also have
+corresponding Jupyter notebooks in the <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP repo</a> .</p>
+<p>Let’s just dive in.  We begin by importing <code class="docutils literal notranslate"><span class="pre">pyEXP</span></code> and friends and
+setting the working directory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyEXP</span>
+
+<span class="c1"># I have the `EXP-examples/Nbody` run in my personal directory.</span>
+<span class="c1"># You will want to change this path to some directory containing</span>
+<span class="c1"># some snapshots of your own or point at the output provided in</span>
+<span class="c1"># the EXP examples repo.</span>
+<span class="c1">#</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/home/user/Nbody&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="create-the-basis">
+<h2>Create the basis<a class="headerlink" href="#create-the-basis" title="Link to this heading"></a></h2>
+<p>We’ll only do the halo coefficients in this simple example. The
+cylindrical coefficients would procede similarly. See the
+<code class="docutils literal notranslate"><span class="pre">sample_basis</span></code> notebook for an example of creating the cylindrical
+basis.</p>
+<p>Basis objects in pyEXP often have many parameters.  We use YAML for
+specifying the basis.  Recall that <a class="reference internal" href="yaml-primer.html#yaml-primer"><span class="std std-ref">YAML</span></a> is a
+human-readable data serialization format that is often used for
+configuration files and data exchange between programming languages.
+YAML is designed to be easy to read and write by humans. Its syntax is
+straightforward and doesn’t rely on any specific programming language.
+It has strong C++ and Python support, so it’s perfect for EXP.
+Because YAML files are plain text, they are portable across different
+operating systems and platforms.</p>
+<p>The first bit of the code below shows two ways of constructing a YAML
+file.  You may use an editor and make a file, here called <cite>basis.yaml</cite>
+or you may construct it in Python as a text string, here called
+<cite>bconfig</cite>.  The final line of the code snippit does the work of
+constructing the basis, assigned to the variable <cite>basis</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the basis config</span>
+<span class="c1">#</span>
+<span class="n">yaml_config</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;basis.yaml&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+    <span class="n">yaml_config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># Alternatively, you could construct this on the fly, e.g.</span>
+<span class="n">bconfig</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">---</span>
+<span class="s2">id: SphereSL</span>
+<span class="s2">parameters :</span>
+<span class="s2">  numr: 2000</span>
+<span class="s2">  rmin: 0.0001</span>
+<span class="s2">  rmax: 1.95</span>
+<span class="s2">  Lmax: 4</span>
+<span class="s2">  nmax: 10</span>
+<span class="s2">  rmapping: 0.0667</span>
+<span class="s2">  modelname: SLGridSph.model</span>
+<span class="s2">...</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Read from file&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yaml_config</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Constructed from string&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bconfig</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Construct the basis instance</span>
+<span class="c1">#</span>
+<span class="n">basis</span>   <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">Basis</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="n">yaml_config</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>------------------------------------------------------------
+Read from file
+------------------------------------------------------------
+id: SphereSL
+parameters:
+  Lmax: 4
+  modelname: SLGridSph.model
+  nmax: 10
+  numr: 2000
+  rmax: 1.95
+  rmin: 0.0001
+  rmapping: 0.0667
+
+------------------------------------------------------------
+Constructed from string
+------------------------------------------------------------
+
+---
+id: SphereSL
+parameters :
+  numr: 2000
+  rmin: 0.0001
+  rmax: 1.95
+  Lmax: 4
+  nmax: 10
+  rmapping: 0.0667
+  modelname: SLGridSph.model
+...
+
+------------------------------------------------------------
+---- SLGridSph::read_cached_table: trying to read cached table . . .
+---- SLGridSph::read_cached_table: Success!!
+</pre></div>
+</div>
+</section>
+<section id="getting-coefficients-from-the-basis">
+<h2>Getting coefficients from the basis<a class="headerlink" href="#getting-coefficients-from-the-basis" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pyEXP</span></code> provides two strategies for using the <code class="docutils literal notranslate"><span class="pre">Basis</span></code> to construct
+coefficients:</p>
+<ol class="arabic simple">
+<li><p>Using a <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code>, a helper object that supplies particle
+phase space to the <code class="docutils literal notranslate"><span class="pre">Basis.createFromReader</span></code> member.  Many of the
+standard phase-space file types are supported including Gadget,
+Gadget HDF5, Bonsai and of course EXP.</p></li>
+<li><p>Using arrays of masses and positions supplied by the users own
+post-processing pipeline.  In this case, these Python <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code>
+types are passed to the <code class="docutils literal notranslate"><span class="pre">Basis.createFromArray</span></code> member.</p></li>
+</ol>
+<p>In both cases the <code class="docutils literal notranslate"><span class="pre">createFrom*</span></code> members take an optional expansion center
+vector. If you need more complicated coordinate transformations,
+Option 2 will serve you best.</p>
+<section id="creating-and-using-a-particle-reader">
+<h3>Creating and using a particle reader<a class="headerlink" href="#creating-and-using-a-particle-reader" title="Link to this heading"></a></h3>
+<p>The first step is to hand off the files that comprise a snapshot for
+every time slice. The <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code> provides a helper function for
+that. There are two helper functions: <code class="docutils literal notranslate"><span class="pre">parseFileList</span></code> and
+<code class="docutils literal notranslate"><span class="pre">parseStringList</span></code>. The first reads a list from a file and the second
+takes a list. Otherwise they are the same. The file names in the list
+are assumed to end with a snapshot index and an optional part index. For
+example, if you have single files per snapshot, the list might look
+like: <code class="docutils literal notranslate"><span class="pre">myrun.00000</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001</span></code>, etc. If you have multiple files
+per snapshot, they will look something like <code class="docutils literal notranslate"><span class="pre">myrun.00000_0001</span></code>,
+<code class="docutils literal notranslate"><span class="pre">myrun.00000_0002</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001_0000</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001_0001</span></code>, etc.</p>
+<p>Here is the call for a file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Construct batches of files for the particle reader.  One could use the</span>
+<span class="c1"># parseStringList to create batches from a vector/list of files.  NB:</span>
+<span class="c1"># a std::vector in C++ becomes a Python.list and vice versa</span>
+<span class="c1">#</span>
+<span class="n">batches</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">ParticleReader</span><span class="o">.</span><span class="n">parseFileList</span><span class="p">(</span><span class="s1">&#39;file.list&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We now iterate the <code class="docutils literal notranslate"><span class="pre">batches</span></code> created by the file parser to create the
+coefficients. For each batch we create a new reader and pass the reader
+to the basis instance. The <code class="docutils literal notranslate"><span class="pre">basis.createFromReader</span></code> member creates and
+returns the coefficients. The coefficients are added to a coefficient
+container called <code class="docutils literal notranslate"><span class="pre">coefs</span></code>. Note: on the first call <code class="docutils literal notranslate"><span class="pre">coefs=None</span></code> so a
+new container is created on the first time through.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will contain the coefficient container, need to start with a</span>
+<span class="c1"># null instance to trigger construction</span>
+<span class="c1">#</span>
+<span class="n">coefs</span>   <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">batches</span><span class="p">:</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;file group is&quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+    <span class="c1"># Make the reader for the desired type.  One could probably try to</span>
+    <span class="c1"># do this by inspection but that&#39;s another project.</span>
+    <span class="c1">#</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">ParticleReader</span><span class="o">.</span><span class="n">createReader</span><span class="p">(</span><span class="s1">&#39;PSPout&#39;</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">False</span><span class="p">);</span>
+
+    <span class="c1"># Print the type list</span>
+    <span class="c1">#</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The component names are:&#39;</span><span class="p">,</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetTypes</span><span class="p">())</span>
+
+    <span class="n">compname</span> <span class="o">=</span> <span class="s1">&#39;dark halo&#39;</span>
+    <span class="n">reader</span><span class="o">.</span><span class="n">SelectType</span><span class="p">(</span><span class="n">compname</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Selected&#39;</span><span class="p">,</span> <span class="n">compname</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Call createFromReader at Time&#39;</span><span class="p">,</span> <span class="n">reader</span><span class="o">.</span><span class="n">CurrentTime</span><span class="p">(),</span> <span class="s1">&#39;for&#39;</span><span class="p">,</span> <span class="n">reader</span><span class="o">.</span><span class="n">CurrentNumber</span><span class="p">(),</span>
+          <span class="s1">&#39;particles&#39;</span><span class="p">)</span>
+
+    <span class="n">coef</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">createFromReader</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Created coef&quot;</span><span class="p">)</span>
+
+    <span class="c1"># We need this stupid idiom here because None is not mapping to a</span>
+    <span class="c1"># null pointer.  There is probably a way to do this.  Suggestions</span>
+    <span class="c1"># anyone?</span>
+    <span class="c1">#                          This is optional---+</span>
+    <span class="c1">#                                             |</span>
+    <span class="k">if</span> <span class="n">coefs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>           <span class="c1">#                 v</span>
+        <span class="n">coefs</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">coefs</span><span class="o">.</span><span class="n">Coefs</span><span class="o">.</span><span class="n">makecoefs</span><span class="p">(</span><span class="n">coef</span><span class="p">,</span> <span class="n">compname</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coefs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">coef</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Added coef&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Completed the file group list</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The coefficient time list is&#39;</span><span class="p">,</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00000&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00001&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.005000000000000004</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00002&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.010000000000000007</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00003&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.015000000000000012</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00004&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.020000000000000014</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00005&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.02500000000000002</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00006&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.030000000000000023</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00007&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.035000000000000024</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00008&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.04000000000000003</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00009&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.04500000000000003</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+<span class="n">file</span> <span class="n">group</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;OUT.run7.00010&#39;</span><span class="p">]</span>
+<span class="n">The</span> <span class="n">component</span> <span class="n">names</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;dark halo&#39;</span><span class="p">,</span> <span class="s1">&#39;star disk&#39;</span><span class="p">]</span>
+<span class="n">Selected</span> <span class="n">dark</span> <span class="n">halo</span>
+<span class="n">Call</span> <span class="n">createFromReader</span> <span class="n">at</span> <span class="n">Time</span> <span class="mf">0.05000000000000004</span> <span class="k">for</span> <span class="mi">100000</span> <span class="n">particles</span>
+<span class="n">Created</span> <span class="n">coef</span>
+<span class="n">Added</span> <span class="n">coef</span>
+<span class="o">------------------------------------------------------------</span>
+
+<span class="n">Completed</span> <span class="n">the</span> <span class="n">file</span> <span class="n">group</span> <span class="nb">list</span>
+
+<span class="n">The</span> <span class="n">coefficient</span> <span class="n">time</span> <span class="nb">list</span> <span class="ow">is</span> <span class="p">[</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.015</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.035</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.045</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-coefficients-using-your-own-arrays">
+<h3>Creating coefficients using your own arrays<a class="headerlink" href="#creating-coefficients-using-your-own-arrays" title="Link to this heading"></a></h3>
+<p>We will assume that you have an one-dimensional array of masses for
+each particle and a <span class="math notranslate nohighlight">\(3\times N\)</span> two-dimensional array of
+particle positions.   There are two possible strategies.</p>
+<section id="a-single-set-of-arrays">
+<h4>A single set of arrays<a class="headerlink" href="#a-single-set-of-arrays" title="Link to this heading"></a></h4>
+<p>You can load your entire phase space into the mass and position arrays
+and call <code class="docutils literal notranslate"><span class="pre">createFromArray</span></code> for each time slice.  This might look
+something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will contain the coefficient container, need to start with a</span>
+<span class="c1"># null instance to trigger construction</span>
+<span class="c1">#</span>
+<span class="n">coefs</span>   <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">for</span> <span class="n">snap</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numsnaps</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Snapshot #</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">snap</span><span class="p">))</span>
+
+    <span class="c1"># Read the masses and positions using your custom pipeline.</span>
+    <span class="c1"># Let&#39;s call those resulting arrays &quot;m&quot;, &quot;pos&quot; at time &quot;time&quot;.</span>
+    <span class="c1"># Then:</span>
+    <span class="c1">#</span>
+    <span class="n">coef</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">createFromArray</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Created coef&quot;</span><span class="p">)</span>
+
+    <span class="c1"># We need the idiom here because None is not mapping to a</span>
+    <span class="c1"># null pointer.</span>
+    <span class="c1">#                          This is optional---+</span>
+    <span class="c1">#                                             |</span>
+    <span class="k">if</span> <span class="n">coefs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>           <span class="c1">#                 v</span>
+        <span class="n">coefs</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">coefs</span><span class="o">.</span><span class="n">Coefs</span><span class="o">.</span><span class="n">makecoefs</span><span class="p">(</span><span class="n">coef</span><span class="p">,</span> <span class="n">compname</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coefs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">coef</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Added coef&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Completed the snapshot list</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The coefficient time list is&#39;</span><span class="p">,</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="multiple-sets-of-arrays">
+<h4>Multiple sets of arrays<a class="headerlink" href="#multiple-sets-of-arrays" title="Link to this heading"></a></h4>
+<p>For each time, you may process your phase space particles in bunches.
+You will need this for very large phase-space snapshots.  This is
+nearly the same as the method above but we break up
+<code class="docutils literal notranslate"><span class="pre">createFromArray</span></code> into three separate calls: <code class="docutils literal notranslate"><span class="pre">initFromArray</span></code>,
+<code class="docutils literal notranslate"><span class="pre">addFromArray</span></code>, and <code class="docutils literal notranslate"><span class="pre">makeFromArray</span></code>.  The first and last are
+called at the beginning and end and <code class="docutils literal notranslate"><span class="pre">addFromArray</span></code> is called once
+for each bunch.  In fact, <code class="docutils literal notranslate"><span class="pre">createFromArray</span></code> is simply a call to each
+of the three separate calls under the hood.</p>
+<p>Here is an example code snippet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will contain the coefficient container, need to start with a</span>
+<span class="c1"># null instance to trigger construction</span>
+<span class="c1">#</span>
+<span class="n">coefs</span>   <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">for</span> <span class="n">snap</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numsnaps</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Snapshot #</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">snap</span><span class="p">))</span>
+
+    <span class="n">basis</span><span class="o">.</span><span class="n">initFromArray</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbunches</span><span class="p">):</span>
+
+       <span class="c1"># Read the masses and positions using your custom pipeline for</span>
+       <span class="c1"># each of nbunches.  As before, let&#39;s call those resulting</span>
+       <span class="n">arrays</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span> <span class="n">at</span> <span class="n">time</span> <span class="s2">&quot;time&quot;</span><span class="o">.</span>
+       <span class="c1">#</span>
+       <span class="c1"># Then:</span>
+       <span class="c1">#</span>
+       <span class="n">basis</span><span class="o">.</span><span class="n">addFromArray</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+
+
+    <span class="n">coef</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">makeFromArray</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Created coef&quot;</span><span class="p">)</span>
+
+    <span class="c1"># We need the idiom here because None is not mapping to a</span>
+    <span class="c1"># null pointer.</span>
+    <span class="c1">#                          This is optional---+</span>
+    <span class="c1">#                                             |</span>
+    <span class="k">if</span> <span class="n">coefs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>           <span class="c1">#                 v</span>
+        <span class="n">coefs</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">coefs</span><span class="o">.</span><span class="n">Coefs</span><span class="o">.</span><span class="n">makecoefs</span><span class="p">(</span><span class="n">coef</span><span class="p">,</span> <span class="n">compname</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coefs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">coef</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Added coef&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Completed the snapshot list</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The coefficient time list is&#39;</span><span class="p">,</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="done">
+<h2>DONE!<a class="headerlink" href="#done" title="Link to this heading"></a></h2>
+<p>Our task is completed!  We now have a coefficient object in Python
+called <cite>coefs</cite> that may be saved into an HDF5 file that may be read at
+any future time (see <a class="reference internal" href="saving-coefficients.html#saving-coefficients"><span class="std std-ref">saving coefficients</span></a>)
+or used to generate fields and movies (see <a class="reference internal" href="visualizing-fields.html#visualizing-fields"><span class="std std-ref">visualizing fields</span></a>).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="visualizing-bases.html" class="btn btn-neutral float-left" title="How to visualize the BFE bases used to make your coefficients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="saving-coefficients.html" class="btn btn-neutral float-right" title="How to save and reuse your newly generated coefficients" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

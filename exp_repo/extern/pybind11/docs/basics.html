@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First steps &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">First steps</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/basics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="first-steps">
+<span id="basics"></span><h1>First steps<a class="headerlink" href="#first-steps" title="Link to this heading"></a></h1>
+<p>This sections demonstrates the basic features of pybind11. Before getting
+started, make sure that development environment is set up to compile the
+included set of test cases.</p>
+<section id="compiling-the-test-cases">
+<h2>Compiling the test cases<a class="headerlink" href="#compiling-the-test-cases" title="Link to this heading"></a></h2>
+<section id="linux-macos">
+<h3>Linux/macOS<a class="headerlink" href="#linux-macos" title="Link to this heading"></a></h3>
+<p>On Linux  you’ll need to install the <strong>python-dev</strong> or <strong>python3-dev</strong> packages as
+well as <strong>cmake</strong>. On macOS, the included python version works out of the box,
+but <strong>cmake</strong> must still be installed.</p>
+<p>After installing the prerequisites, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+make<span class="w"> </span>check<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+</pre></div>
+</div>
+<p>The last line will both compile and run the tests.</p>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<p>On Windows, only <strong>Visual Studio 2017</strong> and newer are supported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use the C++17 in Visual Studio 2017 (MSVC 14.1), pybind11 requires the flag
+<code class="docutils literal notranslate"><span class="pre">/permissive-</span></code> to be passed to the compiler <a class="reference external" href="https://docs.microsoft.com/en-us/cpp/build/reference/permissive-standards-conformance?view=vs-2017">to enforce standard conformance</a>. When
+building with Visual Studio 2019, this is not strictly necessary, but still advised.</p>
+</div>
+<p>To compile and run the tests:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> build
+<span class="k">cd</span> build
+cmake ..
+cmake --build . --config Release --target check
+</pre></div>
+</div>
+<p>This will create a Visual Studio project, compile and run the target, all from the
+command line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If all tests fail, make sure that the Python binary and the testcases are compiled
+for the same processor type and bitness (i.e. either <strong>i386</strong> or <strong>x86_64</strong>). You
+can specify <strong>x86_64</strong> as the target architecture for the generated Visual Studio
+project using <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-A</span> <span class="pre">x64</span> <span class="pre">..</span></code>.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Advanced users who are already familiar with Boost.Python may want to skip
+the tutorial and look at the test cases in the <code class="file docutils literal notranslate"><span class="pre">tests</span></code> directory,
+which exercise all features of pybind11.</p>
+</div>
+</section>
+</section>
+<section id="header-and-namespace-conventions">
+<h2>Header and namespace conventions<a class="headerlink" href="#header-and-namespace-conventions" title="Link to this heading"></a></h2>
+<p>For brevity, all code examples assume that the following two lines are present:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/pybind11.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">pybind11</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code> includes <code class="docutils literal notranslate"><span class="pre">Python.h</span></code>, as such it must be the first file
+included in any source file or header for <a class="reference external" href="https://docs.python.org/3/extending/extending.html#a-simple-example">the same reasons as Python.h</a>.</p>
+</div>
+<p>Some features may require additional headers, but those will be specified as needed.</p>
+</section>
+<section id="creating-bindings-for-a-simple-function">
+<span id="simple-example"></span><h2>Creating bindings for a simple function<a class="headerlink" href="#creating-bindings-for-a-simple-function" title="Link to this heading"></a></h2>
+<p>Let’s start by creating Python bindings for an extremely simple function, which
+adds two numbers and returns their result:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For simplicity <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, we’ll put both this function and the binding code into
+a file named <code class="file docutils literal notranslate"><span class="pre">example.cpp</span></code> with the following contents:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/pybind11.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">doc</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pybind11 example plugin&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional module docstring</span>
+
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A function that adds two numbers&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>In practice, implementation and binding code will generally be located
+in separate files.</p>
+</aside>
+</aside>
+<p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">PYBIND11_MODULE()</span></code> macro creates a function that will be called when an
+<code class="docutils literal notranslate"><span class="pre">import</span></code> statement is issued from within Python. The module name (<code class="docutils literal notranslate"><span class="pre">example</span></code>)
+is given as the first macro argument (it should not be in quotes). The second
+argument (<code class="docutils literal notranslate"><span class="pre">m</span></code>) defines a variable of type <code class="xref py py-class docutils literal notranslate"><span class="pre">py::module_</span></code> which
+is the main interface for creating bindings. The method <code class="xref py py-func docutils literal notranslate"><span class="pre">module_::def()</span></code>
+generates binding code that exposes the <code class="docutils literal notranslate"><span class="pre">add()</span></code> function to Python.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice how little code was needed to expose our function to Python: all
+details regarding the function’s parameters and return value were
+automatically inferred using template metaprogramming. This overall
+approach and the used syntax are borrowed from Boost.Python, though the
+underlying implementation is very different.</p>
+</div>
+<p>pybind11 is a header-only library, hence it is not necessary to link against
+any special libraries and there are no intermediate (magic) translation steps.
+On Linux, the above example can be compiled using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>c++<span class="w"> </span>-O3<span class="w"> </span>-Wall<span class="w"> </span>-shared<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-fPIC<span class="w"> </span><span class="k">$(</span>python3<span class="w"> </span>-m<span class="w"> </span>pybind11<span class="w"> </span>--includes<span class="k">)</span><span class="w"> </span>example.cpp<span class="w"> </span>-o<span class="w"> </span>example<span class="k">$(</span>python3-config<span class="w"> </span>--extension-suffix<span class="k">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you used <a class="reference internal" href="installing.html#include-as-a-submodule"><span class="std std-ref">Include as a submodule</span></a> to get the pybind11 source, then
+use <code class="docutils literal notranslate"><span class="pre">$(python3-config</span> <span class="pre">--includes)</span> <span class="pre">-Iextern/pybind11/include</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">$(python3</span> <span class="pre">-m</span> <span class="pre">pybind11</span> <span class="pre">--includes)</span></code> in the above compilation, as
+explained in <a class="reference internal" href="compiling.html#building-manually"><span class="std std-ref">Building manually</span></a>.</p>
+</div>
+<p>For more details on the required compiler flags on Linux and macOS, see
+<a class="reference internal" href="compiling.html#building-manually"><span class="std std-ref">Building manually</span></a>. For complete cross-platform compilation instructions,
+refer to the <a class="reference internal" href="compiling.html#compiling"><span class="std std-ref">Build systems</span></a> page.</p>
+<p>The <a class="reference external" href="https://github.com/pybind/python_example">python_example</a> and <a class="reference external" href="https://github.com/pybind/cmake_example">cmake_example</a> repositories are also a good place
+to start. They are both complete project examples with cross-platform build
+systems. The only difference between the two is that <a class="reference external" href="https://github.com/pybind/python_example">python_example</a> uses
+Python’s <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> to build the module, while <a class="reference external" href="https://github.com/pybind/cmake_example">cmake_example</a> uses CMake
+(which may be preferable for existing C++ projects).</p>
+<p>Building the above C++ code will produce a binary module file that can be
+imported to Python. Assuming that the compiled module is located in the
+current directory, the following interactive Python session shows how to
+load and execute the example:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">$ python</span>
+<span class="go">Python 3.9.10 (main, Jan 15 2022, 11:48:04)</span>
+<span class="go">[Clang 13.0.0 (clang-1300.0.29.3)] on darwin</span>
+<span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="keyword-arguments">
+<span id="keyword-args"></span><h2>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Link to this heading"></a></h2>
+<p>With a simple code modification, it is possible to inform Python about the
+names of the arguments (“i” and “j” in this case).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A function which adds two numbers&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;j&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">arg</span></code> is one of several special tag classes which can be used to pass
+metadata into <code class="xref py py-func docutils literal notranslate"><span class="pre">module_::def()</span></code>. With this modified binding code, we can now
+call the function using keyword arguments, which is a more readable alternative
+particularly for functions taking many parameters:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">3L</span>
+</pre></div>
+</div>
+<p>The keyword names also appear in the function signatures within the documentation.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+
+<span class="go">....</span>
+
+<span class="go">FUNCTIONS</span>
+<span class="go">    add(...)</span>
+<span class="go">        Signature : (i: int, j: int) -&gt; int</span>
+
+<span class="go">        A function which adds two numbers</span>
+</pre></div>
+</div>
+<p>A shorter notation for named arguments is also available:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// regular notation</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add1&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;j&quot;</span><span class="p">));</span>
+<span class="c1">// shorthand</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;i&quot;</span><span class="n">_a</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;j&quot;</span><span class="n">_a</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <a href="#id2"><span class="problematic" id="id3">:var:`_a`</span></a> suffix forms a C++11 literal which is equivalent to <code class="xref py py-class docutils literal notranslate"><span class="pre">arg</span></code>.
+Note that the literal operator must first be made visible with the directive
+<code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">pybind11::literals</span></code>. This does not bring in anything else
+from the <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> namespace except for literals.</p>
+</section>
+<section id="default-arguments">
+<span id="default-args"></span><h2>Default arguments<a class="headerlink" href="#default-arguments" title="Link to this heading"></a></h2>
+<p>Suppose now that the function to be bound has default arguments, e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Unfortunately, pybind11 cannot automatically extract these parameters, since they
+are not part of the function’s type information. However, they are simple to specify
+using an extension of <code class="xref py py-class docutils literal notranslate"><span class="pre">arg</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A function which adds two numbers&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;j&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The default values also appear within the documentation.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+
+<span class="go">....</span>
+
+<span class="go">FUNCTIONS</span>
+<span class="go">    add(...)</span>
+<span class="go">        Signature : (i: int = 1, j: int = 2) -&gt; int</span>
+
+<span class="go">        A function which adds two numbers</span>
+</pre></div>
+</div>
+<p>The shorthand notation is also available for default arguments:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// regular notation</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add1&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;j&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="c1">// shorthand</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;i&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;j&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="exporting-variables">
+<h2>Exporting variables<a class="headerlink" href="#exporting-variables" title="Link to this heading"></a></h2>
+<p>To expose a value from C++, use the <code class="docutils literal notranslate"><span class="pre">attr</span></code> function to register it in a
+module as shown below. Built-in types and general objects (more on that later)
+are automatically converted when assigned as attributes, and can be explicitly
+converted using the function <code class="docutils literal notranslate"><span class="pre">py::cast</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;the_answer&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;what&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">world</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These are then accessible from Python:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">the_answer</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">what</span>
+<span class="go">&#39;World&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="supported-data-types">
+<span id="supported-types"></span><h2>Supported data types<a class="headerlink" href="#supported-data-types" title="Link to this heading"></a></h2>
+<p>A large number of data types are supported out of the box and can be used
+seamlessly as functions arguments, return values or with <code class="docutils literal notranslate"><span class="pre">py::cast</span></code> in general.
+For a full overview, see the <a class="reference internal" href="advanced/cast/index.html"><span class="doc">Type conversions</span></a> section.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

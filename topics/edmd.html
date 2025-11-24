@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extended Dynamical Mode Decomposition &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Units in EXP and pyEXP" href="units.html" />
+    <link rel="prev" title="Singular Spectrum Analysis" href="ssa.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="timesseries.html">BFE time series analysis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ssa.html">Singular Spectrum Analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Extended Dynamical Mode Decomposition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#koopman-operators">Koopman Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#koopman-spectral-analysis">Koopman Spectral Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Extended Dynamical Mode Decomposition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#discussion-and-relationship-to-mssa">Discussion and relationship to mSSA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="timesseries.html">BFE time series analysis</a></li>
+      <li class="breadcrumb-item active">Extended Dynamical Mode Decomposition</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/edmd.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="extended-dynamical-mode-decomposition">
+<span id="edmd"></span><h1>Extended Dynamical Mode Decomposition<a class="headerlink" href="#extended-dynamical-mode-decomposition" title="Link to this heading"></a></h1>
+<p id="index-0">Dynamical Mode Decomposition (DMD) is a a method for extracting
+underlying linear dynamics from complex non-linear data.  This method
+originates in the general proof by Koopman that a finite dimensional
+non-linear dynamical flow maps on to a linear infinite dimensional
+flow.  The theorem <em>does not</em> help us find that mapping and it’s very
+hard in general.  In essence, DMD is a high-dimensional finite
+approximation to the infinite dimensional mapping envisioned by
+Koopman (usually called a <em>Koopman operator</em>).  In essence, the DMD is
+identifies the best-fit linear dynamical system in a least-squares
+sense from samples of a flow that advances high-dimensional
+measurements forwards in time. This is similar to and often justified
+by the mathematical structure of the Koopman operator which also
+advances the observation of a state at a given time to the next time
+step.</p>
+<p>Part of the growing attraction of DMD is attributed to its
+equation-free nature. Although some dynamical systems could be modeled
+from first principles (e.g. a set of ordinary differential equations),
+many dynamical systems have unknown governing equations. Even within
+systems with known dynamics, it is difficult uncover patterns that
+allow for the characterization of how dominant behaviors evolve in
+time.</p>
+<section id="koopman-operators">
+<h2>Koopman Operators<a class="headerlink" href="#koopman-operators" title="Link to this heading"></a></h2>
+<p id="index-1">Consider dynamical systems that can be modeled as:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\dot{x}} = \mathbf{F}(\mathbf{x})\]</div>
+<p>where the current state <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is an element a state space
+<span class="math notranslate nohighlight">\({\cal M}\in\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is a flow
+field.  If we discretize this problem we get:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{x}_{j+1} = \mathbf{A}(\mathbf{x}_j)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is the mapping that represents the mapping
+from time <span class="math notranslate nohighlight">\(t=t_0 + hj\)</span> to <span class="math notranslate nohighlight">\(t=t_0 + h(j+1)\)</span> where <span class="math notranslate nohighlight">\(h\)</span>
+is the numerical integration time step.  Since we are interested in
+the prediction of time-steps of the dynamical system such as an N-body
+simulation, we will be generally interested in this discrete time
+formulation.</p>
+<p>In 1931, Bernard Koopman <a class="reference internal" href="#koopman31" id="id1"><span>[koopman31]</span></a> proposed the existence of a
+compositional operator for any dynamical system that that results in
+linear system for the appropriate span of functions in Hilbert space.
+This composition is now known as the Koopman operator.  It is usual
+written as follows:</p>
+<div class="math notranslate nohighlight">
+\[{\cal K}(t)\mathbf{g}(\mathbf{x}) = \mathbf{g}\circ\mathbf{F}(t, \mathbf{x})\]</div>
+<p>where <span class="math notranslate nohighlight">\({\cal K}\)</span> denotes the Koopman operator which is a linear
+transformation and <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the dynamical flow.</p>
+<p>This sounds too good to be true.  And it is.  The downfall here is
+that the Koopman operator updates some unknown vector of real valued
+functions of this dynamical system, usually called _observables_ which
+echos the origin of this idea in quantum mechanics.  These
+_observable_ functions, <span class="math notranslate nohighlight">\(g(\mathbf{x})\)</span> that make the system
+linear are unknown.  In the language of functional analysis,
+the vector space of these observables is infinite.  Figuratively, the
+use of Koopman operators as a trade off from simple set of physically
+motivated phase-space variables with non-linear dynamics to
+complicated set of functions with simple dynamics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following sections provides mathematical details of
+extended Dynamical Mode Decomposition for motivation of the
+method and to better describe its relationship to
+multichannel SSA, and its implementation in EXP.  Feel free
+to skip this on your first read through.  Some of this
+presentation partly follows <a class="reference internal" href="#brunton21" id="id2"><span>[brunton21]</span></a>.</p>
+</div>
+</section>
+<section id="koopman-spectral-analysis">
+<h2>Koopman Spectral Analysis<a class="headerlink" href="#koopman-spectral-analysis" title="Link to this heading"></a></h2>
+<p id="index-2">The discrete mapping version of the continuous Koopman operator has a
+very similar form:</p>
+<div class="math notranslate nohighlight">
+\[{\cal K}\mathbf{g}(\mathbf{x}) = \mathbf{g}\circ\mathbf{A}(\mathbf{x})\]</div>
+<p>Our end goal is an estimation of the operator <span class="math notranslate nohighlight">\({\cal K}\)</span> directly from
+the basis-function coefficients from our simulations.  This estimation
+process is called extended Dynamical Mode Decomposition and will be
+described below.  This will assume that the dynamics is
+time-indepdendent; that is, <span class="math notranslate nohighlight">\({\cal K}\)</span> and <span class="math notranslate nohighlight">\(A\)</span> are indepdendent
+of time.</p>
+<p>Let us assume that we know the Koopman operator eigenfunctions of
+<span class="math notranslate nohighlight">\({\cal K}\)</span>: <span class="math notranslate nohighlight">\({\cal C}\phi_j = \lambda_j\phi_j\)</span> where
+<span class="math notranslate nohighlight">\(j\)</span> may be countably infinite.  In practice, we will have
+<span class="math notranslate nohighlight">\(j&lt;M\)</span>.  Then, all of our observable functions
+<span class="math notranslate nohighlight">\(g(\mathbf{x})\)</span> can be represented as a linear combination of
+the eigenfunctions:</p>
+<div class="math notranslate nohighlight">
+\[g(\mathbf{x}) = \sum_j c_j\phi_j\]</div>
+<p>Therefore, if we know the value of <span class="math notranslate nohighlight">\(g(\mathbf{x}_0)\)</span> at some
+initial state, <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>, then we know the value at time
+step <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{x}_k = {\cal K}^k_g(\mathbf{x}) = \sum_j
+c_j\lambda_j^k\phi_j\]</div>
+<p>The value of <span class="math notranslate nohighlight">\(\lambda_j\)</span> will be complex generally.  But we can
+always write: <span class="math notranslate nohighlight">\(\lambda_j = r e^{i\theta}\)</span> and use the value of
+<span class="math notranslate nohighlight">\(r\)</span> to determine the stability of the flow.</p>
+<p>For our discrete dynamical system, we can write this entire
+development using standard linear algebra.  Assume that we have a
+vector of basis functions evaluated over some phase-space state:
+<span class="math notranslate nohighlight">\(\mathbf{g}(\mathbf{x})\)</span>.  To be specific, let us assume that
+our <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> has rank <span class="math notranslate nohighlight">\(L\)</span> The evolution equation
+becomes:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{g}(\mathbf{x}_{j+1}) = \mathbf{A}\mathbf{g}(\mathbf{x}_{j})\]</div>
+<p>For some left eigenvector <span class="math notranslate nohighlight">\(\mathbf{y}^\intercal\mathbf{A} =
+\lambda\mathbf{y}^\intercal\)</span> which implies that
+<span class="math notranslate nohighlight">\(\phi(\mathbf{x}) = \mathbf{y}^\intercal\mathbf{g}(\mathbf{x})\)</span>.
+In other words, if we can estimate <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> from our data,
+we get an estimate the Koopman eigenfunctions.  We will describe this
+approximation technique next.</p>
+</section>
+<section id="id3">
+<h2>Extended Dynamical Mode Decomposition<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Suppose we have <span class="math notranslate nohighlight">\(m\)</span> snapshots from our simulation.  Extended
+Dynamical Mode Decomposition (eDMD) approximates the matrix
+<span class="math notranslate nohighlight">\(\mathbf{A}\)</span> from snapshot pairs of the basis function
+evaluations of our N-body system:
+<span class="math notranslate nohighlight">\(\{(\mathbf{g}(\mathbf{x}_{j}),\mathbf{g}(\mathbf{x}_{j+1}))\}\)</span>
+with <span class="math notranslate nohighlight">\(j=0,\ldots,m-1\)</span>.  For convenience denote <span class="math notranslate nohighlight">\(c_{k,j} =
+g_k(\mathbf{x}_j)\)</span>. Now arrange each snapshot into two data matrices,
+<span class="math notranslate nohighlight">\(\mathbf{G}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{G}^\prime\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{G} = \begin{bmatrix}
+c_{0,0} &amp; c_{0,1} &amp; \dots \\
+\vdots &amp; \ddots &amp; \\
+c_{L,0} &amp;        &amp; c_{L,m-1}
+\end{bmatrix}
+\qquad
+\mathbf{G}^\prime = \begin{bmatrix}
+c_{1,1} &amp; c_{1,2}\dots  &amp; c_{1,m}\\
+\vdots &amp; \ddots &amp; \vdots\\
+c_{L,1} &amp; \dots  &amp; c_{L,m}
+\end{bmatrix}\end{split}\]</div>
+<p>Our discretized evolution equation is then <span class="math notranslate nohighlight">\(\mathbf{G}^\prime =
+\mathbf{A}\mathbf{G}\)</span>.  For EXP-based analyses, the elements of
+<span class="math notranslate nohighlight">\(\mathbf{G}\)</span> are the basis coefficients, <span class="math notranslate nohighlight">\(c_{i,j}\)</span>.  The
+best fit matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> establishes a linear dynamical
+system that approximately advances snapshot measurements forward in
+time, which may be formulated as linear least-squares problem:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} = \mbox{argmin}_{\mathbf{A}} \lVert\mathbf{G}^\prime −
+\mathbf{A}\mathbf{G}\rVert_F\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lVert\cdot\rVert_F\)</span> is the Frobenius norm.  The Singular
+Value Decomposition (SVD) is can be used to construct the solution
+using the pseudo-inverse which we denote by <span class="math notranslate nohighlight">\(\dagger\)</span>.  This
+gives us:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} = \mathbf{G}^\prime\mathbf{G}^\dagger\]</div>
+<p>The SVD of <span class="math notranslate nohighlight">\(\mathbf{G} =
+\mathbf{U}\mathbf{\Sigma}\mathbf{V}^\ast\)</span> may be written as
+<span class="math notranslate nohighlight">\(\mathbf{X}^\dagger =
+\mathbf{V}\mathbf{\Sigma}^{-1}\mathbf{U}^\ast\)</span>. The matrices
+<span class="math notranslate nohighlight">\(\mathbf{U}\in\mathbb{C}^{L\times L}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{V}\in\mathbb{C}^{m\times m}\)</span> are unitary, so that
+<span class="math notranslate nohighlight">\(\mathbf{U}^\ast\mathbf{U} = \mathbf{I}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{V}^\ast\mathbf{V} = \mathbf{I}\)</span> where <span class="math notranslate nohighlight">\(\ast\)</span>
+denotes complex-conjugate transpose. The columns of <span class="math notranslate nohighlight">\(\mathbf{U}\)</span>
+are known as POD <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> modes in DMD terminology.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This prescription implicitly assumes that our dynamical
+problem and therefore our Koopman operator <span class="math notranslate nohighlight">\({\cal K}\)</span> is time
+independent.  That is, using linear least squares to estimate
+<span class="math notranslate nohighlight">\(\mathbf{A]\)</span> implies that the same operator works for
+<span class="math notranslate nohighlight">\(\mathbf{g}(\mathbf{x}_{j+1}) =
+\mathbf{A}\mathbf{g}(\mathbf{x}_{j})\)</span> for any value of <span class="math notranslate nohighlight">\(j\)</span>
+for the same matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>.  This may not be true if
+your galaxy is evolving.  In this case, you may need to break up
+your time series into temporal windows whose length are smaller
+than the evolution time.</p>
+</div>
+<p>In our case, the number of samples <span class="math notranslate nohighlight">\(m\)</span> will be much larger than
+the number of basis functions <span class="math notranslate nohighlight">\(L\)</span>.  And the effective rank
+<span class="math notranslate nohighlight">\(r\)</span> of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is often even lower.  Therefore, we
+can further reduce the dimensionality by projecting <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>
+onto the first <span class="math notranslate nohighlight">\(r\)</span> POD modes.  This provides a rank-<span class="math notranslate nohighlight">\(r\)</span>
+approximation of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> using the SVD:
+<span class="math notranslate nohighlight">\(\mathbf{A}\approx\mathbf{U}_r\mathbf{\Sigma}_r\mathbf{V}_r\)</span>
+where the subscript <span class="math notranslate nohighlight">\(r\)</span> indicates the rank reduced versions of
+the original SVD.  The resulting approximation to <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>
+becomes:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{\mathbf{A}} = \mathbf{U}_r^\ast\mathbf{A}\mathbf{U}_r
+= \mathbf{U}_r^\ast\mathbf{A}^\prime\mathbf{A}^\dagger\mathbf{U}_r
+=
+\mathbf{U}_r^\ast\mathbf{A}^\prime\mathbf{V}_r\mathbf{\Sigma}^{-1}_r\]</div>
+<p>with eigenvalues and eigenfunctions:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{\mathbf{A}}\mathbf{\Xi} = \mathbf{\Lambda}\mathbf{\Xi}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{\Xi}\)</span> is the matrix of eigenvectors and and
+<span class="math notranslate nohighlight">\(\mathbf{\Lambda}\)</span> is the diagonal matrix of eigenvalues.  The
+estimated eigenvectors of the evolution matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> may
+be reconstructed from the reduced problem as follows:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\Phi} = \mathbf{U}_r\tilde{\mathbf{A}}\mathbf{\Xi} =
+\mathbf{A}^\prime\mathbf{V}_r\mathbf{\Sigma}_r^{-1}\mathbf{\Xi}\]</div>
+<p>We can use the eigenvalues <span class="math notranslate nohighlight">\(\Lambda_j\)</span> to identify the frequency
+of interesting growing or oscillating patterns and use the corresponding
+eigenvectors <span class="math notranslate nohighlight">\(\mathbf{\Phi}_j\)</span> to reconstruct the physical
+fields in the mode, just as we do for mSSA.</p>
+</section>
+</section>
+<section id="discussion-and-relationship-to-mssa">
+<h1>Discussion and relationship to mSSA<a class="headerlink" href="#discussion-and-relationship-to-mssa" title="Link to this heading"></a></h1>
+<p>Koopman’s paper <a class="reference internal" href="#koopman31" id="id5"><span>[koopman31]</span></a> posits and proves the existence of a time
+evolution operator for a finite dimensional non-linear dynamical
+system by ‘lifting’ or projection of the finite-dimensional phase
+space to an infinite dimensional space.  That is one takes an
+M-dimensional manifold (i.e. phase space) and finds a mapping to an
+infinite dimensional space.  Specifically, he considered a projection
+to Hilbert space.  In the infinite dimensional function space, the
+dynamics can be shown to be locally linear and therefore completely
+describable.  This implies that one may find the eigenvalues and
+eigenfunctions that describe the dynamics.  Then, one can project them
+back to the original space to fully describe the original non-linear
+problem.</p>
+<p>In practice, this can be done analytically but for only very simple
+systems with a cleverly chosen set of functions.  But it does work,
+when one can solve it.  There are several nice examples showing that
+phase space can be tiled with eigenfunctions around critical points to
+recover the full dynamics.  The often used example is the Lorenz
+<em>strange</em> attractor.  The need to do this hard work analytically
+clearly limits the utility of Koopman operator theory.  However, one
+can follow one or more trajectories in the original system and attempt
+to elicit a finite dimensional approximation to a Koopman operator by
+combining many samples over time simultaneously.  Since one is
+implicitly assuming that the system is time independent, one tries to
+find the linear operator that simultaneously evolves all the
+trajectories at every time step to each of their next time steps.</p>
+<p>In the simplest formulation, this method only works for
+time-independent systems as described in the previous section; the
+eigenfunctions need to span the phase space lift for all time to solve
+it by the linear least-squares method.  Although one can extend the
+approach to time-dependent systems that are an explicit function of
+time using an extended phase-space approach, this can not be obviously
+extended to a general time evolving system (like an evolving galaxy).</p>
+<p>The application of eDMD to our basis function representation of a
+simulation results in the matrix equation:
+<span class="math notranslate nohighlight">\(\mathbf{g}(\mathbf{x})_{j+1} = \mathbf{g}(\mathbf{x})_j\)</span> where
+<span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is the finite-dimensional approximation Koopman
+operator and <span class="math notranslate nohighlight">\(\mathbf{x}_j\)</span> is state at time step
+<span class="math notranslate nohighlight">\(\mathbf{j}\)</span>.  Using the language of mSSA, we can <em>pile up</em> many
+samples sample pairs trajectory matrix.  The matrix that does this is
+a lag-1 trajectory matrix in mSSA speak.  Then, one can use SVD to
+find the best fit operator M that does this best in the linear
+least-squares sense.  This defines dynamical mode decomposition (DMD).
+The basis-set coefficients represent an <em>observable</em> function of our
+complex dynamics from the phase-space snapshots. We can then ask the
+same question as DMD: what is the linear operator that best advances
+all of the <em>observable</em> functions by one time step for all observed
+time steps together.  This is called extended DMD (eDMD).  The
+‘observable’ functions for our case would be basis functions (e.g.).
+This is the closest finite-dimensional analog to what Koopman
+originally proposed in 1931.  BTW, they called these special functions
+of phase space ‘observable’ functions since they were envisioning
+quantum mechanical systems where one does not directly observe states.
+But this works for our purposes as basis functions just fine.</p>
+<p>SSA is closely related to to Koopman theory (and eDMD) although it has
+additional properties.  In fact, in 1980, Takens <a class="reference internal" href="#takens80" id="id6"><span>[takens80]</span></a> proved
+that the time-delayed trajectory that we use in SSA can be ‘lifted’ to
+a higher dimensional space that makes the trajectories in the
+high-dimensional space locally Euclidean; that is, they no longer
+cross and can be locally interpreted as linear flow.  Same as Koopman.
+A few recent papers have shown that SSA is also a valid representation
+of a Koopman operator.  However, the motivation in the previous
+sections illustrate an important difference: Koopman attempts to find
+the analogous linear problem in a large number of dimensions that
+simplifies the low dimensional problem through a mapping while SSA
+attempts to find the temporal solution for the entire time series.
+Therefore, my intuition suggests that extra time embedding provides
+the SSA eigenfunctions (PCs) with more temporal structure that eDMD.
+The main problem with eDMD relative to mSSA is that eDMD requires that
+the entire input series really describe a time dependent segment of
+the evolution.  While mSSA uses temporal autocorrelation to find
+temporal regimes that are correlated. In some sense, the windowing
+nature is able to break up the time series into segments that
+correlate the dynamics in ‘regimes’ that approximate a temporally
+constant segment of the evolution.</p>
+<p>I have demonstrated this to myself by applying eDMD and mSSA to
+segments of my unstable l=1 simulations <a class="reference internal" href="#weinberg22" id="id7"><span>[weinberg22]</span></a>.  If I apply
+each method to the exponentially growing phase of the evolution, both
+give consistent results.  Specifically eDMD is able to identify the
+growing mode pair with the correct frequency.  The down side is that
+eDMD identifies a whole pile of modes that don’t seem to have any
+particular meaning.  This is a well known problem with eDMD: it finds
+spurious modes.  Once can argue that mSSA has the same problem but
+mSSA provides some built in significance (in terms of the eigenvalues
+themselves) while eDMD does not.  In addition, I know that there is
+also a damped mode that mSSA finds and eDMD does not.  Moreover, if I
+give the entire time series (post saturation of the exponential
+growth), eDMD gives a mode pair that makes no physical sense.</p>
+<p>My conclusion here is that eDMD can be used for strictly
+time-independent problems (or time-indepdendent segments of an
+evolving problem).  It has the one interpretive advantage of providing
+the frequency of a mode directly.  However, it seems to mix up things
+very easily.  The propensity of eDMD to do this is well documented, so
+this finding is not specific to this particular application. mSSA is
+more robust to this sort of confusion, although we also know that mSSA
+can mix modes, too.</p>
+<p>We have implemented eDMD in pyEXP with an analogous interface to
+expMSSA, so you can try it if wish.  Please provide feedback!</p>
+<div role="list" class="citation-list">
+<div class="citation" id="koopman31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>koopman31<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>B.O. Koopman. Hamiltonian systems and transformation in
+Hilbert space, Proceedings of the National Academy of
+Sciences, 17, 315, 1931</p>
+</div>
+<div class="citation" id="brunton21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">brunton21</a><span class="fn-bracket">]</span></span>
+<p>S. L. Brunton, M. Budišić, E. Kaiser, J.N. Kutz.
+Modern Koopman Theory for Dynamical
+Systems. arxiv:2102.12086v2</p>
+</div>
+<div class="citation" id="takens80" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">takens80</a><span class="fn-bracket">]</span></span>
+<p>F. Takens. Detecting strange attractors in turbulence
+Dynamical Systems and Turbulence, Warwick 1980 (Lecture
+Notes in Math. vol 898) pp 366–81</p>
+</div>
+<div class="citation" id="weinberg22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">weinberg22</a><span class="fn-bracket">]</span></span>
+<p>M.D. Weinberg. New dipole instabilities in spherical
+stellar systems. arXiv:2209.06846.</p>
+</div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
+<p>Proper Orthogonal Decomposition</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ssa.html" class="btn btn-neutral float-left" title="Singular Spectrum Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="units.html" class="btn btn-neutral float-right" title="Units in EXP and pyEXP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

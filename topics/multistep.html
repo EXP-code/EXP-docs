@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Body optimization in EXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Centering" href="centering.html" />
+    <link rel="prev" title="Units in EXP and pyEXP" href="units.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">N-Body optimization in EXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-step-criteria">Time step criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-leapfrog-integrator">The Leapfrog integrator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-basic-multistep-algorithm">The basic multistep algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bfe-implementation">BFE implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-details">The details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#level-update">Level update</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#algorithm-summary">Algorithm summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-time-step-variable">External time step variable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">N-Body optimization in EXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/multistep.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="n-body-optimization-in-exp">
+<span id="multistep"></span><h1>N-Body optimization in EXP<a class="headerlink" href="#n-body-optimization-in-exp" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>EXP uses binary time-step tree to increase dynamical throughput for
+simulations with large dynamic range in characteristic orbital times.
+Time steps for each particle are chosen to be the minimum of 4
+standard criteria (see below) and one criteria that may be applied by
+user-defined modules (see <a class="reference internal" href="usermodules.html#usermodules"><span class="std std-ref">user modules</span></a>).
+In practice, this multiple time stepping algorithm improves throughput
+by an order of magnitude for CPU computations.  Less so for
+GPU computations but it often still results in a factor of two gain.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following sections provides mathematical details of the EXP
+multistepping implementation.  You might wish to skip this
+on your first read through.</p>
+</div>
+<section id="time-step-criteria">
+<h3>Time step criteria<a class="headerlink" href="#time-step-criteria" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>The natural radius time scale: <span class="math notranslate nohighlight">\(|r_{scale}|/|\mathbf{v}\)</span>,
+where <span class="math notranslate nohighlight">\(r_{scale}\)</span> represents an internal or preset length
+scale.  This is only used when provided by an external user routine
+or in the Particle structure.</p></li>
+<li><p>The characteristic drift time scale:
+<span class="math notranslate nohighlight">\(|r_{char}|/|\mathbf{v}|\)</span>, where <span class="math notranslate nohighlight">\(r_{char}\)</span> represents the
+natural length scale for the system.  For simplicity, we set
+<span class="math notranslate nohighlight">\(r_{char}=1\)</span> and let the user tune the prefactor for their own
+system units (see below on tuning parameters). This criterion
+decreases the step size to follow fast particles.  Because this
+criterion is position dependent, it is given a very low weight by
+default.  The user may enable this criterion by setting <cite>dynfracD</cite> to
+some small value.</p></li>
+<li><p>The force time scale: <span class="math notranslate nohighlight">\(|\mathbf{v}|/|\mathbf{a}|\)</span> where
+<span class="math notranslate nohighlight">\(\mathbf{a}\)</span> is the acceleration.</p></li>
+<li><p>The work time scale: <span class="math notranslate nohighlight">\(|\Psi|/|\mathbf{v}\cdot\mathbf{a}|\)</span> where
+<span class="math notranslate nohighlight">\(\Psi\)</span> is the gravitational potential chosen to be 0 at large
+distances from the center of the particle distribution.</p></li>
+<li><p>The escape time scale:
+<span class="math notranslate nohighlight">\(\sqrt{|\Psi|/\mathbf{a}\cdot\mathbf{a}}\)</span>.
+This is derived by computing the time required to climb out of the
+potential well with magnitude <span class="math notranslate nohighlight">\(|\Psi|\)</span> at fixed value of
+acceleration <span class="math notranslate nohighlight">\(|\mathbf{a}|\)</span>.</p></li>
+</ol>
+<p>Each of these are tuned by the prefactors <span class="math notranslate nohighlight">\(\epsilon_S, \epsilon_D,
+\epsilon_V, \epsilon_A, \epsilon_P\)</span> which are the following global
+variables in the configuration file: <cite>dynfracS, dynfracD, dynfracV,
+dynfracA, dynfracP</cite>.  These values must be calibrated for
+a specific problem at hand, but values of order 0.01 would be typical.
+Although I tend to be rather conservative about this.  When in doubt,
+check individual representative orbits based on your own needs.  A
+particular criterion can be ignored by choosing a large value for the
+corresponding <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>Finally, a fifth criterion is a specific field carried by a particle
+that requests a particular time step.  Again, the value of this field,
+<cite>dtreq</cite>, is zero by default.  A non-zero value of <span class="target" id="index-0"></span>dtreq will
+fold this request into all of the other time step criteria. Code
+developers take note: there is no tuning parameter for this criterion.</p>
+</section>
+</section>
+<section id="the-leapfrog-integrator">
+<h2>The Leapfrog integrator<a class="headerlink" href="#the-leapfrog-integrator" title="Link to this heading"></a></h2>
+<p>EXP uses a particular version of the symplectic Leapfrog
+integrator.  We begin with a quick review.  Hamilton’s equations for
+our Hamiltonian <span class="math notranslate nohighlight">\(H = p^2/2 + \Phi(\mathbf{x})\)</span> read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\dot{\mathbf{q}} &amp;= \frac{\partial H}{\partial\mathbf{p}} \\
+\dot{\mathbf{p}} &amp;= -\frac{\partial H}{\partial\mathbf{q}}\end{split}\]</div>
+<p>or, compactly,</p>
+<div class="math notranslate nohighlight">
+\[\dot{\mathbf{z}} = \mathbf{f}(\mathbf{z}, t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{z} = (\mathbf{q}, \mathbf{p})\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{f} = \left(
+\frac{\partial H}{\partial\mathbf{p}},
+-\frac{\partial H}{\partial\mathbf{q}}
+\right).\]</div>
+<p>We can discretize this Hamiltonian by replacing <span class="math notranslate nohighlight">\(H(\mathbf{q},
+\mathbf{p})\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[H_h(\mathbf{q}, \mathbf{p}, t) = \frac{p^2}{2} + \Phi(\mathbf{q})\delta_h(t)\]</div>
+<div class="math notranslate nohighlight">
+\[\delta_h(t) = h\sum_{k=-\infty}^{k=\infty}\delta(t + kh).\]</div>
+<p>If we average over a time interval long compared <span class="math notranslate nohighlight">\(h\)</span>, the new
+Hamiltonian system should approach the original Hamiltonian system in
+the limit <span class="math notranslate nohighlight">\(h\rightarrow0\)</span>.</p>
+<p>This discretization allows us to develop an algebra to create
+Hamiltonian mappings.  To see this, integrate the equations of motion
+from <span class="math notranslate nohighlight">\(t=-\epsilon\)</span> to <span class="math notranslate nohighlight">\(t=\epsilon\)</span> where
+<span class="math notranslate nohighlight">\(0&lt;\epsilon\gg h\)</span>.  The resulting value of
+<span class="math notranslate nohighlight">\(\mathbf{z}_\epsilon\equiv\mathbf{z}(t=\epsilon)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}_\epsilon = \mathbf{q}; \qquad \mathbf{p}_\epsilon =
+\mathbf{p} - h\mathbf{\nabla}\Phi(\mathbf{q}).\]</div>
+<p>This is called a <em>kick</em> because the momentum changes but the
+position remains the same.  Next, between <span class="math notranslate nohighlight">\(t=\epsilon\)</span> and
+<span class="math notranslate nohighlight">\(t=h-\epsilon\)</span>, the value of the delta function is zero, so the
+system has constant momentum.  Therefore, Hamilton’s equations yield:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}^\prime = \mathbf{q}_\epsilon + h\mathbf{p}_\epsilon; \qquad
+\mathbf{p}^\prime  = \mathbf{p}_\epsilon.\]</div>
+<p>This is called a <em>drift</em> because the position changes but the
+momentum remains the same.  Combining these results, we can define an
+emph{integrator} as a Hamiltonian mapping <span class="math notranslate nohighlight">\((\mathbf{q},
+\mathbf{p})\rightarrow(\mathbf{q}^\prime, \mathbf{p}^\prime)\)</span> over
+the time step <span class="math notranslate nohighlight">\(h\)</span> beginning at <span class="math notranslate nohighlight">\(t=-\epsilon\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}^\prime = \mathbf{p} - h\mathbf{\nabla}\Phi(\mathbf{q});
+\qquad \mathbf{q}^\prime = \mathbf{q} + h\mathbf{p}^\prime.\]</div>
+<p>If we start at <span class="math notranslate nohighlight">\(t=\epsilon\)</span> we get the map:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}^\prime = \mathbf{q} + h\mathbf{p}; \qquad
+\mathbf{p}^\prime = \mathbf{p} - h\mathbf{\nabla}\Phi(\mathbf{q}^\prime).\]</div>
+<p>These define the <em>kick-drift</em> and <em>drift-kick</em> modified Euler
+integrators.  The error for each step is <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> so
+these are first-order integrators.</p>
+<p>By alternating kick and drift steps, we can construct higher-order
+integrators (<a class="reference internal" href="#yoshida93" id="id1"><span>[yoshida93]</span></a>).  In particular, a scheme where we drift
+for <span class="math notranslate nohighlight">\(h/2\)</span>, kick for <span class="math notranslate nohighlight">\(h\)</span> and drift for <span class="math notranslate nohighlight">\(h/2\)</span> gives
+the <em>drift-kick-drift</em> Leapfrog scheme:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}_{1/2} = \mathbf{q} + \frac{h}{2}\mathbf{p}; \qquad
+\mathbf{p}^\prime = \mathbf{p} -
+h\mathbf{\nabla}\Phi(\mathbf{q}_{1/2}); \qquad \mathbf{q}^\prime =
+\mathbf{q}_{1/2} + \frac{h}{2}\mathbf{p}^\prime.\]</div>
+<p>We can flip the steps to get a <em>kick-drift-kick</em> form of
+Leapfrog:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_{1/2} = \mathbf{p} - \frac{h}{2} \mathbf{\nabla}\Phi(\mathbf{q});
+\qquad \mathbf{q}^\prime = \mathbf{q} + h\mathbf{p}_{1/2}; \qquad
+\mathbf{p}^\prime = \mathbf{p}_{1/2} - \frac{h}{2}
+\mathbf{\nabla}\Phi(\mathbf{q}^\prime).\]</div>
+<p>Direct computation by Taylor series expansion shows that the error in
+the mapping from <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(t+h\)</span> for the leapfrog algorithm is:</p>
+<div class="math notranslate nohighlight">
+\[\mbox{error} = 1/6 h^3|\mathbf{q}^{[3]}(t)|.\]</div>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Link to this heading"></a></h3>
+<p id="index-1">The leapfrog integrator has many virtues:</p>
+<ul class="simple">
+<li><p>It is second- rather than first-order accurate, in that the
+error in phase-space position after a single timestep is
+<span class="math notranslate nohighlight">\(\mathcal{O}(h^3)\)</span>;</p></li>
+<li><p>Leapfrog is time reversible in the sense that if leapfrog
+advances the system from <span class="math notranslate nohighlight">\((\mathbf{q}, \mathbf{p})\)</span> to
+<span class="math notranslate nohighlight">\((\mathbf{q}^\prime, \mathbf{p}^\prime)\)</span> over interval <span class="math notranslate nohighlight">\(h\)</span>, it
+will also advance it from <span class="math notranslate nohighlight">\((\mathbf{q}^\prime,
+-\mathbf{p}^\prime)\)</span> to <span class="math notranslate nohighlight">\((\mathbf{q}, -\mathbf{p})\)</span>.  That is,
+leapfrog is time reversible.  Time-reversibility is a constraint
+on the phase-space flow that, like symplecticity, suppresses
+numerical dissipation, since dissipation is not a time-reversible
+phenomenon</p></li>
+<li><p>A sequence of <span class="math notranslate nohighlight">\(n\)</span> leapfrog steps can be regarded as a drift
+step for <span class="math notranslate nohighlight">\(1/2 h\)</span>, then <span class="math notranslate nohighlight">\(n\)</span> kick-drift steps of the modified
+Euler integrator, then a drift step for <span class="math notranslate nohighlight">\(-1/2 h\)</span>.  Thus, if
+<span class="math notranslate nohighlight">\(n\gg1\)</span>, the leapfrog integrator requires negligibly more work
+than the same number of steps of the modified Euler integrator.</p></li>
+<li><p>Leapfrog also needs no storage of previous timesteps, so is
+economical of memory.</p></li>
+</ul>
+<p>Because of all these advantages, most codes for simulating
+collisionless stellar systems use the leapfrog integrator.</p>
+</section>
+</section>
+<section id="the-basic-multistep-algorithm">
+<h2>The basic multistep algorithm<a class="headerlink" href="#the-basic-multistep-algorithm" title="Link to this heading"></a></h2>
+<p>A binary time-step tree can dramatically increase throughput,
+especially for the generic fully MPI implementation.
+We begin by partitioning phase space <span class="math notranslate nohighlight">\(m\)</span> ways such that each partition
+contains <span class="math notranslate nohighlight">\(n_j\)</span> particles that require a time step</p>
+<div class="math notranslate nohighlight">
+\[\delta t=2^{-j} h\]</div>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the largest time step and <span class="math notranslate nohighlight">\(j=0,\ldots,m\)</span>.
+The timestep for <span class="math notranslate nohighlight">\(j=m\)</span> corresponds to the one that would be
+required for a single time-step simulation.  Since the total cost of a
+time step is proportional to the number of force evaluations, the
+speed up factor is:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{S} = \sum_{j=0}^{m}n_j/\sum_{j=0}^{m}
+n_j 2^{-j}.\]</div>
+<p>For example, for an <span class="math notranslate nohighlight">\(c=15\)</span> NFW dark-matter profile with
+<span class="math notranslate nohighlight">\(N=10^7\)</span> particles, we find that <span class="math notranslate nohighlight">\(m=7\)</span> and
+<span class="math notranslate nohighlight">\(\mathcal{S}\approx 30\)</span>, an enormous speed up!  Forces in the
+SCF algorithm depend on the expansion coefficients and the leap frog
+algorithm requires linear extrapolation of these coefficients to
+maintain second-order error accuracy per step.  This extrapolation and
+the bookkeeping required for successive bisection of the time interval
+is straightforward.  We checked the accuracy of this algorithm by
+comparing to direct orbit integration methods.  This time stepping
+algorithm will allow us to regularly compute models with
+<span class="math notranslate nohighlight">\(N=10^8\)</span> and occasionally models up to <span class="math notranslate nohighlight">\(N=10^9\)</span>.</p>
+</section>
+<section id="bfe-implementation">
+<h2>BFE implementation<a class="headerlink" href="#bfe-implementation" title="Link to this heading"></a></h2>
+<p>The contribution to the expansion coefficients for all particles on a
+particular level are stored separately for the current and previous
+step.  Thus, each level maintains a full set of coefficients
+corresponding to the contribution of particles at that level.  We call
+this the <em>coefficient tableau</em>.  When computing the total
+coefficients at particular multistep level, the offset of the velocity
+update at the half step allows the coefficient contribution at the
+lower inactive levels to be linearly interpolated.  The error in the
+contribution from the interpolation is the same order as that for leap
+frog itself.</p>
+<p>The particle time step is computed after each step.  If a particle has
+changed levels, its previous contribution is substracted from its
+former level and its updated contribution is added to its new level.</p>
+<section id="the-details">
+<h3>The details<a class="headerlink" href="#the-details" title="Link to this heading"></a></h3>
+<p>As described above, each particle is assigned a time
+step <em>level</em>.  For each level with index <span class="math notranslate nohighlight">\(j\)</span>, the coefficient
+tableau is defined as the particles contributions restricted to that
+level.  Define an indicator <span class="math notranslate nohighlight">\(\zeta_j(k) = 1\)</span> if Particle <span class="math notranslate nohighlight">\(k\)</span> is in
+level <span class="math notranslate nohighlight">\(j\)</span>, and zero otherwise.  With this definition, the
+coefficient tableau becomes</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_n^j(t+hi/2^{m}) = \sum_{k=1}^N m_k \zeta_j(k) \phi_n(x_k)
+\label{eq:coeft}\]</div>
+<p>where <span class="math notranslate nohighlight">\(i\in[0, 1, \ldots, 2^{m}-1]\)</span> are the sub steps required for
+the full time step interval <span class="math notranslate nohighlight">\(h\)</span>.  We get the full coefficient given
+in equation (ref{eq:coefp})  summing over <span class="math notranslate nohighlight">\(j\)</span>: <span class="math notranslate nohighlight">\(\hat{a}_n(t) =
+\sum_{j=0}^m \hat{a}_n^j(t)\)</span>.</p>
+<p>For particles at Level <span class="math notranslate nohighlight">\(l\)</span>, each time step is <span class="math notranslate nohighlight">\(h/2^l\)</span>.  For
+example, let us consider only two levels in total, <span class="math notranslate nohighlight">\(m=1\)</span>. Particles
+at Level 0 have time step <span class="math notranslate nohighlight">\(h\)</span>. Applying the kick and drift steps
+from the emph{kick-drift-kick} algorithm in equation (ref{eq:lfkdk})
+brings the positions of Level 0 particles to the next time step.  This
+allows us to evaluation <span class="math notranslate nohighlight">\(\hat{a}_n^0(t)\)</span>, but in order to perform
+the final kick step, we need <span class="math notranslate nohighlight">\(\hat{a}_n(t+h) = \hat{a}_n^0(t+h) +
+\hat{a}_n^1(t+h)\)</span>.  The second term requires advancing the particles
+at higher levels.  Now consider the Level 1 particles.  The first sub
+step brings the positions of Level 1 particles to <span class="math notranslate nohighlight">\(t + h/2\)</span>. To
+evaluate <span class="math notranslate nohighlight">\(\hat{a}_n(t+h/2) = \hat{a}_n^0(t+h/2) + \hat{a}_n^1(t+h/2)\)</span>,
+<span class="math notranslate nohighlight">\(\hat{a}_n^1(t+h/2)\)</span> can be evaluated from the current positions,
+but we need we need <span class="math notranslate nohighlight">\(\hat{a}_n^0(t+h/2)\)</span>.  We approximate this by
+linear interpolation:</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_n^0(t+h/2) = \frac{\hat{a}_n^0(t) + \hat{a}_n^0(t+h)}{2}.\]</div>
+<p>This allows us to compute the next kick and drift, bringing all
+particles to the time <span class="math notranslate nohighlight">\(t+h\)</span> which allows the evaluation of the
+final kick for all particles.  The error in the force (acceleration)
+interpolation is <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> and contributes to an error in
+the trajectory proportional <span class="math notranslate nohighlight">\(|\mathbf{q}^{[3]}|\)</span>. Propagating
+this error using equations (ref{eq:lfkdk}), we find that the error
+from the linear interpolation is the same order as the leapfrog itself
+so there is no need for higher-order interpolation.</p>
+<p>The extension to any number of levels is straightforward.  Consider
+sub step <span class="math notranslate nohighlight">\(i\)</span> at Level <span class="math notranslate nohighlight">\(l\)</span>.  The fraction of the full step <span class="math notranslate nohighlight">\(h\)</span> is
+<span class="math notranslate nohighlight">\(f \equiv i/2^{m}\)</span>.  The last fractional step for Level <span class="math notranslate nohighlight">\(o&lt;l\)</span> is
+<span class="math notranslate nohighlight">\(g_- \equiv \lfloor i/2^{m-o} \rfloor /2^{o}\)</span> and the next fraction
+step is <span class="math notranslate nohighlight">\(g_+ \equiv \lceil i/2^{m-o} \rceil /2^{o}\)</span>.  Then, at each
+level <span class="math notranslate nohighlight">\(l\)</span>, all particles at Level <span class="math notranslate nohighlight">\(o&lt;l\)</span> are advanced using the
+following interpolation in coefficients:</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_n^o(t+hf) =
+\frac{\hat{a}_n^o(t+hg_-) [f - g_-]  + \hat{a}_n^0(t+hg_+) [g_+ - f]}{g_+ - g_-}.\]</div>
+<p>In our previous example for <span class="math notranslate nohighlight">\(m=1\)</span>, at time <span class="math notranslate nohighlight">\(t+h/2\)</span>, we have
+<span class="math notranslate nohighlight">\(i=1\)</span>.  For <span class="math notranslate nohighlight">\(o=0\)</span>, we gave <span class="math notranslate nohighlight">\(g_- = 0\)</span> and <span class="math notranslate nohighlight">\(g_+ = 1\)</span>.  For a
+more complex example, consider <span class="math notranslate nohighlight">\(m=2\)</span>, at time <span class="math notranslate nohighlight">\(t+h/4\)</span> which is
+again <span class="math notranslate nohighlight">\(i=1\)</span>.  For <span class="math notranslate nohighlight">\(o=1\)</span>, we gave <span class="math notranslate nohighlight">\(g_- = 0\)</span> and <span class="math notranslate nohighlight">\(g_+ = 1/2\)</span>.
+So, using equation (ref{eq:cinterp}), we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{a}_n^1(t+h/4) &amp;=
+\frac{\hat{a}_n^1(t) (1/4 - 0) + \hat{a}_n^1(t+h/2) [1/2 - 1/4]}{1/2}
+\\
+&amp;= \frac{\hat{a}_n^1(t)+ \hat{a}_n^0(t+h/2)}{2}.\end{split}\]</div>
+</section>
+<section id="level-update">
+<h3>Level update<a class="headerlink" href="#level-update" title="Link to this heading"></a></h3>
+<p>We compute the time-step level for each particle at the end of each
+sub time step using the algorithms described above.  We flag level
+changes and update the coefficient tableau by computing a difference
+array at the current level that describes the change to each lower or
+higher level.  This is straightforward for levels greater or equal to
+the current level but requires rolling back the trajectory to a
+previous time for levels smaller than the current level.  Therefore,
+the level update is most easily applied at the top level (Level 0)
+where all times are synchronized.</p>
+</section>
+</section>
+<section id="algorithm-summary">
+<h2>Algorithm summary<a class="headerlink" href="#algorithm-summary" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The global variable <code class="docutils literal notranslate"><span class="pre">multistep</span></code> sets the number of time
+step levels.  Each successive level has time step <span class="math notranslate nohighlight">\(t_0/2^l\)</span> where
+<span class="math notranslate nohighlight">\(l\)</span> is the level counter and <span class="math notranslate nohighlight">\(t_0\)</span> is master time step,
+the parameter <code class="docutils literal notranslate"><span class="pre">dtime</span></code>.  Theerfore the smallest stepping interval
+is <span class="math notranslate nohighlight">\(t_0/2^{\mbox{multistep}}\)</span>.</p></li>
+<li><p>All bodies start on highest level <span class="math notranslate nohighlight">\(l=\mbox{multistep}\)</span>
+(smallest time step) to start on the first step.  After the first
+step, new levels are computed and the multistep coefficient tableau
+is updated.</p></li>
+<li><p>At each substep, particle time steps are recomputed.  Particles
+that change levels are flagged.  At the end of the step, a particle
+update tableau is computed on each node and sum reduced over all
+nodes.</p></li>
+</ol>
+</section>
+<section id="external-time-step-variable">
+<h2>External time step variable<a class="headerlink" href="#external-time-step-variable" title="Link to this heading"></a></h2>
+<p>The <cite>Particle</cite> structure has two time step specific variables
+<cite>dtreq</cite>, the user-specified time step, and <cite>scale</cite>, the
+intrinsic scale for the particle.  If these values are less then zero,
+the user-requested time step criterion or the characteristic drift
+time scale, respectively, are ignored.  These values are set to -1 by
+default (ignored).</p>
+<div role="list" class="citation-list">
+<div class="citation" id="yoshida93" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">yoshida93</a><span class="fn-bracket">]</span></span>
+<p>H. Yoshida. Recent Progress in the Theory and
+Application of Symplectic Integrators. Celestial
+Mechanics and Dynamical Astronomy, 56:27–43, Mar. 1993.</p>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="units.html" class="btn btn-neutral float-left" title="Units in EXP and pyEXP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="centering.html" class="btn btn-neutral float-right" title="Centering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

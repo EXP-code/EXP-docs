@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An example of applying mSSA to the coefficients you created using pyEXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EXP Tutorial" href="../EXP-tutorial.html" />
+    <link rel="prev" title="An example of creating coefficients using pyEXP" href="Part1-Coefficients.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../pyEXP-tutorial.html">pyEXP Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Part1-Coefficients.html">An example of creating coefficients using pyEXP</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">An example of applying mSSA to the coefficients you created using pyEXP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Create-the-basis">Create the basis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Reading-the-halo-coefficients">Reading the halo coefficients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Visualizing-the-fields">Visualizing the fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Using-MSSA">Using MSSA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Where-do-you-want-to-go-next?">Where do you want to go next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pyEXP-tutorial.html#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../EXP-tutorial.html">EXP Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker.html">Exploring EXP using Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html#quick-start-examples">Quick-start examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorial.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="../pyEXP-tutorial.html">pyEXP Tutorial</a></li>
+      <li class="breadcrumb-item active">An example of applying mSSA to the coefficients you created using pyEXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/intro/Tutorials/Part2-Analysis.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="An-example-of-applying-mSSA-to-the-coefficients-you-created-using-pyEXP">
+<h1>An example of applying mSSA to the coefficients you created using pyEXP<a class="headerlink" href="#An-example-of-applying-mSSA-to-the-coefficients-you-created-using-pyEXP" title="Link to this heading"></a></h1>
+<p>This example assumes that you have run the <code class="docutils literal notranslate"><span class="pre">Part1-Coefficients</span></code> notebook to create the coefficients.</p>
+<p>We begin by importing <code class="docutils literal notranslate"><span class="pre">pyEXP</span></code> and friends and setting the working directory.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+import yaml
+import math
+import pyEXP
+import numpy as np
+import matplotlib.pyplot as plt
+
+# In this test, I assume that you have already explored and run Part1-Coefficients. This notebook does some additional
+# analysis and plotting
+#
+os.chdir(&#39;../Data&#39;)
+</pre></div>
+</div>
+</div>
+<section id="Create-the-basis">
+<h2>Create the basis<a class="headerlink" href="#Create-the-basis" title="Link to this heading"></a></h2>
+<p>This step is the same as in the previous notebook. We are going to use the basis for field evaluation so we need the basis.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the basis config
+#
+yaml_config = &quot;&quot;
+with open(&#39;basis.yaml&#39;) as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+    yaml_config = yaml.dump(config)
+
+# Construct the basis instance
+#
+basis = pyEXP.basis.Basis.factory(yaml_config)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+---- SLGridSph::ReadH5Cache: successfully read basis cache &lt;sphereSL.model&gt;
+---- Spherical::orthoTest: worst=0.00016446
+</pre></div></div>
+</div>
+<p>So far, this is the same as in <code class="docutils literal notranslate"><span class="pre">Part1</span></code> … now:</p>
+</section>
+<section id="Reading-the-halo-coefficients">
+<h2>Reading the halo coefficients<a class="headerlink" href="#Reading-the-halo-coefficients" title="Link to this heading"></a></h2>
+<p>We created the halo coefficients in the last notebook and stashed them in the EXP HDF5 format. Now, we’ll read them back.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Reread the coefs from the file
+#
+coefs = pyEXP.coefs.Coefs.factory(&#39;test_coefs&#39;)
+
+print(&quot;Got coefs for name=&quot;, coefs.getName())
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Got coefs for name= dark halo
+</pre></div></div>
+</div>
+</section>
+<section id="Visualizing-the-fields">
+<h2>Visualizing the fields<a class="headerlink" href="#Visualizing-the-fields" title="Link to this heading"></a></h2>
+<p>We made a few test grids in Part 1 of the notebook. This time, we’ll make surface renderings:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Now try some slices for rendering
+#
+times = coefs.Times()
+pmin  = [-0.05, -0.05, 0.0]
+pmax  = [ 0.05,  0.05, 0.0]
+grid  = [   40,    40,   0]
+
+fields = pyEXP.field.FieldGenerator(times, pmin, pmax, grid)
+
+surfaces = fields.slices(basis, coefs)
+print(&quot;We now have the following [time field] pairs&quot;)
+final = 0.0
+for v in surfaces:
+    print(&#39;-&#39;*40)
+    for u in surfaces[v]:
+        print(&quot;{:8.4f}  {}&quot;.format(v, u))
+        final = v
+
+# Print the potential image at the final time (I think there is a
+# fencepost issue in this grid, no matter).
+x = np.linspace(pmin[0], pmax[0], grid[0])
+y = np.linspace(pmin[1], pmax[1], grid[1])
+xv, yv = np.meshgrid(x, y)
+
+# Visualize the final time slice in grid.  Obviously, we could use any
+# field we want.  Here is potential and radial force.
+
+cont1 = plt.contour(xv, yv, surfaces[final][&#39;potl m&gt;0&#39;], colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, surfaces[final][&#39;potl m&gt;0&#39;])
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Non axisymmetric potential at T={}&#39;.format(final))
+plt.show()
+
+cont1 = plt.contour(xv, yv, surfaces[final][&#39;rad force&#39;], colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, surfaces[final][&#39;rad force&#39;])
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Radial force at T={}&#39;.format(final))
+plt.show()
+
+cont1 = plt.contour(xv, yv, surfaces[final][&#39;dens m&gt;0&#39;], colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, surfaces[final][&#39;dens m&gt;0&#39;])
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Non axisymmetric ensity for m&gt;0 at T={}&#39;.format(final))
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+We now have the following [time field] pairs
+----------------------------------------
+  0.0100  azi force
+  0.0100  dens
+  0.0100  dens m=0
+  0.0100  dens m&gt;0
+  0.0100  mer force
+  0.0100  potl
+  0.0100  potl m=0
+  0.0100  potl m&gt;0
+  0.0100  rad force
+----------------------------------------
+  0.0200  azi force
+  0.0200  dens
+  0.0200  dens m=0
+  0.0200  dens m&gt;0
+  0.0200  mer force
+  0.0200  potl
+  0.0200  potl m=0
+  0.0200  potl m&gt;0
+  0.0200  rad force
+----------------------------------------
+  0.0300  azi force
+  0.0300  dens
+  0.0300  dens m=0
+  0.0300  dens m&gt;0
+  0.0300  mer force
+  0.0300  potl
+  0.0300  potl m=0
+  0.0300  potl m&gt;0
+  0.0300  rad force
+----------------------------------------
+  0.0400  azi force
+  0.0400  dens
+  0.0400  dens m=0
+  0.0400  dens m&gt;0
+  0.0400  mer force
+  0.0400  potl
+  0.0400  potl m=0
+  0.0400  potl m&gt;0
+  0.0400  rad force
+----------------------------------------
+  0.0500  azi force
+  0.0500  dens
+  0.0500  dens m=0
+  0.0500  dens m&gt;0
+  0.0500  mer force
+  0.0500  potl
+  0.0500  potl m=0
+  0.0500  potl m&gt;0
+  0.0500  rad force
+----------------------------------------
+  0.0600  azi force
+  0.0600  dens
+  0.0600  dens m=0
+  0.0600  dens m&gt;0
+  0.0600  mer force
+  0.0600  potl
+  0.0600  potl m=0
+  0.0600  potl m&gt;0
+  0.0600  rad force
+----------------------------------------
+  0.0700  azi force
+  0.0700  dens
+  0.0700  dens m=0
+  0.0700  dens m&gt;0
+  0.0700  mer force
+  0.0700  potl
+  0.0700  potl m=0
+  0.0700  potl m&gt;0
+  0.0700  rad force
+----------------------------------------
+  0.0800  azi force
+  0.0800  dens
+  0.0800  dens m=0
+  0.0800  dens m&gt;0
+  0.0800  mer force
+  0.0800  potl
+  0.0800  potl m=0
+  0.0800  potl m&gt;0
+  0.0800  rad force
+----------------------------------------
+  0.0900  azi force
+  0.0900  dens
+  0.0900  dens m=0
+  0.0900  dens m&gt;0
+  0.0900  mer force
+  0.0900  potl
+  0.0900  potl m=0
+  0.0900  potl m&gt;0
+  0.0900  rad force
+----------------------------------------
+  0.1000  azi force
+  0.1000  dens
+  0.1000  dens m=0
+  0.1000  dens m&gt;0
+  0.1000  mer force
+  0.1000  potl
+  0.1000  potl m=0
+  0.1000  potl m&gt;0
+  0.1000  rad force
+----------------------------------------
+  0.1100  azi force
+  0.1100  dens
+  0.1100  dens m=0
+  0.1100  dens m&gt;0
+  0.1100  mer force
+  0.1100  potl
+  0.1100  potl m=0
+  0.1100  potl m&gt;0
+  0.1100  rad force
+----------------------------------------
+  0.1200  azi force
+  0.1200  dens
+  0.1200  dens m=0
+  0.1200  dens m&gt;0
+  0.1200  mer force
+  0.1200  potl
+  0.1200  potl m=0
+  0.1200  potl m&gt;0
+  0.1200  rad force
+----------------------------------------
+  0.1300  azi force
+  0.1300  dens
+  0.1300  dens m=0
+  0.1300  dens m&gt;0
+  0.1300  mer force
+  0.1300  potl
+  0.1300  potl m=0
+  0.1300  potl m&gt;0
+  0.1300  rad force
+----------------------------------------
+  0.1400  azi force
+  0.1400  dens
+  0.1400  dens m=0
+  0.1400  dens m&gt;0
+  0.1400  mer force
+  0.1400  potl
+  0.1400  potl m=0
+  0.1400  potl m&gt;0
+  0.1400  rad force
+----------------------------------------
+  0.1500  azi force
+  0.1500  dens
+  0.1500  dens m=0
+  0.1500  dens m&gt;0
+  0.1500  mer force
+  0.1500  potl
+  0.1500  potl m=0
+  0.1500  potl m&gt;0
+  0.1500  rad force
+----------------------------------------
+  0.1600  azi force
+  0.1600  dens
+  0.1600  dens m=0
+  0.1600  dens m&gt;0
+  0.1600  mer force
+  0.1600  potl
+  0.1600  potl m=0
+  0.1600  potl m&gt;0
+  0.1600  rad force
+----------------------------------------
+  0.1700  azi force
+  0.1700  dens
+  0.1700  dens m=0
+  0.1700  dens m&gt;0
+  0.1700  mer force
+  0.1700  potl
+  0.1700  potl m=0
+  0.1700  potl m&gt;0
+  0.1700  rad force
+----------------------------------------
+  0.1800  azi force
+  0.1800  dens
+  0.1800  dens m=0
+  0.1800  dens m&gt;0
+  0.1800  mer force
+  0.1800  potl
+  0.1800  potl m=0
+  0.1800  potl m&gt;0
+  0.1800  rad force
+----------------------------------------
+  0.1900  azi force
+  0.1900  dens
+  0.1900  dens m=0
+  0.1900  dens m&gt;0
+  0.1900  mer force
+  0.1900  potl
+  0.1900  potl m=0
+  0.1900  potl m&gt;0
+  0.1900  rad force
+----------------------------------------
+  0.2000  azi force
+  0.2000  dens
+  0.2000  dens m=0
+  0.2000  dens m&gt;0
+  0.2000  mer force
+  0.2000  potl
+  0.2000  potl m=0
+  0.2000  potl m&gt;0
+  0.2000  rad force
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_8_1.png" src="../../_images/intro_Tutorials_Part2-Analysis_8_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_8_2.png" src="../../_images/intro_Tutorials_Part2-Analysis_8_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_8_3.png" src="../../_images/intro_Tutorials_Part2-Analysis_8_3.png" />
+</div>
+</div>
+<section id="Using-a-point-mesh-instead-of-a-grid">
+<h3>Using a point mesh instead of a grid<a class="headerlink" href="#Using-a-point-mesh-instead-of-a-grid" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">FieldGenerator</span></code> allows you to specify an array of Cartesian points for field evaluation. This way, you can get creative with geometries and mesh spacing. As an illustration, let us repeat the same renderings using this mesh-point method.</p>
+<p>As a sanity check, let’s do the same plots as the grid example above.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># First, we generate a Cartesian mesh
+xy = np.linspace(-1, 1, 40)
+mesh = np.ndarray((40*40, 3))
+for i in range(40):
+    for j in range(40):
+        mesh[i*40+j, 0] = xy[i]
+        mesh[i*40+j, 1] = xy[j]
+        mesh[i*40+j, 2] = 0.0
+</pre></div>
+</div>
+</div>
+<p>Now that we have the a point set, in a Cartesian grid for this test, generate the points:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fields = pyEXP.field.FieldGenerator(times, mesh)
+
+points = fields.points(basis, coefs)
+
+# Print the potential image at the final time (I think there is a
+# fencepost issue in this grid, no matter).
+x = np.linspace(pmin[0], pmax[0], grid[0])
+y = np.linspace(pmin[1], pmax[1], grid[1])
+xv, yv = np.meshgrid(x, y)
+
+def tomesh(points):
+    ret = np.zeros(xv.shape)
+    print(ret.shape)
+    for i in range(40):
+        for j in range(40):
+            ret[i, j] = points[i*40+j]
+    return ret
+
+# Visualize the final time slice in grid.  Obviously, we could use any
+# field we want.  Here is potential and radial force.
+
+img = tomesh(points[final][&#39;potl&#39;])
+cont1 = plt.contour(xv, yv, img, colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, img)
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Potential at T={}&#39;.format(final))
+plt.show()
+
+img = tomesh(points[final][&#39;rad force&#39;])
+cont1 = plt.contour(xv, yv, img, colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, img)
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Radial force at T={}&#39;.format(final))
+
+img = tomesh(points[final][&#39;dens m&gt;0&#39;])
+cont1 = plt.contour(xv, yv, img, colors=&#39;k&#39;)
+plt.clabel(cont1, fontsize=9, inline=True)
+cont2 = plt.contourf(xv, yv, img)
+plt.colorbar(cont2)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;Density for m&gt;0 at T={}&#39;.format(final))
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(40, 40)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_13_1.png" src="../../_images/intro_Tutorials_Part2-Analysis_13_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(40, 40)
+(40, 40)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.0, &#39;Density for m&gt;0 at T=0.2&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_13_4.png" src="../../_images/intro_Tutorials_Part2-Analysis_13_4.png" />
+</div>
+</div>
+</section>
+<section id="Now,-let's-take-advantage-of-the-unstructured-point-set-for-something-different">
+<h3>Now, let’s take advantage of the unstructured point set for something different<a class="headerlink" href="#Now,-let's-take-advantage-of-the-unstructured-point-set-for-something-different" title="Link to this heading"></a></h3>
+<p>First, let’s make a point set on a spherical surface:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># First, we generate a Cartesian mesh
+phi  = np.linspace(0.0, 2.0*math.pi, 40)
+cost = np.linspace(-1.0, 1.0, 40)
+mesh = np.ndarray((40*40, 3))
+radius = 1.0
+for i in range(40):
+    for j in range(40):
+        sint = np.sqrt(1.0 - cost[j]**2)
+        mesh[i*40+j, 0] = radius*sint*math.cos(phi[i])
+        mesh[i*40+j, 1] = radius*sint*math.sin(phi[i])
+        mesh[i*40+j, 2] = radius*cost[j]
+</pre></div>
+</div>
+</div>
+<p>Generate a new point set for this unstructured grid as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fields = pyEXP.field.FieldGenerator(times, mesh)
+points = fields.points(basis, coefs)
+</pre></div>
+</div>
+</div>
+<p>Now, let’s make a 3d scatter plot with points colored by field values:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fig = plt.figure()
+ax = fig.add_subplot(projection=&#39;3d&#39;)
+
+sc = ax.scatter(mesh[:,0], mesh[:,1], mesh[:,2], c=points[times[-1]][&#39;dens m&gt;0&#39;], marker=&#39;o&#39;, s=5, alpha=0.8)
+
+ax.set_xlabel(&#39;X&#39;)
+ax.set_ylabel(&#39;Y&#39;)
+ax.set_zlabel(&#39;Z&#39;)
+
+plt.colorbar(sc, label=&#39;Asymmetric density&#39;, orientation=&#39;horizontal&#39;)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_19_0.png" src="../../_images/intro_Tutorials_Part2-Analysis_19_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="Using-MSSA">
+<h2>Using MSSA<a class="headerlink" href="#Using-MSSA" title="Link to this heading"></a></h2>
+<p>Generate the initial MSSA analyis and plot the run of eigenvalues</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Make a subkey sequence
+#
+keylst = coefs.makeKeys([2])
+print(&quot;Keys=&quot;, keylst)
+
+name = &#39;dark halo&#39;
+config = {name: (coefs, keylst, [])}
+
+# This is the window length.  The largest meaningful length is half
+# the size of the time series.  We&#39;ll choose that here but it *is*
+# interesting to retry these analyses with different window lengths.
+
+window = int(len(coefs.Times())/2)
+npc = 10
+
+print(&quot;Window={} PC number={}&quot;.format(window, npc))
+
+ssa = pyEXP.mssa.expMSSA(config, window, npc)
+
+ev = ssa.eigenvalues()
+
+plt.plot(ev, &#39;o-&#39;)
+plt.xlabel(&quot;Index&quot;)
+plt.ylabel(&quot;EV&quot;)
+plt.title(&quot;Eigenvalues by index&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Keys= [[2, 0, 0], [2, 0, 1], [2, 0, 2], [2, 0, 3], [2, 0, 4], [2, 0, 5], [2, 0, 6], [2, 0, 7], [2, 0, 8], [2, 0, 9], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, 1, 3], [2, 1, 4], [2, 1, 5], [2, 1, 6], [2, 1, 7], [2, 1, 8], [2, 1, 9], [2, 2, 0], [2, 2, 1], [2, 2, 2], [2, 2, 3], [2, 2, 4], [2, 2, 5], [2, 2, 6], [2, 2, 7], [2, 2, 8], [2, 2, 9]]
+Window=10 PC number=10
+---- Eigen is using 4 threads
+shape U = 500 x 11
+shape Y = 11 x 500
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_21_1.png" src="../../_images/intro_Tutorials_Part2-Analysis_21_1.png" />
+</div>
+</div>
+<section id="Next-plot-the-principle-components.">
+<h3>Next plot the principle components.<a class="headerlink" href="#Next-plot-the-principle-components." title="Link to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>times = coefs.Times();
+pc    = ssa.getPC();
+
+rows, cols = pc.shape
+
+for i in range(cols):
+    plt.plot(times[0:rows], pc[:,i], &#39;-&#39;, label=&quot;{:d}&quot;.format(i))
+
+plt.xlabel(&#39;Time&#39;)
+plt.ylabel(&#39;PC&#39;)
+plt.legend()
+plt.title(&quot;Principal components (left-singular vectors)&quot;)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_23_0.png" src="../../_images/intro_Tutorials_Part2-Analysis_23_0.png" />
+</div>
+</div>
+</section>
+<section id="Now-try-a-reconstruction">
+<h3>Now try a reconstruction<a class="headerlink" href="#Now-try-a-reconstruction" title="Link to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>coefs.zerodata() # &lt;---replace with reconstructed
+ssa.reconstruct([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+newdata = ssa.getReconstructed()
+print(&#39;newdata is a&#39;, type(newdata))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+newdata is a &lt;class &#39;dict&#39;&gt;
+</pre></div></div>
+</div>
+</section>
+<section id="Compute-the-k-means-analysis">
+<h3>Compute the k-means analysis<a class="headerlink" href="#Compute-the-k-means-analysis" title="Link to this heading"></a></h3>
+<p>The k-means partitions n vector observations into k clusters in which each observation belongs to the cluster with the nearest centers while minimizing the variance within each cluster. In this case, the vectors are the full trajectory matrices and the distance is the distance between the trajectory matricies reconstructed from each eigentriple from mSSA. The distance used here is the Frobenius distance or matrix norm distance: the square root of the sum of squares of all elements in the
+difference between two matrices.</p>
+<p>Note: the k-means analysis will use the reconstructions from your last call to <code class="docutils literal notranslate"><span class="pre">reconstruct</span></code>. In this notebook, that would be from the previous cell; the first 10 PCs. The k-means initial cluster selection chooses every second PC by default. This is a good choice for time series representing quasi-periodic motion which generally have pairs of PCs representing the sinusoidal behavior.</p>
+<p>The k-means analysis illustrates the clear patterns in the PCs seen in the plots above: the individual features occur in pairs, dominated by the first two pairs as seen in the eigenvalue plot. This dominant pair is assigned id=0. The next pair is assigned id=1. The rest of the PCs are not particularly correlated and are lumped into id=0.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Print k-means groups, allowing up to 6
+#
+id, dist, tol = ssa.kmeans(clusters=6)
+
+# Print the results
+print(&#39;{:&lt;4s} | {:&lt;4s} | {:&lt;13s}&#39;.format(&#39;PC&#39;, &#39;id&#39;, &#39;distance&#39;))
+print(&#39;{:&lt;4s} | {:&lt;4s} | {:&lt;13s}&#39;.format(&#39;----&#39;, &#39;----&#39;, &#39;--------&#39;))
+for k in range(len(id)):
+    print(&#39;{:&lt;4d} | {:&lt;4d} | {:&lt;13.6e}&#39;.format(k, id[k], dist[k]))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+PC   | id   | distance
+---- | ---- | --------
+0    | 0    | 6.243771e+00
+1    | 0    | 6.243771e+00
+2    | 1    | 4.312612e+00
+3    | 1    | 4.312612e+00
+4    | 2    | 0.000000e+00
+5    | 3    | 2.561358e+00
+6    | 3    | 2.561358e+00
+7    | 4    | 2.330193e+00
+8    | 4    | 2.342835e+00
+9    | 4    | 2.861371e+00
+</pre></div></div>
+</div>
+<p>In this case, k-means identifies 5 groups: 3 pairs and triple. Compare this with the results from the w-correlation matrix in the next section…</p>
+<p>You can see from the PCs themselves, that very few dynamical periods are available for analysis. This simulation is not long enough for a highly signficant cluster analysis.</p>
+</section>
+<section id="Finally-plot-the-w-correlation-matrix">
+<h3>Finally plot the w-correlation matrix<a class="headerlink" href="#Finally-plot-the-w-correlation-matrix" title="Link to this heading"></a></h3>
+<p>This is the sum of the w-correlation matrices for all channels.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mat = ssa.wCorrAll()
+x = plt.pcolormesh(mat)
+plt.title(&quot;All channels&quot;)
+plt.colorbar(x)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_30_0.png" src="../../_images/intro_Tutorials_Part2-Analysis_30_0.png" />
+</div>
+</div>
+<p>One can also look at individual channels.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get and view the w-correlation matrices
+# for each key individually
+#
+for k in keylst:
+    mat = ssa.wCorr(name, k)
+    # Plot it
+    x = plt.pcolormesh(mat)
+    plt.title(&#39;{}: {}&#39;.format(name,k))
+    plt.colorbar(x)
+    plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_0.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_1.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_2.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_2.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_3.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_3.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_4.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_4.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_5.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_5.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_6.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_6.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_7.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_7.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_8.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_8.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_9.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_9.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_10.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_10.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_11.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_11.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_12.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_12.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_13.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_13.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_14.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_14.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_15.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_15.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_16.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_16.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_17.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_17.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_18.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_18.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_19.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_19.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_20.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_20.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_21.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_21.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_22.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_22.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_23.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_23.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_24.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_24.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_25.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_25.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_26.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_26.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_27.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_27.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_28.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_28.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/intro_Tutorials_Part2-Analysis_32_29.png" src="../../_images/intro_Tutorials_Part2-Analysis_32_29.png" />
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="Where-do-you-want-to-go-next?">
+<h2>Where do you want to go next?<a class="headerlink" href="#Where-do-you-want-to-go-next?" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../README.html"><span class="doc">Return to Table of Contents</span></a></p></li>
+<li><p><a class="reference internal" href="Part1-Coefficients.html"><span class="doc">Back to previous notebook</span></a></p></li>
+<li><p><a class="reference internal" href="../Basis/viewing%20a%20basis.html"><span class="doc">Go to next notebook</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Part1-Coefficients.html" class="btn btn-neutral float-left" title="An example of creating coefficients using pyEXP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../EXP-tutorial.html" class="btn btn-neutral float-right" title="EXP Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

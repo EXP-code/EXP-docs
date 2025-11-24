@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation guide &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorials" href="tutorial.html" />
+    <link rel="prev" title="EXP at a glance" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">EXP at a glance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supported-system-versions">Supported system versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-exp-and-or-pyexp">Installing EXP and/or pyEXP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finding-packages">Finding packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-note-on-multiple-builds">A note on multiple builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#essential-build-prerequisites">Essential build prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-update-exp">How to Update EXP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-a-python-virtual-environment-recommended">Using a Python virtual environment (recommended)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#platform-specific-installation-notes">Platform-specific installation notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#docker-setup">Docker Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exp-container-setup">EXP Container Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntu-18-04-and-above">Ubuntu 18.04 and above</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compilers-suites-with-gnu-linux">Compilers suites with GNU/Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux-based-hpc-using-lmod">Linux-based HPC using lmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#some-strange-errors-that-we-ve-seen">Some strange errors that we’ve seen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/intro/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-guide">
+<span id="intro-install"></span><h1>Installation guide<a class="headerlink" href="#installation-guide" title="Link to this heading"></a></h1>
+<div class="admonition note" id="faq-supported-systems">
+<p class="admonition-title">Note</p>
+<p>You may download a Docker container with EXP and pyEXP from the
+Docker Hub and run it immediately with no additional configuration
+needed.  This give you access to both the simulation code, EXP, and
+the Python module, pyEXP using Jupyter Notebooks and Lab in the
+Docker container.</p>
+<p>Super quick start: download <a class="reference external" href="https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox">this Bash script</a>
+and run it.  This will download the Docker image and start a
+Jupyter notebook by default.  Use the <cite>-t</cite> flag for an interactive
+terminal.  Use the <cite>-h</cite> flag for additional options.  For further
+details and links to installing Docker, see <a class="reference external" href="https://github.com/EXP-code/EXP-container/tree/main/Docker">this README</a>.</p>
+<p>Please read on if you would would like to configure and install EXP
+on your native system.</p>
+</div>
+<section id="supported-system-versions">
+<h2>Supported system versions<a class="headerlink" href="#supported-system-versions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>EXP was developed using Debian and Ubuntu GNU-Linux systems but have
+been tested on a wide variety of Linux installs including RedHat and
+CentOS. With a few optional exceptions, it does not use OS specific
+features so we expect little difficulty compiling in any GNU
+environment.</p></li>
+<li><p>EXP has been thoroughly tested with the GNU compiler suite but we
+have verified that it will also compile with recent versions of Clang.</p></li>
+<li><p>Native support for MacOS is in progress, so please stay tuned.</p></li>
+<li><p>The code includes a GPU implementation for adaptive basis force
+evaluation using NVidia’s Cuda system.  This is optional and not
+needed for pyEXP although we plan to implement a Cuda-aware pyEXP at
+some point.</p></li>
+<li><p>pyEXP requires <a class="reference external" href="https://www.python.org/">Python</a> 3.x as part of the internal pybind11
+implementation.</p></li>
+</ul>
+</section>
+<section id="installing-exp-and-or-pyexp">
+<span id="intro-install-exp"></span><h2>Installing EXP and/or pyEXP<a class="headerlink" href="#installing-exp-and-or-pyexp" title="Link to this heading"></a></h2>
+<p id="index-0">EXP and pyEXP are configured using CMake, a configuration system
+widely used in HPC environments.  CMake will attempt to locate all
+necessary dependencies.  pybind11, the C++ YAML support library
+(yaml-cpp) and the HDF5 C++ wrappers (HighFive) are provided as git
+submodules.  Be sure to initialize them after your first <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>
+using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</pre></div>
+</div>
+<p id="index-1">A typical CMake invocation begins by making a build directory.  We
+will build out of source but the build directory may be in the source
+tree or outside the source tree.  Your choice.  I tend to do this
+inside the source tree myself, e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>build<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<p>This allows one to have build various versions available from the same
+source, such as Release and Debug.</p>
+<p id="index-2">You may need to adjust the cmake call below.  Besides Cuda, make
+sure that the Eigen3_DIR is set to the install location so CMake can
+find the Eigen3 rules.</p>
+<p>The install location will need to be changed in the example below.
+E.g. I would use <code class="docutils literal notranslate"><span class="pre">-DCMAKE_INSTALL_PREFIX=/home/mdw_umass_edu</span></code> on the
+UMass Unity cluster.</p>
+</section>
+<section id="features">
+<span id="compile-features"></span><h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<p>There are various features options.  A subset of user modules are ON
+by default.  The important ones are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE_NBODY</span></code> compiles the n-body code.  If you are only
+interested in pyEXP, use <code class="docutils literal notranslate"><span class="pre">-DENABLE_NBODY=NO</span></code>.   ON by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE_PYEXP</span></code> compiles the Python bindings.  Similarly, if this
+is what you want, use <code class="docutils literal notranslate"><span class="pre">-DENABLE_PYEXP=YES</span></code>.  OFF by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE_CUDA</span></code> set to TRUE will will compile EXP with NVidia GPU
+support of the Cuda SDK is found.  OFF by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE_USER</span></code> compiles a common subset user modules for the n-body
+code and these are ON by default.  These will only be built if
+<code class="docutils literal notranslate"><span class="pre">ENABLE_NBODY</span></code> is ON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE_USER_ALL</span></code> compiles all the user modules.  OFF by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BUILD_DOCS</span></code> builds the <a class="reference external" href="https://www.doxygen.nl/">Doxygen</a> web-based documentation viewer.
+This requires Doxygen on your system and is OFF by default.  Doxygen
+is not required.</p></li>
+</ul>
+</section>
+<section id="finding-packages">
+<span id="index-3"></span><h2>Finding packages<a class="headerlink" href="#finding-packages" title="Link to this heading"></a></h2>
+<p>CMake will do its best to find your FFTW package by default.  If
+that fails, and if you need or want FFTW and your FFTW is installed
+in an unusual location, you can define that location using
+<code class="docutils literal notranslate"><span class="pre">-DFFTW_ROOT=/path/to/fftw/location</span></code>.  Or you can provide the
+location in the <code class="docutils literal notranslate"><span class="pre">FFTWDIR</span></code> environment variable.</p>
+<p>A typical CMake build invocation without Cuda is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DENABLE_USER<span class="o">=</span>YES<span class="w"> </span>-DEigen3_DIR<span class="o">=</span><span class="nv">$EIGEN_BASE</span>/share/eigen3/cmake<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="nv">$HOME</span><span class="w"> </span>-Wno-dev<span class="w"> </span>..
+</pre></div>
+</div>
+<p>A typical invocation with Cuda is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCUDA_USE_STATIC_CUDA_RUNTIME<span class="o">=</span>off<span class="w"> </span>-DENABLE_CUDA<span class="o">=</span>YES<span class="w"> </span>-DENABLE_USER<span class="o">=</span>YES<span class="w"> </span>-DEigen3_DIR<span class="o">=</span><span class="nv">$EIGEN_BASE</span>/share/eigen3/cmake<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="nv">$HOME</span><span class="w"> </span>-Wno-dev<span class="w"> </span>..
+</pre></div>
+</div>
+<p>-DCMAKE_INSTALL_PREFIX’ sets the installation path to the user’s home directory.
+Feel free to change this to any directory you own, for example, /path/to/directory/.local. Alternatively, you can omit -DCMAKE_INSTALL_PREIFX to use the default /usr/local path and install EXP with system privileges (e.g. sudo).</p>
+<p>Some installations provide an EIGEN_BASE environment variable that
+locates the install directory that contains ‘include’ and ‘share’.
+Alternatively, replace EIGEN_BASE with that path or set EIGEN_BASE
+manually.</p>
+<p>Many users will like configuring with one of the CMake gui tools, such as
+<code class="docutils literal notranslate"><span class="pre">ccmake</span></code> or <code class="docutils literal notranslate"><span class="pre">cmake-gui</span></code> instead of the command-line <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.  The
+gui will allow you to change the parameters interactively and display the
+help info for each parameter.  For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ccmake<span class="w"> </span>..
+</pre></div>
+</div>
+<p>and then enter your preferred build type and other options
+interactively.  This provides a nice view of the configuration as a
+bonus.  I recommend <code class="docutils literal notranslate"><span class="pre">ccmake</span></code> rather than the Qt <code class="docutils literal notranslate"><span class="pre">cmake-gui</span></code> but
+this is personal preference.</p>
+<p>You can use CMake build type Debug for debugging and etc. or use None or
+empty and set your own <code class="docutils literal notranslate"><span class="pre">CFLAGS</span></code> and <code class="docutils literal notranslate"><span class="pre">CXXFLAGS</span></code>.  See the CMake manual.</p>
+<p>Finally, you are ready to make the package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span>N
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">N</span></code> is the number of jobs to run
+simultaneously.  I often use N=2*&lt;number of cores&gt; to take advantage
+of hyperthreading</p>
+<p>Finally, install to the target location.  You can select the target
+install location using the <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> variable in CMake:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="a-note-on-multiple-builds">
+<h2>A note on multiple builds<a class="headerlink" href="#a-note-on-multiple-builds" title="Link to this heading"></a></h2>
+<p>CMake workflow is designed to permit multiple build types
+(e.g. Debug, Release) in separate directories with the same source.
+However, EXP generates a ‘config.h’ based on the available
+packages. For example, if you want to generate a build hierarchy
+like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>build/
+build/debug
+build/release
+</pre></div>
+</div>
+<p>with the different build types alone, the multiple build strategy will
+work perfectly.  However, if Cuda is enabled in one build and not the
+other, you will need to manually delete the top-level config.h when
+changing build directories.  This will trigger a full recompile.</p>
+</section>
+<section id="essential-build-prerequisites">
+<h2>Essential build prerequisites<a class="headerlink" href="#essential-build-prerequisites" title="Link to this heading"></a></h2>
+<p>EXP requires C++-17 features and has been tested with GCC and Clang.
+EXP depends on a few key C++ packages that are common in HPC
+environements. The first four must be provided by your system or
+loadable modules.  The last two, <cite>HighFive</cite> and <cite>libyaml-cpp</cite> are
+download and configured by <cite>git submodule</cite> command.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="http://fftw.org">FFTW</a>, an efficient Fast-Fourier Transform implementation</p></li>
+<li><p><a class="reference external" href="https://www.open-mpi.org/">OpenMPI</a>, a modern MPI-2/3 implementation.  Other implementation
+(e.g MPICH) should also work but we have not verified them
+recently.</p></li>
+<li><p><a class="reference external" href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a>, an implementation of the HDF5 standard as provided by the
+HDF5 consortium.  We use the HighFive C++ header-only interface
+with the C-API.</p></li>
+<li><p><a class="reference external" href="https://eigen.tuxfamily.org/">Eigen3</a>, a suite of vector/matrix classes along with standard
+linear algebra and eigen problem solvers.</p></li>
+<li><p><a class="reference external" href="https://github.com/BlueBrain/HighFive">HighFive</a>, a header-only C++ API for HDF5 used by EXP as provided
+as a git submodule.</p></li>
+<li><p><a class="reference external" href="https://github.com/jasonjei/libyaml-cpp">libyaml-cpp</a>, a C++ library implementing YAML reading, parsing
+and emitting.  Also provided as a git submodule.</p></li>
+</ol>
+<p>Some of these packages might require additional installation steps
+depending on your platform.  Please check <a class="reference internal" href="#intro-install-platform-notes"><span class="std std-ref">platform-specific
+guides below</span></a>.</p>
+<p>In case of any trouble related to these dependencies,
+please refer to their respective installation instructions.</p>
+<section id="how-to-update-exp">
+<h3>How to Update EXP<a class="headerlink" href="#how-to-update-exp" title="Link to this heading"></a></h3>
+<p>To update your build of EXP, go to whichever directory EXP lives in and enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>
+to retrieve the latest version of the code. Change in to your build directory
+(if your setup matches that of the installation instructions, this would be <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">build</span></code>). Enter <code class="docutils literal notranslate"><span class="pre">make</span></code>, then <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>
+once <code class="docutils literal notranslate"><span class="pre">make</span></code> finishes.</p>
+</section>
+<section id="using-a-python-virtual-environment-recommended">
+<span id="intro-using-virtualenv"></span><h3>Using a Python virtual environment (recommended)<a class="headerlink" href="#using-a-python-virtual-environment-recommended" title="Link to this heading"></a></h3>
+<div class="admonition note" id="index-5">
+<span id="index-4"></span><p class="admonition-title">Note</p>
+<p>TL;DR: We recommend installing pyEXP inside a virtual environment
+on all platforms that use <code class="docutils literal notranslate"><span class="pre">lmod</span> <span class="pre">modules</span></code>.</p>
+</div>
+<p>Python packages can be installed either globally (a.k.a system wide),
+or in user-space.</p>
+<p>Instead, we recommend that you install EXP within a so-called “virtual
+environment” (<code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code>).  Virtual environments allow you to not
+conflict with already-installed Python system packages (which could
+break some of your system tools and scripts), and still install
+packages normally with <code class="docutils literal notranslate"><span class="pre">pip</span></code> (without <code class="docutils literal notranslate"><span class="pre">sudo</span></code> or obtaining root
+privileges in some other way).</p>
+<p>For example, assume that you have loaded a Python module or wish to
+use the current Python version in your executable path.  An example
+virtual environment installation is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/venv/python9
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/venv/python9/activate
+</pre></div>
+</div>
+<p>This creates and activates the virtual Python environments.  I called
+my virtual environment <code class="docutils literal notranslate"><span class="pre">python9</span></code> to distinguish it from a venv that
+might be installed for some other reason.</p>
+<p>Now, you can then install your favorite Python modules using <code class="docutils literal notranslate"><span class="pre">pip</span></code>
+as usual.  For example, you will need <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and you may want
+<code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.  Similarly, for using MPI-aware Python scripts you will
+need <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>.  After activating your virtual environment, you can
+install those with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>matplotlib<span class="w"> </span>mpi4py
+</pre></div>
+</div>
+<p id="index-6">Once you have created a virtual environment, you can copy or link the
+shared library to your site-packages directory. The actual name
+depends on your build environment.  For example, in Ubuntu 22.04 using
+Python3.9, the library is called
+<code class="docutils literal notranslate"><span class="pre">pyEXP.cpython-309-x86_64-linux-gnu.so</span></code>.  In this same case, this
+would be copied to <code class="docutils literal notranslate"><span class="pre">~/venv/python9/lib/python3.9/site-packages</span></code>.
+(See <a class="reference internal" href="#intro-install-platform-notes"><span class="std std-ref">platform-specific guides</span></a>
+below for known dependencies that you may need to install beforehand).</p>
+</section>
+</section>
+<section id="platform-specific-installation-notes">
+<span id="intro-install-platform-notes"></span><h2>Platform-specific installation notes<a class="headerlink" href="#platform-specific-installation-notes" title="Link to this heading"></a></h2>
+<section id="windows">
+<span id="intro-install-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<section id="docker-setup">
+<h4>Docker Setup<a class="headerlink" href="#docker-setup" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p>Check whether you have Windows System Linux (WSL) installed on your computer. If you do, check that Ubuntu is installed and/or you can run bash commands. (You can check this by running <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">-v</span></code> and making sure you don’t get an error). If that works, skip to Step 4.</p></li>
+<li><p>If you don’t have WSL with a working Linux installation, you need to install WSL. To do this, open a Command Prompt and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wsl<span class="w"> </span>--install
+</pre></div>
+</div>
+<p><strong>Note:</strong> By default, this installs WSL2 and Ubuntu, but you can customize that with the instructions <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">here</a>.</p>
+</li>
+<li><p>Once WSL is installed, it will prompt you to set a username and password for your WSL Linux “machine.”</p></li>
+<li><p>Now, install Docker Desktop from the following link: <a class="reference external" href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</a></p>
+<p><strong>Note:</strong> When you open up the Desktop app, it will prompt you to make a Docker account. When starting Docker Desktop, it will ask you to sign in with your account. You can choose to skip this. If you do make an account, occasionally, even after you sign in, it will stay on the sign-in screen. Click the skip button, and it should show that you are signed in.</p>
+</li>
+<li><p>Install the Windows Terminal program either from the Microsoft Store or via this <a class="reference external" href="https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&amp;hl=en-us&amp;gl=US">link</a>.</p></li>
+<li><p>Open up the Windows Terminal and use the down arrow along the top bar of the window to open an Ubuntu terminal (or use the shortcut Ctrl+Shift+5).</p></li>
+<li><p>Now you need to add your username to the docker group. To do so, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</li>
+<li><p>You will need to enter your Ubuntu password.</p></li>
+<li><p>Check that your username was added to the docker group by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>docker<span class="w"> </span>/etc/group
+</pre></div>
+</div>
+</li>
+<li><p>You should get something like <code class="docutils literal notranslate"><span class="pre">docker:x:1001:username</span></code>, though the number may be different.</p></li>
+<li><p>Run the following command so that when you log in you will always be part of the <code class="docutils literal notranslate"><span class="pre">docker</span></code> group:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>newgrp<span class="w"> </span>docker
+</pre></div>
+</div>
+</li>
+<li><p>Logout of the terminal tab with <code class="docutils literal notranslate"><span class="pre">logout</span></code> and open up a new Ubuntu terminal.</p></li>
+</ol>
+</section>
+<section id="exp-container-setup">
+<h4>EXP Container Setup<a class="headerlink" href="#exp-container-setup" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p>Download the expbox container script from <a class="reference external" href="https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox">https://github.com/EXP-code/EXP-container/blob/main/Docker/expbox</a> and put it in the desired folder you want it to live in (e.g., your working directory for EXP stuff). If you want to put it in part of the WSL/Ubuntu area, you can follow the instructions on how to access it <a class="reference external" href="https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/">here</a>.</p></li>
+<li><p>Now, we need to get the EXP image. In an Ubuntu terminal, pull the most updated image with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>the9cat/exp
+</pre></div>
+</div>
+<p>Navigate to where you placed your expbox script. If you placed it in the WSL file area, you can navigate to it like you are using a Linux machine. More likely, though, you put it somewhere on your C: drive. You can navigate there via:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/mnt/c/Users/username/path/to/directory/with/expbox/script
+</pre></div>
+</div>
+</li>
+<li><p>Make sure your Docker Desktop is running in the background. We can now run the expbox script.</p>
+<p>If your script is in your <strong>WSL folders</strong>, you can execute it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./expbox
+</pre></div>
+</div>
+<p>If your script is on your <strong>C: drive</strong>, you will need to specify your working directory, otherwise the script will default to your Ubuntu home directory (even if you navigated to where your expbox folder is). You can do so with the <code class="docutils literal notranslate"><span class="pre">-d</span></code> flag, i.e.,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./expbox<span class="w"> </span>-d<span class="w"> </span>/mnt/c/Users/username/path/to/working/directory
+</pre></div>
+</div>
+<p>You can see other flags for customization by calling <code class="docutils literal notranslate"><span class="pre">/.expbox</span> <span class="pre">-h</span></code></p>
+</li>
+<li><p>Your terminal tab will give you links to access the Jupyter server. You can copy and paste them into your browser, or open them directly from the terminal window by holding down Ctrl and clicking on one of the links.</p></li>
+</ol>
+</section>
+</section>
+<section id="ubuntu-18-04-and-above">
+<span id="intro-install-ubuntu"></span><h3>Ubuntu 18.04 and above<a class="headerlink" href="#ubuntu-18-04-and-above" title="Link to this heading"></a></h3>
+<p>EXP has been currently developed under Ubuntu for 10 years and Debian
+before that.  It currently requires the C++-17 language features and
+has been thoroughly tested with recent versions of Ubuntu.  A typical
+recipe to install packages might be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libeigen3-dev<span class="w"> </span>libopenmpi-dev<span class="w"> </span>libhdf5-dev<span class="w"> </span>libfftw3-dev
+$<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpng-dev<span class="w"> </span>libvtk7-dev<span class="w"> </span>libtirpc-dev<span class="w"> </span>doxygen
+$<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cuda-toolkit-11.7
+</pre></div>
+</div>
+<p>where the first line is required, the second line is optional, and the
+third line is necessary only if you want to build Cuda support for
+EXP.</p>
+</section>
+<section id="compilers-suites-with-gnu-linux">
+<h3>Compilers suites with GNU/Linux<a class="headerlink" href="#compilers-suites-with-gnu-linux" title="Link to this heading"></a></h3>
+<p>Most Linux distributions using the GNU gcc-suite compilers and these
+have been heavily tested.  If you are using Linux, you will get
+<em>gcc/g++/gfortran</em> by default.</p>
+<p>However, we have tested both the Intel and LLVM suites as well at
+various time.  We have had difficulty with the newer <em>Intel oneAPI</em>
+release but most of the issues were incompatibilities or missing
+packages and should be fixable by compiling the missing packages and
+libraries.</p>
+<p>The most recent versions of <em>clang</em> use a C++ standard library ABI
+that is incompatible with the GNU <cite>libstdc++</cite> ABI. EXP uses the HDF5
+C++ libraries.  Therefore, you will need to compile the HDF5
+development package yourself with <em>clang</em> to build EXP with <em>clang</em>.
+This is not difficult and we have confirmed that it works.  We downloaded
+and built the <a class="reference external" href="https://portal.hdfgroup.org/display/support/Download+HDF5">HDF5 source</a> for
+version 1.10.9.  Other stable versions should work, too.</p>
+</section>
+<section id="linux-based-hpc-using-lmod">
+<h3>Linux-based HPC using lmod<a class="headerlink" href="#linux-based-hpc-using-lmod" title="Link to this heading"></a></h3>
+<p>Every HPC center names their modules differently.  A typical recipe to
+install modules might be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>openmpi<span class="w"> </span>gcc<span class="w"> </span>cmake<span class="w"> </span>fftw<span class="w"> </span>cuda<span class="w"> </span>hdf5<span class="w"> </span>python3<span class="w"> </span>vtk<span class="w"> </span>eigen<span class="w"> </span>slurm<span class="w"> </span>openblas
+</pre></div>
+</div>
+<p>Although no specific versions were specified in the command, we
+recommend being specific by version.  E.g. <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span>
+<span class="pre">gcc/11.3.0</span></code> to get a specific release instead of simply <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span>
+<span class="pre">gcc</span></code> that may be an older system default.  I recommend examining the
+available modules using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> and pick recent versions of
+the packages.  Many HPC centers have older ones for backward
+compatibility.</p>
+<p>Once you have a good build, save your module set using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">save</span>
+<span class="pre">EXP</span></code> and restore it before running using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">restore</span> <span class="pre">EXP</span></code>.</p>
+</section>
+<section id="macos">
+<span id="intro-install-macos"></span><h3>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h3>
+<p>Work in progress.</p>
+</section>
+</section>
+<section id="troubleshooting">
+<span id="intro-install-troubleshooting"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="some-strange-errors-that-we-ve-seen">
+<h3>Some strange errors that we’ve seen<a class="headerlink" href="#some-strange-errors-that-we-ve-seen" title="Link to this heading"></a></h3>
+<p>Provide a fix or suggestion.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="EXP at a glance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

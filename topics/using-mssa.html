@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to use mSSA with your coefficient series in pyEXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generating orbits in your BFE potential fields" href="orbits.html" />
+    <link rel="prev" title="Making movies of your BFE field quantities" href="make-movies.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to use mSSA with your coefficient series in pyEXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#switch-to-the-working-directory">Switch to the working directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-the-exp-config-files-and-generate-the-bases">Read the EXP config files and generate the bases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#read-the-coefficients-and-generate-mssa-files">Read the coefficients and generate MSSA files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plot-the-eigenvalues">Plot the eigenvalues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lets-look-at-some-pcs">Let’s look at some PCs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#check-by-making-some-surface-renderings">Check by making some surface renderings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#okay-now-make-a-movie">Okay, now make a movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-mp4-file-from-the-frames-using-ffmpeg">Make a mp4 file from the frames using ffmpeg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to use mSSA with your coefficient series in pyEXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/using-mssa.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-use-mssa-with-your-coefficient-series-in-pyexp">
+<span id="using-mssa"></span><h1>How to use mSSA with your coefficient series in pyEXP<a class="headerlink" href="#how-to-use-mssa-with-your-coefficient-series-in-pyexp" title="Link to this heading"></a></h1>
+<p>There are a number of examples, tutorials, and how-to code and Jupyter notebooks
+for getting started with mSSA on the <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples/tree/main">GitHub</a> .
+Here we provide an example of running mSSA, plotting the eigenvalues and principal components (PCs),
+and reconstructing the bases.</p>
+<p>Begin with the usual imports</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyEXP</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">ticker</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os.path</span><span class="w"> </span><span class="kn">import</span> <span class="n">exists</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="switch-to-the-working-directory">
+<h2>Switch to the working directory<a class="headerlink" href="#switch-to-the-working-directory" title="Link to this heading"></a></h2>
+<p>I like to be explicit about my working directory but you don’t need to
+do this here. It would be sufficient to simply pass the full path to the
+coefficient factory below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># os.chdir(&#39;/data/Nbody/Run101&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="read-the-exp-config-files-and-generate-the-bases">
+<h2>Read the EXP config files and generate the bases<a class="headerlink" href="#read-the-exp-config-files-and-generate-the-bases" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the basis info from the EXP file</span>
+<span class="c1">#</span>
+<span class="n">exp_config</span> <span class="o">=</span> <span class="s1">&#39;step3_try25.yml&#39;</span>
+<span class="n">stride</span>     <span class="o">=</span> <span class="mi">2</span> <span class="c1">#stride length</span>
+<span class="n">npc</span>        <span class="o">=</span> <span class="mi">40</span> <span class="c1">#number of principal components (PCs)</span>
+<span class="n">size</span>       <span class="o">=</span> <span class="mf">0.05</span> <span class="c1">#min/max of x, y axes for later plotting</span>
+<span class="n">npix</span>       <span class="o">=</span> <span class="mi">50</span> <span class="c1">#number of pixels in grid for later plotting</span>
+
+<span class="c1"># Open and read the EXP yaml file.  Get the runtag. Create the bases</span>
+<span class="c1"># and construct coefficient file names</span>
+<span class="c1">#</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">basis</span>  <span class="o">=</span> <span class="p">{}</span>
+<span class="n">fcoef</span>  <span class="o">=</span> <span class="p">{}</span>
+<span class="n">runtag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exp_config</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">yaml_db</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+
+    <span class="c1"># Get the runtag</span>
+    <span class="c1">#</span>
+    <span class="n">runtag</span> <span class="o">=</span> <span class="n">yaml_db</span><span class="p">[</span><span class="s1">&#39;Global&#39;</span><span class="p">][</span><span class="s1">&#39;runtag&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Runtag from </span><span class="si">{}</span><span class="s2"> is: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp_config</span><span class="p">,</span> <span class="n">runtag</span><span class="p">))</span>
+
+
+    <span class="c1"># Grab YAML force stanzas for all components</span>
+    <span class="c1">#</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">yaml_db</span><span class="p">[</span><span class="s1">&#39;Components&#39;</span><span class="p">]:</span>
+        <span class="n">comp</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+        <span class="n">config</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;force&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Construct the basis instance</span>
+        <span class="c1">#</span>
+        <span class="n">basis</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">Basis</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">comp</span><span class="p">])</span>
+
+        <span class="c1"># Get the coefficient files</span>
+        <span class="n">fcoef</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;outcoef.</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">.h5&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">runtag</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Coef file is:&quot;</span><span class="p">,</span> <span class="n">fcoef</span><span class="p">[</span><span class="n">comp</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Runtag from step3_try25.yml is: run45_3
+
+Coef file is: outcoef.dark.run45_3.h5
+---- SLGridSph::write_cached_table: done!!
+---- EmpCylSL::cache_grid: file read successfully
+---- EmpCylSL::read_cache: table forwarded to all processes
+
+Coef file is: outcoef.star.run45_3.h5
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SLGridSph</span><span class="p">:</span> <span class="n">opened</span> <span class="o">&lt;.</span><span class="n">slgrid_sph_cache</span><span class="o">&gt;</span>
+<span class="n">Slave</span>    <span class="mi">0</span><span class="p">:</span> <span class="n">tables</span> <span class="n">allocated</span><span class="p">,</span> <span class="n">MMAX</span><span class="o">=</span><span class="mi">6</span>
+</pre></div>
+</div>
+<section id="read-the-coefficients-and-generate-mssa-files">
+<h3>Read the coefficients and generate MSSA files<a class="headerlink" href="#read-the-coefficients-and-generate-mssa-files" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just do star component for now</span>
+<span class="c1">#</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="s1">&#39;star&#39;</span>
+
+<span class="n">coefs0</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">coefs</span><span class="o">.</span><span class="n">Coefs</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="n">fcoef</span><span class="p">[</span><span class="n">comp</span><span class="p">],</span> <span class="n">stride</span><span class="o">=</span><span class="n">stride</span><span class="p">)</span>
+<span class="n">coefs</span>  <span class="o">=</span> <span class="n">coefs0</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">()</span>
+
+<span class="c1"># Make some custom [m, n] pairs</span>
+<span class="n">keylst</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+    <span class="n">keylst</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">makeKeys</span><span class="p">([</span><span class="n">m</span><span class="p">])</span>
+
+
+<span class="n">ssa</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ev</span>  <span class="o">=</span> <span class="p">{}</span>
+<span class="n">cum</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">totPow</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+
+    <span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="n">coefs</span><span class="o">.</span><span class="n">getName</span><span class="p">():</span> <span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">keylst</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="p">[])}</span>
+
+    <span class="n">window</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Make some parameter flags as YAML.  The defaults should work fine</span>
+<span class="c1"># for most people.</span>
+<span class="c1"># totPow = True, detrend according to the total power</span>
+<span class="c1"># noMean = True, do not subtract the mean when reading in channels</span>
+<span class="c1"># (noMean = True is valid only for totPow detrending method)</span>
+<span class="c1"># RedSym = True, use the randomized symmetric eigenvalue solver</span>
+<span class="c1"># (RedSym) rather than RedSVD. This toggle is mainly for checking</span>
+<span class="c1"># the accuracy of the default randomized matrix methods</span>
+
+    <span class="n">flags</span> <span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">---</span>
+<span class="s2">RedSym : true</span>
+<span class="s2"># totPow : true</span>
+<span class="s2"># noMean : true</span>
+<span class="s2">...</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Window=</span><span class="si">{}</span><span class="s2"> PC number=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">npc</span><span class="p">))</span>
+
+    <span class="n">startTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">mssa</span><span class="o">.</span><span class="n">expMSSA</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">npc</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">runtag</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="o">+</span><span class="s2">&quot;_mssa.h5&quot;</span><span class="p">):</span>
+        <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">restoreState</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">totPow</span> <span class="o">+=</span> <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">getTotPow</span><span class="p">()</span>
+    <span class="n">ev</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">()</span>
+    <span class="n">cum</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">cumulative</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="o">+</span><span class="s2">&quot;_mssa.h5&quot;</span><span class="p">):</span>
+        <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">saveState</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computed eigenvalues in </span><span class="si">{:6.2f}</span><span class="s1"> seconds&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">Window</span><span class="o">=</span><span class="mi">750</span> <span class="n">PC</span> <span class="n">number</span><span class="o">=</span><span class="mi">40</span>
+</pre></div>
+</div>
+</section>
+<section id="plot-the-eigenvalues">
+<h3>Plot the eigenvalues<a class="headerlink" href="#plot-the-eigenvalues" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a plot of the eigenvalues</span>
+<span class="c1">#</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">ev</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eigenvalue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/disk_mssa_9_0.png" src="../_images/disk_mssa_9_0.png" />
+</section>
+<section id="lets-look-at-some-pcs">
+<h3>Let’s look at some PCs<a class="headerlink" href="#lets-look-at-some-pcs" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]:</span>
+    <span class="n">pcs</span> <span class="o">=</span> <span class="n">ssa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">getPC</span><span class="p">()</span>
+    <span class="n">ntim</span> <span class="o">=</span> <span class="n">pcs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="n">ntim</span><span class="p">],</span> <span class="n">pcs</span><span class="p">[:,</span><span class="n">n</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;lag time&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;pc&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;m=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/disk_mssa_11_0.png" src="../_images/disk_mssa_11_0.png" />
+<img alt="../_images/disk_mssa_11_1.png" src="../_images/disk_mssa_11_1.png" />
+<img alt="../_images/disk_mssa_11_2.png" src="../_images/disk_mssa_11_2.png" />
+<img alt="../_images/disk_mssa_11_3.png" src="../_images/disk_mssa_11_3.png" />
+<img alt="../_images/disk_mssa_11_4.png" src="../_images/disk_mssa_11_4.png" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># try a reconstruction using m = 2 and eigenvalues 0 - 3</span>
+<span class="n">ssa</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">reconstruct</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># zero all but the reconstructed</span>
+<span class="n">coefs</span><span class="o">.</span><span class="n">zerodata</span><span class="p">()</span>
+<span class="n">ssa</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">getReconstructed</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1501</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="check-by-making-some-surface-renderings">
+<h2>Check by making some surface renderings<a class="headerlink" href="#check-by-making-some-surface-renderings" title="Link to this heading"></a></h2>
+<p>Uses the final time slice but you could easily loop through all of them
+to make a movie, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the coefficients by the factory method</span>
+<span class="c1">#</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The coefficient time list is </span><span class="si">{}</span><span class="s1"> slices in [</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()),</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1">#</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">pmin</span>  <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">pmax</span>  <span class="o">=</span> <span class="p">[</span> <span class="n">size</span><span class="p">,</span>  <span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">grid</span>  <span class="o">=</span> <span class="p">[</span>  <span class="n">npix</span><span class="p">,</span> <span class="n">npix</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Creating surfaces with times:&#39;</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">FieldGenerator</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created fields instance&#39;</span><span class="p">)</span>
+
+<span class="c1">#note - the &#39;coefs&#39; here is the reconstruction!</span>
+<span class="n">surfaces</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">slices</span><span class="p">(</span><span class="n">basis</span><span class="p">[</span><span class="n">comp</span><span class="p">],</span> <span class="n">coefs</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created surfaces&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We now have the following [time field] pairs&quot;</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:8.4f}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">))</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">v</span>
+
+<span class="c1"># Print the potential image at the final time</span>
+<span class="c1">#</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ny</span><span class="p">)</span>
+<span class="n">xv</span><span class="p">,</span> <span class="n">yv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># for log scale, uncomment below</span>
+<span class="c1"># cont1 = plt.contour(xv, yv, surfaces[final][&#39;d&#39;].transpose(), colors=&#39;k&#39;, locator=ticker.LogLocator())</span>
+<span class="n">cont1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cont1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># for log scale, uncomment below</span>
+<span class="c1"># cont2 = plt.contourf(xv, yv, surfaces[final][&#39;d&#39;].transpose(), locator=ticker.LogLocator())</span>
+<span class="n">cont2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Density at T=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">cont1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cont1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cont2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;d1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Nonaxisymmetric density at T=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">cont1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;fr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cont1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cont2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;fr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Radial force at T=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">cont1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;ft&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cont1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cont2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">final</span><span class="p">][</span><span class="s1">&#39;ft&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Vertical force at T=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">coefficient</span> <span class="n">time</span> <span class="nb">list</span> <span class="ow">is</span> <span class="p">{}</span> <span class="n">slices</span> <span class="ow">in</span> <span class="p">[{},</span> <span class="p">{}]</span> <span class="mi">1501</span> <span class="mf">0.0</span> <span class="mf">5.998</span>
+<span class="n">Creating</span> <span class="n">surfaces</span> <span class="k">with</span> <span class="n">times</span><span class="p">:</span> <span class="p">[</span><span class="mf">5.994</span><span class="p">]</span>
+<span class="n">Created</span> <span class="n">fields</span> <span class="n">instance</span>
+<span class="n">Created</span> <span class="n">surfaces</span>
+<span class="n">We</span> <span class="n">now</span> <span class="n">have</span> <span class="n">the</span> <span class="n">following</span> <span class="p">[</span><span class="n">time</span> <span class="n">field</span><span class="p">]</span> <span class="n">pairs</span>
+<span class="o">----------------------------------------</span>
+  <span class="mf">5.9940</span>  <span class="n">d</span>
+  <span class="mf">5.9940</span>  <span class="n">d0</span>
+  <span class="mf">5.9940</span>  <span class="n">d1</span>
+  <span class="mf">5.9940</span>  <span class="n">dd</span>
+  <span class="mf">5.9940</span>  <span class="n">fp</span>
+  <span class="mf">5.9940</span>  <span class="n">fr</span>
+  <span class="mf">5.9940</span>  <span class="n">ft</span>
+  <span class="mf">5.9940</span>  <span class="n">p</span>
+  <span class="mf">5.9940</span>  <span class="n">p0</span>
+  <span class="mf">5.9940</span>  <span class="n">p1</span>
+</pre></div>
+</div>
+<img alt="../_images/disk_mssa_15_1.png" src="../_images/disk_mssa_15_1.png" />
+<img alt="../_images/disk_mssa_15_2.png" src="../_images/disk_mssa_15_2.png" />
+<img alt="../_images/disk_mssa_15_3.png" src="../_images/disk_mssa_15_3.png" />
+<img alt="../_images/disk_mssa_15_4.png" src="../_images/disk_mssa_15_4.png" />
+<section id="okay-now-make-a-movie">
+<h3>Okay, now make a movie<a class="headerlink" href="#okay-now-make-a-movie" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">size</span>  <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">npix</span>  <span class="o">=</span> <span class="mi">50</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">Times</span><span class="p">()</span>
+<span class="n">pmin</span>  <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">pmax</span>  <span class="o">=</span> <span class="p">[</span> <span class="n">size</span><span class="p">,</span>  <span class="n">size</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">grid</span>  <span class="o">=</span> <span class="p">[</span> <span class="n">npix</span><span class="p">,</span>  <span class="n">npix</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="n">pyEXP</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">FieldGenerator</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created fields instance&#39;</span><span class="p">)</span>
+
+<span class="n">surfaces</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">slices</span><span class="p">(</span><span class="n">basis</span><span class="p">[</span><span class="n">comp</span><span class="p">],</span> <span class="n">coefs</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the shape</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">surfaces</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Make the mesh</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pmax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ny</span><span class="p">)</span>
+<span class="n">xv</span><span class="p">,</span> <span class="n">yv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">})</span>
+
+<span class="c1"># Fix the contour levels to prevent jitter in the movie (linear scaling)</span>
+<span class="n">mval</span> <span class="o">=</span> <span class="mf">200.0</span>
+<span class="n">cbar1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">mval</span><span class="p">,</span> <span class="n">mval</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">)</span>
+<span class="n">cbar2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">mval</span><span class="p">,</span> <span class="n">mval</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">)</span>
+
+<span class="c1"># Frame counter</span>
+<span class="n">icnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">colormaps</span><span class="p">[</span><span class="s1">&#39;viridis&#39;</span><span class="p">])</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">cmap</span><span class="o">.</span><span class="n">N</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Iterate through the keys</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+    <span class="n">mat</span> <span class="o">=</span> <span class="n">surfaces</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+    <span class="c1">#for i in range(mat.shape[0]):</span>
+     <span class="c1">#   for j in range(mat.shape[1]):</span>
+      <span class="c1">#      if mat[i, j] &lt; 1.0: mat[i, j] = 1.0</span>
+       <span class="c1">#     if mat[i, j] &gt; 10000.0: mat[i, j] = 10000.0</span>
+
+    <span class="n">cont1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">cbar2</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="c1"># You can label the contours inline by uncommenting the next two lines...</span>
+    <span class="c1"># ax[0].clabel(cont1, fontsize=9, inline=True)</span>
+    <span class="c1"># cont2 = ax.contourf(xv, yv, surfaces[v][&#39;d&#39;].transpose(), cbar2, vmin=cbar2[0], vmax=cbar2[-1])</span>
+    <span class="n">cont2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="n">yv</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">cbar1</span><span class="p">)</span> <span class="c1">#, locator=ticker.LogLocator())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;T=</span><span class="si">{:4.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_mssa_</span><span class="si">{}</span><span class="s1">_</span><span class="si">{:04d}</span><span class="s1">.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">runtag</span><span class="p">,</span> <span class="n">icnt</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">icnt</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="make-a-mp4-file-from-the-frames-using-ffmpeg">
+<h3>Make a mp4 file from the frames using ffmpeg<a class="headerlink" href="#make-a-mp4-file-from-the-frames-using-ffmpeg" title="Link to this heading"></a></h3>
+<p>This will only work if you have ‘ffmpeg’ installed, of course …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;ffmpeg -y -i </span><span class="se">\&#39;</span><span class="si">{0}</span><span class="s1">_mssa_</span><span class="si">{1}</span><span class="s1">_</span><span class="si">%04d</span><span class="s1">.png</span><span class="se">\&#39;</span><span class="s1"> mssa_</span><span class="si">{0}</span><span class="s1">_</span><span class="si">{1}</span><span class="s1">.mp4&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">runtag</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="make-movies.html" class="btn btn-neutral float-left" title="Making movies of your BFE field quantities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="orbits.html" class="btn btn-neutral float-right" title="Generating orbits in your BFE potential fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

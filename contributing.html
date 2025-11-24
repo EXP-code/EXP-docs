@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to EXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Index to C++ classes" href="doxygen.html" />
+    <link rel="prev" title="Release notes" href="news.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EXP
+              <img src="_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing to EXP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stable-and-development-branches">Stable and development branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reporting-bugs">Reporting bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-code-development">Contributing to code development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submitting-patches">Submitting patches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-git-commit">Adding a Git Commit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-strategy">Documentation strategy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contributing-documentation">Contributing Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-pyexp-docstrings">Adding pyEXP docstrings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Writing examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-tests">Running tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing to EXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/contributing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing-to-exp">
+<span id="topics-contributing"></span><h1>Contributing to EXP<a class="headerlink" href="#contributing-to-exp" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you are using the <code class="docutils literal notranslate"><span class="pre">EXP-code/docs</span></code> repo to build a local copy
+of the documentation, please double check that you are reading the
+most recent version of this document by issuing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
+</div>
+<p>There are many ways to contribute to EXP. Here are some of them:</p>
+<ul class="simple">
+<li><p>Blog about EXP. Cite the EXP published papers. Tell the world how
+you’re using EXP. This will help newcomers with more examples and
+will help the EXP project to increase its visibility.</p></li>
+<li><p>Report bugs and request features in the <a class="reference external" href="https://github.com/EXP-code/EXP/issues">issue tracker</a>, trying to follow
+the guidelines detailed in <a class="reference internal" href="#reporting-bugs">Reporting bugs</a> below.</p></li>
+<li><p>Submit new examples to the <a class="reference external" href="https://github.com/EXP-code/EXP-examples">EXP examples repo</a> or the
+<a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP examples repo</a>.   See the
+<a class="reference internal" href="#writing-examples"><span class="std std-ref">Contributing Documentation</span></a> section.</p></li>
+</ul>
+<section id="stable-and-development-branches">
+<h2>Stable and development branches<a class="headerlink" href="#stable-and-development-branches" title="Link to this heading"></a></h2>
+<p>Our current branch policy changed as of May 1, 2023.  Rather than a
+_static_ <code class="docutils literal notranslate"><span class="pre">main</span></code> branch for a stable EXP/pyEXP release with
+_development_ taking place on the <code class="docutils literal notranslate"><span class="pre">devel</span></code> branch, the only official
+EXP branch will be <code class="docutils literal notranslate"><span class="pre">main</span></code>.  All development will take place through
+a <a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request</a> to <code class="docutils literal notranslate"><span class="pre">main</span></code>.  All other branches are considered to be
+temporary.  The current stable release will be tagged in the GitHub
+release menu.   The HEAD of <code class="docutils literal notranslate"><span class="pre">main</span></code> will contain the latest new
+features and fixes.</p>
+</section>
+<section id="reporting-bugs">
+<h2>Reporting bugs<a class="headerlink" href="#reporting-bugs" title="Link to this heading"></a></h2>
+<p>Well-written bug reports are very helpful, so keep in mind the following
+guidelines when you’re going to report a new bug.</p>
+<ul class="simple">
+<li><p>check the <a class="reference internal" href="faq.html#faq"><span class="std std-ref">FAQ</span></a> first to see if your issue is addressed in a
+well-known question</p></li>
+<li><p>check the <a class="reference external" href="https://github.com/EXP-code/EXP/issues">open issues</a> to see if the issue has already been reported. If it
+has, don’t dismiss the report, but check the ticket history and comments. If
+you have additional useful information, please leave a comment, or consider
+<a class="reference internal" href="#code-development"><span class="std std-ref">sending a pull request</span></a> with a fix.</p></li>
+<li><p>write <strong>complete, reproducible, specific bug reports</strong>. The smaller
+the test case, the better. Remember that other developers won’t have
+your project to reproduce the bug, so please include all relevant
+files required to reproduce it.</p></li>
+<li><p>the most awesome way to provide a complete reproducible example is
+to send a pull request which adds a failing test case to the EXP
+testing suite (see <a class="reference internal" href="#submitting-patches"><span class="std std-ref">Submitting patches</span></a>).  This is helpful even
+if you don’t have an intention to fix the issue yourselves.</p></li>
+<li><p>include the output of <code class="docutils literal notranslate"><span class="pre">exp</span> <span class="pre">-v</span></code> so developers working on your bug
+know exactly which version and platform it occurred on, which is
+often very helpful for reproducing it, or knowing if it was already
+fixed.</p></li>
+</ul>
+</section>
+<section id="contributing-to-code-development">
+<span id="code-development"></span><h2>Contributing to code development<a class="headerlink" href="#contributing-to-code-development" title="Link to this heading"></a></h2>
+<p>We are now using the <a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request</a> method for all EXP development,
+in including the code authors and maintainers.  In essence, a pull
+request is code patch that allows us to easily review, test, and
+discuss the proposed change.  The better a patch is written, the
+higher the chances that it’ll get accepted and the sooner it will be
+merged.</p>
+<p>Well-written patches should:</p>
+<ul class="simple">
+<li><p>contain the minimum amount of code required for the specific change. Small
+patches are easier to review and merge. So, if you’re doing more than one
+change (or bug fix), please consider submitting one patch per change. Do not
+collapse multiple changes into a single patch. For big changes consider using
+a patch queue.</p></li>
+<li><p>pass all EXP basic example tests. See <a class="reference internal" href="#id6">Running tests</a> below.</p></li>
+<li><p>if you’re contributing a feature, especially one that changes a
+public (documented) API, please include the documentation changes in
+the same patch.  See <a class="reference internal" href="#id2">Documentation strategy</a> below.</p></li>
+</ul>
+</section>
+<section id="submitting-patches">
+<span id="id1"></span><h2>Submitting patches<a class="headerlink" href="#submitting-patches" title="Link to this heading"></a></h2>
+<p>The best way to submit a patch is to issue a <a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request</a> on
+GitHub.  The work flow for this is:
+1. Fork the <code class="docutils literal notranslate"><span class="pre">EXP-code/EXP</span></code> repo in GitHub
+2. Create a branch with the proposed change
+3. Compile and test your changes
+4. Once you are satisfied, create the <a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request</a> on the GitHub EXP code repo</p>
+<p>Remember to explain what was fixed or the new functionality (what it
+is, why it’s needed, etc). The more info you include, the easier will
+be for core developers to understand and accept your patch.</p>
+<p>You can also discuss the new functionality (or bug fix) before
+creating the patch, but it’s always good to have a patch ready to
+illustrate your arguments and show that you have put some additional
+thought into the subject. A good starting point is to send a pull
+request on GitHub. It can be simple enough to illustrate your idea,
+and leave documentation/tests for later, after the idea has been
+validated and proven useful.  All functionality (including new
+features and bug fixes) must include a test case to check that it
+works as expected, so please include tests for your patches if you
+want them to get accepted sooner.</p>
+<p>There might be an existing pull request for the problem you’d like to
+solve, so please do take a look at the existing pull request list.
+For example, a pull request might be a good start, but changes are
+requested by EXP maintainers, and the original pull request author
+hasn’t had time to address them.  In this case consider picking up
+this pull request: open a new pull request with all commits from the
+original pull request, as well as additional changes to address the
+raised issues. Doing so helps us a lot; it is not considered rude as
+long as the original author is acknowledged by keeping his/her
+commits.</p>
+<p>You can pull an existing pull request to a local branch by running
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">https://github.com/EXP-code/EXP</span> <span class="pre">pull/$PR_NUMBER/head:$BRANCH_NAME_TO_CREATE</span></code>
+(replace <code class="docutils literal notranslate"><span class="pre">$PR_NUMBER</span></code> with an ID of the pull request, and
+<code class="docutils literal notranslate"><span class="pre">$BRANCH_NAME_TO_CREATE</span></code> with a name of the branch you want to
+create locally).  See also:
+<a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally#modifying-an-inactive-pull-request-locally">https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally#modifying-an-inactive-pull-request-locally</a>.</p>
+<p>When writing GitHub pull requests, try to keep titles short but
+descriptive.  Complete titles make it easy to skim through the issue
+tracker.</p>
+<p>Finally, we all appreciate improving the code’s readability and though
+formatting and improved comments.  But please, try to keep aesthetic
+changes in separate commits from functional changes. This will make
+pull requests easier to review and more likely to get merged.</p>
+<section id="adding-a-git-commit">
+<h3>Adding a Git Commit<a class="headerlink" href="#adding-a-git-commit" title="Link to this heading"></a></h3>
+<p>All code updates are done by pull request (PR) as described in
+<a class="reference internal" href="#topics-contributing"><span class="std std-ref">Contributing to EXP</span></a>.  The GitHub EXP-code includes Continuous
+Integration (CI) support which can get very chatty and take up
+unnecessary compute resources.  When your changes only affect
+documentation (e.g. docstring additions or software comments) or
+provide code snippets that you know still need work, you may add a
+<cite>[no ci]</cite> in your commit message. For example:
+.. code-block:: bash</p>
+<blockquote>
+<div><p>git commit -m “Updated some docstrings [no ci]”</p>
+</div></blockquote>
+<p>When this commit is pushed out to your fork and branch associated with a pull
+request, all CI will be skipped.</p>
+</section>
+</section>
+<section id="documentation-strategy">
+<span id="id2"></span><h2>Documentation strategy<a class="headerlink" href="#documentation-strategy" title="Link to this heading"></a></h2>
+<p>EXP and pyEXP has three types of documentation:</p>
+<ol class="arabic simple">
+<li><p>Inline Doxygen comments in C/C++ class headers.  If you have not
+used <cite>Doxgyen &lt;http://doxygen.org&gt;</cite> in the past, we recommend that
+you simply copy the style in existing headers in the <code class="docutils literal notranslate"><span class="pre">include</span></code>
+directory in the EXP source tree.  In short, Doxygen uses stylized
+comments to extract documentation.  Lines that start with <code class="docutils literal notranslate"><span class="pre">//!</span></code>
+or blocks that start with <code class="docutils literal notranslate"><span class="pre">/**</span></code> and end with <code class="docutils literal notranslate"><span class="pre">*/</span></code> will end up
+describing the immediately following class or member function.</p></li>
+<li><p>Python wrapper code has embedded Python docstrings.  For some
+examples, check the C++ code in the <code class="docutils literal notranslate"><span class="pre">pyEXP</span></code>.</p></li>
+<li><p>The ReadTheDocs manual that you are currently reading is designed
+to provide an overview and tutorial for using EXP/pyEXP.  You can
+fork and issue pull requests against the <code class="docutils literal notranslate"><span class="pre">EXP-code/docs</span></code> repo
+just for the EXP source code as described in <a class="reference internal" href="#submitting-patches"><span class="std std-ref">Submitting patches</span></a>.</p></li>
+</ol>
+<section id="contributing-documentation">
+<span id="writing-examples"></span><h3>Contributing Documentation<a class="headerlink" href="#contributing-documentation" title="Link to this heading"></a></h3>
+<p>Our goal is a set of consistent documentation that provides users and
+developers a shallow learning curve for using and adding to EXP.  For
+end users, we strive to write simple step-by-step instructions for
+common tasks and give a clear description of the features and
+capabilities of the EXP software.</p>
+<p>However, it <em>is</em> hard to know what everyone needs.  As you work with
+this package, we would love help with this and encourage all of your
+contributions.</p>
+<p>This section is an attempt to provide some stylistic guidelines for
+documentation writers and developers.  For EXP and the documentation
+overall, we hope that the existing documentation is a good starting
+point.  For internal Python documentation in pyEXP, we are trying to
+follow the now familiar style of code documentation of both the
+Astropy and Numpy projects.  In particular, we have adopted the Numpy
+style guidelines <a class="reference external" href="https://numpy.org/doc/devdocs/docs/howto_document.html">here</a>.</p>
+</section>
+<section id="adding-pyexp-docstrings">
+<h3>Adding pyEXP docstrings<a class="headerlink" href="#adding-pyexp-docstrings" title="Link to this heading"></a></h3>
+<p>pyEXP is a set of bindings implemented by <a class="reference external" href="https://pybind11.readthedocs.io/">pybind11</a> and a small
+amount of native Python code.  It has a full set of docstrings to
+provide users with easy access to interactive tips and call
+signatures.  If you would like to contribute new code, please try to
+follow the following guidelines:</p>
+<ul class="simple">
+<li><p>Please write docstrings for all public classes, methods, and functions</p></li>
+<li><p>Please consult the _numpydoc_ format from the link above whenever
+possible</p></li>
+<li><p>We would like to encourage references to internal EXP project links
+in docstrings when useful.  This is still a work in progress.</p></li>
+<li><p>Examples and/or tutorials are strongly encouraged for typical
+use-cases of a particular module or class.  These can be included in
+the <a class="reference external" href="https://github.com/EXP-code/EXP-examples">EXP examples repository</a> or the <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP examples
+repository</a>) as
+appropriate.</p></li>
+</ul>
+</section>
+</section>
+<section id="id3">
+<h2>Writing examples<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>We strongly encourage to contribute interesting examples and workflows
+to one of the two example repositories:</p>
+<ol class="arabic simple">
+<li><p>Use the <a class="reference external" href="https://github.com/EXP-code/EXP-examples">EXP examples repo</a> to illustrate
+simulations.  Check the existing ones for guidance. It’s best if
+your examples contain sample configuration files and phase-space
+files, or possibly instructions for computing the phase-space files
+if they are large.</p></li>
+<li><p>Use the <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP examples repo</a>.  Either documented
+Python or Jupyter notebooks are ideal.</p></li>
+</ol>
+</section>
+<section id="running-tests">
+<span id="id6"></span><h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading"></a></h2>
+<p>Please check any bug fixes and proposed new functionality works with
+existing examples.  Here are some suggested guidelines for EXP and
+pyEXP changes, respectively:</p>
+<ol class="arabic simple">
+<li><p>For EXP, clone the <a class="reference external" href="https://github.com/EXP-code/EXP-examples">EXP examples repo</a> to test changes to the
+EXP simulation code.  At the very least, please try the <code class="docutils literal notranslate"><span class="pre">Nbody</span></code>
+example, but please try as many as you can to make sure that your
+change will not break an existing use case for someone else.  If
+your change introduces a feature, please try to devise and
+contribute example that demonstrates the new feature.  That way,
+your new feature will be tested by all future proposed changes and
+will help others understand how to use your new feature.</p></li>
+<li><p>The drill for pyEXP is similar.  Clone <a class="reference external" href="https://github.com/EXP-code/pyEXP-examples">pyEXP examples repo</a> to test changes to
+the pyEXP N-body analysis code. There are many work flows here, we
+don’t expect anyone to try all of them.  But please use your best
+judgment to try those affected by your proposed change.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="news.html" class="btn btn-neutral float-left" title="Release notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="doxygen.html" class="btn btn-neutral float-right" title="Index to C++ classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

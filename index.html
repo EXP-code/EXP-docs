@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXP 7.x documentation &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EXP at a glance" href="intro/overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            EXP
+              <img src="_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EXP 7.x documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="topics-index"></span><section id="exp-version-documentation">
+<h1>EXP 7.x documentation<a class="headerlink" href="#exp-version-documentation" title="Link to this heading"></a></h1>
+<p>EXP is a fast high-level C++ library with Python bindings for
+performing and analyzing n-body simulations using biorthogonal and
+orthogonal expansions, also known as <em>basis function expansions (BFE)</em>.
+The library also supports time series analysis of expansion coefficients
+using multivariate Singular Spectrum Analysis (mSSA) to discover new
+dynamical correlations, separate signal from noise, and visualize these
+in two- and three-dimensional renderings.</p>
+<p>There are two <em>entry points</em> into EXP:</p>
+<ol class="arabic simple">
+<li><p>The N-body code itself and Unix-style auxiliary utilities for
+manipulating and analyzing N-body phase space.</p></li>
+<li><p>The Python interface to basis  C++ libraries used by the N-body
+code.  These are designed to enable your post-processing analyses
+on both EXP and other N-body simulation snapshots (Gadget, Gizmo,
+Arepo, etc.) within the Python/Jupyter ecosystem. The Python interface
+is the primary method for time series analyses.</p></li>
+</ol>
+<p>In this documentation, <strong>EXP</strong> refers to the entire code base and
+<strong>pyEXP</strong> refers to the Python EXP API.  Many users may only be
+interested in pyEXP.  Since the basis function expansion concepts and
+mathematics are the shared between EXP and pyEXP, we will describe
+both together in this documentation.</p>
+<section id="first-steps">
+<span id="quick-start"></span><h2>First steps<a class="headerlink" href="#first-steps" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TL;DR: A read through the following three topics will get you started.</p>
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="intro/overview.html"><span class="doc">EXP at a glance</span></a></dt><dd><p>Understand what EXP is and how it can help you.</p>
+</dd>
+<dt><a class="reference internal" href="intro/install.html"><span class="doc">Installation guide</span></a></dt><dd><p>Get EXP installed on your computer.</p>
+</dd>
+<dt><a class="reference internal" href="intro/tutorial.html"><span class="doc">Tutorials</span></a></dt><dd><p>A quick-start guide to pyEXP and EXP</p>
+</dd>
+</dl>
+</section>
+<section id="getting-help">
+<span id="id1"></span><h2>Getting help<a class="headerlink" href="#getting-help" title="Link to this heading"></a></h2>
+<p>Having trouble? We’d like to help!</p>
+<ul class="simple">
+<li><p>Try the <a class="reference internal" href="faq.html"><span class="doc">FAQ</span></a> – it’s got answers to some common questions.</p></li>
+<li><p>Looking for specific information? Try the <a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a>.</p></li>
+<li><p>Report bugs in EXP in our <a class="reference external" href="https://github.com/orgs/EXP-code/repositories/issues">issue tracker</a>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to become an <strong>EXPert</strong>, please read on …</p>
+</div>
+</section>
+<section id="exp-concepts">
+<span id="section-basics"></span><h2>EXP concepts<a class="headerlink" href="#exp-concepts" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<p>These topics provide some background detail on the software and
+mathematics used in EXP.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="topics/codeintro.html"><span class="doc">Code intro</span></a></dt><dd><p>Learn about the EXP software design strategy</p>
+</dd>
+<dt><a class="reference internal" href="topics/bfetheory.html"><span class="doc">BFE theory</span></a></dt><dd><p>Learn about the mathematical principles behind BFE and EXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/timesseries.html"><span class="doc">BFE time series analysis</span></a></dt><dd><p>Descriptions for methods to analyze BFE time series</p>
+</dd>
+<dt><a class="reference internal" href="topics/units.html"><span class="doc">Units in EXP and pyEXP</span></a></dt><dd><p>Physical units in EXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/multistep.html"><span class="doc">N-Body optimization in EXP</span></a></dt><dd><p>A quick review of EXP’s ODE solver and multi time step ladder</p>
+</dd>
+<dt><a class="reference internal" href="topics/centering.html"><span class="doc">Centering</span></a></dt><dd><p>How to choose and monitor the expansion center</p>
+</dd>
+<dt><a class="reference internal" href="topics/yamlconfig.html"><span class="doc">What is YAML?</span></a></dt><dd><p>An example YAML configuration file for EXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/howtosim.html"><span class="doc">How to run your own N-body simulation in EXP</span></a></dt><dd><p>A guide for running EXP simulations</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+</div>
+<p><a class="reference internal" href="faq.html"><span class="doc">Are there pre-compiled versions of pyEXP and EXP?</span></a></p>
+</section>
+<section id="how-to-solve-specific-problems">
+<h2>How to solve specific problems<a class="headerlink" href="#how-to-solve-specific-problems" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="topics/visualizing-bases.html"><span class="doc">How to visualize the BFE bases used to make your coefficients</span></a></dt><dd><p>Learn how to visualize the EXP bases using pyEXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/making-coefficients.html"><span class="doc">How to  generate coefficients from phase-space snapshots</span></a></dt><dd><p>Get familiar with producing coefficients for particle data in pyEXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/saving-coefficients.html"><span class="doc">How to save and reuse your newly generated coefficients</span></a></dt><dd><p>Learn how to save and read the coefficients you have produced
+from your N-body snapshots in pyEXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/visualizing-fields.html"><span class="doc">How to convert your coefficients back to physical fields</span></a></dt><dd><p>Learn how to convert your coefficients to physical fields and
+visualize them with Python and pyEXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/make-movies.html"><span class="doc">Making movies of your BFE field quantities</span></a></dt><dd><p>Make some movies from your fields in Python</p>
+</dd>
+<dt><a class="reference internal" href="topics/using-mssa.html"><span class="doc">How to use mSSA with your coefficient series in pyEXP</span></a></dt><dd><p>Learn how to let your simulation ‘speak for itself’ using
+multivariate Singular Spectrum Analysis</p>
+</dd>
+<dt><a class="reference internal" href="topics/orbits.html"><span class="doc">Generating orbits in your BFE potential fields</span></a></dt><dd><p>Compute orbits in the gravitational potential fields implied by
+your coefficients, and why you might want to do this</p>
+</dd>
+<dt><a class="reference internal" href="topics/exp-phase-space.html"><span class="doc">The EXP phase-space format</span></a></dt><dd><p>How to use and manipulate the EXP native phase-space format</p>
+</dd>
+<dt><a class="reference internal" href="topics/EXP-output.html"><span class="doc">How the EXP N-body code selects what and when to write data</span></a></dt><dd><p>A description of the EXP N-body output generator</p>
+</dd>
+<dt><a class="reference internal" href="topics/flatdisk.html"><span class="doc">How to configure a razor-thin disk</span></a></dt><dd><p>How to configure a thin-disk in EXP</p>
+</dd>
+<dt><a class="reference internal" href="topics/debug.html"><span class="doc">Debugging EXP</span></a></dt><dd><p>Learn how to debug common problems in EXP/pyEXP</p>
+</dd>
+</dl>
+</section>
+<section id="extending-exp">
+<span id="id2"></span><h2>Extending EXP<a class="headerlink" href="#extending-exp" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound" id="extending">
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="topics/design.html"><span class="doc">Software design goals and features</span></a></dt><dd><p>Understand the EXP architecture.</p>
+</dd>
+<dt><a class="reference internal" href="topics/usermodules.html"><span class="doc">User modules</span></a></dt><dd><p>How to use EXP’s dynamic module loader to import your own external
+force routines</p>
+</dd>
+<dt><a class="reference internal" href="topics/newforces.html"><span class="doc">How to make a new EXP force</span></a></dt><dd><p>How to write your own custom force routines</p>
+</dd>
+</dl>
+</section>
+<section id="more-about-exp">
+<h2>More about EXP<a class="headerlink" href="#more-about-exp" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="news.html"><span class="doc">Release notes</span></a></dt><dd><p>See what has changed in recent EXP versions.</p>
+</dd>
+<dt><a class="reference internal" href="contributing.html"><span class="doc">Contributing to EXP</span></a></dt><dd><p>Learn how to contribute to the EXP project.</p>
+</dd>
+<dt><a class="reference internal" href="doxygen.html"><span class="doc">Index to C++ classes</span></a></dt><dd><p>Index to C++ EXP classes</p>
+</dd>
+<dt><a class="reference internal" href="pybind11.html"><span class="doc">Index to pyEXP classes</span></a></dt><dd><p>Index to Python pyEXP classes</p>
+</dd>
+<dt><a class="reference internal" href="versioning.html"><span class="doc">Versioning and API stability</span></a></dt><dd><p>Understand EXP versioning and API stability.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro/overview.html" class="btn btn-neutral float-right" title="EXP at a glance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BFE theory &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code intro" href="codeintro.html" />
+    <link rel="prev" title="Exploring EXP using Docker" href="../intro/docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EXP
+              <img src="../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BFE theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-basic-bfe-algorithm">The basic BFE algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#empirical-orthogonal-functions">Empirical Orthogonal Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#two-dimensional-cylindrical-bases">Two-dimensional cylindrical bases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#three-dimensional-rectangular-bases">Three-dimensional rectangular bases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-basis">The basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boundary-conditions">Boundary conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#three-dimensional-periodic-slab-bases">Three-dimensional periodic slab bases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage-notes">Usage notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#final-comments-and-caveats">Final comments and caveats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">BFE theory</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/topics/bfetheory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bfe-theory">
+<span id="bfetheory"></span><h1>BFE theory<a class="headerlink" href="#bfe-theory" title="Link to this heading"></a></h1>
+<p>The BFE method has four primary advantages over tree- and grid-method
+gravity solvers: (1) the computational effort in the force calculation
+scales linearly with particle number; (2) the dynamic range of
+multi-scale systems, such as the disk-halo system, can be better
+resolved by tailoring the geometry and scale of the density and
+potential variation to each of the components individually; (3)
+sensitivity to weak global distortions is possible because small-scale
+noise can be removed; and (4) intercomponent interactions can be
+explicitly selected and controlled to allow the study of different
+mechanisms individually.  In particular, EXP is designed to allow the
+self-gravity and intercomponent forces between all components to be
+independently selected and controlled by simple configuration
+parameters (see <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">What is YAML?</span></a>).</p>
+<p>In the remainder of this chapter, I will give a brief introduction to
+the mathematics of the BFE method which then motivates the overall
+software design. This should provide enough review of the background
+to begin using the code (<a class="reference internal" href="../intro/EXP-tutorial.html#intro-exp-tutorial"><span class="std std-ref">EXP tutorial</span></a> and
+<a class="reference internal" href="../intro/pyEXP-tutorial.html#intro-pyexp-tutorial"><span class="std std-ref">pyEXP tutorial</span></a>).  Additional technical
+details will be summarized in later chapters.</p>
+<section id="the-basic-bfe-algorithm">
+<span id="bfedefs"></span><h2>The basic BFE algorithm<a class="headerlink" href="#the-basic-bfe-algorithm" title="Link to this heading"></a></h2>
+<p>The harmonic basis-function expansion (BFE) technique has been used to
+both study and compare simulations to theoretical predictions, owing
+to its natural relationship with analytic perturbation theory
+(<a class="reference internal" href="#weinberg07a" id="id1"><span>[weinberg07a]</span></a>, <a class="reference internal" href="#weinberg07b" id="id2"><span>[weinberg07b]</span></a>}. To use the BFE approach for <cite>n</cite>-body
+simulations, one uses the <span class="target" id="index-0"></span>biorthogonal nature of the
+appropriately chosen basis functions to solve the <span class="target" id="index-1"></span>Poisson
+equation using separable azimuthal harmonics at the same time as the
+expansion.  A biorthogonal system is a pair of indexed families of
+vectors in some topological vector space such that the inner product
+of the pair is the Kronecker delta.  The BFE method constructs a
+biorthongal system <span class="math notranslate nohighlight">\(d_j(\mathbf{x}), p_k(\mathbf{c})\)</span> such that
+<span class="math notranslate nohighlight">\(\nabla^2 p_i = 4\pi G d_i\)</span> and <span class="math notranslate nohighlight">\(\int d\mathbf{x}\,
+d_j(\mathbf{x}) p_k(\mathbf{x}) = 4\pi G\delta_{jk}.\)</span> Let the density
+of our particle distribution of <span class="math notranslate nohighlight">\(N\)</span> points with masses
+<span class="math notranslate nohighlight">\(m_i\)</span> described by</p>
+<div class="math notranslate nohighlight">
+\[\tilde{\rho}(\mathbf{x}) = \sum_{i=1}^N m_i \delta\left(\mathbf{x} - \mathbf{x_i}\right).\]</div>
+<p>Then, approximations for the density and potential fields are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{density:}\qquad
+\hat{\rho}(\mathbf{x}) &amp;= \sum_{j=1}^n a_j d_j(\mathbf{x}), \\
+\text{potential:}\qquad
+\hat{\Phi}(\mathbf{x}) &amp;= \sum_{j=1}^n a_j p_j(\mathbf{x}),\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[a_j = \int d\mathbf{x}\, \tilde{\rho}(\mathbf{x}) p_j(\mathbf{x}) =
+\sum_{i=1}^N m_i p_j(\mathbf{x_i}).\]</div>
+<p id="index-2">Generally, any technique making use of these properties may be called
+BFE (<a class="reference internal" href="#cluttonbrock72" id="id3"><span>[cluttonbrock72]</span></a>, <a class="reference internal" href="#cluttonbrock73" id="id4"><span>[cluttonbrock73]</span></a>, <a class="reference internal" href="#kalnajs76" id="id5"><span>[kalnajs76]</span></a>,
+<a class="reference internal" href="#hernquist92" id="id6"><span>[hernquist92]</span></a>, <a class="reference internal" href="#earn96" id="id7"><span>[earn96]</span></a>, <a class="reference internal" href="#weinberg99" id="id8"><span>[weinberg99]</span></a>).  BFE has many notable
+features that make them ideal for studying disturbances to equilibrium
+stellar discs. For simulations using BFE methods, harmonic function
+analysis decomposes a distribution into linearly-summable functions
+that resemble expected evolutionary scenarios in disc galaxy
+evolution. The primary diagnostics available are the amplitude and
+phase of each function. In addition, the time-dependence of the
+coefficients themselves provides another dimension for studying
+evolution that may not clearly manifest itself in analytic studies
+(see <a class="reference internal" href="ssa.html#mssa"><span class="std std-ref">mSSA</span></a> and <a class="reference internal" href="#weinberg21" id="id9"><span>[weinberg21]</span></a>). Using harmonic
+function analysis in BFE simulations – no matter what Poisson solver – is
+reconstruction of the potential at any time in the simulation, for any
+arbitrary combinations of particles.</p>
+</section>
+<section id="empirical-orthogonal-functions">
+<h2>Empirical Orthogonal Functions<a class="headerlink" href="#empirical-orthogonal-functions" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id21" style="width: 80%">
+<span id="disk-amplitudes"></span><span id="eof"></span><a class="reference internal image-reference" href="../_images/basis1.png"><img alt="../_images/basis1.png" src="../_images/basis1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">In-plane amplitude variations as a function of disk scale length
+for all radial functions per harmonic order in the cylindrical
+disk basis. We show the <span class="math notranslate nohighlight">\(m=0,1,2,4\)</span> harmonic subspaces as
+panels from top to bottom. The amplitude in each panel has been
+normalized to the maximum in the corresponding subspace. Functions
+that are zero everywhere are vertically asymmetric.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id22" style="width: 80%">
+<span id="disk-3d-amplitudes"></span><a class="reference internal image-reference" href="../_images/basis2.png"><img alt="../_images/basis2.png" src="../_images/basis2.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Examples of vertically symmetric (<span class="math notranslate nohighlight">\(m=2,n=4\)</span>, upper
+panel), and vertically asymmetric (<span class="math notranslate nohighlight">\(m=2,n=11\)</span>, lower
+panel) functions for the disk basis. The <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span>
+axis correspond to the radial and vertical axes in the simulation,
+and the amplitude of the variations between panels has been
+normalized to the maximum <span class="math notranslate nohighlight">\(m=2\)</span> amplitude.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A BFE computes the gravitational potential by projecting particles
+onto a set of biorthogonal basis functions that satisfy the Poisson
+equation as described in <a class="reference internal" href="#petersen2022" id="id10"><span>[petersen2022]</span></a>. Then, the force at the
+position of each particle is evaluated from the basis-function
+approximation to the field at the particle position.  Fundamentally,
+this approach relies on the mathematical properties of the
+Sturm-Louiville equation (SLE) of which the Poisson equation is a
+special case. The SLE describes many physical systems, and may be
+written as:</p>
+<div class="math notranslate nohighlight" id="equation-sle">
+<span class="eqno">(1)<a class="headerlink" href="#equation-sle" title="Link to this equation"></a></span>\[\frac{d}{dx}\left[p(x)\frac{d\Phi(x)}{dx}\right] - q(x)\Phi(x) =
+\lambda \omega(x) \Phi(x)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is a constant, and <span class="math notranslate nohighlight">\(\omega(x)\)</span> is a
+weighting function. The eigenfunctions <span class="math notranslate nohighlight">\(\phi_j\)</span> of the SLE form
+a complete basis set with eigenvalues <span class="math notranslate nohighlight">\(\lambda_j\)</span>, where
+<span class="math notranslate nohighlight">\(j\)</span> may be truncated from the theoretically infinite
+series. When applied to the Poisson equation specifically, the
+equation separates in conic coordinate systems.  For Cartesian, the
+widely-used Fourier expansion is a well-known examples. The BFE
+potential solver is built using properties of eigenfunctions and
+eigenvalues of the SLE.</p>
+<p>For an expansion in spherical harmonics, the SLE/Poisson equation
+separates into angular and radial equations, giving rise to spherical
+harmonics and Bessel functions naturally.  The boundary conditions are
+easy to apply in radius (at the origin and at infinity).  For example,
+a dark-matter halo can be expanded into a relatively small number of
+spherical harmonics <span class="math notranslate nohighlight">\(Y_{lm}\)</span> and appropriate radial functions.
+Each term in halo potential is given by <span class="math notranslate nohighlight">\(\Phi_{lm}^j =
+\phi_{lm}^j(r)Y_{lm}(\theta,\phi)\)</span>.  Even more interesting, Bessel
+functions are not the only choice.  By changing the weighting function
+we may derive an infinity of radial bases.  In particular, the
+weighting function <span class="math notranslate nohighlight">\(\omega\)</span> in equation <a class="reference internal" href="#equation-sle">(1)</a> may be
+selected to be an equilibrium solution of the Poisson equation.  In
+other words, the unperturbed potential would be represented by a
+single term!</p>
+<p>The disk is more complicated.  Although one can construct a disk basis
+from the eigenfunctions of the Laplacian as in the spherical case
+(e.g. <a class="reference internal" href="#earn96" id="id11"><span>[earn96]</span></a>), the boundary conditions in cylindrical
+coordinates make the basis hard to implement. To get around this, our
+solution method starts with a spherical basis with <span class="math notranslate nohighlight">\(l\le36\)</span> and
+uses a singular value decomposition (SVD) to define a rotation in
+function space to best represent a target disk density.  Specifically,
+each density element <span class="math notranslate nohighlight">\(\rho(R, z)\,d^3x\)</span> contributes</p>
+<div class="math notranslate nohighlight" id="equation-contrib">
+<span class="eqno">(2)<a class="headerlink" href="#equation-contrib" title="Link to this equation"></a></span>\[     \frac{1}{4\pi G}\phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3 x\]</div>
+<p>to the expansion coefficient <span class="math notranslate nohighlight">\(a_{lm}^j\)</span>, or</p>
+<div class="math notranslate nohighlight" id="equation-coeff">
+<span class="eqno">(3)<a class="headerlink" href="#equation-coeff" title="Link to this equation"></a></span>\[\begin{split}      a_{lm}^j &amp;= \frac{1}{4\pi
+     G}\int \phi_{lm}^j(r)Y_{lm}(\theta,\phi)\rho(R, z)d^3x \\
+               &amp;= \lim_{N\rightarrow\infty}\frac{1}{4\pi
+     G}\sum_{i=1}^N m_i \phi_{lm}^j(r_i)Y_{lm}(\theta_i,\phi_i)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R, z\)</span> are the radial and vertical cylindrical
+coordinates.  The second equation shows the approximation for
+<span class="math notranslate nohighlight">\(N\)</span> particles where <span class="math notranslate nohighlight">\(\sum_i m_i = \int \rho(R, z)d^3x\)</span>.</p>
+<p>The covariance of the coefficient given the density <span class="math notranslate nohighlight">\(\rho(R,
+z)\)</span>, <span class="math notranslate nohighlight">\(\mbox{cov}(\mathbf{a})\)</span>, is constructed similarly. For
+each azimuthal harmonic <span class="math notranslate nohighlight">\(m\)</span>, all spherical terms <span class="math notranslate nohighlight">\(l\ge m\)</span>
+and radial indices <span class="math notranslate nohighlight">\(j\)</span> are covariant.  So the full matrix may be
+separated into blocks for each <span class="math notranslate nohighlight">\(m\)</span>.  Each block in the
+covariance matrix describes which terms <span class="math notranslate nohighlight">\(a_{lm}^j\)</span> contribute
+the most variance for a particular <span class="math notranslate nohighlight">\(m\)</span>. By diagonalizing
+<span class="math notranslate nohighlight">\(\mbox{cov}(\mathbf{a}),\)</span> we may find a new basis, uncorrelated
+by the target density.  Because <span class="math notranslate nohighlight">\(\mbox{cov}(\mathbf{a})\)</span> is
+symmetric and positive definite, all eigenvalues will be positive.
+The term with the largest eigenvalue describes the majority of the
+correlated contribution, and so on for the second largest eigenvalue,
+etc.  EXP performs this diagonalization using the singular value
+decomposition (SVD) and the singular matrices (now mutual transposes
+owing to symmetry) describe a rotation of the original basis into the
+uncorrelated basis.</p>
+<p>The new basis functions optimally approximate the true distribution
+from the spherical-harmonic expansion in the original basis in the
+sense that the lagest amount of variance is contained in the smallest
+number of terms; we might call this optimal in the <em>least-squares
+sense</em>. Since the transformation and the Poisson equation are linear,
+the new eigenfunctions are also biorthogonal.  The new coefficient
+vector is related to the original coefficient vector by an orthogonal
+transformation.  Because we are free to break up the spherical basis
+into meriodinal subspaces by azimuthal order, the resulting
+two-dimensional eigenfunctions in <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span> are
+equivalent to a decomposition in cylindrical coordinates <span class="math notranslate nohighlight">\(r,~z,\)</span>
+and <span class="math notranslate nohighlight">\(\theta\)</span>.  We condition the initial disk basis functions on
+an analytic disk density such that the lowest-order potential-density
+pair matches the initial analytic mass distribution. This choice also
+acts to reduce small-scale discreteness noise as compared to
+conditioning the basis function on the realized positions of the
+particles <a class="reference internal" href="#weinberg98" id="id12"><span>[weinberg98]</span></a>. Although there could be some other
+biases introduced by this procedure, our experience to date suggests
+that this approach provides a fair representation of the disk density
+and potential fields.</p>
+<p>We can represent the potential and density of a galaxy as a
+superposition of several basis functions. This allows us to decompose
+the galaxy based on its geometry and symmetry. For an initially
+axisymmetric example, azimuthal harmonics <span class="math notranslate nohighlight">\(m\)</span>, where <span class="math notranslate nohighlight">\(m=0\)</span>
+is the monopole, <span class="math notranslate nohighlight">\(m=1\)</span> is the dipole, <span class="math notranslate nohighlight">\(m=2\)</span> is the
+quadrupole, and so on, will efficiently summarize the degree and
+nature of the asymmetries. The sine and cosine terms of each azimuthal
+order give the phase angle of the harmonic that can be used to
+calculate the pattern speed.  For disks, each azimuthal harmonic
+represents both the radial and vertical structure simultaneously; that
+is each basis function is a two-dimensional meridional plane multipled
+by <span class="math notranslate nohighlight">\(e^{im\phi}\)</span>.  The symmetry of the input basis and the
+covariance matrix further demands that the singular value
+decomposition produce vertically symmetric or anti-symmetric
+functions.  See <a class="reference internal" href="visualizing-bases.html#visualizing-cylindrical-basis"><span class="std std-ref">Visualizing bases</span></a> for examples of both types of
+functions and hints on how to explore them using pyEXP.</p>
+<p>After some exploration, we determined that a radial scale factor for
+the spherical profile of approximately <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> time larger than
+spherical deprojected profile of the disk represented the disk profile
+is the smallest number of terms.  This choice of radial scale is not
+very sensitive to the resulting basis, however.</p>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="#disk-amplitudes"><span class="std std-numref">Fig. 1</span></a> shows the in-plane amplitude
+variations for radial functions (<span class="math notranslate nohighlight">\(n\)</span> orders) as a function of
+radius, separated by harmonic subspace (<span class="math notranslate nohighlight">\(m\)</span> orders) for an
+exponential disk in an NFW (<a class="reference internal" href="#navarro97" id="id13"><span>[navarro97]</span></a>) halo.  We show the four
+harmonic subspaces that are most relevant for the evolution of the
+simulation, <span class="math notranslate nohighlight">\(m=0,1,2,4\)</span>, from top to bottom in the panels. In
+each harmonic subspace, the lowest-order radial order, <span class="math notranslate nohighlight">\(n=1\)</span>,
+has no nodes except at <span class="math notranslate nohighlight">\(R=0\)</span> for <span class="math notranslate nohighlight">\(m\ge0\)</span>. The number of
+nodes increases with order <span class="math notranslate nohighlight">\(n\)</span>. The nodes are interleaved by
+radial order, but the increasing number of nodes means that the
+smallest radius node always decreases in radius as the number of nodes
+increases. Therefore, an increase in amplitude for
+higher–<span class="math notranslate nohighlight">\(n\)</span>–order harmonics corresponds to the movement of mass
+to smaller radii. Additionally, the spacing of nodes gives an
+approximate value for the force resolution of the simulation. For
+example, the highest order <span class="math notranslate nohighlight">\(m=0\)</span> radial function (<span class="math notranslate nohighlight">\(n=12\)</span>)
+has a zero at <span class="math notranslate nohighlight">\(R=0.2a\)</span>, or 600 pc in a MW-like
+galaxy, where <span class="math notranslate nohighlight">\(a\)</span> is the scale length. Additionally, the radial orders are interleaved between
+harmonic orders, such that the location of the first node,
+<span class="math notranslate nohighlight">\(R^{[1st]}\)</span>, is given by</p>
+<div class="math notranslate nohighlight">
+\[R_{m=2,n=1}^{[1st]} \approx \frac{1}{2}\left(R_{m=1,n=1}^{[1st]} +
+R_{m=1,n=2}^{[1st]}\right).\]</div>
+<p>The lowest-order basis function exactly matches the initial density
+profile and has no nodes.  In this example, the highest-order basis
+function, <span class="math notranslate nohighlight">\(n=12\)</span>, would only imply a spatial resolution of 100
+pc, the basis resolves a power law in density down to 10 pc. This
+choice removes or filters high spatial frequencies that may increase
+relaxation noise.  <a class="reference internal" href="#disk-3d-amplitudes"><span class="std std-numref">Fig. 2</span></a> illustrates the
+vertical structure in the disk basis functions. The upper panel shows
+the <span class="math notranslate nohighlight">\(m=2,n=4\)</span> basis function in radius–z space. This function
+is symmetric about the <span class="math notranslate nohighlight">\(z=0\)</span> axis. The combination of vertically
+symmetric and asymmetric harmonics represent all possible variations
+in the gravitational field above and below the plane consistent with
+the spatial scales in the basis. In both panels, the color has been
+normalized to the maximum amplitude of the <span class="math notranslate nohighlight">\(m=2\)</span> harmonic
+subspace.</p>
+</section>
+</section>
+<section id="two-dimensional-cylindrical-bases">
+<span id="twodcyl"></span><h2>Two-dimensional cylindrical bases<a class="headerlink" href="#two-dimensional-cylindrical-bases" title="Link to this heading"></a></h2>
+<p>The latest version of EXP includes support for two-dimensional
+cylindrical disk bases with three-dimensional potential theory.  This
+allows full gravitational couples between two- and three-dimensional
+components.</p>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h3>
+<p>We construct two-dimensional polar bases using the same empirical
+orthogonal function (EOF) technique used to compute the three
+dimensional cylindrical basis (see <a class="reference internal" href="#eof"><span class="std std-ref">empirical orthogonal
+functions</span></a>).  The user has the choice to two possible input
+basis:</p>
+<ol class="arabic simple">
+<li><p>The cylindrical Bessel functions of the first kind,
+<span class="math notranslate nohighlight">\(J_m(\alpha_{m,n}R/R_{max})\)</span> where <span class="math notranslate nohighlight">\(\alpha_{m,n}\)</span> is the
+nth root of <span class="math notranslate nohighlight">\(J_m\)</span> and <span class="math notranslate nohighlight">\(R_{max}\)</span> is an outer boundary.
+Thus, orthogonality is defined over a finite domain by construction.</p></li>
+<li><p>The Clutton-Brock two-dimensional basis (<a class="reference internal" href="#cluttonbrock72" id="id14"><span>[cluttonbrock72]</span></a>) which
+orthogonal over the semi-infinite domain.</p></li>
+</ol>
+<p>The user then chooses a conditioning density.  Currently, these must
+be one of: exponential disk, Kuzmin (Toomre) disk, or Mestel disk
+(<a class="reference internal" href="#bt08" id="id15"><span>[bt08]</span></a>).  The code was written to allow for a user-defined density
+function and this will be implemented when needed in a future release.</p>
+<p>The coupling between the two-dimensional disk and other
+three-dimensional components (e.g. the dark-matter halo or a bulge)
+requires evaluating the gravitational potential and its gradient
+everywhere in space.  The three-dimensional gravitational potential is
+not <em>automatically</em> provided by the two-dimensional recursion
+relations that define the biorthogonal functions but must be evaluated
+by Hankel transform.  This can be done very accurately over a finite
+domain with the quasi-discrete Hankel transformation on a finite
+domain (QDHT, <a class="reference internal" href="#guizar04" id="id16"><span>[guizar04]</span></a>).  This algorithm exploits the special
+properties of the Bessel functions.</p>
+<p>The EOF basis solutions are tabled on a fine grid and interpolated as
+needed.  This is numerically efficient and accurate. While the
+in-plane density, potential and force fields are one-dimensional
+functions for each azimuthal order <span class="math notranslate nohighlight">\(m\)</span> and radial order
+<span class="math notranslate nohighlight">\(n\)</span>, the potential and force fields for <span class="math notranslate nohighlight">\(|z|&gt;0\)</span> require
+two-dimensional tables.  Like the one-dimensional functions, these are
+finely-grided an interpolated using bilinear interpolation.</p>
+</section>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Link to this heading"></a></h3>
+<p>The upside of the current strategy is:</p>
+<ol class="arabic simple">
+<li><p>One can condition the biorthgonal Bessel-function basis on any
+target density, similar to the three-dimensional case</p></li>
+<li><p>The Hankel transform over the basis is very accurate so the whole
+thing is accurate.</p></li>
+</ol>
+<p>The downsides are:</p>
+<ol class="arabic simple">
+<li><p>The Hankel transformation for an infinite domain is numerically
+challenging and we have had good success using QDHT, so we
+recommend the finite basis for this reason.  This restriction to a
+finite-domain is not a problem in practice; all of the numerical
+implementations are finite.</p></li>
+<li><p>The Bessels are wiggly and if one looks closely they leave their
+wiggly imprint at larger radii.  Of course, we generally don’t care
+about larger radii.</p></li>
+</ol>
+<p>While the code allows the conditioning on the 2d Clutton-Brock basis,
+the computation of the vertical potential is less accurate for the
+same computational work using QDHT. This could be improved by
+truncating the basis and implementing Neumann boundary conditions with
+appropriate outgoing eigenfunctions.  That has not been done here.
+Another solution might be an asymptotic numerical evaluation of the
+Hankel transform at large cylindrical radii patched onto a brute force
+quadrature at small radii.  At this point, we recommend the Bessel
+basis for accuracy if you need to couple to another three-dimensional
+component.  If you only need the two-dimensional in-plane evaluations
+(e.g. a two-dimensional disk in a fixed halo), both basis choices will
+be good.</p>
+</section>
+</section>
+<section id="three-dimensional-rectangular-bases">
+<h2>Three-dimensional rectangular bases<a class="headerlink" href="#three-dimensional-rectangular-bases" title="Link to this heading"></a></h2>
+<p id="index-3">The latest version of EXP includes support for a three-dimensional
+rectangular prism using the classic trigonometric basis with periodic
+or reflective boundary conditions.  This basis is ideal for
+investigating various aspects of gravitational kinetics or secular
+theory.  There is no loss of generality in assuming that the prism is
+the unit cube and we will do that here.  A rectangle prism with
+arbitrary lengths in each dimension can always be scaled to the unit
+cube.</p>
+<section id="the-basis">
+<h3>The basis<a class="headerlink" href="#the-basis" title="Link to this heading"></a></h3>
+<p>Most will be familiar with the standard separation of the Poisson
+equation in Cartesian coordinates.  Assume that the potential is</p>
+<div class="math notranslate nohighlight">
+\[\Phi_{\mathbf{k}} = C_{\mathbf{k}} e^{i\mathbf{k} \cdot \mathbf{x}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}=2\pi\mathbf{n}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is
+a triple of natural integers and <span class="math notranslate nohighlight">\(C_{\mathbf{k}}\)</span> is a
+normalization constant to be determined. Then:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \Phi_{\mathbf{k}} = -k_n ^2\Phi_{\mathbf{k}} = 4\pi
+G\rho_{\mathbf{k}}.\]</div>
+<p>This Sturm-Liouville equation has complete and orthogonal
+eigenfunctions – the trigonometric functions periodic in the unit
+cube – that we are using as our basis.  The orthogonality condition
+demands that:</p>
+<div class="math notranslate nohighlight">
+\[(\rho_{\mathbf{n}^\prime}, \Phi_{\mathbf{n}}) = -\frac{k_n^2
+C_n^2}{4\pi G} \delta_{\mathbf{n}^\prime \mathbf{n}}.\]</div>
+<p>Assuming <span class="math notranslate nohighlight">\(G=1\)</span> implies that <span class="math notranslate nohighlight">\(C_n = 1/\sqrt{2n^2}\)</span>.</p>
+<p>We can think of this periodic cube as tiling all of space as a special
+case of the infinite homogeneous system.  Therefore, the equilibrium
+has a constant density and constant potential.  The constant (or <em>DC</em>)
+term <span class="math notranslate nohighlight">\(\Phi_{0,0,0}\)</span> exerts no force and does not consistently
+satisfy the Poisson equation (see <a class="reference internal" href="#bt08" id="id17"><span>[bt08]</span></a> for more discussion of the
+so-called <strong>Jeans swindle</strong>).</p>
+</section>
+<section id="id18">
+<h3>Implementation<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<p>As described in <a class="reference internal" href="#bfedefs"><span class="std std-ref">The basic BFE algorithm</span></a>, a particle ensemble immediately yields
+a set of coefficients: <span class="math notranslate nohighlight">\(a_{\mathbf{n}}\)</span>.  They take complex
+values but any physical quantity is real by construction.
+Numerically, the coefficients are accumulated by constructing the
+basis functions by recursion.  For example, since</p>
+<div class="math notranslate nohighlight">
+\[e^{i2\pi(j+1) x} = e^{i2\pi j x} e^{i2\pi x},\]</div>
+<p>we only need the expensive evaluation of <span class="math notranslate nohighlight">\(e^{i2\pi x}\)</span>,
+<span class="math notranslate nohighlight">\(e^{i2\pi y}\)</span>, <span class="math notranslate nohighlight">\(e^{i2\pi z}\)</span> for each particle position
+<span class="math notranslate nohighlight">\((x, y, z)\)</span> and all the basis functions follow by successive
+multiplication.</p>
+</section>
+<section id="boundary-conditions">
+<h3>Boundary conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h3>
+<p id="index-4">Your particles <em>only</em> contribute to the density if they are inside the
+unit cube.  Specifically, the <cite>Cube</cite> routine <em>does not</em> wrap the
+positions periodically into the unit cube.  If you would like
+phase-space positions to be wrapped into the unit cube, use the
+<cite>PeriodicBC</cite> external routine with origin at zero, lengths of one, and
+periodic boundary conditions (these are the <em>PeriodicBC</em> defaults).  The
+<cite>PeriodicBC</cite> allows periodic (‘p’), reflecting (‘r’), and vacuum (‘v’)
+boundary conditions.  The boundary-condition-type parameters are passed
+as a string to the <cite>Cube</cite> routine with desired boundary conditions for
+‘xyz’.  For example, periodic boundary conditions in each dimension is
+‘rrr’.  Boundary condition type may be different in each
+axis.</p>
+</section>
+</section>
+<section id="three-dimensional-periodic-slab-bases">
+<h2>Three-dimensional periodic slab bases<a class="headerlink" href="#three-dimensional-periodic-slab-bases" title="Link to this heading"></a></h2>
+<p>The latest version of EXP includes support for slab basis that is
+periodic in the unit square with equilibrium self-gravity in the
+vertical dimension. The coordinate system is Cartesian and Poisson
+equation separates in Cartesian coordinates.  Since the equilibrium in
+the horizontal directions is uniform, the natural basis is
+trigonometric, e.g. <span class="math notranslate nohighlight">\(e^{i2\pi (k_x x + k_y y)}\)</span> where
+<span class="math notranslate nohighlight">\(k_x, k_y\in\mathbb{Z}\)</span>.  The resulting unknown basis functions
+satisfy</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^2\Psi(z)}{d^2z} - (k_x^2+k_y^2) \Psi(z) = 4\pi G
+\rho(z).\]</div>
+<p>We assume an equilibrium solution <span class="math notranslate nohighlight">\(d^2\Psi_o(z)/dz^2 = 4\pi
+G\rho_o(z)\)</span> and write <span class="math notranslate nohighlight">\(\Psi(z) = \Psi_o(z)u(z)\)</span>.  Substituting
+this into the Poisson equation above and multiplying by
+<span class="math notranslate nohighlight">\(\Psi_o(z)\)</span>, we obtain a Sturm-Liouville differential equation,
+eq. <a class="reference internal" href="#equation-sle">(1)</a>, with eigenfunctions <span class="math notranslate nohighlight">\(u(z)\)</span> and eigenvalues
+<span class="math notranslate nohighlight">\(\lambda\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p(z) &amp;= \Psi_o(z)^2 \\\\
+q(z) &amp;= [(k_x^2+k_y^2)\Psi_o(z) - \rho_o(z)]\Psi_o(z) \\\\
+\omega(z) &amp;= \rho_o(z)\Psi_o(z)\end{split}\]</div>
+<section id="id19">
+<h3>Implementation<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<p>The SLE is straightforwardly solved using the shooting algorithm in
+SLEDGE <a class="reference internal" href="#pruess-fulton93" id="id20"><span>[pruess_fulton93]</span></a>. The boundary conditions for the spherical
+solution are the natural ones for typical gravitational system at
+large radii.  However, the potential and mass of our
+periodically-infinite slab is unbounded, rising linearly to infinity
+as <span class="math notranslate nohighlight">\(|z|\rightarrow\infty\)</span>. Furthermore, our construction of the
+weighed SLE from the Poisson equation requires a non-zero weighing
+function <span class="math notranslate nohighlight">\(\omega(z)\)</span>.  We accomplish this by</p>
+<ol class="arabic simple">
+<li><p>Choosing a maximum vertical extent <span class="math notranslate nohighlight">\(z_{max}\)</span></p></li>
+<li><p>Evaluating the potential at some point outside this range,
+e.g. <span class="math notranslate nohighlight">\(K\equiv\Psi_o(z_{max}[1+\delta])\)</span></p></li>
+<li><p>Subtracting this value from the potential: <span class="math notranslate nohighlight">\(\bar{\Psi}(z) =
+\Psi_o(z) - K\)</span></p></li>
+</ol>
+<p>Adding a constant to the potential will not change the physical
+properties of the solution.  A basis with different values of
+<span class="math notranslate nohighlight">\(K\)</span> will differ in scale but remain biorthogonal and valid
+solutions of the Poisson equation.  The value of <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> is
+unimportant as long as <span class="math notranslate nohighlight">\(\bar{\Psi}(z)\not=0\)</span> in <span class="math notranslate nohighlight">\(|z|\le
+z_{max}\)</span>.  Finally, the SLE basis solutions are tabled on a fine grid
+and interpolated as needed.  The horizontal, trigonometric part of
+basis is constructed by recursion as needed.</p>
+</section>
+<section id="usage-notes">
+<h3>Usage notes<a class="headerlink" href="#usage-notes" title="Link to this heading"></a></h3>
+<p>The user accessible parameters that may be specified in the YAML
+configuration (see the <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">YAML config example</span></a>) include:</p>
+<ul class="simple">
+<li><p><cite>nmaxx</cite>: the maximum number order in the x direction. These basis
+functions are periodic in x and have wave number
+<span class="math notranslate nohighlight">\(n_x=-n_{x\,max}\)</span> through <span class="math notranslate nohighlight">\(n_x=n_{x\,max}\)</span>.</p></li>
+<li><p><cite>nmaxy</cite>: the maximum number order in the y direction.</p></li>
+<li><p><cite>nmaxz</cite>: the maximum number order in the z direction.  These are
+basis functions will be index from 0 to <cite>nmaxz-1</cite>.</p></li>
+<li><p><cite>nminx</cite>: restrict the minimum wave number for x dimension  to <span class="math notranslate nohighlight">\(n_x\geq
+n_{x\,nmin}\)</span></p></li>
+<li><p><cite>nminy</cite>: restrict the minimum wave number for y dimension</p></li>
+<li><p><cite>hslab</cite>: scale height for slab basis</p></li>
+<li><p><cite>zmax</cite>: maximum height for slab basis</p></li>
+<li><p><cite>ngrid</cite>: number of grid points for basis table (default is 1000)</p></li>
+<li><p><cite>type</cite>: the base model for the slab.  Choices are
+<span class="math notranslate nohighlight">\(\rho(z)\propto\mbox{sech}^2(z/h), 1-(z/h)^2, \mbox{constant}\)</span> which
+are denoted as <em>isothermal</em>, <em>parabolic</em>, and <em>constant</em>,
+respectively.  The default is <em>isothermal</em> or (<em>iso</em> for short).</p></li>
+</ul>
+</section>
+</section>
+<section id="final-comments-and-caveats">
+<h2>Final comments and caveats<a class="headerlink" href="#final-comments-and-caveats" title="Link to this heading"></a></h2>
+<p>The basic expansion algorithm is described at the beginning of this
+chapter. EXP can be configured to log coefficients at each step or in any
+multiple of steps (see <a class="reference internal" href="design.html#design"><span class="std std-ref">Software design goals and features</span></a> and <a class="reference internal" href="yamlconfig.html#yamlconfig"><span class="std std-ref">What is YAML?</span></a>). Additional
+details about using multiple time-step levels along with the leap-frog
+algorithm can be found in Section <a class="reference internal" href="multistep.html#multistep"><span class="std std-ref">N-Body optimization in EXP</span></a>. The
+coefficients for each <span class="math notranslate nohighlight">\(n\)</span> order are generally complex.  The real
+and imaginary parts correspond to the cosine and sine components of
+the analogous Fourier terms <span class="math notranslate nohighlight">\(A_m\)</span> and <span class="math notranslate nohighlight">\(B_m\)</span>. The
+coefficients are written in sine and cosine form for easy
+interpretation.  Thus, the user may compute the phase angle for any
+basis function and use the total amplitude or modulus as an indicator
+of power.</p>
+<p>The BFE approach trades off precision and degrees-of-freedom with
+adaptability. The truncated series of basis functions intentionally
+limits the possible degrees of freedom in the gravitational field in
+order to provide a low-noise, bandwidth-limited representation of the
+gravitational field. One must investigate whether the basis can
+capture all possible mechanisms of disk evolution.  For example, this
+method will work very well for near equilibrium systems but could give
+biased results for grossly asymmetric systems.  A simple example of
+this is centering (see Sec. <cite>EJ</cite>).   Please be vigilant.</p>
+<p>On the up side, a basis function representation provides an
+information–rich summary of the gravitational field and provides
+insight into the overall evolution.  This method allows for the
+decomposition of different components into dynamically-relevant
+subcomponents for which the gravitational field can be calculated
+separately.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="bt08" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>bt08<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id15">1</a>,<a role="doc-backlink" href="#id17">2</a>)</span>
+<p>J. Binney and S. Tremaine. Galactic Dynamics: Second
+Edition. Princeton University Press, Princeton, NJ USA, 2008.</p>
+</div>
+<div class="citation" id="cluttonbrock72" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>cluttonbrock72<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id14">2</a>)</span>
+<p>M. Clutton-Brock. The Gravitational Field of Flat
+Galaxies. APSS, 16:101–119, Apr. 1972.</p>
+</div>
+<div class="citation" id="cluttonbrock73" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">cluttonbrock73</a><span class="fn-bracket">]</span></span>
+<p>M. Clutton-Brock. The Gravitational Field of Three
+Dimensional Galaxies. APSS, 23:55–69, July 1973.</p>
+</div>
+<div class="citation" id="earn96" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>earn96<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id11">2</a>)</span>
+<p>D. J. D. Earn. Potential-Density Basis Sets for Galactic
+Disks. ApJ, 465:91, July 1996.</p>
+</div>
+<div class="citation" id="guizar04" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">guizar04</a><span class="fn-bracket">]</span></span>
+<p>M. Guizar-Sicairos and J. C. Gutiérrez-Vega.
+Computation of quasi-discrete Hankel transforms of
+integer order for propagating optical wave
+fields. J. Opt. Soc. Am. A 21(1):53-58, 2004.</p>
+</div>
+<div class="citation" id="hernquist92" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">hernquist92</a><span class="fn-bracket">]</span></span>
+<p>L. Hernquist and J. P. Ostriker. A self-consistent
+field method for galactic dynamics. ApJ, 386:375–397,
+Feb. 1992.</p>
+</div>
+<div class="citation" id="kalnajs76" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">kalnajs76</a><span class="fn-bracket">]</span></span>
+<p>A. J. Kalnajs. Dynamics of Flat
+Galaxies. II. Biorthonormal Surface Density-Potential
+Pairs for Finite Disks. ApJ, 205:745–750, May 1976.</p>
+</div>
+<div class="citation" id="navarro97" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">navarro97</a><span class="fn-bracket">]</span></span>
+<p>J. F. Navarro, C. S. Frenk, and S. D. M. White. A
+Universal Density Profile from Hierarchical
+Clustering. ApJ, 490:493–508, Dec. 1997.</p>
+</div>
+<div class="citation" id="pruess-fulton93" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">pruess_fulton93</a><span class="fn-bracket">]</span></span>
+<p>S.Pruess and C. T. Fulton. Mathematical software
+for Sturm-Liouville problems. ACM
+Trans. Math. Softw., 19:360-376, 1993.</p>
+</div>
+<div class="citation" id="weinberg98" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">weinberg98</a><span class="fn-bracket">]</span></span>
+<p>Weinberg M. D. MNRAS, 297:101, June 1998.</p>
+</div>
+<div class="citation" id="weinberg99" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">weinberg99</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="13">
+<li><ol class="upperalpha simple" start="4">
+<li><p>Weinberg. AJ, 117:629, Jan. 1999.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="citation" id="weinberg07a" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">weinberg07a</a><span class="fn-bracket">]</span></span>
+<p>M. D. Weinberg and N. Katz. The bar-halo
+interaction - I. From funda- mental dynamics to
+revised N-body requirements. MNRAS, 375:425–459,
+Feb. 2007</p>
+</div>
+<div class="citation" id="weinberg07b" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">weinberg07b</a><span class="fn-bracket">]</span></span>
+<p>M. D. Weinberg and N. Katz. The bar-halo
+interaction - II. Secular evolution and the religion
+of N-body simulations. MNRAS, 375:460–476, Feb. 2007.</p>
+</div>
+<div class="citation" id="weinberg21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">weinberg21</a><span class="fn-bracket">]</span></span>
+<p>M. D. Weinberg and M. S. Petersen. Using multichannel
+singular spectrum analysis to study galaxy
+dynamics. MNRAS, 501:5408-5423, Mar. 2021</p>
+</div>
+<div class="citation" id="petersen2022" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">petersen2022</a><span class="fn-bracket">]</span></span>
+<p>M. S. Petersen, M. D. Weinberg, and N. Katz.
+EXP: N-body integration using basis function
+expansions. MNRAS, 510:6201-6217, Mar. 2022</p>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../intro/docker.html" class="btn btn-neutral float-left" title="Exploring EXP using Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="codeintro.html" class="btn btn-neutral float-right" title="Code intro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

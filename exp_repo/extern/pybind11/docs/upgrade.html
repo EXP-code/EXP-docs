@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrade guide &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Upgrade guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/upgrade.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="upgrade-guide">
+<h1>Upgrade guide<a class="headerlink" href="#upgrade-guide" title="Link to this heading"></a></h1>
+<p>This is a companion guide to the <a class="reference internal" href="changelog.html"><span class="doc">Changelog</span></a>. While the changelog briefly
+lists all of the new features, improvements and bug fixes, this upgrade guide
+focuses only the subset which directly impacts your experience when upgrading
+to a new version. But it goes into more detail. This includes things like
+deprecated APIs and their replacements, build system changes, general code
+modernization and other useful information.</p>
+<section id="v2-12">
+<span id="upgrade-guide-2-12"></span><h2>v2.12<a class="headerlink" href="#v2-12" title="Link to this heading"></a></h2>
+<p>NumPy support has been upgraded to support the 2.x series too. The two relevant
+changes are that:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dtype.flags()</span></code> is now a <code class="docutils literal notranslate"><span class="pre">uint64</span></code> and <code class="docutils literal notranslate"><span class="pre">dtype.alignment()</span></code> an
+<code class="docutils literal notranslate"><span class="pre">ssize_t</span></code> (and NumPy may return an larger than integer value for
+<code class="docutils literal notranslate"><span class="pre">itemsize()</span></code> in NumPy 2.x).</p></li>
+<li><p>The long deprecated NumPy function <code class="docutils literal notranslate"><span class="pre">PyArray_GetArrayParamsFromObject</span></code>
+function is not available anymore.</p></li>
+</ul>
+<p>Due to NumPy changes, you may experience difficulties updating to NumPy 2.
+Please see the [NumPy 2 migration guide](<a class="reference external" href="https://numpy.org/devdocs/numpy_2_0_migration_guide.html">https://numpy.org/devdocs/numpy_2_0_migration_guide.html</a>) for details.
+For example, a more direct change could be that the default integer <code class="docutils literal notranslate"><span class="pre">&quot;int_&quot;</span></code>
+(and <code class="docutils literal notranslate"><span class="pre">&quot;uint&quot;</span></code>) is now <code class="docutils literal notranslate"><span class="pre">ssize_t</span></code> and not <code class="docutils literal notranslate"><span class="pre">long</span></code> (affects 64bit windows).</p>
+<p>If you want to only support NumPy 1.x for now and are having problems due to
+the two internal changes listed above, you can define
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_NUMPY_1_ONLY</span></code> to disable the new support for now. Make sure you
+define this on all pybind11 compile units, since it could be a source of ODR
+violations if used inconsistently. This option will be removed in the future,
+so adapting your code is highly recommended.</p>
+</section>
+<section id="v2-11">
+<span id="upgrade-guide-2-11"></span><h2>v2.11<a class="headerlink" href="#v2-11" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The minimum version of CMake is now 3.5. A future version will likely move to
+requiring something like CMake 3.15. Note that CMake 3.27 is removing the
+long-deprecated support for <code class="docutils literal notranslate"><span class="pre">FindPythonInterp</span></code> if you set 3.27 as the
+minimum or maximum supported version. To prepare for that future, CMake 3.15+
+using <code class="docutils literal notranslate"><span class="pre">FindPython</span></code> or setting <code class="docutils literal notranslate"><span class="pre">PYBIND11_FINDPYTHON</span></code> is highly recommended,
+otherwise pybind11 will automatically switch to using <code class="docutils literal notranslate"><span class="pre">FindPython</span></code> if
+<code class="docutils literal notranslate"><span class="pre">FindPythonInterp</span></code> is not available.</p></li>
+</ul>
+</section>
+<section id="v2-9">
+<span id="upgrade-guide-2-9"></span><h2>v2.9<a class="headerlink" href="#v2-9" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Any usage of the recently added <code class="docutils literal notranslate"><span class="pre">py::make_simple_namespace</span></code> should be
+converted to using <code class="docutils literal notranslate"><span class="pre">py::module_::import(&quot;types&quot;).attr(&quot;SimpleNamespace&quot;)</span></code>
+instead.</p></li>
+<li><p>The use of <code class="docutils literal notranslate"><span class="pre">_</span></code> in custom type casters can now be replaced with the more
+readable <code class="docutils literal notranslate"><span class="pre">const_name</span></code> instead. The old <code class="docutils literal notranslate"><span class="pre">_</span></code> shortcut has been retained
+unless it is being used as a macro (like for gettext).</p></li>
+</ul>
+</section>
+<section id="v2-7">
+<span id="upgrade-guide-2-7"></span><h2>v2.7<a class="headerlink" href="#v2-7" title="Link to this heading"></a></h2>
+<p><em>Before</em> v2.7, <code class="docutils literal notranslate"><span class="pre">py::str</span></code> can hold <code class="docutils literal notranslate"><span class="pre">PyUnicodeObject</span></code> or <code class="docutils literal notranslate"><span class="pre">PyBytesObject</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">py::isinstance&lt;str&gt;()</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> for both <code class="docutils literal notranslate"><span class="pre">py::str</span></code> and
+<code class="docutils literal notranslate"><span class="pre">py::bytes</span></code>. Starting with v2.7, <code class="docutils literal notranslate"><span class="pre">py::str</span></code> exclusively holds
+<code class="docutils literal notranslate"><span class="pre">PyUnicodeObject</span></code> (<a class="reference external" href="https://github.com/pybind/pybind11/pull/2409">#2409</a>),
+and <code class="docutils literal notranslate"><span class="pre">py::isinstance&lt;str&gt;()</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> only for <code class="docutils literal notranslate"><span class="pre">py::str</span></code>. To help in
+the transition of user code, the <code class="docutils literal notranslate"><span class="pre">PYBIND11_STR_LEGACY_PERMISSIVE</span></code> macro
+is provided as an escape hatch to go back to the legacy behavior. This macro
+will be removed in future releases. Two types of required fixes are expected
+to be common:</p>
+<ul class="simple">
+<li><p>Accidental use of <code class="docutils literal notranslate"><span class="pre">py::str</span></code> instead of <code class="docutils literal notranslate"><span class="pre">py::bytes</span></code>, masked by the legacy
+behavior. These are probably very easy to fix, by changing from
+<code class="docutils literal notranslate"><span class="pre">py::str</span></code> to <code class="docutils literal notranslate"><span class="pre">py::bytes</span></code>.</p></li>
+<li><p>Reliance on py::isinstance&lt;str&gt;(obj) being <code class="docutils literal notranslate"><span class="pre">true</span></code> for
+<code class="docutils literal notranslate"><span class="pre">py::bytes</span></code>. This is likely to be easy to fix in most cases by adding
+<code class="docutils literal notranslate"><span class="pre">||</span> <span class="pre">py::isinstance&lt;bytes&gt;(obj)</span></code>, but a fix may be more involved, e.g. if
+<code class="docutils literal notranslate"><span class="pre">py::isinstance&lt;T&gt;</span></code> appears in a template. Such situations will require
+careful review and custom fixes.</p></li>
+</ul>
+</section>
+<section id="v2-6">
+<span id="upgrade-guide-2-6"></span><h2>v2.6<a class="headerlink" href="#v2-6" title="Link to this heading"></a></h2>
+<p>Usage of the <code class="docutils literal notranslate"><span class="pre">PYBIND11_OVERLOAD*</span></code> macros and <code class="docutils literal notranslate"><span class="pre">get_overload</span></code> function should
+be replaced by <code class="docutils literal notranslate"><span class="pre">PYBIND11_OVERRIDE*</span></code> and <code class="docutils literal notranslate"><span class="pre">get_override</span></code>. In the future, the
+old macros may be deprecated and removed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">py::module</span></code> has been renamed <code class="docutils literal notranslate"><span class="pre">py::module_</span></code>, but a backward compatible
+typedef has been included. This change was to avoid a language change in C++20
+that requires unqualified <code class="docutils literal notranslate"><span class="pre">module</span></code> not be placed at the start of a logical
+line. Qualified usage is unaffected and the typedef will remain unless the
+C++ language rules change again.</p>
+<p>The public constructors of <code class="docutils literal notranslate"><span class="pre">py::module_</span></code> have been deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_MODULE</span></code> or <code class="docutils literal notranslate"><span class="pre">module_::create_extension_module</span></code> instead.</p>
+<p>An error is now thrown when <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is forgotten on subclasses. This was
+incorrect before, but was not checked. Add a call to <code class="docutils literal notranslate"><span class="pre">__init__</span></code> if it is
+missing.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">py::type_error</span></code> is now thrown when casting to a subclass (like
+<code class="docutils literal notranslate"><span class="pre">py::bytes</span></code> from <code class="docutils literal notranslate"><span class="pre">py::object</span></code>) if the conversion is not valid. Make a valid
+conversion instead.</p>
+<p>The undocumented <code class="docutils literal notranslate"><span class="pre">h.get_type()</span></code> method has been deprecated and replaced by
+<code class="docutils literal notranslate"><span class="pre">py::type::of(h)</span></code>.</p>
+<p>Enums now have a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method pre-defined; if you want to override it,
+the simplest fix is to add the new <code class="docutils literal notranslate"><span class="pre">py::prepend()</span></code> tag when defining
+<code class="docutils literal notranslate"><span class="pre">&quot;__str__&quot;</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> defined but not <code class="docutils literal notranslate"><span class="pre">__hash__</span></code>, <code class="docutils literal notranslate"><span class="pre">__hash__</span></code> is now set to
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, as in normal CPython. You should add <code class="docutils literal notranslate"><span class="pre">__hash__</span></code> if you intended the
+class to be hashable, possibly using the new <code class="docutils literal notranslate"><span class="pre">py::hash</span></code> shortcut.</p>
+<p>The constructors for <code class="docutils literal notranslate"><span class="pre">py::array</span></code> now always take signed integers for size,
+for consistency. This may lead to compiler warnings on some systems. Cast to
+<code class="docutils literal notranslate"><span class="pre">py::ssize_t</span></code> instead of <code class="docutils literal notranslate"><span class="pre">std::size_t</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tools/clang</span></code> submodule and <code class="docutils literal notranslate"><span class="pre">tools/mkdoc.py</span></code> have been moved to a
+standalone package, <a class="reference external" href="https://github.com/pybind/pybind11-mkdoc">pybind11-mkdoc</a>. If you were using those tools, please
+use them via a pip install from the new location.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> package on PyPI no longer fills the wheel “headers” slot - if
+you were using the headers from this slot, they are available by requesting the
+<code class="docutils literal notranslate"><span class="pre">global</span></code> extra, that is, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;pybind11[global]&quot;</span></code>. (Most users will
+be unaffected, as the <code class="docutils literal notranslate"><span class="pre">pybind11/include</span></code> location is reported by <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span>
+<span class="pre">pybind11</span> <span class="pre">--includes</span></code> and <code class="docutils literal notranslate"><span class="pre">pybind11.get_include()</span></code> is still correct and has
+not changed since 2.5).</p>
+<section id="cmake-support">
+<h3>CMake support:<a class="headerlink" href="#cmake-support" title="Link to this heading"></a></h3>
+<p>The minimum required version of CMake is now 3.4.  Several details of the CMake
+support have been deprecated; warnings will be shown if you need to change
+something. The changes are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PYBIND11_CPP_STANDARD=&lt;platform-flag&gt;</span></code> is deprecated, please use
+<code class="docutils literal notranslate"><span class="pre">CMAKE_CXX_STANDARD=&lt;number&gt;</span></code> instead, or any other valid CMake CXX or CUDA
+standard selection method, like <code class="docutils literal notranslate"><span class="pre">target_compile_features</span></code>.</p></li>
+<li><p>If you do not request a standard, pybind11 targets will compile with the
+compiler default, but not less than C++11, instead of forcing C++14 always.
+If you depend on the old behavior, please use <code class="docutils literal notranslate"><span class="pre">set(CMAKE_CXX_STANDARD</span> <span class="pre">14</span> <span class="pre">CACHE</span> <span class="pre">STRING</span> <span class="pre">&quot;&quot;)</span></code>
+instead.</p></li>
+<li><p>Direct <code class="docutils literal notranslate"><span class="pre">pybind11::module</span></code> usage should always be accompanied by at least
+<code class="docutils literal notranslate"><span class="pre">set(CMAKE_CXX_VISIBILITY_PRESET</span> <span class="pre">hidden)</span></code> or similar - it used to try to
+manually force this compiler flag (but not correctly on all compilers or with
+CUDA).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code>’s <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> argument is deprecated and does nothing;
+linking now behaves like other imported libraries consistently in both
+config and submodule mode, and behaves like a <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> library by
+default.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">PYTHON_EXECUTABLE</span></code> is not set, virtual environments (<code class="docutils literal notranslate"><span class="pre">venv</span></code>,
+<code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, and <code class="docutils literal notranslate"><span class="pre">conda</span></code>) are prioritized over the standard search
+(similar to the new FindPython mode).</p></li>
+</ul>
+<p>In addition, the following changes may be of interest:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_INTERPROCEDURAL_OPTIMIZATION</span></code> will be respected by
+<code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> if set instead of linking to <code class="docutils literal notranslate"><span class="pre">pybind11::lto</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pybind11::thin_lto</span></code>.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">find_package(Python</span> <span class="pre">COMPONENTS</span> <span class="pre">Interpreter</span> <span class="pre">Development)</span></code> before
+pybind11 will cause pybind11 to use the new Python mechanisms instead of its
+own custom search, based on a patched version of classic <code class="docutils literal notranslate"><span class="pre">FindPythonInterp</span></code>
+/ <code class="docutils literal notranslate"><span class="pre">FindPythonLibs</span></code>. In the future, this may become the default. A recent
+(3.15+ or 3.18.2+) version of CMake is recommended.</p></li>
+</ul>
+</section>
+</section>
+<section id="v2-5">
+<h2>v2.5<a class="headerlink" href="#v2-5" title="Link to this heading"></a></h2>
+<p>The Python package now includes the headers as data in the package itself, as
+well as in the “headers” wheel slot. <code class="docutils literal notranslate"><span class="pre">pybind11</span> <span class="pre">--includes</span></code> and
+<code class="docutils literal notranslate"><span class="pre">pybind11.get_include()</span></code> report the new location, which is always correct
+regardless of how pybind11 was installed, making the old <code class="docutils literal notranslate"><span class="pre">user=</span></code> argument
+meaningless. If you are not using the function to get the location already, you
+are encouraged to switch to the package location.</p>
+</section>
+<section id="v2-2">
+<h2>v2.2<a class="headerlink" href="#v2-2" title="Link to this heading"></a></h2>
+<section id="deprecation-of-the-pybind11-plugin-macro">
+<h3>Deprecation of the <code class="docutils literal notranslate"><span class="pre">PYBIND11_PLUGIN</span></code> macro<a class="headerlink" href="#deprecation-of-the-pybind11-plugin-macro" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">PYBIND11_MODULE</span></code> is now the preferred way to create module entry points.
+The old macro emits a compile-time deprecation warning.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old</span>
+<span class="n">PYBIND11_PLUGIN</span><span class="p">(</span><span class="n">example</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="n">m</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;documentation string&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">ptr</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// new</span>
+<span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">doc</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;documentation string&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional</span>
+
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="new-api-for-defining-custom-constructors-and-pickling-functions">
+<h3>New API for defining custom constructors and pickling functions<a class="headerlink" href="#new-api-for-defining-custom-constructors-and-pickling-functions" title="Link to this heading"></a></h3>
+<p>The old placement-new custom constructors have been deprecated. The new approach
+uses <code class="docutils literal notranslate"><span class="pre">py::init()</span></code> and factory functions to greatly improve type safety.</p>
+<p>Placement-new can be called accidentally with an incompatible type (without any
+compiler errors or warnings), or it can initialize the same object multiple times
+if not careful with the Python-side <code class="docutils literal notranslate"><span class="pre">__init__</span></code> calls. The new-style custom
+constructors prevent such mistakes. See <a class="reference internal" href="advanced/classes.html#custom-constructors"><span class="std std-ref">Custom constructors</span></a> for details.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old -- deprecated (runtime warning shown only in debug mode)</span>
+<span class="n">py</span><span class="o">::</span><span class="k">class</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__init__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">Foo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="n">Foo</span><span class="p">(...);</span><span class="w"> </span><span class="c1">// uses placement-new</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="c1">// new</span>
+<span class="n">py</span><span class="o">::</span><span class="k">class</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="p">([](...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Note: no `self` argument</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Foo</span><span class="p">(...);</span><span class="w"> </span><span class="c1">// return by raw pointer</span>
+<span class="w">        </span><span class="c1">// or: return std::make_unique&lt;Foo&gt;(...); // return by holder</span>
+<span class="w">        </span><span class="c1">// or: return Foo(...); // return by value (move constructor)</span>
+<span class="w">    </span><span class="p">}));</span>
+</pre></div>
+</div>
+<p>Mirroring the custom constructor changes, <code class="docutils literal notranslate"><span class="pre">py::pickle()</span></code> is now the preferred
+way to get and set object state. See <a class="reference internal" href="advanced/classes.html#pickling"><span class="std std-ref">Pickling support</span></a> for details.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old -- deprecated (runtime warning shown only in debug mode)</span>
+<span class="n">py</span><span class="o">::</span><span class="k">class</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getstate__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Foo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">value1</span><span class="p">(),</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">value2</span><span class="p">(),</span><span class="w"> </span><span class="p">...);</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setstate__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">Foo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="n">Foo</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="p">...);</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="c1">// new</span>
+<span class="n">py</span><span class="o">::</span><span class="k">class</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">pickle</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Foo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// __getstate__</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">value1</span><span class="p">(),</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">value2</span><span class="p">(),</span><span class="w"> </span><span class="p">...);</span><span class="w"> </span><span class="c1">// unchanged</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[](</span><span class="n">py</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// __setstate__, note: no `self` argument</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Foo</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="p">...);</span>
+<span class="w">            </span><span class="c1">// or: return std::make_unique&lt;Foo&gt;(...); // return by holder</span>
+<span class="w">            </span><span class="c1">// or: return Foo(...); // return by value (move constructor)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">));</span>
+</pre></div>
+</div>
+<p>For both the constructors and pickling, warnings are shown at module
+initialization time (on import, not when the functions are called).
+They’re only visible when compiled in debug mode. Sample warning:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pybind11-bound class &#39;mymodule.Foo&#39; is using an old-style placement-new &#39;__init__&#39;
+which has been deprecated. See the upgrade guide in pybind11&#39;s docs.
+</pre></div>
+</div>
+</section>
+<section id="stricter-enforcement-of-hidden-symbol-visibility-for-pybind11-modules">
+<h3>Stricter enforcement of hidden symbol visibility for pybind11 modules<a class="headerlink" href="#stricter-enforcement-of-hidden-symbol-visibility-for-pybind11-modules" title="Link to this heading"></a></h3>
+<p>pybind11 now tries to actively enforce hidden symbol visibility for modules.
+If you’re using either one of pybind11’s <a class="reference internal" href="compiling.html"><span class="doc">CMake or Python build systems</span></a> (the two example repositories) and you haven’t been exporting any
+symbols, there’s nothing to be concerned about. All the changes have been done
+transparently in the background. If you were building manually or relied on
+specific default visibility, read on.</p>
+<p>Setting default symbol visibility to <em>hidden</em> has always been recommended for
+pybind11 (see <a class="reference internal" href="faq.html#faq-symhidden"><span class="std std-ref">How can I create smaller binaries?</span></a>). On Linux and macOS, hidden symbol
+visibility (in conjunction with the <code class="docutils literal notranslate"><span class="pre">strip</span></code> utility) yields much smaller
+module binaries. <a class="reference external" href="https://docs.python.org/3/extending/extending.html#providing-a-c-api-for-an-extension-module">CPython’s extension docs</a> also recommend hiding symbols
+by default, with the goal of avoiding symbol name clashes between modules.
+Starting with v2.2, pybind11 enforces this more strictly: (1) by declaring
+all symbols inside the <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> namespace as hidden and (2) by including
+the <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> flag on Linux and macOS (only for extension
+modules, not for embedding the interpreter).</p>
+<p>The namespace-scope hidden visibility is done automatically in pybind11’s
+headers and it’s generally transparent to users. It ensures that:</p>
+<ul class="simple">
+<li><p>Modules compiled with different pybind11 versions don’t clash with each other.</p></li>
+<li><p>Some new features, like <code class="docutils literal notranslate"><span class="pre">py::module_local</span></code> bindings, can work as intended.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> flag applies the same visibility to user bindings
+outside of the <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> namespace. It’s now set automatic by pybind11’s
+CMake and Python build systems, but this needs to be done manually by users
+of other build systems. Adding this flag:</p>
+<ul class="simple">
+<li><p>Minimizes the chances of symbol conflicts between modules. E.g. if two
+unrelated modules were statically linked to different (ABI-incompatible)
+versions of the same third-party library, a symbol clash would be likely
+(and would end with unpredictable results).</p></li>
+<li><p>Produces smaller binaries on Linux and macOS, as pointed out previously.</p></li>
+</ul>
+<p>Within pybind11’s CMake build system, <code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> has always been
+setting the <code class="docutils literal notranslate"><span class="pre">-fvisibility=hidden</span></code> flag in release mode. From now on, it’s
+being applied unconditionally, even in debug mode and it can no longer be opted
+out of with the <code class="docutils literal notranslate"><span class="pre">NO_EXTRAS</span></code> option. The <code class="docutils literal notranslate"><span class="pre">pybind11::module</span></code> target now also
+adds this flag to its interface. The <code class="docutils literal notranslate"><span class="pre">pybind11::embed</span></code> target is unchanged.</p>
+<p>The most significant change here is for the <code class="docutils literal notranslate"><span class="pre">pybind11::module</span></code> target. If you
+were previously relying on default visibility, i.e. if your Python module was
+doubling as a shared library with dependents, you’ll need to either export
+symbols manually (recommended for cross-platform libraries) or factor out the
+shared library (and have the Python module link to it like the other
+dependents). As a temporary workaround, you can also restore default visibility
+using the CMake code below, but this is not recommended in the long run:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mymodule</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">pybind11::module</span><span class="p">)</span>
+
+<span class="nb">add_library</span><span class="p">(</span><span class="s">restore_default_visibility</span><span class="w"> </span><span class="s">INTERFACE</span><span class="p">)</span>
+<span class="nb">target_compile_options</span><span class="p">(</span><span class="s">restore_default_visibility</span><span class="w"> </span><span class="s">INTERFACE</span><span class="w"> </span><span class="s">-fvisibility=default</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mymodule</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">restore_default_visibility</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="local-stl-container-bindings">
+<h3>Local STL container bindings<a class="headerlink" href="#local-stl-container-bindings" title="Link to this heading"></a></h3>
+<p>Previous pybind11 versions could only bind types globally – all pybind11
+modules, even unrelated ones, would have access to the same exported types.
+However, this would also result in a conflict if two modules exported the
+same C++ type, which is especially problematic for very common types, e.g.
+<code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code>. <a class="reference internal" href="advanced/classes.html#module-local"><span class="std std-ref">Module-local class bindings</span></a> were added to resolve this (see
+that section for a complete usage guide).</p>
+<p><code class="docutils literal notranslate"><span class="pre">py::class_</span></code> still defaults to global bindings (because these types are
+usually unique across modules), however in order to avoid clashes of opaque
+types, <code class="docutils literal notranslate"><span class="pre">py::bind_vector</span></code> and <code class="docutils literal notranslate"><span class="pre">py::bind_map</span></code> will now bind STL containers
+as <code class="docutils literal notranslate"><span class="pre">py::module_local</span></code> if their elements are: builtins (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>,
+etc.), not bound using <code class="docutils literal notranslate"><span class="pre">py::class_</span></code>, or bound as <code class="docutils literal notranslate"><span class="pre">py::module_local</span></code>. For
+example, this change allows multiple modules to bind <code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code>
+without causing conflicts. See <a class="reference internal" href="advanced/cast/stl.html#stl-bind"><span class="std std-ref">Binding STL containers</span></a> for more details.</p>
+<p>When upgrading to this version, if you have multiple modules which depend on
+a single global binding of an STL container, note that all modules can still
+accept foreign  <code class="docutils literal notranslate"><span class="pre">py::module_local</span></code> types in the direction of Python-to-C++.
+The locality only affects the C++-to-Python direction. If this is needed in
+multiple modules, you’ll need to either:</p>
+<ul class="simple">
+<li><p>Add a copy of the same STL binding to all of the modules which need it.</p></li>
+<li><p>Restore the global status of that single binding by marking it
+<code class="docutils literal notranslate"><span class="pre">py::module_local(false)</span></code>.</p></li>
+</ul>
+<p>The latter is an easy workaround, but in the long run it would be best to
+localize all common type bindings in order to avoid conflicts with
+third-party modules.</p>
+</section>
+<section id="negative-strides-for-python-buffer-objects-and-numpy-arrays">
+<h3>Negative strides for Python buffer objects and numpy arrays<a class="headerlink" href="#negative-strides-for-python-buffer-objects-and-numpy-arrays" title="Link to this heading"></a></h3>
+<p>Support for negative strides required changing the integer type from unsigned
+to signed in the interfaces of <code class="docutils literal notranslate"><span class="pre">py::buffer_info</span></code> and <code class="docutils literal notranslate"><span class="pre">py::array</span></code>. If you
+have compiler warnings enabled, you may notice some new conversion warnings
+after upgrading. These can be resolved using <code class="docutils literal notranslate"><span class="pre">static_cast</span></code>.</p>
+</section>
+<section id="deprecation-of-some-py-object-apis">
+<h3>Deprecation of some <code class="docutils literal notranslate"><span class="pre">py::object</span></code> APIs<a class="headerlink" href="#deprecation-of-some-py-object-apis" title="Link to this heading"></a></h3>
+<p>To compare <code class="docutils literal notranslate"><span class="pre">py::object</span></code> instances by pointer, you should now use
+<code class="docutils literal notranslate"><span class="pre">obj1.is(obj2)</span></code> which is equivalent to <code class="docutils literal notranslate"><span class="pre">obj1</span> <span class="pre">is</span> <span class="pre">obj2</span></code> in Python.
+Previously, pybind11 used <code class="docutils literal notranslate"><span class="pre">operator==</span></code> for this (<code class="docutils literal notranslate"><span class="pre">obj1</span> <span class="pre">==</span> <span class="pre">obj2</span></code>), but
+that could be confusing and is now deprecated (so that it can eventually
+be replaced with proper rich object comparison in a future release).</p>
+<p>For classes which inherit from <code class="docutils literal notranslate"><span class="pre">py::object</span></code>, <code class="docutils literal notranslate"><span class="pre">borrowed</span></code> and <code class="docutils literal notranslate"><span class="pre">stolen</span></code>
+were previously available as protected constructor tags. Now the types
+should be used directly instead: <code class="docutils literal notranslate"><span class="pre">borrowed_t{}</span></code> and <code class="docutils literal notranslate"><span class="pre">stolen_t{}</span></code>
+(<a class="reference external" href="https://github.com/pybind/pybind11/pull/771">#771</a>).</p>
+</section>
+<section id="stricter-compile-time-error-checking">
+<h3>Stricter compile-time error checking<a class="headerlink" href="#stricter-compile-time-error-checking" title="Link to this heading"></a></h3>
+<p>Some error checks have been moved from run time to compile time. Notably,
+automatic conversion of <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;T&gt;</span></code> is not possible when <code class="docutils literal notranslate"><span class="pre">T</span></code> is
+not directly registered with <code class="docutils literal notranslate"><span class="pre">py::class_&lt;T&gt;</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;int&gt;</span></code>
+or <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;std::vector&lt;T&gt;&gt;</span></code> are not automatically convertible).
+Attempting to bind a function with such arguments now results in a compile-time
+error instead of waiting to fail at run time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">py::init&lt;...&gt;()</span></code> constructor definitions are also stricter and now prevent
+bindings which could cause unexpected behavior:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Example</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Example</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">());</span><span class="w"> </span><span class="c1">// OK, exact match</span>
+<span class="w">    </span><span class="c1">// .def(py::init&lt;int&gt;()); // compile-time error, mismatch</span>
+</pre></div>
+</div>
+<p>A non-<code class="docutils literal notranslate"><span class="pre">const</span></code> lvalue reference is not allowed to bind to an rvalue. However,
+note that a constructor taking <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">T</span> <span class="pre">&amp;</span></code> can still be registered using
+<code class="docutils literal notranslate"><span class="pre">py::init&lt;T&gt;()</span></code> because a <code class="docutils literal notranslate"><span class="pre">const</span></code> lvalue reference can bind to an rvalue.</p>
+</section>
+</section>
+<section id="v2-1">
+<h2>v2.1<a class="headerlink" href="#v2-1" title="Link to this heading"></a></h2>
+<section id="minimum-compiler-versions-are-enforced-at-compile-time">
+<h3>Minimum compiler versions are enforced at compile time<a class="headerlink" href="#minimum-compiler-versions-are-enforced-at-compile-time" title="Link to this heading"></a></h3>
+<p>The minimums also apply to v2.0 but the check is now explicit and a compile-time
+error is raised if the compiler does not meet the requirements:</p>
+<ul class="simple">
+<li><p>GCC &gt;= 4.8</p></li>
+<li><p>clang &gt;= 3.3 (appleclang &gt;= 5.0)</p></li>
+<li><p>MSVC &gt;= 2015u3</p></li>
+<li><p>Intel C++ &gt;= 15.0</p></li>
+</ul>
+</section>
+<section id="the-py-metaclass-attribute-is-not-required-for-static-properties">
+<h3>The <code class="docutils literal notranslate"><span class="pre">py::metaclass</span></code> attribute is not required for static properties<a class="headerlink" href="#the-py-metaclass-attribute-is-not-required-for-static-properties" title="Link to this heading"></a></h3>
+<p>Binding classes with static properties is now possible by default. The
+zero-parameter version of <code class="docutils literal notranslate"><span class="pre">py::metaclass()</span></code> is deprecated. However, a new
+one-parameter <code class="docutils literal notranslate"><span class="pre">py::metaclass(python_type)</span></code> version was added for rare
+cases when a custom metaclass is needed to override pybind11’s default.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old -- emits a deprecation warning</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">metaclass</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_property_readonly_static</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+
+<span class="c1">// new -- static properties work without the attribute</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_property_readonly_static</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+
+<span class="c1">// new -- advanced feature, override pybind11&#39;s default metaclass</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Bar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">metaclass</span><span class="p">(</span><span class="n">custom_python_type</span><span class="p">))</span>
+<span class="w">    </span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="v2-0">
+<h2>v2.0<a class="headerlink" href="#v2-0" title="Link to this heading"></a></h2>
+<section id="breaking-changes-in-py-class">
+<h3>Breaking changes in <code class="docutils literal notranslate"><span class="pre">py::class_</span></code><a class="headerlink" href="#breaking-changes-in-py-class" title="Link to this heading"></a></h3>
+<p>These changes were necessary to make type definitions in pybind11
+future-proof, to support PyPy via its <code class="docutils literal notranslate"><span class="pre">cpyext</span></code> mechanism (<a class="reference external" href="https://github.com/pybind/pybind11/pull/527">#527</a>), and to improve efficiency
+(<a class="reference external" href="https://github.com/pybind/pybind11/commit/86d825">rev. 86d825</a>).</p>
+<ol class="arabic">
+<li><p>Declarations of types that provide access via the buffer protocol must
+now include the <code class="docutils literal notranslate"><span class="pre">py::buffer_protocol()</span></code> annotation as an argument to
+the <code class="docutils literal notranslate"><span class="pre">py::class_</span></code> constructor.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Matrix</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Matrix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">buffer_protocol</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def_buffer</span><span class="p">(...);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Classes which include static properties (e.g. <code class="docutils literal notranslate"><span class="pre">def_readwrite_static()</span></code>)
+must now include the <code class="docutils literal notranslate"><span class="pre">py::metaclass()</span></code> attribute. Note: this requirement
+has since been removed in v2.1. If you’re upgrading from 1.x, it’s
+recommended to skip directly to v2.1 or newer.</p></li>
+<li><p>This version of pybind11 uses a redesigned mechanism for instantiating
+trampoline classes that are used to override virtual methods from within
+Python. This led to the following user-visible syntax change:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old v1.x syntax</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">TrampolineClass</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MyClass&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">alias</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">...</span>
+
+<span class="c1">// new v2.x syntax</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="p">,</span><span class="w"> </span><span class="n">TrampolineClass</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MyClass&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
+</pre></div>
+</div>
+<p>Importantly, both the original and the trampoline class are now specified
+as arguments to the <code class="docutils literal notranslate"><span class="pre">py::class_</span></code> template, and the <code class="docutils literal notranslate"><span class="pre">alias&lt;..&gt;()</span></code> call
+is gone. The new scheme has zero overhead in cases when Python doesn’t
+override any functions of the underlying C++ class.
+<a class="reference external" href="https://github.com/pybind/pybind11/commit/86d825">rev. 86d825</a>.</p>
+<p>The class type must be the first template argument given to <code class="docutils literal notranslate"><span class="pre">py::class_</span></code>
+while the trampoline can be mixed in arbitrary order with other arguments
+(see the following section).</p>
+</li>
+</ol>
+</section>
+<section id="deprecation-of-the-py-base-t-attribute">
+<h3>Deprecation of the <code class="docutils literal notranslate"><span class="pre">py::base&lt;T&gt;()</span></code> attribute<a class="headerlink" href="#deprecation-of-the-py-base-t-attribute" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">py::base&lt;T&gt;()</span></code> was deprecated in favor of specifying <code class="docutils literal notranslate"><span class="pre">T</span></code> as a template
+argument to <code class="docutils literal notranslate"><span class="pre">py::class_</span></code>. This new syntax also supports multiple inheritance.
+Note that, while the type being exported must be the first argument in the
+<code class="docutils literal notranslate"><span class="pre">py::class_&lt;Class,</span> <span class="pre">...&gt;</span></code> template, the order of the following types (bases,
+holder and/or trampoline) is not important.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// old v1.x</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Derived</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Derived&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">base</span><span class="o">&lt;</span><span class="n">Base</span><span class="o">&gt;</span><span class="p">());</span>
+
+<span class="c1">// new v2.x</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Derived</span><span class="p">,</span><span class="w"> </span><span class="n">Base</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Derived&quot;</span><span class="p">);</span>
+
+<span class="c1">// new -- multiple inheritance</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Derived</span><span class="p">,</span><span class="w"> </span><span class="n">Base1</span><span class="p">,</span><span class="w"> </span><span class="n">Base2</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Derived&quot;</span><span class="p">);</span>
+
+<span class="c1">// new -- apart from `Derived` the argument order can be arbitrary</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">Derived</span><span class="p">,</span><span class="w"> </span><span class="n">Base1</span><span class="p">,</span><span class="w"> </span><span class="n">Holder</span><span class="p">,</span><span class="w"> </span><span class="n">Base2</span><span class="p">,</span><span class="w"> </span><span class="n">Trampoline</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Derived&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="out-of-the-box-support-for-std-shared-ptr">
+<h3>Out-of-the-box support for <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code><a class="headerlink" href="#out-of-the-box-support-for-std-shared-ptr" title="Link to this heading"></a></h3>
+<p>The relevant type caster is now built in, so it’s no longer necessary to
+include a declaration of the form:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PYBIND11_DECLARE_HOLDER_TYPE</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Continuing to do so won’t cause an error or even a deprecation warning,
+but it’s completely redundant.</p>
+</section>
+<section id="deprecation-of-a-few-py-object-apis">
+<h3>Deprecation of a few <code class="docutils literal notranslate"><span class="pre">py::object</span></code> APIs<a class="headerlink" href="#deprecation-of-a-few-py-object-apis" title="Link to this heading"></a></h3>
+<p>All of the old-style calls emit deprecation warnings.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Old syntax</p></th>
+<th class="head"><p>New syntax</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">obj.call(args...)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">obj(args...)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">obj.str()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">py::str(obj)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">l</span> <span class="pre">=</span> <span class="pre">py::list(obj);</span> <span class="pre">l.check()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">py::isinstance&lt;py::list&gt;(obj)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">py::object(ptr,</span> <span class="pre">true)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">py::reinterpret_borrow&lt;py::object&gt;(ptr)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">py::object(ptr,</span> <span class="pre">false)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">py::reinterpret_steal&lt;py::object&gt;(ptr)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(obj.attr(&quot;foo&quot;))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(py::hasattr(obj,</span> <span class="pre">&quot;foo&quot;))</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(obj[&quot;bar&quot;])</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(obj.contains(&quot;bar&quot;))</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

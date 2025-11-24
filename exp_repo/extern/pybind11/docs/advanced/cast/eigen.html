@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eigen &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Eigen</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/cast/eigen.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="eigen">
+<h1>Eigen<a class="headerlink" href="#eigen" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> is C++ header-based library for dense and
+sparse linear algebra. Due to its popularity and widespread adoption, pybind11
+provides transparent conversion and limited mapping support between Eigen and
+Scientific Python linear algebra data types.</p>
+<p>To enable the built-in Eigen support you must include the optional header file
+<code class="file docutils literal notranslate"><span class="pre">pybind11/eigen.h</span></code>.</p>
+<section id="pass-by-value">
+<h2>Pass-by-value<a class="headerlink" href="#pass-by-value" title="Link to this heading"></a></h2>
+<p>When binding a function with ordinary Eigen dense object arguments (for
+example, <code class="docutils literal notranslate"><span class="pre">Eigen::MatrixXd</span></code>), pybind11 will accept any input value that is
+already (or convertible to) a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> with dimensions compatible with
+the Eigen type, copy its values into a temporary Eigen variable of the
+appropriate type, then call the function with this temporary variable.</p>
+<p>Sparse matrices are similarly copied to or from
+<code class="docutils literal notranslate"><span class="pre">scipy.sparse.csr_matrix</span></code>/<code class="docutils literal notranslate"><span class="pre">scipy.sparse.csc_matrix</span></code> objects.</p>
+</section>
+<section id="pass-by-reference">
+<h2>Pass-by-reference<a class="headerlink" href="#pass-by-reference" title="Link to this heading"></a></h2>
+<p>One major limitation of the above is that every data conversion implicitly
+involves a copy, which can be both expensive (for large matrices) and disallows
+binding functions that change their (Matrix) arguments.  Pybind11 allows you to
+work around this by using Eigen’s <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixType&gt;</span></code> class much as you
+would when writing a function taking a generic type in Eigen itself (subject to
+some limitations discussed below).</p>
+<p>When calling a bound function accepting a <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;const</span> <span class="pre">MatrixType&gt;</span></code>
+type, pybind11 will attempt to avoid copying by using an <code class="docutils literal notranslate"><span class="pre">Eigen::Map</span></code> object
+that maps into the source <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> data: this requires both that the
+data types are the same (e.g. <code class="docutils literal notranslate"><span class="pre">dtype='float64'</span></code> and <code class="docutils literal notranslate"><span class="pre">MatrixType::Scalar</span></code> is
+<code class="docutils literal notranslate"><span class="pre">double</span></code>); and that the storage is layout compatible.  The latter limitation
+is discussed in detail in the section below, and requires careful
+consideration: by default, numpy matrices and Eigen matrices are <em>not</em> storage
+compatible.</p>
+<p>If the numpy matrix cannot be used as is (either because its types differ, e.g.
+passing an array of integers to an Eigen parameter requiring doubles, or
+because the storage is incompatible), pybind11 makes a temporary copy and
+passes the copy instead.</p>
+<p>When a bound function parameter is instead <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixType&gt;</span></code> (note the
+lack of <code class="docutils literal notranslate"><span class="pre">const</span></code>), pybind11 will only allow the function to be called if it
+can be mapped <em>and</em> if the numpy array is writeable (that is
+<code class="docutils literal notranslate"><span class="pre">a.flags.writeable</span></code> is true).  Any access (including modification) made to
+the passed variable will be transparently carried out directly on the
+<code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>.</p>
+<p>This means you can write code such as the following and have it work as
+expected:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">scale_by_2</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Ref</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note, however, that you will likely run into limitations due to numpy and
+Eigen’s difference default storage order for data; see the below section on
+<a class="reference internal" href="#storage-orders"><span class="std std-ref">Storage orders</span></a> for details on how to bind code that won’t run into such
+limitations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Passing by reference is not supported for sparse types.</p>
+</div>
+</section>
+<section id="returning-values-to-python">
+<h2>Returning values to Python<a class="headerlink" href="#returning-values-to-python" title="Link to this heading"></a></h2>
+<p>When returning an ordinary dense Eigen matrix type to numpy (e.g.
+<code class="docutils literal notranslate"><span class="pre">Eigen::MatrixXd</span></code> or <code class="docutils literal notranslate"><span class="pre">Eigen::RowVectorXf</span></code>) pybind11 keeps the matrix and
+returns a numpy array that directly references the Eigen matrix: no copy of the
+data is performed.  The numpy array will have <code class="docutils literal notranslate"><span class="pre">array.flags.owndata</span></code> set to
+<code class="docutils literal notranslate"><span class="pre">False</span></code> to indicate that it does not own the data, and the lifetime of the
+stored Eigen matrix will be tied to the returned <code class="docutils literal notranslate"><span class="pre">array</span></code>.</p>
+<p>If you bind a function with a non-reference, <code class="docutils literal notranslate"><span class="pre">const</span></code> return type (e.g.
+<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">Eigen::MatrixXd</span></code>), the same thing happens except that pybind11 also
+sets the numpy array’s <code class="docutils literal notranslate"><span class="pre">writeable</span></code> flag to false.</p>
+<p>If you return an lvalue reference or pointer, the usual pybind11 rules apply,
+as dictated by the binding function’s return value policy (see the
+documentation on <a class="reference internal" href="../functions.html#return-value-policies"><span class="std std-ref">Return value policies</span></a> for full details).  That means,
+without an explicit return value policy, lvalue references will be copied and
+pointers will be managed by pybind11.  In order to avoid copying, you should
+explicitly specify an appropriate return value policy, as in the following
+example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">big_mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">);</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getMatrix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">big_mat</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="o">&amp;</span><span class="n">viewMatrix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">big_mat</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Later, in binding code:</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MyClass&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;copy_matrix&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">getMatrix</span><span class="p">)</span><span class="w"> </span><span class="c1">// Makes a copy!</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;get_matrix&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">getMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference_internal</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;view_matrix&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">viewMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference_internal</span><span class="p">)</span>
+<span class="w">    </span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get_matrix</span><span class="p">()</span>  <span class="c1"># flags.writeable = True,  flags.owndata = False</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">view_matrix</span><span class="p">()</span>  <span class="c1"># flags.writeable = False, flags.owndata = False</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy_matrix</span><span class="p">()</span>  <span class="c1"># flags.writeable = True,  flags.owndata = True</span>
+<span class="c1"># m[5,6] and v[5,6] refer to the same element, c[5,6] does not.</span>
+</pre></div>
+</div>
+<p>Note in this example that <code class="docutils literal notranslate"><span class="pre">py::return_value_policy::reference_internal</span></code> is
+used to tie the life of the MyClass object to the life of the returned arrays.</p>
+<p>You may also return an <code class="docutils literal notranslate"><span class="pre">Eigen::Ref</span></code>, <code class="docutils literal notranslate"><span class="pre">Eigen::Map</span></code> or other map-like Eigen
+object (for example, the return value of <code class="docutils literal notranslate"><span class="pre">matrix.block()</span></code> and related
+methods) that map into a dense Eigen type.  When doing so, the default
+behaviour of pybind11 is to simply reference the returned data: you must take
+care to ensure that this data remains valid!  You may ask pybind11 to
+explicitly <em>copy</em> such a return value by using the
+<code class="docutils literal notranslate"><span class="pre">py::return_value_policy::copy</span></code> policy when binding the function.  You may
+also use <code class="docutils literal notranslate"><span class="pre">py::return_value_policy::reference_internal</span></code> or a
+<code class="docutils literal notranslate"><span class="pre">py::keep_alive</span></code> to ensure the data stays valid as long as the returned numpy
+array does.</p>
+<p>When returning such a reference of map, pybind11 additionally respects the
+readonly-status of the returned value, marking the numpy array as non-writeable
+if the reference or map was itself read-only.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sparse types are always copied when returned.</p>
+</div>
+</section>
+<section id="storage-orders">
+<span id="id2"></span><h2>Storage orders<a class="headerlink" href="#storage-orders" title="Link to this heading"></a></h2>
+<p>Passing arguments via <code class="docutils literal notranslate"><span class="pre">Eigen::Ref</span></code> has some limitations that you must be
+aware of in order to effectively pass matrices by reference.  First and
+foremost is that the default <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixType&gt;</span></code> class requires
+contiguous storage along columns (for column-major types, the default in Eigen)
+or rows if <code class="docutils literal notranslate"><span class="pre">MatrixType</span></code> is specifically an <code class="docutils literal notranslate"><span class="pre">Eigen::RowMajor</span></code> storage type.
+The former, Eigen’s default, is incompatible with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>’s default row-major
+storage, and so you will not be able to pass numpy arrays to Eigen by reference
+without making one of two changes.</p>
+<p>(Note that this does not apply to vectors (or column or row matrices): for such
+types the “row-major” and “column-major” distinction is meaningless).</p>
+<p>The first approach is to change the use of <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixType&gt;</span></code> to the
+more general <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixType,</span> <span class="pre">0,</span> <span class="pre">Eigen::Stride&lt;Eigen::Dynamic,</span>
+<span class="pre">Eigen::Dynamic&gt;&gt;</span></code> (or similar type with a fully dynamic stride type in the
+third template argument).  Since this is a rather cumbersome type, pybind11
+provides a <code class="docutils literal notranslate"><span class="pre">py::EigenDRef&lt;MatrixType&gt;</span></code> type alias for your convenience (along
+with EigenDMap for the equivalent Map, and EigenDStride for just the stride
+type).</p>
+<p>This type allows Eigen to map into any arbitrary storage order.  This is not
+the default in Eigen for performance reasons: contiguous storage allows
+vectorization that cannot be done when storage is not known to be contiguous at
+compile time.  The default <code class="docutils literal notranslate"><span class="pre">Eigen::Ref</span></code> stride type allows non-contiguous
+storage along the outer dimension (that is, the rows of a column-major matrix
+or columns of a row-major matrix), but not along the inner dimension.</p>
+<p>This type, however, has the added benefit of also being able to map numpy array
+slices.  For example, the following (contrived) example uses Eigen with a numpy
+slice to multiply by 2 all coefficients that are both on even rows (0, 2, 4,
+…) and in columns 2, 5, or 8:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;scale&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">py</span><span class="o">::</span><span class="n">EigenDRef</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a = np.array(...)</span>
+<span class="n">scale_by_2</span><span class="p">(</span><span class="n">myarray</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The second approach to avoid copying is more intrusive: rearranging the
+underlying data types to not run into the non-contiguous storage problem in the
+first place.  In particular, that means using matrices with <code class="docutils literal notranslate"><span class="pre">Eigen::RowMajor</span></code>
+storage, where appropriate, such as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">RowMatrixXd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowMajor</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="c1">// Use RowMatrixXd instead of MatrixXd</span>
+</pre></div>
+</div>
+<p>Now bound functions accepting <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;RowMatrixXd&gt;</span></code> arguments will be
+callable with numpy’s (default) arrays without involving a copying.</p>
+<p>You can, alternatively, change the storage order that numpy arrays use by
+adding the <code class="docutils literal notranslate"><span class="pre">order='F'</span></code> option when creating an array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Such an object will be passable to a bound function accepting an
+<code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixXd&gt;</span></code> (or similar column-major Eigen type).</p>
+<p>One major caveat with this approach, however, is that it is not entirely as
+easy as simply flipping all Eigen or numpy usage from one to the other: some
+operations may alter the storage order of a numpy array.  For example, <code class="docutils literal notranslate"><span class="pre">a2</span> <span class="pre">=</span>
+<span class="pre">array.transpose()</span></code> results in <code class="docutils literal notranslate"><span class="pre">a2</span></code> being a view of <code class="docutils literal notranslate"><span class="pre">array</span></code> that references
+the same data, but in the opposite storage order!</p>
+<p>While this approach allows fully optimized vectorized calculations in Eigen, it
+cannot be used with array slices, unlike the first approach.</p>
+<p>When <em>returning</em> a matrix to Python (either a regular matrix, a reference via
+<code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;&gt;</span></code>, or a map/block into a matrix), no special storage
+consideration is required: the created numpy array will have the required
+stride that allows numpy to properly interpret the array, whatever its storage
+order.</p>
+</section>
+<section id="failing-rather-than-copying">
+<h2>Failing rather than copying<a class="headerlink" href="#failing-rather-than-copying" title="Link to this heading"></a></h2>
+<p>The default behaviour when binding <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;const</span> <span class="pre">MatrixType&gt;</span></code> Eigen
+references is to copy matrix values when passed a numpy array that does not
+conform to the element type of <code class="docutils literal notranslate"><span class="pre">MatrixType</span></code> or does not have a compatible
+stride layout.  If you want to explicitly avoid copying in such a case, you
+should bind arguments using the <code class="docutils literal notranslate"><span class="pre">py::arg().noconvert()</span></code> annotation (as
+described in the <a class="reference internal" href="../functions.html#nonconverting-arguments"><span class="std std-ref">Non-converting arguments</span></a> documentation).</p>
+<p>The following example shows an example of arguments that don’t allow data
+copying to take place:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// The method and function to be bound:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">some_method</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Ref</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">matrix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Ref</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">MatrixXf</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">big</span><span class="p">,</span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Ref</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">MatrixXf</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">small</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// The associated binding code:</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span><span class="w"> </span><span class="c1">// for &quot;arg&quot;_a</span>
+<span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MyClass&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ... other class definitions</span>
+<span class="w">    </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;some_method&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">some_method</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">().</span><span class="n">noconvert</span><span class="p">());</span>
+
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;some_function&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">some_function</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;big&quot;</span><span class="n">_a</span><span class="p">.</span><span class="n">noconvert</span><span class="p">(),</span><span class="w"> </span><span class="c1">// &lt;- Don&#39;t allow copying for this arg</span>
+<span class="w">    </span><span class="s">&quot;small&quot;</span><span class="n">_a</span><span class="w">            </span><span class="c1">// &lt;- This one can be copied if needed</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>With the above binding code, attempting to call the <code class="docutils literal notranslate"><span class="pre">some_method(m)</span></code>
+method on a <code class="docutils literal notranslate"><span class="pre">MyClass</span></code> object, or attempting to call <code class="docutils literal notranslate"><span class="pre">some_function(m,</span> <span class="pre">m2)</span></code>
+will raise a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> rather than making a temporary copy of the array.
+It will, however, allow the <code class="docutils literal notranslate"><span class="pre">m2</span></code> argument to be copied into a temporary if
+necessary.</p>
+<p>Note that explicitly specifying <code class="docutils literal notranslate"><span class="pre">.noconvert()</span></code> is not required for <em>mutable</em>
+Eigen references (e.g. <code class="docutils literal notranslate"><span class="pre">Eigen::Ref&lt;MatrixXd&gt;</span></code> without <code class="docutils literal notranslate"><span class="pre">const</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">MatrixXd</span></code>): mutable references will never be called with a temporary copy.</p>
+</section>
+<section id="vectors-versus-column-row-matrices">
+<h2>Vectors versus column/row matrices<a class="headerlink" href="#vectors-versus-column-row-matrices" title="Link to this heading"></a></h2>
+<p>Eigen and numpy have fundamentally different notions of a vector.  In Eigen, a
+vector is simply a matrix with the number of columns or rows set to 1 at
+compile time (for a column vector or row vector, respectively).  NumPy, in
+contrast, has comparable 2-dimensional 1xN and Nx1 arrays, but <em>also</em> has
+1-dimensional arrays of size N.</p>
+<p>When passing a 2-dimensional 1xN or Nx1 array to Eigen, the Eigen type must
+have matching dimensions: That is, you cannot pass a 2-dimensional Nx1 numpy
+array to an Eigen value expecting a row vector, or a 1xN numpy array as a
+column vector argument.</p>
+<p>On the other hand, pybind11 allows you to pass 1-dimensional arrays of length N
+as Eigen parameters.  If the Eigen type can hold a column vector of length N it
+will be passed as such a column vector.  If not, but the Eigen type constraints
+will accept a row vector, it will be passed as a row vector.  (The column
+vector takes precedence when both are supported, for example, when passing a
+1D numpy array to a MatrixXd argument).  Note that the type need not be
+explicitly a vector: it is permitted to pass a 1D numpy array of size 5 to an
+Eigen <code class="docutils literal notranslate"><span class="pre">Matrix&lt;double,</span> <span class="pre">Dynamic,</span> <span class="pre">5&gt;</span></code>: you would end up with a 1x5 Eigen matrix.
+Passing the same to an <code class="docutils literal notranslate"><span class="pre">Eigen::MatrixXd</span></code> would result in a 5x1 Eigen matrix.</p>
+<p>When returning an Eigen vector to numpy, the conversion is ambiguous: a row
+vector of length 4 could be returned as either a 1D array of length 4, or as a
+2D array of size 1x4.  When encountering such a situation, pybind11 compromises
+by considering the returned Eigen type: if it is a compile-time vector–that
+is, the type has either the number of rows or columns set to 1 at compile
+time–pybind11 converts to a 1D numpy array when returning the value.  For
+instances that are a vector only at run-time (e.g. <code class="docutils literal notranslate"><span class="pre">MatrixXd</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Matrix&lt;float,</span> <span class="pre">Dynamic,</span> <span class="pre">4&gt;</span></code>), pybind11 returns the vector as a 2D array to
+numpy.  If this isn’t want you want, you can use <code class="docutils literal notranslate"><span class="pre">array.reshape(...)</span></code> to get
+a view of the same data in the desired dimensions.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_eigen.cpp</span></code> contains a complete example that
+shows how to pass Eigen sparse and dense data types in more detail.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

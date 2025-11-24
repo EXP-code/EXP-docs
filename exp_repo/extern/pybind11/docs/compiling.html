@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build systems &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Build systems</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/compiling.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="build-systems">
+<span id="compiling"></span><h1>Build systems<a class="headerlink" href="#build-systems" title="Link to this heading"></a></h1>
+<p>For an overview of Python packaging including compiled packaging with a pybind11
+example, along with a cookiecutter that includes several pybind11 options, see
+the <a class="reference external" href="https://learn.scientific-python.org/development/guides/packaging-compiled/">Scientific Python Development Guide</a>.</p>
+<section id="modules-with-cmake">
+<h2>Modules with CMake<a class="headerlink" href="#modules-with-cmake" title="Link to this heading"></a></h2>
+<p>A Python extension module can be created with just a few lines of code:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.15...3.29</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">PYBIND11_FINDPYTHON</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">CONFIG</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="nb">pybind11_add_module</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">example.cpp</span><span class="p">)</span>
+<span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span><span class="w"> </span><span class="s">example</span><span class="w"> </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s">.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(You use the <code class="docutils literal notranslate"><span class="pre">add_subdirectory</span></code> instead, see the example in <a class="reference internal" href="#cmake"><span class="std std-ref">Building with CMake</span></a>.) In
+this example, the code is located in a file named <code class="file docutils literal notranslate"><span class="pre">example.cpp</span></code>.  Either
+method will import the pybind11 project which provides the
+<code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> function. It will take care of all the details needed
+to build a Python extension module on any platform.</p>
+<p>To build with pip, build, cibuildwheel, uv, or other Python tools, you can
+add a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file like this:</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;scikit-build-core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pybind11&quot;</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;scikit_build_core.build&quot;</span>
+
+<span class="k">[project]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;example&quot;</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span>
+</pre></div>
+</div>
+<p>You don’t need setuptools files like <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>, as this is not setuptools. See <a class="reference external" href="https://scikit-build-core.readthedocs.io">scikit-build-core</a> for details.
+For projects you plan to upload to PyPI, be sure to fill out the <code class="docutils literal notranslate"><span class="pre">[project]</span></code>
+table with other important metadata as well (see <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml">Writing pyproject.toml</a>).</p>
+<p>A working sample project can be found in the <a class="reference internal" href="#scikit-build-example" id="id1"><span>[scikit_build_example]</span></a>
+repository. An older and harder-to-maintain method is in <a class="reference internal" href="#cmake-example" id="id2"><span>[cmake_example]</span></a>. More
+details about our cmake support can be found below in <a class="reference internal" href="#cmake"><span class="std std-ref">Building with CMake</span></a>.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="scikit-build-example" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">scikit_build_example</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/pybind/scikit_build_example">https://github.com/pybind/scikit_build_example</a></p>
+</div>
+<div class="citation" id="cmake-example" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>cmake_example<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p><a class="reference external" href="https://github.com/pybind/cmake_example">https://github.com/pybind/cmake_example</a></p>
+</div>
+</div>
+</section>
+<section id="modules-with-meson-python">
+<span id="modules-meson-python"></span><h2>Modules with meson-python<a class="headerlink" href="#modules-with-meson-python" title="Link to this heading"></a></h2>
+<p>You can also build a package with <a class="reference external" href="https://mesonbuild.com">Meson</a> using <a class="reference external" href="https://meson-python.readthedocs.io/en/latest">meson-python</a>, if you prefer
+that. Your <code class="docutils literal notranslate"><span class="pre">meson.build</span></code> file would look something like this:</p>
+<div class="highlight-meson notranslate" id="meson-example"><div class="highlight"><pre><span></span><span class="nb">project</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&#39;example&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&#39;cpp&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.1.0&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">default_options</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s">&#39;cpp_std=c++11&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">import</span><span class="p">(</span><span class="s">&#39;python&#39;</span><span class="p">).</span><span class="n">find_installation</span><span class="p">(</span><span class="n">pure</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+<span class="n">pybind11_dep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dependency</span><span class="p">(</span><span class="s">&#39;pybind11&#39;</span><span class="p">)</span>
+
+<span class="n">py</span><span class="p">.</span><span class="n">extension_module</span><span class="p">(</span><span class="s">&#39;example&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&#39;example.cpp&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">install</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">pybind11_dep</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>And you would need a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file like this:</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;meson-python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pybind11&quot;</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;mesonpy&quot;</span>
+</pre></div>
+</div>
+<p>Meson-python <em>requires</em> your project to be in git (or mercurial) as it uses it
+for the SDist creation. For projects you plan to upload to PyPI, be sure to fill out the
+<code class="docutils literal notranslate"><span class="pre">[project]</span></code> table as well (see <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml">Writing pyproject.toml</a>).</p>
+</section>
+<section id="modules-with-setuptools">
+<span id="build-setuptools"></span><h2>Modules with setuptools<a class="headerlink" href="#modules-with-setuptools" title="Link to this heading"></a></h2>
+<p>For projects on PyPI, a historically popular option is setuptools. Sylvain
+Corlay has kindly provided an example project which shows how to set up
+everything, including automatic generation of documentation using Sphinx.
+Please refer to the <a class="reference internal" href="#python-example" id="id3"><span>[python_example]</span></a> repository.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="python-example" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">python_example</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/pybind/python_example">https://github.com/pybind/python_example</a></p>
+</div>
+</div>
+<p>A helper file is provided with pybind11 that can simplify usage with setuptools.</p>
+<p>To use pybind11 inside your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, you have to have some system to
+ensure that <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> is installed when you build your package. There are
+four possible ways to do this, and pybind11 supports all four: You can ask all
+users to install pybind11 beforehand (bad), you can use
+<a class="reference internal" href="#setup-helpers-pep518"><span class="std std-ref">Build requirements</span></a> (good), <code class="docutils literal notranslate"><span class="pre">setup_requires=</span></code> (discouraged), or you
+can <a class="reference internal" href="#setup-helpers-copy-manually"><span class="std std-ref">Copy manually</span></a> (works but you have to manually sync
+your copy to get updates). Third party packagers like conda-forge generally
+strongly prefer the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> method, as it gives them control over
+the <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> version, and they may apply patches, etc.</p>
+<p>An example of a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> using pybind11’s helpers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pybind11.setup_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pybind11Extension</span>
+
+<span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Pybind11Extension</span><span class="p">(</span>
+        <span class="s2">&quot;python_example&quot;</span><span class="p">,</span>
+        <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)),</span>  <span class="c1"># Sort source files for reproducibility</span>
+    <span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ext_modules</span><span class="o">=</span><span class="n">ext_modules</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you want to do an automatic search for the highest supported C++ standard,
+that is supported via a <code class="docutils literal notranslate"><span class="pre">build_ext</span></code> command override; it will only affect
+<code class="docutils literal notranslate"><span class="pre">Pybind11Extensions</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pybind11.setup_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pybind11Extension</span><span class="p">,</span> <span class="n">build_ext</span>
+
+<span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Pybind11Extension</span><span class="p">(</span>
+        <span class="s2">&quot;python_example&quot;</span><span class="p">,</span>
+        <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)),</span>
+    <span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">cmdclass</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;build_ext&quot;</span><span class="p">:</span> <span class="n">build_ext</span><span class="p">},</span> <span class="n">ext_modules</span><span class="o">=</span><span class="n">ext_modules</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you have single-file extension modules that are directly stored in the
+Python source tree (<code class="docutils literal notranslate"><span class="pre">foo.cpp</span></code> in the same directory as where a <code class="docutils literal notranslate"><span class="pre">foo.py</span></code>
+would be located), you can also generate <code class="docutils literal notranslate"><span class="pre">Pybind11Extensions</span></code> using
+<code class="docutils literal notranslate"><span class="pre">setup_helpers.intree_extensions</span></code>: <code class="docutils literal notranslate"><span class="pre">intree_extensions([&quot;path/to/foo.cpp&quot;,</span>
+<span class="pre">...])</span></code> returns a list of <code class="docutils literal notranslate"><span class="pre">Pybind11Extensions</span></code> which can be passed to
+<code class="docutils literal notranslate"><span class="pre">ext_modules</span></code>, possibly after further customizing their attributes
+(<code class="docutils literal notranslate"><span class="pre">libraries</span></code>, <code class="docutils literal notranslate"><span class="pre">include_dirs</span></code>, etc.).  By doing so, a <code class="docutils literal notranslate"><span class="pre">foo.*.so</span></code> extension
+module will be generated and made available upon installation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">intree_extension</span></code> will automatically detect if you are using a <code class="docutils literal notranslate"><span class="pre">src</span></code>-style
+layout (as long as no namespace packages are involved), but you can also
+explicitly pass <code class="docutils literal notranslate"><span class="pre">package_dir</span></code> to it (as in <code class="docutils literal notranslate"><span class="pre">setuptools.setup</span></code>).</p>
+<p>Since pybind11 does not require NumPy when building, a light-weight replacement
+for NumPy’s parallel compilation distutils tool is included. Use it like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pybind11.setup_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParallelCompile</span>
+
+<span class="c1"># Optional multithreaded build</span>
+<span class="n">ParallelCompile</span><span class="p">(</span><span class="s2">&quot;NPY_NUM_BUILD_JOBS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The argument is the name of an environment variable to control the number of
+threads, such as <code class="docutils literal notranslate"><span class="pre">NPY_NUM_BUILD_JOBS</span></code> (as used by NumPy), though you can set
+something different if you want; <code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_PARALLEL_LEVEL</span></code> is another choice
+a user might expect. You can also pass <code class="docutils literal notranslate"><span class="pre">default=N</span></code> to set the default number
+of threads (0 will take the number of threads available) and <code class="docutils literal notranslate"><span class="pre">max=N</span></code>, the
+maximum number of threads; if you have a large extension you may want set this
+to a memory dependent number.</p>
+<p>If you are developing rapidly and have a lot of C++ files, you may want to
+avoid rebuilding files that have not changed. For simple cases were you are
+using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> and do not have local headers, you can skip the
+rebuild if an object file is newer than its source (headers are not checked!)
+with the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pybind11.setup_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParallelCompile</span><span class="p">,</span> <span class="n">naive_recompile</span>
+
+<span class="n">ParallelCompile</span><span class="p">(</span><span class="s2">&quot;NPY_NUM_BUILD_JOBS&quot;</span><span class="p">,</span> <span class="n">needs_recompile</span><span class="o">=</span><span class="n">naive_recompile</span><span class="p">)</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you have a more complex build, you can implement a smarter function and pass
+it to <code class="docutils literal notranslate"><span class="pre">needs_recompile</span></code>, or you can use <a class="reference internal" href="#ccache" id="id4"><span>[Ccache]</span></a> instead. <code class="docutils literal notranslate"><span class="pre">CXX=&quot;cache</span> <span class="pre">g++&quot;</span>
+<span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> would be the way to use it with GCC, for example. Unlike the
+simple solution, this even works even when not compiling in editable mode, but
+it does require Ccache to be installed.</p>
+<p>Keep in mind that Pip will not even attempt to rebuild if it thinks it has
+already built a copy of your code, which it deduces from the version number.
+One way to avoid this is to use <a class="reference internal" href="#setuptools-scm" id="id5"><span>[setuptools_scm]</span></a>, which will generate a
+version number that includes the number of commits since your last tag and a
+hash for a dirty directory. Another way to force a rebuild is purge your cache
+or use Pip’s <code class="docutils literal notranslate"><span class="pre">--no-cache-dir</span></code> option.</p>
+<p>You also need a <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> file to include all relevant files so that you
+can make an SDist. If you use <a class="reference external" href="https://build.pypa.io/en/latest/">pypa-build</a>, that will build an SDist then a
+wheel from that SDist by default, so you can look inside those files (wheels
+are just zip files with a <code class="docutils literal notranslate"><span class="pre">.whl</span></code> extension) to make sure you aren’t missing
+files.  <a class="reference external" href="https://pypi.io/project/check-manifest">check-manifest</a> (setuptools specific) or <a class="reference external" href="https://pypi.io/project/check-sdist">check-sdist</a> (general) are
+CLI tools that can compare the SDist contents with your source control.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="ccache" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Ccache</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://ccache.dev">https://ccache.dev</a></p>
+</div>
+<div class="citation" id="setuptools-scm" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">setuptools_scm</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/pypa/setuptools_scm">https://github.com/pypa/setuptools_scm</a></p>
+</div>
+</div>
+<section id="build-requirements">
+<span id="setup-helpers-pep518"></span><h3>Build requirements<a class="headerlink" href="#build-requirements" title="Link to this heading"></a></h3>
+<p>With a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file, you can ensure that <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> is available
+during the compilation of your project.  When this file exists, Pip will make a
+new virtual environment, download just the packages listed here in
+<code class="docutils literal notranslate"><span class="pre">requires=</span></code>, and build a wheel (binary Python package). It will then throw
+away the environment, and install your wheel.</p>
+<p>Your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file will likely look something like this:</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;setuptools&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pybind11&quot;</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;setuptools.build_meta&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="copy-manually">
+<span id="setup-helpers-copy-manually"></span><h3>Copy manually<a class="headerlink" href="#copy-manually" title="Link to this heading"></a></h3>
+<p>You can also copy <code class="docutils literal notranslate"><span class="pre">setup_helpers.py</span></code> directly to your project; it was
+designed to be usable standalone, like the old example <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. You can
+set <code class="docutils literal notranslate"><span class="pre">include_pybind11=False</span></code> to skip including the pybind11 package headers,
+so you can use it with git submodules and a specific git version. If you use
+this, you will need to import from a local file in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> and ensure the
+helper file is part of your MANIFEST.</p>
+<p>Closely related, if you include pybind11 as a subproject, you can run the
+<code class="docutils literal notranslate"><span class="pre">setup_helpers.py</span></code> inplace. If loaded correctly, this should even pick up
+the correct include for pybind11, though you can turn it off as shown above if
+you want to input it manually.</p>
+<p>Suggested usage if you have pybind11 as a submodule in <code class="docutils literal notranslate"><span class="pre">extern/pybind11</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DIR</span><span class="p">,</span> <span class="s2">&quot;extern&quot;</span><span class="p">,</span> <span class="s2">&quot;pybind11&quot;</span><span class="p">))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pybind11.setup_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pybind11Extension</span>  <span class="c1"># noqa: E402</span>
+
+<span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.6: </span>Added <code class="docutils literal notranslate"><span class="pre">setup_helpers</span></code> file.</p>
+</div>
+</section>
+</section>
+<section id="building-with-cppimport">
+<h2>Building with cppimport<a class="headerlink" href="#building-with-cppimport" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="#cppimport" id="id6"><span>[cppimport]</span></a> is a small Python import hook that determines whether there is a C++
+source file whose name matches the requested module. If there is, the file is
+compiled as a Python extension using pybind11 and placed in the same folder as
+the C++ source file. Python is then able to find the module and load it.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="cppimport" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">cppimport</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/tbenthompson/cppimport">https://github.com/tbenthompson/cppimport</a></p>
+</div>
+</div>
+</section>
+<section id="building-with-cmake">
+<span id="cmake"></span><h2>Building with CMake<a class="headerlink" href="#building-with-cmake" title="Link to this heading"></a></h2>
+<p>For C++ codebases that have an existing CMake-based build system, a Python
+extension module can be created with just a few lines of code, as seen above in
+the module section. Pybind11 currently supports a lower minimum if you don’t
+use the modern FindPython, though be aware that CMake 3.27 removed the old
+mechanism, so pybind11 will automatically switch if the old mechanism is not
+available. Please opt into the new mechanism if at all possible. Our default
+may change in future versions. This is the minimum required:</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.6: </span>CMake 3.4+ is required.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.11: </span>CMake 3.5+ is required.</p>
+</div>
+<p>Further information can be found at <a class="reference internal" href="cmake/index.html"><span class="doc">CMake helpers</span></a>.</p>
+<section id="pybind11-add-module">
+<h3>pybind11_add_module<a class="headerlink" href="#pybind11-add-module" title="Link to this heading"></a></h3>
+<p>To ease the creation of Python extension modules, pybind11 provides a CMake
+function with the following signature:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">pybind11_add_module</span><span class="p">(</span><span class="s">&lt;name&gt;</span><span class="w"> </span><span class="s">[MODULE</span><span class="w"> </span><span class="s">|</span><span class="w"> </span><span class="s">SHARED]</span><span class="w"> </span><span class="s">[EXCLUDE_FROM_ALL]</span>
+<span class="w">                    </span><span class="s">[NO_EXTRAS]</span><span class="w"> </span><span class="s">[THIN_LTO]</span><span class="w"> </span><span class="s">[OPT_SIZE]</span><span class="w"> </span><span class="s">source1</span><span class="w"> </span><span class="s">[source2</span><span class="w"> </span><span class="s">...]</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function behaves very much like CMake’s builtin <code class="docutils literal notranslate"><span class="pre">add_library</span></code> (in fact,
+it’s a wrapper function around that command). It will add a library target
+called <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> to be built from the listed source files. In addition, it
+will take care of all the Python-specific compiler and linker flags as well
+as the OS- and Python-version-specific file extension. The produced target
+<code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> can be further manipulated with regular CMake commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">MODULE</span></code> or <code class="docutils literal notranslate"><span class="pre">SHARED</span></code> may be given to specify the type of library. If no
+type is given, <code class="docutils literal notranslate"><span class="pre">MODULE</span></code> is used by default which ensures the creation of a
+Python-exclusive module. Specifying <code class="docutils literal notranslate"><span class="pre">SHARED</span></code> will create a more traditional
+dynamic library which can also be linked from elsewhere. <code class="docutils literal notranslate"><span class="pre">EXCLUDE_FROM_ALL</span></code>
+removes this target from the default build (see CMake docs for details).</p>
+<p>Since pybind11 is a template library, <code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> adds compiler
+flags to ensure high quality code generation without bloat arising from long
+symbol names and duplication of code in different translation units. It
+sets default visibility to <em>hidden</em>, which is required for some pybind11
+features and functionality when attempting to load multiple pybind11 modules
+compiled under different pybind11 versions.  It also adds additional flags
+enabling LTO (Link Time Optimization) and strip unneeded symbols. See the
+<a class="reference internal" href="faq.html#faq-symhidden"><span class="std std-ref">FAQ entry</span></a> for a more detailed explanation. These
+latter optimizations are never applied in <code class="docutils literal notranslate"><span class="pre">Debug</span></code> mode.  If <code class="docutils literal notranslate"><span class="pre">NO_EXTRAS</span></code> is
+given, they will always be disabled, even in <code class="docutils literal notranslate"><span class="pre">Release</span></code> mode. However, this
+will result in code bloat and is generally not recommended.</p>
+<p>As stated above, LTO is enabled by default. Some newer compilers also support
+different flavors of LTO such as <a class="reference external" href="http://clang.llvm.org/docs/ThinLTO.html">ThinLTO</a>. Setting <code class="docutils literal notranslate"><span class="pre">THIN_LTO</span></code> will cause
+the function to prefer this flavor if available. The function falls back to
+regular LTO if <code class="docutils literal notranslate"><span class="pre">-flto=thin</span></code> is not available. If
+<code class="docutils literal notranslate"><span class="pre">CMAKE_INTERPROCEDURAL_OPTIMIZATION</span></code> is set (either <code class="docutils literal notranslate"><span class="pre">ON</span></code> or <code class="docutils literal notranslate"><span class="pre">OFF</span></code>), then
+that will be respected instead of the built-in flag search.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to set the property form on targets or the
+<code class="docutils literal notranslate"><span class="pre">CMAKE_INTERPROCEDURAL_OPTIMIZATION_&lt;CONFIG&gt;</span></code> versions of this, you should
+still use <code class="docutils literal notranslate"><span class="pre">set(CMAKE_INTERPROCEDURAL_OPTIMIZATION</span> <span class="pre">OFF)</span></code> (otherwise a
+no-op) to disable pybind11’s ipo flags.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">OPT_SIZE</span></code> flag enables size-based optimization equivalent to the
+standard <code class="docutils literal notranslate"><span class="pre">/Os</span></code> or <code class="docutils literal notranslate"><span class="pre">-Os</span></code> compiler flags and the <code class="docutils literal notranslate"><span class="pre">MinSizeRel</span></code> build type,
+which avoid optimizations that can substantially increase the size of the
+resulting binary. This flag is particularly useful in projects that are split
+into performance-critical parts and associated bindings. In this case, we can
+compile the project in release mode (and hence, optimize performance globally),
+and specify <code class="docutils literal notranslate"><span class="pre">OPT_SIZE</span></code> for the binding target, where size might be the main
+concern as performance is often less critical here. A ~25% size reduction has
+been observed in practice. This flag only changes the optimization behavior at
+a per-target level and takes precedence over the global CMake build type
+(<code class="docutils literal notranslate"><span class="pre">Release</span></code>, <code class="docutils literal notranslate"><span class="pre">RelWithDebInfo</span></code>) except for <code class="docutils literal notranslate"><span class="pre">Debug</span></code> builds, where
+optimizations remain disabled.</p>
+</section>
+<section id="configuration-variables">
+<h3>Configuration variables<a class="headerlink" href="#configuration-variables" title="Link to this heading"></a></h3>
+<p>By default, pybind11 will compile modules with the compiler default or the
+minimum standard required by pybind11, whichever is higher.  You can set the
+standard explicitly with
+<a class="reference external" href="https://cmake.org/cmake/help/latest/variable/CMAKE_CXX_STANDARD.html">CMAKE_CXX_STANDARD</a>:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">14</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;C++ version selection&quot;</span><span class="p">)</span><span class="w">  </span><span class="c"># or 11, 14, 17, 20</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span><span class="w">  </span><span class="c"># optional, ensure standard is supported</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_EXTENSIONS</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span><span class="w">  </span><span class="c"># optional, keep compiler extensions off</span>
+</pre></div>
+</div>
+<p>The variables can also be set when calling CMake from the command line using
+the <code class="docutils literal notranslate"><span class="pre">-D&lt;variable&gt;=&lt;value&gt;</span></code> flag. You can also manually set <code class="docutils literal notranslate"><span class="pre">CXX_STANDARD</span></code>
+on a target or use <code class="docutils literal notranslate"><span class="pre">target_compile_features</span></code> on your targets - anything that
+CMake supports.</p>
+<p>Classic Python support: The target Python version can be selected by setting
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_PYTHON_VERSION</span></code> or an exact Python installation can be specified
+with <code class="docutils literal notranslate"><span class="pre">PYTHON_EXECUTABLE</span></code>.  For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-DPYBIND11_PYTHON_VERSION<span class="o">=</span><span class="m">3</span>.7<span class="w"> </span>..
+
+<span class="c1"># Another method:</span>
+cmake<span class="w"> </span>-DPYTHON_EXECUTABLE<span class="o">=</span>/path/to/python<span class="w"> </span>..
+
+<span class="c1"># This often is a good way to get the current Python, works in environments:</span>
+cmake<span class="w"> </span>-DPYTHON_EXECUTABLE<span class="o">=</span><span class="k">$(</span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys; print(sys.executable)&quot;</span><span class="k">)</span><span class="w"> </span>..
+</pre></div>
+</div>
+</section>
+<section id="find-package-vs-add-subdirectory">
+<h3>find_package vs. add_subdirectory<a class="headerlink" href="#find-package-vs-add-subdirectory" title="Link to this heading"></a></h3>
+<p>For CMake-based projects that don’t include the pybind11 repository internally,
+an external installation can be detected through <code class="docutils literal notranslate"><span class="pre">find_package(pybind11)</span></code>.
+See the <a class="reference external" href="https://github.com/pybind/pybind11/blob/master/tools/pybind11Config.cmake.in">Config file</a> docstring for details of relevant CMake variables.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.4...3.18</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">pybind11_add_module</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">example.cpp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">find_package(pybind11)</span></code> will only work correctly if pybind11
+has been correctly installed on the system, e. g. after downloading or cloning
+the pybind11 repository  :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classic CMake</span>
+<span class="nb">cd</span><span class="w"> </span>pybind11
+mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+make<span class="w"> </span>install
+
+<span class="c1"># CMake 3.15+</span>
+<span class="nb">cd</span><span class="w"> </span>pybind11
+cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>-j<span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="c1"># Build on 2 cores</span>
+cmake<span class="w"> </span>--install<span class="w"> </span>build
+</pre></div>
+</div>
+<p>Once detected, the aforementioned <code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> can be employed as
+before. The function usage and configuration variables are identical no matter
+if pybind11 is added as a subdirectory or found as an installed package. You
+can refer to the same <a class="reference internal" href="#cmake-example" id="id7"><span>[cmake_example]</span></a> repository for a full sample project
+– just swap out <code class="docutils literal notranslate"><span class="pre">add_subdirectory</span></code> for <code class="docutils literal notranslate"><span class="pre">find_package</span></code>.</p>
+</section>
+<section id="findpython-mode">
+<span id="find-python-mode"></span><h3>FindPython mode<a class="headerlink" href="#findpython-mode" title="Link to this heading"></a></h3>
+<p>CMake 3.12+ (3.15+ recommended, 3.18.2+ ideal) added a new module called
+FindPython that had a highly improved search algorithm and modern targets
+and tools. If you use FindPython, pybind11 will detect this and use the
+existing targets instead:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.15...3.22</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">Python</span><span class="w"> </span><span class="s">3.7</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">Interpreter</span><span class="w"> </span><span class="s">Development</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">CONFIG</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="c"># or add_subdirectory(pybind11)</span>
+
+<span class="nb">pybind11_add_module</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">example.cpp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also use the targets (as listed below) with FindPython. If you define
+<code class="docutils literal notranslate"><span class="pre">PYBIND11_FINDPYTHON</span></code>, pybind11 will perform the FindPython step for you
+(mostly useful when building pybind11’s own tests, or as a way to change search
+algorithms from the CMake invocation, with <code class="docutils literal notranslate"><span class="pre">-DPYBIND11_FINDPYTHON=ON</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you use FindPython to multi-target Python versions, use the individual
+targets listed below, and avoid targets that directly include Python parts.</p>
+</div>
+<p>There are <a class="reference external" href="https://cmake.org/cmake/help/latest/module/FindPython.html">many ways to hint or force a discovery of a specific Python
+installation</a>),
+setting <code class="docutils literal notranslate"><span class="pre">Python_ROOT_DIR</span></code> may be the most common one (though with
+virtualenv/venv support, and Conda support, this tends to find the correct
+Python version more often than the old system did).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the Python libraries (i.e. <code class="docutils literal notranslate"><span class="pre">libpythonXX.a</span></code> and <code class="docutils literal notranslate"><span class="pre">libpythonXX.so</span></code>
+on Unix) are not available, as is the case on a manylinux image, the
+<code class="docutils literal notranslate"><span class="pre">Development</span></code> component will not be resolved by <code class="docutils literal notranslate"><span class="pre">FindPython</span></code>. When not
+using the embedding functionality, CMake 3.18+ allows you to specify
+<code class="docutils literal notranslate"><span class="pre">Development.Module</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Development</span></code> to resolve this issue.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.6.</span></p>
+</div>
+</section>
+<section id="advanced-interface-library-targets">
+<h3>Advanced: interface library targets<a class="headerlink" href="#advanced-interface-library-targets" title="Link to this heading"></a></h3>
+<p>Pybind11 supports modern CMake usage patterns with a set of interface targets,
+available in all modes. The targets provided are:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::headers</span></code></dt><dd><p>Just the pybind11 headers and minimum compile requirements</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::pybind11</span></code></dt><dd><p>Python headers + <code class="docutils literal notranslate"><span class="pre">pybind11::headers</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::python_link_helper</span></code></dt><dd><p>Just the “linking” part of pybind11:module</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::module</span></code></dt><dd><p>Everything for extension modules - <code class="docutils literal notranslate"><span class="pre">pybind11::pybind11</span></code> + <code class="docutils literal notranslate"><span class="pre">Python::Module</span></code> (FindPython CMake 3.15+) or <code class="docutils literal notranslate"><span class="pre">pybind11::python_link_helper</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::embed</span></code></dt><dd><p>Everything for embedding the Python interpreter - <code class="docutils literal notranslate"><span class="pre">pybind11::pybind11</span></code> + <code class="docutils literal notranslate"><span class="pre">Python::Python</span></code> (FindPython) or Python libs</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::lto</span></code> / <code class="docutils literal notranslate"><span class="pre">pybind11::thin_lto</span></code></dt><dd><p>An alternative to <cite>INTERPROCEDURAL_OPTIMIZATION</cite> for adding link-time optimization.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::windows_extras</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">/bigobj</span></code> and <code class="docutils literal notranslate"><span class="pre">/mp</span></code> for MSVC.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11::opt_size</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">/Os</span></code> for MSVC, <code class="docutils literal notranslate"><span class="pre">-Os</span></code> for other compilers. Does nothing for debug builds.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Two helper functions are also provided:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11_strip(target)</span></code></dt><dd><p>Strips a target (uses <code class="docutils literal notranslate"><span class="pre">CMAKE_STRIP</span></code> after the target is built)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pybind11_extension(target)</span></code></dt><dd><p>Sets the correct extension (with SOABI) for a target.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>You can use these targets to build complex applications. For example, the
+<code class="docutils literal notranslate"><span class="pre">add_python_module</span></code> function is identical to:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.5...3.29</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span><span class="w">  </span><span class="c"># or add_subdirectory(pybind11)</span>
+
+<span class="nb">add_library</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">MODULE</span><span class="w"> </span><span class="s">main.cpp</span><span class="p">)</span>
+
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">pybind11::module</span><span class="w"> </span><span class="s">pybind11::lto</span><span class="w"> </span><span class="s">pybind11::windows_extras</span><span class="p">)</span>
+
+<span class="nb">pybind11_extension</span><span class="p">(</span><span class="s">example</span><span class="p">)</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span><span class="w"> </span><span class="s">MSVC</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_BUILD_TYPE</span><span class="o">}</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s">Debug|RelWithDebInfo</span><span class="p">)</span>
+<span class="w">    </span><span class="c"># Strip unnecessary sections of the binary on Linux/macOS</span>
+<span class="w">    </span><span class="nb">pybind11_strip</span><span class="p">(</span><span class="s">example</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set_target_properties</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">PROPERTIES</span><span class="w"> </span><span class="s">CXX_VISIBILITY_PRESET</span><span class="w"> </span><span class="s2">&quot;hidden&quot;</span>
+<span class="w">                                         </span><span class="s">CUDA_VISIBILITY_PRESET</span><span class="w"> </span><span class="s2">&quot;hidden&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Instead of setting properties, you can set <code class="docutils literal notranslate"><span class="pre">CMAKE_*</span></code> variables to initialize these correctly.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since pybind11 is a metatemplate library, it is crucial that certain
+compiler flags are provided to ensure high quality code generation. In
+contrast to the <code class="docutils literal notranslate"><span class="pre">pybind11_add_module()</span></code> command, the CMake interface
+provides a <em>composable</em> set of targets to ensure that you retain flexibility.
+It can be especially important to provide or set these properties; the
+<a class="reference internal" href="faq.html#faq-symhidden"><span class="std std-ref">FAQ</span></a> contains an explanation on why these are needed.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.6.</span></p>
+</div>
+</section>
+<section id="advanced-nopython-mode">
+<span id="nopython-mode"></span><h3>Advanced: NOPYTHON mode<a class="headerlink" href="#advanced-nopython-mode" title="Link to this heading"></a></h3>
+<p>If you want complete control, you can set <code class="docutils literal notranslate"><span class="pre">PYBIND11_NOPYTHON</span></code> to completely
+disable Python integration (this also happens if you run <code class="docutils literal notranslate"><span class="pre">FindPython2</span></code> and
+<code class="docutils literal notranslate"><span class="pre">FindPython3</span></code> without running <code class="docutils literal notranslate"><span class="pre">FindPython</span></code>). This gives you complete
+freedom to integrate into an existing system (like <a class="reference external" href="https://scikit-build.readthedocs.io">Scikit-Build’s</a> <code class="docutils literal notranslate"><span class="pre">PythonExtensions</span></code>).
+<code class="docutils literal notranslate"><span class="pre">pybind11_add_module</span></code> and <code class="docutils literal notranslate"><span class="pre">pybind11_extension</span></code> will be unavailable, and the
+targets will be missing any Python specific behavior.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.6.</span></p>
+</div>
+</section>
+<section id="embedding-the-python-interpreter">
+<h3>Embedding the Python interpreter<a class="headerlink" href="#embedding-the-python-interpreter" title="Link to this heading"></a></h3>
+<p>In addition to extension modules, pybind11 also supports embedding Python into
+a C++ executable or library. In CMake, simply link with the <code class="docutils literal notranslate"><span class="pre">pybind11::embed</span></code>
+target. It provides everything needed to get the interpreter running. The Python
+headers and libraries are attached to the target. Unlike <code class="docutils literal notranslate"><span class="pre">pybind11::module</span></code>,
+there is no need to manually set any additional properties here. For more
+information about usage in C++, see <span class="xref std std-doc">/advanced/embedding</span>.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.5...3.29</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">pybind11</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span><span class="w">  </span><span class="c"># or add_subdirectory(pybind11)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">main.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">example</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">pybind11::embed</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="building-manually">
+<span id="id8"></span><h2>Building manually<a class="headerlink" href="#building-manually" title="Link to this heading"></a></h2>
+<p>pybind11 is a header-only library, hence it is not necessary to link against
+any special libraries and there are no intermediate (magic) translation steps.</p>
+<p>On Linux, you can compile an example such as the one given in
+<a class="reference internal" href="basics.html#simple-example"><span class="std std-ref">Creating bindings for a simple function</span></a> using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>c++<span class="w"> </span>-O3<span class="w"> </span>-Wall<span class="w"> </span>-shared<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-fPIC<span class="w"> </span><span class="k">$(</span>python3<span class="w"> </span>-m<span class="w"> </span>pybind11<span class="w"> </span>--includes<span class="k">)</span><span class="w"> </span>example.cpp<span class="w"> </span>-o<span class="w"> </span>example<span class="k">$(</span>python3-config<span class="w"> </span>--extension-suffix<span class="k">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pybind11</span> <span class="pre">--includes</span></code> command fetches the include paths for
+both pybind11 and Python headers. This assumes that pybind11 has been installed
+using <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If it hasn’t, you can also manually specify
+<code class="docutils literal notranslate"><span class="pre">-I</span> <span class="pre">&lt;path-to-pybind11&gt;/include</span></code> together with the Python includes path
+<code class="docutils literal notranslate"><span class="pre">python3-config</span> <span class="pre">--includes</span></code>.</p>
+<p>On macOS: the build command is almost the same but it also requires passing
+the <code class="docutils literal notranslate"><span class="pre">-undefined</span> <span class="pre">dynamic_lookup</span></code> flag so as to ignore missing symbols when
+building the module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>c++<span class="w"> </span>-O3<span class="w"> </span>-Wall<span class="w"> </span>-shared<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-undefined<span class="w"> </span>dynamic_lookup<span class="w"> </span><span class="k">$(</span>python3<span class="w"> </span>-m<span class="w"> </span>pybind11<span class="w"> </span>--includes<span class="k">)</span><span class="w"> </span>example.cpp<span class="w"> </span>-o<span class="w"> </span>example<span class="k">$(</span>python3-config<span class="w"> </span>--extension-suffix<span class="k">)</span>
+</pre></div>
+</div>
+<p>In general, it is advisable to include several additional build parameters
+that can considerably reduce the size of the created binary. Refer to section
+<a class="reference internal" href="#cmake"><span class="std std-ref">Building with CMake</span></a> for a detailed example of a suitable cross-platform CMake-based
+build system that works on all platforms including Windows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Linux and macOS, it’s better to (intentionally) not link against
+<code class="docutils literal notranslate"><span class="pre">libpython</span></code>. The symbols will be resolved when the extension library
+is loaded into a Python binary. This is preferable because you might
+have several different installations of a given Python version (e.g. the
+system-provided Python, and one that ships with a piece of commercial
+software). In this way, the plugin will work with both versions, instead
+of possibly importing a second Python library into a process that already
+contains one (which will lead to a segfault).</p>
+</div>
+</section>
+<section id="building-with-bazel">
+<h2>Building with Bazel<a class="headerlink" href="#building-with-bazel" title="Link to this heading"></a></h2>
+<p>You can build with the Bazel build system using the <a class="reference external" href="https://github.com/pybind/pybind11_bazel">pybind11_bazel</a> repository.</p>
+</section>
+<section id="building-with-meson">
+<h2>Building with Meson<a class="headerlink" href="#building-with-meson" title="Link to this heading"></a></h2>
+<p>You can use Meson, which has support for <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> as a dependency (internally
+relying on our <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code> support). See the <a class="reference internal" href="#meson-example"><span class="std std-ref">module example above</span></a>.</p>
+</section>
+<section id="generating-binding-code-automatically">
+<h2>Generating binding code automatically<a class="headerlink" href="#generating-binding-code-automatically" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Binder</span></code> project is a tool for automatic generation of pybind11 binding
+code by introspecting existing C++ codebases using LLVM/Clang. See the
+<a class="reference internal" href="#binder" id="id9"><span>[binder]</span></a> documentation for details.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="binder" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">binder</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://cppbinder.readthedocs.io/en/latest/about.html">http://cppbinder.readthedocs.io/en/latest/about.html</a></p>
+</div>
+</div>
+<p><a class="reference internal" href="#autowig" id="id10"><span>[AutoWIG]</span></a> is a Python library that wraps automatically compiled libraries into
+high-level languages. It parses C++ code using LLVM/Clang technologies and
+generates the wrappers using the Mako templating engine. The approach is automatic,
+extensible, and applies to very complex C++ libraries, composed of thousands of
+classes or incorporating modern meta-programming constructs.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="autowig" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">AutoWIG</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/StatisKit/AutoWIG">https://github.com/StatisKit/AutoWIG</a></p>
+</div>
+</div>
+<p><a class="reference internal" href="#robotpy-build" id="id11"><span>[robotpy-build]</span></a> is a is a pure python, cross platform build tool that aims to
+simplify creation of python wheels for pybind11 projects, and provide
+cross-project dependency management. Additionally, it is able to autogenerate
+customizable pybind11-based wrappers by parsing C++ header files.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="robotpy-build" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">robotpy-build</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://robotpy-build.readthedocs.io">https://robotpy-build.readthedocs.io</a></p>
+</div>
+</div>
+<p><a class="reference internal" href="#litgen" id="id12"><span>[litgen]</span></a> is an automatic python bindings generator with a focus on generating
+documented and discoverable bindings: bindings will nicely reproduce the documentation
+found in headers. It is based on srcML (srcml.org), a highly scalable, multi-language
+parsing tool with a developer centric approach. The API that you want to expose to python
+must be C++14 compatible (but your implementation can use more modern constructs).</p>
+<div role="list" class="citation-list">
+<div class="citation" id="litgen" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">litgen</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://pthom.github.io/litgen">https://pthom.github.io/litgen</a></p>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python types &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/pycpp/object.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-types">
+<h1>Python types<a class="headerlink" href="#python-types" title="Link to this heading"></a></h1>
+<section id="available-wrappers">
+<span id="wrappers"></span><h2>Available wrappers<a class="headerlink" href="#available-wrappers" title="Link to this heading"></a></h2>
+<p>All major Python types are available as thin C++ wrapper classes. These
+can also be used as function parameters – see <a class="reference internal" href="../functions.html#python-objects-as-args"><span class="std std-ref">Python objects as arguments</span></a>.</p>
+<p>Available types include <code class="xref py py-class docutils literal notranslate"><span class="pre">handle</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool_</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">int_</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float_</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">none</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">capsule</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">iterable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">iterator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">function</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">buffer</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">array</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">array_t</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to review the <a class="reference internal" href="#pytypes-gotchas"><span class="std std-ref">Gotchas</span></a> before using this heavily in
+your C++ API.</p>
+</div>
+</section>
+<section id="instantiating-compound-python-types-from-c">
+<span id="instantiating-compound-types"></span><h2>Instantiating compound Python types from C++<a class="headerlink" href="#instantiating-compound-python-types-from-c" title="Link to this heading"></a></h2>
+<p>Dictionaries can be initialized in the <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> constructor:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span><span class="w"> </span><span class="c1">// to bring in the `_a` literal</span>
+<span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="s">&quot;spam&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">py</span><span class="o">::</span><span class="n">none</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;eggs&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">42</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>A tuple of python objects can be instantiated using <code class="xref py py-func docutils literal notranslate"><span class="pre">py::make_tuple()</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">tup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">none</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;spam&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Each element is converted to a supported Python type.</p>
+<p>A <a class="reference external" href="https://docs.python.org/3/library/types.html#types.SimpleNamespace">simple namespace</a> can be instantiated using</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span><span class="w">  </span><span class="c1">// to bring in the `_a` literal</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">SimpleNamespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;types&quot;</span><span class="p">).</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;SimpleNamespace&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">ns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SimpleNamespace</span><span class="p">(</span><span class="s">&quot;spam&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">py</span><span class="o">::</span><span class="n">none</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;eggs&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">42</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Attributes on a namespace can be modified with the <code class="xref py py-func docutils literal notranslate"><span class="pre">py::delattr()</span></code>,
+<code class="xref py py-func docutils literal notranslate"><span class="pre">py::getattr()</span></code>, and <code class="xref py py-func docutils literal notranslate"><span class="pre">py::setattr()</span></code> functions. Simple namespaces can
+be useful as lightweight stand-ins for class instances.</p>
+</section>
+<section id="casting-back-and-forth">
+<span id="id1"></span><h2>Casting back and forth<a class="headerlink" href="#casting-back-and-forth" title="Link to this heading"></a></h2>
+<p>In this kind of mixed code, it is often necessary to convert arbitrary C++
+types to Python, which can be done using <code class="xref py py-func docutils literal notranslate"><span class="pre">py::cast()</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyClass</span><span class="w"> </span><span class="o">*</span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">cast</span><span class="p">(</span><span class="n">cls</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The reverse direction uses the following syntax:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">MyClass</span><span class="w"> </span><span class="o">*</span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>When conversion fails, both directions throw the exception <code class="xref py py-class docutils literal notranslate"><span class="pre">cast_error</span></code>.</p>
+</section>
+<section id="accessing-python-libraries-from-c">
+<span id="python-libs"></span><h2>Accessing Python libraries from C++<a class="headerlink" href="#accessing-python-libraries-from-c" title="Link to this heading"></a></h2>
+<p>It is also possible to import objects defined in the Python standard
+library or available in the current Python environment (<code class="docutils literal notranslate"><span class="pre">sys.path</span></code>) and work
+with these in C++.</p>
+<p>This example obtains a reference to the Python <code class="docutils literal notranslate"><span class="pre">Decimal</span></code> class.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Equivalent to &quot;from decimal import Decimal&quot;</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">Decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;decimal&quot;</span><span class="p">).</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;Decimal&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Try to import scipy</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">scipy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;scipy&quot;</span><span class="p">);</span>
+<span class="k">return</span><span class="w"> </span><span class="n">scipy</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__version__&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="calling-python-functions">
+<span id="id2"></span><h2>Calling Python functions<a class="headerlink" href="#calling-python-functions" title="Link to this heading"></a></h2>
+<p>It is also possible to call Python classes, functions and methods
+via <code class="docutils literal notranslate"><span class="pre">operator()</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Construct a Python object of class Decimal</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Decimal</span><span class="p">(</span><span class="s">&quot;3.14159&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Use Python to make our directories</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;os&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">makedirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;makedirs&quot;</span><span class="p">);</span>
+<span class="n">makedirs</span><span class="p">(</span><span class="s">&quot;/tmp/path/to/somewhere&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>One can convert the result obtained from Python to a pure C++ version
+if a <code class="docutils literal notranslate"><span class="pre">py::class_</span></code> or type conversion is defined.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">function</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">result_py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_instance</span><span class="p">);</span>
+<span class="n">MyClass</span><span class="w"> </span><span class="o">&amp;</span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result_py</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="calling-python-methods">
+<span id="id3"></span><h2>Calling Python methods<a class="headerlink" href="#calling-python-methods" title="Link to this heading"></a></h2>
+<p>To call an object’s method, one can again use <code class="docutils literal notranslate"><span class="pre">.attr</span></code> to obtain access to the
+Python method.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Calculate e^π in decimal</span>
+<span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">exp_pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;exp&quot;</span><span class="p">)();</span>
+<span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">str</span><span class="p">(</span><span class="n">exp_pi</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>In the example above <code class="docutils literal notranslate"><span class="pre">pi.attr(&quot;exp&quot;)</span></code> is a <em>bound method</em>: it will always call
+the method for that same instance of the class. Alternately one can create an
+<em>unbound method</em> via the Python class (instead of instance) and pass the <code class="docutils literal notranslate"><span class="pre">self</span></code>
+object explicitly, followed by other arguments.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">object</span><span class="w"> </span><span class="n">decimal_exp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Decimal</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;exp&quot;</span><span class="p">);</span>
+
+<span class="c1">// Compute the e^n for n=0..4</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">decimal_exp</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="keyword-arguments">
+<h2>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Link to this heading"></a></h2>
+<p>Keyword arguments are also supported. In Python, there is the usual call syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="n">to</span><span class="p">):</span>
+    <span class="o">...</span>  <span class="c1"># function code</span>
+
+
+<span class="n">f</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="n">say</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">some_instance</span><span class="p">)</span>  <span class="c1"># keyword call in Python</span>
+</pre></div>
+</div>
+<p>In C++, the same call can be made using:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span><span class="w"> </span><span class="c1">// to bring in the `_a` literal</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;say&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;to&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">some_instance</span><span class="p">);</span><span class="w"> </span><span class="c1">// keyword call in C++</span>
+</pre></div>
+</div>
+</section>
+<section id="unpacking-arguments">
+<h2>Unpacking arguments<a class="headerlink" href="#unpacking-arguments" title="Link to this heading"></a></h2>
+<p>Unpacking of <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> is also possible and can be mixed with
+other arguments:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// * unpacking</span>
+<span class="n">py</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_instance</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">);</span>
+
+<span class="c1">// ** unpacking</span>
+<span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">kwargs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;number&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">1234</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;say&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;to&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">some_instance</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">);</span>
+
+<span class="c1">// mixed keywords, * and ** unpacking</span>
+<span class="n">py</span><span class="o">::</span><span class="n">tuple</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">kwargs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;to&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">some_instance</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;say&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Generalized unpacking according to <a class="reference external" href="https://www.python.org/dev/peps/pep-0448/">PEP448</a> is also supported:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">kwargs1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;number&quot;</span><span class="n">_a</span><span class="o">=</span><span class="mi">1234</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">kwargs2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="p">(</span><span class="s">&quot;to&quot;</span><span class="n">_a</span><span class="o">=</span><span class="n">some_instance</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;say&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs2</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The file <code class="file docutils literal notranslate"><span class="pre">tests/test_pytypes.cpp</span></code> contains a complete
+example that demonstrates passing native Python types in more detail. The
+file <code class="file docutils literal notranslate"><span class="pre">tests/test_callbacks.cpp</span></code> presents a few examples of calling
+Python functions from C++, including keywords arguments and unpacking.</p>
+</div>
+</section>
+<section id="implicit-casting">
+<span id="id4"></span><h2>Implicit casting<a class="headerlink" href="#implicit-casting" title="Link to this heading"></a></h2>
+<p>When using the C++ interface for Python types, or calling Python functions,
+objects of type <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code> are returned. It is possible to invoke implicit
+conversions to subclasses like <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>. The same holds for the proxy objects
+returned by <code class="docutils literal notranslate"><span class="pre">operator[]</span></code> or <code class="docutils literal notranslate"><span class="pre">obj.attr()</span></code>.
+Casting to subtypes improves code readability and allows values to be passed to
+C++ functions that require a specific subtype rather than a generic <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/numpy.h&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">pybind11</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;os&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;os.path&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// like &#39;import os.path as path&#39;</span>
+<span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="w"> </span><span class="n">np</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">module_</span><span class="o">::</span><span class="k">import</span><span class="p">(</span><span class="s">&quot;numpy&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// like &#39;import numpy as np&#39;</span>
+
+<span class="n">py</span><span class="o">::</span><span class="n">str</span><span class="w"> </span><span class="n">curdir_abs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;abspath&quot;</span><span class="p">)(</span><span class="n">path</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;curdir&quot;</span><span class="p">));</span>
+<span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">str</span><span class="p">(</span><span class="s">&quot;Current directory: &quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">curdir_abs</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">dict</span><span class="w"> </span><span class="n">environ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;environ&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">environ</span><span class="p">[</span><span class="s">&quot;HOME&quot;</span><span class="p">]);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">array_t</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;ones&quot;</span><span class="p">)(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dtype&quot;</span><span class="n">_a</span><span class="o">=</span><span class="s">&quot;float32&quot;</span><span class="p">);</span>
+<span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">repr</span><span class="p">(</span><span class="n">arr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">int_</span><span class="p">(</span><span class="mi">1</span><span class="p">)));</span>
+</pre></div>
+</div>
+<p>These implicit conversions are available for subclasses of <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>; there
+is no need to call <code class="docutils literal notranslate"><span class="pre">obj.cast()</span></code> explicitly as for custom classes, see
+<a class="reference internal" href="#casting-back-and-forth"><span class="std std-ref">Casting back and forth</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a trivial conversion via move constructor is not possible, both implicit and
+explicit casting (calling <code class="docutils literal notranslate"><span class="pre">obj.cast()</span></code>) will attempt a “rich” conversion.
+For instance, <code class="docutils literal notranslate"><span class="pre">py::list</span> <span class="pre">env</span> <span class="pre">=</span> <span class="pre">os.attr(&quot;environ&quot;);</span></code> will succeed and is
+equivalent to the Python code <code class="docutils literal notranslate"><span class="pre">env</span> <span class="pre">=</span> <span class="pre">list(os.environ)</span></code> that produces a
+list of the dict keys.</p>
+</div>
+</section>
+<section id="handling-exceptions">
+<h2>Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Link to this heading"></a></h2>
+<p>Python exceptions from wrapper classes will be thrown as a <code class="docutils literal notranslate"><span class="pre">py::error_already_set</span></code>.
+See <a class="reference internal" href="../exceptions.html#handling-python-exceptions-cpp"><span class="std std-ref">Handling exceptions from Python in C++</span></a> for more information on handling exceptions
+raised when calling C++ wrapper classes.</p>
+</section>
+<section id="gotchas">
+<span id="pytypes-gotchas"></span><h2>Gotchas<a class="headerlink" href="#gotchas" title="Link to this heading"></a></h2>
+<section id="default-constructed-wrappers">
+<h3>Default-Constructed Wrappers<a class="headerlink" href="#default-constructed-wrappers" title="Link to this heading"></a></h3>
+<p>When a wrapper type is default-constructed, it is <strong>not</strong> a valid Python object (i.e. it is not <code class="docutils literal notranslate"><span class="pre">py::none()</span></code>). It is simply the same as
+<code class="docutils literal notranslate"><span class="pre">PyObject*</span></code> null pointer. To check for this, use
+<code class="docutils literal notranslate"><span class="pre">static_cast&lt;bool&gt;(my_wrapper)</span></code>.</p>
+</section>
+<section id="assigning-py-none-to-wrappers">
+<h3>Assigning py::none() to wrappers<a class="headerlink" href="#assigning-py-none-to-wrappers" title="Link to this heading"></a></h3>
+<p>You may be tempted to use types like <code class="docutils literal notranslate"><span class="pre">py::str</span></code> and <code class="docutils literal notranslate"><span class="pre">py::dict</span></code> in C++
+signatures (either pure C++, or in bound signatures), and assign them default
+values of <code class="docutils literal notranslate"><span class="pre">py::none()</span></code>. However, in a best case scenario, it will fail fast
+because <code class="docutils literal notranslate"><span class="pre">None</span></code> is not convertible to that type (e.g. <code class="docutils literal notranslate"><span class="pre">py::dict</span></code>), or in a
+worse case scenario, it will silently work but corrupt the types you want to
+work with (e.g. <code class="docutils literal notranslate"><span class="pre">py::str(py::none())</span></code> will yield <code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code> in Python).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

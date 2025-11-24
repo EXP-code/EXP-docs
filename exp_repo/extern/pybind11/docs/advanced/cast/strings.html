@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strings, bytes and Unicode conversions &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Strings, bytes and Unicode conversions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/exp_repo/extern/pybind11/docs/advanced/cast/strings.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="strings-bytes-and-unicode-conversions">
+<h1>Strings, bytes and Unicode conversions<a class="headerlink" href="#strings-bytes-and-unicode-conversions" title="Link to this heading"></a></h1>
+<section id="passing-python-strings-to-c">
+<h2>Passing Python strings to C++<a class="headerlink" href="#passing-python-strings-to-c" title="Link to this heading"></a></h2>
+<p>When a Python <code class="docutils literal notranslate"><span class="pre">str</span></code> is passed from Python to a C++ function that accepts
+<code class="docutils literal notranslate"><span class="pre">std::string</span></code> or <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">*</span></code> as arguments, pybind11 will encode the Python
+string to UTF-8. All Python <code class="docutils literal notranslate"><span class="pre">str</span></code> can be encoded in UTF-8, so this operation
+does not fail.</p>
+<p>The C++ language is encoding agnostic. It is the responsibility of the
+programmer to track encodings. It’s often easiest to simply <a class="reference external" href="http://utf8everywhere.org/">use UTF-8
+everywhere</a>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;utf8_test&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;utf-8 is icing on the cake.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;utf8_charptr&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;My favorite food is</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">utf8_test</span><span class="p">(</span><span class="s2">&quot;🎂&quot;</span><span class="p">)</span>
+<span class="go">utf-8 is icing on the cake.</span>
+<span class="go">🎂</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">utf8_charptr</span><span class="p">(</span><span class="s2">&quot;🍕&quot;</span><span class="p">)</span>
+<span class="go">My favorite food is</span>
+<span class="go">🍕</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some terminal emulators do not support UTF-8 or emoji fonts and may not
+display the example above correctly.</p>
+</div>
+<p>The results are the same whether the C++ function accepts arguments by value or
+reference, and whether or not <code class="docutils literal notranslate"><span class="pre">const</span></code> is used.</p>
+<section id="passing-bytes-to-c">
+<h3>Passing bytes to C++<a class="headerlink" href="#passing-bytes-to-c" title="Link to this heading"></a></h3>
+<p>A Python <code class="docutils literal notranslate"><span class="pre">bytes</span></code> object will be passed to C++ functions that accept
+<code class="docutils literal notranslate"><span class="pre">std::string</span></code> or <code class="docutils literal notranslate"><span class="pre">char*</span></code> <em>without</em> conversion.  In order to make a function
+<em>only</em> accept <code class="docutils literal notranslate"><span class="pre">bytes</span></code> (and not <code class="docutils literal notranslate"><span class="pre">str</span></code>), declare it as taking a <code class="docutils literal notranslate"><span class="pre">py::bytes</span></code>
+argument.</p>
+</section>
+</section>
+<section id="returning-c-strings-to-python">
+<h2>Returning C++ strings to Python<a class="headerlink" href="#returning-c-strings-to-python" title="Link to this heading"></a></h2>
+<p>When a C++ function returns a <code class="docutils literal notranslate"><span class="pre">std::string</span></code> or <code class="docutils literal notranslate"><span class="pre">char*</span></code> to a Python caller,
+<strong>pybind11 will assume that the string is valid UTF-8</strong> and will decode it to a
+native Python <code class="docutils literal notranslate"><span class="pre">str</span></code>, using the same API as Python uses to perform
+<code class="docutils literal notranslate"><span class="pre">bytes.decode('utf-8')</span></code>. If this implicit conversion fails, pybind11 will
+raise a <code class="docutils literal notranslate"><span class="pre">UnicodeDecodeError</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;std_string_return&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;This string needs to be UTF-8 encoded&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">std_string_return</span><span class="p">(),</span> <span class="nb">str</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Because UTF-8 is inclusive of pure ASCII, there is never any issue with
+returning a pure ASCII string to Python. If there is any possibility that the
+string is not pure ASCII, it is necessary to ensure the encoding is valid
+UTF-8.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Implicit conversion assumes that a returned <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">*</span></code> is null-terminated.
+If there is no null terminator a buffer overrun will occur.</p>
+</div>
+<section id="explicit-conversions">
+<h3>Explicit conversions<a class="headerlink" href="#explicit-conversions" title="Link to this heading"></a></h3>
+<p>If some C++ code constructs a <code class="docutils literal notranslate"><span class="pre">std::string</span></code> that is not a UTF-8 string, one
+can perform a explicit conversion and return a <code class="docutils literal notranslate"><span class="pre">py::str</span></code> object. Explicit
+conversion has the same overhead as implicit conversion.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// This uses the Python C API to convert Latin-1 to Unicode</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;str_output&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Send your r</span><span class="se">\xe9</span><span class="s">sum</span><span class="se">\xe9</span><span class="s"> to Alice in HR&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Latin-1</span>
+<span class="w">        </span><span class="n">py</span><span class="o">::</span><span class="n">handle</span><span class="w"> </span><span class="n">py_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyUnicode_DecodeLatin1</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">py_s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">error_already_set</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">reinterpret_steal</span><span class="o">&lt;</span><span class="n">py</span><span class="o">::</span><span class="n">str</span><span class="o">&gt;</span><span class="p">(</span><span class="n">py_s</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">str_output</span><span class="p">()</span>
+<span class="go">&#39;Send your résumé to Alice in HR&#39;</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://docs.python.org/3/c-api/unicode.html#built-in-codecs">Python C API</a> provides
+several built-in codecs. Note that these all return <em>new</em> references, so
+use <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">reinterpret_steal()</span></code> when converting them to a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>One could also use a third party encoding library such as libiconv to transcode
+to UTF-8.</p>
+</section>
+<section id="return-c-strings-without-conversion">
+<h3>Return C++ strings without conversion<a class="headerlink" href="#return-c-strings-without-conversion" title="Link to this heading"></a></h3>
+<p>If the data in a C++ <code class="docutils literal notranslate"><span class="pre">std::string</span></code> does not represent text and should be
+returned to Python as <code class="docutils literal notranslate"><span class="pre">bytes</span></code>, then one can return the data as a
+<code class="docutils literal notranslate"><span class="pre">py::bytes</span></code> object.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;return_bytes&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\xba\xd0\xba\xd0</span><span class="s">&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Not valid UTF-8</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">bytes</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w">  </span><span class="c1">// Return the data without transcoding</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">return_bytes</span><span class="p">()</span>
+<span class="go">b&#39;\xba\xd0\xba\xd0&#39;</span>
+</pre></div>
+</div>
+<p>Note the asymmetry: pybind11 will convert <code class="docutils literal notranslate"><span class="pre">bytes</span></code> to <code class="docutils literal notranslate"><span class="pre">std::string</span></code> without
+encoding, but cannot convert <code class="docutils literal notranslate"><span class="pre">std::string</span></code> back to <code class="docutils literal notranslate"><span class="pre">bytes</span></code> implicitly.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;asymmetry&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Accepts str or bytes from Python</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">  </span><span class="c1">// Looks harmless, but implicitly converts to str</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">asymmetry</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;have some bytes&quot;</span><span class="p">),</span> <span class="nb">str</span><span class="p">)</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">asymmetry</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\xba\xd0\xba\xd0</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># invalid utf-8 as bytes</span>
+<span class="go">UnicodeDecodeError: &#39;utf-8&#39; codec can&#39;t decode byte 0xba in position 0: invalid start byte</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="wide-character-strings">
+<h2>Wide character strings<a class="headerlink" href="#wide-character-strings" title="Link to this heading"></a></h2>
+<p>When a Python <code class="docutils literal notranslate"><span class="pre">str</span></code> is passed to a C++ function expecting <code class="docutils literal notranslate"><span class="pre">std::wstring</span></code>,
+<code class="docutils literal notranslate"><span class="pre">wchar_t*</span></code>, <code class="docutils literal notranslate"><span class="pre">std::u16string</span></code> or <code class="docutils literal notranslate"><span class="pre">std::u32string</span></code>, the <code class="docutils literal notranslate"><span class="pre">str</span></code> will be
+encoded to UTF-16 or UTF-32 depending on how the C++ compiler implements each
+type, in the platform’s native endianness. When strings of these types are
+returned, they are assumed to contain valid UTF-16 or UTF-32, and will be
+decoded to Python <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define UNICODE</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
+
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set_window_text&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="n">HWND</span><span class="w"> </span><span class="n">hwnd</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Call SetWindowText with null-terminated UTF-16 string</span>
+<span class="w">        </span><span class="o">::</span><span class="n">SetWindowText</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;get_window_text&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="n">HWND</span><span class="w"> </span><span class="n">hwnd</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">GetWindowTextLength</span><span class="p">(</span><span class="n">hwnd</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">wchar_t</span><span class="p">[]</span><span class="w"> </span><span class="o">&gt;</span><span class="p">(</span><span class="n">buffer_size</span><span class="p">);</span>
+
+<span class="w">        </span><span class="o">::</span><span class="n">GetWindowText</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">buffer_size</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// wstring will be converted to Python str</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">text</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>Strings in multibyte encodings such as Shift-JIS must transcoded to a
+UTF-8/16/32 before being returned to Python.</p>
+</section>
+<section id="character-literals">
+<h2>Character literals<a class="headerlink" href="#character-literals" title="Link to this heading"></a></h2>
+<p>C++ functions that accept character literals as input will receive the first
+character of a Python <code class="docutils literal notranslate"><span class="pre">str</span></code> as their input. If the string is longer than one
+Unicode character, trailing characters will be ignored.</p>
+<p>When a character literal is returned from C++ (such as a <code class="docutils literal notranslate"><span class="pre">char</span></code> or a
+<code class="docutils literal notranslate"><span class="pre">wchar_t</span></code>), it will be converted to a <code class="docutils literal notranslate"><span class="pre">str</span></code> that represents the single
+character.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pass_char&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="n">m</span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pass_wchar&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_char</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="go">&#39;A&#39;</span>
+</pre></div>
+</div>
+<p>While C++ will cast integers to character types (<code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">0x65;</span></code>), pybind11
+does not convert Python integers to characters implicitly. The Python function
+<code class="docutils literal notranslate"><span class="pre">chr()</span></code> can be used to convert integers to characters.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_char</span><span class="p">(</span><span class="mh">0x65</span><span class="p">)</span>
+<span class="go">TypeError</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_char</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mh">0x65</span><span class="p">))</span>
+<span class="go">&#39;A&#39;</span>
+</pre></div>
+</div>
+<p>If the desire is to work with an 8-bit integer, use <code class="docutils literal notranslate"><span class="pre">int8_t</span></code> or <code class="docutils literal notranslate"><span class="pre">uint8_t</span></code>
+as the argument type.</p>
+<section id="grapheme-clusters">
+<h3>Grapheme clusters<a class="headerlink" href="#grapheme-clusters" title="Link to this heading"></a></h3>
+<p>A single grapheme may be represented by two or more Unicode characters. For
+example ‘é’ is usually represented as U+00E9 but can also be expressed as the
+combining character sequence U+0065 U+0301 (that is, the letter ‘e’ followed by
+a combining acute accent). The combining character will be lost if the
+two-character sequence is passed as an argument, even though it renders as a
+single grapheme.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_wchar</span><span class="p">(</span><span class="s2">&quot;é&quot;</span><span class="p">)</span>
+<span class="go">&#39;é&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">combining_e_acute</span> <span class="o">=</span> <span class="s2">&quot;e&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u0301</span><span class="s2">&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">combining_e_acute</span>
+<span class="go">&#39;é&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">combining_e_acute</span> <span class="o">==</span> <span class="s2">&quot;é&quot;</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_wchar</span><span class="p">(</span><span class="n">combining_e_acute</span><span class="p">)</span>
+<span class="go">&#39;e&#39;</span>
+</pre></div>
+</div>
+<p>Normalizing combining characters before passing the character literal to C++
+may resolve <em>some</em> of these issues:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">pass_wchar</span><span class="p">(</span><span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s2">&quot;NFC&quot;</span><span class="p">,</span> <span class="n">combining_e_acute</span><span class="p">))</span>
+<span class="go">&#39;é&#39;</span>
+</pre></div>
+</div>
+<p>In some languages (Thai for example), there are <a class="reference external" href="http://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">graphemes that cannot be
+expressed as a single Unicode code point</a>, so there is
+no way to capture them in a C++ character type.</p>
+</section>
+</section>
+<section id="c-17-string-views">
+<h2>C++17 string views<a class="headerlink" href="#c-17-string-views" title="Link to this heading"></a></h2>
+<p>C++17 string views are automatically supported when compiling in C++17 mode.
+They follow the same rules for encoding and decoding as the corresponding STL
+string type (for example, a <code class="docutils literal notranslate"><span class="pre">std::u16string_view</span></code> argument will be passed
+UTF-16-encoded data, and a returned <code class="docutils literal notranslate"><span class="pre">std::string_view</span></code> will be decoded as
+UTF-8).</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a></p></li>
+<li><p><a class="reference external" href="https://msdn.microsoft.com/en-ca/magazine/mt238407.aspx">C++ - Using STL Strings at Win32 API Boundaries</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

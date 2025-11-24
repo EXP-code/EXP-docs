@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Intro</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/exp_repo/extern/pybind11/docs/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade guide</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#include-as-a-submodule">Include as a submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#include-with-pypi">Include with PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#include-with-conda-forge">Include with conda-forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#include-with-vcpkg">Include with vcpkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#global-install-with-brew">Global install with brew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#other-options">Other options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#compiling-the-test-cases">Compiling the test cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#header-and-namespace-conventions">Header and namespace conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#creating-bindings-for-a-simple-function">Creating bindings for a simple function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#keyword-arguments">Keyword arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#default-arguments">Default arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#exporting-variables">Exporting variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#supported-data-types">Supported data types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Object-oriented code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#creating-bindings-for-a-custom-type">Creating bindings for a custom type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#keyword-and-default-arguments">Keyword and default arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#binding-lambda-functions">Binding lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#instance-and-static-fields">Instance and static fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#dynamic-attributes">Dynamic attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#inheritance-and-automatic-downcasting">Inheritance and automatic downcasting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#overloaded-methods">Overloaded methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html#enumerations-and-internal-types">Enumerations and internal types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Build systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#modules-with-cmake">Modules with CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#modules-with-meson-python">Modules with meson-python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#modules-with-setuptools">Modules with setuptools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#building-with-cppimport">Building with cppimport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#building-with-cmake">Building with CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#building-manually">Building manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#building-with-bazel">Building with Bazel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#building-with-meson">Building with Meson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiling.html#generating-binding-code-automatically">Generating binding code automatically</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced/functions.html">Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#return-value-policies">Return value policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#additional-call-policies">Additional call policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#python-objects-as-arguments">Python objects as arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#accepting-args-and-kwargs">Accepting *args and **kwargs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#default-arguments-revisited">Default arguments revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#keyword-only-arguments">Keyword-only arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#positional-only-arguments">Positional-only arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#non-converting-arguments">Non-converting arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#allow-prohibiting-none-arguments">Allow/Prohibiting None arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#overload-resolution-order">Overload resolution order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/functions.html#binding-functions-with-template-parameters">Binding functions with template parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/classes.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#overriding-virtual-functions-in-python">Overriding virtual functions in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#combining-virtual-functions-and-inheritance">Combining virtual functions and inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#extended-trampoline-class-functionality">Extended trampoline class functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#custom-constructors">Custom constructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#non-public-destructors">Non-public destructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#destructors-that-call-python">Destructors that call Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#implicit-conversions">Implicit conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#static-properties">Static properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#operator-overloading">Operator overloading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#pickling-support">Pickling support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#deepcopy-support">Deepcopy support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#multiple-inheritance">Multiple Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#module-local-class-bindings">Module-local class bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#binding-protected-member-functions">Binding protected member functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#binding-final-classes">Binding final classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#binding-classes-with-template-parameters">Binding classes with template parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#custom-automatic-downcasters">Custom automatic downcasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#accessing-the-type-object">Accessing the type object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/classes.html#custom-type-setup">Custom type setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#built-in-c-to-python-exception-translation">Built-in C++ to Python exception translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#registering-custom-translators">Registering custom translators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#local-vs-global-exception-translators">Local vs Global Exception Translators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#handling-exceptions-from-python-in-c">Handling exceptions from Python in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#handling-errors-from-the-python-c-api">Handling errors from the Python C API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#chaining-exceptions-raise-from">Chaining exceptions (‘raise from’)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/exceptions.html#handling-unraisable-exceptions">Handling unraisable exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/smart_ptrs.html">Smart pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/smart_ptrs.html#std-unique-ptr">std::unique_ptr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/smart_ptrs.html#std-shared-ptr">std::shared_ptr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/smart_ptrs.html#custom-smart-pointers">Custom smart pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/cast/index.html">Type conversions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/strings.html">Strings, bytes and Unicode conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/stl.html">STL containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/functional.html">Functional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/chrono.html">Chrono</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/eigen.html">Eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/cast/custom.html">Custom type casters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/pycpp/index.html">Python C++ interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/pycpp/object.html">Python types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/pycpp/numpy.html">NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/pycpp/utilities.html">Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/embedding.html">Embedding the interpreter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#executing-python-code">Executing Python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#importing-modules">Importing modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#adding-embedded-modules">Adding embedded modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#interpreter-lifetime">Interpreter lifetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/embedding.html#sub-interpreter-support">Sub-interpreter support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/misc.html">Miscellaneous</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#general-notes-regarding-convenience-macros">General notes regarding convenience macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#global-interpreter-lock-gil">Global Interpreter Lock (GIL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#common-sources-of-global-interpreter-lock-errors">Common Sources Of Global Interpreter Lock Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#binding-sequence-data-types-iterators-the-slicing-protocol-etc">Binding sequence data types, iterators, the slicing protocol, etc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#partitioning-code-over-multiple-extension-modules">Partitioning code over multiple extension modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#module-destructors">Module Destructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#generating-documentation-using-sphinx">Generating documentation using Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#avoiding-c-types-in-docstrings">Avoiding C++ types in docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/misc.html#setting-inner-type-hints-in-docstrings">Setting inner type hints in docstrings</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmake/index.html">CMake helpers</a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

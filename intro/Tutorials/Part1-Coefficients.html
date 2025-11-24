@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An example of creating coefficients using pyEXP &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="An example of applying mSSA to the coefficients you created using pyEXP" href="Part2-Analysis.html" />
+    <link rel="prev" title="pyEXP Tutorial" href="../pyEXP-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            EXP
+              <img src="../../_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../pyEXP-tutorial.html">pyEXP Tutorial</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">An example of creating coefficients using pyEXP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Create-the-basis">Create the basis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Creating-a-particle-reader">Creating a particle reader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Using-a-FieldGenerator">Using a FieldGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Saving-the-coefficients">Saving the coefficients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Where-do-you-want-to-go-next?">Where do you want to go next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Part2-Analysis.html">An example of applying mSSA to the coefficients you created using pyEXP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pyEXP-tutorial.html#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../EXP-tutorial.html">EXP Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker.html">Exploring EXP using Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html#quick-start-examples">Quick-start examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pybind11.html">Index to pyEXP classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorial.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="../pyEXP-tutorial.html">pyEXP Tutorial</a></li>
+      <li class="breadcrumb-item active">An example of creating coefficients using pyEXP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/intro/Tutorials/Part1-Coefficients.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="An-example-of-creating-coefficients-using-pyEXP">
+<h1>An example of creating coefficients using pyEXP<a class="headerlink" href="#An-example-of-creating-coefficients-using-pyEXP" title="Link to this heading"></a></h1>
+<p>This example uses a prerun simulation whose output stored in the <code class="docutils literal notranslate"><span class="pre">Tutorials/Data</span></code> directory. This can be recreated using <code class="docutils literal notranslate"><span class="pre">EXP</span></code> and the example configuration and input files from the <code class="docutils literal notranslate"><span class="pre">EXP-examples/Nbody</span></code> simulation. But this notebook could be adapted for any simulation you like.</p>
+<p>We begin by importing <code class="docutils literal notranslate"><span class="pre">pyEXP</span></code> and friends and setting the working directory.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+import yaml
+import pyEXP
+
+# As described in the README, we assume that you have started Jupyter in the `Tutorials` directory and have provided all of the
+# necessary data in the `Data` subdirectory.  We move to that directory as a first step:
+#
+os.chdir(&#39;../Data&#39;)
+</pre></div>
+</div>
+</div>
+<section id="Create-the-basis">
+<h2>Create the basis<a class="headerlink" href="#Create-the-basis" title="Link to this heading"></a></h2>
+<p>We’ll only do the halo coefficients in this simple example. The cylindrical coefficients would procede similarly. See the <code class="docutils literal notranslate"><span class="pre">viewing</span> <span class="pre">a</span> <span class="pre">basis</span></code> notebook for an example of creating the cylindrical basis.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the basis config.  This loads a YAML stanza specifies all of the input parameters
+# necessary to build the basis.
+#
+yaml_config = &quot;&quot;
+with open(&#39;basis.yaml&#39;) as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+    yaml_config = yaml.dump(config)
+
+# Alternatively, you could construct this on the fly in Python, e.g.
+bconfig = &quot;&quot;&quot;
+---
+id: sphereSL
+parameters :
+  numr: 2000
+  rmin: 0.0001
+  rmax: 1.95
+  Lmax: 4
+  nmax: 10
+  rmapping: 0.0667
+  modelname: SLGridSph.model
+  cachename: sphereSL.cache
+...
+&quot;&quot;&quot;
+print(&#39;-&#39;*60)
+print(&#39;Read from file&#39;)
+print(&#39;-&#39;*60)
+print(yaml_config)
+print(&#39;-&#39;*60)
+print(&#39;Constructed from string&#39;)
+print(&#39;-&#39;*60)
+print(bconfig)
+print(&#39;-&#39;*60)
+
+# Construct the basis instance
+#
+basis   = pyEXP.basis.Basis.factory(yaml_config)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+------------------------------------------------------------
+Read from file
+------------------------------------------------------------
+id: sphereSL
+parameters:
+  Lmax: 4
+  cachename: sphereSL.model
+  modelname: SLGridSph.model
+  nmax: 10
+  numr: 2000
+  rmapping: 0.0667
+  rmax: 1.95
+  rmin: 0.0001
+
+------------------------------------------------------------
+Constructed from string
+------------------------------------------------------------
+
+---
+id: sphereSL
+parameters :
+  numr: 2000
+  rmin: 0.0001
+  rmax: 1.95
+  Lmax: 4
+  nmax: 10
+  rmapping: 0.0667
+  modelname: SLGridSph.model
+  cachename: sphereSL.cache
+...
+
+------------------------------------------------------------
+---- SLGridSph::ReadH5Cache: successfully read basis cache &lt;sphereSL.model&gt;
+---- Spherical::orthoTest: worst=0.00016446
+</pre></div></div>
+</div>
+<p>When an adaptive basis such as <code class="docutils literal notranslate"><span class="pre">sphereSL</span></code> or <code class="docutils literal notranslate"><span class="pre">Cylindrical</span></code> is constrructed, the orthogonality of the biorthogonal basis is automatically computed as a sanity check on the model file and input parameters. The condition reported by <code class="docutils literal notranslate"><span class="pre">orthoTest</span></code> is the absolute value of the inner product minus one or the inner product itself, for diagonal and off-diagonal matrix elements, respectively. In this case, you can see that the worst inner product is ~0.0001 or on part in <span class="math notranslate nohighlight">\(10^4\)</span>.</p>
+</section>
+<section id="Creating-a-particle-reader">
+<h2>Creating a particle reader<a class="headerlink" href="#Creating-a-particle-reader" title="Link to this heading"></a></h2>
+<p>Now that we have a basis, we can use it to create coefficients from the particle snapshots. <code class="docutils literal notranslate"><span class="pre">pyEXP</span></code> uses a <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code> object for that.</p>
+<p>The first step is to hand off the files that comprise a snapshot for every time slice. The <code class="docutils literal notranslate"><span class="pre">ParticleReader</span></code> provides a helper function for that. There are two helper functions: <code class="docutils literal notranslate"><span class="pre">parseFileList</span></code> and <code class="docutils literal notranslate"><span class="pre">parseStringList</span></code>. The first reads a list from a file and the second takes a list. Otherwise they are the same. The file names in the list are assumed to end with a snapshot index and an optional part index. For example, if you have single files per snapshot, the list might look like:
+<code class="docutils literal notranslate"><span class="pre">myrun.00000</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001</span></code>, etc. If you have multiple files per snapshot, they will look something like <code class="docutils literal notranslate"><span class="pre">myrun.00000_0001</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00000_0002</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001_0000</span></code>, <code class="docutils literal notranslate"><span class="pre">myrun.00001_0001</span></code>, etc.</p>
+<p>Here is the call for a file:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Construct batches of files the particle reader.  One could use the
+# parseStringList to create batches from a vector/list of files.  NB:
+# a std::vector in C++ becomes a Python.list and vice versa
+#
+batches = pyEXP.read.ParticleReader.parseFileList(&#39;file.list&#39;, &#39;&#39;)
+</pre></div>
+</div>
+</div>
+<p>We now iterate the <code class="docutils literal notranslate"><span class="pre">batches</span></code> created by the file parser to create the coefficients. For each batch we create a new reader and pass the reader to the basis instance. The <code class="docutils literal notranslate"><span class="pre">basis.createFromReader</span></code> member creates and returns the coefficients. The coefficients are added to a coefficient container called <code class="docutils literal notranslate"><span class="pre">coefs</span></code>. Note: on the first call <code class="docutils literal notranslate"><span class="pre">coefs=None</span></code> so a new container is created on the first time through.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># This will contain the coefficient container, need to start with a
+# null instance to trigger construction
+#
+coefs   = None
+
+for group in batches:
+
+    print(&quot;file group is&quot;, group)
+
+    # Make the reader for the desired type.  One could probably try to
+    # do this by inspection but that&#39;s another project.
+    #
+    reader = pyEXP.read.ParticleReader.createReader(&#39;PSPout&#39;, group, 0, False);
+
+    # Print the type list
+    #
+    print(&#39;The component names are:&#39;, reader.GetTypes())
+
+    compname = &#39;dark halo&#39;
+    reader.SelectType(compname)
+    print(&#39;Selected&#39;, compname)
+
+    print(&#39;Call createFromReader at Time&#39;, reader.CurrentTime(), &#39;for&#39;, reader.CurrentNumber(), &#39;particles&#39;)
+
+    coef = basis.createFromReader(reader)
+    print(&quot;Created coef&quot;)
+
+    # We need this idiom here because None is not mapping to a
+    # null pointer in pybind11.  There is probably a way to do this.
+    # Suggestions anyone?
+    #
+    #                          This is optional---+
+    #                                             |
+    if coefs is None:           #                 v
+        coefs = pyEXP.coefs.Coefs.makecoefs(coef, compname)
+    else:
+        coefs.add(coef)
+
+    print(&#39;Added coef&#39;)
+    print(&#39;-&#39;*60)
+
+print(&#39;\nCompleted the file group list\n&#39;)
+
+print(&#39;The coefficient time list is&#39;, coefs.Times())
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+file group is [&#39;OUT.run0.00000&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.0 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00001&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.009999999999999764 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00002&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.019999999999998665 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00003&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.029999999999997563 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00004&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.04000000000000035 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00005&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.05000000000000369 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00006&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.06000000000000703 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00007&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.0700000000000037 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00008&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.07999999999999816 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00009&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.08999999999999261 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00010&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+ for 100000 particles at Time 0.09999999999998707
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00011&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.10999999999998153 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00012&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.11999999999997599 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00013&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.12999999999997933 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00014&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.13999999999999155 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00015&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.15000000000000377 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00016&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.160000000000016 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00017&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.1700000000000282 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00018&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.18000000000004043 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00019&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.19000000000005265 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+file group is [&#39;OUT.run0.00020&#39;]
+The component names are: [&#39;dark halo&#39;, &#39;star disk&#39;]
+Selected dark halo
+Call createFromReader at Time 0.20000000000006488 for 100000 particles
+Created coef
+Added coef
+------------------------------------------------------------
+
+Completed the file group list
+
+The coefficient time list is [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
+</pre></div></div>
+</div>
+<p>The reader gives a verbose status update for each snapshot as it is read. You can see the component names, simulation time, and particles numbers per snapshot as the files are read. For large simulations, coefficient construction can take awhile. Check out the following two scripts in the <code class="docutils literal notranslate"><span class="pre">Utitilies</span></code> directory:</p>
+<ol class="arabic simple">
+<li><p>make coefficients MPI.py</p></li>
+<li><p>make coefficients native MPI.py</p></li>
+</ol>
+<p>The first one is an example for Gadget snapshots and the second is an example for EXP snapshots.</p>
+</section>
+<section id="Using-a-FieldGenerator">
+<h2>Using a FieldGenerator<a class="headerlink" href="#Using-a-FieldGenerator" title="Link to this heading"></a></h2>
+<p>Now that we have our new coefficients, we can use the <code class="docutils literal notranslate"><span class="pre">FieldGenerator</span></code> to view the BFE representation of the underlying fields. Here is an example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Now try some slices for rendering
+#
+
+times = coefs.Times()[0:3]
+pmin  = [-1.0, -1.0, 0.0]
+pmax  = [ 1.0,  1.0, 0.0]
+grid  = [  40,   40,   0]
+
+fields = pyEXP.field.FieldGenerator(times, pmin, pmax, grid)
+
+surfaces = fields.slices(basis, coefs)
+
+print(&quot;We now have the following [time field] pairs&quot;)
+for v in surfaces:
+    print(&#39;-&#39;*40)
+    for u in surfaces[v]:
+        print(&quot;{:8.4f}  {}&quot;.format(v, u))
+
+print(&quot;\nHere is the first one:&quot;)
+for v in surfaces:
+    for u in surfaces[v]:
+        print(&#39;-&#39;*40)
+        print(&#39;----&#39;, u)
+        print(&#39;-&#39;*40)
+        print(surfaces[v][u])
+    break
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+We now have the following [time field] pairs
+----------------------------------------
+  0.0100  azi force
+  0.0100  dens
+  0.0100  dens m=0
+  0.0100  dens m&gt;0
+  0.0100  mer force
+  0.0100  potl
+  0.0100  potl m=0
+  0.0100  potl m&gt;0
+  0.0100  rad force
+----------------------------------------
+  0.0200  azi force
+  0.0200  dens
+  0.0200  dens m=0
+  0.0200  dens m&gt;0
+  0.0200  mer force
+  0.0200  potl
+  0.0200  potl m=0
+  0.0200  potl m&gt;0
+  0.0200  rad force
+----------------------------------------
+  0.0300  azi force
+  0.0300  dens
+  0.0300  dens m=0
+  0.0300  dens m&gt;0
+  0.0300  mer force
+  0.0300  potl
+  0.0300  potl m=0
+  0.0300  potl m&gt;0
+  0.0300  rad force
+
+Here is the first one:
+----------------------------------------
+---- azi force
+----------------------------------------
+[[-0.00087384 -0.00098027 -0.00113208 ...  0.00053854  0.00058888
+   0.00065692]
+ [-0.00104563 -0.00117976 -0.00136719 ...  0.00044353  0.00050006
+   0.00057894]
+ [-0.00120132 -0.0013625  -0.00158698 ...  0.00027801  0.00034734
+   0.00044279]
+ ...
+ [-0.00086897 -0.00120733 -0.00153372 ...  0.00364213  0.00354581
+   0.00338669]
+ [-0.00081985 -0.00113707 -0.00144417 ...  0.00372749  0.00363169
+   0.00347801]
+ [-0.00079396 -0.00109152 -0.00138081 ...  0.00380656  0.00370932
+   0.00355781]]
+----------------------------------------
+---- dens
+----------------------------------------
+[[0.01483475 0.01596043 0.01714892 ... 0.01672023 0.01557306 0.01447723]
+ [0.01600303 0.01726678 0.01860979 ... 0.01800252 0.01671672 0.01549673]
+ [0.01722907 0.01864478 0.02016317 ... 0.01938812 0.01793789 0.01657638]
+ ...
+ [0.01678794 0.01815355 0.01959459 ... 0.02029726 0.01882576 0.01744723]
+ [0.01564873 0.01686448 0.01813334 ... 0.0186915  0.01740002 0.01617756]
+ [0.01458028 0.01566568 0.0167905  ... 0.01718854 0.01605308 0.01497049]]
+----------------------------------------
+---- dens m=0
+----------------------------------------
+[[0.01438968 0.0155077  0.01669507 ... 0.01669507 0.0155077  0.01438968]
+ [0.0155077  0.01676509 0.01810998 ... 0.01810998 0.01676509 0.0155077 ]
+ [0.01669507 0.01810998 0.01963967 ... 0.01963967 0.01810998 0.01669507]
+ ...
+ [0.01669507 0.01810998 0.01963967 ... 0.01963967 0.01810998 0.01669507]
+ [0.0155077  0.01676509 0.01810998 ... 0.01810998 0.01676509 0.0155077 ]
+ [0.01438968 0.0155077  0.01669507 ... 0.01669507 0.0155077  0.01438968]]
+----------------------------------------
+---- dens m&gt;0
+----------------------------------------
+[[ 4.45073500e-04  4.52731590e-04  4.53846878e-04 ...  2.51552956e-05
+   6.53618481e-05  8.75497790e-05]
+ [ 4.95328044e-04  5.01695555e-04  4.99815797e-04 ... -1.07452950e-04
+  -4.83680560e-05 -1.09646717e-05]
+ [ 5.34000923e-04  5.34801453e-04  5.23498224e-04 ... -2.51551945e-04
+  -1.72089174e-04 -1.18696655e-04]
+ ...
+ [ 9.28678128e-05  4.35745387e-05 -4.50829830e-05 ...  6.57595694e-04
+   7.15783623e-04  7.52157473e-04]
+ [ 1.41032098e-04  9.93959984e-05  2.33634619e-05 ...  5.81527303e-04
+   6.34925615e-04  6.69857895e-04]
+ [ 1.90603168e-04  1.57983566e-04  9.54256029e-05 ...  4.93466156e-04
+   5.45385177e-04  5.80809254e-04]]
+----------------------------------------
+---- mer force
+----------------------------------------
+[[ 0.00116107  0.0012984   0.00143422 ...  0.00141841  0.00133688
+   0.00125844]
+ [ 0.0010585   0.00120293  0.00134758 ...  0.00156861  0.00148209
+   0.00139784]
+ [ 0.00094972  0.00110494  0.00126318 ...  0.00172921  0.00163881
+   0.00154933]
+ ...
+ [-0.00298936 -0.003173   -0.00336324 ...  0.00119402  0.00105672
+   0.00093735]
+ [-0.00276366 -0.00292988 -0.0031003  ...  0.00081658  0.00071328
+   0.00062615]
+ [-0.00254213 -0.00269264 -0.00284517 ...  0.0004661   0.0003963
+   0.00034138]]
+----------------------------------------
+---- potl
+----------------------------------------
+[[-0.9169819  -0.9383662  -0.95999885 ... -0.960537   -0.9389293
+  -0.917559  ]
+ [-0.9383129  -0.9611787  -0.9843996  ... -0.984946   -0.96175075
+  -0.93889844]
+ [-0.95987254 -0.98432374 -1.0092399  ... -1.009817   -0.98492396
+  -0.960483  ]
+ ...
+ [-0.9592484  -0.98363    -1.0084537  ... -1.0091766  -0.984431
+  -0.9601257 ]
+ [-0.93764687 -0.9604352  -0.98355633 ... -0.98422873 -0.9611766
+  -0.9384567 ]
+ [-0.91629386 -0.9375966  -0.9591268  ... -0.9597348  -0.9382673
+  -0.9170273 ]]
+----------------------------------------
+---- potl m=0
+----------------------------------------
+[[-0.9166649 -0.9380169 -0.9596112 ... -0.9596112 -0.9380169 -0.9166649]
+ [-0.9380169 -0.9608532 -0.9840379 ... -0.9840379 -0.9608532 -0.9380169]
+ [-0.9596112 -0.9840379 -1.0089229 ... -1.0089229 -0.9840379 -0.9596112]
+ ...
+ [-0.9596112 -0.9840379 -1.0089229 ... -1.0089229 -0.9840379 -0.9596112]
+ [-0.9380169 -0.9608532 -0.9840379 ... -0.9840379 -0.9608532 -0.9380169]
+ [-0.9166649 -0.9380169 -0.9596112 ... -0.9596112 -0.9380169 -0.9166649]]
+----------------------------------------
+---- potl m&gt;0
+----------------------------------------
+[[-0.00031698 -0.00034926 -0.00038765 ... -0.00092586 -0.00091239
+  -0.00089413]
+ [-0.00029595 -0.00032549 -0.00036175 ... -0.00090816 -0.00089753
+  -0.00088152]
+ [-0.00026139 -0.00028588 -0.00031703 ... -0.00089411 -0.00088608
+  -0.00087182]
+ ...
+ [ 0.00036277  0.00040785  0.00046916 ... -0.00025367 -0.00039316
+  -0.00051454]
+ [ 0.00037004  0.00041801  0.00048153 ... -0.00019086 -0.00032336
+  -0.00043978]
+ [ 0.00037099  0.00042032  0.00048442 ... -0.00012365 -0.00025039
+  -0.0003624 ]]
+----------------------------------------
+---- rad force
+----------------------------------------
+[[-0.58504117 -0.60900503 -0.63369316 ... -0.63327456 -0.6087623
+  -0.5849374 ]
+ [-0.6087843  -0.6348392  -0.66203845 ... -0.66186184 -0.6348188
+  -0.60887575]
+ [-0.6331737  -0.661728   -0.691743   ... -0.6919265  -0.66203153
+  -0.6335524 ]
+ ...
+ [-0.6329953  -0.6614362  -0.6912934  ... -0.69079643 -0.66104454
+  -0.632722  ]
+ [-0.60824454 -0.6341394  -0.66113216 ... -0.66103613 -0.6340929
+  -0.6082666 ]
+ [-0.58422893 -0.6079955  -0.6324451  ... -0.632654   -0.6082124
+  -0.5844728 ]]
+</pre></div></div>
+</div>
+<p>These could be make into images and so forth. We’ll do this in another example notebook.</p>
+</section>
+<section id="Saving-the-coefficients">
+<h2>Saving the coefficients<a class="headerlink" href="#Saving-the-coefficients" title="Link to this heading"></a></h2>
+<p>At this point, it makes sense to save the coefficients that you have just created. This is sone with the following call:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove any old file with the same name
+try:
+    os.remove(&#39;test_coefs&#39;)
+except:
+    print(&#39;Nothing to delete&#39;)
+coefs.WriteH5Coefs(&#39;test_coefs&#39;)
+print(&#39;Coefficient file saved&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Nothing to delete
+Coefficient file saved
+</pre></div></div>
+</div>
+<p>We now have a EXP HDF5 coefficient file called <code class="docutils literal notranslate"><span class="pre">test_coefs</span></code>. You can view the contents of <code class="docutils literal notranslate"><span class="pre">test_coefs</span></code> directly using the <code class="docutils literal notranslate"><span class="pre">h5dump</span></code> command supplied in your HDF5 installion:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>h5dump test_coefs | less
+</pre></div>
+</div>
+<p>As an example of manipulating the newly made coefficients in pyEXP, let’s try reading the newly created file into another coefficient container, <code class="docutils literal notranslate"><span class="pre">coefs2</span></code>. The container has a member function called <code class="docutils literal notranslate"><span class="pre">CompareStanzas</span></code> which will check on the contents. Let’s do it.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Now try reading it in
+#
+coefs2 = pyEXP.coefs.Coefs.factory(&#39;test_coefs&#39;)
+print(&quot;Type is&quot;, coefs2.getGeometry())
+
+# Now compare with the original
+#
+coefs2.CompareStanzas(coefs)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Type is sphere
+Times are the same, now checking parameters at each time
+Parameters are the same, now checking coefficients
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>This member function will print differences. No differenced should be printed, of course.</p>
+</section>
+<hr class="docutils" />
+<section id="Where-do-you-want-to-go-next?">
+<h2>Where do you want to go next?<a class="headerlink" href="#Where-do-you-want-to-go-next?" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../README.html"><span class="doc">Return to Table of Contents</span></a></p></li>
+<li><p><a class="reference internal" href="Part2-Analysis.html"><span class="doc">Go to next notebook</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../pyEXP-tutorial.html" class="btn btn-neutral float-left" title="pyEXP Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Part2-Analysis.html" class="btn btn-neutral float-right" title="An example of applying mSSA to the coefficients you created using pyEXP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index to pyEXP classes &mdash; EXP 0.172 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9c6809b7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=5eb1bb1e"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Versioning and API stability" href="versioning.html" />
+    <link rel="prev" title="Index to C++ classes" href="doxygen.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EXP
+              <img src="_static/exp_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.x
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/overview.html">EXP at a glance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/tutorial.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXP concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/bfetheory.html">BFE theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/codeintro.html">Code intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/timesseries.html">BFE time series analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/units.html">Units in EXP and pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/multistep.html">N-Body optimization in EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/centering.html">Centering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html">What is YAML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/yamlconfig.html#an-annotated-exp-yaml-configuration">An annotated EXP YAML configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/howtosim.html">How to run your own N-body simulation in EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Questions (FAQ)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Are there pre-compiled versions of pyEXP and EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-only-want-pyexp-do-i-need-c-to-compile-exp">I only want pyEXP, do I need C++ to compile EXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#why-would-i-use-exp-rather-than-pyexp">Why would I use EXP rather than pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-hardware-do-i-need-to-run-exp-and-pyexp">What hardware do I need to run EXP and pyEXP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-i-restart-exp-from-a-checkpoint">How do I restart EXP from a checkpoint?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#my-hpc-cluster-does-not-have-the-required-dependencies-what-are-my-options">My HPC cluster does not have the required dependencies.  What are my options?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#can-i-run-exp-or-pyexp-in-a-container">Can I run EXP or pyEXP in a container?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#i-got-a-seg-fault-now-what-do-i-do">I got a “seg fault”, now what do I do?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-can-i-do-a-calculation-with-phase-space-in-pyexp">How can I do a calculation with phase space in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-do-these-parameters-mean">What do these parameters mean?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How to solve specific problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-bases.html">How to visualize the BFE bases used to make your coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/making-coefficients.html">How to  generate coefficients from phase-space snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/saving-coefficients.html">How to save and reuse your newly generated coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/visualizing-fields.html">How to convert your coefficients back to physical fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/make-movies.html">Making movies of your BFE field quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/using-mssa.html">How to use mSSA with your coefficient series in pyEXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/orbits.html">Generating orbits in your BFE potential fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/replay.html">Replaying a simulation using EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/exp-phase-space.html">The EXP phase-space format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/EXP-output.html">How the EXP N-body code selects what and when to write data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/flatdisk.html">How to configure a razor-thin disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/debug.html">Debugging EXP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extending EXP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html">Software design goals and features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#overall-organization-of-the-code">Overall organization of the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/design.html#parallel-usage">Parallel usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/usermodules.html">User modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/newforces.html">How to make a new EXP force</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More about EXP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to EXP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen.html">Index to C++ classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Index to pyEXP classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyexp">pyEXP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-get-started">How to get started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-available-submodules">The available submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-workflow">Example workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-information">Version information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#history-and-provenance">History and provenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introspection">Introspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coefficient-creation">Coefficient creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scalablility">Scalablility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-systems">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orbit-integration">Orbit integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#non-inertial-frames-of-reference">Non-inertial frames of reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.basis.IntegrateOrbits"><code class="docutils literal notranslate"><span class="pre">IntegrateOrbits()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coefstruct">CoefStruct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coefs">Coefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updates">Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-indexing">Dataset indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-lifetime">Object lifetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs"><code class="docutils literal notranslate"><span class="pre">CubeCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs.PowerDim"><code class="docutils literal notranslate"><span class="pre">CubeCoefs.PowerDim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">CubeCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs.setTensor"><code class="docutils literal notranslate"><span class="pre">CubeCoefs.setTensor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.CylCoefs"><code class="docutils literal notranslate"><span class="pre">CylCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CylCoefs.EvenOddPower"><code class="docutils literal notranslate"><span class="pre">CylCoefs.EvenOddPower()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CylCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">CylCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CylCoefs.setMatrix"><code class="docutils literal notranslate"><span class="pre">CylCoefs.setMatrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.CylFldCoefs"><code class="docutils literal notranslate"><span class="pre">CylFldCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CylFldCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">CylFldCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.CylFldCoefs.setMatrix"><code class="docutils literal notranslate"><span class="pre">CylFldCoefs.setMatrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs"><code class="docutils literal notranslate"><span class="pre">SlabCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs.PowerDim"><code class="docutils literal notranslate"><span class="pre">SlabCoefs.PowerDim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">SlabCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs.setTensor"><code class="docutils literal notranslate"><span class="pre">SlabCoefs.setTensor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.SphCoefs"><code class="docutils literal notranslate"><span class="pre">SphCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SphCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">SphCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SphCoefs.setMatrix"><code class="docutils literal notranslate"><span class="pre">SphCoefs.setMatrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.SphFldCoefs"><code class="docutils literal notranslate"><span class="pre">SphFldCoefs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SphFldCoefs.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">SphFldCoefs.getAllCoefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.SphFldCoefs.setMatrix"><code class="docutils literal notranslate"><span class="pre">SphFldCoefs.setMatrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.TableData"><code class="docutils literal notranslate"><span class="pre">TableData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.TableData.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">TableData.getAllCoefs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.coefs.TrajectoryData"><code class="docutils literal notranslate"><span class="pre">TrajectoryData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyEXP.coefs.TrajectoryData.getAllCoefs"><code class="docutils literal notranslate"><span class="pre">TrajectoryData.getAllCoefs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fieldgenerator">FieldGenerator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-packing">Data packing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-names">Field names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#expmssa">expMSSA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coefficient-update-and-memory-usage">Coefficient update and memory usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-parameters">Configuration parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grouping">Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-restore">Save/Restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#computational-notes">Computational notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#koopman">Koopman</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id35">Coefficient update and memory usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">Configuration parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">Save/Restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">Computational notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.util.Version"><code class="docutils literal notranslate"><span class="pre">Version()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.util.getCenterOfMass"><code class="docutils literal notranslate"><span class="pre">getCenterOfMass()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.util.getDensityCenter"><code class="docutils literal notranslate"><span class="pre">getDensityCenter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.util.getVersionInfo"><code class="docutils literal notranslate"><span class="pre">getVersionInfo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyEXP.util.particleIterator"><code class="docutils literal notranslate"><span class="pre">particleIterator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning and API stability</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EXP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index to pyEXP classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pybind11.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="index-to-pyexp-classes">
+<span id="pybind11"></span><h1>Index to pyEXP classes<a class="headerlink" href="#index-to-pyexp-classes" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="pyexp">
+<span id="module-pyEXP"></span><h2>pyEXP<a class="headerlink" href="#pyexp" title="Link to this heading"></a></h2>
+<p>Provides a collection of EXP tools for processing and analyzing
+simulation data using BFE techniques and MSSA.</p>
+<section id="how-to-get-started">
+<h3>How to get started<a class="headerlink" href="#how-to-get-started" title="Link to this heading"></a></h3>
+<p>The main documentation is the many docstrings embedded in the
+code and a set of examples provided with the EXP source.  We hope
+to provide a online reference guide in the future.</p>
+<p>We recommend beginning with the example Python scripts and IPython
+notebooks and adapting them to your own needs. You can explore
+the available classes and member functions using the usual Python
+<a href="#id1"><span class="problematic" id="id2">``</span></a>help’’ function.  The classes are organized into seven submodules
+that are described briefly below.  Run ‘help(pyEXP.xxxx) for each
+of the submodules below for more detailed usage info…</p>
+</section>
+<section id="the-available-submodules">
+<h3>The available submodules<a class="headerlink" href="#the-available-submodules" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>read</dt><dd><p>Read particle snapshots of various types.  Currently EXP,
+Gadget, Tipsy, and Bonzai types are supported.</p>
+</dd>
+<dt>basis</dt><dd><p>Create and apply specific biorthogonal bases to generate
+coefficients from particle data and evaluate potential,
+density, and force fields</p>
+</dd>
+<dt>coefs</dt><dd><p>Classes for reading, passing, writing, converting, and
+querying coefficient sets</p>
+</dd>
+<dt>field</dt><dd><p>Create two- and three-dimension rectangular grids of fields
+for visualization</p>
+</dd>
+<dt>mssa</dt><dd><p>Tools to apply Multivariate Singular Spectrum Analysis (MSSA)
+to the coefficients computed using the ‘basis’ classes</p>
+</dd>
+<dt>edmd</dt><dd><p>Tools to apply the discrete Koopman operator analysis using
+the extended Dynamical Mode Decomposition (EDMD) algorith to
+approximate the Koopman operator.  The use of the Koopman class
+echos that for mSSA.  As of this point, this is NOT a recommended
+toolset.  If you have success with this, please post a message.</p>
+</dd>
+<dt>util</dt><dd><p>Miscellaneous tools that support the others.  Currently this
+include centering algorithms.  While EXP has native methods for
+doing this, others will need to supply an estimated center</p>
+</dd>
+</dl>
+</section>
+<section id="example-workflow">
+<h3>Example workflow<a class="headerlink" href="#example-workflow" title="Link to this heading"></a></h3>
+<p>To provide some context, suppose you want to read some snapshots,
+make some coefficients, and then analyze them with MSSA. The class
+construction would go something like this:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create a reader instance for your simulation, call it ‘reader’.</p></li>
+<li><p>Create a basis designed to represent the a particular particle
+type.  Star particles, perhaps, so let’s call it ‘disk’.</p></li>
+<li><p>We then pass ‘reader’ to the createCoefficients member of ‘disk’
+to get coefficients for your snapshots, called ‘coefs’</p></li>
+<li><p>We might then want to explore dynamical patterns in these
+coefficients by passing ‘coefs’ to ‘expMSSA’.  ‘expMSSA’ will
+return principal signals as an updated coefficient object,
+that we call ‘newcoefs’</p></li>
+<li><p>‘newcoefs’ and ‘disk’ can then be passed to the FieldGenerator
+to provide density, potential, force fields, etc. for the each
+principal signal</p></li>
+</ol>
+</div></blockquote>
+<p>This is only one example of many possible uses.  There are many
+variants to this work flow, of course, and I expect that you will
+invent some interesting ones</p>
+<p>The source code has some sample Python scripts and notebooks for a
+quick start (check the pyEXP directory).</p>
+</section>
+<section id="version-information">
+<h3>Version information<a class="headerlink" href="#version-information" title="Link to this heading"></a></h3>
+<p>Version:          EXP 7.9.1
+Repository URL:   <a class="reference external" href="https://github.com/EXP-code/EXP">https://github.com/EXP-code/EXP</a>
+GIT branch:       SLboundaries
+GIT commit:       23a9c5c0a2faf49b6858dfe40a288557c1f69811
+Compile time:     2025-11-24 22:55:34 UTC</p>
+</section>
+<section id="history-and-provenance">
+<h3>History and provenance<a class="headerlink" href="#history-and-provenance" title="Link to this heading"></a></h3>
+<p>These EXP interface classes and the Python interface were written
+to fill a demand by collaborators for Python access to EXP.   EXP
+itself represents 20 years of experience applying BFE techniques to
+both simulation and perturbation theory.  Recent innovations include
+the application of MSSA to discover and characterize some key
+dynamical features in simulations that are hard to find <a href="#id3"><span class="problematic" id="id4">`</span></a>by eye’.</p>
+<p>Please send comments, suggestions, and particularly good cookies to:
+<a class="reference external" href="mailto:mdw&#37;&#52;&#48;umass&#46;edu">mdw<span>&#64;</span>umass<span>&#46;</span>edu</a> (Martin Weinberg)</p>
+</section>
+</section>
+<p id="module-pyEXP.read">ParticleReader class bindings</p>
+<p>This collection of classes reads and converts your phase-space
+snapshots to iterable objects for generating basis coefficients.
+The particle fields themselves are not available in Python for
+inspection currently.</p>
+<dl>
+<dt>The available particle readers are:</dt><dd><ol class="arabic simple">
+<li><p>PSPout         The monolithic EXP phase-space snapshot format</p></li>
+<li><p>PSPspl         Like PSPout, but split into multiple file chunks</p></li>
+</ol>
+<p>3. GadgetNative   The original Gadget native format
+4  GadgetHDF5     The newer HDF5 Gadget format
+5. TipsyNative    The original Tipsy format
+6. TipsyXDR       The original XDR Tipsy format
+7. Bonsai         This is the Bonsai varient of Tipsy files</p>
+</dd>
+</dl>
+<p>We have a helper function, getReaders, to get a list to help you
+remember.  Try: pyEXP.read.ParticleReader.getReaders()</p>
+<p>Each reader can manage snapshots split into many files by parallel,
+per process writing.  The reader classes takes a list of lists on input.
+The outer list represents individual snapshots and the inner list is
+all files belonging to a single snapshot.  For unsplit snapshots, the
+inner list is a single file.  We provide two helper functions that will
+make the list of lists from the lexical sort and pattern match on a
+single list of filenames of the form ‘prefix_xxxxx-yyyyy, where xxxxx
+is the integer index of the snapshot and yyyyy is the process index
+for a single snapshot.  The value for ‘prefix’ is arbitrary.  The
+delimiter between xxxxx and yyyyy may be user specified.  See routines
+‘parseFileList()’ and ‘parseStringList()’.</p>
+<p>Once the ParticleReader instance is created, you can select
+the type of particle you want to read; each reader has different
+mnemonics for these, as you know.  You can get the list of types
+using the GetTypes() member and select the desired type with the
+SelectType() member.  You can also get the current time and number
+of particles for the selected type using the CurrentTime() and
+CurrentNumber() members, respectively.  The main function of of
+this ParticleReader object in pyEXP is creating the coefficient
+expansion using Basis.createCoefficients.  See help(pyEXP.basis)</p>
+<p id="module-pyEXP.basis">BasisFactory class bindings</p>
+<p>This module provides a factory class that will create biorthogonal
+bases from input YAML configuration files.  Each basis can then be
+used to compute coefficients, provide field quantities such as
+forces and, together with the FieldGenerator, surfaces and fields
+for visualization.</p>
+<p>Eight bases are currently implemented:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>SphericalSL, the Sturm-Liouiville spherical basis;</p></li>
+<li><p>Bessel, the classic spherical biorthogonal constructed from
+the eigenfunctions of the spherical Laplacian;</p></li>
+<li><p>Cylindrical, created created by computing empirical orthogonal functions
+over a densely sampled SphericalSL basis;</p></li>
+<li><p>FlatDisk, an EOF rotation of the finite Bessel basis;</p></li>
+<li><p>CBDisk, the Clutton-Brock disk basis for testing;</p></li>
+<li><p>Slab, a biorthogonal basis for a slab geometry with a finite
+finite vertical extent.  The basis is constructed from direct
+solution of the Sturm-Liouville equation.</p></li>
+<li><p>Cube, a periodic cube basis whose functions are the Cartesian
+eigenfunctions of the Cartesian Laplacian: sines and cosines.</p></li>
+<li><p>FieldBasis, for computing user-provided quantities from a
+phase-space snapshot.</p></li>
+<li><p>VelocityBasis, for computing the mean field velocity fields from
+a phase-space snapshot.  This is a specialized version of FieldBasis.</p></li>
+</ol>
+</div></blockquote>
+<p>Each of these bases take a YAML configuration file as input. These parameter
+lists are as subset of and have the same structure as thosed used by EXP.
+The factory and the individual constructors will check the parameters keys
+and warn of mismatches for safety.  See the EXP documentation and the pyEXP
+examples for more detail.  The first four bases are the most often used bi-
+orthogonal basis types used for computing the potential and forces from
+density distributions.  Other biorthgonal bases in EXP but not in pyEXP
+include those for cubic and slab geometries and other special-purpose bases
+such as the Hernquist, Clutton-Brock sphere and two-dimensional disk basis.
+These will be made available in a future release if there is demand.  Note
+that the Hernquist and Clutton-Brock spheres can be constructed using
+SphericalSL with a Hernquist of modified Plummer model as input.  The
+FieldBasis and VelocityBasis are designed for producing summary data for
+post-production analysis (using mSSA or eDMD, for example) and for
+simulation cross-comparison.</p>
+<p>The primary functions of these basis classes are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>To compute BFE coefficients from phase-space snapshots
+using the ParticleReader class. See help(pyEXP.read).</p></li>
+<li><p>To evaluate the fields from the basis and a coefficient
+object. See help(pyEXP.coefs) and help(pyEXP.field).</p></li>
+<li><p>To provide compact summary field data for post-production
+analysis.  See help(pyEXP.basis.FieldBasis) and
+help(pyEXP.basis.VelocityBasis).</p></li>
+</ol>
+</div></blockquote>
+<section id="introspection">
+<h2>Introspection<a class="headerlink" href="#introspection" title="Link to this heading"></a></h2>
+<p>The first two bases have a ‘cacheInfo(str)’ member that reports the
+parameters used to create the cached basis.  This may be used to
+grab the parameters for creating a basis.  Cache use ensures that
+your analyses are computed with the same bases used in a simulation
+or with the same basis used on previous pyEXP invocations.  At this
+point, you must create the YAML configuration for the basis even if
+the basis is cached.  This is a safety and consistency feature that
+may be relaxed in a future version.</p>
+</section>
+<section id="coefficient-creation">
+<h2>Coefficient creation<a class="headerlink" href="#coefficient-creation" title="Link to this heading"></a></h2>
+<p>The Basis class creates coefficients from phase space with two
+methods: ‘createFromReader()’ and ‘createFromArray()’.  The first
+uses a ParticleReader, see help(pyEXP.read), and the second uses
+arrays of mass and 3d position vectors.  Both methods take an
+optional center vector (default: 0, 0, 0).  You may also register
+and an optional boolean functor used to select which particles to
+using the ‘setSelector(functor)’ member.  An example functor
+would be defined in Python as follows:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def myFunctor(m, pos, vel, index):</dt><dd><p>ret = False  # Default return value
+# some caculation with scalar mass, pos array, vel array and
+# integer index that sets ret to True if desired … 
+return ret</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>If you are using ‘createFromArray()’, you will only have access to
+the mass and position vector.   You may clear and turn off the
+selector using the ‘clrSelector()’ member.</p>
+<p>The FieldBasis class requires a user-specified phase-space field
+functor that produces an list of quantities derived from the
+phase space for each particle.  For example, to get a total
+velocity field, we could use:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def totalVelocity(m, pos, vel):</dt><dd><p># Some caculation with scalar mass, pos array, vel array.
+# Total velocity for this example…
+return [(vel[0]**2 + vel[1]**2 + vel[2]**2)**0.5]</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>This function is registered with the FieldBasis using:</p>
+<blockquote>
+<div><p>basis-&gt;addPSFunction(totalVelocity, [‘total velocity’])</p>
+</div></blockquote>
+<p>The VelocityBasis is a FieldBasis that automatically sets the
+phase-space field functor to cylindrical or spherical velocities
+based on the ‘dof’ parameter.  More on ‘dof’ below.</p>
+</section>
+<section id="scalablility">
+<h2>Scalablility<a class="headerlink" href="#scalablility" title="Link to this heading"></a></h2>
+<p>createFromArray() is a convenience method allows you to transform
+coordinates and preprocess phase space using your own methods and
+readers.  Inside this method are three member functions calls that
+separately initialize, accumulate the coefficient contributions from
+the provided vectors, and finally construct and return the new coeffi-
+cient instance (Coefs).  For scalability, we provide access to each 
+of these three methods so that the phase space may be partitioned into
+any number of smaller pieces.  These three members are: initFromArray(),
+addFromArray(), makeFromArray().  The initFromArray() is called once to
+begin the creation and the makeFromArray() method is called once to
+build the final set of coefficients.  The addFromArray() may be called
+any number of times in between.  For example, the addFromArray() call
+can be inside of a loop that iterates over any partition of phase space
+from your own pipeline.  The underlying computation is identical to
+createFromArray().  However, access to the three underlying steps allows
+you to scale your phase-space processing to snapshots of any size.
+For reference, the createFromReader() method uses a producer-consumer
+pattern internally to provide scalability.  These three methods allow
+you to provide the same pattern in your own pipeline.</p>
+</section>
+<section id="coordinate-systems">
+<h2>Coordinate systems<a class="headerlink" href="#coordinate-systems" title="Link to this heading"></a></h2>
+<p>Each basis is assigned a natural coordinate system for field evaluation
+as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>SphericalSL uses spherical coordinates</p></li>
+<li><p>Cylindrical uses cylindrical coordinates</p></li>
+<li><p>FlatDisk uses cylindrical coordinates</p></li>
+<li><p>CBDisk uses cylindrical coordinates</p></li>
+<li><p>Slab uses Cartesian coordinates</p></li>
+<li><p>Cube uses Cartesian coordinates</p></li>
+<li><p>FieldBasis and VelocityBasis provides two natural geometries for
+field evaluation: a two-dimensional (dof=2) polar disk and a
+three-dimensional (dof=3) spherical geometry that are chosen using
+the ‘dof’ parameter.  These use cylindrical and spherical
+coordinates, respectively, by default.</p></li>
+</ol>
+</div></blockquote>
+<p>These default choices may be overridden by passing a string argument
+to the ‘setFieldType()’ member. The argument is case insensitive and only 
+distinguishing characters are necessary.  E.g. for ‘Cylindrical’, the 
+argument ‘cyl’ or even ‘cy’ is sufficient.  The argument ‘c’ is clearly 
+not enough.</p>
+</section>
+<section id="orbit-integration">
+<h2>Orbit integration<a class="headerlink" href="#orbit-integration" title="Link to this heading"></a></h2>
+<p>The IntegrateOrbits routine uses a fixed time step leap frog integrator
+to advance orbits from tinit to tfinal with time step h.  The initial
+positions and velocities are supplied in an nx6 NumPy array.  Tuples
+of the basis (a Basis instance) and coefficient database (a Coefs
+instance) for each component is supplied to IntegrateOrbtis as a list.
+Finally, the type of acceleration is an instance of the AccelFunc class.
+The acceleration at each time step is computed by setting a coefficient
+set in Basis and evaluating and accumulating the acceleration for each
+phase-space point.  The coefficient are handled by implementing the
+evalcoefs() method of AccelFunc. We supply two implemented derived
+classes, AllTimeFunc and SingleTimeFunc.  The first interpolates on the
+Coefs data base and installs the interpolated coefficients for the
+current time in the basis instance.  The SingleTimeFunc interpolates on
+the Coefs data base for a single fixed time and sets the interpolated
+coefficients once at the beginning of the integration.  This implementes
+a fixed potential model.  AccelFunc can be inherited by a native Python
+class and the evalcoefs() may be implemented in Python and passed to
+IntegrateOrbits in the same way as a native C++ class.</p>
+</section>
+<section id="non-inertial-frames-of-reference">
+<h2>Non-inertial frames of reference<a class="headerlink" href="#non-inertial-frames-of-reference" title="Link to this heading"></a></h2>
+<p>Each component of a multiple component simulation may have its own expansion
+center. Orbit integration in the frame of reference of the expansion is
+accomplished by defining a moving frame of reference using the setNonInertial()
+call with either an array of n times and center positions (as an nx3 array)
+or by initializing with an EXP orient file.</p>
+<p>We provide a member function, setNonInertialAccel(t), to estimate the frame
+acceleration at a given time.  This may be useful for user-defined acceleration
+routines.  This is automatically called default C++ evalcoefs() routine.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.basis.IntegrateOrbits">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.basis.</span></span><span class="sig-name descname"><span class="pre">IntegrateOrbits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tinit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tfinal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basiscoef</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pyEXP.basis.Basis</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pyEXP.coefs.Coefs</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pyEXP.basis.AccelFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.basis.IntegrateOrbits" title="Link to this definition"></a></dt>
+<dd><p>Compute particle orbits in gravitational field from the bases</p>
+<p>Integrate a list of initial conditions from ‘tinit’ to ‘tfinal’ with
+a step size of ‘h’ using the list of basis and coefficient pairs. The
+step size will be adjusted to provide uniform sampling.  Every
+step will be returned unless you provide an explicit value for ‘nout’,
+the number of desired output steps.  In this case, the code will
+choose new set step size equal or smaller to the supplied step size
+with a stride to provide exactly ‘nout’ output times.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>tinit<span class="classifier">float</span></dt><dd><p>the intial time</p>
+</dd>
+<dt>tfinal<span class="classifier">float</span></dt><dd><p>the final time</p>
+</dd>
+<dt>h<span class="classifier">float</span></dt><dd><p>the integration step size</p>
+</dd>
+<dt>ps<span class="classifier">numpy.ndarray</span></dt><dd><p>an n x 6 table of phase-space initial conditions</p>
+</dd>
+<dt>bfe<span class="classifier">list(BasisCoef)</span></dt><dd><p>a list of BFE coefficients used to generate the gravitational 
+field</p>
+</dd>
+<dt>func<span class="classifier">AccelFunctor</span></dt><dd><p>the force function</p>
+</dd>
+<dt>nout<span class="classifier">int </span></dt><dd><p>the number of output points, if specified</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>tuple(numpy.array, numpy.ndarray)</dt><dd><p>time and phase-space arrays</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<p id="module-pyEXP.coefs">Coefficient class bindings</p>
+<p>These classes store, write, and provide an interface to coefficients
+and table data for use by the other pyEXP classes.</p>
+<section id="coefstruct">
+<h2>CoefStruct<a class="headerlink" href="#coefstruct" title="Link to this heading"></a></h2>
+<p>The CoefStruct class is low-level structure that stores the data
+and metadata specific to each geometry. There are three groups of
+CoefStruct derived classes for biorthogonal basis coefficients,
+field data coeffients, and auxiliary table data. The biorthogonal
+classes are spherical (SphStruct), cylindrical (CylStruct), slab
+(SlabStruct), and cube (CubeStruct).  The field classes
+cylindrical (CylFldStruct), and spherical (SphFldStruct).  The
+table data is stored in TblStruct.</p>
+<p>Instances of these structures represent individual times points
+and are created, maintained, and interfaced by the Coefs class.
+Access to the underlying data is provided to Python in case you
+need to change or rewrite the data for some reason.  We have also
+provided a assign() member so that you can instaniate and load a
+coefficient structure using Python.  To do this, use the
+constructor to make a blank instance, assign the dimensions and
+use assign() to create a data matrix with the supplied matrix or
+array.  The dimen- sions are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>(lmax, nmax) for SphStruct</p></li>
+<li><p>(mmax, nmax) for a CylStruct</p></li>
+<li><p>(nmaxx, nmaxy, nmaxz) for a SlabStruct</p></li>
+<li><p>(nmaxx, nmaxy, nmaxz) for a CubeStruct</p></li>
+<li><p>(nfld, lmax, nmax) for a SphFldStruct</p></li>
+<li><p>(nfld, mmax, nmax) for a CylFldStruct</p></li>
+<li><p>(cols) for a TblStruct.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="coefs">
+<h2>Coefs<a class="headerlink" href="#coefs" title="Link to this heading"></a></h2>
+<p>The base class, ‘Coefs’, provides a factory reader that will
+create one of the derived coefficient classes, SphCoefs, CylCoefs,
+SlabCoefs, CubeCoefs, TblCoefs, SphFldCoefs, and CylFldCoefs,
+deducing the type from the input file. The input files may be EXP
+native or HDF5 cofficient files.  Only biorthgonal basis
+coefficients have a native EXP type.  The Basis factory,
+Basis::createCoefficients, will create set of coefficients from
+phase-space snapshots.  See help(pyEXP.basis). Files which are not
+recognized as EXP coefficient files are assumed to be data files
+and are parsed by the TblCoefs class. The first column in data
+tables is interpreted as time and each successive column is
+interpreted as a new data field.</p>
+<p>Once created, you may get a list of times, get the total
+gravitational power from biothogonal basis coefficients and
+general power from the field coefficients, and write a new HDF5
+file.  Their primary use is as a container object for MSSA (using
+expMSSA) and field visualization using the FieldGenerator class.</p>
+</section>
+<section id="updates">
+<h2>Updates<a class="headerlink" href="#updates" title="Link to this heading"></a></h2>
+<p>The expMSSA class will update the contribution to the coefficients
+specified by key from each eigen component to the reconstructed
+series. Unspecified coefficients series will not be updated and
+their original data will be intact. For visualization, the series
+data in a Coefs object may be zeroed using the ‘zerodata()’ member
+function prior to an expMSSA update.  This allows one to include
+reconstructions that <em>only</em> include particular eigen components for
+the coefficients specified by key.  Then, one can visualize only the
+updated fields using ‘FieldGenerator’. See help(pyEXP.mssa) and
+help(pyEXP.field) for more details.</p>
+</section>
+<section id="dataset-indexing">
+<h2>Dataset indexing<a class="headerlink" href="#dataset-indexing" title="Link to this heading"></a></h2>
+<p>Coefficients and other auxilliary data from simulations are stored
+and retrieved by their time field.  Internally, these are floating
+fixed-point values truncated to 8 signficant figures so that they
+may be used as dictionary/map keys.  The values in the time list,
+returned with the Times() member function contain the truncated
+values for reference.</p>
+</section>
+<section id="object-lifetime">
+<h2>Object lifetime<a class="headerlink" href="#object-lifetime" title="Link to this heading"></a></h2>
+<p>As in native Python, the memory for created objects persists until
+it is no longer referenced.  For example, replacing the variable
+with a new set of coefficients will allow the memory to be
+deallocated if no other class instance holds a reference. Because
+coefficient sets can be large, the creation of a Coefs instance by
+the ‘factory’ will be passed to any other class that needs it.
+The MSSA class, expMSSA, will hold a reference to the the Coefs
+object passed on creation, and it update the values of the
+coefficients on reconstruction, without copying. If you want to
+keep the initial set without change, we have provided a
+‘deepcopy()’ member that provides a byte-by-byte copy.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.CubeCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">CubeCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.CubeCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for cube coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CubeCoefs.PowerDim">
+<span class="sig-name descname"><span class="pre">PowerDim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs" title="pyEXP.coefs.CubeCoefs"><span class="pre">pyEXP.coefs.CubeCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.CubeCoefs.PowerDim" title="Link to this definition"></a></dt>
+<dd><p>Get power for the coefficient DB as a function of harmonic index for a
+given dimension.  This Power() member is equivalent to PowerDim(‘x’).</p>
+<section id="id5">
+<h2>Parameters<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>d<span class="classifier">char</span></dt><dd><p>dimension for power summary; one of ‘x’, ‘y’, or ‘z’</p>
+</dd>
+<dt>min<span class="classifier">int</span></dt><dd><p>minimum index along requested dimension (default=0)</p>
+</dd>
+<dt>max<span class="classifier">int</span></dt><dd><p>maximum index along requested dimension (default=max int)</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>2-dimensional numpy array containing the power</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CubeCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CubeCoefs" title="pyEXP.coefs.CubeCoefs"><span class="pre">pyEXP.coefs.CubeCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.CubeCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 4-dimensional ndarray indexed by nx, ny, nz, and time indices.</p>
+<section id="id7">
+<h2>Returns<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>4-dimensional numpy array containing the cube coefficients</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CubeCoefs.setTensor">
+<span class="sig-name descname"><span class="pre">setTensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pyEXP.coefs.CubeCoefs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor:</span> <span class="pre">Eigen::Tensor&lt;std::complex&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.CubeCoefs.setTensor" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient tensor at the provided time</p>
+<section id="id8">
+<h2>Parameters<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<dl>
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient tensor
+mat : numpy.ndarray</p>
+<blockquote>
+<div><p>the new coefficient array.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h2>Returns<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">CylCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.CylCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for cylindrical coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylCoefs.EvenOddPower">
+<span class="sig-name descname"><span class="pre">EvenOddPower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CylCoefs" title="pyEXP.coefs.CylCoefs"><span class="pre">pyEXP.coefs.CylCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.CylCoefs.EvenOddPower" title="Link to this definition"></a></dt>
+<dd><p>Get cylindrical coefficient power separated into vertically even and odd contributions.</p>
+<section id="id10">
+<h2>Parameters<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>nodd<span class="classifier">int, default=-1</span></dt><dd><p>number of odd vertical modes to compute</p>
+</dd>
+<dt>min<span class="classifier">int, default=0</span></dt><dd><p>minimum time index for power calculation</p>
+</dd>
+<dt>max<span class="classifier">int, default=inf</span></dt><dd><p>maximum time index for power calculation</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>Returns<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>2-dimensional numpy array containing the even and odd
+power coefficients</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<p>The default parameters (nodd&lt;0) will query the YAML config
+for the value of ncylodd, but this can be provided as an
+argument if it is not explicitly set in your EXP::Cylinder
+configuration. If in doubt, use the default.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CylCoefs" title="pyEXP.coefs.CylCoefs"><span class="pre">pyEXP.coefs.CylCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.CylCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 3-dimensional ndarray indexed by azimuthal index, radial index, and time index</p>
+<section id="id12">
+<h2>Returns<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>3-dimensional numpy array containing the cylindrical coefficients</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylCoefs.setMatrix">
+<span class="sig-name descname"><span class="pre">setMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CylCoefs" title="pyEXP.coefs.CylCoefs"><span class="pre">pyEXP.coefs.CylCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.CylCoefs.setMatrix" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient matrix at the provided time</p>
+<section id="id13">
+<h2>Parameters<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<dl>
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient matrix
+mat : numpy.ndarray</p>
+<blockquote>
+<div><p>the new coefficient array.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h2>Returns<a class="headerlink" href="#id14" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylFldCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">CylFldCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.CylFldCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for cylindrical field coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylFldCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CylFldCoefs" title="pyEXP.coefs.CylFldCoefs"><span class="pre">pyEXP.coefs.CylFldCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.CylFldCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 4-dimensional ndarray indexed by channel index, spherical index, radial index, and time index</p>
+<section id="id15">
+<h2>Returns<a class="headerlink" href="#id15" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>4-dimensional numpy array containing the cylindrical coefficients</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.CylFldCoefs.setMatrix">
+<span class="sig-name descname"><span class="pre">setMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.CylFldCoefs" title="pyEXP.coefs.CylFldCoefs"><span class="pre">pyEXP.coefs.CylFldCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.CylFldCoefs.setMatrix" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient tensor at the provided time</p>
+<section id="id16">
+<h2>Parameters<a class="headerlink" href="#id16" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient matrix</p>
+</dd>
+<dt>mat<span class="classifier">numpy.ndarray</span></dt><dd><p>the new coefficient array.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h2>Returns<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.SlabCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">SlabCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.SlabCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for cube coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SlabCoefs.PowerDim">
+<span class="sig-name descname"><span class="pre">PowerDim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs" title="pyEXP.coefs.SlabCoefs"><span class="pre">pyEXP.coefs.SlabCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.SlabCoefs.PowerDim" title="Link to this definition"></a></dt>
+<dd><p>Get power for the coefficient DB as a function of harmonic index for a
+given dimension.  This Power() member is equivalent to PowerDim(‘x’).</p>
+<section id="id18">
+<h2>Parameters<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>d<span class="classifier">char</span></dt><dd><p>dimension for power summary; one of ‘x’, ‘y’, or ‘z’</p>
+</dd>
+<dt>min<span class="classifier">int</span></dt><dd><p>minimum index along requested dimension (default=0)</p>
+</dd>
+<dt>max<span class="classifier">int</span></dt><dd><p>maximum index along requested dimension (default=max int)</p>
+</dd>
+</dl>
+</section>
+<section id="id19">
+<h2>Returns<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>2-dimensional numpy array containing the power</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SlabCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SlabCoefs" title="pyEXP.coefs.SlabCoefs"><span class="pre">pyEXP.coefs.SlabCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.SlabCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 4-dimensional ndarray indexed by nx, ny, nz, and time indices.</p>
+<section id="id20">
+<h2>Returns<a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>4-dimensional numpy array containing the slab coefficients</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SlabCoefs.setTensor">
+<span class="sig-name descname"><span class="pre">setTensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pyEXP.coefs.SlabCoefs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor:</span> <span class="pre">Eigen::Tensor&lt;std::complex&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.SlabCoefs.setTensor" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient tensor at the provided time</p>
+<section id="id21">
+<h2>Parameters<a class="headerlink" href="#id21" title="Link to this heading"></a></h2>
+<dl>
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient tensor
+mat : numpy.ndarray</p>
+<blockquote>
+<div><p>the new coefficient array.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+<section id="id22">
+<h2>Returns<a class="headerlink" href="#id22" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">SphCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.SphCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for spherical coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SphCoefs" title="pyEXP.coefs.SphCoefs"><span class="pre">pyEXP.coefs.SphCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.SphCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 3-dimensional ndarray indexed by spherical index, radial index,
+and time index</p>
+<section id="id23">
+<h2>Returns<a class="headerlink" href="#id23" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>3-dimensional numpy array containing the spherical coefficients</p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h2>Notes<a class="headerlink" href="#id24" title="Link to this heading"></a></h2>
+<p>The spherical index serializes all pairs of (l, m). The index
+for (l, m) is calculated as: l*(l+1)/2 + m.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphCoefs.setMatrix">
+<span class="sig-name descname"><span class="pre">setMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SphCoefs" title="pyEXP.coefs.SphCoefs"><span class="pre">pyEXP.coefs.SphCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.SphCoefs.setMatrix" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient matrix at the provided time</p>
+<section id="id25">
+<h2>Parameters<a class="headerlink" href="#id25" title="Link to this heading"></a></h2>
+<dl>
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient matrix
+mat : numpy.ndarray</p>
+<blockquote>
+<div><p>the new coefficient array.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+<section id="id26">
+<h2>Returns<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphFldCoefs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">SphFldCoefs</span></span><a class="headerlink" href="#pyEXP.coefs.SphFldCoefs" title="Link to this definition"></a></dt>
+<dd><p>Container for spherical field coefficients</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphFldCoefs.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SphFldCoefs" title="pyEXP.coefs.SphFldCoefs"><span class="pre">pyEXP.coefs.SphFldCoefs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.SphFldCoefs.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Provide a 4-dimensional ndarray indexed by channel index, spherical index, radial index, and time index</p>
+<section id="id27">
+<h2>Returns<a class="headerlink" href="#id27" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>4-dimensional numpy array containing the spherical coefficients</p>
+</dd>
+</dl>
+</section>
+<section id="id28">
+<h2>Notes<a class="headerlink" href="#id28" title="Link to this heading"></a></h2>
+<p>The spherical index serializes all pairs of (l, m) where l, m
+are the aximuthal indices. The index for (l, m) pair is
+calculated as: l*(l+1)/2 + m</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.SphFldCoefs.setMatrix">
+<span class="sig-name descname"><span class="pre">setMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.SphFldCoefs" title="pyEXP.coefs.SphFldCoefs"><span class="pre">pyEXP.coefs.SphFldCoefs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.coefs.SphFldCoefs.setMatrix" title="Link to this definition"></a></dt>
+<dd><p>Enter and/or rewrite the coefficient tensor at the provided time</p>
+<section id="id29">
+<h2>Parameters<a class="headerlink" href="#id29" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>time<span class="classifier">float</span></dt><dd><p>snapshot time corresponding to the the coefficient matrix</p>
+</dd>
+<dt>mat<span class="classifier">numpy.ndarray</span></dt><dd><p>the new coefficient array.</p>
+</dd>
+</dl>
+</section>
+<section id="id30">
+<h2>Returns<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.TableData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">TableData</span></span><a class="headerlink" href="#pyEXP.coefs.TableData" title="Link to this definition"></a></dt>
+<dd><p>Container for simple data tables with multiple columns</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.TableData.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.TableData" title="pyEXP.coefs.TableData"><span class="pre">pyEXP.coefs.TableData</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.TableData.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Return a 2-dimensional ndarray indexed by column and time</p>
+<section id="id31">
+<h2>Returns<a class="headerlink" href="#id31" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>2-dimensional numpy array containing the data table</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyEXP.coefs.TrajectoryData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyEXP.coefs.</span></span><span class="sig-name descname"><span class="pre">TrajectoryData</span></span><a class="headerlink" href="#pyEXP.coefs.TrajectoryData" title="Link to this definition"></a></dt>
+<dd><p>Container for trajectory/orbit data</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyEXP.coefs.TrajectoryData.getAllCoefs">
+<span class="sig-name descname"><span class="pre">getAllCoefs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyEXP.coefs.TrajectoryData" title="pyEXP.coefs.TrajectoryData"><span class="pre">pyEXP.coefs.TrajectoryData</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.coefs.TrajectoryData.getAllCoefs" title="Link to this definition"></a></dt>
+<dd><p>Return a 3-dimensional ndarray indexed by column and time</p>
+<section id="id32">
+<h2>Returns<a class="headerlink" href="#id32" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>2-dimensional numpy array containing the data table</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<p id="module-pyEXP.field">FieldGenerator class bindings</p>
+<section id="fieldgenerator">
+<h2>FieldGenerator<a class="headerlink" href="#fieldgenerator" title="Link to this heading"></a></h2>
+<p>This class computes surfaces and volumes for visualizing the physical
+quantities implied by your basis and associated coefficients.</p>
+<p>The generator is constructed by passing a vector of desired times
+that must be in the coefficient object and list of lower bounds,
+a list of upper bounds, and a list of knots per dimension.  These
+lists all have rank 3 for (x, y, z).  For a two-dimensional surface,
+one of the knot array values must be zero.  The member functions
+lines, slices, an arbitrary point-set, and volumes, called with the
+basis and coefficient objects, return a numpy.ndarray containing the
+field evaluations.  Each of these functions returns a dictionary of
+times to a dictionary of field names to numpy.ndarrays at each time.
+There are also members which will write these generated fields to files.
+The linear probe members, ‘lines’ and ‘file_lines’, evaluate ‘num’
+field points along a user-specified segment between the 3d points ‘beg’
+and ‘end’.  See help(pyEXP.basis) and help(pyEXP.coefs) for info on
+the basis and coefficient objects.</p>
+<section id="data-packing">
+<h3>Data packing<a class="headerlink" href="#data-packing" title="Link to this heading"></a></h3>
+<p>All slices and volumes are returned as numpy.ndarrays in row-major
+order.  That is, the first index is x, the second is y, and the
+third is z.  The ranks are specified by the ‘gridsize’ array with
+(nx, ny, nz) as input to the FieldGenerator constructor.  A point
+mesh is rows of (x, y, z) Cartesian coordinates.  The output field
+values returned by points is in the same order as the input array.</p>
+</section>
+<section id="id33">
+<h3>Coordinate systems<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
+<p>The FieldGenerator class supports spherical, cylindrical, and 
+Cartesian for force field components.  These are selected by your
+basis instance, consistent with the natural coordinate system for
+that basis.  You may change the default coorindate system for a basis
+using the ‘setFieldType()’ member function.</p>
+</section>
+<section id="field-names">
+<h3>Field names<a class="headerlink" href="#field-names" title="Link to this heading"></a></h3>
+<p>The data fields are as follows:
+* ‘dens’        the total density
+* ‘dens m&gt;0’    the non-axisymmetric component of the density
+* ‘dens m=0’    the axisymmetric component of the density
+* ‘rad force’   the radial force
+* ‘mer force’   the meridional force
+* ‘azi force’   the azimuthal force
+* ‘potl’        the total potential
+* ‘potl m&gt;0’    the non-axisymmetric component of the potential
+* ‘potl m=0’    the axisymmetric component of the potential</p>
+<p>For spherical coordinates (coord=”Spherical”):
+* ‘rad force’   the radial force
+* ‘mer force’   the meridional force
+* ‘azi force’   the azimuthal force</p>
+<p>For cylindrical coordinates (coord=”Cylindrical”):
+* ‘rad force’   the radial force
+* ‘ver force’   the meridional force
+* ‘azi force’   the azimuthal force</p>
+<p>For Cartesian coordinates (coord=”Cartesian”):
+* ‘x force’     the radial force
+* ‘y force’     the meridional force
+* ‘z force’     the azimuthal force</p>
+</section>
+<section id="id34">
+<h3>Notes<a class="headerlink" href="#id34" title="Link to this heading"></a></h3>
+<p>Note that the ‘dens’ field is the sum of the ‘dens m=0’ and ‘dens m&gt;0’
+fields and, similarly, the ‘potl’ field is the sum of ‘potl m=0’ and 
+‘potl m&gt;0’ fields. These redundant entries are provided for convenience 
+and conceptual clarity.  For spherical bases, the ‘m’ index should be
+interpreted as the ‘l’ index.</p>
+</section>
+</section>
+<p id="module-pyEXP.mssa">Multivariate Singular Spectrum Analysis (MSSA) class bindings</p>
+<section id="expmssa">
+<h2>expMSSA<a class="headerlink" href="#expmssa" title="Link to this heading"></a></h2>
+<p>The expMSSA class analyzes and separates the temporal patterns
+in your coefficients and auxiliary data.  Instances can return
+coefficient sets for one or more individual patterns that may be
+used with the FieldGenerator for visualization</p>
+<section id="coefficient-update-and-memory-usage">
+<h3>Coefficient update and memory usage<a class="headerlink" href="#coefficient-update-and-memory-usage" title="Link to this heading"></a></h3>
+<p>A key feature of MSSA inference is the field generation from
+the coefficients reconstructed from dominant eigenvalues. After
+identifying interesting PCs and associated eigenvalues, this
+is done in ‘expMSSA’ in two steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A call to ‘reconstruct(list)’ with a list of eigenvalue
+indices reconstruct the data series and saves those series
+to working (possibly detrended) vectors</p></li>
+</ol>
+<dl class="simple">
+<dt>2 ‘getReconstructed()’ returns a dictionary of name strings that</dt><dd><p>point to coefficient objects (Coefs). These may be used for
+diagnostics (e.g. visualizing fields).</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The split between the the ‘reconstruct()’ and the ‘getReconstructed()
+members allows one to examine the detrended series with the selected
+eigenvalues before updating the coefficient data.  The ‘reconstruct()
+call creates the internal working channel data, leaving the initial
+coefficient set untouched. The ‘getReconstructed()’ call replaces the
+coefficient data in the Coefs object passed to expMSSA, as well as
+returning a dictionary of name strings and coefficient containers.
+Subsequent calls to ‘getReconstructed’ will overwrite the previous
+updates.  In practice, the coefficients object that you made in Python
+will always contain the latest updates from the last ‘getReconstructed’
+call.  This allows you to update channels incrementally and the updated
+copy is available to Python as the originally passed reference.  This
+strategy prevents your stack from growing very large by efficiently
+reusing previously allocated storage. If you want to save a copy of
+the original coefficients, use the ‘deepcopy()’ member for Coefs
+before the reconstruction.  The original ‘factory’ call and each
+call to ‘deepcopy()’ will make a new set that will be freed when
+the reference to the coefficient instance disappears.  This allows
+some explicit control over your memory use.</p>
+</section>
+<section id="configuration-parameters">
+<h3>Configuration parameters<a class="headerlink" href="#configuration-parameters" title="Link to this heading"></a></h3>
+<p>expMSSA has a number of internal configuration parameters, listed
+below. Most people will not need them, but they do exist should
+you really want to dig in.</p>
+<p>To change the default expMSSA, pass a YAML database of parameters
+to the expMSSA constructor.  This is a convenient way to have control
+over some fine-tuning parameters or experimental features without a
+a change to the API.  They are all optional but a few of these will
+be useful.  They are all YAML key-value pairs.  The first group
+below are simple boolean toggles; their presence turns on a feature
+independent of the value.  The Python script samples show how to
+construct these simple YAML configurations on the fly. A simple example
+is also given below.  The boolean parameters are listed below by my
+guess of their usefulness to most people:</p>
+<blockquote>
+<div><p>verbose: false        Report on internal progress for debugging only
+noMean: false         If true, do not subtract the mean when</p>
+<blockquote>
+<div><p>reading in channels. Used only for totPow
+detrending method.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>writeCov: true        Write the covariance matrix to a file for</dt><dd><p>diagnostics since this is not directly
+available from the interface. Used only if
+Traj: false.</p>
+</dd>
+<dt>Jacobi: true          Use the Jacobi SVD rather than the Random</dt><dd><p>approximation algorithm from Halko, Martinsson,
+and Tropp (RedSVD). This is quite accurate but
+_very_ slow</p>
+</dd>
+<dt>BDCSVD: true          Use the Bidiagonal Divide and Conquer SVD</dt><dd><p>rather than RedSVD; this is faster and more
+accurate than the default RedSVD but slower.</p>
+</dd>
+<dt>Traj: true            Perform the SVD of the trajectory matrix</dt><dd><p>rather than the more computationally intensive
+but more stable SVD of the covariance matrix.
+Set to false to get standard covariance SVD.
+In practice, ‘Traj: true’ is sufficiently
+accurate for all PC orders that are typically
+found to have dynamical signal.</p>
+</dd>
+<dt>rank: 100             The default rank for the randomized matrix SVD.</dt><dd><p>The default value will give decent accuracy with
+small computational overhead and will be a good
+choice for most applications.</p>
+</dd>
+<dt>RedSym: true          Use the randomized symmetric eigenvalue solver</dt><dd><p>RedSym rather rather than RedSVD for the co-
+variance matrix SVD (Traj: false). The main use
+for this is checking the accuracy of the default
+randomized matrix methods.</p>
+</dd>
+<dt>allchan: true         Perform k-means clustering analysis using all</dt><dd><p>channels simultaneously</p>
+</dd>
+<dt>distance: true        Compute w-correlation matrix PNG images using</dt><dd><p>w-distance rather than correlation</p>
+</dd>
+</dl>
+<p>flip: true            Exchanges the x-y axes in PNG plots</p>
+<p>power: false          Compute and output Fourier power
+totVar: false         Detrend according to the total variance</p>
+<blockquote>
+<div><p>in all channel</p>
+</div></blockquote>
+<dl class="simple">
+<dt>totPow: false         Detrend according to the total power in</dt><dd><p>all channels</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The following parameters take values,
+defaults are given in ()</p>
+<blockquote>
+<div><dl class="simple">
+<dt>evtol: double(0.01)   Truncate by the given cumulative p-value in</dt><dd><p>chatty mode</p>
+</dd>
+</dl>
+<p>output: str(exp_mssa) Prefix name for output files</p>
+</div></blockquote>
+<p>The ‘output’ value is only used if ‘writeFiles’ is specified, too.
+A simple YAML configuration for expMSSA might look like this:
+—
+BDCSVD: true
+evtol: 0.01
+…</p>
+<p>If you find that you are using these YAML parameters often, let me
+know and I can promote them to the main API</p>
+</section>
+<section id="grouping">
+<h3>Grouping<a class="headerlink" href="#grouping" title="Link to this heading"></a></h3>
+<p>MSSA often spreads the same signal between more than one PC. We try to
+group eigenvalue-PC pairs that seem to have similar temporatl behavior
+in the final stage before reconstruction.  The w-correlation matrix,
+the k-means analyses and similarities of the PC frequency spectra are
+are ways of diagnosing groups of related components. You may group
+using ‘reconstruct(list)’, where ‘list’ is a Python list of component
+indices in eigenvalue-PC index order. An empty argument implies no
+that the will be no PCs in the reconstruction, only the mean values.
+The two expMSSA steps will often need to be used iteratively.  First,
+to learn about the primary signals in your data and catagorize the PCs
+into groups.  Second, a new analysis that provides separation of your
+main distinct signals into individual reconstructions.</p>
+</section>
+<section id="save-restore">
+<h3>Save/Restore<a class="headerlink" href="#save-restore" title="Link to this heading"></a></h3>
+<p>MSSA analyses can be computationally intensive so we include a way
+to serialize the state to an HDF5 file.  The saveState(prefix) member
+takes a prefix file parameter and creates the file &lt;prefix&gt;_mssa.h5.
+You may restore the state by recreating your expMSSA instance with
+the identical input data and keys and then using restoreState(prefix)
+to read the MSSA analysis from the HDF5 file.  The restore step will
+check that your data has the same dimension, same parameters, and key
+list so it should be pretty hard to fool, but not impossible.</p>
+</section>
+<section id="computational-notes">
+<h3>Computational notes<a class="headerlink" href="#computational-notes" title="Link to this heading"></a></h3>
+<p>Some of the linear algebra operations and the MSSA reconstruction
+can parallelize itself using OpenMP threads.  If your compilter has
+OpenMP, please enable it (i.e. -fopenmp when compiling in GNU or
+and set the appropriate environment (e.g. ‘export OMP_NUM_THREADS=X’
+for Bash).  This will be especially useful for the ‘reconstruct()’
+step.  The initial MSSA analysis can also be memory intensive,
+depending on the size of the time series and the number of channels.
+One possible strategy is to run the analyses on a larger memory
+compute node and save the results using the ‘saveState()’ member to
+an HDF5 file and reread those files on a local machine using the
+‘restoreState()’ member.</p>
+</section>
+</section>
+<p id="module-pyEXP.edmd">Extended Dynamical Mode Decomposition (EDMD) class bindings</p>
+<section id="koopman">
+<h2>Koopman<a class="headerlink" href="#koopman" title="Link to this heading"></a></h2>
+<p>This Koopman class implements EDMD, using the exact DMD algorith
+from Tu et al. (2014) using the EXP coefficients and your optional
+auxiliary data.  Just as in expMSSA, instances return coefficient
+sets for one or more individual EMD modes.  These may, in turn, be
+used with the FieldGenerator for visualization</p>
+<section id="id35">
+<h3>Coefficient update and memory usage<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
+<p>A key feature of Koopman operator theory is the identification of
+the underlying dynamical structure in the measurement of state space.
+In this case, the measurement of phase space is the collection of
+scalars that represent the density-potential fields.  There is the
+possibility and maybe even the likelihood that the mismatch of the
+fields to the true nature of the dynamics will generate spurious
+models.  This is true with mSSA as well.  In fact, mSSA is also an
+approximation to the Koopman operator, so the philosophy is similar.
+My experience to date suggests that mSSA has much better performance
+and separation of signals.  If you try this and have good success,
+please do contact me.  As as in in mSSA, this class allows you to gain
+insight from a set of coefficients reconstructed from dominant EDMD
+modes. After identifying interesting modes and associated eigenvalues,
+this is done in ‘Koopman’ in two steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A call to ‘reconstruct(list)’ with a list of eigenvalue
+indices reconstruct the data series and saves those series
+to working (possibly detrended) vectors</p></li>
+</ol>
+<dl class="simple">
+<dt>2 ‘getReconstructed()’ returns a dictionary of name strings that</dt><dd><p>point to coefficient objects (Coefs). These may be used for
+diagnostics (e.g. visualizing fields).</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>This structure exactly parallels the implementation in ‘expMSSA’
+The split between the the ‘reconstruct()’ and the ‘getReconstructed()
+members allows one to examine the detrended series with the selected
+eigenvalues before updating the coefficient data.  The ‘reconstruct()
+call creates the internal working channel data, leaving the initial
+coefficient set untouched. The ‘getReconstructed()’ call replaces the
+coefficient data in the Coefs object passed to Koopman, as well as
+returning a dictionary of name strings and coefficient containers.
+Subsequent calls to ‘getReconstructed’ will overwrite the previous
+updates.  In practice, the coefficients object that you made in Python
+will always contain the latest updates from the last ‘getReconstructed’
+call.  This allows you to update channels incrementally and the updated
+copy is available to Python as the originally passed reference.  This
+strategy prevents your stack from growing very large by efficiently
+reusing previously allocated storage. If you want to save a copy of
+the original coefficients, use the ‘deepcopy()’ member for Coefs
+before the reconstruction.  The original ‘factory’ call and each
+call to ‘deepcopy()’ will make a new set that will be freed when
+the reference to the coefficient instance disappears.  This allows
+some explicit control over your memory use.</p>
+</section>
+<section id="id36">
+<h3>Configuration parameters<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<p>Koopman has a number of internal configuration parameters, listed
+below. Most people will not need them, but they do exist should
+you really want to dig in.  These are a subset of the same parameter
+available in expMSSA.</p>
+<p>To change the default values, pass a YAML database of parameters
+to the Koopman constructor.  This is a convenient way to have control
+over some fine-tuning parameters or experimental features without a
+a change to the API.  They are all optional but a few of these will
+be useful.  They are all YAML key-value pairs.  The first group
+below are simple boolean toggles; their presence turns on a feature
+independent of the value.  The Python script samples show how to
+construct these simple YAML configurations on the fly. A simple example
+is also given below.  The boolean parameters are listed below by my
+guess of their usefulness to most people:</p>
+<blockquote>
+<div><p>verbose: false        Whether there is report or not
+Jacobi: true          Use the Jacobi SVD rather than the Random</p>
+<blockquote>
+<div><p>approximation algorithm from Halko, Martinsson,
+and Tropp (RedSVD). This is quite accurate but
+_very_ slow</p>
+</div></blockquote>
+<dl class="simple">
+<dt>BDCSVD: true          Use the Binary Divide and Conquer SVD rather</dt><dd><p>rather than RedSVD; this is faster and more
+accurate than the default RedSVD but slower</p>
+</dd>
+<dt>project: true         Use the classic DMD projected modes rather than</dt><dd><p>the exact DMD modes, as described by Tu et al.
+2014.</p>
+</dd>
+<dt>power: true           Write partial power contributions into a file in</dt><dd><p>a ascii table format if set to ‘true’.  Default
+is ‘false’</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The following parameters take values, defaults are given in ()</p>
+<blockquote>
+<div><dl class="simple">
+<dt>output: sting         Prefix name for output files.  The default is</dt><dd><p>‘exp_edmd’.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The ‘output’ value is used by ‘getContributions()’ and ‘channelDFT()’
+if the ‘power’ options is set.
+A simple YAML configuration for Koopman might look like this:
+—
+BDCSVD: true
+project: true
+…</p>
+<p>If you find that you are using these YAML parameters often, let me
+know and I can promote them to the main API</p>
+</section>
+<section id="id37">
+<h3>Save/Restore<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
+<p>Koopman analyses can be computationally intensive so we include a way
+to serialize the state to an HDF5 file.  The saveState(prefix) member
+takes a prefix file parameter and creates the file &lt;prefix&gt;_edmd.h5.
+You may restore the state by recreating your Koopman instance with
+the identical input data and keys and then using restoreState(prefix)
+to read the Koopman analysis from the HDF5 file.  The restore step will
+check that your data has the same dimension, same parameters, and key
+list so it should be pretty hard to fool, but not impossible.  The
+computation is much less expensive, generally, than MSSA so saving the
+analysis is not strictly necessary, even on a laptop.</p>
+</section>
+<section id="id38">
+<h3>Computational notes<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<p>Some of the linear algebra operations can parallelize itself using
+OpenMP threads.  If your compilter has OpenMP, please enable it (i.e.
+-fopenmp when compiling in GNU or and set the appropriate environment
+(e.g. ‘export OMP_NUM_THREADS=X’ for Bash). The initial Koopman analysis
+can also be memory intensive, depending on the size of the time series
+and the number of channels.  Although it requires much less memory than
+the equivalent mSSA analysis. If memory is a problem, try running the
+analyses on a larger memory compute node and save using the ‘saveState()’
+member to an HDF5 file and reread those files on a local machine using
+the ‘restoreState()’ member.</p>
+</section>
+</section>
+<p id="module-pyEXP.util">Utility class bindings</p>
+<p>This module provides routines for BFE tasks that do not naturally fit
+into the main categories.  The current list of utilities is:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Report the current EXP version, GIT branch and commit</p></li>
+<li><p>Compute the center of the particle distribution from its center
+of mass.  Very fast but easily biased.</p></li>
+<li><p>Compute the mean density weighted center of the particle distribu-
+tion from KD density estimator at each particle position. Very is
+very slow.  One can change the stride to decrease the sample size
+to speed this up.</p>
+<p>Note on centers: the EXP n-body code does this automatically.  The
+density weighted center is an alternative for snapshots without
+center estimates.  Only use COM if know your simulation remains
+close to bisymmetric.</p>
+</li>
+<li><p>Apply a user-defined Python function to all particles in a phase-
+space reader.  This may be used to do calculations using all or a
+user-determined subset of snapshot particles.  The functor has no
+return type; it is up to the user to put accumulated values in
+the scope.  The functor needs the arguments of mass, position
+vector, velocity vector, and index.  For example, the following
+Python code computes the center of mass:
+#—————————————————————
+# Variables in the scope of myFunctor
+#
+totalMass = 0.0
+centerOfMass = [0.0, 0.0, 0.0]
+#
+# Definition of the functor
+#
+def myFunctor(m, pos, vel, index):</p>
+<blockquote>
+<div><p>global totalMass, centerOfMass
+totalMass += m
+for i in range(3): centerOfMass[i] += m*pos[i]</p>
+</div></blockquote>
+<p>#
+# Now iterate through the particles provided by a reader instance
+#
+pyEXP.util.particleIterator(reader, myFunctor)
+#
+# Print the COM
+#
+for i in range(3): centerOfMass[i] /= totalMass
+#
+#—————————————————————</p>
+</li>
+</ol>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.util.Version">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.util.</span></span><span class="sig-name descname"><span class="pre">Version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.util.Version" title="Link to this definition"></a></dt>
+<dd><p>Return the version.</p>
+<p>This is the same version information reported by the EXP N-body code.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.util.getCenterOfMass">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.util.</span></span><span class="sig-name descname"><span class="pre">getCenterOfMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pyEXP.read.ParticleReader</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.util.getCenterOfMass" title="Link to this definition"></a></dt>
+<dd><p>Compute the center of mass for the particle component</p>
+<section id="id39">
+<h2>Parameters<a class="headerlink" href="#id39" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>reader<span class="classifier">ParticleReader</span></dt><dd><p>the particle-reader class instance</p>
+</dd>
+</dl>
+</section>
+<section id="id40">
+<h2>Returns<a class="headerlink" href="#id40" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>list(float)</dt><dd><p>Computed center</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.util.getDensityCenter">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.util.</span></span><span class="sig-name descname"><span class="pre">getDensityCenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pyEXP.read.ParticleReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nsort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ndens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyEXP.util.getDensityCenter" title="Link to this definition"></a></dt>
+<dd><p>Compute the center of the particle component</p>
+<p>This implementation uses the density weighted position using KD 
+N-nearest neighbor estimator.</p>
+<section id="id41">
+<h2>Parameters<a class="headerlink" href="#id41" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>reader<span class="classifier">ParticleReader</span></dt><dd><p>the particle-reader class instance</p>
+</dd>
+<dt>stride<span class="classifier">int, default=1</span></dt><dd><p>stride &gt;1 will generate a subsample of every nth particle 
+over a random permutation</p>
+</dd>
+<dt>Ndens<span class="classifier">int, default=32</span></dt><dd><p>number of particles per sample ball (32 is a good 
+compromise between accuracy and runtime; 16 is okay if 
+you are trying to shave off runtime.</p>
+</dd>
+<dt>Nsort<span class="classifier">int, default=0</span></dt><dd><p>Nsort &gt;0 keeps the particles of the Nsort densest samples</p>
+</dd>
+</dl>
+</section>
+<section id="id42">
+<h2>Returns<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>list(float)</dt><dd><p>Computed center</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.util.getVersionInfo">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.util.</span></span><span class="sig-name descname"><span class="pre">getVersionInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.util.getVersionInfo" title="Link to this definition"></a></dt>
+<dd><p>Report on the version and git commit.</p>
+<p>This is the same version information reported by the EXP N-body code.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyEXP.util.particleIterator">
+<span class="sig-prename descclassname"><span class="pre">pyEXP.util.</span></span><span class="sig-name descname"><span class="pre">particleIterator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pyEXP.read.ParticleReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">functor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyEXP.util.particleIterator" title="Link to this definition"></a></dt>
+<dd><p>Apply a user-defined functor to every particle in phase space</p>
+<section id="id43">
+<h2>Parameters<a class="headerlink" href="#id43" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>reader<span class="classifier">ParticleReader</span></dt><dd><p>the particle-reader class instance</p>
+</dd>
+<dt>functor :</dt><dd><p>the callback function to compute a phase-space quantity</p>
+</dd>
+</dl>
+</section>
+<section id="id44">
+<h2>Returns<a class="headerlink" href="#id44" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+<section id="id45">
+<h2>Notes<a class="headerlink" href="#id45" title="Link to this heading"></a></h2>
+<p>The callback function must have the signature:</p>
+<p>void(float, list, list, int)</p>
+<p>where the first argument is mass, the second is position,
+the third is velocity, and the fourth is index.  Not all
+values need to be used in the function, of course.</p>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="doxygen.html" class="btn btn-neutral float-left" title="Index to C++ classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="versioning.html" class="btn btn-neutral float-right" title="Versioning and API stability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, EXP-code collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
