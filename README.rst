@@ -16,12 +16,13 @@ install it along with the ReadTheDocs theme, run the following commands:
 
    pip install sphinx
    pip install sphinx-rtd-theme
+   pip install nbsphinx-link
 
 For a Linux system with `apt` (e.g. Ubuntu), you can do:
 
 ::
 
-   apt-get install python3-sphinx python3-sphinx-rtd-theme
+   apt-get install python3-sphinx python3-sphinx-rtd-theme nbsphinx-link
 
 
 
