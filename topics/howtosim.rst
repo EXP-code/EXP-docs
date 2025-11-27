@@ -15,7 +15,8 @@ The general steps for creating an N-body simulation in EXP are to:
 
 #. Generate a model file and body files. The model file contains the initial density distribution for your dark matter halo. The body file contains the initial phase space positions for (e.g.) your stellar disk and dark matter halo
 
-#. Generate a cache file with your bases. In this example, you would need one cache file for your cylindrical (disk) basis and another for your spherical (halo) basis  
+#. Generate a cache file with your bases. In this example, you would need one cache file for your cylindrical (disk) basis and another for your spherical (halo) basis.
+This is unnecessary in newer versions of EXP.  
 
 #. Run a three-step relaxation process to ensure that your initial conditions are as quiet as possible
 
@@ -46,83 +47,79 @@ Parameters for ``gendisk`` are specified in a YAML file with the following field
    CMAPR                : 1                    # Radial coordinate mapping type for cylindrical grid (0:none, 1:rational fct)
    CMAPZ                : 1                    # Vertical coordinate mapping type for cylindrical grid (0:none, 1:sech, 2:power in z
    DF                   : 1                    # Use change-over from Jeans to Eddington
-   DFLAG                : 6                    # Output flags for DiskHalo
+   DFLAG                : 0                    # Output flags for DiskHalo
    DIVERGE              : 0                    # Cusp extrapolation for primary halo model
    DIVERGE2             : 0                    # Cusp extrapolation for number model
    DIVERGE_RFAC         : 1                    # Extrapolation exponent for primary mass model
    DIVERGE_RFAC2        : 1                    # Extrapolation exponent for number model
-   DMFAC                : 0.0                  # Disk mass scaling factor for spherical deprojection model
-   DR_DF                : 5                    # Width of change for to Eddington
+   DMFAC                : 1.0                  # Disk mass scaling factor for spherical deprojection model
+   DR_DF                : 1.0                  # Width of change for to Eddington
    DUMPCOEF             : false                # Dump coefficients
+   ASCALE               : XXXXX                # radial scale length for disk basis construction (e.g. 0.01)
    HSCALE               : XXXXX                # Vertical scale length for disk basis construction (e.g. 0.002)
-   LMAX                 : 6                    # Number of harmonics for Spherical SL for halo/spheroid
-   LMAXFID              : 64                   # Number of harmonics for Spherical SL for determining disk basis
+   LMAX                 : 18                   # Number of harmonics for Spherical SL for halo/spheroid
+   LMAXFID              : 128                  # Number of harmonics for Spherical SL for determining disk basis (may want to bump to 256)
    LOGR                 : true                 # Make a logarithmic coordinate mapping
    MMAX                 : 6                    # Number of azimuthal harmonics for disk basis
-   NCHEB                : 16                   # Chebyshev order for smoothing
-   NDP                  : 1
+   CHEBY                : false                # Chebyshev smoothing
+   NCHEB                : 12                   # Chebyshev order for smoothing if CHEBY = true
+   NDP                  : 8                    # Number of angular wedges for disc 
    NDR                  : 2000                 # Number of points in DiskHalo radial table for disk
-   NDZ                  : 200                  # Number of points in DiskHalo vertical table for disk
+   NDZ                  : 800                  # Number of points in DiskHalo vertical table for disk
    NHR                  : 800                  # Number of points in DiskHalo radial table for halo
-   NHT                  : 200                  # Number of points in DiskHalo cos(theta) table for halo
+   NHT                  : 800                  # Number of points in DiskHalo cos(theta) table for halo
    NMAXH                : 18                   # Number of radial basis functions in Spherical SL for halo/spheroid
-   NMAXFID              : 72                   # Number of radial basis functions in Spherical SL for determining disk basis
-   NODD                 : 8                    # Number of vertically antisymmetric disk basis functions per M-order
+   NMAXFID              : 64                   # Number of radial basis functions in Spherical SL for determining disk basis (may want to bump to 128)
+   NODD                 : 6                    # Number of vertically antisymmetric disk basis functions per M-order
    NMAXD                : 18                   # Number of disk basis functions per M-order
    NMAXLIM              : 10000                # Restricts disk basis function to NORDER1<NORDER after basis construction for testing
-   NOUT                 : 1000                 # Number of radial basis functions to output for each harmonic order
+   NOUT                 : 18                   # Number of radial basis functions to output for each harmonic order
    NUMDF                : 1000                 # Number of grid points for Eddington inversion
-   NUMR                 : 1000                 # Size of radial grid for Spherical SL
+   NUMR                 : 2000                 # Size of radial grid for Spherical SL
    NUMX                 : 256                  # Radial grid size for disk basis table
    NUMY                 : 128                  # Vertical grid size for disk basis table
    PNUM                 : 1                    # Number of azimthal knots for EmpCylSL basis construction quadrature
-   RCYLMAX              : 20.0                 # Maximum disk radius
+   RCYLMAX              : 20.0                 # Maximum disk radius in units of ASCALE
    RCYLMIN              : 0.001                # Minimum disk radius
-   RFACTOR              : 1                    # Disk radial scaling factor for spherical deprojection model
-   RMIN                 : 0.00001              # Minimum halo radius
+   RFACTOR              : 1.0                  # Disk radial scaling factor for spherical deprojection model
+   RMIN                 : 0.001                # Minimum halo radius
    RNUM                 : 200                  # Number of radial knots for EmpCylSL basis construction quadrature
-   RSPHSL               : 4.00                 # Maximum halo expansion radius
+   RSPHSL               : 1.95                 # Maximum halo expansion radius
    RTRUNC               : 0.1                  # Maximum disk radius for erf truncation of EOF conditioning density
-   RWIDTH               : 0                    # Width for erf truncationofr EOF conditioning density (ignored if zero)
-   R_DF                 : 20                   # Change over radius for Eddington
-   SCMAP                : 1                    # Turn on Spherical SL coordinate mapping (1, 2, 0:off
-   SCSPH                : 0.05                 # Scale for Spherical SL coordinate mapping
+   RWIDTH               : 0.0                  # Width for erf truncation of r EOF conditioning density (ignored if zero)
+   R_DF                 : -1.0e20              # Change over radius for Eddington (default is all Eddington)
+   SCMAP                : 1                    # Turn on Spherical SL coordinate mapping (1, 2, 0:off)
+   SCSPH                : XXXXX                # Scale for Spherical SL coordinate mapping - this should match rmapping in exp
    SEED                 : XXXXX                # Random number seed (e.g. your favorite number)
    SELECT               : false                # Enable significance selection in coefficient computation
    SHFAC                : 16                   # Scale height factor for assigning vertical table size
-   SVD                  : false                # Use svd for symmetric eigenvalue problesm
    TNUM                 : 80                   # Number of cos(theta) knots for EmpCylSL basis construction quadrature
-   Temp                 : 2000                 # Gas temperature (in K)
-   Tmin                 : 500                  # Temperature floor (in K) for gas disk generation
    ToomreQ              : XXXXX                # Toomre Q parameter for stellar disk generation (e.g. 1.4)
-   U0                   : 0                    # Disk-Halo x velocity center position
-   V0                   : 0                    # Disk-Halo y velocity center position
-   VFLAG                : 16                   # Output flags for EmpCylSL
-   W0                   : 0                    # Disk-Halo z velocity center position
-   X0                   : 0                    # Disk-Halo x center position
-   Y0                   : 0                    # Disk-Halo y center position
-   Z0                   : 0                    # Disk-Halo z center position
+   U0                   : 0.0                  # Disk-Halo x velocity center position
+   V0                   : 0.0                  # Disk-Halo y velocity center position
+   VFLAG                : 8                    # Output flags for EmpCylSL
+   W0                   : 0.0                  # Disk-Halo z velocity center position
+   X0                   : 0.0                  # Disk-Halo x center position
+   Y0                   : 0.0                  # Disk-Halo y center position
+   Z0                   : 0.0                   # Disk-Halo z center position
    basis                : false                # Print out disk and halo basis
-   ignore               : XXXXX                # 'false' if you want to generate and save out cache files, otherwise 'true'
+   ignore               : XXXXX                # 'true' if you want to generate and save out cache files, otherwise 'false'
    cachefile            : XXXXX                # Name of EOF cache file (e.g. eof.cache.fileF)
    centerfile           :                      # Read position and velocity center from this file
    constheight          : true                 # Use constant disk scale height
    dbods                : disk.bods            # Disk particle output file
-   deproject            : Exponential          # set deprojection model (Exponential or MN)
+   deproject            : EXP                  # set deprojection model (Exponential or MN)
    disk_mass            : XXXXX                # Mass of stellar disk (e.g. 0.0125)
    dtype                : exponential          # Disk type for condition (one of: constant, gaussian, mn, exponential)
    expcond              : true                 # Use analytic density function for computing EmpCylSL basis
-   gentype              : asymmetric           # DiskGenType string for velocity initialization (Jeans, Asymmetric, or Epicyclic)
+   gentype              : Asymmetric           # DiskGenType string for velocity initialization (Jeans, Asymmetric, or Epicyclic)
    halofile1            : XXXXX                # File with input halo model (your .model file here)
    evolved              : false
    hbods                : halo.bods            # Halo particle output file
-   ignore               : false                # Recompute EOF regardless of existence
    multi                : false                # Use multimass halo
    ndisk                : XXXXX                # Number of disk particles (e.g. 1000000)
-   ngas                 : 0                    # Number of gas particles
-   ngparam              : 3                    # Number of gas particle parameters
    nhalo                : XXXXX                # Number of halo particles (e.g. 10000000)
-   report               : true                 # Report particle progress in EOF computation
+   report               : false                # Report particle progress in EOF computation
    runtag               : XXXXX                # Label prefix for diagnostic images (e.g. 'run1')
    scale_height         : XXXXX                # Scale height for disk realization (e.g. 0.002)
    scale_length         : XXXXX                # Scale length for disk realization (e.g. 0.01)
@@ -132,7 +129,7 @@ Parameters for ``gendisk`` are specified in a YAML file with the following field
 
 Parameters that have values set to 'XXXXX' are those that users are encouraged to change. Example values are given in the
 comment following the parameter value. The remaining parameters are "expert parameters" and generally do not need to be changed
-unless you have a good reason to use a different value. Note that the ``exponential`` disk is
+unless you have a good reason to use a different value. The listed parameter values are the defaults. Note that the ``exponential`` disk is
 exponential in R and :math:`sech^2` in z.
 
 To generate the initial conditions, you would run:
@@ -142,14 +139,14 @@ To generate the initial conditions, you would run:
    mpirun gendisk --config gendisk_step1.yml 
 
 in the terminal, replacing ``gendisk_step1.yml`` with the name of your YAML file that specifies the ``gendisk`` parameters. If
-you set ``ignore = false``, it may take a moment to generate the cylindrical bases cache file. The cylindrical bases will be
+you set ``ignore = true``, it may take a moment to generate the cylindrical bases cache file. The cylindrical bases will be
 saved out to whatever name is specified in ``cachefile``, and the halo basis will generally be saved out to
 ``.slgrid_sph_cache``. Note that the ``diskgen`` YAML file here is distinct from the EXP YAML config file, EXP YAML config files 
 look like :ref:`this annotated example <yamlconfig>`.
 
 Step Two: generate cache files
 ******************************
-If you didn't generate cache files in step one, you need to generate these files now. An example of how to do this is in the
+If you didn't generate cache files in step one and you have an old install of EXP, you need to generate these files now. An example of how to do this is in the
 `pyEXP-Examples repo <https://github.com/EXP-code/pyEXP-examples/blob/main/How-To/Utilities/create%20Cylinder%20basis%20(parallel).py>`_.
 If you are including a stellar disk in your simulation, EXP requires that you provide a cylindrical cache file with a name that matches
 the ``cachename`` for the **star disk** in the EXP YAML config file. You are not required to provide a spherical cache file, as it is much 
