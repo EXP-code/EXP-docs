@@ -149,6 +149,7 @@ How to solve specific problems
    topics/EXP-output
    topics/flatdisk
    topics/debug
+   topics/covariance
 
 :doc:`topics/visualizing-bases`
     Learn how to visualize the EXP bases using pyEXP
@@ -156,13 +157,17 @@ How to solve specific problems
 :doc:`topics/making-coefficients`
     Get familiar with producing coefficients for particle data in pyEXP
 
+:doc:`topics/covariance
+    How to think about and compute significance of coefficients using
+    exp and pyEXP
+
 :doc:`topics/saving-coefficients`
     Learn how to save and read the coefficients you have produced
     from your N-body snapshots in pyEXP
 
 :doc:`topics/visualizing-fields`
     Learn how to convert your coefficients to physical fields and
-    visualize them with Python and pyEXP
+   visualize them with Python and pyEXP
 
 :doc:`topics/make-movies`
     Make some movies from your fields in Python
