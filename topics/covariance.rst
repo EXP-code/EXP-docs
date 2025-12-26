@@ -14,6 +14,13 @@ Coefficient significance analysis
    and recompile to use these features in the `exp` N-body code. The
    `pyEXP` interface is currently available in the `main` branch.
    
+.. danger::
+
+   The current `main` branch has an error in the covariance
+   computation for the `Cylindrical` force in `pyEXP`.  The fix for
+   this is in a recent PR. Users will need to merge that branch
+   manually or use the `OutSample` branch for correctness.
+
 
 Overview
 --------
