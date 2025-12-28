@@ -168,7 +168,7 @@ How to solve specific problems
 
 :doc:`topics/visualizing-fields`
     Learn how to convert your coefficients to physical fields and
-   visualize them with Python and pyEXP
+    visualize them with Python and pyEXP
 
 :doc:`topics/make-movies`
     Make some movies from your fields in Python
