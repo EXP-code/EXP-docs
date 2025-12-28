@@ -123,7 +123,7 @@ mathematics used in EXP.
 :doc:`topics/howtosim`
     A guide for running EXP simulations
 
-:doc:`topics/covariance
+:doc:`topics/covariance`
     How to think about and compute significance of coefficients using
     exp and pyEXP
 
