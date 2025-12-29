@@ -26,26 +26,26 @@ Overview
 --------
 
 `exp` and `pyEXP` compute both the empirical covariance matrices and
-compute coefficients in *partitions* or *batches* that may be used to
+the coefficients in *partitions* or *batches* that may be used to
 estimate statistical consistency of coefficients.
 
 Basis function expansions estimate the underlying fields from the
 particles that sample their gravitational fields that generate the
-particle orbits.  The primary goal of analyses is improving the field
-estimates by characterizing their significance.  We do this in two
-ways:
+particle orbits.  The primary goal of these analyses is the
+improvement of field estimates by characterizing their significance.
+We do this in two ways:
 
-1. The variation represented by the BFE is spread across basis
-   functions.  In other words, the independently varying signals not
-   isolated to specific basis functions.  We may use covariance
-   analysis, such as ideas from Principal Component Analysis (PCA), to
-   empirically determine a basis which separates the initially
-   spatially correlated signals.
+1. The dynamically induced variation in the gravitational field is
+   spread across basis functions.  In other words, the independently
+   varying signals are not isolated to specific subset of basis
+   functions.  We may use covariance analysis, such as ideas from
+   Principal Component Analysis (PCA), to empirically determine a
+   basis which separates the initially spatially correlated signals.
 
 2. One may treat the significance of the underlying fields represented
    by the expansion as an estimation problem and attempt to analyze
-   the significance of each coefficient using methods from probability
-   and statistics.
+   the significance of each coefficient using established methods from
+   probability and statistics.
 
 The next section introduces the terminology and concepts from sampling
 theory necessary to address each of these two goals.  We then move on
@@ -62,7 +62,7 @@ Notation
 
 Let :math:`\{c_i\}_{i=1}^N\subset\mathbb{R}^d` be the contribution to
 the coefficient vector from Particle :math:`i`.  Specifically, if the
-potential basis function is :math:`\Phi_k(\cdot)`, then
+potential basis functions are :math:`\Phi_k(\cdot)`, then
 :math:`c_i=\{\Phi_1(\mathbf{x}_i), \Phi_1(\mathbf{x}_i), \ldots,
 \Phi_d(\mathbf{x}_i)\}` where :math:`\mathbf{x}_i` is the position
 vector for Particle :math:`i`.  Denote the empirical mean for the
@@ -88,7 +88,15 @@ N`. For each block :math:`k` define
    \qquad S_k \;=\; \sum_{i\in\text{block }k}
    (c_i-\hat{c}_k)(c_i-\hat{c}_k)^{\!\top},
 
-where :math:`S_k` is the within‑block scatter.
+where :math:`S_k` is the within‑block scatter.  The may also write the
+covariance matrix for each block and relate that to :math`S_k` as
+follows:
+
+.. math::
+
+   \Sigma_k = \frac{1}{n_k}\sum_{i\in\text{block }k}
+   (c_i - \hat{c}_k) (c_i - \hat{c}_k)^{\!\top} = \frac{S_k}{n_k}.
+   
 
 Overall mean and within and between blocks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -232,7 +240,7 @@ unbiased sample-style form for these estimates:
 
     is unbiased for :math:`\Sigma` under the iid block model.
 
-Relation of the Finite-sample to the full covariance
+Relation of the finite-sample to the full covariance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Under the iid model, the expected within aggregate satisfies
@@ -262,9 +270,9 @@ Summary
 - If you have only the block means :math:`\{\hat{c}_k\}` and you know that each block is an average of :math:`m` iid draws, then :math:`\widehat{\Sigma}=m\,S_{\hat{c}}^{(K-1)}` is an unbiased estimator of the full covariance :math:`\Sigma`.
 
 - If blocks are not iid samples (e.g. they are clusters with internal
-  structure), then multiplying block-mean covariance by $m$ is not
-  generally valid; additional modeling or within-block information is
-  required.
+  structure), then multiplying block-mean covariance by :math:`m` is
+  not generally valid; additional modeling or within-block information
+  is required.
 
 - If you have both the full empirical covariance
   :math:`\Sigma_{\mathrm{emp}}` and the block means, you can compute
