@@ -88,13 +88,13 @@ N`. For each block :math:`k` define
    \qquad S_k \;=\; \sum_{i\in\text{block }k}
    (c_i-\hat{c}_k)(c_i-\hat{c}_k)^{\!\top},
 
-where :math:`S_k` is the within‑block scatter.  The may also write the
-covariance matrix for each block and relate that to :math`S_k` as
+where :math:`S_k` is the within‑block scatter.  We may also write the
+covariance matrix for each block and relate that to :math:`S_k` as
 follows:
 
 .. math::
 
-   \Sigma_k = \frac{1}{n_k}\sum_{i\in\text{block }k}
+   \Sigma_k \equiv \frac{1}{n_k}\sum_{i\in\text{block }k}
    (c_i - \hat{c}_k) (c_i - \hat{c}_k)^{\!\top} = \frac{S_k}{n_k}.
    
 
@@ -114,7 +114,7 @@ The total scatter, proportional to the covariance matrix, is
 
    S \;=\; \sum_{i=1}^N (c_i-\hat{c})(c_i-\hat{c})^{\!\top},
 
-and the exact decomposition is
+and the exact decomposition in block quantities is
 
 .. math::
 
@@ -122,8 +122,8 @@ and the exact decomposition is
    \underbrace{\sum_{k=1}^K
    n_k(\hat{c}_k-\hat{c})(\hat{c}_k-\hat{c})^{\!\top}}_{B}.
 
-The two terms, :math:`W` and :math:`B`, are the *in block* and
-*between block* scatter, respectively.  Then, the empirical population
+The two terms, :math:`W` and :math:`B`, are the *in-block* and
+*between-block* scatter, respectively.  Then, the empirical population
 covariance is
 
 .. math::
@@ -136,21 +136,23 @@ covariance is
 
 The *between block* term :math:`B/N` can be computed from the
 :math:`\{\hat{c}_k\}` and :math:`\{n_k\}` alone; the within aggregate
-:math:`W` requires the :math:`S_k` or additional assumptions.
+:math:`W` requires the scatter matrices :math:`S_k` or additional
+assumptions.
 
 Special case: equal-size blocks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Assume each block has the same size :math:`m`, so :math:`n_k = m` for
-all :math:`k`, and :math:`N = Km`.  Define the block mean covariance
-as
+`pyEXP` and `exp` partion samples into equal-size blocks by default.
+This leads to some additional convenient properties.  Assume each
+block has the same size :math:`m`, so :math:`n_k = m` for all
+:math:`k`, and :math:`N = Km`.  Define the block mean covariance as
 
 .. math::
 
    \Sigma_{\hat{c}} \;=\; \frac{1}{K}\sum_{k=1}^K
    (\hat{c}_k-\hat{c})(\hat{c}_k-\hat{c})^{\!\top}.
 
-Then the *between scatter* contribution is
+Then, the *between-block* scatter contribution is
 
 .. math::
 
@@ -184,25 +186,24 @@ from the same distribution with mean :math:`\hat{c}` and covariance
 .. math::
 
    \mathbb{E}[\hat{c}_k] = \hat{c},\qquad
-   \operatorname{Cov}(\hat{c}_k) = \frac{\Sigma}{m}.
+   \mathbb{E}\!\big[ \Sigma_{\hat{c}} \big] =
+   \mathbb{E}\!\big[ \operatorname{Cov}(\hat{c}_k) \big] = \frac{\Sigma}{m}.
 
 This is generally true for `exp` simulations which do not sort
 particles within their component and can be made true for any
 simulation by selecting particles from the entire particle ensemble
-randomly.  Consequently,
+randomly.
 
 .. math::
 
-   \mathbb{E}\!\big[ \Sigma_{\hat{c}} \big] \;=\;
-   \frac{\Sigma}{m}.
 
 Therefore, an estimator of :math:`\Sigma` based on the block means is
 
 .. math::
 
-   \widehat{\Sigma}_{\hat{c}} \;=\; m\,\Sigma_{\hat{c}},
+   \widehat{\Sigma} = m\,\Sigma_{\hat{c}},
 
-where :math:`S_{\hat{c}}` is a chosen empirical covariance of the
+where :math:`\Sigma_{\hat{c}}` is the empirical covariance of the
 block means. One can choose either the natural population-style or
 unbiased sample-style form for these estimates:
 
@@ -284,6 +285,13 @@ Summary
 
   and therefore recover the sum of the within-block scatters even
   without individual :math:`S_k`.
+
+- An analysis of the :math:`K` block covariance :math:`\Sigma_k`
+  estimates may be used to diagnose the consistency the total
+  estimate.  For example, one might use an eigen analysis to determine
+  how much of the variance in one block is captured another block,
+  such as Krzanowski common subspaces analysis. This is not currently
+  offered directly by `pyEXP`.
 
 
 Practical considerations
