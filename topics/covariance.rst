@@ -13,13 +13,6 @@ Coefficient significance analysis
    `OutSample` branch.  You will need to ``git checkout OutSample``
    and recompile to use these features in the `exp` N-body code. The
    `pyEXP` interface is currently available in the `main` branch.
-   
-.. danger::
-
-   The current `main` branch has an error in the covariance
-   computation for the `Cylindrical` force in `pyEXP`.  The fix for
-   this is in a recent PR. Users will need to merge that branch
-   manually or use the `OutSample` branch for correctness.
 
 
 Overview
@@ -27,25 +20,26 @@ Overview
 
 `exp` and `pyEXP` compute both the empirical covariance matrices and
 the coefficients in *partitions* or *batches* that may be used to
-estimate statistical consistency of coefficients.
+estimate statistical properties and consistency of coefficients.
 
 Basis function expansions estimate the underlying fields from the
 particles that sample their gravitational fields that generate the
 particle orbits.  The primary goal of these analyses is the
-improvement of field estimates by characterizing their significance.
-We do this in two ways:
+improvement of field estimates by characterizing their physical and
+statistical significance.  We do this in two ways:
 
 1. The dynamically induced variation in the gravitational field is
-   spread across basis functions.  In other words, the independently
-   varying signals are not isolated to specific subset of basis
-   functions.  We may use covariance analysis, such as ideas from
-   Principal Component Analysis (PCA), to empirically determine a
-   basis which separates the initially spatially correlated signals.
+   spread across all of the basis functions.  In other words, the
+   independently varying signals induced by gravity are not isolated
+   to specific subset of basis functions.  We may use covariance
+   analysis, such as ideas from Principal Component Analysis (PCA), to
+   empirically determine a basis that separates the initially
+   spatially correlated signals.
 
 2. One may treat the significance of the underlying fields represented
    by the expansion as an estimation problem and attempt to analyze
-   the significance of each coefficient using established methods from
-   probability and statistics.
+   the statistical significance of each coefficient using established
+   methods.
 
 The next section introduces the terminology and concepts from sampling
 theory necessary to address each of these two goals.  We then move on
@@ -142,7 +136,7 @@ assumptions.
 Special case: equal-size blocks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`pyEXP` and `exp` partion samples into equal-size blocks by default.
+`pyEXP` and `exp` partition samples into equal-size blocks by default.
 This leads to some additional convenient properties.  Assume each
 block has the same size :math:`m`, so :math:`n_k = m` for all
 :math:`k`, and :math:`N = Km`.  Define the block mean covariance as
@@ -173,7 +167,7 @@ Putting all of this together, we have
 
 .. math::
 
-   \Sigma \;=\; \frac{W}{N} + S_{\hat{c}}^{\mathrm{pop}},
+   \Sigma \;=\; \frac{W}{N} + \Sigma_{\hat{c}},
    \qquad\text{where } W=\sum_{k=1}^K S_k.
 
 IID block-sampling model
@@ -181,7 +175,8 @@ IID block-sampling model
 
 If additionally each block is formed by :math:`m` independent draws
 from the same distribution with mean :math:`\hat{c}` and covariance
-:math:`\Sigma` (block independent), then
+:math:`\Sigma` (the sampling procedure is block independent, in other
+words), then
 
 .. math::
 
@@ -190,14 +185,13 @@ from the same distribution with mean :math:`\hat{c}` and covariance
    \mathbb{E}\!\big[ \operatorname{Cov}(\hat{c}_k) \big] = \frac{\Sigma}{m}.
 
 This is generally true for `exp` simulations which do not sort
-particles within their component and can be made true for any
+particles within their components and can be made true for any
 simulation by selecting particles from the entire particle ensemble
-randomly.
+randomly. Some n-body codes **do** sort their particles spatially, so
+make sure to check.
 
-.. math::
-
-
-Therefore, an estimator of :math:`\Sigma` based on the block means is
+Assuming independence, an estimator of :math:`\Sigma` based on the
+block means is
 
 .. math::
 
@@ -268,7 +262,10 @@ verifying unbiasedness of the global empirical covariance.
 Summary
 ^^^^^^^
 
-- If you have only the block means :math:`\{\hat{c}_k\}` and you know that each block is an average of :math:`m` iid draws, then :math:`\widehat{\Sigma}=m\,S_{\hat{c}}^{(K-1)}` is an unbiased estimator of the full covariance :math:`\Sigma`.
+- If you have only the block means :math:`\{\hat{c}_k\}` and you know
+  that each block is an average of :math:`m` iid draws, then
+  :math:`\widehat{\Sigma}=m\,S_{\hat{c}}^{(K-1)}` is an unbiased
+  estimator of the full covariance :math:`\Sigma`.
 
 - If blocks are not iid samples (e.g. they are clusters with internal
   structure), then multiplying block-mean covariance by :math:`m` is
@@ -293,6 +290,15 @@ Summary
   such as Krzanowski common subspaces analysis. This is not currently
   offered directly by `pyEXP`.
 
+- Similarly, the distribution of :math:`\hat{c}_k` contains more
+  information about the true variance than the second-moment
+  covariance matrix.  While the covariance matrix is sufficient for
+  characterization as :math:`N\rightarrow\infty` by the central limit
+  theorem, some poorly determined high-order coefficients may be far
+  from that asymptotic regime.  In this case, empirical widths
+  measured from the distribution of :math:`\hat{c}_k` will more
+  reliably capture the truth.
+
 
 Practical considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -312,10 +318,13 @@ this is covariance matrices. To save space, a better choice might be
 to save the coefficient samples and only the full covariance matrix.
 This would reduce our file to 0.2 GB.
 
-Our currently recommended and default strategy saving :math:`K=100`
+Our currently recommended and default strategy saving :math:`K\sim100`
 samples :math:`\hat{c}_k` and the full covariance
-:math:`\Sigma_{\mathrm{emp}}` only.  We will described the YAML
-configuration for these choices below.
+:math:`\Sigma_{\mathrm{emp}}` only.  Larger values of :math:`K` may be
+valuable in some cases.  As described above, quantile estimates based
+on the distribution of :math:`\Sigma_k=S_k/n_k` may provide better
+information than :math:`\Sigma_{\mathrm{emp}}` alone.  We will
+described the YAML configuration for these choices below.
 
 .. _coefficient_SN:
 
