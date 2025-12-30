@@ -611,7 +611,9 @@ covariance matrix for the same simulation.
     :width: 80 %
     :align: center
 
-    Example output for :math:`l=m=2` for a simulation of a DM halo with
-    :math:`N=10^6` particles.  The color scale shows the logarithm
+    Example covariance output :math:`\Sigma_{n_1\,n_2}` for
+    :math:`l=m=2` for a simulation of a DM halo with :math:`N=10^6`
+    particles.  The horizontal and vertical axes show :math:`n_1` and
+    :math:`n_2`, respectively.  The color scale shows the logarithm
     base 10 of the absolute value of the covariance elements. The
     diagonal dominance is expected.
