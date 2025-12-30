@@ -94,6 +94,7 @@ EXP concepts
    topics/centering
    topics/yamlconfig
    topics/howtosim
+   topics/covariance
 
 These topics provide some background detail on the software and
 mathematics used in EXP.
@@ -121,6 +122,11 @@ mathematics used in EXP.
 
 :doc:`topics/howtosim`
     A guide for running EXP simulations
+
+:doc:`topics/covariance`
+    How to think about and compute significance of coefficients using
+    exp and pyEXP
+
 
 .. toctree::
    :caption: Frequently Asked Questions (FAQ)
