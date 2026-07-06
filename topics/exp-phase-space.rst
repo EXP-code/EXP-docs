@@ -43,9 +43,9 @@ however, that is rarely a concern these days since there are very few
 big endian architectures left.
 
 Most of the PSP features have been ported directly to an HDF5
-implementation as the latest EXP release. We currently recommend HDF5
-over the native PSP for portability reading with Python using
-:code:`h5py`.  For a full description of the HDF5 implementation,
+implementation in the latest EXP release. We currently recommend HDF5
+over the native PSP for portable reading with Python using
+:code:`h5py`. For a full description of the HDF5 implementation,
 please see :doc:`output_hdf5`.
 
 
@@ -64,8 +64,9 @@ easily constructed on the fly (e.g. using Python :code:`h5py`).  The
 :code:`Component` class automatically detects HDF5 input files,
 otherwise, it defaults to ASCII.
 
-.. important: While the main PSP and HDF5 formats store all components
-   in separated blocks, the initialization files describe a single
+.. important::
+   While the main PSP and HDF5 formats store all components
+   in separate blocks, the initialization files describe a single
    component only.  You need one initialization file for every
    component.
 
@@ -75,8 +76,8 @@ ASCII
 
 Each phase-space particle is described by the mass, followed by the
 vector position and velocity, followed by an arbitrary number of
-intger and floating-point values.  These are described in ascii input
-by the first line contains the following three integer values:
+integer and floating-point values.  These are described in ASCII input:
+the first line contains the following three integer values:
 
 1. the number of bodies, :math:`N`,
 
@@ -116,24 +117,24 @@ Main features:
 - This schema is a precise mapping of the current body file data
   fields, except for the inverse ordering. One could make this more
   Gadget-like, but that would muddy the clarity here.
-- We separate pos into x, y, z (and vel into u, v, w) to simply the
-  std::variant coding to allow both float and double arrays. It is
-  possible that consolidating into 2d arrays could be more
-  efficient. But this is easier to code.
+- We separate pos into x, y, z (and vel into u, v, w) to simplify the
+  std::variant coding and allow both float and double arrays. It is
+  possible that consolidating into 2D arrays could be more
+  efficient, but this is easier to code.
 - The precision of the float data type is deduced for each dataset
   independently. One could mix precision between m, x, y, z, u, v, w
   if desired.
 - The converter routine hdf5bods was initially designed to compress
   body files and it achieves that goal. It is implemented with OpenMP
   which gives some modest performance gains (but not MPI). A particle
-  body files requires 10 seconds for conversion on a laptop.
+  body file requires 10 seconds for conversion on a laptop.
 - The Component class checks whether the specified body file is HDF5
   and reverts to the original ascii method if not; so all of the prior
   behavior is retained for compatibility.
 - If the optional index field (unsigned long) exists, it will populate
-  the EXP Particle.indx field. Similarly, the stand-along conversion
-  routine has can read and write the index field for consistency with
-  the original ASCII body table format.
+  the EXP Particle.indx field. Similarly, the stand-alone conversion
+  routine can read and write the index field for consistency with the
+  original ASCII body table format.
 - The stand-alone hdf5bods converter has support for multiple HDF5
   compression filters for testing. The default GZip has the highest
   compression ratio but it also takes the most CPU time.
@@ -186,7 +187,7 @@ The following utilities manipulate the phase-space files:
   names to Gadget particle types.
 
 - We do not provide a tool for converting between **native** binary
-  PSP and **HDF5** PSP format at this point.  We recommending using
+  PSP and **HDF5** PSP format at this point.  We recommend using
   the :code:`outhdf5` writer directly to produce HDF5 files from EXP.
 
 - Early versions of EXP imported and exported to :index:`tipsy` files.
