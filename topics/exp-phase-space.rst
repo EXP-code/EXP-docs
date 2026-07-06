@@ -132,9 +132,9 @@ Main features:
   and reverts to the original ascii method if not; so all of the prior
   behavior is retained for compatibility.
 - If the optional index field (unsigned long) exists, it will populate
-  the EXP Particle.indx field. Similarly, the stand-along conversion
-  routine has can read and write the index field for consistency with
-  the original ASCII body table format.
+  the EXP Particle.indx field. Similarly, the stand-alone conversion
+  routine can read and write the index field for consistency with the
+  original ASCII body table format.
 - The stand-alone hdf5bods converter has support for multiple HDF5
   compression filters for testing. The default GZip has the highest
   compression ratio but it also takes the most CPU time.
