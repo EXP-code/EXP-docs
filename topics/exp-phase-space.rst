@@ -127,7 +127,7 @@ Main features:
 - The converter routine hdf5bods was initially designed to compress
   body files and it achieves that goal. It is implemented with OpenMP
   which gives some modest performance gains (but not MPI). A particle
-  body files requires 10 seconds for conversion on a laptop.
+  body file requires 10 seconds for conversion on a laptop.
 - The Component class checks whether the specified body file is HDF5
   and reverts to the original ascii method if not; so all of the prior
   behavior is retained for compatibility.
