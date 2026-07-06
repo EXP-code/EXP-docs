@@ -7,8 +7,8 @@ Overview
 --------
 
 Creation of EXP HDF5 phase-space snapshots is configured using the
-`outhdf5` entry in the `Output` stanza of the main `YAML configuration
-<yamlconfig>`.
+``outhdf5`` entry in the ``Output`` stanza of the main
+:ref:`YAML configuration <yamlconfig>`.
 
 The EXP HDF5 output path is orchestrated by ``src/OutHDF5.cc``.  Its
 role is to collect phase-space and per-particle metadata from the
