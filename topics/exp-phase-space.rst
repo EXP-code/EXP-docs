@@ -117,10 +117,10 @@ Main features:
 - This schema is a precise mapping of the current body file data
   fields, except for the inverse ordering. One could make this more
   Gadget-like, but that would muddy the clarity here.
-- We separate pos into x, y, z (and vel into u, v, w) to simply the
-  std::variant coding to allow both float and double arrays. It is
-  possible that consolidating into 2d arrays could be more
-  efficient. But this is easier to code.
+- We separate pos into x, y, z (and vel into u, v, w) to simplify the
+  std::variant coding and allow both float and double arrays. It is
+  possible that consolidating into 2D arrays could be more
+  efficient, but this is easier to code.
 - The precision of the float data type is deduced for each dataset
   independently. One could mix precision between m, x, y, z, u, v, w
   if desired.
