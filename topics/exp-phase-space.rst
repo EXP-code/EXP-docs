@@ -64,8 +64,9 @@ easily constructed on the fly (e.g. using Python :code:`h5py`).  The
 :code:`Component` class automatically detects HDF5 input files,
 otherwise, it defaults to ASCII.
 
-.. important: While the main PSP and HDF5 formats store all components
-   in separated blocks, the initialization files describe a single
+.. important::
+   While the main PSP and HDF5 formats store all components
+   in separate blocks, the initialization files describe a single
    component only.  You need one initialization file for every
    component.
 
