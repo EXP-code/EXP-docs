@@ -94,6 +94,8 @@ EXP concepts
    topics/centering
    topics/yamlconfig
    topics/howtosim
+   topics/exp-phase-space
+   topics/output-hdf5
 
 These topics provide some background detail on the software and
 mathematics used in EXP.
@@ -122,6 +124,12 @@ mathematics used in EXP.
 :doc:`topics/howtosim`
     A guide for running EXP simulations
 
+:doc:`topics/exp-phase-space`
+    How to use and manipulate the EXP native phase-space format
+
+:doc:`topics/output-hdf5`
+    The EXP HDF5 phase-space format
+
 .. toctree::
    :caption: Frequently Asked Questions (FAQ)
       
@@ -145,7 +153,6 @@ How to solve specific problems
    topics/using-mssa
    topics/orbits
    topics/replay
-   topics/exp-phase-space
    topics/EXP-output
    topics/flatdisk
    topics/debug
@@ -174,9 +181,6 @@ How to solve specific problems
 :doc:`topics/orbits`
     Compute orbits in the gravitational potential fields implied by
     your coefficients, and why you might want to do this
-
-:doc:`topics/exp-phase-space`
-    How to use and manipulate the EXP native phase-space format
 
 :doc:`topics/EXP-output`
     A description of the EXP N-body output generator
