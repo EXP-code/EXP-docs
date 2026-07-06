@@ -76,8 +76,8 @@ ASCII
 
 Each phase-space particle is described by the mass, followed by the
 vector position and velocity, followed by an arbitrary number of
-intger and floating-point values.  These are described in ascii input
-by the first line contains the following three integer values:
+integer and floating-point values.  These are described in ASCII input:
+the first line contains the following three integer values:
 
 1. the number of bodies, :math:`N`,
 
