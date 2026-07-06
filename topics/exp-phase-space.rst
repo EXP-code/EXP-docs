@@ -42,21 +42,41 @@ fear of incompatibility.  This format does not enforce endianness,
 however, that is rarely a concern these days since there are very few
 big endian architectures left.
 
-A port of the PSP features to HDF would be straightforward and is
-planned for a later release.
+Most of the PSP features have been ported directly to an HDF5
+implementation as the latest EXP release. We currently recommend HDF5
+over the native PSP for portability reading with Python using
+:code:`h5py`.  For a full description of the HDF5 implementation,
+please see :doc:`output_hdf5`.
 
 
 Implementation overview
 -----------------------
 
-The PSP format is a binary format.  However, for ease of construction,
-EXP initializes its components with ascii files that describe
-the particles and the associated geometric and force methods are
-provided in the configuration file as previously described.  Each
-phase-space particle is described by the mass, followed by the vector
-position and velocity, followed by an arbitrary number of intger and
-floating-point values.  These are described in ascii input by the
-first line contains the following three integer values:
+Initialization
+^^^^^^^^^^^^^^
+
+For ease of construction, EXP initializes its components with
+simplified ASCII or HDF5 files that describe the particles and the
+associated geometric and force methods are provided in the
+configuration file as previously described.  The ASCII format is
+standard table of columns and the HDF5 schema (described) below is
+easily constructed on the fly (e.g. using Python :code:`h5py`).  The
+:code:`Component` class automatically detects HDF5 input files,
+otherwise, it defaults to ASCII.
+
+.. important: While the main PSP and HDF5 formats store all components
+   in separated blocks, the initialization files describe a single
+   component only.  You need one initialization file for every
+   component.
+
+
+ASCII
+~~~~~
+
+Each phase-space particle is described by the mass, followed by the
+vector position and velocity, followed by an arbitrary number of
+intger and floating-point values.  These are described in ascii input
+by the first line contains the following three integer values:
 
 1. the number of bodies, :math:`N`,
 
@@ -66,6 +86,60 @@ first line contains the following three integer values:
 
 The next :math:`N` lines are space delimited fields containing the
 information for each particle.
+
+HDF5
+~~~~
+
+.. index: HDF5
+
+The HDF5 schema takes the following form::
+  /
+  ├── Attributes
+  │ ├── num_particles (int)
+  │ ├── num_aux_ints (int)
+  │ └── num_aux_floats (int)
+  └── particles/ (Group)
+  ├── index (Dataset, unsigned long)
+  ├── m (Dataset, float/double)
+  ├── x, y, z (Datasets, float/double)
+  ├── u, v, w (Datasets, float/double)
+  ├── aux_int_0, aux_int_1, ... (Datasets, int)
+  └── aux_float_0, aux_float_1, ... (Datasets, float/double)
+
+Main features:
+
+- The design goal is keeping like data together and using chunking,
+  bit shuffling, and compression at the HDF5 level to achieve up to a
+  factor of 5 savings in file size for float32 and a factor of 2.5
+  savings for float64.
+- The index and aux_int_*, aux_float_* fields are optional.
+- This schema is a precise mapping of the current body file data
+  fields, except for the inverse ordering. One could make this more
+  Gadget-like, but that would muddy the clarity here.
+- We separate pos into x, y, z (and vel into u, v, w) to simply the
+  std::variant coding to allow both float and double arrays. It is
+  possible that consolidating into 2d arrays could be more
+  efficient. But this is easier to code.
+- The precision of the float data type is deduced for each dataset
+  independently. One could mix precision between m, x, y, z, u, v, w
+  if desired.
+- The converter routine hdf5bods was initially designed to compress
+  body files and it achieves that goal. It is implemented with OpenMP
+  which gives some modest performance gains (but not MPI). A particle
+  body files requires 10 seconds for conversion on a laptop.
+- The Component class checks whether the specified body file is HDF5
+  and reverts to the original ascii method if not; so all of the prior
+  behavior is retained for compatibility.
+- If the optional index field (unsigned long) exists, it will populate
+  the EXP Particle.indx field. Similarly, the stand-along conversion
+  routine has can read and write the index field for consistency with
+  the original ASCII body table format.
+- The stand-alone hdf5bods converter has support for multiple HDF5
+  compression filters for testing. The default GZip has the highest
+  compression ratio but it also takes the most CPU time.
+
+Native binary output
+^^^^^^^^^^^^^^^^^^^^
 
 EXP phase-space output is in binary PSP format.  The floating-point
 precision may be either single or double and specified by the user on
@@ -87,6 +161,7 @@ possible to restart a simulation from either a single- or
 double-precision PSP file, but it makes most sense to use
 double-precision PSP for checkpoints.
 
+
 Phase-space file utilities
 --------------------------
 
@@ -104,9 +179,19 @@ The following utilities manipulate the phase-space files:
   position and velocity is followed by the value of the gravitational
   potential.
 
+- **psp2hdf5** make a Gadget2-style HDF5 file from a PSP file and a
+  Gadget template file for porting PSP to other N-body codes that use
+  Gadget format.  No cosmological parameters are set.  No subgrid
+  parameters will be set.  Use the numerical flags to assign component
+  names to Gadget particle types.
+
+- We do not provide a tool for converting between **native** binary
+  PSP and **HDF5** PSP format at this point.  We recommending using
+  the :code:`outhdf5` writer directly to produce HDF5 files from EXP.
+
 - Early versions of EXP imported and exported to :index:`tipsy` files.
   The utilities `ascii2psp, psp2tipsy, tipstd2psp` may be used to make
-  these conversions.  I am not generally using tipsy format at this
+  these conversions.  We are not generally using tipsy format at this
   time and have not maintained these routines in many years, so user
   beware.
 
