@@ -1,5 +1,5 @@
-HDF5 Phase-Space Output
-=======================
+EXP HDF5 Phase-Space Output
+===========================
 
 .. index:: HDF5
 
