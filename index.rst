@@ -178,6 +178,9 @@ How to solve specific problems
 :doc:`topics/exp-phase-space`
     How to use and manipulate the EXP native phase-space format
 
+:doc:`topics/output_hdf5`
+    The EXP HDF5 phase-space format
+
 :doc:`topics/EXP-output`
     A description of the EXP N-body output generator
 
