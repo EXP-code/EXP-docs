@@ -43,9 +43,9 @@ however, that is rarely a concern these days since there are very few
 big endian architectures left.
 
 Most of the PSP features have been ported directly to an HDF5
-implementation as the latest EXP release. We currently recommend HDF5
-over the native PSP for portability reading with Python using
-:code:`h5py`.  For a full description of the HDF5 implementation,
+implementation in the latest EXP release. We currently recommend HDF5
+over the native PSP for portable reading with Python using
+:code:`h5py`. For a full description of the HDF5 implementation,
 please see :doc:`output_hdf5`.
 
 
