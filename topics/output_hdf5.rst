@@ -1,7 +1,7 @@
 HDF5 Phase-Space Output
 =======================
 
-.. index: HDF5
+.. index:: HDF5
 
 Overview
 --------
