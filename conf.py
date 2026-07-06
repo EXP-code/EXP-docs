@@ -99,7 +99,14 @@ extensions = [
 
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
+
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "README.rst",
+    "exp_repo/**",
+]
 
 breathe_projects = {"EXP": "exp_repo/doc/xml/"}
 breathe_default_project = "EXP"
