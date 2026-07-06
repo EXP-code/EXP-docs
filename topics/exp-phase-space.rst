@@ -187,7 +187,7 @@ The following utilities manipulate the phase-space files:
   names to Gadget particle types.
 
 - We do not provide a tool for converting between **native** binary
-  PSP and **HDF5** PSP format at this point.  We recommending using
+  PSP and **HDF5** PSP format at this point.  We recommend using
   the :code:`outhdf5` writer directly to produce HDF5 files from EXP.
 
 - Early versions of EXP imported and exported to :index:`tipsy` files.
